@@ -8,9 +8,7 @@ for (const entry of fs.readdirSync(path.join(root, ".tools"), {
     withFileTypes: true,
 })) {
     if (entry.isFile() && /\.(?:mjs|cjs|js)$/u.test(entry.name)) {
-        failures.push(
-            `.tools/${entry.name}: scripts de automação devem usar TypeScript/Deno`,
-        );
+        failures.push(`.tools/${entry.name}: scripts de automação devem usar TypeScript/Deno`);
     }
 }
 
@@ -25,9 +23,7 @@ const read = (relativePath) => {
 
 const assertIncludes = (relativePath, content, expected) => {
     if (!content.includes(expected)) {
-        failures.push(
-            `${relativePath}: referência obrigatória ausente: ${expected}`,
-        );
+        failures.push(`${relativePath}: referência obrigatória ausente: ${expected}`);
     }
 };
 
@@ -45,9 +41,7 @@ const dockerfiles = [".container/Dockerfile"];
 for (const relativePath of dockerfiles) {
     const content = read(relativePath);
     const stageNames = new Set(
-        [...content.matchAll(/^FROM\s+\S+\s+AS\s+(\S+)/gim)].map(
-            ([, name]) => name,
-        ),
+        [...content.matchAll(/^FROM\s+\S+\s+AS\s+(\S+)/gim)].map(([, name]) => name),
     );
     const pinnedArgs = new Set(
         [...content.matchAll(/^ARG\s+([A-Z0-9_]+)=(.*)$/gm)]
@@ -63,8 +57,7 @@ for (const relativePath of dockerfiles) {
 
         const image = match[1];
         const isBuildStage = stageNames.has(image);
-        const isPinnedVariable =
-            image.startsWith("${") && pinnedArgs.has(image.slice(2, -1));
+        const isPinnedVariable = image.startsWith("${") && pinnedArgs.has(image.slice(2, -1));
         if (!isBuildStage && !isPinnedVariable && !image.includes("@sha256:")) {
             failures.push(`${relativePath}: imagem FROM sem digest: ${image}`);
         }
@@ -79,11 +72,7 @@ for (const relativePath of dockerfiles) {
         'install --mode 0755 "$' + '{dbmate_asset}" /usr/local/bin/dbmate',
     );
     assertIncludes(relativePath, content, "deno install --frozen");
-    if (
-        content.includes("node:22") ||
-        content.includes("node:20") ||
-        content.includes("node:18")
-    ) {
+    if (content.includes("node:22") || content.includes("node:20") || content.includes("node:18")) {
         failures.push(
             `${relativePath}: imagem de runtime Node não permitida; use a imagem canônica Deno`,
         );
@@ -111,18 +100,12 @@ for (const line of compose.split("\n")) {
     }
     const image = match[1].trim();
     if (!image.includes("portal-guesant-saberes-")) {
-        failures.push(
-            `.container/docker-compose.yml: imagem remota não autorizada: ${image}`,
-        );
+        failures.push(`.container/docker-compose.yml: imagem remota não autorizada: ${image}`);
     }
 }
 
 const bake = read(".container/docker-bake.hcl");
-assertIncludes(
-    ".container/docker-bake.hcl",
-    bake,
-    'dockerfile = ".container/Dockerfile"',
-);
+assertIncludes(".container/docker-bake.hcl", bake, 'dockerfile = ".container/Dockerfile"');
 for (const target of [
     "tools",
     "dev",
@@ -149,9 +132,7 @@ if (!fs.existsSync(migrationsDirectory)) {
         .readdirSync(migrationsDirectory)
         .filter((entry) => entry.endsWith(".sql"));
     if (migrationFiles.length === 0) {
-        failures.push(
-            ".config/dbmate/migrations: nenhuma migration SQL encontrada",
-        );
+        failures.push(".config/dbmate/migrations: nenhuma migration SQL encontrada");
     }
     for (const entry of migrationFiles) {
         const migrationPath = path.join(migrationsDirectory, entry);
@@ -165,11 +146,7 @@ if (!fs.existsSync(migrationsDirectory)) {
 }
 
 const justfile = read("justfile");
-assertIncludes(
-    "justfile",
-    justfile,
-    "docker buildx bake --file .container/docker-bake.hcl",
-);
+assertIncludes("justfile", justfile, "docker buildx bake --file .container/docker-bake.hcl");
 assertIncludes("justfile", justfile, "portal-guesant-saberes-quality:local");
 assertIncludes("justfile", justfile, "deno install --frozen");
 assertIncludes("justfile", justfile, "content-migrate");
@@ -179,9 +156,7 @@ if (
         /docker run[^\n]*(mcr\.microsoft|docker\.io|ghcr\.io|aquasecurity|semgrep\/|zricethezav|fsfe\/|cytopia\/)/,
     )
 ) {
-    failures.push(
-        "justfile: ferramenta remota executada diretamente; use a imagem consolidada",
-    );
+    failures.push("justfile: ferramenta remota executada diretamente; use a imagem consolidada");
 }
 if (/(?:corepack|pnpm(?:\s|\/)|npm\s+install)/.test(justfile)) {
     failures.push("justfile: fluxo legado de Node/pnpm detectado; use Deno");
@@ -196,32 +171,20 @@ if (fs.existsSync(workflowsDirectory)) {
         const relativePath = path.join(".github/workflows", entry);
         const workflow = read(relativePath);
         if (workflow.includes(".container/zizmor.Dockerfile")) {
-            failures.push(
-                `${relativePath}: referência ao Dockerfile removido do zizmor`,
-            );
+            failures.push(`${relativePath}: referência ao Dockerfile removido do zizmor`);
         }
-        if (
-            /(?:setup-node|pnpm\/action|corepack|pnpm install|npm install)/.test(
-                workflow,
-            )
-        ) {
-            failures.push(
-                `${relativePath}: workflow contém instalação legada de Node/pnpm`,
-            );
+        if (/(?:setup-node|pnpm\/action|corepack|pnpm install|npm install)/.test(workflow)) {
+            failures.push(`${relativePath}: workflow contém instalação legada de Node/pnpm`);
         }
     }
 }
 
 if (fs.existsSync(path.join(root, ".container/zizmor.Dockerfile"))) {
-    failures.push(
-        ".container/zizmor.Dockerfile: Dockerfile auxiliar não permitido",
-    );
+    failures.push(".container/zizmor.Dockerfile: Dockerfile auxiliar não permitido");
 }
 
 if (fs.existsSync(path.join(root, ".container/tools.Dockerfile"))) {
-    failures.push(
-        ".container/tools.Dockerfile: Dockerfile duplicado não permitido",
-    );
+    failures.push(".container/tools.Dockerfile: Dockerfile duplicado não permitido");
 }
 
 if (failures.length > 0) {
@@ -232,6 +195,4 @@ if (failures.length > 0) {
     process.exit(1);
 }
 
-console.log(
-    "Supply-chain válida: lockfiles, imagens, Bake e toolchain verificados.",
-);
+console.log("Supply-chain válida: lockfiles, imagens, Bake e toolchain verificados.");

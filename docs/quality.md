@@ -20,13 +20,28 @@ e executa os gates diretamente nela, sem instalar Deno ou dependências novament
 just heavy-checks
 ```
 
-Esse fluxo preserva todos os gates complementares: Markdownlint, ast-grep, arquitetura, conteúdo, segurança estática, duplicação, código morto, build publicado, E2E, acessibilidade, Lighthouse, auditoria de segurança, supply chain, complexidade, lint de infraestrutura e REUSE. Ele é executado manualmente enquanto o produto estiver em MVP.
+Esse fluxo preserva todos os gates complementares: Markdownlint, CSpell para
+português e inglês, links locais com Lychee, placeholders, política de
+Conventional Commits, ast-grep, arquitetura, conteúdo, segurança estática,
+duplicação, código morto, build publicado, E2E, acessibilidade, Lighthouse,
+auditoria de segurança, supply chain, complexidade, lint de infraestrutura e
+REUSE. Ele é executado manualmente enquanto o produto estiver em MVP.
+
+Os gates absorvidos das referências foram escolhidos com escopo local: CSpell
+verifica documentação e labels da UI, Lychee verifica somente referências
+locais em modo offline e o detector de placeholders impede valores provisórios
+de chegarem ao conteúdo publicado. Nenhum desses gates é executado pelo
+just check diário ou pelo workflow rápido.
 
 ## Gates específicos
 
 ```sh
 just format-check
 just migration-format-check
+just spelling
+just docs-links
+just placeholders
+just commit-check
 just typecheck
 just ast-grep
 just test

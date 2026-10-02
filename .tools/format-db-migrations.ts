@@ -20,13 +20,8 @@ for (const file of files) {
     const original = fs.readFileSync(file, "utf8");
     const formatted = `${format(original, configuration).trimEnd()}\n`;
 
-    if (
-        !formatted.includes("-- migrate:up") ||
-        !formatted.includes("-- migrate:down")
-    ) {
-        failures.push(
-            `${path.relative(root, file)}: marcadores do Dbmate foram removidos`,
-        );
+    if (!formatted.includes("-- migrate:up") || !formatted.includes("-- migrate:down")) {
+        failures.push(`${path.relative(root, file)}: marcadores do Dbmate foram removidos`);
         continue;
     }
 

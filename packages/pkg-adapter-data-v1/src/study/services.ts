@@ -6,12 +6,7 @@ import {
     PedagogicalAction,
     ReviewState as ReviewStateEnum,
 } from "@guesant/saberes-core";
-import type {
-    Attempt,
-    DiagnosisCode,
-    ReviewState,
-    ReviewTarget,
-} from "../storage/progress";
+import type { Attempt, DiagnosisCode, ReviewState, ReviewTarget } from "../storage/progress";
 
 export { FsrsRating } from "@guesant/saberes-core";
 import {
@@ -23,23 +18,14 @@ import {
 } from "../storage/progress";
 
 function dateKey(value: Date | string = new Date()) {
-    return format(
-        typeof value === "string" ? parseISO(value) : value,
-        "yyyy-MM-dd",
-    );
+    return format(typeof value === "string" ? parseISO(value) : value, "yyyy-MM-dd");
 }
 
-export async function recordStudyActivity(
-    activity: { at?: Date | string; type?: string } = {},
-) {
+export async function recordStudyActivity(activity: { at?: Date | string; type?: string } = {}) {
     const today = dateKey(activity.at || new Date());
     const previous = await getStreak();
-    const previousDate = previous?.lastDate
-        ? parseISO(previous.lastDate as string)
-        : null;
-    const continues = previousDate
-        ? isSameDay(subDays(parseISO(today), 1), previousDate)
-        : false;
+    const previousDate = previous?.lastDate ? parseISO(previous.lastDate as string) : null;
+    const continues = previousDate ? isSameDay(subDays(parseISO(today), 1), previousDate) : false;
     let current = 1;
     if (previous?.lastDate === today) current = Number(previous.current || 0);
     else if (continues) current = Number(previous?.current || 0) + 1;
@@ -54,11 +40,7 @@ export async function recordStudyActivity(
 }
 
 function diagnosticWeight(code?: DiagnosisCode) {
-    if (
-        code === DiagnosisCodeEnum.ConceptGap ||
-        code === DiagnosisCodeEnum.DidNotKnow
-    )
-        return 0.25;
+    if (code === DiagnosisCodeEnum.ConceptGap || code === DiagnosisCodeEnum.DidNotKnow) return 0.25;
     if (code === DiagnosisCodeEnum.Forgetting) return 0.45;
     if (
         code === DiagnosisCodeEnum.ProceduralGap ||
@@ -67,10 +49,7 @@ function diagnosticWeight(code?: DiagnosisCode) {
     )
         return 0.55;
     if (code === DiagnosisCodeEnum.Inattention) return 0.8;
-    if (
-        code === DiagnosisCodeEnum.CorrectWithDoubt ||
-        code === DiagnosisCodeEnum.CorrectByGuess
-    )
+    if (code === DiagnosisCodeEnum.CorrectWithDoubt || code === DiagnosisCodeEnum.CorrectByGuess)
         return 0.7;
     return 1;
 }
@@ -86,8 +65,7 @@ export function calculateTopicMastery(attempts: Attempt[] = []) {
         }
     >();
     for (const attempt of attempts) {
-        if (attempt.isCorrect === null || attempt.isCorrect === undefined)
-            continue;
+        if (attempt.isCorrect === null || attempt.isCorrect === undefined) continue;
         for (const rawTopicId of attempt.topicIds || []) {
             const topicId = String(rawTopicId);
             const value = map.get(topicId) || {
@@ -106,9 +84,7 @@ export function calculateTopicMastery(attempts: Attempt[] = []) {
     }
     return Object.fromEntries(
         [...map.entries()].map(([topicId, value]) => {
-            const percentage = value.total
-                ? Math.round((value.correct / value.total) * 100)
-                : 0;
+            const percentage = value.total ? Math.round((value.correct / value.total) * 100) : 0;
             const weightedPercentage = value.total
                 ? Math.round((value.weighted / value.total) * 100)
                 : 0;
@@ -117,8 +93,7 @@ export function calculateTopicMastery(attempts: Attempt[] = []) {
             else if (value.total < 8) confidence = "medium";
             let learningState = "unseen";
             if (value.total) learningState = "practicing";
-            if (percentage >= 80 && value.total >= 5)
-                learningState = "mastered";
+            if (percentage >= 80 && value.total >= 5) learningState = "mastered";
             return [
                 topicId,
                 {
@@ -137,29 +112,19 @@ export function suggestDiagnosis(
     attempt: Pick<Attempt, "isCorrect" | "elapsedMs" | "attemptNumber">,
 ): DiagnosisCode {
     if (attempt.isCorrect) {
-        if ((attempt.attemptNumber || 1) > 1)
-            return DiagnosisCodeEnum.CorrectWithDoubt;
-        if (Number(attempt.elapsedMs || 0) < 5000)
-            return DiagnosisCodeEnum.CorrectByGuess;
+        if ((attempt.attemptNumber || 1) > 1) return DiagnosisCodeEnum.CorrectWithDoubt;
+        if (Number(attempt.elapsedMs || 0) < 5000) return DiagnosisCodeEnum.CorrectByGuess;
         return DiagnosisCodeEnum.CorrectConfident;
     }
-    if (Number(attempt.elapsedMs || 0) < 2500)
-        return DiagnosisCodeEnum.Inattention;
+    if (Number(attempt.elapsedMs || 0) < 2500) return DiagnosisCodeEnum.Inattention;
     return DiagnosisCodeEnum.ConceptGap;
 }
 
 export function actionForDiagnosis(code: DiagnosisCode): PedagogicalAction {
-    if (
-        code === DiagnosisCodeEnum.ConceptGap ||
-        code === DiagnosisCodeEnum.DidNotKnow
-    )
+    if (code === DiagnosisCodeEnum.ConceptGap || code === DiagnosisCodeEnum.DidNotKnow)
         return PedagogicalAction.Theory;
-    if (code === DiagnosisCodeEnum.ProceduralGap)
-        return PedagogicalAction.Practice;
-    if (
-        code === DiagnosisCodeEnum.InterpretationGap ||
-        code === DiagnosisCodeEnum.StrategyGap
-    )
+    if (code === DiagnosisCodeEnum.ProceduralGap) return PedagogicalAction.Practice;
+    if (code === DiagnosisCodeEnum.InterpretationGap || code === DiagnosisCodeEnum.StrategyGap)
         return PedagogicalAction.Practice;
     if (
         code === DiagnosisCodeEnum.Forgetting ||
@@ -183,29 +148,20 @@ export function recommendNext({
     recentErrors?: Array<{ topicIds?: Array<string | number> }>;
 } = {}) {
     const blocked = new Set(
-        prerequisites
-            .filter((item) => !item.completed)
-            .map((item) => String(item.topicId)),
+        prerequisites.filter((item) => !item.completed).map((item) => String(item.topicId)),
     );
     const weakTopics = Object.entries(topicMastery)
-        .sort(
-            ([, left], [, right]) =>
-                (left.percentage || 0) - (right.percentage || 0),
-        )
+        .sort(([, left], [, right]) => (left.percentage || 0) - (right.percentage || 0))
         .map(([topicId]) => String(topicId));
-    const errorTopics = recentErrors.flatMap((item) =>
-        (item.topicIds || []).map(String),
-    );
+    const errorTopics = recentErrors.flatMap((item) => (item.topicIds || []).map(String));
     return (
         incompleteItems.find(
             (item) =>
-                !blocked.has(String(item.topicId)) &&
-                errorTopics.includes(String(item.topicId)),
+                !blocked.has(String(item.topicId)) && errorTopics.includes(String(item.topicId)),
         ) ||
         incompleteItems.find(
             (item) =>
-                !blocked.has(String(item.topicId)) &&
-                weakTopics.includes(String(item.topicId)),
+                !blocked.has(String(item.topicId)) && weakTopics.includes(String(item.topicId)),
         ) ||
         incompleteItems.find((item) => !blocked.has(String(item.topicId))) ||
         incompleteItems[0] ||
@@ -249,11 +205,7 @@ export function scheduleReview(
     rating: FsrsRating,
     now = new Date(),
 ) {
-    const result = scheduler.next(
-        reviveCard(target.fsrsCard),
-        now,
-        ratings[rating],
-    );
+    const result = scheduler.next(reviveCard(target.fsrsCard), now, ratings[rating]);
     let state: ReviewState = ReviewStateEnum.Relearning;
     if (result.card.state === 0) state = ReviewStateEnum.New;
     else if (result.card.state === 1) state = ReviewStateEnum.Learning;
@@ -271,18 +223,14 @@ export function scheduleReview(
     } satisfies ReviewTarget & { fsrsCard: StoredCard };
 }
 
-export function previewReview(
-    target: ReviewTarget & { fsrsCard?: StoredCard },
-    now = new Date(),
-) {
+export function previewReview(target: ReviewTarget & { fsrsCard?: StoredCard }, now = new Date()) {
     const result = scheduler.repeat(reviveCard(target.fsrsCard), now);
     return Object.fromEntries(
         (Object.values(FsrsRating) as FsrsRating[]).map((rating) => [
             rating,
             {
                 dueAt: result[ratings[rating]].card.due.toISOString(),
-                interval:
-                    result[ratings[rating]].card.due.getTime() - now.getTime(),
+                interval: result[ratings[rating]].card.due.getTime() - now.getTime(),
             },
         ]),
     );
@@ -361,9 +309,7 @@ export function achievementDefinitions(
     }));
 }
 
-export async function syncAchievements(
-    stats: Parameters<typeof achievementDefinitions>[0] = {},
-) {
+export async function syncAchievements(stats: Parameters<typeof achievementDefinitions>[0] = {}) {
     const achievements = achievementDefinitions(stats);
     await Promise.all(
         achievements

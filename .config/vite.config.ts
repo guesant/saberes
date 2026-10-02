@@ -7,10 +7,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 
 const base = process.env.VITE_BASE_PATH || "/";
 const asset = (name: string) => `${base}${name}`.replace("//", "/");
-const localContentPath = path.resolve(
-    process.cwd(),
-    ".local/content/content.sqlite",
-);
+const localContentPath = path.resolve(process.cwd(), ".local/content/content.sqlite");
 
 const localContentPlugin = {
     name: "local-content-database",
@@ -30,20 +27,17 @@ const localContentPlugin = {
             ) => void;
         };
     }) {
-        server.middlewares.use(
-            "/data/content.sqlite",
-            (_request, response, next) => {
-                if (!fs.existsSync(localContentPath)) {
-                    response.statusCode = 404;
-                    response.end("Banco de conteúdo local não encontrado.");
-                    return;
-                }
-                response.setHeader("Content-Type", "application/vnd.sqlite3");
-                fs.createReadStream(localContentPath)
-                    .on("error", next)
-                    .pipe(response as never);
-            },
-        );
+        server.middlewares.use("/data/content.sqlite", (_request, response, next) => {
+            if (!fs.existsSync(localContentPath)) {
+                response.statusCode = 404;
+                response.end("Banco de conteúdo local não encontrado.");
+                return;
+            }
+            response.setHeader("Content-Type", "application/vnd.sqlite3");
+            fs.createReadStream(localContentPath)
+                .on("error", next)
+                .pipe(response as never);
+        });
     },
 };
 
@@ -66,8 +60,7 @@ export default defineConfig({
             manifest: {
                 name: "Portal Guesant Saberes",
                 short_name: "Saberes",
-                description:
-                    "Estudos offline para processos seletivos e áreas de conhecimento.",
+                description: "Estudos offline para processos seletivos e áreas de conhecimento.",
                 lang: "pt-BR",
                 theme_color: "#152a4a",
                 background_color: "#f7f8fb",
@@ -91,8 +84,7 @@ export default defineConfig({
                 globPatterns: ["**/*.{js,css,html,svg,wasm,json}"],
                 runtimeCaching: [
                     {
-                        urlPattern: ({ url }) =>
-                            url.hostname === "raw.githubusercontent.com",
+                        urlPattern: ({ url }) => url.hostname === "raw.githubusercontent.com",
                         handler: "CacheFirst",
                         options: {
                             cacheName: "saberes-external-content",
@@ -108,10 +100,7 @@ export default defineConfig({
     server: { host: "0.0.0.0", port: 5173 },
     test: {
         environment: "jsdom",
-        setupFiles: [
-            new URL("../packages/app/src/test/setup.ts", import.meta.url)
-                .pathname,
-        ],
+        setupFiles: [new URL("../packages/app/src/test/setup.ts", import.meta.url).pathname],
         include: [
             "src/**/*.test.{ts,tsx}",
             "../pkg-core/src/**/*.test.{ts,tsx}",

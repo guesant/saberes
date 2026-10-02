@@ -12,14 +12,11 @@ export function useCourseViewModel(slug: string | undefined) {
     });
     const startCourse = async () => {
         if (!query.data?.course) return;
-        await dependencies.progress.enrollCourse(
-            `course:${String(query.data.course.slug)}`,
-            {
-                courseId: query.data.course.id,
-                slug: query.data.course.slug,
-                title: query.data.course.title,
-            },
-        );
+        await dependencies.progress.enrollCourse(`course:${String(query.data.course.slug)}`, {
+            courseId: query.data.course.id,
+            slug: query.data.course.slug,
+            title: query.data.course.title,
+        });
     };
     let state: "loading" | "error" | "ready" = "ready";
     if (query.isPending) state = "loading";

@@ -13,9 +13,7 @@ test("carrega a aplicação e registra o service worker", async ({ page }) => {
     await expect
         .poll(() =>
             page.evaluate(
-                async () =>
-                    (await navigator.serviceWorker?.getRegistrations())
-                        ?.length ?? 0,
+                async () => (await navigator.serviceWorker?.getRegistrations())?.length ?? 0,
             ),
         )
         .toBeGreaterThan(0);

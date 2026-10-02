@@ -18,24 +18,14 @@ describe("renderizador de conteúdo editorial", () => {
                 ])}
             />,
         );
-        expect(
-            screen.getByRole("heading", { name: "Conceito" }),
-        ).toBeInTheDocument();
+        expect(screen.getByRole("heading", { name: "Conceito" })).toBeInTheDocument();
         expect(screen.getByText("Atenção")).toBeInTheDocument();
-        expect(
-            screen.getByText("Revise antes de praticar."),
-        ).toBeInTheDocument();
-        expect(
-            screen.getByText("Conteúdo editorial revisado"),
-        ).toBeInTheDocument();
+        expect(screen.getByText("Revise antes de praticar.")).toBeInTheDocument();
+        expect(screen.getByText("Conteúdo editorial revisado")).toBeInTheDocument();
     });
 
     it("não interpreta HTML arbitrário como conteúdo executável", () => {
-        render(
-            <ContentRenderer
-                markdown={'<script>alert("x")</script>\n\nTexto seguro'}
-            />,
-        );
+        render(<ContentRenderer markdown={'<script>alert("x")</script>\n\nTexto seguro'} />);
         expect(screen.getByText("Texto seguro")).toBeInTheDocument();
         expect(document.querySelector("script")).toBeNull();
     });

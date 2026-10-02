@@ -55,27 +55,14 @@ describe("serviços pedagógicos locais", () => {
             courses: 0,
             reviews: 0,
         });
-        expect(
-            achievements.find((item) => item.key === "first-question")
-                ?.isUnlocked,
-        ).toBe(true);
-        expect(
-            achievements.find((item) => item.key === "seven-day-streak")
-                ?.isUnlocked,
-        ).toBe(true);
-        expect(
-            achievements.find((item) => item.key === "first-course")
-                ?.isUnlocked,
-        ).toBe(false);
+        expect(achievements.find((item) => item.key === "first-question")?.isUnlocked).toBe(true);
+        expect(achievements.find((item) => item.key === "seven-day-streak")?.isUnlocked).toBe(true);
+        expect(achievements.find((item) => item.key === "first-course")?.isUnlocked).toBe(false);
     });
 
     it("separa diagnóstico pedagógico do agendamento de memória", () => {
-        expect(suggestDiagnosis({ isCorrect: false, elapsedMs: 1000 })).toBe(
-            "inattention",
-        );
-        expect(actionForDiagnosis(DiagnosisCode.ConceptGap)).toBe(
-            PedagogicalAction.Theory,
-        );
+        expect(suggestDiagnosis({ isCorrect: false, elapsedMs: 1000 })).toBe("inattention");
+        expect(actionForDiagnosis(DiagnosisCode.ConceptGap)).toBe(PedagogicalAction.Theory);
         const review = scheduleReview(
             {
                 contentKey: "question:test",

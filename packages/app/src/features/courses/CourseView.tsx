@@ -14,6 +14,7 @@ import {
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
+import { ContentErrorState } from "../../components/ContentState";
 import { useCourseViewModel } from "./useCourseViewModel";
 
 export function CourseView() {
@@ -21,20 +22,22 @@ export function CourseView() {
     const { slug } = useParams();
     const viewModel = useCourseViewModel(slug);
     const [started, setStarted] = useState(false);
-    if (viewModel.state === "loading")
-        return <Typography>{t("common.loadingCourse")}</Typography>;
-    if (!viewModel.data)
+    if (viewModel.state === "loading") return <Typography>{t("common.loadingCourse")}</Typography>;
+    if (viewModel.state === "error") {
         return (
-            <Typography color="text.secondary">
-                {t("course.notFound")}
-            </Typography>
+            <ContentErrorState
+                error={viewModel.error}
+                label={t("errors.contentLoad")}
+                onRetry={viewModel.reload}
+            />
         );
+    }
+    if (!viewModel.data)
+        return <Typography color="text.secondary">{t("course.notFound")}</Typography>;
     const data = viewModel.data;
     const course = data.course;
     const courseType =
-        course.course_type === "specific"
-            ? t("course.specific")
-            : t("course.general");
+        course.course_type === "specific" ? t("course.specific") : t("course.general");
     return (
         <>
             <Card
@@ -42,15 +45,10 @@ export function CourseView() {
                     p: { xs: 2, md: 5 },
                     mb: 4,
                     color: "white",
-                    background:
-                        "linear-gradient(120deg, #121b35 0%, #273b72 65%, #523a8b 100%)",
+                    background: "linear-gradient(120deg, #121b35 0%, #273b72 65%, #523a8b 100%)",
                 }}
             >
-                <Chip
-                    label={courseType}
-                    sx={{ color: "white" }}
-                    variant="outlined"
-                />
+                <Chip label={courseType} sx={{ color: "white" }} variant="outlined" />
                 <Typography variant="h2" sx={{ mt: 2 }}>
                     {String(course.title)}
                 </Typography>
@@ -79,21 +77,15 @@ export function CourseView() {
                         <CardContent sx={{ p: 0 }}>
                             <Box sx={{ p: 2.5, bgcolor: "background.default" }}>
                                 <Typography variant="h6">
-                                    {String(module.position)}.{" "}
-                                    {String(module.title)}
+                                    {String(module.position)}. {String(module.title)}
                                 </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="text.secondary"
-                                >
+                                <Typography variant="body2" color="text.secondary">
                                     {String(module.description || "")}
                                 </Typography>
                             </Box>
                             <List disablePadding>
                                 {data.items
-                                    .filter(
-                                        (item) => item.module_id === module.id,
-                                    )
+                                    .filter((item) => item.module_id === module.id)
                                     .map((item) => (
                                         <ListItem
                                             key={String(item.id)}
@@ -109,10 +101,7 @@ export function CourseView() {
                                                 ) : (
                                                     <Chip
                                                         label={String(
-                                                            item.item_type ||
-                                                                t(
-                                                                    "course.practice",
-                                                                ),
+                                                            item.item_type || t("course.practice"),
                                                         )}
                                                         size="small"
                                                     />
@@ -121,9 +110,7 @@ export function CourseView() {
                                         >
                                             <ListItemText
                                                 primary={String(item.title)}
-                                                secondary={String(
-                                                    item.description || "",
-                                                )}
+                                                secondary={String(item.description || "")}
                                             />
                                         </ListItem>
                                     ))}

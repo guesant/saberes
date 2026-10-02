@@ -1,0 +1,6 @@
+no_progress = true
+offline = true
+include_fragments = true
+max_retries = 2
+timeout = 20
+exclude = ["^https?://", "^mailto:"]

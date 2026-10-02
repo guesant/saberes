@@ -17,14 +17,11 @@ export function useLessonViewModel(key: string | undefined) {
             completed,
         });
     const saveBookmark = () =>
-        dependencies.progress.saveBookmark(
-            `lesson:${String(query.data?.lesson.slug || key)}`,
-            {
-                lessonId: query.data?.lesson.id,
-                title: query.data?.lesson.title,
-                type: "lesson",
-            },
-        );
+        dependencies.progress.saveBookmark(`lesson:${String(query.data?.lesson.slug || key)}`, {
+            lessonId: query.data?.lesson.id,
+            title: query.data?.lesson.title,
+            type: "lesson",
+        });
     let state: "loading" | "error" | "ready" = "ready";
     if (query.isPending) state = "loading";
     else if (query.isError) state = "error";

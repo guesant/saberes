@@ -14,18 +14,24 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
+import { ContentErrorState } from "../../components/ContentState";
 import { useTopicMapViewModel } from "./useTopicMapViewModel";
 
 export function TopicMapView() {
     const { t } = useTranslation();
     const { slug } = useParams();
     const viewModel = useTopicMapViewModel(slug || "");
-    if (viewModel.state === "loading")
-        return <Typography>{t("common.loadingMap")}</Typography>;
-    if (!viewModel.data)
+    if (viewModel.state === "loading") return <Typography>{t("common.loadingMap")}</Typography>;
+    if (viewModel.state === "error") {
         return (
-            <Typography color="text.secondary">{t("map.notFound")}</Typography>
+            <ContentErrorState
+                error={viewModel.error}
+                label={t("errors.contentLoad")}
+                onRetry={viewModel.reload}
+            />
         );
+    }
+    if (!viewModel.data) return <Typography color="text.secondary">{t("map.notFound")}</Typography>;
     const { map, nodes, edges } = viewModel.data;
     return (
         <>
@@ -53,14 +59,8 @@ export function TopicMapView() {
                                             <Typography fontWeight={700}>
                                                 {String(node.label)}
                                             </Typography>
-                                            <Typography
-                                                variant="body2"
-                                                color="text.secondary"
-                                            >
-                                                {String(
-                                                    node.description ||
-                                                        t("map.studyTopic"),
-                                                )}
+                                            <Typography variant="body2" color="text.secondary">
+                                                {String(node.description || t("map.studyTopic"))}
                                             </Typography>
                                             <Button
                                                 component={Link}
@@ -80,9 +80,7 @@ export function TopicMapView() {
                 <Grid size={{ xs: 12, md: 4 }}>
                     <Card>
                         <CardContent>
-                            <Typography variant="h6">
-                                {t("map.structure")}
-                            </Typography>
+                            <Typography variant="h6">{t("map.structure")}</Typography>
                             <Stack direction="row" spacing={1} sx={{ mt: 2 }}>
                                 <Chip
                                     label={t("map.topicsCount", {

@@ -1,30 +1,49 @@
 // @ts-nocheck -- migração incremental do provider legado de conteúdo.
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { loadContentDatabase } from "@guesant/saberes-adapter-data-v1";
 
-const ContentContext = createContext(null);
+type ContentState = {
+    status: "loading" | "ready" | "error";
+    db: Awaited<ReturnType<typeof loadContentDatabase>> | null;
+    error: unknown;
+    reload: () => void;
+};
+
+const ContentContext = createContext<ContentState | null>(null);
 
 export function ContentProvider({ children }) {
-    const [content, setContent] = useState({
+    const [attempt, setAttempt] = useState(0);
+    const [content, setContent] = useState<Omit<ContentState, "reload">>({
         status: "loading",
         db: null,
         error: null,
     });
 
-    useEffect(() => {
-        loadContentDatabase()
-            .then((db) => setContent({ status: "ready", db, error: null }))
-            .catch((error) => setContent({ status: "error", db: null, error }));
-    }, []);
+    const reload = useCallback(() => setAttempt((current) => current + 1), []);
 
-    const value = useMemo(() => content, [content]);
-    return (
-        <ContentContext.Provider value={value}>
-            {children}
-        </ContentContext.Provider>
-    );
+    useEffect(() => {
+        // The counter intentionally re-runs this effect after a user-requested retry.
+        void attempt;
+        let active = true;
+        setContent({ status: "loading", db: null, error: null });
+        loadContentDatabase()
+            .then((db) => {
+                if (active) setContent({ status: "ready", db, error: null });
+            })
+            .catch((error) => {
+                if (active) setContent({ status: "error", db: null, error });
+            });
+        return () => {
+            active = false;
+        };
+    }, [attempt]);
+
+    const value = useMemo(() => ({ ...content, reload }), [content, reload]);
+    return <ContentContext.Provider value={value}>{children}</ContentContext.Provider>;
 }
 
 export function useContent() {
-    return useContext(ContentContext);
+    const context = useContext(ContentContext);
+    if (!context) throw new Error("useContent deve ser usado dentro de ContentProvider.");
+    return context;
 }

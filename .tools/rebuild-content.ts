@@ -24,16 +24,13 @@ import {
 } from "@guesant/saberes-core";
 
 const root = process.cwd();
-const sourcePath =
-    process.env.SOURCE_DB || path.join(root, ".local/content/source.sqlite");
-const outputPath =
-    process.env.OUTPUT_DB || path.join(root, ".local/content/content.sqlite");
+const sourcePath = process.env.SOURCE_DB || path.join(root, ".local/content/source.sqlite");
+const outputPath = process.env.OUTPUT_DB || path.join(root, ".local/content/content.sqlite");
 const migrationDbPath = path.join(root, ".cache/content/editorial.sqlite");
 const schemaPath = path.join(root, ".config/dbmate/schema.sql");
 const now = new Date().toISOString();
 
-if (!fs.existsSync(sourcePath))
-    throw new Error(`Banco de origem não encontrado: ${sourcePath}`);
+if (!fs.existsSync(sourcePath)) throw new Error(`Banco de origem não encontrado: ${sourcePath}`);
 
 const SQL = await initSqlJs({
     locateFile: (file) => path.join(root, "node_modules/sql.js/dist", file),
@@ -75,9 +72,7 @@ function oldRows(table) {
         const result = source.exec(`SELECT * FROM ${table}`)[0];
         if (!result) return [];
         return result.values.map((values) =>
-            Object.fromEntries(
-                result.columns.map((column, index) => [column, values[index]]),
-            ),
+            Object.fromEntries(result.columns.map((column, index) => [column, values[index]])),
         );
     } catch {
         return [];
@@ -96,8 +91,8 @@ function insert(table, data) {
 
 function find(table, column, value) {
     return (
-        target.exec(`SELECT id FROM ${table} WHERE ${column} = ?`, [value])[0]
-            ?.values[0]?.[0] ?? null
+        target.exec(`SELECT id FROM ${table} WHERE ${column} = ?`, [value])[0]?.values[0]?.[0] ??
+        null
     );
 }
 
@@ -220,11 +215,7 @@ const editions = {};
 const stages = {};
 const papers = {};
 
-function addEdition(
-    processKey,
-    year,
-    name = `${admissionProcess[processKey]} ${year}`,
-) {
+function addEdition(processKey, year, name = `${admissionProcess[processKey]} ${year}`) {
     const key = `${processKey}-${year}`;
     const editionId = insert("editions", {
         admission_process_id: admissionProcess[processKey],
@@ -235,14 +226,7 @@ function addEdition(
     editions[key] = editionId;
     return editionId;
 }
-function addStage(
-    editionKey,
-    slug,
-    name,
-    kind,
-    sequence = 1,
-    dayNumber = null,
-) {
+function addStage(editionKey, slug, name, kind, sequence = 1, dayNumber = null) {
     const stageId = insert("stages", {
         edition_id: editions[editionKey],
         slug,
@@ -271,8 +255,7 @@ for (const exam of old.exams) {
     const stageKey = `${editionKey}-first-phase`;
     addStage(editionKey, "first-phase", "1ª fase", StageKind.Objective, 1);
     const sourceUrl =
-        exam.source_url ||
-        `https://www.comvest.unicamp.br/vestibulares-anteriores/${exam.year}`;
+        exam.source_url || `https://www.comvest.unicamp.br/vestibulares-anteriores/${exam.year}`;
     const sourceId =
         find("source_documents", "url", sourceUrl) ||
         insert("source_documents", {
@@ -282,15 +265,8 @@ for (const exam of old.exams) {
             kind: "exam",
             is_official: 1,
         });
-    const paperId = addPaper(
-        stageKey,
-        "main",
-        `Prova da 1ª fase — ${exam.year}`,
-    );
-    target.run("UPDATE papers SET source_document_id = ? WHERE id = ?", [
-        sourceId,
-        paperId,
-    ]);
+    const paperId = addPaper(stageKey, "main", `Prova da 1ª fase — ${exam.year}`);
+    target.run("UPDATE papers SET source_document_id = ? WHERE id = ?", [sourceId, paperId]);
 }
 
 addEdition(AdmissionProcessCode.Unicamp, 2027, "Vestibular Unicamp 2027");
@@ -304,27 +280,15 @@ for (const [slug, name, kind, sequence] of [
         `${"unicamp-2027"}-${slug}`,
         "main",
         `${name} — Vestibular Unicamp 2027`,
-        kind === StageKind.Objective
-            ? PaperKind.Objective
-            : PaperKind.Discursive,
+        kind === StageKind.Objective ? PaperKind.Objective : PaperKind.Discursive,
     );
 }
 addEdition(AdmissionProcessCode.Fuvest, 2027, "Fuvest 2027");
 addStage("fuvest-2027", "first-phase", "1ª fase", StageKind.Objective, 1);
 addPaper("fuvest-2027-first-phase", "main", "Prova da 1ª fase");
 addStage("fuvest-2027", "second-phase", "2ª fase", StageKind.Discursive, 2);
-addPaper(
-    "fuvest-2027-second-phase",
-    "portuguese",
-    "Prova de Português",
-    PaperKind.Discursive,
-);
-addPaper(
-    "fuvest-2027-second-phase",
-    "specific",
-    "Prova específica",
-    PaperKind.Discursive,
-);
+addPaper("fuvest-2027-second-phase", "portuguese", "Prova de Português", PaperKind.Discursive);
+addPaper("fuvest-2027-second-phase", "specific", "Prova específica", PaperKind.Discursive);
 addStage("fuvest-2027", "essay", "Redação", StageKind.Essay, 3);
 addPaper("fuvest-2027-essay", "main", "Redação Fuvest 2027", PaperKind.Essay);
 addEdition(AdmissionProcessCode.Enem, 2027, "ENEM 2027");
@@ -335,10 +299,7 @@ addPaper("enem-2027-day-2", "main", "Ciências da Natureza e Matemática");
 addStage("enem-2027", "essay", "Redação", StageKind.Essay, 3);
 addPaper("enem-2027-essay", "main", "Redação ENEM 2027", PaperKind.Essay);
 
-for (const key of [
-    "unicamp-2027-first-phase-main",
-    "fuvest-2027-first-phase-main",
-])
+for (const key of ["unicamp-2027-first-phase-main", "fuvest-2027-first-phase-main"])
     insert("paper_versions", {
         paper_id: papers[key],
         code: "A",
@@ -382,23 +343,17 @@ function subjectBelongsToPaper(paperName, stageSlug, processSlug, subjectSlug) {
                 "sociologia",
             ].includes(subjectSlug);
         if (stageSlug === "day-2")
-            return ["matematica", "fisica", "quimica", "biologia"].includes(
-                subjectSlug,
-            );
+            return ["matematica", "fisica", "quimica", "biologia"].includes(subjectSlug);
         return subjectSlug === "redacao";
     }
     if (processSlug === "fuvest") {
         if (paperName.includes("Português"))
             return ["lingua-portuguesa", "literatura"].includes(subjectSlug);
         if (paperName.includes("específica"))
-            return ["matematica", "fisica", "quimica", "biologia"].includes(
-                subjectSlug,
-            );
+            return ["matematica", "fisica", "quimica", "biologia"].includes(subjectSlug);
         return subjectSlug === "redacao";
     }
-    return paperName.includes("Redação")
-        ? subjectSlug === "redacao"
-        : subjectSlug !== "redacao";
+    return paperName.includes("Redação") ? subjectSlug === "redacao" : subjectSlug !== "redacao";
 }
 
 for (const paperId of Object.values(papers))
@@ -412,12 +367,7 @@ for (const paperId of Object.values(papers))
             "SELECT slug, assessment_area_id FROM subjects WHERE id = ?",
             [subjectId],
         )[0].values[0];
-        const shouldAdd = subjectBelongsToPaper(
-            paperName,
-            stageSlug,
-            processSlug,
-            subjectRow[0],
-        );
+        const shouldAdd = subjectBelongsToPaper(paperName, stageSlug, processSlug, subjectRow[0]);
         if (shouldAdd)
             insert("paper_subjects", {
                 paper_id: paperId,
@@ -443,9 +393,7 @@ for (const topic of old.topics.filter((item) => item.parent_id))
         description: topic.description,
     });
 const subjectIdByName = Object.fromEntries(
-    target
-        .exec("SELECT id, name FROM subjects")[0]
-        .values.map(([id, name]) => [name, id]),
+    target.exec("SELECT id, name FROM subjects")[0].values.map(([id, name]) => [name, id]),
 );
 for (const topic of old.topics)
     if (subjectIdByName[topic.subject])
@@ -471,26 +419,19 @@ for (const editionKey of Object.keys(editions)) {
             position: topic.position || 0,
         });
         curriculumTopicByEditionOld[editionKey][topic.id] = id;
-        for (const child of old.topics.filter(
-            (item) => item.parent_id === topic.id,
-        ))
-            curriculumTopicByEditionOld[editionKey][child.id] = insert(
-                "curriculum_topics",
-                {
-                    curriculum_id: curriculumId,
-                    topic_id: topicIdByOld[child.id],
-                    parent_id: id,
-                    label: child.name,
-                    description: child.description,
-                    position: child.position || 0,
-                },
-            );
+        for (const child of old.topics.filter((item) => item.parent_id === topic.id))
+            curriculumTopicByEditionOld[editionKey][child.id] = insert("curriculum_topics", {
+                curriculum_id: curriculumId,
+                topic_id: topicIdByOld[child.id],
+                parent_id: id,
+                label: child.name,
+                description: child.description,
+                position: child.position || 0,
+            });
     }
 }
 
-const oldExamById = Object.fromEntries(
-    old.exams.map((exam) => [exam.id, exam.year]),
-);
+const oldExamById = Object.fromEntries(old.exams.map((exam) => [exam.id, exam.year]));
 const occurrenceByOldQuestion = {};
 const optionByOld = {};
 for (const oldQuestion of old.questions) {
@@ -507,20 +448,14 @@ for (const oldQuestion of old.questions) {
         image_path: oldQuestion.image_path,
         status: oldQuestion.status || QuestionStatus.Published,
     });
-    for (const option of old.options.filter(
-        (item) => item.question_id === oldQuestion.id,
-    ))
-        optionByOld[`${oldQuestion.id}-${oldOptionCode(option)}`] = insert(
-            "question_options",
-            {
-                question_id: questionId,
-                code: oldOptionCode(option),
-                text: option.text,
-                position: oldOptionCode(option).charCodeAt(0) - 65,
-            },
-        );
-    const paperId =
-        papers[`unicamp-${oldExamById[oldQuestion.exam_id]}-first-phase-main`];
+    for (const option of old.options.filter((item) => item.question_id === oldQuestion.id))
+        optionByOld[`${oldQuestion.id}-${oldOptionCode(option)}`] = insert("question_options", {
+            question_id: questionId,
+            code: oldOptionCode(option),
+            text: option.text,
+            position: oldOptionCode(option).charCodeAt(0) - 65,
+        });
+    const paperId = papers[`unicamp-${oldExamById[oldQuestion.exam_id]}-first-phase-main`];
     const occurrenceSubjectId = subjectIdByName[oldQuestion.subject] || null;
     const occurrenceAreaId = occurrenceSubjectId
         ? target.exec("SELECT assessment_area_id FROM subjects WHERE id = ?", [
@@ -551,8 +486,7 @@ for (const oldQuestion of old.questions) {
     if (optionByOld[`${oldQuestion.id}-${oldQuestion.correct_answer}`])
         insert("answer_key_options", {
             answer_key_id: answerId,
-            question_option_id:
-                optionByOld[`${oldQuestion.id}-${oldQuestion.correct_answer}`],
+            question_option_id: optionByOld[`${oldQuestion.id}-${oldQuestion.correct_answer}`],
         });
     const sourceUrl = oldQuestion.source_url;
     if (sourceUrl) {
@@ -575,8 +509,7 @@ for (const oldQuestion of old.questions) {
         (item) => item.question_id === oldQuestion.id,
     )) {
         const curriculumKey = `unicamp-${oldExamById[oldQuestion.exam_id]}`;
-        const curriculumTopicId =
-            curriculumTopicByEditionOld[curriculumKey]?.[relation.topic_id];
+        const curriculumTopicId = curriculumTopicByEditionOld[curriculumKey]?.[relation.topic_id];
         if (curriculumTopicId)
             insert("question_topics", {
                 question_occurrence_id: occurrenceId,
@@ -592,10 +525,8 @@ for (const relation of old.relations)
         occurrenceByOldQuestion[relation.related_question_id]
     )
         insert("question_relations", {
-            question_occurrence_id:
-                occurrenceByOldQuestion[relation.question_id],
-            related_occurrence_id:
-                occurrenceByOldQuestion[relation.related_question_id],
+            question_occurrence_id: occurrenceByOldQuestion[relation.question_id],
+            related_occurrence_id: occurrenceByOldQuestion[relation.related_question_id],
             relation_type: relation.relation_type,
         });
 
@@ -673,8 +604,7 @@ for (const lesson of old.lessons) {
             position: index + 1,
         });
     });
-    const curriculumTopicId =
-        curriculumTopicByEditionOld["unicamp-2027"]?.[lesson.topic_id];
+    const curriculumTopicId = curriculumTopicByEditionOld["unicamp-2027"]?.[lesson.topic_id];
     if (curriculumTopicId)
         insert("lesson_topics", {
             lesson_id: lessonId,
@@ -699,8 +629,7 @@ if (richLessonId)
                 {
                     type: "formula",
                     formula: "f(x)=ax+b",
-                    caption:
-                        "Uma forma linear simples para observar variação e intercepto.",
+                    caption: "Uma forma linear simples para observar variação e intercepto.",
                 },
                 {
                     type: "summary",
@@ -724,15 +653,11 @@ for (const resource of old.resources) {
         is_free: resource.is_free,
         is_published: resource.is_published,
     });
-    for (const relation of old.topicResources.filter(
-        (item) => item.resource_id === resource.id,
-    ))
+    for (const relation of old.topicResources.filter((item) => item.resource_id === resource.id))
         insert("resource_topics", {
             resource_id: resourceId,
             curriculum_topic_id:
-                curriculumTopicByEditionOld["unicamp-2027"]?.[
-                    relation.topic_id
-                ] || null,
+                curriculumTopicByEditionOld["unicamp-2027"]?.[relation.topic_id] || null,
         });
 }
 
@@ -791,9 +716,7 @@ for (const [editionKey, degreeProgramId] of [
 }
 
 // Camada editorial de aprendizagem: cursos, mapas e planos reutilizam o conteúdo acima.
-const editorialTopicIds = old.topics
-    .map((topic) => topicIdByOld[topic.id])
-    .filter(Boolean);
+const editorialTopicIds = old.topics.map((topic) => topicIdByOld[topic.id]).filter(Boolean);
 const assessmentSetIds = {};
 const unicampQuestionOccurrences =
     target
@@ -804,8 +727,7 @@ const unicampQuestionOccurrences =
 assessmentSetIds.unicampList = insert("assessment_sets", {
     slug: "lista-unicamp-questoes-catalogadas",
     title: "Lista de questões catalogadas da Unicamp",
-    description:
-        "Prática selecionada a partir das questões já revisadas na base.",
+    description: "Prática selecionada a partir das questões já revisadas na base.",
     kind: AssessmentSetKind.QuestionSet,
     admission_process_id: admissionProcess.unicamp,
     duration_minutes: 60,
@@ -819,9 +741,7 @@ unicampQuestionOccurrences.forEach((questionOccurrenceId, index) => {
         points: 1,
     });
 });
-for (const topic of old.topics.filter(
-    (item) => item.parent_id && topicIdByOld[item.parent_id],
-)) {
+for (const topic of old.topics.filter((item) => item.parent_id && topicIdByOld[item.parent_id])) {
     insert("topic_relations", {
         topic_id: topicIdByOld[item.parent_id],
         related_topic_id: topicIdByOld[topic.id],
@@ -855,8 +775,7 @@ const learningCourse = {
     unicamp: insert("learning_courses", {
         slug: "preparacao-unicamp-2027",
         title: "Preparação Unicamp 2027",
-        description:
-            "Uma trilha orientada pelos tópicos e pelo estilo de cobrança da Unicamp.",
+        description: "Uma trilha orientada pelos tópicos e pelo estilo de cobrança da Unicamp.",
         level: "intermediate",
         course_type: LearningCourseType.Specific,
         estimated_minutes: 360,
@@ -904,22 +823,11 @@ const unicampPracticeModule = addLearningModule(
 );
 
 const lessonBySlug = Object.fromEntries(
-    target
-        .exec("SELECT id, slug FROM lessons")[0]
-        ?.values.map(([id, slug]) => [slug, id]) || [],
+    target.exec("SELECT id, slug FROM lessons")[0]?.values.map(([id, slug]) => [slug, id]) || [],
 );
 const questionIds =
-    target
-        .exec("SELECT id FROM question_occurrences ORDER BY id")[0]
-        ?.values.flat() || [];
-function addCourseItem(
-    moduleId,
-    itemType,
-    title,
-    description,
-    position,
-    extras = {},
-) {
+    target.exec("SELECT id FROM question_occurrences ORDER BY id")[0]?.values.flat() || [];
+function addCourseItem(moduleId, itemType, title, description, position, extras = {}) {
     return insert("learning_course_items", {
         module_id: moduleId,
         item_type: itemType,
@@ -1019,10 +927,7 @@ for (const topicId of editorialTopicIds.slice(0, 18))
         topic_id: topicId,
         is_primary: 1,
     });
-for (const editionId of [
-    editions["unicamp-2027"],
-    editions["unicamp-2026"],
-].filter(Boolean))
+for (const editionId of [editions["unicamp-2027"], editions["unicamp-2026"]].filter(Boolean))
     insert("learning_course_targets", {
         learning_course_id: learningCourse.unicamp,
         admission_process_id: null,
@@ -1038,15 +943,12 @@ for (const processId of Object.values(admissionProcess))
 const mapId = insert("learning_maps", {
     slug: "mapa-unicamp-2027",
     title: "Mapa de domínio Unicamp 2027",
-    description:
-        "Visualize os tópicos, pré-requisitos e próximos passos da preparação.",
+    description: "Visualize os tópicos, pré-requisitos e próximos passos da preparação.",
     edition_id: editions["unicamp-2027"],
     admission_process_id: admissionProcess.unicamp,
     learning_course_id: learningCourse.unicamp,
 });
-const mapTopicIds = Object.values(
-    curriculumTopicByEditionOld["unicamp-2027"] || {},
-).slice(0, 12);
+const mapTopicIds = Object.values(curriculumTopicByEditionOld["unicamp-2027"] || {}).slice(0, 12);
 mapTopicIds.forEach((curriculumTopicId, index) => {
     insert("learning_map_topics", {
         map_id: mapId,
@@ -1067,8 +969,7 @@ const planId = insert("study_plans", {
     slug: "trilha-30-dias-unicamp-2027",
     title: "Trilha de 30 dias para a Unicamp",
     objective: "Criar ritmo de estudo e revisar os tópicos essenciais.",
-    description:
-        "Um plano editorial curto para começar com teoria, prática e revisão.",
+    description: "Um plano editorial curto para começar com teoria, prática e revisão.",
     duration_days: 30,
     learning_course_id: learningCourse.unicamp,
     map_id: mapId,
@@ -1109,17 +1010,7 @@ const planSteps = [
     ],
 ];
 planSteps.forEach(
-    (
-        [
-            title,
-            description,
-            curriculumTopicId,
-            moduleId,
-            itemId,
-            estimatedMinutes,
-        ],
-        index,
-    ) => {
+    ([title, description, curriculumTopicId, moduleId, itemId, estimatedMinutes], index) => {
         insert("study_plan_steps", {
             study_plan_id: planId,
             position: index + 1,
@@ -1153,6 +1044,4 @@ target.run("DROP TABLE IF EXISTS schema_migrations");
 const binary = target.export();
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, Buffer.from(binary));
-console.log(
-    `Snapshot multi-exame exportado: ${outputPath} (${binary.byteLength} bytes)`,
-);
+console.log(`Snapshot multi-exame exportado: ${outputPath} (${binary.byteLength} bytes)`);

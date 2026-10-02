@@ -14,5 +14,6 @@ export function useTopicMapViewModel(mapKey: string) {
         state,
         data: query.data || null,
         error: query.error as Error | null,
+        reload: query.refetch,
     } as const;
 }

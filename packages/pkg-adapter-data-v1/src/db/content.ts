@@ -1,8 +1,7 @@
 import initSqlJs from "sql.js";
 
 const primaryUrl =
-    import.meta.env.VITE_CONTENT_DB_URL ||
-    `${import.meta.env.BASE_URL}data/content.sqlite`;
+    import.meta.env.VITE_CONTENT_DB_URL || `${import.meta.env.BASE_URL}data/content.sqlite`;
 const fallbackUrl = `${import.meta.env.BASE_URL}data/content.sqlite`;
 
 type SqlResult = { columns: string[]; values: unknown[][] };
@@ -19,24 +18,19 @@ function rows(result: SqlResult[] | undefined): ContentRow[] {
     if (!result?.[0]) return [];
     const { columns, values } = result[0];
     return values.map((value) =>
-        Object.fromEntries(
-            columns.map((column, index) => [column, value[index]]),
-        ),
+        Object.fromEntries(columns.map((column, index) => [column, value[index]])),
     );
 }
 
 async function fetchDatabase(url: string): Promise<Uint8Array> {
     const response = await fetch(url, { cache: "no-cache" });
-    if (!response.ok)
-        throw new Error(
-            `Não foi possível carregar o conteúdo (${response.status}).`,
-        );
+    if (!response.ok) throw new Error(`Não foi possível carregar o conteúdo (${response.status}).`);
     return new Uint8Array(await response.arrayBuffer());
 }
 
 export async function loadContentDatabase(): Promise<ContentDatabase> {
     if (!databasePromise) {
-        databasePromise = (async () => {
+        const pendingDatabase = (async () => {
             const SQL = await initSqlJs({
                 locateFile: () => `${import.meta.env.BASE_URL}sql-wasm.wasm`,
             });
@@ -60,6 +54,11 @@ export async function loadContentDatabase(): Promise<ContentDatabase> {
                 },
             };
         })();
+        const recoverableDatabase = pendingDatabase.catch((error) => {
+            if (databasePromise === recoverableDatabase) databasePromise = undefined;
+            throw error;
+        });
+        databasePromise = recoverableDatabase;
     }
     return databasePromise;
 }

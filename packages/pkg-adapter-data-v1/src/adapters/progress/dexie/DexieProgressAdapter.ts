@@ -61,10 +61,7 @@ export class DexieProgressAdapter implements ProgressPort {
     }
 
     async saveReviewTarget(target: ReviewTargetRecord) {
-        await saveReviewTarget(
-            target.contentKey,
-            target as Partial<ReviewTarget>,
-        );
+        await saveReviewTarget(target.contentKey, target as Partial<ReviewTarget>);
     }
 
     async saveDiagnosis(diagnosis: DiagnosisRecord) {

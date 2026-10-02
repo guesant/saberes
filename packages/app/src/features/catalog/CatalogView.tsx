@@ -1,12 +1,5 @@
 import type { CatalogCard } from "@guesant/saberes-core";
-import {
-    AutoStories,
-    EventNote,
-    Explore,
-    Map as MapIcon,
-    Quiz,
-    School,
-} from "@mui/icons-material";
+import { AutoStories, EventNote, Explore, Map as MapIcon, Quiz, School } from "@mui/icons-material";
 import {
     Box,
     Button,
@@ -24,6 +17,7 @@ import {
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { ContentErrorState } from "../../components/ContentState";
 import { useCatalogViewModel } from "./useCatalogViewModel";
 
 function minutes(value: unknown, guidedContent: string) {
@@ -63,20 +57,11 @@ function CardItem({ item }: { item: CatalogCard }) {
     const content = (
         <CardContent sx={{ p: 2.5 }}>
             <Box sx={{ color: "primary.main" }}>{icon}</Box>
-            <Chip
-                label={typeLabel}
-                size="small"
-                variant="outlined"
-                sx={{ mt: 1 }}
-            />
+            <Chip label={typeLabel} size="small" variant="outlined" sx={{ mt: 1 }} />
             <Typography variant="h6" sx={{ mt: 1 }}>
                 {String(item.title)}
             </Typography>
-            <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mt: 1, minHeight: 40 }}
-            >
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 1, minHeight: 40 }}>
                 {String(item.description || "")}
             </Typography>
             <Typography variant="caption" color="text.secondary">
@@ -118,10 +103,16 @@ export function CatalogView() {
     const { t } = useTranslation();
     const viewModel = useCatalogViewModel();
     const [tab, setTab] = useState(0);
-    if (viewModel.state === "loading")
-        return <Typography>{t("common.loadingCatalog")}</Typography>;
-    if (viewModel.state === "error")
-        return <Typography color="error">{t("errors.catalogLoad")}</Typography>;
+    if (viewModel.state === "loading") return <Typography>{t("common.loadingCatalog")}</Typography>;
+    if (viewModel.state === "error") {
+        return (
+            <ContentErrorState
+                error={viewModel.error}
+                label={t("errors.catalogLoad")}
+                onRetry={viewModel.reload}
+            />
+        );
+    }
     const data = viewModel.data || {
         courses: [],
         maps: [],
@@ -144,9 +135,7 @@ export function CatalogView() {
                 fullWidth
                 placeholder={t("catalog.searchPlaceholder")}
                 value={viewModel.filters.search || ""}
-                onChange={(event) =>
-                    viewModel.setFilters({ search: event.target.value })
-                }
+                onChange={(event) => viewModel.setFilters({ search: event.target.value })}
                 sx={{ mb: 3, maxWidth: 720 }}
                 InputProps={{
                     startAdornment: (
@@ -165,25 +154,18 @@ export function CatalogView() {
                 <Tab label={`${t("catalog.courses")} ${data.courses.length}`} />
                 <Tab label={`${t("catalog.maps")} ${data.maps.length}`} />
                 <Tab label={`${t("catalog.plans")} ${data.plans.length}`} />
-                <Tab
-                    label={`${t("catalog.contents")} ${data.content.length}`}
-                />
+                <Tab label={`${t("catalog.contents")} ${data.content.length}`} />
             </Tabs>
             <Grid container spacing={2}>
                 {sections[tab].length ? (
                     sections[tab].map((item) => (
-                        <Grid
-                            size={{ xs: 12, md: 6 }}
-                            key={`${item.type}-${item.id}`}
-                        >
+                        <Grid size={{ xs: 12, md: 6 }} key={`${item.type}-${item.id}`}>
                             <CardItem item={item} />
                         </Grid>
                     ))
                 ) : (
                     <Grid size={12}>
-                        <Typography color="text.secondary">
-                            {t("catalog.noResults")}
-                        </Typography>
+                        <Typography color="text.secondary">{t("catalog.noResults")}</Typography>
                     </Grid>
                 )}
             </Grid>

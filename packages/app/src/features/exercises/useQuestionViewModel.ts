@@ -15,18 +15,13 @@ export function useQuestionViewModel(key: string | undefined) {
         const question = query.data.question;
         const expected = String(question.correct_answer || "").toUpperCase();
         const correct =
-            Boolean(question.is_automatically_gradable) &&
-            answer.toUpperCase() === expected;
+            Boolean(question.is_automatically_gradable) && answer.toUpperCase() === expected;
         await dependencies.progress.recordAttempt({
-            contentKey: String(
-                question.occurrence_key || `question:${question.occurrence_id}`,
-            ),
+            contentKey: String(question.occurrence_key || `question:${question.occurrence_id}`),
             questionId: question.occurrence_id as number,
             answer,
             isCorrect: question.is_automatically_gradable ? correct : null,
-            topicIds: query.data.topics.map(
-                (topic) => topic.topic_id as number,
-            ),
+            topicIds: query.data.topics.map((topic) => topic.topic_id as number),
         });
         return question.is_automatically_gradable ? correct : null;
     };

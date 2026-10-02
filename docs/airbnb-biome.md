@@ -66,6 +66,27 @@ Essas lacunas são complementadas por gates separados quando fizerem sentido,
 como TypeScript, ast-grep, axe-core/Playwright, arquitetura e testes. Elas não
 são silenciosamente tratadas como aprovadas pelo Biome.
 
+## Formatação
+
+O repositório mantém uma única fonte de verdade para formatação: o Biome. A
+configuração canônica fixa largura de linha de 100 colunas, quatro espaços para
+TypeScript e JSON, LF, aspas duplas (inclusive JSX), ponto e vírgula, vírgulas
+finais em todas as estruturas suportadas, parênteses em todos os parâmetros de
+arrow functions e espaços internos em chaves de objetos.
+
+Essas escolhas incorporam os aspectos relevantes das configurações do Prettier
+analisadas sem introduzir Prettier como segundo formatter. O .editorconfig
+continua sendo a regra de edição para arquivos que não passam por Biome,
+especialmente Markdown, YAML e SQL.
+
+## Regras adicionais de segurança e legibilidade
+
+Além do preset recomendado, o Biome bloqueia explicitamente código inalcançável,
+any explícito, igualdade frouxa, shadowing, debugger, fallthrough silencioso,
+optional chaining inseguro e imports de namespace. A auditoria de escopo impede
+arquivos de exclusão e supressões que poderiam ocultar arquivos de packages/ ou
+.tools/.
+
 ## Fonte e atualização
 
 A referência de política é o Airbnb JavaScript Style Guide e o pacote

@@ -13,7 +13,19 @@
         "formatWithErrors": false,
         "indentStyle": "space",
         "indentWidth": 4,
-        "lineEnding": "lf"
+        "lineEnding": "lf",
+        "lineWidth": 100,
+        "bracketSpacing": true
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "double",
+            "jsxQuoteStyle": "double",
+            "quoteProperties": "asNeeded",
+            "trailingCommas": "all",
+            "semicolons": "always",
+            "arrowParentheses": "always"
+        }
     },
     "linter": {
         "enabled": true,
@@ -21,11 +33,20 @@
             "preset": "recommended",
             "a11y": { "recommended": true },
             "correctness": {
+                "noUnreachable": "error",
                 "noUnusedImports": "error",
-                "noUnusedVariables": "error"
+                "noUnusedVariables": "error",
+                "noUnsafeOptionalChaining": "error"
             },
             "performance": {
                 "noNamespaceImport": "error"
+            },
+            "suspicious": {
+                "noDebugger": "error",
+                "noDoubleEquals": "error",
+                "noExplicitAny": "error",
+                "noFallthroughSwitchClause": "error",
+                "noShadow": "error"
             },
             "style": {
                 "noCommonJs": "error",

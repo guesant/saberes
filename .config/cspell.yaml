@@ -1,0 +1,30 @@
+version: "0.2"
+language: pt-BR,en
+import:
+  - ./node_modules/@cspell/dict-pt-br/cspell-ext.json
+dictionaryDefinitions:
+  - name: project
+    path: ./cspell-words.txt
+    addWords: true
+dictionaries:
+  - project
+files:
+  - README.md
+  - docs/**/*.md
+  - packages/app/src/i18n/locales/**/*.ts
+ignorePaths:
+  - .git/**
+  - .cache/**
+  - .local/**
+  - dist/**
+  - node_modules/**
+  - deno.lock
+  - LICENSE*
+  - packages/app/public/data/**
+ignoreRegExpList:
+  - /`[\s\S]*?`/g
+  - /`[^`\n]*`/g
+  - /https?:\/\/\S+/g
+  - /\bsha-[0-9a-f]+\b/g
+  - /\[[^\]]*\]\([^)]*\)/g
+minWordLength: 4

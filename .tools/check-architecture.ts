@@ -15,9 +15,7 @@ async function filesIn(directory) {
     for (const entry of entries) {
         const path = join(directory, entry.name);
         if (entry.isDirectory()) files.push(...(await filesIn(path)));
-        else if (
-            sourceExtensions.has(entry.name.slice(entry.name.lastIndexOf(".")))
-        )
+        else if (sourceExtensions.has(entry.name.slice(entry.name.lastIndexOf("."))))
             files.push(path);
     }
     return files;
@@ -27,27 +25,20 @@ for (const [layer, root] of Object.entries(roots)) {
     for (const file of await filesIn(root)) {
         const relativePath = relative(root, file).replaceAll("\\", "/");
         const source = await readFile(file, "utf8");
-        const imports = [
-            ...source.matchAll(/(?:from|import\()\s*["']([^"']+)["']/g),
-        ].map((match) => match[1]);
+        const imports = [...source.matchAll(/(?:from|import\()\s*["']([^"']+)["']/g)].map(
+            (match) => match[1],
+        );
         const has = (pattern) => imports.some((value) => pattern.test(value));
         if (layer === "core" && imports.some((value) => !value.startsWith(".")))
-            violations.push(
-                `${relativePath}: core importa dependência externa`,
-            );
-        if (
-            layer === "adapter" &&
-            has(/react|mui|react-router|@guesant\/saberes-app/)
-        )
+            violations.push(`${relativePath}: core importa dependência externa`);
+        if (layer === "adapter" && has(/react|mui|react-router|@guesant\/saberes-app/))
             violations.push(`${relativePath}: adapter importa UI ou app`);
         if (
             layer === "app" &&
             relativePath.startsWith("features/") &&
             has(/saberes-adapter-data-v1|sql\.js|dexie|ts-fsrs/)
         )
-            violations.push(
-                `${relativePath}: feature acessa adapter diretamente`,
-            );
+            violations.push(`${relativePath}: feature acessa adapter diretamente`);
         if (
             layer === "app" &&
             relativePath.endsWith("View.tsx") &&
@@ -74,7 +65,5 @@ if (violations.length) {
     console.error(violations.join("\n"));
     process.exitCode = 1;
 } else {
-    console.log(
-        "Arquitetura válida: camadas novas sem dependências proibidas.",
-    );
+    console.log("Arquitetura válida: camadas novas sem dependências proibidas.");
 }

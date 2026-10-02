@@ -7,11 +7,7 @@ export function AppServicesProvider({
     services,
     children,
 }: PropsWithChildren<{ services: AppUseCases }>) {
-    return (
-        <AppServicesContext.Provider value={services}>
-            {children}
-        </AppServicesContext.Provider>
-    );
+    return <AppServicesContext.Provider value={services}>{children}</AppServicesContext.Provider>;
 }
 
 export function useAppServices() {

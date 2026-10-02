@@ -59,6 +59,18 @@ migration-format:
 migration-format-check:
     {{app}} 'deno install --frozen --node-modules-dir=auto && deno task db:format:check'
 
+spelling:
+    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task cspell'
+
+docs-links:
+    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task docs:links'
+
+placeholders:
+    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task placeholders'
+
+commit-check:
+    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task commit:check'
+
 lint:
     {{app}} 'deno install --frozen --node-modules-dir=auto && deno task check:lint'
 
@@ -98,7 +110,7 @@ e2e: runtime-build playwright-build
     {{compose}} up -d web
     trap '{{compose}} down' EXIT
     docker volume create {{workspace_modules_volume}} >/dev/null
-    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -lc 'deno install --frozen --node-modules-dir=auto && deno task e2e'
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'deno install --frozen --node-modules-dir=auto && deno task e2e'
 
 accessibility: runtime-build playwright-build
     #!/usr/bin/env bash
@@ -106,29 +118,29 @@ accessibility: runtime-build playwright-build
     {{compose}} up -d web
     trap '{{compose}} down' EXIT
     docker volume create {{workspace_modules_volume}} >/dev/null
-    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -lc 'deno install --frozen --node-modules-dir=auto && deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts'
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'deno install --frozen --node-modules-dir=auto && deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts'
 
 lighthouse: runtime-build quality-build
     #!/usr/bin/env bash
     set -euo pipefail
     {{compose}} up -d web
     trap '{{compose}} down' EXIT
-    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e LHCI_BUILD_CONTEXT__CURRENT_HASH=local {{quality_image}} bash -lc 'deno install --frozen --node-modules-dir=auto && deno task lighthouse'
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e LHCI_BUILD_CONTEXT__CURRENT_HASH=local {{quality_image}} bash -c 'deno install --frozen --node-modules-dir=auto && deno task lighthouse'
 
 ci: check
 
 repository-lint: quality-build
-    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -lc 'yamllint -c .config/.yamllint.yml .github .config/.yamllint.yml && hadolint --config .config/.hadolint.yaml .container/Dockerfile && for workflow in .github/workflows/*.yml; do actionlint -color "$workflow"; done && zizmor .github/workflows'
+    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'yamllint -c .config/.yamllint.yml .github .config/.yamllint.yml && hadolint --config .config/.hadolint.yaml .container/Dockerfile && for workflow in .github/workflows/*.yml; do actionlint -color "$workflow"; done && zizmor .github/workflows'
 
 reuse-check: quality-build
-    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -lc 'reuse lint'
+    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'reuse lint'
 
 security-audit: quality-build
-    docker run --rm -v "$PWD:/repo:ro" {{quality_image}} bash -lc 'gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && osv-scanner scan source --recursive /repo && trivy fs --skip-version-check --no-progress --scanners vuln,secret --severity CRITICAL,HIGH --exit-code 1 /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
+    docker run --rm -v "$PWD:/repo:ro" {{quality_image}} bash -c 'gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && osv-scanner scan source --recursive /repo && trivy fs --skip-version-check --no-progress --scanners vuln,secret --severity CRITICAL,HIGH --exit-code 1 /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
 
 supply-chain: quality-build
     {{app}} 'deno run --allow-read --allow-env .tools/check-supply-chain.ts'
 
 complexity-report: quality-build
     mkdir -p .cache
-    docker run --rm -v "$PWD:/workspace" -w /workspace {{quality_image}} bash -lc 'lizard -l typescript -C 5 -L 35 -a 3 packages | tee .cache/lizard.txt'
+    docker run --rm -v "$PWD:/workspace" -w /workspace {{quality_image}} bash -c 'lizard -l typescript -C 5 -L 35 -a 3 packages | tee .cache/lizard.txt'

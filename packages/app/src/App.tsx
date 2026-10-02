@@ -54,7 +54,6 @@ import {
     CardActionArea,
     CardContent,
     Chip,
-    CircularProgress,
     Container,
     Divider,
     Drawer,
@@ -81,6 +80,7 @@ import {
     Typography,
 } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import {
     Link,
@@ -93,6 +93,8 @@ import {
     useSearchParams,
 } from "react-router-dom";
 import { ContentRenderer } from "./content/ContentRenderer";
+import { ContentErrorBoundary } from "./components/ContentErrorBoundary";
+import { ContentLoadingState } from "./components/ContentState";
 import { useContent } from "./db/ContentContext";
 import { CatalogView } from "./features/catalog/CatalogView";
 import { CourseView } from "./features/courses/CourseView";
@@ -139,9 +141,7 @@ function Shell({ children }) {
                     <ListItemButton
                         component={Link}
                         to={to}
-                        selected={
-                            to !== "/" && location.pathname.startsWith(to)
-                        }
+                        selected={to !== "/" && location.pathname.startsWith(to)}
                         onClick={() => setOpen(false)}
                     >
                         <ListItemText primary={label} />
@@ -180,12 +180,7 @@ function Shell({ children }) {
                     </Typography>
                     <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
                         {links.slice(1).map(([to, label]) => (
-                            <Button
-                                key={to}
-                                component={Link}
-                                to={to}
-                                color="inherit"
-                            >
+                            <Button key={to} component={Link} to={to} color="inherit">
                                 {label}
                             </Button>
                         ))}
@@ -209,33 +204,14 @@ function Shell({ children }) {
             <Container maxWidth="lg" sx={{ py: { xs: 3, md: 5 } }}>
                 {children}
             </Container>
-            <Box
-                component="footer"
-                sx={{ py: 4, textAlign: "center", color: "text.secondary" }}
-            >
+            <Box component="footer" sx={{ py: 4, textAlign: "center", color: "text.secondary" }}>
                 {t("brand.name")} · {t("brand.footer")}
             </Box>
         </Box>
     );
 }
 function Loading() {
-    const { t } = useTranslation();
-    return (
-        <Stack alignItems="center" sx={{ py: 10 }}>
-            <CircularProgress />
-            <Typography sx={{ mt: 2 }} color="text.secondary">
-                {t("common.loadingContent")}
-            </Typography>
-        </Stack>
-    );
-}
-function ErrorState({ error }) {
-    const { t } = useTranslation();
-    return (
-        <Alert severity="error" sx={{ my: 3 }}>
-            {t("errors.contentLoad")} {error?.message}
-        </Alert>
-    );
+    return <ContentLoadingState />;
 }
 function Empty({ children }) {
     return (
@@ -253,21 +229,14 @@ function PageTitle({ eyebrow, title, description, action }) {
             sx={{ mb: 4 }}
         >
             <Box>
-                <Typography
-                    variant="overline"
-                    color="secondary.main"
-                    fontWeight={700}
-                >
+                <Typography variant="overline" color="secondary.main" fontWeight={700}>
                     {eyebrow}
                 </Typography>
                 <Typography variant="h3" sx={{ mt: 0.5 }}>
                     {title}
                 </Typography>
                 {description && (
-                    <Typography
-                        color="text.secondary"
-                        sx={{ mt: 1, maxWidth: 740 }}
-                    >
+                    <Typography color="text.secondary" sx={{ mt: 1, maxWidth: 740 }}>
                         {description}
                     </Typography>
                 )}
@@ -309,10 +278,8 @@ function Dashboard() {
         if (!dailyQuestions.data.length) return;
         const date = new Date().toISOString().slice(0, 10);
         const index =
-            [...date].reduce(
-                (sum, character) => sum + character.charCodeAt(0),
-                0,
-            ) % dailyQuestions.data.length;
+            [...date].reduce((sum, character) => sum + character.charCodeAt(0), 0) %
+            dailyQuestions.data.length;
         const item = dailyQuestions.data[index];
         setDaily({ ...item, date });
         saveDailyChallenge(`daily:${date}`, {
@@ -321,17 +288,12 @@ function Dashboard() {
             contentKey: item.occurrence_key || `question:${item.occurrence_id}`,
         });
     }, [dailyQuestions.data]);
-    if (exams.loading || topics.loading || dailyQuestions.loading)
-        return <Loading />;
-    const processCount = new Set(
-        exams.data.map((edition) => edition.process_slug),
-    ).size;
+    if (exams.loading || topics.loading || dailyQuestions.loading) return <Loading />;
+    const processCount = new Set(exams.data.map((edition) => edition.process_slug)).size;
     const years = exams.data
         .map((edition) => Number(edition.year))
         .filter((value) => Number.isFinite(value));
-    const yearRange = years.length
-        ? `${Math.min(...years)}–${Math.max(...years)}`
-        : "—";
+    const yearRange = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : "—";
     return (
         <>
             <PageTitle
@@ -351,10 +313,7 @@ function Dashboard() {
             />
             <Grid container spacing={2} sx={{ mb: 4 }}>
                 <Grid item xs={6} md={3}>
-                    <StatCard
-                        value={attempts.length}
-                        label={t("home.answeredQuestions")}
-                    />
+                    <StatCard value={attempts.length} label={t("home.answeredQuestions")} />
                 </Grid>
                 <Grid item xs={6} md={3}>
                     <StatCard
@@ -363,16 +322,10 @@ function Dashboard() {
                     />
                 </Grid>
                 <Grid item xs={6} md={3}>
-                    <StatCard
-                        value={processCount}
-                        label={t("home.selectionProcesses")}
-                    />
+                    <StatCard value={processCount} label={t("home.selectionProcesses")} />
                 </Grid>
                 <Grid item xs={6} md={3}>
-                    <StatCard
-                        value={yearRange}
-                        label={t("home.editionsInDatabase")}
-                    />
+                    <StatCard value={yearRange} label={t("home.editionsInDatabase")} />
                 </Grid>
             </Grid>
             {daily && (
@@ -392,12 +345,10 @@ function Dashboard() {
                         >
                             <Box>
                                 <Typography variant="overline">
-                                    {t("home.dailyQuestion")} ·{" "}
-                                    {daily.subject || "vestibular"}
+                                    {t("home.dailyQuestion")} · {daily.subject || "vestibular"}
                                 </Typography>
                                 <Typography variant="h5">
-                                    {daily.process_name} {daily.year} · questão{" "}
-                                    {daily.number}
+                                    {daily.process_name} {daily.year} · questão {daily.number}
                                 </Typography>
                                 <Typography sx={{ mt: 0.5, opacity: 0.9 }}>
                                     {t("home.dailyQuestionDescription")}
@@ -424,23 +375,15 @@ function Dashboard() {
                         {topics.data.map((topic) => (
                             <Grid item xs={12} sm={6} key={topic.id}>
                                 <Card>
-                                    <CardActionArea
-                                        component={Link}
-                                        to={`/topicos/${topic.slug}`}
-                                    >
+                                    <CardActionArea component={Link} to={`/topicos/${topic.slug}`}>
                                         <CardContent>
                                             <Chip
                                                 size="small"
-                                                label={
-                                                    topic.subject ||
-                                                    t("common.content")
-                                                }
+                                                label={topic.subject || t("common.content")}
                                                 color="secondary"
                                                 sx={{ mb: 1.5 }}
                                             />
-                                            <Typography variant="h6">
-                                                {topic.name}
-                                            </Typography>
+                                            <Typography variant="h6">{topic.name}</Typography>
                                             <Typography
                                                 color="text.secondary"
                                                 variant="body2"
@@ -475,10 +418,7 @@ function Dashboard() {
                                     <Typography fontWeight={700}>
                                         {edition.process_name} {edition.year}
                                     </Typography>
-                                    <Typography
-                                        variant="body2"
-                                        color="text.secondary"
-                                    >
+                                    <Typography variant="body2" color="text.secondary">
                                         {edition.name}
                                     </Typography>
                                 </Box>
@@ -522,15 +462,11 @@ function TopicBrowser() {
                                 <CardContent>
                                     <Chip
                                         size="small"
-                                        label={
-                                            topic.subject || t("common.content")
-                                        }
+                                        label={topic.subject || t("common.content")}
                                         color="secondary"
                                         sx={{ mb: 2 }}
                                     />
-                                    <Typography variant="h6">
-                                        {topic.name}
-                                    </Typography>
+                                    <Typography variant="h6">{topic.name}</Typography>
                                     <Typography
                                         color="text.secondary"
                                         variant="body2"
@@ -538,10 +474,7 @@ function TopicBrowser() {
                                     >
                                         {topic.description}
                                     </Typography>
-                                    <Button
-                                        sx={{ mt: 2 }}
-                                        endIcon={<ArrowForwardIcon />}
-                                    >
+                                    <Button sx={{ mt: 2 }} endIcon={<ArrowForwardIcon />}>
                                         {t("topics.study")}
                                     </Button>
                                 </CardContent>
@@ -595,27 +528,18 @@ function TopicStudy() {
     );
     const siblings = useQuery(
         "SELECT ct2.id, ct2.label name, t2.slug FROM curriculum_topics ct2 JOIN topics t2 ON t2.id = ct2.topic_id WHERE ct2.curriculum_id = ? AND ct2.parent_id = ? AND ct2.id <> ? ORDER BY ct2.position",
-        [
-            current?.curriculum_id ?? 0,
-            current?.parent_id ?? 0,
-            current?.id ?? 0,
-        ],
+        [current?.curriculum_id ?? 0, current?.parent_id ?? 0, current?.id ?? 0],
         [current?.curriculum_id, current?.parent_id, current?.id],
     );
-    if (topic.loading || relations.loading || siblings.loading)
-        return <Loading />;
+    if (topic.loading || relations.loading || siblings.loading) return <Loading />;
     if (!current) return <Empty>{t("topics.notFound")}</Empty>;
     let theoryContent = null;
     if (sections.data.length) {
         theoryContent = sections.data.map((section) => (
             <Card key={section.id} sx={{ mb: 2 }}>
                 <CardContent>
-                    <Typography variant="h5">
-                        {section.title || t("common.content")}
-                    </Typography>
-                    <Typography
-                        sx={{ whiteSpace: "pre-wrap", lineHeight: 1.8, mt: 2 }}
-                    >
+                    <Typography variant="h5">{section.title || t("common.content")}</Typography>
+                    <Typography sx={{ whiteSpace: "pre-wrap", lineHeight: 1.8, mt: 2 }}>
                         {section.content}
                     </Typography>
                 </CardContent>
@@ -674,20 +598,14 @@ function TopicStudy() {
                         >
                             <Box>
                                 <Typography fontWeight={600}>
-                                    {question.process_name} {question.year} ·
-                                    questão {question.number}
+                                    {question.process_name} {question.year} · questão{" "}
+                                    {question.number}
                                 </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="text.secondary"
-                                >
+                                <Typography variant="body2" color="text.secondary">
                                     {question.subject} · {question.difficulty}
                                 </Typography>
                             </Box>
-                            <Button
-                                component={Link}
-                                to={`/questoes/${question.id}`}
-                            >
+                            <Button component={Link} to={`/questoes/${question.id}`}>
                                 {t("common.solve")}
                             </Button>
                         </Paper>
@@ -700,14 +618,8 @@ function TopicStudy() {
                     {resources.data.map((resource) => (
                         <Card key={resource.id} sx={{ mb: 1.5 }}>
                             <CardContent>
-                                <Typography fontWeight={700}>
-                                    {resource.title}
-                                </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="text.secondary"
-                                    sx={{ my: 1 }}
-                                >
+                                <Typography fontWeight={700}>{resource.title}</Typography>
+                                <Typography variant="body2" color="text.secondary" sx={{ my: 1 }}>
                                     {resource.description}
                                 </Typography>
                                 <Button
@@ -733,10 +645,7 @@ function TopicStudy() {
                                         variant="outlined"
                                         sx={{ p: 1.5 }}
                                     >
-                                        <Typography
-                                            variant="body2"
-                                            color="text.secondary"
-                                        >
+                                        <Typography variant="body2" color="text.secondary">
                                             {t("topics.sibling")}
                                         </Typography>
                                         <Button
@@ -754,14 +663,8 @@ function TopicStudy() {
                                         variant="outlined"
                                         sx={{ p: 1.5 }}
                                     >
-                                        <Typography
-                                            variant="body2"
-                                            color="text.secondary"
-                                        >
-                                            {relationLabel(
-                                                item.relation_type,
-                                                t,
-                                            )}
+                                        <Typography variant="body2" color="text.secondary">
+                                            {relationLabel(item.relation_type, t)}
                                         </Typography>
                                         <Button
                                             component={Link}
@@ -782,17 +685,14 @@ function TopicStudy() {
 }
 
 function relationLabel(relationType, translate) {
-    if (relationType === "prerequisite")
-        return translate("topics.prerequisite");
+    if (relationType === "prerequisite") return translate("topics.prerequisite");
     if (relationType === "similar") return translate("topics.similar");
     return translate("topics.related");
 }
 function QuestionBrowser() {
     const { t } = useTranslation();
     const [searchParams, setSearchParams] = useSearchParams();
-    const [processSlug, setProcessSlug] = useState(
-        searchParams.get("process") || "",
-    );
+    const [processSlug, setProcessSlug] = useState(searchParams.get("process") || "");
     const [year, setYear] = useState(searchParams.get("year") || "");
     const [subject, setSubject] = useState(searchParams.get("subject") || "");
     const [topic, setTopic] = useState(searchParams.get("topic") || "");
@@ -834,12 +734,7 @@ function QuestionBrowser() {
         value ? next.set(key, value) : next.delete(key);
         setSearchParams(next);
     };
-    if (
-        questions.loading ||
-        topics.loading ||
-        processes.loading ||
-        years.loading
-    )
+    if (questions.loading || topics.loading || processes.loading || years.loading)
         return <Loading />;
     return (
         <>
@@ -848,19 +743,13 @@ function QuestionBrowser() {
                 title={t("questionBank.title")}
                 description={t("questionBank.description")}
             />
-            <Stack
-                direction={{ xs: "column", sm: "row" }}
-                spacing={2}
-                sx={{ mb: 3 }}
-            >
+            <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mb: 3 }}>
                 <FormControl fullWidth>
                     <InputLabel>{t("common.selectionProcess")}</InputLabel>
                     <Select
                         value={processSlug}
                         label={t("common.selectionProcess")}
-                        onChange={(e) =>
-                            update(setProcessSlug, e.target.value, "process")
-                        }
+                        onChange={(e) => update(setProcessSlug, e.target.value, "process")}
                     >
                         <MenuItem value="">{t("common.all")}</MenuItem>
                         {processes.data.map((item) => (
@@ -875,9 +764,7 @@ function QuestionBrowser() {
                     <Select
                         value={subject}
                         label={t("common.subject")}
-                        onChange={(e) =>
-                            update(setSubject, e.target.value, "subject")
-                        }
+                        onChange={(e) => update(setSubject, e.target.value, "subject")}
                     >
                         <MenuItem value="">{t("common.allFemale")}</MenuItem>
                         {commonSubjects.map((item) => (
@@ -892,9 +779,7 @@ function QuestionBrowser() {
                     <Select
                         value={year}
                         label={t("common.year")}
-                        onChange={(e) =>
-                            update(setYear, e.target.value, "year")
-                        }
+                        onChange={(e) => update(setYear, e.target.value, "year")}
                     >
                         <MenuItem value="">{t("common.all")}</MenuItem>
                         {years.data.map((item) => (
@@ -909,9 +794,7 @@ function QuestionBrowser() {
                     <Select
                         value={topic}
                         label={t("common.topic")}
-                        onChange={(e) =>
-                            update(setTopic, e.target.value, "topic")
-                        }
+                        onChange={(e) => update(setTopic, e.target.value, "topic")}
                     >
                         <MenuItem value="">{t("common.all")}</MenuItem>
                         {topics.data.map((item) => (
@@ -940,13 +823,11 @@ function QuestionBrowser() {
                     >
                         <Box>
                             <Typography fontWeight={700}>
-                                {question.process_name} {question.year} ·
-                                questão {question.number}
+                                {question.process_name} {question.year} · questão {question.number}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
                                 {question.stage_name} ·{" "}
-                                {question.subject || t("common.generalExam")} ·{" "}
-                                {question.type}
+                                {question.subject || t("common.generalExam")} · {question.type}
                             </Typography>
                         </Box>
                         <Button
@@ -959,9 +840,7 @@ function QuestionBrowser() {
                     </Paper>
                 ))}
             </Stack>
-            {!questions.data.length && (
-                <Empty>{t("questionBank.noResults")}</Empty>
-            )}
+            {!questions.data.length && <Empty>{t("questionBank.noResults")}</Empty>}
         </>
     );
 }
@@ -999,24 +878,16 @@ function QuestionExercise({ questionId, onDone }) {
     const [diagnosis, setDiagnosis] = useState("");
     const [attemptId, setAttemptId] = useState(null);
     const [startedAt] = useState(Date.now());
-    if (
-        question.loading ||
-        options.loading ||
-        parts.loading ||
-        topicIds.loading ||
-        related.loading
-    )
+    if (question.loading || options.loading || parts.loading || topicIds.loading || related.loading)
         return <Loading />;
     if (!current) return <Empty>{t("exercise.notFound")}</Empty>;
     const submit = async () => {
         const canGrade = Boolean(current.is_automatically_gradable);
         const isCorrect = canGrade
-            ? selected.toUpperCase() ===
-              String(current.correct_answer || "").toUpperCase()
+            ? selected.toUpperCase() === String(current.correct_answer || "").toUpperCase()
             : null;
         const topicList = topicIds.data.map((item) => item.topic_id);
-        const contentKey =
-            current.occurrence_key || `question:${current.occurrence_id}`;
+        const contentKey = current.occurrence_key || `question:${current.occurrence_id}`;
         const attempt = await saveAttempt({
             contentKey,
             questionId: current.occurrence_id,
@@ -1118,11 +989,7 @@ function QuestionExercise({ questionId, onDone }) {
                     {parts.data.length > 0 && (
                         <Stack spacing={1} sx={{ mt: 2 }}>
                             {parts.data.map((part) => (
-                                <Paper
-                                    key={part.id}
-                                    variant="outlined"
-                                    sx={{ p: 1.5 }}
-                                >
+                                <Paper key={part.id} variant="outlined" sx={{ p: 1.5 }}>
                                     <Typography fontWeight={700}>
                                         {part.label || part.code}
                                     </Typography>
@@ -1137,31 +1004,21 @@ function QuestionExercise({ questionId, onDone }) {
                                 <Paper
                                     key={option.id}
                                     variant="outlined"
-                                    onClick={() =>
-                                        result === null &&
-                                        setSelected(option.code)
-                                    }
+                                    onClick={() => result === null && setSelected(option.code)}
                                     sx={{
                                         p: 2,
-                                        cursor:
-                                            result === null
-                                                ? "pointer"
-                                                : "default",
+                                        cursor: result === null ? "pointer" : "default",
                                         borderColor:
-                                            selected === option.code
-                                                ? "primary.main"
-                                                : undefined,
+                                            selected === option.code ? "primary.main" : undefined,
                                         bgcolor:
                                             result === true &&
-                                            option.code ===
-                                                current.correct_answer
+                                            option.code === current.correct_answer
                                                 ? "#edf7f1"
                                                 : undefined,
                                     }}
                                 >
                                     <Typography>
-                                        <strong>{option.code})</strong>{" "}
-                                        {option.text}
+                                        <strong>{option.code})</strong> {option.text}
                                     </Typography>
                                 </Paper>
                             ))}
@@ -1174,9 +1031,7 @@ function QuestionExercise({ questionId, onDone }) {
                             minRows={4}
                             label={t("exercise.answer")}
                             value={selected}
-                            onChange={(event) =>
-                                setSelected(event.target.value)
-                            }
+                            onChange={(event) => setSelected(event.target.value)}
                             disabled={result !== null}
                             sx={{ mt: 3 }}
                         />
@@ -1209,30 +1064,20 @@ function QuestionExercise({ questionId, onDone }) {
                     </Stack>
                     {result !== null && (
                         <>
-                            <Alert
-                                severity={result ? "success" : "info"}
-                                sx={{ mt: 3 }}
-                            >
+                            <Alert severity={result ? "success" : "info"} sx={{ mt: 3 }}>
                                 <Typography fontWeight={700}>
                                     {t("exercise.explanation")}
                                 </Typography>
-                                <Typography
-                                    sx={{ whiteSpace: "pre-wrap", mt: 1 }}
-                                >
-                                    {current.explanation ||
-                                        t("exercise.noExplanation")}
+                                <Typography sx={{ whiteSpace: "pre-wrap", mt: 1 }}>
+                                    {current.explanation || t("exercise.noExplanation")}
                                 </Typography>
                             </Alert>
                             <FormControl fullWidth sx={{ mt: 3 }}>
-                                <InputLabel>
-                                    {t("exercise.diagnosisLabel")}
-                                </InputLabel>
+                                <InputLabel>{t("exercise.diagnosisLabel")}</InputLabel>
                                 <Select
                                     value={diagnosis}
                                     label={t("exercise.diagnosisLabel")}
-                                    onChange={(event) =>
-                                        updateDiagnosis(event.target.value)
-                                    }
+                                    onChange={(event) => updateDiagnosis(event.target.value)}
                                 >
                                     {diagnosisOptions.map(([value, label]) => (
                                         <MenuItem key={value} value={value}>
@@ -1267,8 +1112,7 @@ function QuestionExercise({ questionId, onDone }) {
                                     }}
                                 >
                                     <Typography variant="body2">
-                                        {item.process_name} {item.year} ·
-                                        questão {item.number}
+                                        {item.process_name} {item.year} · questão {item.number}
                                     </Typography>
                                     <Button
                                         component={Link}
@@ -1342,15 +1186,11 @@ function AssessmentSetPage() {
                                 >
                                     <Box>
                                         <Typography fontWeight={700}>
-                                            {item.position}. {item.process_name}{" "}
-                                            {item.year} · questão {item.number}
+                                            {item.position}. {item.process_name} {item.year} ·
+                                            questão {item.number}
                                         </Typography>
-                                        <Typography
-                                            variant="body2"
-                                            color="text.secondary"
-                                        >
-                                            {item.stage_name} ·{" "}
-                                            {item.subject || "Prova geral"} ·{" "}
+                                        <Typography variant="body2" color="text.secondary">
+                                            {item.stage_name} · {item.subject || "Prova geral"} ·{" "}
                                             {item.type}
                                         </Typography>
                                     </Box>
@@ -1364,9 +1204,7 @@ function AssessmentSetPage() {
                                 </Paper>
                             ))}
                         </Stack>
-                        {!items.data.length && (
-                            <Empty>{t("assessment.empty")}</Empty>
-                        )}
+                        {!items.data.length && <Empty>{t("assessment.empty")}</Empty>}
                     </Paper>
                 </Grid>
                 <Grid item xs={12} md={4}>
@@ -1377,9 +1215,7 @@ function AssessmentSetPage() {
                         }}
                     >
                         <CardContent>
-                            <Typography variant="h6">
-                                {t("assessment.howToStudy")}
-                            </Typography>
+                            <Typography variant="h6">{t("assessment.howToStudy")}</Typography>
                             <Typography sx={{ mt: 1, opacity: 0.88 }}>
                                 {t("assessment.emptyDescription")}
                             </Typography>
@@ -1431,9 +1267,7 @@ function SimulatorSetup() {
             [...params, Number(amount)],
         );
         const id = crypto.randomUUID();
-        const selectedProcess = processes.data.find(
-            (item) => item.slug === processSlug,
-        );
+        const selectedProcess = processes.data.find((item) => item.slug === processSlug);
         await saveSession({
             id,
             title: `${selectedProcess?.name || t("common.all")}${year ? ` ${year}` : ""}`,
@@ -1456,9 +1290,7 @@ function SimulatorSetup() {
                 <CardContent>
                     <Stack spacing={3}>
                         <FormControl fullWidth>
-                            <InputLabel>
-                                {t("common.selectionProcess")}
-                            </InputLabel>
+                            <InputLabel>{t("common.selectionProcess")}</InputLabel>
                             <Select
                                 value={processSlug}
                                 label={t("common.selectionProcess")}
@@ -1501,15 +1333,8 @@ function SimulatorSetup() {
                                 ))}
                             </Select>
                         </FormControl>
-                        <Button
-                            variant="contained"
-                            size="large"
-                            onClick={start}
-                            disabled={loading}
-                        >
-                            {loading
-                                ? t("simulator.preparing")
-                                : t("simulator.start")}
+                        <Button variant="contained" size="large" onClick={start} disabled={loading}>
+                            {loading ? t("simulator.preparing") : t("simulator.start")}
                         </Button>
                     </Stack>
                 </CardContent>
@@ -1547,21 +1372,17 @@ function SimulatorRunner() {
         [current?.occurrence_id || 0],
         [current?.occurrence_id],
     );
-    if (!localSession || questions.loading || options.loading || topics.loading)
-        return <Loading />;
-    if (!ids.length || !current)
-        return <Empty>{t("simulator.notEnough")}</Empty>;
+    if (!localSession || questions.loading || options.loading || topics.loading) return <Loading />;
+    if (!ids.length || !current) return <Empty>{t("simulator.notEnough")}</Empty>;
     const next = async () => {
         if (!answer) return;
         const auto = Boolean(current.is_automatically_gradable);
         const isCorrect = auto
-            ? answer.toUpperCase() ===
-              String(current.correct_answer || "").toUpperCase()
+            ? answer.toUpperCase() === String(current.correct_answer || "").toUpperCase()
             : null;
         const topicList = topics.data.map((item) => item.topic_id);
         await saveAttempt({
-            contentKey:
-                current.occurrence_key || `question:${current.occurrence_id}`,
+            contentKey: current.occurrence_key || `question:${current.occurrence_id}`,
             questionId: current.occurrence_id,
             selectedOption: answer,
             isCorrect,
@@ -1574,18 +1395,13 @@ function SimulatorRunner() {
             answeredAt: new Date().toISOString(),
         });
         if (isCorrect === false)
-            await saveReviewItem(
-                `review:${current.occurrence_key || current.occurrence_id}`,
-                {
-                    questionId: current.occurrence_id,
-                    contentKey:
-                        current.occurrence_key ||
-                        `question:${current.occurrence_id}`,
-                    topicIds: topicList,
-                    reason: "incorrect",
-                    pending: true,
-                },
-            );
+            await saveReviewItem(`review:${current.occurrence_key || current.occurrence_id}`, {
+                questionId: current.occurrence_id,
+                contentKey: current.occurrence_key || `question:${current.occurrence_id}`,
+                topicIds: topicList,
+                reason: "incorrect",
+                pending: true,
+            });
         await recordStudyActivity({ type: "simulator-question" });
         await addStudyPoints(5, "simulator-question");
         if (index + 1 >= questions.data.length) {
@@ -1627,14 +1443,11 @@ function SimulatorRunner() {
                                     p: 2,
                                     cursor: "pointer",
                                     borderColor:
-                                        answer === option.code
-                                            ? "primary.main"
-                                            : undefined,
+                                        answer === option.code ? "primary.main" : undefined,
                                 }}
                             >
                                 <Typography>
-                                    <strong>{option.code})</strong>{" "}
-                                    {option.text}
+                                    <strong>{option.code})</strong> {option.text}
                                 </Typography>
                             </Paper>
                         ))}
@@ -1650,12 +1463,7 @@ function SimulatorRunner() {
                             sx={{ mt: 3 }}
                         />
                     )}
-                    <Button
-                        variant="contained"
-                        sx={{ mt: 3 }}
-                        disabled={!answer}
-                        onClick={next}
-                    >
+                    <Button variant="contained" sx={{ mt: 3 }} disabled={!answer} onClick={next}>
                         {index + 1 === questions.data.length
                             ? t("simulator.finish")
                             : t("simulator.next")}
@@ -1714,9 +1522,7 @@ function SimulatorResult() {
 function PerformanceDashboard() {
     const { t } = useTranslation();
     const [attempts, setAttempts] = useState(null);
-    const topics = useQuery(
-        "SELECT ct.id, ct.label name FROM curriculum_topics ct",
-    );
+    const topics = useQuery("SELECT ct.id, ct.label name FROM curriculum_topics ct");
     useEffect(() => {
         listAttempts().then(setAttempts);
     }, []);
@@ -1728,9 +1534,7 @@ function PerformanceDashboard() {
         graded.reduce((acc, item) => {
             acc[item.subject || "Sem disciplina"] ||= { total: 0, correct: 0 };
             acc[item.subject || "Sem disciplina"].total += 1;
-            acc[item.subject || "Sem disciplina"].correct += item.isCorrect
-                ? 1
-                : 0;
+            acc[item.subject || "Sem disciplina"].correct += item.isCorrect ? 1 : 0;
             return acc;
         }, {}),
     );
@@ -1772,10 +1576,7 @@ function PerformanceDashboard() {
             />
             <Grid container spacing={2} sx={{ mb: 4 }}>
                 <Grid item xs={12} sm={4}>
-                    <StatCard
-                        value={attempts.length}
-                        label={t("performance.attempts")}
-                    />
+                    <StatCard value={attempts.length} label={t("performance.attempts")} />
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <StatCard value={correct} label="acertos" />
@@ -1844,12 +1645,10 @@ function ReviewQueue() {
     );
     const reload = useCallback(
         () =>
-            Promise.all([listAttempts(), listReviewTargets()]).then(
-                ([items, reviewItems]) => {
-                    setAttempts(items);
-                    setTargets(reviewItems);
-                },
-            ),
+            Promise.all([listAttempts(), listReviewTargets()]).then(([items, reviewItems]) => {
+                setAttempts(items);
+                setTargets(reviewItems);
+            }),
         [],
     );
     useEffect(() => {
@@ -1857,9 +1656,7 @@ function ReviewQueue() {
     }, [reload]);
     if (questions.loading || !attempts) return <Loading />;
     const wrongIds = new Set(
-        attempts
-            .filter((item) => item.isCorrect === false)
-            .map((item) => Number(item.questionId)),
+        attempts.filter((item) => item.isCorrect === false).map((item) => Number(item.questionId)),
     );
     const wrong = questions.data.filter((item) => wrongIds.has(item.id));
     const targetByKey = new Map(targets.map((item) => [item.contentKey, item]));
@@ -1891,24 +1688,17 @@ function ReviewQueue() {
             />
             {wrong.map((question) => {
                 const target = targetByKey.get(question.occurrence_key);
-                const due =
-                    !target?.dueAt || new Date(target.dueAt) <= new Date();
+                const due = !target?.dueAt || new Date(target.dueAt) <= new Date();
                 let reviewColor = "text.secondary";
                 if (target?.suspended) reviewColor = "warning.main";
                 else if (due) reviewColor = "error.main";
                 let reviewLabel = t("review.nextReview", {
-                    date: new Date(
-                        target?.dueAt || Date.now(),
-                    ).toLocaleDateString("pt-BR"),
+                    date: new Date(target?.dueAt || Date.now()).toLocaleDateString("pt-BR"),
                 });
                 if (target?.suspended) reviewLabel = t("review.suspended");
                 else if (due) reviewLabel = t("review.availableNow");
                 return (
-                    <Paper
-                        key={question.id}
-                        variant="outlined"
-                        sx={{ p: 2, mb: 1.5 }}
-                    >
+                    <Paper key={question.id} variant="outlined" sx={{ p: 2, mb: 1.5 }}>
                         <Stack
                             direction={{ xs: "column", md: "row" }}
                             justifyContent="space-between"
@@ -1917,15 +1707,10 @@ function ReviewQueue() {
                         >
                             <Box>
                                 <Typography fontWeight={700}>
-                                    {question.process_name} {question.year} ·
-                                    questão {question.number} ·{" "}
-                                    {question.subject || "Prova geral"}
+                                    {question.process_name} {question.year} · questão{" "}
+                                    {question.number} · {question.subject || "Prova geral"}
                                 </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color={reviewColor}
-                                    sx={{ mt: 0.5 }}
-                                >
+                                <Typography variant="body2" color={reviewColor} sx={{ mt: 0.5 }}>
                                     {reviewLabel}
                                 </Typography>
                             </Box>
@@ -1937,10 +1722,7 @@ function ReviewQueue() {
                                 >
                                     {t("review.review")}
                                 </Button>
-                                <Button
-                                    onClick={() => postpone(question)}
-                                    size="small"
-                                >
+                                <Button onClick={() => postpone(question)} size="small">
                                     {t("review.postpone")}
                                 </Button>
                                 <Button
@@ -1963,19 +1745,9 @@ function ReviewQueue() {
 function minutesLabel(value) {
     return value ? `${value} min` : "Conteúdo guiado";
 }
-function CatalogCard({
-    icon,
-    eyebrow,
-    title,
-    description,
-    meta,
-    to,
-    color = "primary",
-}) {
+function CatalogCard({ icon, eyebrow, title, description, meta, to, color = "primary" }) {
     return (
-        <Card
-            sx={{ height: "100%", position: "relative", overflow: "visible" }}
-        >
+        <Card sx={{ height: "100%", position: "relative", overflow: "visible" }}>
             <CardActionArea component={Link} to={to} sx={{ height: "100%" }}>
                 <CardContent sx={{ p: 2.5 }}>
                     <Stack
@@ -1984,9 +1756,7 @@ function CatalogCard({
                         alignItems="flex-start"
                         gap={2}
                     >
-                        <Box sx={{ color: `${color}.main`, display: "flex" }}>
-                            {icon}
-                        </Box>
+                        <Box sx={{ color: `${color}.main`, display: "flex" }}>{icon}</Box>
                         <Chip label={eyebrow} size="small" variant="outlined" />
                     </Stack>
                     <Typography variant="h6" sx={{ mt: 2 }}>
@@ -2008,11 +1778,7 @@ function CatalogCard({
                             {meta}
                         </Typography>
                     )}
-                    <Button
-                        size="small"
-                        endIcon={<ArrowForwardIcon />}
-                        sx={{ mt: 1, px: 0 }}
-                    >
+                    <Button size="small" endIcon={<ArrowForwardIcon />} sx={{ mt: 1, px: 0 }}>
                         Abrir
                     </Button>
                 </CardContent>
@@ -2085,9 +1851,7 @@ export function LegacyCatalogPage() {
                 <CatalogCard
                     icon={<SchoolIcon />}
                     eyebrow={
-                        item.course_type === "specific"
-                            ? "Preparação específica"
-                            : "Curso geral"
+                        item.course_type === "specific" ? "Preparação específica" : "Curso geral"
                     }
                     title={item.title}
                     description={item.description}
@@ -2133,11 +1897,7 @@ export function LegacyCatalogPage() {
                         to={item.to}
                     >
                         <CardContent sx={{ p: 2.5 }}>
-                            <Stack
-                                direction="row"
-                                alignItems="center"
-                                spacing={2}
-                            >
+                            <Stack direction="row" alignItems="center" spacing={2}>
                                 <Box
                                     sx={{
                                         color: "primary.main",
@@ -2147,24 +1907,14 @@ export function LegacyCatalogPage() {
                                     {item.icon}
                                 </Box>
                                 <Box sx={{ flex: 1 }}>
-                                    <Chip
-                                        label={item.type}
-                                        size="small"
-                                        variant="outlined"
-                                    />
+                                    <Chip label={item.type} size="small" variant="outlined" />
                                     <Typography variant="h6" sx={{ mt: 1 }}>
                                         {item.title}
                                     </Typography>
-                                    <Typography
-                                        variant="body2"
-                                        color="text.secondary"
-                                    >
+                                    <Typography variant="body2" color="text.secondary">
                                         {item.description}
                                     </Typography>
-                                    <Typography
-                                        variant="caption"
-                                        color="text.secondary"
-                                    >
+                                    <Typography variant="caption" color="text.secondary">
                                         {item.meta}
                                     </Typography>
                                 </Box>
@@ -2213,9 +1963,7 @@ export function LegacyCatalogPage() {
                     sections[tab]
                 ) : (
                     <Grid item xs={12}>
-                        <Empty>
-                            Nenhum conteúdo encontrado para esta busca.
-                        </Empty>
+                        <Empty>Nenhum conteúdo encontrado para esta busca.</Empty>
                     </Grid>
                 )}
             </Grid>
@@ -2245,28 +1993,17 @@ export function LegacyCourseOverview() {
     const [progress, setProgress] = useState([]);
     useEffect(() => {
         if (!current) return;
-        Promise.all([listEnrollments(), listLessonProgress()]).then(
-            ([enrollments, lessons]) => {
-                setEnrolled(
-                    enrollments.some(
-                        (item) => item.contentKey === `course:${current.id}`,
-                    ),
-                );
-                setProgress(lessons);
-            },
-        );
+        Promise.all([listEnrollments(), listLessonProgress()]).then(([enrollments, lessons]) => {
+            setEnrolled(enrollments.some((item) => item.contentKey === `course:${current.id}`));
+            setProgress(lessons);
+        });
     }, [current?.id, current]);
     if (course.loading || modules.loading || items.loading) return <Loading />;
     if (!current) return <Empty>Curso não encontrado.</Empty>;
     const completed = progress.filter((item) =>
-        items.data.some(
-            (courseItem) =>
-                courseItem.lesson_id === item.lessonId && item.completed,
-        ),
+        items.data.some((courseItem) => courseItem.lesson_id === item.lessonId && item.completed),
     ).length;
-    const percent = items.data.length
-        ? Math.round((completed / items.data.length) * 100)
-        : 0;
+    const percent = items.data.length ? Math.round((completed / items.data.length) * 100) : 0;
     const start = async () => {
         await enrollCourse(`course:${current.id}`, {
             courseId: current.id,
@@ -2282,15 +2019,12 @@ export function LegacyCourseOverview() {
                     p: { xs: 3, md: 5 },
                     mb: 4,
                     color: "white",
-                    background:
-                        "linear-gradient(120deg, #121b35 0%, #273b72 65%, #523a8b 100%)",
+                    background: "linear-gradient(120deg, #121b35 0%, #273b72 65%, #523a8b 100%)",
                 }}
             >
                 <Chip
                     label={
-                        current.course_type === "specific"
-                            ? "Preparação específica"
-                            : "Curso geral"
+                        current.course_type === "specific" ? "Preparação específica" : "Curso geral"
                     }
                     sx={{ color: "white", borderColor: "rgba(255,255,255,.4)" }}
                     variant="outlined"
@@ -2301,11 +2035,7 @@ export function LegacyCourseOverview() {
                 <Typography sx={{ mt: 2, maxWidth: 700, opacity: 0.86 }}>
                     {current.description}
                 </Typography>
-                <Stack
-                    direction={{ xs: "column", sm: "row" }}
-                    spacing={3}
-                    sx={{ mt: 3 }}
-                >
+                <Stack direction={{ xs: "column", sm: "row" }} spacing={3} sx={{ mt: 3 }}>
                     <Typography>
                         <strong>{current.module_count}</strong> módulos
                     </Typography>
@@ -2319,9 +2049,7 @@ export function LegacyCourseOverview() {
                 <Button
                     variant="contained"
                     color="secondary"
-                    startIcon={
-                        enrolled ? <CheckCircleIcon /> : <PlayArrowIcon />
-                    }
+                    startIcon={enrolled ? <CheckCircleIcon /> : <PlayArrowIcon />}
                     onClick={start}
                     sx={{ mt: 3 }}
                 >
@@ -2355,17 +2083,12 @@ export function LegacyCourseOverview() {
                                             {module.description}
                                         </Typography>
                                     </Box>
-                                    <Chip
-                                        label={`${module.item_count} etapas`}
-                                        size="small"
-                                    />
+                                    <Chip label={`${module.item_count} etapas`} size="small" />
                                 </Stack>
                             </Box>
                             <List disablePadding>
                                 {items.data
-                                    .filter(
-                                        (item) => item.module_id === module.id,
-                                    )
+                                    .filter((item) => item.module_id === module.id)
                                     .map((item, index) => {
                                         let itemAction = null;
                                         if (item.lesson_slug) {
@@ -2373,9 +2096,7 @@ export function LegacyCourseOverview() {
                                                 <Button
                                                     component={Link}
                                                     to={`/licoes/${item.lesson_id}`}
-                                                    endIcon={
-                                                        <ArrowForwardIcon />
-                                                    }
+                                                    endIcon={<ArrowForwardIcon />}
                                                 >
                                                     Estudar
                                                 </Button>
@@ -2385,9 +2106,7 @@ export function LegacyCourseOverview() {
                                                 <Button
                                                     component={Link}
                                                     to={`/listas/${item.assessment_set_id}`}
-                                                    endIcon={
-                                                        <ArrowForwardIcon />
-                                                    }
+                                                    endIcon={<ArrowForwardIcon />}
                                                 >
                                                     Praticar
                                                 </Button>
@@ -2396,8 +2115,7 @@ export function LegacyCourseOverview() {
                                             itemAction = (
                                                 <Chip
                                                     label={
-                                                        item.item_type ===
-                                                        "practice"
+                                                        item.item_type === "practice"
                                                             ? "Prática"
                                                             : "Revisão"
                                                     }
@@ -2411,9 +2129,7 @@ export function LegacyCourseOverview() {
                                                 divider={
                                                     index <
                                                     items.data.filter(
-                                                        (entry) =>
-                                                            entry.module_id ===
-                                                            module.id,
+                                                        (entry) => entry.module_id === module.id,
                                                     ).length -
                                                         1
                                                 }
@@ -2424,9 +2140,7 @@ export function LegacyCourseOverview() {
                                                     secondary={
                                                         <>
                                                             {item.description} ·{" "}
-                                                            {minutesLabel(
-                                                                item.duration_minutes,
-                                                            )}
+                                                            {minutesLabel(item.duration_minutes)}
                                                         </>
                                                     }
                                                     sx={{ ml: 1 }}
@@ -2459,25 +2173,23 @@ export function LegacyLessonStudy() {
     const [completed, setCompleted] = useState(false);
     const [bookmarked, setBookmarked] = useState(false);
     useEffect(() => {
-        Promise.all([listLessonProgress(), listBookmarks()]).then(
-            ([progress, bookmarks]) => {
-                setCompleted(
-                    progress.some(
-                        (item) =>
-                            (item.contentKey === `lesson:${lessonId}` ||
-                                item.lessonId === Number(lessonId)) &&
-                            item.completed,
-                    ),
-                );
-                setBookmarked(
-                    bookmarks.some(
-                        (item) =>
-                            item.contentKey === `lesson:${lessonId}` ||
-                            item.lessonId === Number(lessonId),
-                    ),
-                );
-            },
-        );
+        Promise.all([listLessonProgress(), listBookmarks()]).then(([progress, bookmarks]) => {
+            setCompleted(
+                progress.some(
+                    (item) =>
+                        (item.contentKey === `lesson:${lessonId}` ||
+                            item.lessonId === Number(lessonId)) &&
+                        item.completed,
+                ),
+            );
+            setBookmarked(
+                bookmarks.some(
+                    (item) =>
+                        item.contentKey === `lesson:${lessonId}` ||
+                        item.lessonId === Number(lessonId),
+                ),
+            );
+        });
     }, [lessonId]);
     if (lesson.loading || sections.loading) return <Loading />;
     const current = lesson.data[0];
@@ -2503,10 +2215,8 @@ export function LegacyLessonStudy() {
         setBookmarked(true);
     };
     const readTime =
-        sections.data.reduce(
-            (sum, section) => sum + Number(section.read_time_minutes || 0),
-            0,
-        ) || 3;
+        sections.data.reduce((sum, section) => sum + Number(section.read_time_minutes || 0), 0) ||
+        3;
     return (
         <>
             <Box sx={{ mb: 2 }}>
@@ -2539,10 +2249,7 @@ export function LegacyLessonStudy() {
             />
             <Grid container spacing={3}>
                 <Grid item xs={12} md={3}>
-                    <Paper
-                        variant="outlined"
-                        sx={{ p: 2, position: { md: "sticky" }, top: 88 }}
-                    >
+                    <Paper variant="outlined" sx={{ p: 2, position: { md: "sticky" }, top: 88 }}>
                         <Typography variant="subtitle2" sx={{ mb: 1 }}>
                             Índice da lição
                         </Typography>
@@ -2575,17 +2282,12 @@ export function LegacyLessonStudy() {
                                 <ContentRenderer
                                     markdown={section.content}
                                     blocksJson={section.blocks_json}
-                                    onQuestion={(questionId) =>
-                                        navigate(`/questoes/${questionId}`)
-                                    }
+                                    onQuestion={(questionId) => navigate(`/questoes/${questionId}`)}
                                 />
                             </Box>
                         ))}
                         <Divider sx={{ my: 4 }} />
-                        <Stack
-                            direction={{ xs: "column", sm: "row" }}
-                            spacing={1}
-                        >
+                        <Stack direction={{ xs: "column", sm: "row" }} spacing={1}>
                             <Button
                                 component={Link}
                                 to="/questoes"
@@ -2594,11 +2296,7 @@ export function LegacyLessonStudy() {
                             >
                                 Ir para a prática
                             </Button>
-                            <Button
-                                component={Link}
-                                to="/revisao"
-                                variant="outlined"
-                            >
+                            <Button component={Link} to="/revisao" variant="outlined">
                                 Ver revisões
                             </Button>
                         </Stack>
@@ -2661,15 +2359,10 @@ export function LegacyMapPage() {
                             {nodes.data.map((node, index) => {
                                 const done = progress.some(
                                     (item) =>
-                                        item.topicId ===
-                                            node.curriculum_topic_id &&
-                                        item.completed,
+                                        item.topicId === node.curriculum_topic_id && item.completed,
                                 );
                                 return (
-                                    <Step
-                                        key={node.curriculum_topic_id}
-                                        completed={done}
-                                    >
+                                    <Step key={node.curriculum_topic_id} completed={done}>
                                         <StepButton
                                             icon={
                                                 done ? (
@@ -2682,18 +2375,11 @@ export function LegacyMapPage() {
                                                 <Typography fontWeight={700}>
                                                     {node.label}
                                                 </Typography>
-                                                <Typography
-                                                    variant="body2"
-                                                    color="text.secondary"
-                                                >
+                                                <Typography variant="body2" color="text.secondary">
                                                     {node.description ||
                                                         "Estude a teoria e pratique questões deste tópico."}
                                                 </Typography>
-                                                <Stack
-                                                    direction="row"
-                                                    spacing={1}
-                                                    sx={{ mt: 1 }}
-                                                >
+                                                <Stack direction="row" spacing={1} sx={{ mt: 1 }}>
                                                     <Chip
                                                         size="small"
                                                         label={
@@ -2706,9 +2392,7 @@ export function LegacyMapPage() {
                                                         component={Link}
                                                         to={`/topicos/${node.slug}`}
                                                         size="small"
-                                                        endIcon={
-                                                            <ArrowForwardIcon />
-                                                        }
+                                                        endIcon={<ArrowForwardIcon />}
                                                     >
                                                         Abrir tópico
                                                     </Button>
@@ -2724,26 +2408,18 @@ export function LegacyMapPage() {
                 <Grid item xs={12} md={4}>
                     <Card>
                         <CardContent>
-                            <Typography variant="h6">
-                                Como usar o mapa
-                            </Typography>
-                            <Typography
-                                color="text.secondary"
-                                sx={{ mt: 1, lineHeight: 1.7 }}
-                            >
-                                Comece pelos primeiros tópicos, avance pelos
-                                pré-requisitos e use as questões para confirmar
-                                o domínio. Os marcos indicam pontos importantes
-                                da trilha.
+                            <Typography variant="h6">Como usar o mapa</Typography>
+                            <Typography color="text.secondary" sx={{ mt: 1, lineHeight: 1.7 }}>
+                                Comece pelos primeiros tópicos, avance pelos pré-requisitos e use as
+                                questões para confirmar o domínio. Os marcos indicam pontos
+                                importantes da trilha.
                             </Typography>
                             <Divider sx={{ my: 2 }} />
                             <Typography variant="body2">
-                                <strong>{nodes.data.length}</strong> tópicos no
-                                mapa
+                                <strong>{nodes.data.length}</strong> tópicos no mapa
                             </Typography>
                             <Typography variant="body2" sx={{ mt: 1 }}>
-                                <strong>{edges.data.length}</strong> relações de
-                                pré-requisito
+                                <strong>{edges.data.length}</strong> relações de pré-requisito
                             </Typography>
                         </CardContent>
                     </Card>
@@ -2775,9 +2451,7 @@ export function LegacyStudyPlanPage() {
     if (plans.loading || steps.loading) return <Loading />;
     if (!current) return <Empty>Não há plano de estudo publicado.</Empty>;
     const toggle = async (step) => {
-        const isDone = done.some(
-            (item) => item.stepId === step.id && item.completed,
-        );
+        const isDone = done.some((item) => item.stepId === step.id && item.completed);
         await savePlanProgress(`plan:${current.id}:step:${step.id}`, {
             planId: current.id,
             stepId: step.id,
@@ -2786,15 +2460,10 @@ export function LegacyStudyPlanPage() {
         setDone((items) =>
             isDone
                 ? items.filter((item) => item.stepId !== step.id)
-                : [
-                      ...items,
-                      { planId: current.id, stepId: step.id, completed: true },
-                  ],
+                : [...items, { planId: current.id, stepId: step.id, completed: true }],
         );
     };
-    const completion = steps.data.length
-        ? Math.round((done.length / steps.data.length) * 100)
-        : 0;
+    const completion = steps.data.length ? Math.round((done.length / steps.data.length) * 100) : 0;
     return (
         <>
             <PageTitle
@@ -2818,9 +2487,7 @@ export function LegacyStudyPlanPage() {
                         <Stack spacing={2}>
                             {steps.data.map((step) => {
                                 const complete = done.some(
-                                    (item) =>
-                                        item.stepId === step.id &&
-                                        item.completed,
+                                    (item) => item.stepId === step.id && item.completed,
                                 );
                                 return (
                                     <Paper
@@ -2828,61 +2495,32 @@ export function LegacyStudyPlanPage() {
                                         variant="outlined"
                                         sx={{
                                             p: 2,
-                                            borderColor: complete
-                                                ? "success.main"
-                                                : undefined,
+                                            borderColor: complete ? "success.main" : undefined,
                                         }}
                                     >
-                                        <Stack
-                                            direction="row"
-                                            spacing={2}
-                                            alignItems="flex-start"
-                                        >
+                                        <Stack direction="row" spacing={2} alignItems="flex-start">
                                             <IconButton
-                                                color={
-                                                    complete
-                                                        ? "success"
-                                                        : "default"
-                                                }
+                                                color={complete ? "success" : "default"}
                                                 onClick={() => toggle(step)}
                                             >
-                                                {complete ? (
-                                                    <CheckCircleIcon />
-                                                ) : (
-                                                    <EventNoteIcon />
-                                                )}
+                                                {complete ? <CheckCircleIcon /> : <EventNoteIcon />}
                                             </IconButton>
                                             <Box sx={{ flex: 1 }}>
                                                 <Typography variant="h6">
-                                                    {step.position}.{" "}
-                                                    {step.title}
+                                                    {step.position}. {step.title}
                                                 </Typography>
-                                                <Typography
-                                                    color="text.secondary"
-                                                    sx={{ mt: 0.5 }}
-                                                >
+                                                <Typography color="text.secondary" sx={{ mt: 0.5 }}>
                                                     {step.description}
                                                 </Typography>
-                                                <Stack
-                                                    direction="row"
-                                                    spacing={1}
-                                                    sx={{ mt: 1 }}
-                                                >
+                                                <Stack direction="row" spacing={1} sx={{ mt: 1 }}>
                                                     <Chip
                                                         size="small"
-                                                        label={
-                                                            step.topic_label ||
-                                                            "Estudo guiado"
-                                                        }
+                                                        label={step.topic_label || "Estudo guiado"}
                                                     />
                                                     <Chip
                                                         size="small"
-                                                        icon={
-                                                            <AccessTimeIcon />
-                                                        }
-                                                        label={minutesLabel(
-                                                            step.estimated_minutes,
-                                                        )}
+                                                        icon={<AccessTimeIcon />}
+                                                        label={minutesLabel(step.estimated_minutes)}
                                                     />
                                                 </Stack>
                                             </Box>
@@ -2901,13 +2539,11 @@ export function LegacyStudyPlanPage() {
                         }}
                     >
                         <CardContent>
-                            <Typography variant="h6">
-                                Ritmo recomendado
-                            </Typography>
+                            <Typography variant="h6">Ritmo recomendado</Typography>
                             <Typography sx={{ mt: 1, opacity: 0.85 }}>
-                                Marque cada etapa quando terminar. Sua cópia do
-                                plano fica salva apenas neste dispositivo e pode
-                                ser ajustada sem alterar o conteúdo editorial.
+                                Marque cada etapa quando terminar. Sua cópia do plano fica salva
+                                apenas neste dispositivo e pode ser ajustada sem alterar o conteúdo
+                                editorial.
                             </Typography>
                             <Button
                                 component={Link}
@@ -2939,62 +2575,43 @@ function MyStudyPage() {
             safe(listAttempts(), []),
             safe(getStreak(), null),
             safe(getSetting("studyPoints"), { value: 0 }),
-        ]).then(
-            async ([
-                enrollments,
-                plans,
-                lessons,
-                bookmarks,
-                attempts,
-                streak,
-                points,
-            ]) => {
-                const stats = {
-                    attempts: attempts.length,
-                    lessons: lessons.filter((item) => item.completed).length,
-                    sessions: new Set(
-                        attempts.map((item) => item.sessionId).filter(Boolean),
-                    ).size,
-                    correct: attempts.filter((item) => item.isCorrect === true)
-                        .length,
-                    streak: streak?.current || 0,
-                    courses: 0,
-                    reviews: 0,
-                };
-                let achievements = achievementDefinitions(stats);
-                try {
-                    achievements = await syncAchievements(stats);
-                } catch {
-                    /* IndexedDB continua opcional para a leitura do conteúdo. */
-                }
-                const storedAchievements = await safe(listAchievements(), []);
-                if (active)
-                    setState({
-                        enrollments,
-                        plans,
-                        lessons,
-                        bookmarks,
-                        attempts,
-                        streak,
-                        points: points?.value || 0,
-                        achievements: storedAchievements.length
-                            ? storedAchievements
-                            : achievements,
-                    });
-            },
-        );
+        ]).then(async ([enrollments, plans, lessons, bookmarks, attempts, streak, points]) => {
+            const stats = {
+                attempts: attempts.length,
+                lessons: lessons.filter((item) => item.completed).length,
+                sessions: new Set(attempts.map((item) => item.sessionId).filter(Boolean)).size,
+                correct: attempts.filter((item) => item.isCorrect === true).length,
+                streak: streak?.current || 0,
+                courses: 0,
+                reviews: 0,
+            };
+            let achievements = achievementDefinitions(stats);
+            try {
+                achievements = await syncAchievements(stats);
+            } catch {
+                /* IndexedDB continua opcional para a leitura do conteúdo. */
+            }
+            const storedAchievements = await safe(listAchievements(), []);
+            if (active)
+                setState({
+                    enrollments,
+                    plans,
+                    lessons,
+                    bookmarks,
+                    attempts,
+                    streak,
+                    points: points?.value || 0,
+                    achievements: storedAchievements.length ? storedAchievements : achievements,
+                });
+        });
         return () => {
             active = false;
         };
     }, []);
     if (!state) return <Loading />;
-    const completedLessons = state.lessons.filter(
-        (item) => item.completed,
-    ).length;
+    const completedLessons = state.lessons.filter((item) => item.completed).length;
     const completedSteps = state.plans.filter((item) => item.completed).length;
-    const unlocked = state.achievements.filter(
-        (item) => item.isUnlocked !== false,
-    ).length;
+    const unlocked = state.achievements.filter((item) => item.isUnlocked !== false).length;
     return (
         <>
             <PageTitle
@@ -3014,22 +2631,13 @@ function MyStudyPage() {
             />
             <Grid container spacing={2} sx={{ mb: 4 }}>
                 <Grid item xs={6} md={3}>
-                    <StatCard
-                        value={state.enrollments.length}
-                        label="cursos iniciados"
-                    />
+                    <StatCard value={state.enrollments.length} label="cursos iniciados" />
                 </Grid>
                 <Grid item xs={6} md={3}>
-                    <StatCard
-                        value={completedLessons}
-                        label="lições concluídas"
-                    />
+                    <StatCard value={completedLessons} label="lições concluídas" />
                 </Grid>
                 <Grid item xs={6} md={3}>
-                    <StatCard
-                        value={completedSteps}
-                        label="etapas concluídas"
-                    />
+                    <StatCard value={completedSteps} label="etapas concluídas" />
                 </Grid>
                 <Grid item xs={6} md={3}>
                     <StatCard value={state.bookmarks.length} label="salvos" />
@@ -3044,12 +2652,8 @@ function MyStudyPage() {
                         }}
                     >
                         <CardContent>
-                            <Typography variant="overline">
-                                Constância
-                            </Typography>
-                            <Typography variant="h3">
-                                {state.streak?.current || 0} dias
-                            </Typography>
+                            <Typography variant="overline">Constância</Typography>
+                            <Typography variant="h3">{state.streak?.current || 0} dias</Typography>
                             <Typography sx={{ opacity: 0.85 }}>
                                 Melhor sequência: {state.streak?.best || 0} dias
                             </Typography>
@@ -3059,18 +2663,14 @@ function MyStudyPage() {
                 <Grid item xs={12} md={4}>
                     <Card>
                         <CardContent>
-                            <Typography
-                                variant="overline"
-                                color="secondary.main"
-                            >
+                            <Typography variant="overline" color="secondary.main">
                                 Pontos de estudo
                             </Typography>
                             <Typography variant="h3" color="primary.main">
                                 {state.points}
                             </Typography>
                             <Typography color="text.secondary">
-                                Por aulas, questões, revisões e simulados
-                                concluídos.
+                                Por aulas, questões, revisões e simulados concluídos.
                             </Typography>
                         </CardContent>
                     </Card>
@@ -3078,10 +2678,7 @@ function MyStudyPage() {
                 <Grid item xs={12} md={4}>
                     <Card>
                         <CardContent>
-                            <Typography
-                                variant="overline"
-                                color="secondary.main"
-                            >
+                            <Typography variant="overline" color="secondary.main">
                                 Conquistas
                             </Typography>
                             <Typography variant="h3" color="primary.main">
@@ -3109,20 +2706,14 @@ function MyStudyPage() {
                                         alignItems="center"
                                     >
                                         <Box>
-                                            <Typography variant="h6">
-                                                {item.title}
-                                            </Typography>
+                                            <Typography variant="h6">{item.title}</Typography>
                                             <Typography color="text.secondary">
                                                 Curso em andamento
                                             </Typography>
                                         </Box>
                                         <Button
                                             component={Link}
-                                            to={
-                                                item.slug
-                                                    ? `/cursos/${item.slug}`
-                                                    : "/catalogo"
-                                            }
+                                            to={item.slug ? `/cursos/${item.slug}` : "/catalogo"}
                                             endIcon={<ArrowForwardIcon />}
                                         >
                                             Continuar
@@ -3133,8 +2724,7 @@ function MyStudyPage() {
                         ))
                     ) : (
                         <Empty>
-                            Você ainda não iniciou um curso. Escolha uma trilha
-                            no Catálogo.
+                            Você ainda não iniciou um curso. Escolha uma trilha no Catálogo.
                         </Empty>
                     )}
                     <Typography variant="h5" sx={{ mt: 4, mb: 2 }}>
@@ -3178,9 +2768,7 @@ function MyStudyPage() {
                 <Grid item xs={12} md={5}>
                     <Card sx={{ bgcolor: "background.default" }}>
                         <CardContent>
-                            <Typography variant="h6">
-                                Conquistas recentes
-                            </Typography>
+                            <Typography variant="h6">Conquistas recentes</Typography>
                             <Stack spacing={1.5} sx={{ mt: 2 }}>
                                 {state.achievements
                                     .filter((item) => item.isUnlocked !== false)
@@ -3191,30 +2779,19 @@ function MyStudyPage() {
                                             variant="outlined"
                                             sx={{ p: 1.5 }}
                                         >
-                                            <Typography fontWeight={700}>
-                                                {item.title}
-                                            </Typography>
-                                            <Typography
-                                                variant="body2"
-                                                color="text.secondary"
-                                            >
+                                            <Typography fontWeight={700}>{item.title}</Typography>
+                                            <Typography variant="body2" color="text.secondary">
                                                 {item.description}
                                             </Typography>
                                         </Paper>
                                     ))}
                                 {!unlocked && (
                                     <Typography color="text.secondary">
-                                        Responda uma questão ou conclua uma aula
-                                        para começar.
+                                        Responda uma questão ou conclua uma aula para começar.
                                     </Typography>
                                 )}
                             </Stack>
-                            <Button
-                                component={Link}
-                                to="/plano"
-                                variant="contained"
-                                sx={{ mt: 2 }}
-                            >
+                            <Button component={Link} to="/plano" variant="contained" sx={{ mt: 2 }}>
                                 Abrir plano de estudo
                             </Button>
                         </CardContent>
@@ -3225,44 +2802,49 @@ function MyStudyPage() {
     );
 }
 
+function RouteIsland({ children }) {
+    const location = useLocation();
+    const content = useContent();
+    const queryClient = useQueryClient();
+    const resetKey = `${location.pathname}${location.search}`;
+    const retry = () => {
+        content.reload();
+        void queryClient.resetQueries();
+    };
+    return (
+        <ContentErrorBoundary resetKey={resetKey} onRetry={retry}>
+            {children}
+        </ContentErrorBoundary>
+    );
+}
+
 function AppContent() {
-    const { status, error } = useContent();
-    if (status === "loading") return <Loading />;
-    if (status === "error") return <ErrorState error={error} />;
+    const island = (element) => <RouteIsland>{element}</RouteIsland>;
     return (
         <Shell>
             <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/catalogo" element={<CatalogView />} />
-                <Route path="/cursos/:slug" element={<CourseView />} />
-                <Route path="/licoes/:lessonId" element={<LessonView />} />
-                <Route
-                    path="/listas/:assessmentSetId"
-                    element={<AssessmentSetPage />}
-                />
-                <Route path="/mapa" element={<TopicMapView />} />
-                <Route path="/mapa/:slug" element={<TopicMapView />} />
-                <Route path="/plano" element={<StudyPlanView />} />
-                <Route path="/plano/:slug" element={<StudyPlanView />} />
-                <Route path="/meu-estudo" element={<MyStudyPage />} />
-                <Route path="/topicos" element={<TopicBrowser />} />
-                <Route path="/topicos/:slug" element={<TopicStudy />} />
-                <Route path="/questoes" element={<QuestionBrowser />} />
-                <Route
-                    path="/questoes/:questionId"
-                    element={<QuestionView />}
-                />
-                <Route path="/simulado" element={<SimulatorSetup />} />
-                <Route
-                    path="/simulado/:sessionId"
-                    element={<SimulatorRunner />}
-                />
+                <Route path="/" element={island(<Dashboard />)} />
+                <Route path="/catalogo" element={island(<CatalogView />)} />
+                <Route path="/cursos/:slug" element={island(<CourseView />)} />
+                <Route path="/licoes/:lessonId" element={island(<LessonView />)} />
+                <Route path="/listas/:assessmentSetId" element={island(<AssessmentSetPage />)} />
+                <Route path="/mapa" element={island(<TopicMapView />)} />
+                <Route path="/mapa/:slug" element={island(<TopicMapView />)} />
+                <Route path="/plano" element={island(<StudyPlanView />)} />
+                <Route path="/plano/:slug" element={island(<StudyPlanView />)} />
+                <Route path="/meu-estudo" element={island(<MyStudyPage />)} />
+                <Route path="/topicos" element={island(<TopicBrowser />)} />
+                <Route path="/topicos/:slug" element={island(<TopicStudy />)} />
+                <Route path="/questoes" element={island(<QuestionBrowser />)} />
+                <Route path="/questoes/:questionId" element={island(<QuestionView />)} />
+                <Route path="/simulado" element={island(<SimulatorSetup />)} />
+                <Route path="/simulado/:sessionId" element={island(<SimulatorRunner />)} />
                 <Route
                     path="/simulado/:sessionId/resultado"
-                    element={<SimulatorResult />}
+                    element={island(<SimulatorResult />)}
                 />
-                <Route path="/desempenho" element={<PerformanceDashboard />} />
-                <Route path="/revisao" element={<ReviewQueue />} />
+                <Route path="/desempenho" element={island(<PerformanceDashboard />)} />
+                <Route path="/revisao" element={island(<ReviewQueue />)} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </Shell>

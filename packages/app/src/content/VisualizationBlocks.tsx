@@ -27,9 +27,7 @@ export function ChartBlock({ block }) {
     }, [block.option]);
     return (
         <Paper variant="outlined" sx={{ p: 2, my: 3 }}>
-            <Typography fontWeight={700}>
-                {block.title || t("content.visualization")}
-            </Typography>
+            <Typography fontWeight={700}>{block.title || t("content.visualization")}</Typography>
             <Box
                 ref={containerRef}
                 role="img"
@@ -57,10 +55,7 @@ export function KnowledgeMapBlock({ block }) {
                     graph.addNode(node.id, node);
                 });
                 block.edges.forEach((edge) => {
-                    if (
-                        graph.hasNode(edge.source) &&
-                        graph.hasNode(edge.target)
-                    )
+                    if (graph.hasNode(edge.source) && graph.hasNode(edge.target))
                         graph.addEdge(edge.source, edge.target);
                 });
                 cy = cytoscape({
@@ -119,9 +114,7 @@ export function KnowledgeMapBlock({ block }) {
     if (error) return <Alert severity="info">{t("content.mapFallback")}</Alert>;
     return (
         <Paper variant="outlined" sx={{ p: 2, my: 3 }}>
-            <Typography fontWeight={700}>
-                {block.title || t("content.knowledgeMap")}
-            </Typography>
+            <Typography fontWeight={700}>{block.title || t("content.knowledgeMap")}</Typography>
             <Box
                 ref={containerRef}
                 role="img"
@@ -147,12 +140,7 @@ export function ParametricSceneBlock({ block }) {
                 const height = 300;
                 const scene = new THREE.Scene();
                 scene.background = new THREE.Color("#f7f8fb");
-                const camera = new THREE.PerspectiveCamera(
-                    45,
-                    width / height,
-                    0.1,
-                    100,
-                );
+                const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
                 camera.position.z = 4;
                 renderer = new THREE.WebGLRenderer({
                     antialias: true,
@@ -173,9 +161,7 @@ export function ParametricSceneBlock({ block }) {
                     metalness: 0.05,
                 });
                 const mesh = new THREE.Mesh(geometry, material);
-                mesh.scale.setScalar(
-                    Math.max(0.35, Math.min(2, Number(block.scale || 1))),
-                );
+                mesh.scale.setScalar(Math.max(0.35, Math.min(2, Number(block.scale || 1))));
                 scene.add(mesh);
                 scene.add(new THREE.HemisphereLight("#ffffff", "#8ba0c7", 2));
                 const animate = () => {
@@ -196,8 +182,7 @@ export function ParametricSceneBlock({ block }) {
             renderer?.dispose();
         };
     }, [block]);
-    if (error)
-        return <Alert severity="info">{t("content.sceneFallback")}</Alert>;
+    if (error) return <Alert severity="info">{t("content.sceneFallback")}</Alert>;
     return (
         <Paper variant="outlined" sx={{ p: 2, my: 3 }}>
             <Typography fontWeight={700}>

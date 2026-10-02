@@ -18,11 +18,7 @@ describe("contrato editorial", () => {
     });
 
     it("identifica a progressão pedagógica incompleta", () => {
-        const result = validatePedagogicalRoles([
-            "context",
-            "analogy",
-            "formalization",
-        ]);
+        const result = validatePedagogicalRoles(["context", "analogy", "formalization"]);
         expect(result.valid).toBe(false);
         expect(result.missing).toContain("review");
     });

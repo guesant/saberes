@@ -1,16 +1,7 @@
 // @ts-nocheck -- migração incremental do renderer editorial legado.
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import {
-    Alert,
-    Box,
-    Button,
-    Chip,
-    Link as MuiLink,
-    Paper,
-    Stack,
-    Typography,
-} from "@mui/material";
+import { Alert, Box, Button, Chip, Link as MuiLink, Paper, Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
@@ -18,11 +9,7 @@ import rehypeSanitize from "rehype-sanitize";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import { parseEditorialBlocks } from "./schema";
-import {
-    ChartBlock,
-    KnowledgeMapBlock,
-    ParametricSceneBlock,
-} from "./VisualizationBlocks";
+import { ChartBlock, KnowledgeMapBlock, ParametricSceneBlock } from "./VisualizationBlocks";
 
 function parseBlocks(value) {
     return parseEditorialBlocks(value);
@@ -40,9 +27,7 @@ function Block({ block, onQuestion }) {
         return (
             <Alert severity={block.severity || "info"} sx={{ my: 3 }}>
                 <Typography fontWeight={700}>{block.title}</Typography>
-                <Typography sx={{ mt: 0.5, whiteSpace: "pre-wrap" }}>
-                    {block.content}
-                </Typography>
+                <Typography sx={{ mt: 0.5, whiteSpace: "pre-wrap" }}>{block.content}</Typography>
             </Alert>
         );
     if (block.type === "formula")
@@ -72,9 +57,7 @@ function Block({ block, onQuestion }) {
             </Paper>
         );
     if (block.type === "image") {
-        const src =
-            safeExternalUrl(block.src) ||
-            (block.src?.startsWith("/") ? block.src : null);
+        const src = safeExternalUrl(block.src) || (block.src?.startsWith("/") ? block.src : null);
         return src ? (
             <Box component="figure" sx={{ my: 3, mx: 0, textAlign: "center" }}>
                 <Box
@@ -117,18 +100,11 @@ function Block({ block, onQuestion }) {
     }
     if (block.type === "question_link")
         return (
-            <Paper
-                variant="outlined"
-                sx={{ p: 2, my: 3, bgcolor: "background.default" }}
-            >
+            <Paper variant="outlined" sx={{ p: 2, my: 3, bgcolor: "background.default" }}>
                 <Typography fontWeight={700}>
                     {block.title || t("content.practiceConcept")}
                 </Typography>
-                <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ mt: 0.5 }}
-                >
+                <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
                     {block.description}
                 </Typography>
                 <Button
@@ -150,12 +126,8 @@ function Block({ block, onQuestion }) {
                     color: "primary.contrastText",
                 }}
             >
-                <Typography variant="h6">
-                    {block.title || t("content.summary")}
-                </Typography>
-                <Typography
-                    sx={{ mt: 1, whiteSpace: "pre-wrap", opacity: 0.9 }}
-                >
+                <Typography variant="h6">{block.title || t("content.summary")}</Typography>
+                <Typography sx={{ mt: 1, whiteSpace: "pre-wrap", opacity: 0.9 }}>
                     {block.content}
                 </Typography>
             </Paper>
@@ -190,9 +162,7 @@ function Block({ block, onQuestion }) {
                             return (
                                 <tr key={rowKey}>
                                     {row.map((cell) => (
-                                        <td key={`${rowKey}-${cell}`}>
-                                            {cell}
-                                        </td>
+                                        <td key={`${rowKey}-${cell}`}>{cell}</td>
                                     ))}
                                 </tr>
                             );
@@ -202,18 +172,12 @@ function Block({ block, onQuestion }) {
             </Box>
         );
     if (block.type === "chart") return <ChartBlock block={block} />;
-    if (block.type === "knowledge_map")
-        return <KnowledgeMapBlock block={block} />;
-    if (block.type === "parametric_scene")
-        return <ParametricSceneBlock block={block} />;
+    if (block.type === "knowledge_map") return <KnowledgeMapBlock block={block} />;
+    if (block.type === "parametric_scene") return <ParametricSceneBlock block={block} />;
     return null;
 }
 
-export function ContentRenderer({
-    markdown = "",
-    blocksJson = "[]",
-    onQuestion,
-}) {
+export function ContentRenderer({ markdown = "", blocksJson = "[]", onQuestion }) {
     const { t } = useTranslation();
     const blocks = parseBlocks(blocksJson);
     return (
@@ -262,9 +226,7 @@ export function ContentRenderer({
                             );
                         },
                         img: ({ src, alt }) => {
-                            const url =
-                                safeExternalUrl(src) ||
-                                (src?.startsWith("/") ? src : null);
+                            const url = safeExternalUrl(src) || (src?.startsWith("/") ? src : null);
                             return url ? (
                                 <Box
                                     component="img"

@@ -99,15 +99,11 @@ function nowIso() {
 
 function generatedId() {
     return (
-        globalThis.crypto?.randomUUID?.() ||
-        `${Date.now()}-${Math.random().toString(16).slice(2)}`
+        globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`
     );
 }
 
-function validated<T extends object>(
-    schema: BaseSchema<unknown, T, BaseIssue<unknown>>,
-    value: T,
-) {
+function validated<T extends object>(schema: BaseSchema<unknown, T, BaseIssue<unknown>>, value: T) {
     const result = safeParse(schema, value);
     return result.success ? result.output : value;
 }
@@ -137,8 +133,7 @@ class ProgressDatabase extends Dexie {
                 planProgress: "contentKey, completed, updatedAt",
                 bookmarks: "contentKey, updatedAt",
                 reviewItems: "contentKey, dueAt, updatedAt",
-                reviewTargets:
-                    "contentKey, dueAt, targetType, suspended, updatedAt",
+                reviewTargets: "contentKey, dueAt, targetType, suspended, updatedAt",
                 reviewEvents: "id, contentKey, reviewedAt",
                 diagnoses: "attemptId, code, createdAt",
                 dailyChallenges: "contentKey, date",
@@ -154,8 +149,7 @@ class ProgressDatabase extends Dexie {
                     await tx.table("reviewTargets").put({
                         ...item,
                         contentKey: item.contentKey,
-                        targetType:
-                            item.targetType || ReviewTargetTypeEnum.Question,
+                        targetType: item.targetType || ReviewTargetTypeEnum.Question,
                         state: item.state || ReviewStateEnum.New,
                         schedulerVersion: item.schedulerVersion || "legacy",
                         updatedAt: item.updatedAt || nowIso(),
@@ -178,9 +172,7 @@ export async function saveAttempt(attempt: Attempt) {
 }
 
 export function listAttempts() {
-    return progressDb.table("attempts").toArray() as Promise<
-        Array<Attempt & { id: string }>
-    >;
+    return progressDb.table("attempts").toArray() as Promise<Array<Attempt & { id: string }>>;
 }
 
 export function saveSession(session: Record<string, unknown> & { id: string }) {
@@ -220,17 +212,11 @@ const studyStores = [
 
 export async function clearProgress() {
     await Promise.all(
-        [...studyStores, "attempts", "sessions"].map((store) =>
-            progressDb.table(store).clear(),
-        ),
+        [...studyStores, "attempts", "sessions"].map((store) => progressDb.table(store).clear()),
     );
 }
 
-async function putStudy(
-    store: string,
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+async function putStudy(store: string, contentKey: string, data: Record<string, unknown> = {}) {
     const value = { ...data, contentKey, updatedAt: nowIso() };
     await progressDb.table(store).put(value);
     return value;
@@ -240,10 +226,7 @@ function listStudy(store: string) {
     return progressDb.table(store).toArray();
 }
 
-export async function enrollCourse(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export async function enrollCourse(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("enrollments", contentKey, {
         ...data,
         startedAt: data.startedAt || nowIso(),
@@ -252,56 +235,38 @@ export async function enrollCourse(
 export function listEnrollments() {
     return listStudy("enrollments");
 }
-export function saveLessonProgress(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveLessonProgress(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("lessonProgress", contentKey, data);
 }
 export function listLessonProgress() {
     return listStudy("lessonProgress");
 }
-export function saveCourseProgress(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveCourseProgress(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("courseProgress", contentKey, data);
 }
 export function listCourseProgress() {
     return listStudy("courseProgress");
 }
-export function saveModuleProgress(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveModuleProgress(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("moduleProgress", contentKey, data);
 }
 export function listModuleProgress() {
     return listStudy("moduleProgress");
 }
-export function savePlanProgress(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function savePlanProgress(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("planProgress", contentKey, data);
 }
 export function listPlanProgress() {
     return listStudy("planProgress");
 }
-export function saveBookmark(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveBookmark(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("bookmarks", contentKey, data);
 }
 export function listBookmarks() {
     return listStudy("bookmarks");
 }
 
-export async function saveReviewItem(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export async function saveReviewItem(contentKey: string, data: Record<string, unknown> = {}) {
     const value = await putStudy("reviewItems", contentKey, data);
     await putStudy("reviewTargets", contentKey, {
         ...data,
@@ -311,10 +276,7 @@ export async function saveReviewItem(
     return value;
 }
 
-export function saveReviewTarget(
-    contentKey: string,
-    data: Partial<ReviewTarget> = {},
-) {
+export function saveReviewTarget(contentKey: string, data: Partial<ReviewTarget> = {}) {
     return putStudy("reviewTargets", contentKey, data);
 }
 export function listReviewItems() {
@@ -323,20 +285,12 @@ export function listReviewItems() {
 export function listReviewTargets() {
     return listStudy("reviewTargets");
 }
-export function saveReviewEvent(
-    event: Omit<ReviewDatabaseEvent, "id"> & { id?: string },
-) {
-    return progressDb
-        .table("reviewEvents")
-        .put({ ...event, id: event.id || generatedId() });
+export function saveReviewEvent(event: Omit<ReviewDatabaseEvent, "id"> & { id?: string }) {
+    return progressDb.table("reviewEvents").put({ ...event, id: event.id || generatedId() });
 }
 export function listReviewEvents(contentKey?: string) {
     return contentKey
-        ? progressDb
-              .table("reviewEvents")
-              .where("contentKey")
-              .equals(contentKey)
-              .toArray()
+        ? progressDb.table("reviewEvents").where("contentKey").equals(contentKey).toArray()
         : progressDb.table("reviewEvents").toArray();
 }
 
@@ -357,19 +311,13 @@ export function saveDiagnosis(diagnosis: AttemptDiagnosis) {
 export function listDiagnoses() {
     return progressDb.table("diagnoses").toArray();
 }
-export function saveDailyChallenge(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveDailyChallenge(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("dailyChallenges", contentKey, data);
 }
 export function listDailyChallenges() {
     return listStudy("dailyChallenges");
 }
-export function saveStudyGoal(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveStudyGoal(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("studyGoals", contentKey, data);
 }
 export function listStudyGoals() {
@@ -381,19 +329,13 @@ export function saveStreak(data: Record<string, unknown> = {}) {
 export function getStreak() {
     return progressDb.table("streaks").get("current");
 }
-export function saveAchievement(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveAchievement(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("achievements", contentKey, data);
 }
 export function listAchievements() {
     return listStudy("achievements");
 }
-export function saveTopicMastery(
-    contentKey: string,
-    data: Record<string, unknown> = {},
-) {
+export function saveTopicMastery(contentKey: string, data: Record<string, unknown> = {}) {
     return putStudy("topicMastery", contentKey, data);
 }
 export function listTopicMastery() {

@@ -4,18 +4,15 @@ import initSqlJs from "sql.js";
 
 const root = process.cwd();
 const databasePath =
-    process.env.CONTENT_MIGRATION_DB ||
-    path.join(root, ".cache/content/editorial.sqlite");
+    process.env.CONTENT_MIGRATION_DB || path.join(root, ".cache/content/editorial.sqlite");
 const schemaPath = path.join(root, ".config/dbmate/schema.sql");
 
 const SQL = await initSqlJs({
     locateFile: (file) => path.join(root, "node_modules/sql.js/dist", file),
 });
 
-function hasSchema(database: {
-    exec: (sql: string) => Array<{ values: unknown[][] }>;
-}) {
-    const result = database.exec(
+function hasSchema(sqlDatabase: { exec: (sql: string) => Array<{ values: unknown[][] }> }) {
+    const result = sqlDatabase.exec(
         "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'universities' LIMIT 1",
     );
     return result[0]?.values.length === 1;

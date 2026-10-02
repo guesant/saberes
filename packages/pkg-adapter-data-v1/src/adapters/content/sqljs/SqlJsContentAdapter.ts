@@ -25,8 +25,7 @@ export class SqlJsContentAdapter implements ContentPort {
     private databasePromise?: Promise<SqlDatabase>;
 
     private database() {
-        this.databasePromise ||=
-            loadContentDatabase() as unknown as Promise<SqlDatabase>;
+        this.databasePromise ||= loadContentDatabase() as unknown as Promise<SqlDatabase>;
         return this.databasePromise;
     }
 
@@ -59,9 +58,7 @@ export class SqlJsContentAdapter implements ContentPort {
 
         return {
             courses: courses
-                .filter((item) =>
-                    matches(`${item.title} ${item.description || ""}`),
-                )
+                .filter((item) => matches(`${item.title} ${item.description || ""}`))
                 .map((item) => ({
                     ...item,
                     id: item.id as number,
@@ -74,9 +71,7 @@ export class SqlJsContentAdapter implements ContentPort {
                     courseType: String(item.course_type || ""),
                 })),
             maps: maps
-                .filter((item) =>
-                    matches(`${item.title} ${item.description || ""}`),
-                )
+                .filter((item) => matches(`${item.title} ${item.description || ""}`))
                 .map((item) => ({
                     ...item,
                     id: item.id as number,
@@ -89,9 +84,7 @@ export class SqlJsContentAdapter implements ContentPort {
                     year: Number(item.year || 0),
                 })),
             plans: plans
-                .filter((item) =>
-                    matches(`${item.title} ${item.description || ""}`),
-                )
+                .filter((item) => matches(`${item.title} ${item.description || ""}`))
                 .map((item) => ({
                     ...item,
                     id: item.id as number,
@@ -104,9 +97,7 @@ export class SqlJsContentAdapter implements ContentPort {
                 })),
             content: [
                 ...lessons
-                    .filter((item) =>
-                        matches(`${item.title} ${item.description || ""}`),
-                    )
+                    .filter((item) => matches(`${item.title} ${item.description || ""}`))
                     .map((item) => ({
                         ...item,
                         id: item.id as number,
@@ -116,9 +107,7 @@ export class SqlJsContentAdapter implements ContentPort {
                         description: String(item.description || ""),
                     })),
                 ...resources
-                    .filter((item) =>
-                        matches(`${item.title} ${item.description || ""}`),
-                    )
+                    .filter((item) => matches(`${item.title} ${item.description || ""}`))
                     .map((item) => ({
                         ...item,
                         id: item.id as number,
@@ -180,9 +169,7 @@ export class SqlJsContentAdapter implements ContentPort {
         };
     }
 
-    async getQuestion(
-        key: ContentKey | string,
-    ): Promise<QuestionReadModel | null> {
+    async getQuestion(key: ContentKey | string): Promise<QuestionReadModel | null> {
         const db = await this.database();
         const id = Number(keyId(key));
         const question = db.query(
@@ -211,9 +198,7 @@ export class SqlJsContentAdapter implements ContentPort {
         };
     }
 
-    async getAssessment(
-        key: ContentKey | string,
-    ): Promise<AssessmentReadModel | null> {
+    async getAssessment(key: ContentKey | string): Promise<AssessmentReadModel | null> {
         const db = await this.database();
         const id = Number(keyId(key));
         const assessment = db.query(
@@ -243,20 +228,17 @@ export class SqlJsContentAdapter implements ContentPort {
                 "SELECT mt.*, ct.label, ct.description, t.slug FROM learning_map_topics mt JOIN curriculum_topics ct ON ct.id = mt.curriculum_topic_id JOIN topics t ON t.id = ct.topic_id WHERE mt.map_id = ? ORDER BY mt.position",
                 [map.id],
             ),
-            edges: db.query(
-                "SELECT * FROM learning_map_edges WHERE map_id = ?",
-                [map.id],
-            ),
+            edges: db.query("SELECT * FROM learning_map_edges WHERE map_id = ?", [map.id]),
         };
     }
 
     async getStudyPlan(slug = ""): Promise<StudyPlanReadModel> {
         const db = await this.database();
         const plan =
-            db.query(
-                "SELECT * FROM study_plans WHERE is_published = 1 AND (? = '' OR slug = ?)",
-                [slug, slug],
-            )[0] || null;
+            db.query("SELECT * FROM study_plans WHERE is_published = 1 AND (? = '' OR slug = ?)", [
+                slug,
+                slug,
+            ])[0] || null;
         return {
             plan,
             steps: plan

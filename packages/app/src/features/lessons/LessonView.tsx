@@ -14,6 +14,7 @@ import {
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { ContentErrorState } from "../../components/ContentState";
 import { ContentRenderer } from "../../content/ContentRenderer";
 import { useLessonViewModel } from "./useLessonViewModel";
 
@@ -24,14 +25,18 @@ export function LessonView() {
     const viewModel = useLessonViewModel(`lesson:${lessonId}`);
     const [completed, setCompleted] = useState(false);
     const [bookmarked, setBookmarked] = useState(false);
-    if (viewModel.state === "loading")
-        return <Typography>{t("common.loadingLesson")}</Typography>;
-    if (!viewModel.data)
+    if (viewModel.state === "loading") return <Typography>{t("common.loadingLesson")}</Typography>;
+    if (viewModel.state === "error") {
         return (
-            <Typography color="text.secondary">
-                {t("lesson.notFound")}
-            </Typography>
+            <ContentErrorState
+                error={viewModel.error}
+                label={t("errors.contentLoad")}
+                onRetry={viewModel.reload}
+            />
         );
+    }
+    if (!viewModel.data)
+        return <Typography color="text.secondary">{t("lesson.notFound")}</Typography>;
     const lesson = viewModel.data.lesson;
     const data = viewModel.data;
     return (
@@ -71,21 +76,14 @@ export function LessonView() {
                             setCompleted(next);
                         }}
                     >
-                        {completed
-                            ? t("lesson.completed")
-                            : t("lesson.complete")}
+                        {completed ? t("lesson.completed") : t("lesson.complete")}
                     </Button>
                 </Stack>
             </Stack>
             <Grid container spacing={3}>
                 <Grid size={{ xs: 12, md: 3 }}>
-                    <Paper
-                        variant="outlined"
-                        sx={{ p: 2, position: { md: "sticky" }, top: 88 }}
-                    >
-                        <Typography variant="subtitle2">
-                            {t("lesson.tableOfContents")}
-                        </Typography>
+                    <Paper variant="outlined" sx={{ p: 2, position: { md: "sticky" }, top: 88 }}>
+                        <Typography variant="subtitle2">{t("lesson.tableOfContents")}</Typography>
                         <List dense>
                             {data.sections.map((section, index) => (
                                 <ListItemButton
@@ -110,17 +108,11 @@ export function LessonView() {
                                 sx={{ mb: 5, scrollMarginTop: 100 }}
                             >
                                 <Typography variant="h4" sx={{ mb: 2 }}>
-                                    {String(
-                                        section.title || t("lesson.theory"),
-                                    )}
+                                    {String(section.title || t("lesson.theory"))}
                                 </Typography>
                                 <ContentRenderer
                                     markdown={String(section.content || "")}
-                                    blocksJson={
-                                        section.blocks_json as
-                                            | string
-                                            | undefined
-                                    }
+                                    blocksJson={section.blocks_json as string | undefined}
                                     onQuestion={(questionId: string | number) =>
                                         navigate(`/questoes/${questionId}`)
                                     }
@@ -128,11 +120,7 @@ export function LessonView() {
                             </Box>
                         ))}
                         <Divider sx={{ my: 4 }} />
-                        <Button
-                            component={Link}
-                            to="/questoes"
-                            variant="contained"
-                        >
+                        <Button component={Link} to="/questoes" variant="contained">
                             {t("lesson.practice")}
                         </Button>
                     </Paper>

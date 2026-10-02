@@ -23,9 +23,7 @@ export interface ContentPort {
     getCourse(slug: string): Promise<CourseReadModel | null>;
     getLesson(key: ContentKey | string): Promise<LessonReadModel | null>;
     getQuestion(key: ContentKey | string): Promise<QuestionReadModel | null>;
-    getAssessment(
-        key: ContentKey | string,
-    ): Promise<AssessmentReadModel | null>;
+    getAssessment(key: ContentKey | string): Promise<AssessmentReadModel | null>;
     getTopicMap(mapKey: string): Promise<TopicMapReadModel | null>;
     getStudyPlan(slug?: string): Promise<StudyPlanReadModel>;
 }
@@ -33,16 +31,10 @@ export interface ContentPort {
 export interface ProgressPort {
     listAttempts(): Promise<AttemptRecord[]>;
     recordAttempt(attempt: AttemptRecord): Promise<void>;
-    enrollCourse(
-        contentKey: ContentKey | string,
-        data?: Record<string, unknown>,
-    ): Promise<void>;
+    enrollCourse(contentKey: ContentKey | string, data?: Record<string, unknown>): Promise<void>;
     listLessonProgress(): Promise<LessonProgressRecord[]>;
     saveLessonProgress(progress: LessonProgressRecord): Promise<void>;
-    saveBookmark(
-        contentKey: ContentKey | string,
-        data?: Record<string, unknown>,
-    ): Promise<void>;
+    saveBookmark(contentKey: ContentKey | string, data?: Record<string, unknown>): Promise<void>;
     listPlanProgress(): Promise<PlanProgressRecord[]>;
     savePlanProgress(progress: PlanProgressRecord): Promise<void>;
     listReviewTargets(): Promise<ReviewTargetRecord[]>;
@@ -55,11 +47,7 @@ export interface ReviewPreview {
 }
 
 export interface ReviewSchedulerPort {
-    schedule(
-        target: ReviewTargetRecord,
-        rating: FsrsRating,
-        now: Date,
-    ): ReviewTargetRecord;
+    schedule(target: ReviewTargetRecord, rating: FsrsRating, now: Date): ReviewTargetRecord;
     preview(target: ReviewTargetRecord, now: Date): ReviewPreview;
 }
 

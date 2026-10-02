@@ -82,9 +82,7 @@ const blockSchema = variant("type", [
             object({
                 id: string(),
                 label: string(),
-                status: optional(
-                    picklist(["locked", "available", "completed"]),
-                ),
+                status: optional(picklist(["locked", "available", "completed"])),
             }),
         ),
         edges: array(
@@ -108,9 +106,7 @@ const blockSchema = variant("type", [
 
 export type EditorialBlock = InferOutput<typeof blockSchema>;
 
-export function parseEditorialBlocks(
-    value: string | unknown,
-): EditorialBlock[] {
+export function parseEditorialBlocks(value: string | unknown): EditorialBlock[] {
     let candidate = value;
     if (typeof value === "string") {
         try {

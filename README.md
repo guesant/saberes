@@ -2,6 +2,16 @@
 
 Portal educacional local-first para vestibulares e aprendizagem estruturada, feito como uma SPA React com Material UI, Vite, PWA e SQLite em WebAssembly.
 
+[![quality](https://img.shields.io/github/actions/workflow/status/guesant/saberes/quality.yml?branch=main&label=quality&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/quality.yml)
+[![deploy](https://img.shields.io/github/actions/workflow/status/guesant/saberes/deploy-pages.yml?branch=main&label=deploy&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/deploy-pages.yml)
+[![licença](https://img.shields.io/github/license/guesant/saberes?style=for-the-badge&labelColor=0b1120&color=7c3aed&logo=github&logoColor=white)](LICENSE)
+
+[![último commit](https://img.shields.io/github/last-commit/guesant/saberes/main?label=%C3%BAltimo%20commit&style=flat-square&labelColor=0b1120&color=b45309&logo=git&logoColor=white)](https://github.com/guesant/saberes/commits/main)
+[![commits por mês](https://img.shields.io/github/commit-activity/m/guesant/saberes?label=commits%2Fm%C3%AAs&style=flat-square&labelColor=0b1120&color=b45309&logo=git&logoColor=white)](https://github.com/guesant/saberes/graphs/commit-activity)
+[![PRs abertas](https://img.shields.io/github/issues-pr/guesant/saberes?label=PRs%20abertas&style=flat-square&labelColor=0b1120&color=b45309&logo=github&logoColor=white)](https://github.com/guesant/saberes/pulls)
+[![issues abertas](https://img.shields.io/github/issues/guesant/saberes?label=issues%20abertas&style=flat-square&labelColor=0b1120&color=b45309&logo=github&logoColor=white)](https://github.com/guesant/saberes/issues)
+[![stars](https://img.shields.io/github/stars/guesant/saberes?style=flat-square&labelColor=0b1120&color=b45309&logo=github&logoColor=white)](https://github.com/guesant/saberes/stargazers)
+
 ## Licenças
 
 - Código, configurações, documentação técnica e scripts: [The Unlicense](LICENSE).

@@ -1,32 +1,29 @@
 import { CheckCircle, EventNote } from "@mui/icons-material";
-import {
-    Card,
-    CardContent,
-    Chip,
-    IconButton,
-    Paper,
-    Stack,
-    Typography,
-} from "@mui/material";
+import { Card, CardContent, Chip, IconButton, Paper, Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
+import { ContentErrorState } from "../../components/ContentState";
 import { useStudyPlanViewModel } from "./useStudyPlanViewModel";
 
 export function StudyPlanView() {
     const { t } = useTranslation();
     const { slug } = useParams();
     const viewModel = useStudyPlanViewModel(slug);
-    if (viewModel.state === "loading")
-        return <Typography>{t("common.loadingPlan")}</Typography>;
-    if (!viewModel.data?.plan)
+    if (viewModel.state === "loading") return <Typography>{t("common.loadingPlan")}</Typography>;
+    if (viewModel.state === "error") {
         return (
-            <Typography color="text.secondary">{t("plan.notFound")}</Typography>
+            <ContentErrorState
+                error={viewModel.error}
+                label={t("errors.contentLoad")}
+                onRetry={viewModel.reload}
+            />
         );
+    }
+    if (!viewModel.data?.plan)
+        return <Typography color="text.secondary">{t("plan.notFound")}</Typography>;
     const { plan, steps } = viewModel.data;
     const completed = new Set(
-        viewModel.progress
-            .filter((item) => item.completed)
-            .map((item) => String(item.stepId)),
+        viewModel.progress.filter((item) => item.completed).map((item) => String(item.stepId)),
     );
     return (
         <>
@@ -49,34 +46,23 @@ export function StudyPlanView() {
                                 borderColor: done ? "success.main" : undefined,
                             }}
                         >
-                            <Stack
-                                direction="row"
-                                spacing={2}
-                                alignItems="flex-start"
-                            >
+                            <Stack direction="row" spacing={2} alignItems="flex-start">
                                 <IconButton
                                     color={done ? "success" : "default"}
-                                    onClick={() =>
-                                        viewModel.toggleStep(step, !done)
-                                    }
+                                    onClick={() => viewModel.toggleStep(step, !done)}
                                 >
                                     {done ? <CheckCircle /> : <EventNote />}
                                 </IconButton>
                                 <CardContent sx={{ p: 0 }}>
                                     <Typography variant="h6">
-                                        {String(step.position)}.{" "}
-                                        {String(step.title)}
+                                        {String(step.position)}. {String(step.title)}
                                     </Typography>
                                     <Typography color="text.secondary">
                                         {String(step.description || "")}
                                     </Typography>
                                     <Chip
                                         size="small"
-                                        label={
-                                            done
-                                                ? t("plan.completed")
-                                                : t("plan.nextStep")
-                                        }
+                                        label={done ? t("plan.completed") : t("plan.nextStep")}
                                         sx={{ mt: 1 }}
                                     />
                                 </CardContent>

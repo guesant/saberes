@@ -24,6 +24,7 @@ const ptBR = {
         loadingQuestion: "Carregando questão...",
         loadingMap: "Carregando mapa...",
         loadingPlan: "Carregando plano...",
+        retry: "Tentar novamente",
         notFound: "Conteúdo não encontrado.",
         open: "Abrir",
         study: "Estudar",
@@ -49,6 +50,8 @@ const ptBR = {
     errors: {
         contentLoad:
             "Não foi possível carregar a base de conteúdo. Verifique sua conexão na primeira abertura.",
+        contentLoadDescription:
+            "Esta área foi isolada para que o restante da aplicação continue disponível. Você pode tentar novamente sem perder seu progresso local.",
         catalogLoad: "Não foi possível carregar o catálogo.",
     },
     home: {
@@ -169,8 +172,7 @@ const ptBR = {
     questionBank: {
         eyebrow: "Banco multi-exame",
         title: "Treine questões",
-        description:
-            "Filtre por processo seletivo, edição, disciplina ou tópico.",
+        description: "Filtre por processo seletivo, edição, disciplina ou tópico.",
         found: "{{count}} questão(ões) encontrada(s)",
         noResults: "Nenhuma questão corresponde aos filtros.",
     },
@@ -187,8 +189,7 @@ const ptBR = {
     simulator: {
         eyebrow: "Treino sob medida",
         title: "Monte seu simulado",
-        description:
-            "Escolha o processo seletivo e resolva questões em sequência.",
+        description: "Escolha o processo seletivo e resolva questões em sequência.",
         quantity: "Quantidade",
         preparing: "Preparando...",
         start: "Começar simulado",
@@ -233,8 +234,7 @@ const ptBR = {
         notFound: "Mapa não encontrado.",
         openTopic: "Abrir tópico",
         structure: "Estrutura do mapa",
-        description:
-            "Avance pelos pré-requisitos e use as questões para confirmar o domínio.",
+        description: "Avance pelos pré-requisitos e use as questões para confirmar o domínio.",
         studyTopic: "Estude a teoria e pratique questões deste tópico.",
         useTitle: "Como usar o mapa",
         useDescription:

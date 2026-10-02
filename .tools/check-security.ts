@@ -34,9 +34,7 @@ for (const root of roots) {
         const source = await fs.readFile(filePath, "utf8");
         for (const [pattern, name] of forbiddenPatterns) {
             if (pattern.test(source))
-                violations.push(
-                    `${path.relative(process.cwd(), filePath)}: ${name}`,
-                );
+                violations.push(`${path.relative(process.cwd(), filePath)}: ${name}`);
         }
     }
 }
@@ -45,7 +43,5 @@ if (violations.length) {
     console.error(violations.join("\n"));
     process.exitCode = 1;
 } else {
-    console.log(
-        "Security check válido: nenhuma API de execução ou HTML inseguro foi encontrado.",
-    );
+    console.log("Security check válido: nenhuma API de execução ou HTML inseguro foi encontrado.");
 }
