@@ -1,0 +1,5 @@
+id: no-console-log-typescript
+valid:
+    - const message = formatMessage(input)
+invalid:
+    - 'console.log(input)'

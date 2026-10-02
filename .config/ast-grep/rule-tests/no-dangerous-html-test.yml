@@ -1,0 +1,5 @@
+id: no-dangerous-html
+valid:
+    - "<article>{content}</article>"
+invalid:
+    - '<article dangerouslySetInnerHTML={{ __html: content }} />'

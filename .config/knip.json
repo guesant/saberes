@@ -1,0 +1,32 @@
+{
+    "$schema": "https://unpkg.com/knip@6/schema.json",
+    "entry": [
+        ".config/vite.config.ts",
+        ".tools/**/*.ts",
+        "packages/app/src/main.tsx",
+        "packages/app/src/**/*.test.{ts,tsx}"
+    ],
+    "project": [
+        ".config/vite.config.ts",
+        ".tools/**/*.ts",
+        "packages/app/src/**/*.{ts,tsx}",
+        "packages/pkg-core/src/**/*.{ts,tsx}",
+        "packages/pkg-adapter-data-v1/src/**/*.{ts,tsx}"
+    ],
+    "ignore": [
+        "packages/app/src/content/schema.ts",
+        "packages/app/src/hooks.ts",
+        "packages/app/src/test/setup.ts",
+        "packages/pkg-adapter-data-v1/src/storage/progress.ts"
+    ],
+    "ignoreDependencies": [
+        "@ast-grep/cli",
+        "@fontsource/inter",
+        "@types/cytoscape",
+        "@types/node",
+        "@types/react",
+        "@types/react-dom",
+        "@types/three",
+        "workbox-window"
+    ]
+}

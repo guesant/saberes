@@ -1,0 +1,8 @@
+id: no-eval-typescript
+language: TypeScript
+severity: error
+message: Código editorial e de aplicação não pode executar código dinâmico.
+rule:
+    any:
+        - pattern: eval($$$ARGS)
+        - pattern: new Function($$$ARGS)

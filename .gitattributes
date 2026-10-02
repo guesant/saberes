@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+
+# O código do repositório é Unlicense; o snapshot editorial possui licença própria.
+LICENSE export-subst
+LICENSE-CONTENT export-subst
+packages/app/public/data/LICENSE export-subst

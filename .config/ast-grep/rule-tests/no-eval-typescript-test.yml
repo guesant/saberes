@@ -1,0 +1,6 @@
+id: no-eval-typescript
+valid:
+    - const answer = calculateAnswer(input)
+invalid:
+    - 'const answer = eval(input)'
+    - 'const answer = new Function("return 42")()'

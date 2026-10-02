@@ -1,0 +1,19 @@
+version = 1
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Portal Guesant Saberes contributors"
+SPDX-License-Identifier = "Unlicense"
+
+[[annotations]]
+path = "packages/app/public/data/**.sqlite"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Portal Guesant Saberes contributors"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "packages/app/public/data/LICENSE"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Portal Guesant Saberes contributors"
+SPDX-License-Identifier = "CC0-1.0"

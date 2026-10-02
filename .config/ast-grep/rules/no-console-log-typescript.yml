@@ -1,0 +1,6 @@
+id: no-console-log-typescript
+language: TypeScript
+severity: error
+message: Evite console.log em código publicado; use uma decisão explícita de observabilidade.
+rule:
+    pattern: console.log($$$ARGS)

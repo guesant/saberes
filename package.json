@@ -1,0 +1,31 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "license": "Unlicense",
+    "type": "module",
+    "devDependencies": {
+        "@ast-grep/cli": "^0.45.3",
+        "@axe-core/playwright": "^4.10.2",
+        "@biomejs/biome": "^2.2.4",
+        "@lhci/cli": "^0.15.1",
+        "@playwright/test": "^1.63.0",
+        "@types/cytoscape": "^3.21.9",
+        "@types/node": "^24.5.2",
+        "@types/react": "^19.1.13",
+        "@types/react-dom": "^19.1.9",
+        "@types/three": "^0.180.0",
+        "@vitejs/plugin-react": "^5.0.4",
+        "fake-indexeddb": "^6.2.1",
+        "jscpd": "^5.4.0",
+        "jsdom": "^26.1.0",
+        "knip": "^6.39.0",
+        "markdownlint-cli2": "^0.20.0",
+        "sql.js": "^1.13.0",
+        "sql-formatter": "^15.9.0",
+        "typescript": "^5.9.2",
+        "vite": "^8.0.0",
+        "vite-plugin-pwa": "^1.0.2",
+        "vite-plugin-static-copy": "^3.1.2",
+        "vitest": "^5.0.3"
+    }
+}

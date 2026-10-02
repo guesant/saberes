@@ -1,0 +1,47 @@
+{
+	"$schema": "https://json.schemastore.org/deno.json",
+	"workspace": ["./packages/*"],
+	"nodeModulesDir": "auto",
+	"fmt": {
+		"useTabs": true,
+		"lineWidth": 100,
+		"exclude": ["dist", "node_modules", ".cache"]
+	},
+	"lint": {
+		"exclude": ["dist", "node_modules", ".cache"]
+	},
+	"tasks": {
+		"build": "vite --config .config/vite.config.ts build",
+		"dev": "vite --config .config/vite.config.ts --host 0.0.0.0",
+		"typecheck": "deno run --allow-all npm:typescript@5.9.3/tsc --project .config/tsconfig.json --noEmit",
+		"check": "deno task quality:check",
+		"quality:check": "deno task quality:check:fast",
+		"quality:check:fast": "deno task biome:scope && deno task check:format && deno task check:lint && deno task typecheck && deno task test",
+		"quality:check:heavy": "deno task quality:check:fast && deno task db:format:check && deno task markdownlint && deno task ast-grep && deno task architecture:check && deno task content:validate && deno task security:check && deno task duplication && deno task dead-code && deno task build",
+		"heavy-checks": "deno task quality:check:heavy",
+		"ast-grep": "bash -lc './node_modules/.bin/ast-grep test --config .config/ast-grep/sgconfig.yml --skip-snapshot-tests && ./node_modules/.bin/ast-grep scan --config .config/ast-grep/sgconfig.yml packages'",
+		"check:format": "biome format packages .tools .config/vite.config.ts .config/playwright.config.ts package.json",
+		"check:lint": "biome lint packages .tools .config/vite.config.ts .config/playwright.config.ts package.json",
+		"biome:scope": "deno run --allow-read .tools/check-biome-scope.ts",
+		"architecture:check": "deno run --allow-read --allow-env .tools/check-architecture.ts",
+		"format": "biome format --write packages .tools .config/vite.config.ts .config/playwright.config.ts package.json",
+		"format:check": "deno task check:format",
+		"db:format": "deno run --allow-read --allow-write .tools/format-db-migrations.ts --write",
+		"db:format:check": "deno run --allow-read .tools/format-db-migrations.ts",
+		"db:bootstrap": "deno run --allow-read --allow-write --allow-env .tools/bootstrap-content-db.ts",
+		"db:migrate": "deno task db:bootstrap && dbmate --url sqlite:.cache/content/editorial.sqlite --migrations-dir .config/dbmate/migrations --no-dump-schema up",
+		"db:status": "deno task db:bootstrap && dbmate --url sqlite:.cache/content/editorial.sqlite --migrations-dir .config/dbmate/migrations --no-dump-schema status",
+		"content:rebuild": "deno run --allow-read --allow-write --allow-env --allow-net --allow-run=dbmate .tools/rebuild-content.ts",
+		"content:export": "deno task content:rebuild",
+		"content:validate": "deno run --allow-read --allow-env --allow-net .tools/validate-content.ts",
+		"build:check": "deno task build && deno run --allow-read --allow-env .tools/check-build.ts",
+		"security:check": "deno run --allow-read --allow-env .tools/check-security.ts",
+		"markdownlint": "markdownlint-cli2 README.md 'docs/**/*.md' --config .config/.markdownlint-cli2.jsonc",
+		"test": "vitest run --config .config/vite.config.ts",
+		"e2e": "playwright test --config .config/playwright.config.ts",
+		"lighthouse": "deno run --allow-all npm:@lhci/cli@0.15.1 autorun --config .config/lighthouserc.json",
+		"duplication": "jscpd --config .config/.jscpd.json .",
+		"dead-code": "knip --config .config/knip.json"
+	},
+	"allowScripts": ["npm:@ast-grep/cli"]
+}

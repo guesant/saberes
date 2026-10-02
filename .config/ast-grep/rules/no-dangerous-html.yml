@@ -1,0 +1,6 @@
+id: no-dangerous-html
+language: Tsx
+severity: error
+message: Renderize Markdown editorial sanitizado; não use dangerouslySetInnerHTML.
+rule:
+    pattern: <$TAG dangerouslySetInnerHTML={$VALUE} />

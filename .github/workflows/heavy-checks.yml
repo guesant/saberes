@@ -1,0 +1,132 @@
+name: Heavy checks (manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: heavy-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  QUALITY_CI_IMAGE: portal-guesant-saberes-quality-ci:${{ github.sha }}
+  PLAYWRIGHT_IMAGE: portal-guesant-saberes-playwright:${{ github.sha }}
+  CACHE_FROM: type=gha,scope=portal-guesant-saberes-heavy-${{ github.ref_name }}
+  CACHE_TO: type=gha,mode=max,scope=portal-guesant-saberes-heavy-${{ github.ref_name }}
+
+jobs:
+  heavy-checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Configurar Buildx
+        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd7e4
+
+      - name: Construir toolchain, runtime e Playwright pelo Docker
+        run: docker buildx bake --file .container/docker-bake.hcl --load quality-ci runtime playwright
+
+      - name: Executar auditoria completa dentro do Docker
+        run: |
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE:/workspace" \
+            -v "$GITHUB_WORKSPACE/.cache/deno:/deno/cache" \
+            -w /workspace \
+            "$QUALITY_CI_IMAGE" \
+            bash -c '
+              deno install --frozen --node-modules-dir=auto
+              deno task heavy-checks
+              deno task build:check
+              deno task security:check
+              deno task supply-chain
+            '
+
+      - name: Executar E2E e acessibilidade dentro do Docker
+        run: |
+          docker network create portal-guesant-saberes-ci >/dev/null 2>&1 || true
+          docker run -d --rm \
+            --name portal-guesant-saberes-web-ci \
+            --network portal-guesant-saberes-ci \
+            "$QUALITY_CI_IMAGE" \
+            bash -c 'deno task build && python3 -m http.server 8080 --directory dist' >/dev/null
+          cleanup_e2e() {
+            docker rm -f portal-guesant-saberes-web-ci >/dev/null 2>&1 || true
+            docker network rm portal-guesant-saberes-ci >/dev/null 2>&1 || true
+          }
+          trap cleanup_e2e EXIT
+          docker run --rm \
+            --network portal-guesant-saberes-ci \
+            -v "$GITHUB_WORKSPACE:/workspace" \
+            -v "$GITHUB_WORKSPACE/.cache/deno:/deno/cache" \
+            -w /workspace \
+            -e PLAYWRIGHT_BASE_URL=http://portal-guesant-saberes-web-ci:8080 \
+            -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium \
+            "$PLAYWRIGHT_IMAGE" \
+            bash -c '
+              deno install --frozen --node-modules-dir=auto
+              for attempt in $(seq 1 30); do
+                curl -fsS "$PLAYWRIGHT_BASE_URL" >/dev/null && break
+                sleep 1
+              done
+              curl -fsS "$PLAYWRIGHT_BASE_URL" >/dev/null
+              deno task e2e
+              deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts
+            '
+
+      - name: Gerar relatórios pesados dentro do Docker
+        if: always()
+        run: |
+          docker network create portal-guesant-saberes-reports >/dev/null 2>&1 || true
+          docker run -d --rm \
+            --name portal-guesant-saberes-reports-web \
+            --network portal-guesant-saberes-reports \
+            --network-alias web \
+            "$QUALITY_CI_IMAGE" \
+            bash -c 'deno task build && python3 -m http.server 80 --directory dist' >/dev/null
+          cleanup_reports() {
+            docker rm -f portal-guesant-saberes-reports-web >/dev/null 2>&1 || true
+            docker network rm portal-guesant-saberes-reports >/dev/null 2>&1 || true
+          }
+          trap cleanup_reports EXIT
+          docker run --rm \
+            --network portal-guesant-saberes-reports \
+            -v "$GITHUB_WORKSPACE:/workspace" \
+            -v "$GITHUB_WORKSPACE/.cache/deno:/deno/cache" \
+            -w /workspace \
+            "$QUALITY_CI_IMAGE" \
+            bash -c '
+              deno install --frozen --node-modules-dir=auto
+              for attempt in $(seq 1 30); do
+                curl -fsS http://web/ >/dev/null && break
+                sleep 1
+              done
+              curl -fsS http://web/ >/dev/null
+              set +e
+              deno task lighthouse
+              lighthouse_status=$?
+              set -e
+              mkdir -p .cache
+              lizard -l typescript -C 5 -L 35 -a 3 packages | tee .cache/lizard.txt
+              exit "$lighthouse_status"
+            '
+
+      - name: Upload Lighthouse report
+        if: always()
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08
+        with:
+          name: lighthouse-report
+          path: .cache/lighthouse
+          if-no-files-found: ignore
+
+      - name: Upload complexity report
+        if: always()
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08
+        with:
+          name: typescript-complexity-report
+          path: .cache/lizard.txt
+          if-no-files-found: ignore

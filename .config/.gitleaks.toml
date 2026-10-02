@@ -1,0 +1,13 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public educational content and example configuration only"
+paths = [
+  '''packages/app/public/data/comvest\.sqlite$''',
+  '''\.env\.example$''',
+  '''/node_modules/''',
+  '''/\.deno/''',
+  '''/vendor/''',
+  '''/dist/'''
+]

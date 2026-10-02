@@ -1,0 +1,36 @@
+name: Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  QUALITY_CI_IMAGE: portal-guesant-saberes-quality-ci:${{ github.sha }}
+  CACHE_FROM: type=gha,scope=portal-guesant-saberes-quality
+  CACHE_TO: type=gha,mode=max,scope=portal-guesant-saberes-quality
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Configurar Buildx
+        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd7e4
+
+      - name: Construir toolchain com cache
+        run: docker buildx bake --file .container/docker-bake.hcl --load quality-ci
+
+      - name: Executar gates rápidos na imagem imutável
+        run: docker run --rm "$QUALITY_CI_IMAGE" deno task quality:check:fast
