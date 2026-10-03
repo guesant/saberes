@@ -4,6 +4,7 @@ Portal educacional local-first para vestibulares e aprendizagem estruturada, fei
 
 [![quality](https://img.shields.io/github/actions/workflow/status/guesant/saberes/quality.yml?branch=main&label=quality&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/quality.yml)
 [![deploy](https://img.shields.io/github/actions/workflow/status/guesant/saberes/deploy-pages.yml?branch=main&label=deploy&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/deploy-pages.yml)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/guesant/saberes/badge)](https://securityscorecards.dev/viewer/?uri=github.com/guesant/saberes)
 [![licença do código](https://img.shields.io/badge/c%C3%B3digo-The%20Unlicense-7c3aed?style=for-the-badge&labelColor=0b1120)](LICENSE)
 [![licença do conteúdo](https://img.shields.io/badge/conte%C3%BAdo-CC0%201.0-059669?style=for-the-badge&labelColor=0b1120)](LICENSE-CONTENT)
 

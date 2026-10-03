@@ -102,4 +102,4 @@ just e2e
 - O progresso local não é incluído no build.
 - Knip ignora contratos e stores locais que formam APIs públicas internas durante a migração gradual.
 - jscpd mantém um limite de duplicação de 10% enquanto o legado é absorvido; o limite deve ser reduzido após a migração.
-- Qlty, Scorecard, Lighthouse e Playwright permanecem auditorias complementares para a próxima etapa.
+- Qlty permanece como auditoria complementar. Scorecard, Lighthouse e Playwright são executados em workflows específicos e não fazem parte do fluxo rápido.
