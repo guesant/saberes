@@ -57,12 +57,12 @@ COPY .config/mise ./.config/mise
 RUN --mount=type=cache,id=portal-guesant-saberes-mise-bootstrap,target=/var/cache/mise-bootstrap \
     set -eux; \
     case "${TARGETARCH}" in \
-        amd64) mise_sha256="${MISE_SHA256_AMD64}" ;; \
-        arm64) mise_sha256="${MISE_SHA256_ARM64}" ;; \
+        amd64) mise_asset_arch="x64"; mise_sha256="${MISE_SHA256_AMD64}" ;; \
+        arm64) mise_asset_arch="arm64"; mise_sha256="${MISE_SHA256_ARM64}" ;; \
         *) echo "Arquitetura não suportada: ${TARGETARCH}" >&2; exit 1 ;; \
     esac; \
     curl --fail --silent --show-error --location --output /var/cache/mise-bootstrap/mise \
-        "https://github.com/jdx/mise/releases/download/v${MISE_VERSION}/mise-v${MISE_VERSION}-linux-${TARGETARCH}"; \
+        "https://github.com/jdx/mise/releases/download/v${MISE_VERSION}/mise-v${MISE_VERSION}-linux-${mise_asset_arch}"; \
     printf '%s  %s\n' "${mise_sha256}" /var/cache/mise-bootstrap/mise | sha256sum --check --status -; \
     install --mode 0755 /var/cache/mise-bootstrap/mise /usr/local/bin/mise; \
     mkdir --parents /opt/mise/shims /opt/mise/bin /var/cache/mise; \
