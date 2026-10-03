@@ -1,3 +1,222 @@
+import { dirname, resolve } from "node:path";
+
+const workspacePackagePaths = new Map([
+  ["@guesant/saberes-domain", "packages/pkg-domain"],
+  ["@guesant/saberes-application", "packages/pkg-application"],
+  ["@guesant/saberes-adapter-data-v1", "packages/pkg-adapter-data-v1"],
+  ["@guesant/saberes-adapter-graphology-v1", "packages/pkg-adapter-graphology-v1"],
+  ["@guesant/saberes-adapter-validation-v1", "packages/pkg-adapter-validation-v1"],
+  ["@guesant/saberes-ui", "packages/pkg-ui"],
+  ["@guesant/saberes-ui-content", "packages/pkg-ui-content"],
+  ["@guesant/saberes-app", "packages/app"],
+]);
+
+const applicationLayers = new Set([
+  "application",
+  "application-commands",
+  "application-queries",
+  "application-ports",
+]);
+
+const forbiddenApplicationImports = [
+  /^(?:react|react-dom)(?:\/|$)/,
+  /^@(?:mui|emotion)\//,
+  /^@tanstack\//,
+  /^(?:dexie|sql\.js|fake-indexeddb|idb)(?:\/|$)/,
+  /^(?:valibot|graphology|cytoscape|echarts|three|katex)(?:\/|$)/,
+  /^(?:react-markdown|rehype-|remark-)/,
+  /^(?:@fontsource|react-complex-tree)(?:\/|$)/,
+  /^(?:node:)?(?:window|document|navigator|indexeddb|localstorage)$/i,
+];
+
+const forbiddenDomainImports = [
+  ...forbiddenApplicationImports,
+  /^(?:@guesant\/saberes-(?:application|adapter|ui|app))(?:\/|$)/,
+  /^(?:@mui|@emotion|@tanstack)\//,
+];
+
+function normalizedFilename(filename) {
+  return filename.replaceAll("\\", "/");
+}
+
+function sourceLayer(filename) {
+  const normalized = normalizedFilename(filename);
+
+  if (normalized === "<input>.ts" || normalized.startsWith("<text")) {
+    return undefined;
+  }
+
+  if (/\/packages\/pkg-domain\/(?:src|tests)\//.test(normalized)) {
+    return "domain";
+  }
+
+  if (/\/packages\/pkg-application\/src\/commands(?:\/|$)/.test(normalized)) {
+    return "application-commands";
+  }
+
+  if (/\/packages\/pkg-application\/src\/queries(?:\/|$)/.test(normalized)) {
+    return "application-queries";
+  }
+
+  if (/\/packages\/pkg-application\/src\/ports(?:\/|$)/.test(normalized)) {
+    return "application-ports";
+  }
+
+  if (/\/packages\/pkg-application\/(?:src|tests)\//.test(normalized)) {
+    return "application";
+  }
+
+  if (/\/packages\/pkg-adapter-[^/]+\/(?:src|tests)\//.test(normalized)) {
+    return "adapter";
+  }
+
+  if (/\/packages\/pkg-ui-content\/(?:src|tests)\//.test(normalized)) {
+    return "ui-content";
+  }
+
+  if (/\/packages\/pkg-ui\/(?:src|tests)\//.test(normalized)) {
+    return "ui";
+  }
+
+  if (/\/packages\/app\/src\/composition\//.test(normalized)) {
+    return "app-composition";
+  }
+
+  if (/\/packages\/app\/(?:src|tests)\//.test(normalized)) {
+    return "app-presentation";
+  }
+
+  if (/\/packages\/pkg-utils\/(?:src|tests)\//.test(normalized)) {
+    return "utils";
+  }
+
+  if (/\/packages\/thedata\//.test(normalized)) {
+    return "data";
+  }
+
+  if (/(?:^|\/)\.tools\//.test(normalized)) {
+    return "tooling";
+  }
+
+  if (/(?:^|\/)\.local\/operator\//.test(normalized)) {
+    return "tooling";
+  }
+
+  if (/(?:^|\/)\.config\//.test(normalized)) {
+    return "config";
+  }
+
+  return undefined;
+}
+
+function packagePathFromSpecifier(source) {
+  for (const [specifier, packagePath] of workspacePackagePaths) {
+    if (source === specifier || source.startsWith(`${specifier}/`)) {
+      return packagePath;
+    }
+  }
+
+  return undefined;
+}
+
+function isWorkspaceModuleSource(source) {
+  return Boolean(packagePathFromSpecifier(source)) || source.startsWith("@guesant/saberes-");
+}
+
+function isTestFilename(filename) {
+  return /(?:\.test|\.spec)\.(?:js|jsx|mjs|ts|tsx)$/.test(filename);
+}
+
+function isExternalModuleSource(source) {
+  return !source.startsWith(".") && !isWorkspaceModuleSource(source);
+}
+
+function relativeTargetFilename(filename, source) {
+  if (!source.startsWith(".")) {
+    return undefined;
+  }
+
+  return resolve(dirname(filename), source).replaceAll("\\", "/");
+}
+
+function targetLayer(filename, source) {
+  for (const [specifier, packagePath] of workspacePackagePaths) {
+    if (source === specifier || source.startsWith(`${specifier}/`)) {
+      const internalPath = source.slice(specifier.length).replace(/^\//, "");
+
+      const targetPath = internalPath
+        ? resolve(process.cwd(), packagePath, "src", internalPath)
+        : resolve(process.cwd(), packagePath, "src/index.ts");
+
+      return sourceLayer(targetPath);
+    }
+  }
+
+  if (source.startsWith("@guesant/saberes-")) {
+    return "unknown-workspace";
+  }
+
+  if (source.startsWith(".")) {
+    return sourceLayer(relativeTargetFilename(filename, source));
+  }
+
+  return undefined;
+}
+
+function staticModuleSource(node) {
+  if (node?.type === "Literal" && typeof node.value === "string") {
+    return node.value;
+  }
+
+  if (node?.type === "StringLiteral") {
+    return node.value;
+  }
+
+  return undefined;
+}
+
+function moduleReferenceVisitors(context, visit) {
+  const filename = normalizedFilename(context.getFilename());
+
+  function inspect(node, sourceNode) {
+    const source = staticModuleSource(sourceNode);
+
+    if (source) {
+      visit({
+        context,
+        filename,
+        node,
+        source,
+        layer: sourceLayer(filename),
+        target: targetLayer(filename, source),
+      });
+    }
+  }
+
+  return {
+    ImportDeclaration(node) {
+      inspect(node, node.source);
+    },
+    ExportNamedDeclaration(node) {
+      inspect(node, node.source);
+    },
+    ExportAllDeclaration(node) {
+      inspect(node, node.source);
+    },
+    ImportExpression(node) {
+      inspect(node, node.source);
+    },
+    CallExpression(node) {
+      if (node.callee.type === "Identifier" && node.callee.name === "require") {
+        inspect(node, node.arguments[0]);
+      }
+    },
+    TSImportEqualsDeclaration(node) {
+      inspect(node, node.moduleReference);
+    },
+  };
+}
+
 function isJsx(node) {
   return Boolean(node && (node.type === "JSXElement" || node.type === "JSXFragment"));
 }
@@ -1714,6 +1933,454 @@ const cqrsFileContract = {
   },
 };
 
+const allowedLayerDependencies = {
+  domain: new Set(["domain"]),
+  application: new Set([
+    "application",
+    "application-commands",
+    "application-queries",
+    "application-ports",
+    "domain",
+  ]),
+  "application-commands": new Set([
+    "application",
+    "application-commands",
+    "application-ports",
+    "domain",
+  ]),
+  "application-queries": new Set([
+    "application",
+    "application-queries",
+    "application-ports",
+    "domain",
+  ]),
+  "application-ports": new Set(["application", "application-ports", "domain"]),
+  adapter: new Set(["adapter", "application", "domain"]),
+  ui: new Set(["ui"]),
+  "ui-content": new Set(["ui-content", "ui", "application"]),
+  "app-composition": new Set([
+    "app-composition",
+    "app-presentation",
+    "application",
+    "application-commands",
+    "application-queries",
+    "application-ports",
+    "adapter",
+    "ui",
+    "ui-content",
+  ]),
+  "app-presentation": new Set([
+    "app-composition",
+    "app-presentation",
+    "application",
+    "application-commands",
+    "application-queries",
+    "ui",
+    "ui-content",
+  ]),
+  utils: new Set(["utils"]),
+  tooling: new Set(["tooling"]),
+  config: new Set(["config"]),
+  data: new Set(["data"]),
+};
+
+function isDisallowedLayerDependency(origin, target) {
+  if (!origin || !target || target === "unknown-workspace") {
+    return false;
+  }
+
+  return !allowedLayerDependencies[origin]?.has(target);
+}
+
+const layerBoundaries = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      unknownWorkspace:
+        "Workspace dependency {{source}} does not resolve to a declared package layer.",
+      forbidden: "{{origin}} cannot depend on {{target}} through {{source}}.",
+    },
+  },
+  create(context) {
+    return moduleReferenceVisitors(
+      context,
+      ({ context: ruleContext, node, source, layer, target }) => {
+        if (!layer || (!target && !source.startsWith("."))) {
+          return;
+        }
+
+        if (target === "unknown-workspace") {
+          ruleContext.report({ node, messageId: "unknownWorkspace", data: { source } });
+
+          return;
+        }
+
+        if (isDisallowedLayerDependency(layer, target)) {
+          ruleContext.report({
+            node,
+            messageId: "forbidden",
+            data: { origin: layer, target, source },
+          });
+        }
+      },
+    );
+  },
+};
+
+function reportForbiddenImport({ context, forbiddenImports, node, source }) {
+  if (forbiddenImports.some((pattern) => pattern.test(source))) {
+    context.report({ node, messageId: "forbidden", data: { source } });
+  }
+}
+
+function purityRule({ name, message, layers, forbiddenImports, allowExternal }) {
+  return {
+    meta: {
+      type: "problem",
+      schema: [],
+      messages: { forbidden: message },
+    },
+    create(context) {
+      return moduleReferenceVisitors(context, ({ node, source, layer, filename }) => {
+        if (layers.has(layer)) {
+          if (isExternalModuleSource(source) && !allowExternal(source, filename)) {
+            context.report({ node, messageId: "forbidden", data: { source } });
+
+            return;
+          }
+
+          reportForbiddenImport({ context, forbiddenImports, node, source });
+        }
+      });
+    },
+    name,
+  };
+}
+
+const applicationPurity = purityRule({
+  name: "application-purity",
+  layers: applicationLayers,
+  forbiddenImports: forbiddenApplicationImports,
+  allowExternal: (source, filename) =>
+    isTestFilename(filename) && /^(?:vitest|node:test)$/.test(source),
+  message:
+    "Application code must remain technology-independent; move presentation, persistence and browser dependencies behind ports and adapters.",
+});
+
+const domainPurity = purityRule({
+  name: "domain-purity",
+  layers: new Set(["domain"]),
+  forbiddenImports: forbiddenDomainImports,
+  allowExternal: (source, filename) =>
+    /^date-fns(?:\/|$)/.test(source) ||
+    (isTestFilename(filename) && /^(?:vitest|node:test)$/.test(source)),
+  message:
+    "Domain code must remain pure and independent of presentation, persistence, browser APIs and infrastructure.",
+});
+
+const noDomainInPresentation = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      forbidden:
+        "Presentation must consume application read models and contracts instead of importing the domain directly.",
+    },
+  },
+  create(context) {
+    return moduleReferenceVisitors(context, ({ node, target, layer }) => {
+      if (["app-presentation", "ui-content"].includes(layer) && target === "domain") {
+        context.report({ node, messageId: "forbidden" });
+      }
+    });
+  },
+};
+
+const noAdapterCrossImport = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      forbidden:
+        "An adapter cannot import another adapter implementation; depend on an application port instead.",
+    },
+  },
+  create(context) {
+    const filename = normalizedFilename(context.getFilename());
+
+    const originAdapter = filename.match(/\/packages\/(pkg-adapter-[^/]+)\//)?.[1];
+
+    if (!originAdapter) {
+      return {};
+    }
+
+    return moduleReferenceVisitors(context, ({ node, source }) => {
+      const targetPackage = packagePathFromSpecifier(source)?.split("/").at(1);
+
+      if (
+        targetPackage &&
+        targetPackage !== originAdapter &&
+        targetPackage.startsWith("pkg-adapter-")
+      ) {
+        context.report({ node, messageId: "forbidden" });
+
+        return;
+      }
+
+      if (source.startsWith(".")) {
+        const target = relativeTargetFilename(filename, source);
+
+        const targetAdapter = target.match(/\/packages\/(pkg-adapter-[^/]+)\//)?.[1];
+
+        if (targetAdapter && targetAdapter !== originAdapter) {
+          context.report({ node, messageId: "forbidden" });
+        }
+      }
+    });
+  },
+};
+
+const compositionRoot = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      import: "Concrete adapters may only be imported by packages/app/src/composition.",
+      instantiate:
+        "Concrete adapter classes may only be instantiated by packages/app/src/composition.",
+    },
+  },
+  create(context) {
+    const filename = normalizedFilename(context.getFilename());
+
+    const isComposition = sourceLayer(filename) === "app-composition";
+
+    const importedAdapters = new Set();
+
+    return {
+      ...moduleReferenceVisitors(context, ({ node, target }) => {
+        if (target !== "adapter") {
+          return;
+        }
+
+        if (node.type === "ImportDeclaration") {
+          for (const specifier of node.specifiers) {
+            importedAdapters.add(specifier.local.name);
+          }
+        }
+
+        if (!isComposition) {
+          context.report({ node, messageId: "import" });
+        }
+      }),
+      NewExpression(node) {
+        if (isComposition || node.callee.type !== "Identifier") {
+          return;
+        }
+
+        if (importedAdapters.has(node.callee.name)) {
+          context.report({ node, messageId: "instantiate" });
+        }
+      },
+    };
+  },
+};
+
+const cqrsLayerBoundaries = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      commandQuery: "Commands and queries must not depend on each other.",
+      portHandler:
+        "Ports define application contracts and must not depend on handlers or concrete adapters.",
+      presentationPort:
+        "Presentation must use application queries and commands instead of importing ports directly.",
+    },
+  },
+  create(context) {
+    const origin = sourceLayer(context.getFilename());
+
+    return moduleReferenceVisitors(context, ({ node, target }) => {
+      if (origin === "application-commands" && target === "application-queries") {
+        context.report({ node, messageId: "commandQuery" });
+      }
+
+      if (origin === "application-queries" && target === "application-commands") {
+        context.report({ node, messageId: "commandQuery" });
+      }
+
+      if (
+        origin === "application-ports" &&
+        [
+          "application-commands",
+          "application-queries",
+          "adapter",
+          "app-presentation",
+          "ui",
+          "ui-content",
+        ].includes(target)
+      ) {
+        context.report({ node, messageId: "portHandler" });
+      }
+
+      if (origin === "app-presentation" && target === "application-ports") {
+        context.report({ node, messageId: "presentationPort" });
+      }
+    });
+  },
+};
+
+const mvvmLayerBoundaries = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      viewModelComponent:
+        "View models coordinate application state and must not import or render presentation components.",
+      infrastructurePresentation:
+        "Domain, application and adapters must not depend on presentation components or hooks.",
+    },
+  },
+  create(context) {
+    const filename = normalizedFilename(context.getFilename());
+
+    const origin = sourceLayer(filename);
+
+    const isViewModel = /(?:\.view-model|\.view-model\.hook)\.(?:ts|tsx)$/.test(filename);
+
+    return {
+      ...moduleReferenceVisitors(context, ({ node, source }) => {
+        if (
+          isViewModel &&
+          source.startsWith(".") &&
+          /(?:\.component|\.view)(?:\.(?:ts|tsx))?$/.test(source)
+        ) {
+          context.report({ node, messageId: "viewModelComponent" });
+        }
+
+        if (
+          [
+            "domain",
+            "application",
+            "application-commands",
+            "application-queries",
+            "application-ports",
+            "adapter",
+          ].includes(origin) &&
+          source.startsWith(".") &&
+          /(?:\.component|\.view|\.hook)(?:\.(?:ts|tsx))?$/.test(source)
+        ) {
+          context.report({ node, messageId: "infrastructurePresentation" });
+        }
+      }),
+      JSXElement(node) {
+        if (isViewModel) {
+          context.report({ node, messageId: "viewModelComponent" });
+        }
+      },
+      JSXFragment(node) {
+        if (isViewModel) {
+          context.report({ node, messageId: "viewModelComponent" });
+        }
+      },
+    };
+  },
+};
+
+const portContract = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      interface: "A .port.ts file must declare exactly one explicit interface ending in Port.",
+      execute: "Every port must expose execute().",
+      implementation: "A port file may declare a contract only; move implementation to an adapter.",
+    },
+  },
+  create(context) {
+    const filename = normalizedFilename(context.getFilename());
+
+    if (!/\/packages\/pkg-application\/src\/ports\/[^/]+\.port\.ts$/.test(filename)) {
+      return {};
+    }
+
+    const interfaces = [];
+
+    return {
+      TSInterfaceDeclaration(node) {
+        interfaces.push(node);
+      },
+      ClassDeclaration(node) {
+        context.report({ node, messageId: "implementation" });
+      },
+      FunctionDeclaration(node) {
+        context.report({ node, messageId: "implementation" });
+      },
+      "Program:exit": function (node) {
+        if (interfaces.length !== 1 || !interfaces[0].id.name.endsWith("Port")) {
+          context.report({ node, messageId: "interface" });
+
+          return;
+        }
+
+        const hasExecute = interfaces[0].body.body.some(
+          (member) =>
+            (member.type === "TSMethodSignature" || member.type === "TSPropertySignature") &&
+            member.key.type === "Identifier" &&
+            member.key.name === "execute",
+        );
+
+        if (!hasExecute) {
+          context.report({ node: interfaces[0], messageId: "execute" });
+        }
+      },
+    };
+  },
+};
+
+const adapterContract = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      class: "An adapter file must declare exactly one class ending in Adapter.",
+      port: "An adapter must implement exactly one application port.",
+    },
+  },
+  create(context) {
+    const filename = normalizedFilename(context.getFilename());
+
+    if (!/\/packages\/pkg-adapter-[^/]+\/src\/.*\.adapter\.ts$/.test(filename)) {
+      return {};
+    }
+
+    const classes = [];
+
+    return {
+      ClassDeclaration(node) {
+        classes.push(node);
+      },
+      "Program:exit": function (node) {
+        if (classes.length !== 1 || !classes[0].id?.name.endsWith("Adapter")) {
+          context.report({ node, messageId: "class" });
+
+          return;
+        }
+
+        const implementedPorts = classes[0].implements?.filter(
+          (item) => item.expression?.type === "Identifier" && item.expression.name.endsWith("Port"),
+        );
+
+        if (implementedPorts?.length !== 1) {
+          context.report({ node: classes[0], messageId: "port" });
+        }
+      },
+    };
+  },
+};
+
 export default {
   meta: { name: "portal-guesant-saberes-architecture", version: "1.0.0" },
   rules: {
@@ -1748,5 +2415,15 @@ export default {
     "padding-around-type-statements": paddingAroundTypeStatements,
     "purposeful-naming": purposefulNaming,
     "utils-module-boundary": utilsModuleBoundary,
+    "layer-boundaries": layerBoundaries,
+    "composition-root": compositionRoot,
+    "no-domain-in-presentation": noDomainInPresentation,
+    "no-adapter-cross-import": noAdapterCrossImport,
+    "application-purity": applicationPurity,
+    "domain-purity": domainPurity,
+    "cqrs-layer-boundaries": cqrsLayerBoundaries,
+    "mvvm-layer-boundaries": mvvmLayerBoundaries,
+    "port-contract": portContract,
+    "adapter-contract": adapterContract,
   },
 };

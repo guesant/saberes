@@ -62,6 +62,16 @@ const architectureRules = {
   "architecture/no-parent-reexports": "error",
   "architecture/execute-single-parameter": "error",
   "architecture/no-sql-outside-repository": "error",
+  "architecture/layer-boundaries": "error",
+  "architecture/composition-root": "error",
+  "architecture/no-domain-in-presentation": "error",
+  "architecture/no-adapter-cross-import": "error",
+  "architecture/application-purity": "error",
+  "architecture/domain-purity": "error",
+  "architecture/cqrs-layer-boundaries": "error",
+  "architecture/mvvm-layer-boundaries": "error",
+  "architecture/port-contract": "error",
+  "architecture/adapter-contract": "error",
 };
 
 const safetyRules = {
@@ -164,32 +174,179 @@ export default [
     settings: {
       react: { version: "19.1" },
       "boundaries/root-path": ".",
+      "boundaries/dependency-nodes": ["import", "require", "dynamic-import", "export"],
+      "import/resolver": {
+        node: {
+          extensions: [".js", ".jsx", ".mjs", ".ts", ".tsx"],
+          moduleDirectory: ["node_modules", "."],
+        },
+      },
+      "boundaries/elements": [
+        { type: "domain", pattern: "packages/pkg-domain", partialMatch: false },
+        {
+          type: "application-commands",
+          pattern: "packages/pkg-application/src/commands",
+          partialMatch: false,
+        },
+        {
+          type: "application-queries",
+          pattern: "packages/pkg-application/src/queries",
+          partialMatch: false,
+        },
+        {
+          type: "application-ports",
+          pattern: "packages/pkg-application/src/ports",
+          partialMatch: false,
+        },
+        { type: "application", pattern: "packages/pkg-application", partialMatch: false },
+        { type: "adapter", pattern: "packages/pkg-adapter-*", partialMatch: false },
+        { type: "ui-content", pattern: "packages/pkg-ui-content", partialMatch: false },
+        { type: "ui", pattern: "packages/pkg-ui", partialMatch: false },
+        { type: "app-composition", pattern: "packages/app/src/composition", partialMatch: false },
+        { type: "app-presentation", pattern: "packages/app", partialMatch: false },
+        { type: "utils", pattern: "packages/pkg-utils", partialMatch: false },
+        { type: "data", pattern: "packages/thedata", partialMatch: false },
+      ],
       "boundaries/files": [
-        { category: "domain", pattern: "packages/pkg-domain/**" },
-        { category: "application", pattern: "packages/pkg-application/**" },
-        { category: "adapter", pattern: "packages/pkg-adapter-*/**" },
-        { category: "utils", pattern: "packages/pkg-utils/**" },
-        { category: "data", pattern: "packages/thedata/**" },
-        { category: "ui", pattern: "packages/pkg-ui*/**" },
-        { category: "feature", pattern: "packages/app/src/features/**" },
-        { category: "app", pattern: "packages/app/**" },
         { category: "tooling", pattern: ".tools/**" },
+        { category: "tooling", pattern: ".local/operator/**" },
         { category: "config", pattern: ".config/**" },
       ],
     },
     rules: {
       ...safetyRules,
       "import-format/no-empty-line-between-imports": "error",
-      "boundaries/dependencies": ["error", { default: "allow" }],
-      "boundaries/no-unknown-files": "off",
-      "boundaries/no-unknown-dependencies": "off",
-      "boundaries/no-ignored-dependencies": "off",
+      "boundaries/dependencies": [
+        "error",
+        {
+          default: "disallow",
+          policies: [
+            { allow: [{ to: { module: { origin: ["external", "core"] } } }] },
+            {
+              from: { element: { type: "domain" } },
+              allow: [{ to: { element: { type: "domain" } } }],
+            },
+            {
+              from: { element: { type: "application" } },
+              allow: [
+                {
+                  to: {
+                    element: {
+                      type: [
+                        "application",
+                        "application-commands",
+                        "application-queries",
+                        "application-ports",
+                        "domain",
+                      ],
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              from: { element: { type: "application-commands" } },
+              allow: [
+                {
+                  to: {
+                    element: {
+                      type: ["application", "application-commands", "application-ports", "domain"],
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              from: { element: { type: "application-queries" } },
+              allow: [
+                {
+                  to: {
+                    element: {
+                      type: ["application", "application-queries", "application-ports", "domain"],
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              from: { element: { type: "application-ports" } },
+              allow: [
+                { to: { element: { type: ["application", "application-ports", "domain"] } } },
+              ],
+            },
+            {
+              from: { element: { type: "adapter" } },
+              allow: [{ to: { element: { type: ["adapter", "application", "domain"] } } }],
+            },
+            { from: { element: { type: "ui" } }, allow: [{ to: { element: { type: "ui" } } }] },
+            {
+              from: { element: { type: "ui-content" } },
+              allow: [{ to: { element: { type: ["ui-content", "ui", "application"] } } }],
+            },
+            {
+              from: { element: { type: "app-composition" } },
+              allow: [
+                {
+                  to: {
+                    element: {
+                      type: [
+                        "app-composition",
+                        "app-presentation",
+                        "application",
+                        "application-commands",
+                        "application-queries",
+                        "application-ports",
+                        "adapter",
+                        "ui",
+                        "ui-content",
+                      ],
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              from: { element: { type: "app-presentation" } },
+              allow: [
+                {
+                  to: {
+                    element: {
+                      type: [
+                        "app-composition",
+                        "app-presentation",
+                        "application",
+                        "application-commands",
+                        "application-queries",
+                        "ui",
+                        "ui-content",
+                      ],
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              from: { element: { type: "utils" } },
+              allow: [{ to: { element: { type: "utils" } } }],
+            },
+            {
+              from: { file: { categories: ["tooling", "config", "data"] } },
+              allow: [{ to: { file: { categories: ["tooling", "config", "data"] } } }],
+            },
+          ],
+          checkAllOrigins: true,
+          checkUnknownLocals: true,
+          checkInternals: true,
+        },
+      ],
+      "boundaries/no-unknown-files": "error",
+      "boundaries/no-unknown-dependencies": ["error", { require: "any" }],
+      "boundaries/no-ignored-dependencies": "error",
     },
   },
   {
     files: ["**/*.ts", "**/*.tsx"],
     rules: {
-      "import/extensions": "off",
       "import/no-unresolved": "off",
       "no-undef": "off",
       "no-unused-vars": "off",

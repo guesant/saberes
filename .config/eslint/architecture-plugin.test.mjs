@@ -542,3 +542,242 @@ test("purposeful-naming enforces names that match the symbol responsibility", ()
     }),
   );
 });
+
+test("layer-boundaries enforces the dependency direction across packages and import forms", () => {
+  assert.equal(
+    verify(
+      'import type { Course } from "@guesant/saberes-domain";',
+      "layer-boundaries",
+      "packages/pkg-application/src/queries/get-course.query.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      'import type { Course } from "@guesant/saberes-domain";',
+      "layer-boundaries",
+      "packages/app/src/features/catalog/catalog.component.tsx",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'export * from "@guesant/saberes-adapter-data-v1";',
+      "layer-boundaries",
+      "packages/app/src/features/catalog/catalog.component.tsx",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'const load = () => import("@guesant/saberes-domain");',
+      "layer-boundaries",
+      "packages/app/src/features/catalog/catalog.component.tsx",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'const load = () => import("@guesant/saberes-domain");',
+      "layer-boundaries",
+      "packages/pkg-ui-content/src/content-renderer.tsx",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'const adapter = require("@guesant/saberes-adapter-data-v1");',
+      "layer-boundaries",
+      "packages/pkg-application/src/application.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'import Adapter from "@guesant/saberes-adapter-data-v1";',
+      "layer-boundaries",
+      "packages/app/src/composition/create-application.ts",
+    ).length,
+    0,
+  );
+});
+
+test("layer-boundaries accepts and rejects the declared package matrix", () => {
+  const allowed = [
+    ["packages/pkg-domain/src/value.ts", "@guesant/saberes-domain"],
+    ["packages/pkg-application/src/application.ts", "@guesant/saberes-domain"],
+    [
+      "packages/pkg-application/src/commands/load.command.ts",
+      "@guesant/saberes-application/models",
+    ],
+    ["packages/pkg-application/src/queries/load.query.ts", "@guesant/saberes-application/ports"],
+    ["packages/pkg-application/src/ports/load.port.ts", "@guesant/saberes-domain"],
+    ["packages/pkg-adapter-data-v1/src/load.adapter.ts", "@guesant/saberes-application"],
+    ["packages/pkg-ui/src/button.component.tsx", "@guesant/saberes-ui"],
+    ["packages/pkg-ui-content/src/content.component.tsx", "@guesant/saberes-ui"],
+    ["packages/app/src/composition/create.ts", "@guesant/saberes-adapter-data-v1"],
+    ["packages/app/src/features/catalog/catalog.component.tsx", "@guesant/saberes-ui"],
+  ];
+
+  for (const [filename, source] of allowed) {
+    assert.equal(verify(`import value from "${source}";`, "layer-boundaries", filename).length, 0);
+  }
+
+  const forbidden = [
+    ["packages/pkg-domain/src/value.ts", "@guesant/saberes-application"],
+    ["packages/pkg-application/src/application.ts", "@guesant/saberes-adapter-data-v1"],
+    [
+      "packages/pkg-application/src/commands/load.command.ts",
+      "@guesant/saberes-application/queries",
+    ],
+    ["packages/pkg-application/src/queries/load.query.ts", "@guesant/saberes-application/commands"],
+    ["packages/pkg-application/src/ports/load.port.ts", "@guesant/saberes-adapter-data-v1"],
+    ["packages/pkg-ui/src/button.component.tsx", "@guesant/saberes-application"],
+    ["packages/pkg-ui-content/src/content.component.tsx", "@guesant/saberes-domain"],
+    ["packages/app/src/features/catalog/catalog.component.tsx", "@guesant/saberes-domain"],
+    ["packages/app/src/features/catalog/catalog.component.tsx", "@guesant/saberes-adapter-data-v1"],
+  ];
+
+  for (const [filename, source] of forbidden) {
+    assert.equal(
+      verify(`import value from "${source}";`, "layer-boundaries", filename).length,
+      1,
+      `${filename} must reject ${source}`,
+    );
+  }
+});
+
+test("purity rules reject technology imports in domain and application", () => {
+  assert.equal(
+    verify('import React from "react";', "domain-purity", "packages/pkg-domain/src/domain.ts")
+      .length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'const database = require("dexie");',
+      "application-purity",
+      "packages/pkg-application/src/application.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'import { format } from "date-fns";',
+      "domain-purity",
+      "packages/pkg-domain/src/domain.ts",
+    ).length,
+    0,
+  );
+});
+
+test("composition and adapter rules isolate concrete implementations", () => {
+  assert.equal(
+    verify(
+      'import { SqlJsGetCourseAdapter } from "@guesant/saberes-adapter-data-v1"; new SqlJsGetCourseAdapter();',
+      "composition-root",
+      "packages/app/src/composition/create-application.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      'import { SqlJsGetCourseAdapter } from "@guesant/saberes-adapter-data-v1"; new SqlJsGetCourseAdapter();',
+      "composition-root",
+      "packages/app/src/features/catalog/catalog.component.tsx",
+    ).length,
+    2,
+  );
+
+  assert.equal(
+    verify(
+      'import { GraphologyBuildKnowledgeGraphAdapter } from "@guesant/saberes-adapter-graphology-v1";',
+      "no-adapter-cross-import",
+      "packages/pkg-adapter-data-v1/src/adapters/content.adapter.ts",
+    ).length,
+    1,
+  );
+});
+
+test("CQRS, MVVM, port and adapter rules enforce their file contracts", () => {
+  assert.equal(
+    verify(
+      'import type { FindCourseQuery } from "../queries/find-course.query";',
+      "cqrs-layer-boundaries",
+      "packages/pkg-application/src/commands/load-course.command.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'import type { SaveCourseCommand } from "../commands/save-course.command";',
+      "cqrs-layer-boundaries",
+      "packages/pkg-application/src/queries/list-courses.query.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'import type { LoadCourseHandler } from "../commands/load-course.handler";',
+      "cqrs-layer-boundaries",
+      "packages/pkg-application/src/ports/load-course.port.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'import Card from "../components/card.component";',
+      "mvvm-layer-boundaries",
+      "packages/app/src/features/catalog/catalog.view-model.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "export interface LoadCoursePort { execute(input: string): Promise<string>; }",
+      "port-contract",
+      "packages/pkg-application/src/ports/load-course.port.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export interface LoadCourse { load(input: string): Promise<string>; }",
+      "port-contract",
+      "packages/pkg-application/src/ports/load-course.port.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "export class LoadCourseAdapter implements LoadCoursePort { execute(input: string) { return input; } }",
+      "adapter-contract",
+      "packages/pkg-adapter-data-v1/src/load-course.adapter.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export class LoadCourseAdapter implements LoadCoursePort, OtherPort { execute(input: string) { return input; } }",
+      "adapter-contract",
+      "packages/pkg-adapter-data-v1/src/load-course.adapter.ts",
+    ).length,
+    1,
+  );
+});
