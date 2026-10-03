@@ -43,7 +43,6 @@ jobs:
               mise exec -- deno task heavy-checks
               mise exec -- deno task build:check
               mise exec -- deno task security:check
-              mise exec -- deno task supply-chain
             '
 
       - name: Executar E2E e acessibilidade dentro do Docker

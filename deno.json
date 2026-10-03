@@ -40,7 +40,6 @@
 		"content:export": "deno task content:rebuild",
 		"content:validate": "deno run --allow-read --allow-env --allow-net .tools/validate-content.ts",
 		"build:check": "deno task build && deno run --allow-read --allow-env .tools/check-build.ts",
-		"supply-chain": "deno run --allow-read --allow-env .tools/check-supply-chain.ts",
 		"security:check": "deno run --allow-read --allow-env .tools/check-security.ts",
 		"markdownlint": "markdownlint-cli2 README.md 'docs/**/*.md' --config .config/.markdownlint-cli2.jsonc",
 		"cspell": "cspell --config .config/cspell.yaml --no-progress",

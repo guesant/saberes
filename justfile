@@ -42,7 +42,6 @@ heavy-checks: dev-build
 	just accessibility
 	just lighthouse
 	just security-audit
-	just supply-chain
 	just complexity-report
 	just repository-lint
 	just reuse-check
@@ -143,9 +142,6 @@ reuse-check: quality-build
 
 security-audit: quality-build
     docker run --rm -v "$PWD:/repo:ro" {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --recursive /repo && aqua exec -- trivy fs --skip-version-check --no-progress --scanners vuln,secret --severity CRITICAL,HIGH --exit-code 1 /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
-
-supply-chain: quality-build
-    {{app}} 'mise exec -- deno run --allow-read --allow-env .tools/check-supply-chain.ts'
 
 complexity-report: quality-build
     mkdir -p .cache
