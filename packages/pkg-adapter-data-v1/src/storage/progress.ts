@@ -2,7 +2,7 @@ import Dexie, { type Table } from "dexie";
 import {
     ReviewState as ReviewStateEnum,
     ReviewTargetType as ReviewTargetTypeEnum,
-} from "@guesant/saberes-core";
+} from "@guesant/saberes-domain";
 import type {
     DiagnosisCode,
     DiagnosisConfidence,
@@ -10,7 +10,7 @@ import type {
     PedagogicalAction,
     ReviewState,
     ReviewTargetType,
-} from "@guesant/saberes-core";
+} from "@guesant/saberes-domain";
 import {
     type BaseIssue,
     type BaseSchema,
@@ -41,7 +41,7 @@ export type {
     PedagogicalAction,
     ReviewState,
     ReviewTargetType,
-} from "@guesant/saberes-core";
+} from "@guesant/saberes-domain";
 
 export interface Attempt {
     id?: string;
@@ -56,6 +56,7 @@ export interface Attempt {
     source?: string;
     answeredAt?: string;
     diagnosis?: DiagnosisCode;
+    [key: string]: unknown;
 }
 
 export interface ReviewTarget {

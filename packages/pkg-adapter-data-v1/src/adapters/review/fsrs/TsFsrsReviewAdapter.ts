@@ -1,12 +1,13 @@
-import type { ReviewTargetRecord, ReviewPreview, ReviewSchedulerPort } from "@guesant/saberes-core";
-import { type FsrsRating, previewReview, scheduleReview } from "../../../study/services";
+import type { ReviewTarget, ReviewSchedulerPort } from "@guesant/saberes-application";
+import type { FsrsRating } from "@guesant/saberes-domain";
+import { previewReview, scheduleReview } from "../../../study/services";
 
 export class TsFsrsReviewAdapter implements ReviewSchedulerPort {
-    schedule(target: ReviewTargetRecord, rating: FsrsRating, now: Date) {
-        return scheduleReview(target as never, rating, now) as ReviewTargetRecord;
+    schedule(target: ReviewTarget, rating: FsrsRating, now = new Date()) {
+        return scheduleReview(target as never, rating, now) as ReviewTarget;
     }
 
-    preview(target: ReviewTargetRecord, now: Date): ReviewPreview {
+    preview(target: ReviewTarget, now = new Date()) {
         return previewReview(target as never, now);
     }
 }

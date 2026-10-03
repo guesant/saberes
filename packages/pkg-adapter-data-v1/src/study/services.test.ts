@@ -4,7 +4,7 @@ import {
     FsrsRating,
     PedagogicalAction,
     ReviewTargetType,
-} from "@guesant/saberes-core";
+} from "@guesant/saberes-domain";
 import {
     achievementDefinitions,
     actionForDiagnosis,

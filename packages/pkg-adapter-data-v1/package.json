@@ -5,7 +5,8 @@
     "license": "Unlicense",
     "type": "module",
     "dependencies": {
-        "@guesant/saberes-core": "workspace:*",
+        "@guesant/saberes-application": "workspace:*",
+        "@guesant/saberes-domain": "workspace:*",
         "date-fns": "^4.1.0",
         "dexie": "^4.2.1",
         "sql.js": "^1.13.0",

@@ -6,7 +6,8 @@
     "type": "module",
     "dependencies": {
         "@guesant/saberes-adapter-data-v1": "workspace:*",
-        "@guesant/saberes-core": "workspace:*",
+        "@guesant/saberes-application": "workspace:*",
+        "@guesant/saberes-domain": "workspace:*",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.0",
         "@fontsource/roboto-slab": "^5.2.6",

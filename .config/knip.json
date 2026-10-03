@@ -10,7 +10,8 @@
         ".config/vite.config.ts",
         ".tools/**/*.ts",
         "packages/app/src/**/*.{ts,tsx}",
-        "packages/pkg-core/src/**/*.{ts,tsx}",
+        "packages/pkg-domain/src/**/*.{ts,tsx}",
+        "packages/pkg-application/src/**/*.{ts,tsx}",
         "packages/pkg-adapter-data-v1/src/**/*.{ts,tsx}"
     ],
     "ignore": [

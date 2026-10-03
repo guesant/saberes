@@ -1,70 +1,81 @@
-import type {
-    AttemptRecord,
-    DiagnosisRecord,
-    LessonProgressRecord,
-    PlanProgressRecord,
-    ReviewTargetRecord,
-} from "@guesant/saberes-core";
-import type { ProgressPort } from "@guesant/saberes-core";
+import type { ProgressPort } from "@guesant/saberes-application";
+import type { DiagnosisRecord } from "@guesant/saberes-domain";
 import {
     type Attempt,
     type AttemptDiagnosis,
+    type ReviewTarget,
+    clearProgress,
     enrollCourse,
+    getSession,
+    getSetting,
+    getStreak,
+    listAchievements,
     listAttempts,
+    listBookmarks,
+    listDailyChallenges,
+    listDiagnoses,
+    listEnrollments,
     listLessonProgress,
     listPlanProgress,
+    listReviewItems,
     listReviewTargets,
-    type ReviewTarget,
+    listTopicMastery,
+    saveAchievement,
     saveAttempt,
     saveBookmark,
+    saveDailyChallenge,
     saveDiagnosis,
     saveLessonProgress,
     savePlanProgress,
+    saveReviewItem,
     saveReviewTarget,
+    saveSession,
+    saveSetting,
+    saveStreak,
 } from "../../../storage/progress";
 
 export class DexieProgressAdapter implements ProgressPort {
     async listAttempts() {
-        return (await listAttempts()) as AttemptRecord[];
+        return (await listAttempts()) as Attempt[];
     }
-
-    async recordAttempt(attempt: AttemptRecord) {
-        await saveAttempt(attempt as Attempt);
+    async saveAttempt(attempt: Attempt) {
+        return saveAttempt(attempt);
     }
-
-    async enrollCourse(contentKey: string, data: Record<string, unknown> = {}) {
-        await enrollCourse(contentKey, data);
+    async recordAttempt(attempt: Attempt) {
+        return saveAttempt(attempt);
     }
-
-    async listLessonProgress() {
-        return (await listLessonProgress()) as LessonProgressRecord[];
+    async saveSession(session: { id: string; [key: string]: unknown }) {
+        await saveSession(session);
     }
-
-    async saveLessonProgress(progress: LessonProgressRecord) {
-        await saveLessonProgress(progress.contentKey, progress);
+    getSession = getSession;
+    async saveSetting(key: string, value: unknown) {
+        await saveSetting(key, value);
     }
-
-    async saveBookmark(contentKey: string, data: Record<string, unknown> = {}) {
-        await saveBookmark(contentKey, data);
-    }
-
-    async listPlanProgress() {
-        return (await listPlanProgress()) as PlanProgressRecord[];
-    }
-
-    async savePlanProgress(progress: PlanProgressRecord) {
-        await savePlanProgress(progress.contentKey, progress);
-    }
-
-    async listReviewTargets() {
-        return (await listReviewTargets()) as ReviewTargetRecord[];
-    }
-
-    async saveReviewTarget(target: ReviewTargetRecord) {
-        await saveReviewTarget(target.contentKey, target as Partial<ReviewTarget>);
-    }
-
+    getSetting = getSetting;
+    clear = clearProgress;
+    enrollCourse = enrollCourse;
+    listEnrollments = listEnrollments;
+    saveLessonProgress = saveLessonProgress;
+    listLessonProgress = listLessonProgress;
+    savePlanProgress = savePlanProgress;
+    listPlanProgress = listPlanProgress;
+    saveBookmark = saveBookmark;
+    listBookmarks = listBookmarks;
+    saveReviewItem = saveReviewItem;
+    listReviewItems = listReviewItems;
+    saveReviewTarget = saveReviewTarget;
+    listReviewTargets = listReviewTargets;
     async saveDiagnosis(diagnosis: DiagnosisRecord) {
         await saveDiagnosis(diagnosis as AttemptDiagnosis);
     }
+    listDiagnoses = listDiagnoses;
+    saveDailyChallenge = saveDailyChallenge;
+    listDailyChallenges = listDailyChallenges;
+    saveStreak = saveStreak;
+    getStreak = getStreak;
+    saveAchievement = saveAchievement;
+    listAchievements = listAchievements;
+    listTopicMastery = listTopicMastery;
 }
+
+export type { Attempt, ReviewTarget };

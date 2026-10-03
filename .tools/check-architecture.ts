@@ -1,18 +1,17 @@
-import { relative, join } from "@std/path";
+import { join, relative } from "@std/path";
 
 const roots = {
-    core: join(Deno.cwd(), "packages/pkg-core/src"),
+    domain: join(Deno.cwd(), "packages/pkg-domain/src"),
+    application: join(Deno.cwd(), "packages/pkg-application/src"),
     adapter: join(Deno.cwd(), "packages/pkg-adapter-data-v1/src"),
     app: join(Deno.cwd(), "packages/app/src"),
 };
 const sourceExtensions = new Set([".ts", ".tsx"]);
-const violations = [];
+const violations: string[] = [];
 
-async function filesIn(directory) {
-    const entries = [];
-    for await (const entry of Deno.readDir(directory)) entries.push(entry);
-    const files = [];
-    for (const entry of entries) {
+async function filesIn(directory: string): Promise<string[]> {
+    const files: string[] = [];
+    for await (const entry of Deno.readDir(directory)) {
         const path = join(directory, entry.name);
         if (entry.isDirectory) files.push(...(await filesIn(path)));
         else if (sourceExtensions.has(entry.name.slice(entry.name.lastIndexOf("."))))
@@ -28,37 +27,55 @@ for (const [layer, root] of Object.entries(roots)) {
         const imports = [...source.matchAll(/(?:from|import\()\s*["']([^"']+)["']/g)].map(
             (match) => match[1],
         );
-        const has = (pattern) => imports.some((value) => pattern.test(value));
+        const has = (pattern: RegExp) => imports.some((value) => pattern.test(value));
         const isTest = /\.(?:test|spec)\.tsx?$/u.test(relativePath);
-        if (layer === "core" && !isTest && imports.some((value) => !value.startsWith(".")))
-            violations.push(`${relativePath}: core importa dependência externa`);
-        if (layer === "adapter" && has(/react|mui|react-router|@guesant\/saberes-app/))
+        const isComposition =
+            relativePath.startsWith("composition/") || relativePath === "main.tsx";
+
+        if (layer === "domain" && !isTest && imports.some((value) => !value.startsWith("."))) {
+            violations.push(`${relativePath}: domain importa dependência externa`);
+        }
+        if (
+            layer === "application" &&
+            !isTest &&
+            has(/react|mui|tanstack|vite|saberes-adapter-data-v1|sql\.js|dexie|ts-fsrs/)
+        ) {
+            violations.push(`${relativePath}: application importa UI, framework ou adapter`);
+        }
+        if (layer === "adapter" && has(/react|mui|react-router|@guesant\/saberes-app(?:\/|$)/)) {
             violations.push(`${relativePath}: adapter importa UI ou app`);
+        }
+        if (
+            layer === "app" &&
+            !isComposition &&
+            has(/saberes-adapter-data-v1|sql\.js|dexie|ts-fsrs/)
+        ) {
+            violations.push(`${relativePath}: somente composition pode montar adapters`);
+        }
         if (
             layer === "app" &&
             relativePath.startsWith("features/") &&
             has(/saberes-adapter-data-v1|sql\.js|dexie|ts-fsrs/)
-        )
+        ) {
             violations.push(`${relativePath}: feature acessa adapter diretamente`);
+        }
         if (
             layer === "app" &&
             relativePath.endsWith("View.tsx") &&
             has(
                 /AppDependenciesContext|AppServicesContext|saberes-adapter-data-v1|sql\.js|dexie|ts-fsrs/,
             )
-        )
-            violations.push(
-                `${relativePath}: View acessa infraestrutura/DI diretamente; use o ViewModel`,
-            );
+        ) {
+            violations.push(`${relativePath}: View acessa infraestrutura/DI diretamente`);
+        }
         if (
             layer === "app" &&
             relativePath.startsWith("features/") &&
             !relativePath.endsWith("View.tsx") &&
             has(/@mui\/|@emotion\/|react-router/)
-        )
-            violations.push(
-                `${relativePath}: ViewModel importa dependência visual ou de roteamento`,
-            );
+        ) {
+            violations.push(`${relativePath}: ViewModel importa dependência visual ou roteamento`);
+        }
     }
 }
 
@@ -66,5 +83,7 @@ if (violations.length) {
     console.error(violations.join("\n"));
     Deno.exitCode = 1;
 } else {
-    console.log("Arquitetura válida: camadas novas sem dependências proibidas.");
+    console.log(
+        "Arquitetura válida: domínio, aplicação, adapters e apresentação respeitam as fronteiras.",
+    );
 }

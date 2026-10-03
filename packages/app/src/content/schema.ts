@@ -16,7 +16,7 @@ import {
     variant,
     type InferOutput,
 } from "valibot";
-import { PedagogicalRole } from "@guesant/saberes-core";
+import { PedagogicalRole } from "@guesant/saberes-domain";
 
 export const pedagogicalRoles = Object.values(PedagogicalRole);
 

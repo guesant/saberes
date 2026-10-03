@@ -1,13 +1,15 @@
 {
-    "name": "@guesant/saberes-core",
+    "name": "@guesant/saberes-application",
     "version": "0.1.0",
     "private": true,
     "license": "Unlicense",
     "type": "module",
+    "dependencies": {
+        "@guesant/saberes-domain": "workspace:*"
+    },
     "exports": {
         ".": "./src/index.ts",
         "./models/content": "./src/models/content.ts",
-        "./models/enums": "./src/models/enums.ts",
         "./models/progress": "./src/models/progress.ts",
         "./ports": "./src/ports.ts"
     }

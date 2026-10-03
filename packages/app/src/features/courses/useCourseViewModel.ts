@@ -1,18 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
-import { useAppDependencies } from "../../composition/AppDependenciesContext";
 import { useAppServices } from "../../composition/AppServicesContext";
 
 export function useCourseViewModel(slug: string | undefined) {
     const services = useAppServices();
-    const dependencies = useAppDependencies();
     const query = useQuery({
         queryKey: ["course", slug],
         enabled: Boolean(slug),
-        queryFn: () => services.getCourse(slug as string),
+        queryFn: () => services.courses.get(slug as string),
     });
     const startCourse = async () => {
         if (!query.data?.course) return;
-        await dependencies.progress.enrollCourse(`course:${String(query.data.course.slug)}`, {
+        await services.courses.enroll(`course:${String(query.data.course.slug)}`, {
             courseId: query.data.course.id,
             slug: query.data.course.slug,
             title: query.data.course.title,

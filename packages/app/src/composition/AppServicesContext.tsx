@@ -1,12 +1,12 @@
 import { createContext, type PropsWithChildren, useContext } from "react";
-import type { AppUseCases } from "../application/createUseCases";
+import type { ApplicationServices } from "@guesant/saberes-application";
 
-const AppServicesContext = createContext<AppUseCases | null>(null);
+const AppServicesContext = createContext<ApplicationServices | null>(null);
 
 export function AppServicesProvider({
     services,
     children,
-}: PropsWithChildren<{ services: AppUseCases }>) {
+}: PropsWithChildren<{ services: ApplicationServices }>) {
     return <AppServicesContext.Provider value={services}>{children}</AppServicesContext.Provider>;
 }
 

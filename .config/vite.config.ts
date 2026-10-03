@@ -108,7 +108,8 @@ export default defineConfig({
         setupFiles: [new URL("../packages/app/src/test/setup.ts", import.meta.url).pathname],
         include: [
             "src/**/*.test.{ts,tsx}",
-            "../pkg-core/src/**/*.test.{ts,tsx}",
+            "../pkg-domain/src/**/*.test.{ts,tsx}",
+            "../pkg-application/src/**/*.test.{ts,tsx}",
             "../pkg-adapter-data-v1/src/**/*.test.{ts,tsx}",
         ],
         exclude: ["packages/app/tests/e2e/**", "**/node_modules/**"],

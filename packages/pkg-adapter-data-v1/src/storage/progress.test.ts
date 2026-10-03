@@ -6,7 +6,7 @@ import {
     DiagnosisSource,
     PedagogicalAction,
     ReviewTargetType,
-} from "@guesant/saberes-core";
+} from "@guesant/saberes-domain";
 import {
     clearProgress,
     listAttempts,

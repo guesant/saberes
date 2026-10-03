@@ -1,23 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
-import { useAppDependencies } from "../../composition/AppDependenciesContext";
 import { useAppServices } from "../../composition/AppServicesContext";
 
 export function useLessonViewModel(key: string | undefined) {
     const services = useAppServices();
-    const dependencies = useAppDependencies();
     const query = useQuery({
         queryKey: ["lesson", key],
         enabled: Boolean(key),
-        queryFn: () => services.getLesson(key as string),
+        queryFn: () => services.lessons.get(key as string),
     });
     const saveProgress = (completed: boolean) =>
-        dependencies.progress.saveLessonProgress({
-            contentKey: `lesson:${String(query.data?.lesson.slug || key)}`,
+        services.lessons.saveProgress(`lesson:${String(query.data?.lesson.slug || key)}`, {
             lessonId: query.data?.lesson.id as number | string | undefined,
             completed,
         });
     const saveBookmark = () =>
-        dependencies.progress.saveBookmark(`lesson:${String(query.data?.lesson.slug || key)}`, {
+        services.lessons.bookmark(`lesson:${String(query.data?.lesson.slug || key)}`, {
             lessonId: query.data?.lesson.id,
             title: query.data?.lesson.title,
             type: "lesson",

@@ -1,4 +1,4 @@
-import type { CatalogCard } from "@guesant/saberes-core";
+import type { CatalogCard } from "@guesant/saberes-application";
 import { AutoStories, EventNote, Explore, Map as MapIcon, Quiz, School } from "@mui/icons-material";
 import {
     Box,

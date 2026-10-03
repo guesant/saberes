@@ -5,7 +5,7 @@ export function useTopicMapViewModel(mapKey: string) {
     const services = useAppServices();
     const query = useQuery({
         queryKey: ["topic-map", mapKey],
-        queryFn: () => services.getTopicMap(mapKey),
+        queryFn: () => services.maps.get(mapKey),
     });
     let state: "loading" | "error" | "ready" = "ready";
     if (query.isPending) state = "loading";

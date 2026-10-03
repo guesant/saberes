@@ -5,10 +5,10 @@ import {
     FsrsRating,
     PedagogicalAction,
     ReviewState as ReviewStateEnum,
-} from "@guesant/saberes-core";
+} from "@guesant/saberes-domain";
 import type { Attempt, DiagnosisCode, ReviewState, ReviewTarget } from "../storage/progress";
 
-export { FsrsRating } from "@guesant/saberes-core";
+export { FsrsRating } from "@guesant/saberes-domain";
 import {
     getSetting,
     getStreak,

@@ -1,4 +1,4 @@
-import type { IdPort } from "@guesant/saberes-core";
+import type { IdPort } from "@guesant/saberes-application";
 
 export class CryptoIdAdapter implements IdPort {
     create() {

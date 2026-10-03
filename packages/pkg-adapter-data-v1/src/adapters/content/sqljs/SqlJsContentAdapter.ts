@@ -9,9 +9,9 @@ import type {
     QuestionReadModel,
     StudyPlanReadModel,
     TopicMapReadModel,
-} from "@guesant/saberes-core";
-import { CatalogCardType } from "@guesant/saberes-core";
-import type { ContentPort } from "@guesant/saberes-core";
+} from "@guesant/saberes-application";
+import { CatalogCardType } from "@guesant/saberes-domain";
+import type { ContentPort } from "@guesant/saberes-application";
 
 type SqlDatabase = {
     query(sql: string, params?: unknown[]): Record<string, unknown>[];

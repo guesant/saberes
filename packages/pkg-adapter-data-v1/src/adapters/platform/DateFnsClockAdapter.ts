@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import type { ClockPort } from "@guesant/saberes-core";
+import type { ClockPort } from "@guesant/saberes-application";
 
 export class DateFnsClockAdapter implements ClockPort {
     now() {

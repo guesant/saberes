@@ -1,36 +1,4 @@
 // @ts-nocheck
-import {
-    clearProgress,
-    enrollCourse,
-    getSession,
-    getSetting,
-    getStreak,
-    listAchievements,
-    listAttempts,
-    listBookmarks,
-    listEnrollments,
-    listLessonProgress,
-    listPlanProgress,
-    listReviewTargets,
-    saveAttempt,
-    saveBookmark,
-    saveDailyChallenge,
-    saveDiagnosis,
-    saveLessonProgress,
-    savePlanProgress,
-    saveReviewItem,
-    saveReviewTarget,
-    saveSession,
-} from "@guesant/saberes-adapter-data-v1/progress";
-import {
-    achievementDefinitions,
-    actionForDiagnosis,
-    addStudyPoints,
-    recordStudyActivity,
-    scheduleReview,
-    suggestDiagnosis,
-    syncAchievements,
-} from "@guesant/saberes-adapter-data-v1/study";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
@@ -103,6 +71,7 @@ import { LessonView } from "./features/lessons/LessonView";
 import { TopicMapView } from "./features/maps/TopicMapView";
 import { StudyPlanView } from "./features/study-plans/StudyPlanView";
 import { useQuery } from "./hooks";
+import { useAppServices } from "./composition/AppServicesContext";
 
 const commonSubjects = [
     "matematica",
@@ -260,6 +229,7 @@ function StatCard({ value, label }) {
 }
 
 function Dashboard() {
+    const services = useAppServices();
     const { t } = useTranslation();
     const exams = useQuery(
         "SELECT e.id, e.year, e.name, ap.name process_name, ap.slug process_slug FROM editions e JOIN admission_processes ap ON ap.id = e.admission_process_id WHERE e.is_published = 1 ORDER BY e.year DESC, ap.name LIMIT 12",
@@ -273,8 +243,8 @@ function Dashboard() {
     const [attempts, setAttempts] = useState([]);
     const [daily, setDaily] = useState(null);
     useEffect(() => {
-        listAttempts().then(setAttempts);
-    }, []);
+        services.progress.listAttempts().then(setAttempts);
+    }, [services]);
     useEffect(() => {
         if (!dailyQuestions.data.length) return;
         const date = new Date().toISOString().slice(0, 10);
@@ -283,12 +253,12 @@ function Dashboard() {
             dailyQuestions.data.length;
         const item = dailyQuestions.data[index];
         setDaily({ ...item, date });
-        saveDailyChallenge(`daily:${date}`, {
+        services.progress.saveDailyChallenge(`daily:${date}`, {
             date,
             questionId: item.occurrence_id,
             contentKey: item.occurrence_key || `question:${item.occurrence_id}`,
         });
-    }, [dailyQuestions.data]);
+    }, [dailyQuestions.data, services]);
     if (exams.loading || topics.loading || dailyQuestions.loading) return <Loading />;
     const processCount = new Set(exams.data.map((edition) => edition.process_slug)).size;
     const years = exams.data
@@ -847,6 +817,7 @@ function QuestionBrowser() {
 }
 
 function QuestionExercise({ questionId, onDone }) {
+    const services = useAppServices();
     const { t } = useTranslation();
     const question = useQuery(
         "SELECT qo.id occurrence_id, qo.occurrence_key, q.id question_id, q.type, q.statement, q.explanation, q.difficulty, qo.number, qo.source_page, e.year, e.name edition_name, st.name stage_name, ap.name process_name, s.name subject, ak.answer_value correct_answer, ak.is_automatically_gradable FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN papers p ON p.id = qo.paper_id JOIN stages st ON st.id = p.stage_id JOIN editions e ON e.id = st.edition_id JOIN admission_processes ap ON ap.id = e.admission_process_id LEFT JOIN subjects s ON s.id = qo.subject_id LEFT JOIN answer_keys ak ON ak.question_occurrence_id = qo.id AND ak.question_part_id IS NULL WHERE qo.id = ?",
@@ -889,7 +860,7 @@ function QuestionExercise({ questionId, onDone }) {
             : null;
         const topicList = topicIds.data.map((item) => item.topic_id);
         const contentKey = current.occurrence_key || `question:${current.occurrence_id}`;
-        const attempt = await saveAttempt({
+        const attempt = await services.progress.saveAttempt({
             contentKey,
             questionId: current.occurrence_id,
             selectedOption: selected,
@@ -903,50 +874,50 @@ function QuestionExercise({ questionId, onDone }) {
             answeredAt: new Date().toISOString(),
         });
         setAttemptId(attempt.id);
-        const suggested = suggestDiagnosis({
+        const suggested = services.study.suggestDiagnosis({
             isCorrect,
             elapsedMs: Date.now() - startedAt,
             attemptNumber: 1,
         });
         setDiagnosis(suggested);
-        await saveDiagnosis({
+        await services.progress.saveDiagnosis({
             attemptId: attempt.id,
             code: suggested,
             confidence: "medium",
             suggestedBy: "heuristic",
-            action: actionForDiagnosis(suggested),
+            action: services.study.actionForDiagnosis(suggested),
         });
-        const review = scheduleReview(
+        const review = services.study.scheduleReview(
             { contentKey, targetType: "question", state: "new" },
             isCorrect === false ? "again" : "good",
         );
-        await saveReviewTarget(contentKey, {
+        await services.progress.saveReviewTarget(contentKey, {
             ...review,
             questionId: current.occurrence_id,
             topicIds: topicList,
             reason: isCorrect === false ? "incorrect" : "practice",
         });
-        await saveReviewItem(contentKey, {
+        await services.progress.saveReviewItem(contentKey, {
             questionId: current.occurrence_id,
             contentKey,
             topicIds: topicList,
             reason: isCorrect === false ? "incorrect" : "practice",
             pending: isCorrect === false,
         });
-        await recordStudyActivity({ type: "question" });
-        await addStudyPoints(5, "question-answered");
+        await services.study.recordStudyActivity({ type: "question" });
+        await services.study.addStudyPoints(5, "question-answered");
         setResult(isCorrect);
         onDone?.();
     };
     const updateDiagnosis = async (value) => {
         setDiagnosis(value);
         if (attemptId)
-            await saveDiagnosis({
+            await services.progress.saveDiagnosis({
                 attemptId,
                 code: value,
                 confidence: "high",
                 suggestedBy: "student",
-                action: actionForDiagnosis(value),
+                action: services.study.actionForDiagnosis(value),
             });
     };
     const diagnosisOptions = [
@@ -1238,6 +1209,7 @@ function AssessmentSetPage() {
 }
 
 function SimulatorSetup() {
+    const services = useAppServices();
     const { t } = useTranslation();
     const { db } = useContent();
     const navigate = useNavigate();
@@ -1269,7 +1241,7 @@ function SimulatorSetup() {
         );
         const id = crypto.randomUUID();
         const selectedProcess = processes.data.find((item) => item.slug === processSlug);
-        await saveSession({
+        await services.progress.saveSession({
             id,
             title: `${selectedProcess?.name || t("common.all")}${year ? ` ${year}` : ""}`,
             questionIds: rows.map((row) => row.id),
@@ -1345,6 +1317,7 @@ function SimulatorSetup() {
 }
 
 function SimulatorRunner() {
+    const services = useAppServices();
     const { t } = useTranslation();
     const { sessionId } = useParams();
     const navigate = useNavigate();
@@ -1352,8 +1325,8 @@ function SimulatorRunner() {
     const [index, setIndex] = useState(0);
     const [answer, setAnswer] = useState(null);
     useEffect(() => {
-        getSession(sessionId).then(setLocalSession);
-    }, [sessionId]);
+        services.progress.getSession(sessionId).then(setLocalSession);
+    }, [sessionId, services]);
     const ids = localSession?.questionIds || [];
     const questions = useQuery(
         ids.length
@@ -1382,7 +1355,7 @@ function SimulatorRunner() {
             ? answer.toUpperCase() === String(current.correct_answer || "").toUpperCase()
             : null;
         const topicList = topics.data.map((item) => item.topic_id);
-        await saveAttempt({
+        await services.progress.saveAttempt({
             contentKey: current.occurrence_key || `question:${current.occurrence_id}`,
             questionId: current.occurrence_id,
             selectedOption: answer,
@@ -1396,21 +1369,24 @@ function SimulatorRunner() {
             answeredAt: new Date().toISOString(),
         });
         if (isCorrect === false)
-            await saveReviewItem(`review:${current.occurrence_key || current.occurrence_id}`, {
-                questionId: current.occurrence_id,
-                contentKey: current.occurrence_key || `question:${current.occurrence_id}`,
-                topicIds: topicList,
-                reason: "incorrect",
-                pending: true,
-            });
-        await recordStudyActivity({ type: "simulator-question" });
-        await addStudyPoints(5, "simulator-question");
+            await services.progress.saveReviewItem(
+                `review:${current.occurrence_key || current.occurrence_id}`,
+                {
+                    questionId: current.occurrence_id,
+                    contentKey: current.occurrence_key || `question:${current.occurrence_id}`,
+                    topicIds: topicList,
+                    reason: "incorrect",
+                    pending: true,
+                },
+            );
+        await services.study.recordStudyActivity({ type: "simulator-question" });
+        await services.study.addStudyPoints(5, "simulator-question");
         if (index + 1 >= questions.data.length) {
-            await saveSession({
+            await services.progress.saveSession({
                 ...localSession,
                 completedAt: new Date().toISOString(),
             });
-            await addStudyPoints(15, "simulator-completed");
+            await services.study.addStudyPoints(15, "simulator-completed");
             navigate(`/simulado/${sessionId}/resultado`);
         } else {
             setIndex(index + 1);
@@ -1475,14 +1451,15 @@ function SimulatorRunner() {
     );
 }
 function SimulatorResult() {
+    const services = useAppServices();
     const { t } = useTranslation();
     const { sessionId } = useParams();
     const [attempts, setAttempts] = useState(null);
     useEffect(() => {
-        listAttempts().then((items) =>
-            setAttempts(items.filter((item) => item.sessionId === sessionId)),
-        );
-    }, [sessionId]);
+        services.progress
+            .listAttempts()
+            .then((items) => setAttempts(items.filter((item) => item.sessionId === sessionId)));
+    }, [sessionId, services]);
     if (!attempts) return <Loading />;
     const graded = attempts.filter((item) => item.isCorrect !== null);
     const correct = graded.filter((item) => item.isCorrect).length;
@@ -1521,12 +1498,13 @@ function SimulatorResult() {
 }
 
 function PerformanceDashboard() {
+    const services = useAppServices();
     const { t } = useTranslation();
     const [attempts, setAttempts] = useState(null);
     const topics = useQuery("SELECT ct.id, ct.label name FROM curriculum_topics ct");
     useEffect(() => {
-        listAttempts().then(setAttempts);
-    }, []);
+        services.progress.listAttempts().then(setAttempts);
+    }, [services]);
     if (topics.loading || !attempts) return <Loading />;
     const graded = attempts.filter((item) => item.isCorrect !== null);
     const total = graded.length;
@@ -1567,7 +1545,7 @@ function PerformanceDashboard() {
                     <Button
                         color="error"
                         onClick={async () => {
-                            await clearProgress();
+                            await services.progress.clearProgress();
                             setAttempts([]);
                         }}
                     >
@@ -1638,6 +1616,7 @@ function PerformanceDashboard() {
     );
 }
 function ReviewQueue() {
+    const services = useAppServices();
     const { t } = useTranslation();
     const [attempts, setAttempts] = useState(null);
     const [targets, setTargets] = useState([]);
@@ -1646,11 +1625,14 @@ function ReviewQueue() {
     );
     const reload = useCallback(
         () =>
-            Promise.all([listAttempts(), listReviewTargets()]).then(([items, reviewItems]) => {
+            Promise.all([
+                services.progress.listAttempts(),
+                services.progress.listReviewTargets(),
+            ]).then(([items, reviewItems]) => {
                 setAttempts(items);
                 setTargets(reviewItems);
             }),
-        [],
+        [services],
     );
     useEffect(() => {
         reload();
@@ -1663,7 +1645,7 @@ function ReviewQueue() {
     const targetByKey = new Map(targets.map((item) => [item.contentKey, item]));
     const postpone = async (question) => {
         const key = question.occurrence_key || `question:${question.id}`;
-        await saveReviewTarget(key, {
+        await services.progress.saveReviewTarget(key, {
             ...(targetByKey.get(key) || {}),
             contentKey: key,
             dueAt: new Date(Date.now() + 86400000).toISOString(),
@@ -1673,7 +1655,7 @@ function ReviewQueue() {
     };
     const suspend = async (question) => {
         const key = question.occurrence_key || `question:${question.id}`;
-        await saveReviewTarget(key, {
+        await services.progress.saveReviewTarget(key, {
             ...(targetByKey.get(key) || {}),
             contentKey: key,
             suspended: true,
@@ -1973,6 +1955,7 @@ export function LegacyCatalogPage() {
 }
 
 export function LegacyCourseOverview() {
+    const services = useAppServices();
     const { slug } = useParams();
     const course = useQuery(
         "SELECT c.*, COUNT(DISTINCT m.id) module_count, COALESCE(SUM(i.duration_minutes), 0) total_minutes FROM learning_courses c LEFT JOIN learning_course_modules m ON m.learning_course_id = c.id LEFT JOIN learning_course_items i ON i.module_id = m.id WHERE c.slug = ? GROUP BY c.id",
@@ -1994,11 +1977,14 @@ export function LegacyCourseOverview() {
     const [progress, setProgress] = useState([]);
     useEffect(() => {
         if (!current) return;
-        Promise.all([listEnrollments(), listLessonProgress()]).then(([enrollments, lessons]) => {
+        Promise.all([
+            services.progress.listEnrollments(),
+            services.progress.listLessonProgress(),
+        ]).then(([enrollments, lessons]) => {
             setEnrolled(enrollments.some((item) => item.contentKey === `course:${current.id}`));
             setProgress(lessons);
         });
-    }, [current?.id, current]);
+    }, [current?.id, current, services]);
     if (course.loading || modules.loading || items.loading) return <Loading />;
     if (!current) return <Empty>Curso não encontrado.</Empty>;
     const completed = progress.filter((item) =>
@@ -2006,7 +1992,7 @@ export function LegacyCourseOverview() {
     ).length;
     const percent = items.data.length ? Math.round((completed / items.data.length) * 100) : 0;
     const start = async () => {
-        await enrollCourse(`course:${current.id}`, {
+        await services.progress.enrollCourse(`course:${current.id}`, {
             courseId: current.id,
             slug: current.slug,
             title: current.title,
@@ -2159,6 +2145,7 @@ export function LegacyCourseOverview() {
 }
 
 export function LegacyLessonStudy() {
+    const services = useAppServices();
     const { lessonId } = useParams();
     const navigate = useNavigate();
     const lesson = useQuery(
@@ -2174,7 +2161,10 @@ export function LegacyLessonStudy() {
     const [completed, setCompleted] = useState(false);
     const [bookmarked, setBookmarked] = useState(false);
     useEffect(() => {
-        Promise.all([listLessonProgress(), listBookmarks()]).then(([progress, bookmarks]) => {
+        Promise.all([
+            services.progress.listLessonProgress(),
+            services.progress.listBookmarks(),
+        ]).then(([progress, bookmarks]) => {
             setCompleted(
                 progress.some(
                     (item) =>
@@ -2191,24 +2181,24 @@ export function LegacyLessonStudy() {
                 ),
             );
         });
-    }, [lessonId]);
+    }, [lessonId, services]);
     if (lesson.loading || sections.loading) return <Loading />;
     const current = lesson.data[0];
     if (!current) return <Empty>Lição não encontrada.</Empty>;
     const toggleComplete = async () => {
         const next = !completed;
-        await saveLessonProgress(`lesson:${current.slug}`, {
+        await services.progress.saveLessonProgress(`lesson:${current.slug}`, {
             lessonId: Number(lessonId),
             completed: next,
         });
         if (next && !completed) {
-            await recordStudyActivity({ type: "lesson" });
-            await addStudyPoints(10, "lesson-completed");
+            await services.study.recordStudyActivity({ type: "lesson" });
+            await services.study.addStudyPoints(10, "lesson-completed");
         }
         setCompleted(next);
     };
     const toggleBookmark = async () => {
-        await saveBookmark(`lesson:${current.slug}`, {
+        await services.progress.saveBookmark(`lesson:${current.slug}`, {
             lessonId: Number(lessonId),
             title: current.title,
             type: "lesson",
@@ -2309,6 +2299,7 @@ export function LegacyLessonStudy() {
 }
 
 export function LegacyMapPage() {
+    const services = useAppServices();
     const { slug } = useParams();
     const mapSlug = slug || "";
     const map = useQuery(
@@ -2329,8 +2320,8 @@ export function LegacyMapPage() {
     );
     const [progress, setProgress] = useState([]);
     useEffect(() => {
-        listLessonProgress().then(setProgress);
-    }, []);
+        services.progress.listLessonProgress().then(setProgress);
+    }, [services.progress.listLessonProgress]);
     if (map.loading || nodes.loading || edges.loading) return <Loading />;
     if (!current) return <Empty>Mapa não encontrado.</Empty>;
     return (
@@ -2431,6 +2422,7 @@ export function LegacyMapPage() {
 }
 
 export function LegacyStudyPlanPage() {
+    const services = useAppServices();
     const { slug } = useParams();
     const plans = useQuery(
         "SELECT p.*, e.year, c.title course_title FROM study_plans p LEFT JOIN editions e ON e.id = p.edition_id LEFT JOIN learning_courses c ON c.id = p.learning_course_id WHERE p.is_published = 1 AND (? = '' OR p.slug = ?)",
@@ -2445,15 +2437,15 @@ export function LegacyStudyPlanPage() {
     );
     const [done, setDone] = useState([]);
     useEffect(() => {
-        listPlanProgress().then((items) =>
-            setDone(items.filter((item) => item.planId === current?.id)),
-        );
-    }, [current?.id]);
+        services.progress
+            .listPlanProgress()
+            .then((items) => setDone(items.filter((item) => item.planId === current?.id)));
+    }, [current?.id, services]);
     if (plans.loading || steps.loading) return <Loading />;
     if (!current) return <Empty>Não há plano de estudo publicado.</Empty>;
     const toggle = async (step) => {
         const isDone = done.some((item) => item.stepId === step.id && item.completed);
-        await savePlanProgress(`plan:${current.id}:step:${step.id}`, {
+        await services.progress.savePlanProgress(`plan:${current.id}:step:${step.id}`, {
             planId: current.id,
             stepId: step.id,
             completed: !isDone,
@@ -2569,18 +2561,19 @@ export function LegacyStudyPlanPage() {
 }
 
 function MyStudyPage() {
+    const services = useAppServices();
     const [state, setState] = useState(null);
     useEffect(() => {
         let active = true;
         const safe = (promise, fallback) => promise.catch(() => fallback);
         Promise.all([
-            safe(listEnrollments(), []),
-            safe(listPlanProgress(), []),
-            safe(listLessonProgress(), []),
-            safe(listBookmarks(), []),
-            safe(listAttempts(), []),
-            safe(getStreak(), null),
-            safe(getSetting("studyPoints"), { value: 0 }),
+            safe(services.progress.listEnrollments(), []),
+            safe(services.progress.listPlanProgress(), []),
+            safe(services.progress.listLessonProgress(), []),
+            safe(services.progress.listBookmarks(), []),
+            safe(services.progress.listAttempts(), []),
+            safe(services.progress.getStreak(), null),
+            safe(services.progress.getSetting("studyPoints"), { value: 0 }),
         ]).then(async ([enrollments, plans, lessons, bookmarks, attempts, streak, points]) => {
             const stats = {
                 attempts: attempts.length,
@@ -2591,11 +2584,11 @@ function MyStudyPage() {
                 courses: 0,
                 reviews: 0,
             };
-            let achievements = achievementDefinitions(stats);
+            let achievements = services.study.achievementDefinitions(stats);
             try {
-                achievements = await syncAchievements(stats);
+                achievements = await services.study.syncAchievements(stats);
             } catch {}
-            const storedAchievements = await safe(listAchievements(), []);
+            const storedAchievements = await safe(services.progress.listAchievements(), []);
             if (active)
                 setState({
                     enrollments,
@@ -2611,7 +2604,7 @@ function MyStudyPage() {
         return () => {
             active = false;
         };
-    }, []);
+    }, [services]);
     if (!state) return <Loading />;
     const completedLessons = state.lessons.filter((item) => item.completed).length;
     const completedSteps = state.plans.filter((item) => item.completed).length;

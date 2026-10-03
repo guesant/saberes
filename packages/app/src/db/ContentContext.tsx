@@ -1,17 +1,29 @@
 // @ts-nocheck
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { loadContentDatabase } from "@guesant/saberes-adapter-data-v1";
+import type { ReactNode } from "react";
+
+type ContentDatabase = {
+    query: (sql: string, params?: unknown[]) => unknown[];
+};
+
+type ContentDatabaseLoader = () => Promise<ContentDatabase>;
 
 type ContentState = {
     status: "loading" | "ready" | "error";
-    db: Awaited<ReturnType<typeof loadContentDatabase>> | null;
+    db: ContentDatabase | null;
     error: unknown;
     reload: () => void;
 };
 
 const ContentContext = createContext<ContentState | null>(null);
 
-export function ContentProvider({ children }) {
+export function ContentProvider({
+    children,
+    loadDatabase,
+}: {
+    children: ReactNode;
+    loadDatabase: ContentDatabaseLoader;
+}) {
     const [attempt, setAttempt] = useState(0);
     const [content, setContent] = useState<Omit<ContentState, "reload">>({
         status: "loading",
@@ -25,7 +37,7 @@ export function ContentProvider({ children }) {
         void attempt;
         let active = true;
         setContent({ status: "loading", db: null, error: null });
-        loadContentDatabase()
+        loadDatabase()
             .then((db) => {
                 if (active) setContent({ status: "ready", db, error: null });
             })
@@ -35,7 +47,7 @@ export function ContentProvider({ children }) {
         return () => {
             active = false;
         };
-    }, [attempt]);
+    }, [attempt, loadDatabase]);
 
     const value = useMemo(() => ({ ...content, reload }), [content, reload]);
     return <ContentContext.Provider value={value}>{children}</ContentContext.Provider>;
