@@ -1,1 +1,0 @@
-../packages/pkg-tooling/src/tools/update-aqua-checksums.tool.ts

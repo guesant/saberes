@@ -108,7 +108,6 @@ WORKDIR /workspace
 COPY package.json deno.json deno.lock ./
 COPY packages ./packages
 COPY .config ./.config
-COPY .tools ./.tools
 COPY .github ./.github
 COPY README.md ./README.md
 COPY docs ./docs

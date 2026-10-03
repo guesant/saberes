@@ -224,7 +224,6 @@ export default [
         { type: "tooling", pattern: "packages/pkg-tooling-eslint", partialMatch: false },
       ],
       "boundaries/files": [
-        { category: "tooling", pattern: ".tools/**" },
         { category: "tooling", pattern: ".local/operator/**" },
         { category: "config", pattern: ".config/**" },
       ],
@@ -411,7 +410,6 @@ export default [
   },
   {
     files: [
-      ".tools/**/*.{js,jsx,mjs,ts,tsx}",
       ".config/**/*.{js,jsx,mjs,ts,tsx}",
       ".github/**/*.{js,jsx,mjs,ts,tsx}",
       ...operatorFiles,
@@ -478,11 +476,7 @@ export default [
     },
   },
   {
-    files: [
-      ".tools/**/*.{js,jsx,mjs,ts,tsx}",
-      ".config/**/*.{js,jsx,mjs,ts,tsx}",
-      ...operatorFiles,
-    ],
+    files: [".config/**/*.{js,jsx,mjs,ts,tsx}", ...operatorFiles],
     languageOptions: {
       globals: { Deno: "readonly" },
     },

@@ -1,1 +1,0 @@
-../packages/pkg-tooling/src/tools/generate-sbom.tool.ts

@@ -1,1 +1,0 @@
-../packages/pkg-tooling/src/tools/format-db-migrations.tool.ts

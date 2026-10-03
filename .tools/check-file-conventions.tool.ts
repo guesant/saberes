@@ -1,1 +1,0 @@
-../packages/pkg-tooling/src/tools/check-file-conventions.tool.ts

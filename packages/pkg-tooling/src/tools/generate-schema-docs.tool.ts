@@ -10,7 +10,7 @@ const outputPath = Deno.env.get("SCHEMA_DOCS_OUTPUT") || join(root, ".cache/sche
 
 const migrationsDirectory = join(root, "packages/thedata/dbmate/migrations");
 
-const schemaspyType = join(root, "packages/pkg-tooling/config/schemaspy/sqlite.properties");
+const schemaspyType = join(root, ".config/schemaspy/sqlite.properties");
 
 const aquaRoot = Deno.env.get("AQUA_ROOT_DIR") || "/opt/aqua";
 

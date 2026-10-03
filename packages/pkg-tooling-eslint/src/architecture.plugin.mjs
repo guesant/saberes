@@ -96,10 +96,6 @@ export function getSourceLayer(filename) {
     return "data";
   }
 
-  if (/(?:^|\/)\.tools\//.test(normalized)) {
-    return "tooling";
-  }
-
   if (/\/packages\/pkg-tooling(?:-eslint)?\/(?:src|tests)\//.test(normalized)) {
     return "tooling";
   }
