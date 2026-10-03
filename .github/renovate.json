@@ -1,37 +1,80 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-        "config:recommended",
-        "github>aquaproj/aqua-renovate-config#2.2.1"
-    ],
-    "timezone": "America/Sao_Paulo",
-    "minimumReleaseAge": "7 days",
-    "dependencyDashboard": true,
-    "lockFileMaintenance": {
-        "enabled": true,
-        "schedule": ["before 5am on monday"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", "github>aquaproj/aqua-renovate-config#2.2.1"],
+  "enabledManagers": ["custom.regex", "deno", "dockerfile", "github-actions", "mise", "npm"],
+  "timezone": "America/Sao_Paulo",
+  "minimumReleaseAge": "7 days",
+  "dependencyDashboard": true,
+  "allowedCommands": ["^deno task dependencies:checksums:update$"],
+  "postUpgradeTasks": {
+    "commands": ["deno task dependencies:checksums:update"],
+    "executionMode": "branch",
+    "fileFilters": [".config/aqua/aqua-checksums.json", ".config/container/Dockerfile"]
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^\\.config\\/aqua\\/python-tools\\.txt$/"],
+      "matchStrings": ["^(?<depName>[A-Za-z0-9][A-Za-z0-9_.-]*)==(?<currentValue>[^\\s#]+)"],
+      "datasourceTemplate": "pypi",
+      "versioningTemplate": "pep440"
     },
-    "packageRules": [
-        {
-            "description": "Group mise-managed runtimes and tools",
-            "matchManagers": ["mise"],
-            "groupName": "mise toolchain"
-        },
-        {
-            "description": "Keep Aqua tools together",
-            "matchManagers": ["regex"],
-            "matchFileNames": [".config/aqua/aqua.yaml"],
-            "groupName": "Aqua toolchain"
-        },
-        {
-            "description": "Keep Docker base images pinned by digest",
-            "matchManagers": ["dockerfile"],
-            "pinDigests": true
-        },
-        {
-            "description": "Keep GitHub Actions pinned to immutable commits",
-            "matchManagers": ["github-actions"],
-            "pinDigests": true
-        }
-    ]
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^deno\\.json$/",
+        "/^justfile$/",
+        "/^\\.config\\/container\\/Dockerfile$/"
+      ],
+      "matchStrings": [
+        "npm:(?<depName>@[^@\\s/]+/[^@\\s]+|[^@\\s/]+)@(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "npm"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^\\.config\\/container\\/Dockerfile$/"],
+      "matchStrings": [
+        "# renovate: datasource=github-releases depName=jdx/mise\\nARG MISE_VERSION=(?<currentValue>[^\\s]+)"
+      ],
+      "depNameTemplate": "jdx/mise",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^\\.config\\/container\\/Dockerfile$/"],
+      "matchStrings": [
+        "# renovate: datasource=github-releases depName=aquaproj/aqua\\nARG AQUA_VERSION=(?<currentValue>[^\\s]+)"
+      ],
+      "depNameTemplate": "aquaproj/aqua",
+      "datasourceTemplate": "github-releases"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Group mise-managed runtimes and tools",
+      "matchManagers": ["mise"],
+      "groupName": "mise toolchain"
+    },
+    {
+      "description": "Keep Aqua tools together",
+      "matchManagers": ["custom.regex"],
+      "matchFileNames": [".config/aqua/aqua.yaml"],
+      "groupName": "Aqua toolchain"
+    },
+    {
+      "description": "Keep Docker base images pinned by digest",
+      "matchManagers": ["dockerfile"],
+      "pinDigests": true
+    },
+    {
+      "description": "Keep GitHub Actions pinned to immutable commits",
+      "matchManagers": ["github-actions"],
+      "pinDigests": true
+    }
+  ]
 }

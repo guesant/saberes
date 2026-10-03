@@ -1,13 +1,16 @@
 {
-    "name": "@guesant/saberes-domain",
-    "version": "0.1.0",
-    "private": true,
-    "license": "Unlicense",
-    "type": "module",
-    "exports": {
-        ".": "./src/index.ts",
-        "./models/content": "./src/models/content.ts",
-        "./models/enums": "./src/models/enums.ts",
-        "./models/progress": "./src/models/progress.ts"
-    }
+  "name": "@guesant/saberes-domain",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Unlicense",
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./models/content": "./src/models/content.models.ts",
+    "./models/enums": "./src/models/domain.enums.ts",
+    "./models/progress": "./src/models/progress.models.ts"
+  }
 }

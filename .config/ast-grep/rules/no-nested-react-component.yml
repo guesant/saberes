@@ -1,0 +1,11 @@
+id: no-nested-react-component
+language: Tsx
+severity: error
+message: React components must be declared at module scope.
+files:
+  - packages/**/*.tsx
+rule:
+  pattern: 'function $OUTER() { const $INNER = () => <$TAG />; $$$AFTER }'
+constraints:
+  INNER:
+    regex: '^[A-Z]'

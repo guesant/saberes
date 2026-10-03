@@ -1,0 +1,11 @@
+id: no-destructured-component-props-typescript
+language: TypeScript
+severity: error
+message: Component props must use a props parameter and destructure inside the body.
+files:
+  - packages/**/src/**/*.ts
+rule:
+  any:
+    - pattern: 'function $FUNCTION({ $$$PROPS }: $TYPE) { $$$BODY }'
+    - pattern: 'const $FUNCTION = ({ $$$PROPS }: $TYPE) => $$$BODY'
+    - pattern: 'const $FUNCTION = function ({ $$$PROPS }: $TYPE) { $$$BODY }'

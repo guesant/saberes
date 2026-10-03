@@ -1,21 +1,20 @@
 {
-    "name": "@guesant/saberes-adapter-data-v1",
-    "version": "0.1.0",
-    "private": true,
-    "license": "Unlicense",
-    "type": "module",
-    "dependencies": {
-        "@guesant/saberes-application": "workspace:*",
-        "@guesant/saberes-domain": "workspace:*",
-        "date-fns": "^4.1.0",
-        "dexie": "^4.2.1",
-        "sql.js": "^1.13.0",
-        "ts-fsrs": "^5.2.0",
-        "valibot": "^1.1.0"
-    },
-    "exports": {
-        ".": "./src/index.ts",
-        "./progress": "./src/storage/progress.ts",
-        "./study": "./src/study/services.ts"
-    }
+  "name": "@guesant/saberes-adapter-data-v1",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@guesant/saberes-application": "workspace:*",
+    "@guesant/saberes-domain": "workspace:*",
+    "date-fns": "^4.1.0",
+    "dexie": "^4.2.1",
+    "sql.js": "^1.13.0",
+    "ts-fsrs": "^5.2.0",
+    "valibot": "^1.1.0"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./progress": "./src/storage/progress.storage.ts"
+  }
 }

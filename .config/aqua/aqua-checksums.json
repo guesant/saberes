@@ -1,16 +1,6 @@
 {
   "checksums": [
     {
-      "id": "github_release/github.com/schemaspy/schemaspy/v7.0.2/schemaspy-app.jar",
-      "checksum": "4C7DAF1C821071822ABDFEB0B72F36F500938D9D4016C3369F5582885F108717",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "http/repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.53.4.0/sqlite-jdbc-3.53.4.0.jar",
-      "checksum": "BCB1F51E36F940867E83342F9EFBF5968AC44A6BEF4D397BB4AF7B17B45CD2FB",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/amacneil/dbmate/v2.36.0/dbmate-linux-amd64",
       "checksum": "47E284B3D8CBAD1BA5F090495AA05AFD1BBD5F35E2ED5577AAD06DA74CE780CE",
       "algorithm": "sha256"
@@ -18,6 +8,16 @@
     {
       "id": "github_release/github.com/amacneil/dbmate/v2.36.0/dbmate-linux-arm64",
       "checksum": "C7D49DB4B54E487EDDF8CE7D6E88F4035E1EB04C7EDB16008F668CDFAD2F29E8",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/anchore/syft/v1.45.1/syft_1.45.1_linux_amd64.tar.gz",
+      "checksum": "20C84195E24927F50A3B2269946BE51F4C4ABC9D2F145FEE7388B4199149F716",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/anchore/syft/v1.45.1/syft_1.45.1_linux_arm64.tar.gz",
+      "checksum": "7DF9F45CBA1F6358ECFC7FAC349D43B4605137001F9646B41267ABE15A7C6CD7",
       "algorithm": "sha256"
     },
     {
@@ -101,6 +101,16 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/qltysh/qlty/v0.642.0/qlty-aarch64-unknown-linux-gnu.tar.xz",
+      "checksum": "700A86C930D64860BABA2CB168A2A9778E4DC8E38DC941FAF9D4D8B88D57DA1D",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/qltysh/qlty/v0.642.0/qlty-x86_64-unknown-linux-gnu.tar.xz",
+      "checksum": "05E665112FDF8A3D7CDCF4879F6C7D989A6CACD5C527B1890BA68E9C2C5C1D2E",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/rhysd/actionlint/v1.7.9/actionlint_1.7.9_linux_amd64.tar.gz",
       "checksum": "233B280D05E100837F4AF1433C7B40A5DCB306E3AA68FB4F17F8A7F45A7DF7B4",
       "algorithm": "sha256"
@@ -108,6 +118,11 @@
     {
       "id": "github_release/github.com/rhysd/actionlint/v1.7.9/actionlint_1.7.9_linux_arm64.tar.gz",
       "checksum": "6B82A3B8C808BF1BCD39A95ACED22FC1A026EEF08EDE410F81E274AF8DEADBBC",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/schemaspy/schemaspy/v7.0.2/schemaspy-app.jar",
+      "checksum": "4C7DAF1C821071822ABDFEB0B72F36F500938D9D4016C3369F5582885F108717",
       "algorithm": "sha256"
     },
     {
@@ -128,6 +143,11 @@
     {
       "id": "github_release/github.com/zizmorcore/zizmor/v1.11.0/zizmor-x86_64-unknown-linux-gnu.tar.gz",
       "checksum": "DA35E666827CBB1E6CA98B18B7969657B9F186467BFEBFA25E730AAC527C36F8",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.53.4.0/sqlite-jdbc-3.53.4.0.jar",
+      "checksum": "BCB1F51E36F940867E83342F9EFBF5968AC44A6BEF4D397BB4AF7B17B45CD2FB",
       "algorithm": "sha256"
     },
     {

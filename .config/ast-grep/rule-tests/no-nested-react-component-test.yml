@@ -1,0 +1,5 @@
+id: no-nested-react-component
+valid:
+  - function Page() { return <Card /> }
+invalid:
+  - function Page() { const Card = () => <div />; return <Card /> }

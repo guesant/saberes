@@ -1,10 +1,10 @@
 {
-    "language": "sqlite",
-    "tabWidth": 2,
-    "useTabs": false,
-    "keywordCase": "upper",
-    "indentStyle": "standard",
-    "logicalOperatorNewline": "before",
-    "expressionWidth": 100,
-    "linesBetweenQueries": 1
+  "language": "sqlite",
+  "tabWidth": 2,
+  "useTabs": false,
+  "keywordCase": "upper",
+  "indentStyle": "standard",
+  "logicalOperatorNewline": "before",
+  "expressionWidth": 100,
+  "linesBetweenQueries": 1
 }

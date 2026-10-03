@@ -1,0 +1,5 @@
+id: index-files-must-only-reexport
+valid:
+  - export * from "./value.ts"
+invalid:
+  - const value = 1

@@ -1,0 +1,5 @@
+id: no-destructured-component-props-typescript
+valid:
+  - 'function createCard(props: CardOptions) { return props.title }'
+invalid:
+  - 'function createCard({ title }: CardOptions) { return title }'

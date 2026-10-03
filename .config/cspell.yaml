@@ -10,12 +10,12 @@ dictionaries:
   - project
 files:
   - README.md
+  - .local/README.md
   - docs/**/*.md
   - packages/app/src/i18n/locales/**/*.ts
 ignorePaths:
   - .git/**
   - .cache/**
-  - .local/**
   - dist/**
   - node_modules/**
   - deno.lock

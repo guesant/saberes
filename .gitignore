@@ -13,9 +13,15 @@ auth.json
 node_modules
 dist
 .cache/
+.qlty/logs
+.qlty/out
+.qlty/plugin_cachedir
+.qlty/results
+.qlty/sources
 .local/*
 !.local/README.md
 !.local/operator/
+.local/operator/*
 !.local/operator/.env.example
 .local/content/
 playwright-report

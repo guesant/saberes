@@ -72,7 +72,7 @@ O Catálogo é uma visão filtrável dos cursos, mapas, planos, aulas, questões
 
 ## Rebuild do snapshot
 
-O script `.tools/rebuild-content.ts` recebe uma base revisada em `SOURCE_DB` e gera o banco local final. O arquivo de origem não deve ser publicado:
+O utilitário local `.local/operator/content/rebuild-content.operator.ts` recebe uma base revisada em `SOURCE_DB` e gera o banco local final. Esses utilitários pertencem ao ambiente do operador e não são publicados no repositório. O arquivo de origem não deve ser publicado:
 
 ```sh
 SOURCE_DB=.local/content/source.sqlite \

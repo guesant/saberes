@@ -1,19 +1,19 @@
 {
-    "mode": "strict",
-    "threshold": 10,
-    "minLines": 12,
-    "minTokens": 100,
-    "maxGapLines": 1,
-    "ignoreIdentifiers": true,
-    "ignoreLiterals": true,
-    "format": ["typescript", "tsx", "javascript", "jsx", "json"],
-    "ignore": [
-        "**/node_modules/**",
-        "**/dist/**",
-        "**/public/data/**",
-        "**/*.sqlite",
-        "**/package-lock.json",
-        "**/package.json"
-    ],
-    "reporters": ["console", "threshold"]
+  "mode": "strict",
+  "threshold": 10,
+  "minLines": 12,
+  "minTokens": 100,
+  "maxGapLines": 1,
+  "ignoreIdentifiers": true,
+  "ignoreLiterals": true,
+  "format": ["typescript", "tsx", "javascript", "jsx", "json"],
+  "ignore": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/public/data/**",
+    "**/*.sqlite",
+    "**/package-lock.json",
+    "**/package.json"
+  ],
+  "reporters": ["console", "threshold"]
 }

@@ -1,6 +1,19 @@
 ---
 packages:
   - type: github_release
+    name: qltysh/qlty
+    repo_owner: qltysh
+    repo_name: qlty
+    asset: qlty-{{.Arch}}-unknown-linux-gnu.tar.xz
+    format: tar.xz
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+    files:
+      - name: qlty
+        src: "{{.AssetWithoutExt}}/qlty"
+    description: Qlty local code quality aggregator
+  - type: github_release
     repo_owner: schemaspy
     repo_name: schemaspy
     asset: schemaspy-app.jar

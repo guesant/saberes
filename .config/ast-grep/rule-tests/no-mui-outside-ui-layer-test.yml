@@ -1,0 +1,5 @@
+id: no-mui-outside-ui-layer
+valid:
+  - import { Button } from "./ui/Button"
+invalid:
+  - import { Button } from "@mui/material"

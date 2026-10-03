@@ -13,6 +13,7 @@ concurrency:
 env:
   QUALITY_CI_IMAGE: portal-guesant-saberes-quality-ci:${{ github.sha }}
   PLAYWRIGHT_IMAGE: portal-guesant-saberes-playwright:${{ github.sha }}
+  APP_IMAGE: portal-guesant-saberes-app:${{ github.sha }}
   CACHE_FROM: type=gha,scope=portal-guesant-saberes-heavy-${{ github.ref_name }}
   CACHE_TO: type=gha,mode=max,scope=portal-guesant-saberes-heavy-${{ github.ref_name }}
 
@@ -57,6 +58,19 @@ jobs:
               aqua exec -- osv-scanner scan source --recursive /repo
               aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo
               semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools
+            '
+
+      - name: Gerar e validar SBOM da imagem dentro do Docker
+        run: |
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE:/workspace" \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            -w /workspace \
+            -e SBOM_IMAGE="$APP_IMAGE" \
+            "$QUALITY_CI_IMAGE" \
+            bash -c '
+              mise exec -- deno run --allow-read --allow-write --allow-env --allow-run=syft .tools/generate-sbom.tool.ts image
+              trivy sbom --config .config/trivy.yaml --scanners vuln --severity HIGH,CRITICAL --exit-code 1 .cache/sbom/image.cdx.json
             '
 
       - name: Executar E2E e acessibilidade dentro do Docker
@@ -104,9 +118,12 @@ jobs:
               set +e
               mise exec -- deno task lighthouse
               lighthouse_status=$?
+              mise exec -- deno task quality:report
+              qlty_status=$?
               set -e
               mkdir -p .cache
               lizard -l typescript -C 5 -L 35 -a 3 packages | tee .cache/lizard.txt
+              echo "Qlty report status: ${qlty_status}"
               exit "$lighthouse_status"
             '
 
@@ -124,4 +141,20 @@ jobs:
         with:
           name: typescript-complexity-report
           path: .cache/lizard.txt
+          if-no-files-found: ignore
+
+      - name: Upload Qlty report
+        if: always()
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08
+        with:
+          name: qlty-report
+          path: .cache/qlty-report.sarif
+          if-no-files-found: ignore
+
+      - name: Upload SBOMs
+        if: always()
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08
+        with:
+          name: sbom
+          path: .cache/sbom
           if-no-files-found: ignore

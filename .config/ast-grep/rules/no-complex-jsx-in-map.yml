@@ -1,0 +1,12 @@
+id: no-complex-jsx-in-map
+language: Tsx
+severity: error
+message: Rendered map callbacks must delegate to a dedicated component.
+files:
+  - packages/**/*.tsx
+ignores:
+  - packages/app/src/App.tsx
+rule:
+  any:
+    - pattern: '$COLLECTION.map(($$$PARAMS) => <$TAG $$$ATTRIBUTES><$FIRST $$$FIRST_ATTRIBUTES>$$$FIRST_CHILDREN</$FIRST><$SECOND $$$SECOND_ATTRIBUTES>$$$SECOND_CHILDREN</$SECOND>$$$REST</$TAG>)'
+    - pattern: '$COLLECTION.map(($$$PARAMS) => (<$TAG $$$ATTRIBUTES><$FIRST $$$FIRST_ATTRIBUTES>$$$FIRST_CHILDREN</$FIRST><$SECOND $$$SECOND_ATTRIBUTES>$$$SECOND_CHILDREN</$SECOND>$$$REST</$TAG>))'

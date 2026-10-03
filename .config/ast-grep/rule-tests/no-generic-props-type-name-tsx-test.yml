@@ -1,0 +1,5 @@
+id: no-generic-props-type-name-tsx
+valid:
+  - 'type CardProps = { title: string }'
+invalid:
+  - 'type Props = { title: string }'

@@ -1,0 +1,5 @@
+id: no-native-interactive-html-outside-ui
+valid:
+  - const value = <Card />
+invalid:
+  - const value = <button type="button">Salvar</button>

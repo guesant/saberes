@@ -1,0 +1,5 @@
+id: no-inline-object-type-in-parameters-typescript
+valid:
+  - 'function createCard(options: CardOptions) { return options.title }'
+invalid:
+  - 'function createCard(options: { title: string }) { return options.title }'

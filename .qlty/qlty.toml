@@ -1,0 +1,34 @@
+config_version = "0"
+
+exclude_patterns = [
+  "**/.cache/**",
+  "**/.config/aqua/aqua-checksums.json",
+  "**/dist/**",
+  "**/node_modules/**",
+  "**/packages/app/public/data/**",
+  "**/test-results/**",
+]
+
+[[source]]
+name = "default"
+default = true
+
+[[plugin]]
+name = "eslint"
+mode = "comment"
+
+[[plugin]]
+name = "ast-grep"
+mode = "comment"
+
+[[plugin]]
+name = "gitleaks"
+mode = "comment"
+
+[[plugin]]
+name = "semgrep"
+mode = "comment"
+
+[[plugin]]
+name = "trivy"
+mode = "comment"

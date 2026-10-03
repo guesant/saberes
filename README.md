@@ -4,9 +4,9 @@ Portal educacional local-first para vestibulares e aprendizagem estruturada, fei
 
 [![quality](https://img.shields.io/github/actions/workflow/status/guesant/saberes/quality.yml?branch=main&label=quality&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/quality.yml)
 [![deploy](https://img.shields.io/github/actions/workflow/status/guesant/saberes/deploy-pages.yml?branch=main&label=deploy&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/deploy-pages.yml)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/guesant/saberes/badge)](https://securityscorecards.dev/viewer/?uri=github.com/guesant/saberes)
-[![licença do código](https://img.shields.io/badge/c%C3%B3digo-The%20Unlicense-7c3aed?style=for-the-badge&labelColor=0b1120)](LICENSE)
-[![licença do conteúdo](https://img.shields.io/badge/conte%C3%BAdo-CC0%201.0-059669?style=for-the-badge&labelColor=0b1120)](LICENSE-CONTENT)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/guesant/saberes/badge)](https://scorecard.dev/viewer/?uri=github.com/guesant/saberes)
+[![licença do código](https://img.shields.io/badge/c%C3%B3digo-The%20Unlicense-7c3aed?style=for-the-badge&labelColor=0b1120&logo=unlicense&logoColor=white)](LICENSE)
+[![licença do conteúdo](https://img.shields.io/badge/conte%C3%BAdo-CC0%201.0-059669?style=for-the-badge&labelColor=0b1120&logo=creativecommons&logoColor=white)](LICENSE-CONTENT)
 
 [![último commit](https://img.shields.io/github/last-commit/guesant/saberes/main?label=%C3%BAltimo%20commit&style=flat-square&labelColor=0b1120&color=b45309&logo=git&logoColor=white)](https://github.com/guesant/saberes/commits/main)
 [![commits por mês](https://img.shields.io/github/commit-activity/m/guesant/saberes?label=commits%2Fm%C3%AAs&style=flat-square&labelColor=0b1120&color=b45309&logo=git&logoColor=white)](https://github.com/guesant/saberes/graphs/commit-activity)
@@ -31,7 +31,7 @@ O CC0 cobre o conteúdo editorial original deste projeto. Questões, trechos, im
 - Dexie para persistir tentativas, simulados, progresso editorial e desempenho do estudante no IndexedDB.
 - TanStack Query para consultas e invalidação sobre os repositórios locais; ele não substitui o Dexie.
 - Valibot para validar conteúdo editorial, blocos ricos, progresso e importações.
-- TypeScript nos contratos e serviços novos, com Biome como formatter e linter.
+- TypeScript nos contratos e serviços novos, com ESLint e Prettier no toolchain.
 - `date-fns` para calendário, planos, metas, sequência e revisões.
 - FSRS (`ts-fsrs`) atrás de um adaptador próprio para revisões espaçadas explicáveis e controláveis pelo estudante.
 - Arquitetura MVVM com use cases, ports/adapters e factories tipadas para Dependency Injection.
@@ -40,7 +40,7 @@ O CC0 cobre o conteúdo editorial original deste projeto. Questões, trechos, im
 - Nginx serve o build estático final da aplicação.
 - A distribuição de produção é feita no GitHub Pages pelo GitHub Actions.
 
-A estrutura de trabalho segue a convenção do projeto: a aplicação fica em [`packages/app/`](packages/app), o domínio puro em [`packages/pkg-core/`](packages/pkg-core), os adapters de dados em [`packages/pkg-adapter-data-v1/`](packages/pkg-adapter-data-v1), o pacote de dados e migrations em [`packages/thedata/`](packages/thedata), configurações de ferramentas em [`.config/`](.config), infraestrutura Docker em [`.config/container/`](.config/container), scripts de manutenção em [`.tools/`](.tools), insumos locais não publicados em [`.local/`](.local) e caches descartáveis em [`.cache/`](.cache). O Deno é a única ferramenta JavaScript/TypeScript do toolchain; o cache de dependências fica em `.cache/deno` e o build usa cache mount do BuildKit.
+A estrutura de trabalho segue a convenção do projeto: a aplicação fica em [`packages/app/`](packages/app), o domínio puro em [`packages/pkg-domain/`](packages/pkg-domain), os adapters de dados em [`packages/pkg-adapter-data-v1/`](packages/pkg-adapter-data-v1), o pacote de dados e migrations em [`packages/thedata/`](packages/thedata), configurações de ferramentas em [`.config/`](.config), infraestrutura Docker em [`.config/container/`](.config/container), scripts de manutenção em [`.tools/`](.tools), insumos locais não publicados em [`.local/`](.local) e caches descartáveis em [`.cache/`](.cache). O Deno é a única ferramenta JavaScript/TypeScript do toolchain; o cache de dependências fica em `.cache/deno` e o build usa cache mount do BuildKit.
 
 ## Executar com Docker
 
@@ -91,7 +91,7 @@ docker buildx bake --file .config/container/docker-bake.hcl --load tools
 docker run --rm -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace portal-guesant-saberes-tools:local deno task content:rebuild
 ```
 
-O script lê `.local/content/source.sqlite` por padrão e gera `.local/content/content.sqlite` com o modelo multi-processo. É possível informar `SOURCE_DB` e `OUTPUT_DB` no container. O banco inicial pode conter diferentes processos seletivos, mas o app não faz crawling, downloads, leitura de PDF, busca de conteúdo ou geração de questões durante a execução.
+O utilitário local do operador lê `.local/content/source.sqlite` por padrão e gera `.local/content/content.sqlite` com o modelo multi-processo. Os utilitários de conteúdo ficam em `.local/operator/content/` e não são versionados. É possível informar `SOURCE_DB` e `OUTPUT_DB` no container. O banco inicial pode conter diferentes processos seletivos, mas o app não faz crawling, downloads, leitura de PDF, busca de conteúdo ou geração de questões durante a execução.
 
 As migrations em [`packages/thedata/dbmate/migrations/`](packages/thedata/dbmate/migrations) são a fonte de verdade do banco local: a migration inicial cria o schema completo e as seguintes aplicam alterações e dados editoriais versionados. O comando `content:rebuild` cria um banco vazio, aplica todas as migrations Dbmate e só então importa o conteúdo revisado. A documentação HTML do schema é gerada durante o build, sem substituir as migrations.
 

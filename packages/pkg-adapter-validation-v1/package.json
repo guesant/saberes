@@ -1,0 +1,15 @@
+{
+  "name": "@guesant/saberes-adapter-validation-v1",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@guesant/saberes-application": "workspace:*",
+    "@guesant/saberes-domain": "workspace:*",
+    "valibot": "^1.1.0"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

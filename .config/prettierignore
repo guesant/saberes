@@ -1,0 +1,10 @@
+**/node_modules/**
+**/dist/**
+**/generated/**
+**/routeTree.gen.ts
+**/public/**
+**/playwright-report/**
+**/test-results/**
+**/.lighthouseci/**
+**/*.timestamp-*.mjs
+.cache/**

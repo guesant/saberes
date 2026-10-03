@@ -1,0 +1,5 @@
+id: no-destructured-component-props-tsx
+valid:
+  - 'function Card(props: CardProps) { return <div>{props.title}</div> }'
+invalid:
+  - 'function Card({ title }: CardProps) { return <div>{title}</div> }'

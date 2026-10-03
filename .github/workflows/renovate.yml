@@ -1,0 +1,54 @@
+name: Renovate
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 3 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: renovate
+  cancel-in-progress: false
+
+env:
+  QUALITY_CI_IMAGE: portal-guesant-saberes-quality-ci:${{ github.sha }}
+  CACHE_FROM: type=gha,scope=portal-guesant-saberes-renovate
+  CACHE_TO: type=gha,mode=max,scope=portal-guesant-saberes-renovate
+
+jobs:
+  renovate:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Configurar Buildx
+        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435
+
+      - name: Construir toolchain pelo Docker
+        run: docker buildx bake --file .config/container/docker-bake.hcl --load quality-ci
+
+      - name: Criar token da GitHub App
+        id: app-token
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349
+        with:
+          app-id: ${{ secrets.RENOVATE_APP_ID }}
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+
+      - name: Executar Renovate dentro do Docker
+        env:
+          RENOVATE_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          docker run --rm \
+            -e RENOVATE_TOKEN \
+            -e RENOVATE_CONFIG_FILE=/workspace/.github/renovate.json \
+            -v "$GITHUB_WORKSPACE:/workspace" \
+            -w /workspace \
+            "$QUALITY_CI_IMAGE" \
+            bash -c 'mise exec -- deno task renovate'

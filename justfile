@@ -7,6 +7,7 @@ quality_image := env_var_or_default("QUALITY_IMAGE", "portal-guesant-saberes-qua
 tools_image := env_var_or_default("TOOLS_IMAGE", "portal-guesant-saberes-tools:local")
 dev_image := env_var_or_default("DEV_IMAGE", "portal-guesant-saberes-dev:local")
 playwright_image := env_var_or_default("PLAYWRIGHT_IMAGE", "portal-guesant-saberes-playwright:local")
+app_image := env_var_or_default("APP_IMAGE", "portal-guesant-saberes-app:local")
 workspace_modules_volume := "portal-guesant-saberes-workspace-modules"
 app := compose + " run --rm -T dev bash -c"
 
@@ -46,6 +47,14 @@ heavy-checks: dev-build
 	just repository-lint
 	just reuse-check
 
+sbom: quality-build
+    mkdir -p .cache/sbom
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task sbom:check'
+
+sbom-image: runtime-build quality-build
+    mkdir -p .cache/sbom
+    docker run --rm -v "$PWD:/workspace" -v /var/run/docker.sock:/var/run/docker.sock -w /workspace -e SBOM_IMAGE={{app_image}} {{quality_image}} bash -c 'mise exec -- deno run --allow-read --allow-write --allow-env --allow-run=syft .tools/generate-sbom.tool.ts image && trivy sbom --config .config/trivy.yaml --scanners vuln --severity HIGH,CRITICAL --exit-code 1 .cache/sbom/image.cdx.json'
+
 format:
     {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task format'
 
@@ -61,11 +70,21 @@ migration-format-check:
 spelling:
     {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task cspell'
 
+stylelint:
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task stylelint'
+
+quality-report: quality-build
+    mkdir -p .cache
+    docker run --rm -v "$PWD:/workspace" -w /workspace {{quality_image}} bash -c 'mkdir -p .cache && (aqua exec -- qlty check --all --no-cache --no-upgrade-check --no-progress --no-fail --sarif > .cache/qlty-report.sarif || test -s .cache/qlty-report.sarif)'
+
+aqua-checksums-check: quality-build
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task aqua:checksums:check'
+
+aqua-checksums-update: quality-build
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task aqua:checksums:update'
+
 docs-links:
     {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task docs:links'
-
-placeholders:
-    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task placeholders'
 
 commit-check:
     {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task commit:check'
@@ -135,14 +154,14 @@ lighthouse: runtime-build quality-build
 ci: check
 
 repository-lint: quality-build
-    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'aqua exec -- yamllint -c .config/.yamllint.yml .github .config/.yamllint.yml && aqua exec -- hadolint --config .config/.hadolint.yaml .config/container/Dockerfile && for workflow in .github/workflows/*.yml; do aqua exec -- actionlint -color "$workflow"; done && aqua exec -- zizmor .github/workflows'
+    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'aqua exec -- yamllint -c .config/.yamllint.yml .github .config .local && aqua exec -- hadolint --config .config/.hadolint.yaml .config/container/Dockerfile && for workflow in .github/workflows/*.yml; do aqua exec -- actionlint -color "$workflow"; done && aqua exec -- zizmor .github/workflows'
 
 reuse-check: quality-build
     docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'reuse lint'
 
 security-audit: quality-build
-    docker run --rm -v "$PWD:/repo:ro" -v portal-guesant-saberes-trivy-cache:/root/.cache/trivy {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --recursive /repo && aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
+    docker run --rm -v "$PWD:/repo:ro" -v portal-guesant-saberes-trivy-cache:/root/.cache/trivy {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --recursive /repo && aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools /repo/.local/operator /repo/.config'
 
 complexity-report: quality-build
     mkdir -p .cache
-    docker run --rm -v "$PWD:/workspace" -w /workspace {{quality_image}} bash -c 'lizard -l typescript -C 5 -L 35 -a 3 packages | tee .cache/lizard.txt'
+    docker run --rm -v "$PWD:/workspace" -w /workspace {{quality_image}} bash -c 'lizard -l typescript -C 5 -L 35 -a 3 packages .tools .local/operator | tee .cache/lizard.txt'

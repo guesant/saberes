@@ -1,19 +1,8 @@
 {
-    "$schema": "https://json.schemastore.org/commitlint.json",
-    "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "build",
-        "ci",
-        "chore"
-    ],
-    "headerMaxLength": 72,
-    "subjectFullStop": false,
-    "bodyEmpty": true,
-    "footerEmpty": true
+  "$schema": "https://json.schemastore.org/commitlint.json",
+  "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore"],
+  "headerMaxLength": 72,
+  "subjectFullStop": false,
+  "bodyEmpty": true,
+  "footerEmpty": true
 }

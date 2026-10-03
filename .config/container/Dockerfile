@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1.10
 
+# renovate: datasource=docker depName=debian
 ARG DENO_BASE=debian:trixie-slim@sha256:a99cfc517144bc59b1978475ec53b46ecabec7e43635402ee5b77cc54cd1b20a
 
 FROM ${DENO_BASE} AS quality
@@ -47,6 +48,7 @@ RUN apt-get update \
         ca-certificates \
         chromium \
         curl \
+        git \
     && rm -rf /var/lib/apt/lists/*
 
 COPY .config/aqua ./.config/aqua
@@ -103,7 +105,7 @@ RUN --mount=type=cache,id=portal-guesant-saberes-python-tools,target=/var/cache/
 
 WORKDIR /workspace
 
-COPY package.json deno.json deno.lock biome.json ./
+COPY package.json deno.json deno.lock ./
 COPY packages ./packages
 COPY .config ./.config
 COPY .tools ./.tools

@@ -1,0 +1,5 @@
+id: no-inline-object-type-in-parameters-tsx
+valid:
+  - 'function Card(props: CardProps) { return <div>{props.title}</div> }'
+invalid:
+  - 'function Card(props: { title: string }) { return <div>{props.title}</div> }'

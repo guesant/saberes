@@ -1,16 +1,19 @@
 {
-    "name": "@guesant/saberes-application",
-    "version": "0.1.0",
-    "private": true,
-    "license": "Unlicense",
-    "type": "module",
-    "dependencies": {
-        "@guesant/saberes-domain": "workspace:*"
-    },
-    "exports": {
-        ".": "./src/index.ts",
-        "./models/content": "./src/models/content.ts",
-        "./models/progress": "./src/models/progress.ts",
-        "./ports": "./src/ports.ts"
-    }
+  "name": "@guesant/saberes-application",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "@guesant/saberes-domain": "workspace:*"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./models/content": "./src/models/content.models.ts",
+    "./models/progress": "./src/models/progress.models.ts",
+    "./ports": "./src/application.ports.ts",
+    "./content.use-cases": "./src/content.use-cases.ts",
+    "./progress.use-cases": "./src/progress.use-cases.ts",
+    "./study.use-cases": "./src/study.use-cases.ts"
+  }
 }

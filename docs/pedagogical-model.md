@@ -36,7 +36,7 @@ Cada aula possui:
 - versão editorial;
 - status de revisão.
 
-O validador `.tools/validate-content.ts` rejeita aulas publicadas com metadados incompletos ou sem a progressão mínima.
+O validador local `.local/operator/content/validate-content.operator.ts` rejeita aulas publicadas com metadados incompletos ou sem a progressão mínima.
 
 ## Conteúdo rico seguro
 

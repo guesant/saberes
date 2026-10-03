@@ -1,0 +1,11 @@
+id: no-inline-object-type-in-parameters-tsx
+language: Tsx
+severity: error
+message: Parameter object types must use a named contract.
+files:
+  - packages/**/*.tsx
+rule:
+  any:
+    - pattern: 'function $FUNCTION($PARAM: { $$$FIELDS }) { $$$BODY }'
+    - pattern: 'const $FUNCTION = ($PARAM: { $$$FIELDS }) => $$$BODY'
+    - pattern: 'const $FUNCTION = function ($PARAM: { $$$FIELDS }) { $$$BODY }'

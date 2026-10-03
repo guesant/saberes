@@ -1,0 +1,5 @@
+id: no-complex-jsx-in-map
+valid:
+  - items.map((item) => <ItemCard item={item} />)
+invalid:
+  - items.map((item) => <section><h2>{item.name}</h2><p>{item.description}</p></section>)
