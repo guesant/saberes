@@ -1,9 +1,28 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:recommended"],
+    "extends": [
+        "config:recommended",
+        "github>aquaproj/aqua-renovate-config#2.2.1"
+    ],
     "timezone": "America/Sao_Paulo",
     "minimumReleaseAge": "7 days",
+    "dependencyDashboard": true,
+    "lockFileMaintenance": {
+        "enabled": true,
+        "schedule": ["before 5am on monday"]
+    },
     "packageRules": [
+        {
+            "description": "Group mise-managed runtimes and tools",
+            "matchManagers": ["mise"],
+            "groupName": "mise toolchain"
+        },
+        {
+            "description": "Keep Aqua tools together",
+            "matchManagers": ["regex"],
+            "matchFileNames": [".config/aqua/aqua.yaml"],
+            "groupName": "Aqua toolchain"
+        },
         {
             "description": "Keep Docker base images pinned by digest",
             "matchManagers": ["dockerfile"],

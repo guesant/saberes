@@ -13,7 +13,8 @@ const policies = new Map<string, FilePolicy>([
         "Dockerfile",
         {
             markers: ["#"],
-            allow: (comment) => comment === "# syntax=docker/dockerfile:1.10",
+            allow: (comment) =>
+                comment === "# syntax=docker/dockerfile:1.10" || comment.startsWith("# renovate:"),
         },
     ],
     ["justfile", { markers: ["#"], allow: (comment) => comment.startsWith("#!") }],

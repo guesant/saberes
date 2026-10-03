@@ -141,7 +141,7 @@ reuse-check: quality-build
     docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'reuse lint'
 
 security-audit: quality-build
-    docker run --rm -v "$PWD:/repo:ro" {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --recursive /repo && aqua exec -- trivy fs --skip-version-check --no-progress --scanners vuln,secret --severity CRITICAL,HIGH --exit-code 1 /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
+    docker run --rm -v "$PWD:/repo:ro" -v portal-guesant-saberes-trivy-cache:/root/.cache/trivy {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --recursive /repo && aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
 
 complexity-report: quality-build
     mkdir -p .cache

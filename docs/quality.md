@@ -56,7 +56,7 @@ just repository-lint
 just security-audit
 ```
 
-`security-audit` executa Gitleaks, OSV-Scanner, Trivy e Semgrep em containers. O Trivy usa o volume Docker `portal-guesant-saberes-trivy-cache` para não baixar a base de vulnerabilidades a cada execução.
+`security-audit` executa Gitleaks, OSV-Scanner, Trivy e Semgrep em containers. O Trivy usa a configuração versionada em `.config/trivy.yaml`, desabilita arquivos de supressão fornecidos pelo checkout e usa o volume Docker `portal-guesant-saberes-trivy-cache` para preservar sua base local.
 
 As migrations Dbmate são a fonte versionada do schema e dos dados editoriais e usam `sql-formatter`
 com a configuração versionada em `.config/sql-formatter.json`. Para formatar arquivos alterados ou

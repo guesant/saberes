@@ -45,6 +45,20 @@ jobs:
               mise exec -- deno task security:check
             '
 
+      - name: Executar scanners de segurança dentro do Docker
+        run: |
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE:/repo:ro" \
+            -v portal-guesant-saberes-trivy-cache:/root/.cache/trivy \
+            -w /repo \
+            "$QUALITY_CI_IMAGE" \
+            bash -c '
+              aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo
+              aqua exec -- osv-scanner scan source --recursive /repo
+              aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo
+              semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools
+            '
+
       - name: Executar E2E e acessibilidade dentro do Docker
         run: |
           docker run --rm \
