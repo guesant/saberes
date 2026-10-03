@@ -1,6 +1,16 @@
 {
   "checksums": [
     {
+      "id": "github_release/github.com/schemaspy/schemaspy/v7.0.2/schemaspy-app.jar",
+      "checksum": "4C7DAF1C821071822ABDFEB0B72F36F500938D9D4016C3369F5582885F108717",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.53.4.0/sqlite-jdbc-3.53.4.0.jar",
+      "checksum": "BCB1F51E36F940867E83342F9EFBF5968AC44A6BEF4D397BB4AF7B17B45CD2FB",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/amacneil/dbmate/v2.36.0/dbmate-linux-amd64",
       "checksum": "47E284B3D8CBAD1BA5F090495AA05AFD1BBD5F35E2ED5577AAD06DA74CE780CE",
       "algorithm": "sha256"

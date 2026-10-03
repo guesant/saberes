@@ -1,0 +1,12 @@
+---
+registries:
+  - name: guesant
+    type: local
+    path: registry.yaml
+  - name: standard
+    type: standard
+    ref: semver(">= 4.570.0")
+
+packages:
+  - registry: guesant
+  - registry: standard

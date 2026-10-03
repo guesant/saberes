@@ -1,2 +1,19 @@
 ---
-packages: []
+packages:
+  - type: github_release
+    repo_owner: schemaspy
+    repo_name: schemaspy
+    asset: schemaspy-app.jar
+    format: raw
+    append_ext: false
+    files:
+      - name: schemaspy.jar
+    description: SchemaSpy database documentation generator fat JAR
+  - type: http
+    name: xerial/sqlite-jdbc
+    url: https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/{{.Version}}/sqlite-jdbc-{{.Version}}.jar
+    format: raw
+    append_ext: false
+    files:
+      - name: sqlite-jdbc.jar
+    description: SQLite JDBC driver
