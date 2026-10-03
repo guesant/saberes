@@ -1,4 +1,4 @@
-import type { ClearProgressPort } from "../ports/index.ts";
+import type { ClearProgressPort } from "../ports/index";
 
 export class ClearProgressCommandHandler {
   public constructor(private readonly port: ClearProgressPort) {}

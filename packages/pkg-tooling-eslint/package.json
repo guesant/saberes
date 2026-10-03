@@ -10,7 +10,7 @@
     "eslint": "^9.36.0"
   },
   "exports": {
-    "./architecture-plugin": "./src/architecture-plugin.mjs",
-    "./import-format-plugin": "./src/import-format-plugin.mjs"
+    "./architecture-plugin": "./src/architecture.plugin.mjs",
+    "./import-format-plugin": "./src/import-format.plugin.mjs"
   }
 }

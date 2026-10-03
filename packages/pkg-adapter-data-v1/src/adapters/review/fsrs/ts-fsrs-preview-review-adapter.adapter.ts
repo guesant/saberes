@@ -1,4 +1,4 @@
-import { previewReview } from "./preview-review.function.ts";
+import { previewReview } from "./preview-review.function";
 import type { PreviewReviewPort } from "@guesant/saberes-application";
 
 export class TsFsrsPreviewReviewAdapter implements PreviewReviewPort {

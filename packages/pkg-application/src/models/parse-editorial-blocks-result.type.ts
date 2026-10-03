@@ -1,4 +1,4 @@
-import type { EditorialValidationIssue } from "./editorial-validation-issue.interface.ts";
+import type { EditorialValidationIssue } from "./editorial-validation-issue.interface";
 import type { EditorialBlock } from "@guesant/saberes-domain";
 
 export type ParseEditorialBlocksResult =

@@ -1,7 +1,7 @@
 import { createApplication } from "@guesant/saberes-application";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "../query-client.config";
-import { AppServicesProvider } from "./app-services-context.component";
+import { AppServicesProvider } from "./app-services-provider.component";
 import { ApplicationRouter } from "./application-router.component";
 import { createAppDependencies } from "./create-app-dependencies.composition";
 

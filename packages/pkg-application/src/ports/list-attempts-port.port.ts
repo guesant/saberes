@@ -1,4 +1,4 @@
-import type { Attempt } from "../models/index.ts";
+import type { Attempt } from "../models/index";
 
 export interface ListAttemptsPort {
   execute(): Promise<Attempt[]>;

@@ -8,7 +8,7 @@ const configPath = ".config/aqua/aqua.yaml";
 
 const checksumPath = ".config/aqua/aqua-checksums.json";
 
-async function runAqua(config: string): Promise<void> {
+export async function runAqua(config: string): Promise<void> {
   const command = new Deno.Command("aqua", {
     args: ["update-checksum", "--config", config, "--prune"],
     stdout: "inherit",

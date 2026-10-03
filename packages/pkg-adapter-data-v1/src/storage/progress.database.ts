@@ -20,11 +20,11 @@ import {
   safeParse,
   string,
 } from "valibot";
-import type { AttemptDiagnosis } from "./attempt-diagnosis.interface.ts";
-import type { Attempt } from "./attempt.type.ts";
-import type { ReviewDatabaseEvent } from "./review-database-event.interface.ts";
-import type { ReviewTarget } from "./review-target.type.ts";
-import type { SessionRecord } from "./session-record.interface.ts";
+import type { AttemptDiagnosis } from "./attempt-diagnosis.interface";
+import type { Attempt } from "./attempt.type";
+import type { ReviewDatabaseEvent } from "./review-database-event.interface";
+import type { ReviewTarget } from "./review-target.type";
+import type { SessionRecord } from "./session-record.interface";
 
 export type { DiagnosisCode, DiagnosisConfidence, DiagnosisSource, PedagogicalAction, ReviewState };
 

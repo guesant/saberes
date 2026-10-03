@@ -1,1 +1,1 @@
-export * from "./i18n.setup.ts";
+export * from "./i18n.setup";

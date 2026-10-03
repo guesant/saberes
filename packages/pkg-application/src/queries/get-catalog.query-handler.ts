@@ -1,5 +1,6 @@
-import type { CatalogFilters, CatalogReadModel } from "../models/index.ts";
-import type { GetCatalogPort } from "../ports/index.ts";
+import type { CatalogReadModel } from "../models/index";
+import type { GetCatalogPort } from "../ports/index";
+import type { CatalogFilters } from "@guesant/saberes-domain";
 
 export class GetCatalogQueryHandler {
   public constructor(private readonly port: GetCatalogPort) {}

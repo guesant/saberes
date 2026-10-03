@@ -1,7 +1,7 @@
 import { Alert, Box, Paper, Typography } from "@guesant/saberes-ui";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-domain";
+import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 
 type KnowledgeMapBlockProps = {
   block: Extract<EditorialBlock, { type: "knowledge_map" }>;

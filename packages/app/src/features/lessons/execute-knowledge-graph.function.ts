@@ -1,5 +1,8 @@
-import type { BuildKnowledgeGraphPort } from "@guesant/saberes-application";
-import type { KnowledgeGraph, KnowledgeMapBlock } from "@guesant/saberes-domain";
+import type {
+  BuildKnowledgeGraphPort,
+  KnowledgeGraph,
+  KnowledgeMapBlock,
+} from "@guesant/saberes-application";
 
 export function executeKnowledgeGraph(
   port: BuildKnowledgeGraphPort,

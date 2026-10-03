@@ -1,5 +1,5 @@
-import type { Attempt } from "../models/index.ts";
-import type { ListAttemptsPort } from "../ports/index.ts";
+import type { Attempt } from "../models/index";
+import type { ListAttemptsPort } from "../ports/index";
 
 export class ListAttemptsQueryHandler {
   public constructor(private readonly port: ListAttemptsPort) {}

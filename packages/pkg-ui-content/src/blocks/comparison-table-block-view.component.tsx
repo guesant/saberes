@@ -1,7 +1,7 @@
 import { Box, HtmlTableBody, HtmlTableHead, HtmlTableRow, Table } from "@guesant/saberes-ui";
 import { ComparisonHeaderCell } from "./comparison-header-cell.component";
 import { ComparisonRow } from "./comparison-row.component";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type ComparisonTableBlockViewProps = {
   block: Extract<EditorialBlock, { type: "comparison_table" }>;

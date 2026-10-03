@@ -1,3 +1,3 @@
-export * from "./content-database.type.ts";
-export * from "./content-row.type.ts";
-export * from "./sql-result.type.ts";
+export * from "./content-database.type";
+export * from "./content-row.type";
+export * from "./sql-result.type";

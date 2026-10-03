@@ -1,5 +1,5 @@
-import type { Attempt } from "../models/index.ts";
-import type { CalculateTopicMasteryPort } from "../ports/index.ts";
+import type { Attempt } from "../models/index";
+import type { CalculateTopicMasteryPort } from "../ports/index";
 
 export class CalculateTopicMasteryQueryHandler {
   public constructor(private readonly port: CalculateTopicMasteryPort) {}

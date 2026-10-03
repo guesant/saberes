@@ -1,4 +1,4 @@
-import type { CatalogCardType } from "./domain.enums.ts";
+import type { CatalogCardType } from "./domain.enums";
 
 export interface CatalogCard {
   id: number | string;

@@ -1,7 +1,6 @@
-import { createContext, type PropsWithChildren } from "react";
+import { AppServicesContext } from "./app-services-context.setup";
 import type { ApplicationServices } from "@guesant/saberes-application";
-
-export const AppServicesContext = createContext<ApplicationServices | null>(null);
+import type { PropsWithChildren } from "react";
 
 type AppServicesProviderProps = PropsWithChildren<{ services: ApplicationServices }>;
 

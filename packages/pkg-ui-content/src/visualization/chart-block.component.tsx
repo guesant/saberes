@@ -1,7 +1,7 @@
 import { Paper, Typography, Box } from "@guesant/saberes-ui";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type ChartBlockProps = {
   block: Extract<EditorialBlock, { type: "chart" }>;

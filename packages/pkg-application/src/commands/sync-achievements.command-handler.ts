@@ -1,4 +1,4 @@
-import type { SyncAchievementsPort } from "../ports/index.ts";
+import type { SyncAchievementsPort } from "../ports/index";
 
 export class SyncAchievementsCommandHandler {
   public constructor(private readonly port: SyncAchievementsPort) {}

@@ -1,5 +1,5 @@
-import type { CourseReadModel } from "../models/index.ts";
-import type { GetCoursePort } from "../ports/index.ts";
+import type { CourseReadModel } from "../models/index";
+import type { GetCoursePort } from "../ports/index";
 
 export class GetCourseQueryHandler {
   public constructor(private readonly port: GetCoursePort) {}

@@ -8,7 +8,7 @@ import remarkMath from "remark-math";
 import { BlockView } from "./block-view.component";
 import { MarkdownImage } from "./markdown-image.component";
 import { MarkdownLink } from "./markdown-link.component";
-import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-domain";
+import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 
 export type ContentRendererProps = {
   markdown?: string;

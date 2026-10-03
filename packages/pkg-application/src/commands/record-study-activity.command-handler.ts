@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index.ts";
-import type { RecordStudyActivityPort } from "../ports/index.ts";
+import type { StudyRecord } from "../models/index";
+import type { RecordStudyActivityPort } from "../ports/index";
 
 export interface StudyActivityInput {
   at?: Date | string;

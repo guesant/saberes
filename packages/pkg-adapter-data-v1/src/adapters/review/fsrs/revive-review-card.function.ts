@@ -1,5 +1,5 @@
 import { createEmptyCard, type Card } from "ts-fsrs";
-import type { StoredReviewCard } from "./stored-review-card.type.ts";
+import type { StoredReviewCard } from "./stored-review-card.type";
 
 export type ReviewDateFactory = (value: string) => Date;
 

@@ -1,5 +1,5 @@
 import { ImageFigure } from "./image-figure.component";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type ImageBlockViewProps = {
   block: Extract<EditorialBlock, { type: "image" }>;

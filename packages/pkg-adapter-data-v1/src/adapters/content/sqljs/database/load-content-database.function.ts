@@ -1,7 +1,7 @@
 import initSqlJs from "sql.js";
 import { fetchContentDatabase } from "./fetch-content-database.function";
 import { mapSqlResults } from "./map-sql-results.function";
-import type { ContentDatabase } from "./content-database.type.ts";
+import type { ContentDatabase } from "./content-database.type";
 
 const primaryUrl =
   import.meta.env.VITE_CONTENT_DB_URL || `${import.meta.env.BASE_URL}data/content.sqlite`;

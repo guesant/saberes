@@ -1,6 +1,6 @@
 import { ArrowForwardIcon, Button, Paper, Typography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type QuestionLinkBlockViewProps = {
   block: Extract<EditorialBlock, { type: "question_link" }>;

@@ -7,7 +7,7 @@ import { defineConfig } from "vitest/config";
 
 const base = process.env.VITE_BASE_PATH || "/";
 
-const asset = (name: string) => `${base}${name}`.replace("//", "/");
+export const asset = (name: string) => `${base}${name}`.replace("//", "/");
 
 const localContentPath = path.resolve(process.cwd(), ".local/content/content.sqlite");
 

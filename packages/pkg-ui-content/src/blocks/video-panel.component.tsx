@@ -1,6 +1,6 @@
 import { Button, OpenInNewIcon, Paper, Typography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type VideoPanelProps = {
   block: Extract<EditorialBlock, { type: "video" }>;

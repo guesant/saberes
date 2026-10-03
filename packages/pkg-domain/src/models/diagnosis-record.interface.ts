@@ -3,7 +3,7 @@ import type {
   DiagnosisConfidence,
   DiagnosisSource,
   PedagogicalAction,
-} from "./domain.enums.ts";
+} from "./domain.enums";
 
 export interface DiagnosisRecord {
   attemptId: string;

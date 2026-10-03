@@ -1,5 +1,5 @@
-import type { StudyPlanReadModel } from "../models/index.ts";
-import type { GetStudyPlanPort } from "../ports/index.ts";
+import type { StudyPlanReadModel } from "../models/index";
+import type { GetStudyPlanPort } from "../ports/index";
 
 export class GetStudyPlanQueryHandler {
   public constructor(private readonly port: GetStudyPlanPort) {}

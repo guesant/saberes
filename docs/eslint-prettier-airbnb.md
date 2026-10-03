@@ -8,7 +8,7 @@ As regras estritas incluem JSX com profundidade máxima de três níveis, contra
 de props nomeado, delegação de renderização condicional, listas que retornam
 componentes importados, limites de complexidade, regras SonarJS, boundaries e
 regras TypeScript de segurança. O plugin local em
-[`packages/pkg-tooling-eslint/src/architecture-plugin.mjs`](../packages/pkg-tooling-eslint/src/architecture-plugin.mjs)
+[`packages/pkg-tooling-eslint/src/architecture.plugin.mjs`](../packages/pkg-tooling-eslint/src/architecture.plugin.mjs)
 contém as regras que não possuem equivalente nativo suficiente.
 
 O gate diário e o gate pesado usam a mesma configuração completa. A diferença

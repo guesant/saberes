@@ -1,6 +1,6 @@
 import { Paper, Typography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type SummaryBlockViewProps = {
   block: Extract<EditorialBlock, { type: "summary" }>;

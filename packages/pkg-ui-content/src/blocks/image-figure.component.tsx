@@ -1,5 +1,5 @@
 import { Box, Typography } from "@guesant/saberes-ui";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type ImageFigureProps = {
   block: Extract<EditorialBlock, { type: "image" }>;

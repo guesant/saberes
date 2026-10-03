@@ -42,7 +42,7 @@ const extensionPolicies = new Map<string, FilePolicy>([
   ],
 ]);
 
-function commentAt(line: string, markers: string[]): number {
+export function commentAt(line: string, markers: string[]): number {
   let quote = "";
 
   let escaped = false;
@@ -82,13 +82,13 @@ function commentAt(line: string, markers: string[]): number {
   return -1;
 }
 
-function policyFor(path: string): FilePolicy | undefined {
+export function policyFor(path: string): FilePolicy | undefined {
   const name = path.split("/").at(-1) ?? path;
 
   return policies.get(name) ?? extensionPolicies.get(extname(name));
 }
 
-async function inspectFile(path: string, policy: FilePolicy): Promise<void> {
+export async function inspectFile(path: string, policy: FilePolicy): Promise<void> {
   const content = await Deno.readTextFile(path);
 
   let blockComment = false;
@@ -133,7 +133,7 @@ async function inspectFile(path: string, policy: FilePolicy): Promise<void> {
   }
 }
 
-async function walk(directory: string): Promise<void> {
+export async function walk(directory: string): Promise<void> {
   for await (const entry of Deno.readDir(directory)) {
     if ([".git", ".cache", "dist", "node_modules"].includes(entry.name)) {
       continue;

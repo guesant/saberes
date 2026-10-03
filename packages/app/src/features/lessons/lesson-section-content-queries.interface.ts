@@ -1,5 +1,4 @@
-import type { ParseEditorialBlocksResult } from "@guesant/saberes-application";
-import type { KnowledgeGraph } from "@guesant/saberes-domain";
+import type { KnowledgeGraph, ParseEditorialBlocksResult } from "@guesant/saberes-application";
 
 export interface LessonSectionContentQueries {
   blocks: {

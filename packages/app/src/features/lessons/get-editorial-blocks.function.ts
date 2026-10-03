@@ -1,5 +1,4 @@
-import type { ParseEditorialBlocksResult } from "@guesant/saberes-application";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock, ParseEditorialBlocksResult } from "@guesant/saberes-application";
 
 export function getEditorialBlocks(result?: ParseEditorialBlocksResult): EditorialBlock[] {
   return result?.status === "valid" ? result.blocks : [];

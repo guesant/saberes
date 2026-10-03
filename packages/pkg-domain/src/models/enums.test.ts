@@ -5,7 +5,7 @@ import {
   OrganizerCode,
   ReviewTargetType,
   UniversityCode,
-} from "./domain.enums.ts";
+} from "./domain.enums";
 
 describe("tokens estáveis do domínio", () => {
   it("mantém os códigos editoriais compatíveis com o SQLite", () => {

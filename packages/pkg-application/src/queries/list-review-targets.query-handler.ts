@@ -1,5 +1,5 @@
-import type { ReviewTarget } from "../models/index.ts";
-import type { ListReviewTargetsPort } from "../ports/index.ts";
+import type { ReviewTarget } from "../models/index";
+import type { ListReviewTargetsPort } from "../ports/index";
 
 export class ListReviewTargetsQueryHandler {
   public constructor(private readonly port: ListReviewTargetsPort) {}

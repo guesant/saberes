@@ -1,4 +1,4 @@
-import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-domain";
+import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 
 export type LessonSectionContentViewModel =
   | { status: "loading" }

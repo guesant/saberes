@@ -1,9 +1,11 @@
-export * from "./application.services.ts";
+export * from "./application.services";
 
-export * from "./models/index.ts";
+export * from "@guesant/saberes-domain";
 
-export * from "./application.ports.ts";
+export * from "./models/index";
 
-export * from "./commands/index.ts";
-export * from "./ports/index.ts";
-export * from "./queries/index.ts";
+export * from "./application.ports";
+
+export * from "./commands/index";
+export * from "./ports/index";
+export * from "./queries/index";

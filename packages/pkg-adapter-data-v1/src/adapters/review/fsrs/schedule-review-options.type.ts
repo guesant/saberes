@@ -1,4 +1,4 @@
-import type { ReviewDateFactory } from "./revive-review-card.function.ts";
+import type { ReviewDateFactory } from "./revive-review-card.function";
 
 export type ScheduleReviewOptions = {
   now: Date;

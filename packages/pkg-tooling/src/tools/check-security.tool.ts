@@ -11,7 +11,7 @@ const extensions = new Set([".ts", ".tsx"]);
 
 const forbiddenPatterns = [[/javascript\s*:/iu, "javascript URL"]];
 
-async function filesIn(directory) {
+export async function filesIn(directory) {
   const entries = [];
 
   for await (const entry of Deno.readDir(directory)) {

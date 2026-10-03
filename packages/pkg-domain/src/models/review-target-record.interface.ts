@@ -1,5 +1,5 @@
-import type { ContentKey } from "./content-key.type.ts";
-import type { ReviewState, ReviewTargetType } from "./domain.enums.ts";
+import type { ContentKey } from "./content-key.type";
+import type { ReviewState, ReviewTargetType } from "./domain.enums";
 
 export interface ReviewTargetRecord {
   contentKey: ContentKey | string;

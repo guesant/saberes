@@ -7,7 +7,7 @@ import {
   ReviewTargetType,
 } from "@guesant/saberes-domain";
 import { beforeEach, describe, expect, it } from "vitest";
-import { progressDb } from "./progress.storage";
+import { progressDb } from "./progress.database";
 
 describe("progresso local Dexie", () => {
   beforeEach(async () => {

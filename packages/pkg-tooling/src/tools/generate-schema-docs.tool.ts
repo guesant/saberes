@@ -20,7 +20,7 @@ const schemaspyJar = Deno.env.get("SCHEMASPY_JAR") || join(aquaRoot, "jars/schem
 
 const sqliteJdbcJar = Deno.env.get("SQLITE_JDBC_JAR") || join(aquaRoot, "jars/sqlite-jdbc.jar");
 
-async function removeIfPresent(path: string) {
+export async function removeIfPresent(path: string) {
   try {
     await Deno.remove(path, { recursive: true });
   } catch (error) {
@@ -30,7 +30,7 @@ async function removeIfPresent(path: string) {
   }
 }
 
-async function run(command: string, args: string[]) {
+export async function run(command: string, args: string[]) {
   const result = await new Deno.Command(command, {
     args,
     cwd: root,

@@ -1,6 +1,6 @@
-import type { ParseEditorialBlocksInput } from "../models/parse-editorial-blocks-input.interface.ts";
-import type { ParseEditorialBlocksResult } from "../models/parse-editorial-blocks-result.type.ts";
-import type { ParseEditorialBlocksPort } from "../ports/parse-editorial-blocks-port.port.ts";
+import type { ParseEditorialBlocksInput } from "../models/parse-editorial-blocks-input.interface";
+import type { ParseEditorialBlocksResult } from "../models/parse-editorial-blocks-result.type";
+import type { ParseEditorialBlocksPort } from "../ports/parse-editorial-blocks-port.port";
 
 export class ParseEditorialBlocksQueryHandler {
   public constructor(private readonly port: ParseEditorialBlocksPort) {}

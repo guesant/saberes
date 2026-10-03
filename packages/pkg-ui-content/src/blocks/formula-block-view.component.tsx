@@ -4,7 +4,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeSanitize from "rehype-sanitize";
 import remarkMath from "remark-math";
 import { FormulaCaption } from "./formula-caption.component";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type FormulaBlockViewProps = {
   block: Extract<EditorialBlock, { type: "formula" }>;

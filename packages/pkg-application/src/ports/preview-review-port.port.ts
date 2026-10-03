@@ -1,4 +1,4 @@
-import type { ReviewTarget } from "../models/index.ts";
+import type { ReviewTarget } from "../models/index";
 
 export interface PreviewReviewPort {
   execute(input: {

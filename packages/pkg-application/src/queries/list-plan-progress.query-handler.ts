@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index.ts";
-import type { ListPlanProgressPort } from "../ports/index.ts";
+import type { StudyRecord } from "../models/index";
+import type { ListPlanProgressPort } from "../ports/index";
 
 export class ListPlanProgressQueryHandler {
   public constructor(private readonly port: ListPlanProgressPort) {}

@@ -14,7 +14,7 @@ const sourceExtensions = new Set([".ts", ".tsx"]);
 
 const violations: string[] = [];
 
-async function filesIn(directory: string): Promise<string[]> {
+export async function filesIn(directory: string): Promise<string[]> {
   const files: string[] = [];
 
   for await (const entry of Deno.readDir(directory)) {
@@ -47,7 +47,7 @@ for (const [layer, root] of Object.entries(roots)) {
     const isComposition =
       relativePath.startsWith("composition/") ||
       relativePath === "main.tsx" ||
-      relativePath === "main.component.tsx";
+      relativePath === "main.setup.ts";
 
     const isView =
       relativePath.endsWith("View.tsx") || /\.view\.component\.tsx$/u.test(relativePath);

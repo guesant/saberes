@@ -1,4 +1,5 @@
-import type { ContentKey, ReviewTarget } from "../models/index.ts";
+import type { ReviewTarget } from "../models/index";
+import type { ContentKey } from "@guesant/saberes-domain";
 
 export interface SaveReviewTargetPort {
   execute(input: {

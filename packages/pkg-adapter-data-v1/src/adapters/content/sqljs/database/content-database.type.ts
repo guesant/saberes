@@ -1,4 +1,4 @@
-import type { ContentRow } from "./content-row.type.ts";
+import type { ContentRow } from "./content-row.type";
 
 export type ContentDatabase = {
   source: string;

@@ -47,7 +47,7 @@ const typeSuffixes = new Set([
 
 const errors: string[] = [];
 
-async function collectFiles(directory: string): Promise<string[]> {
+export async function collectFiles(directory: string): Promise<string[]> {
   const files: string[] = [];
 
   for await (const entry of Deno.readDir(directory)) {
@@ -67,7 +67,7 @@ async function collectFiles(directory: string): Promise<string[]> {
   return files;
 }
 
-function getFinalType(fileName: string): string | null {
+export function getFinalType(fileName: string): string | null {
   if (fileName.endsWith(".d.ts")) {
     return "declaration";
   }
@@ -79,7 +79,7 @@ function getFinalType(fileName: string): string | null {
   return type && typeSuffixes.has(type) ? type : null;
 }
 
-function checkFileName(path: string): void {
+export function checkFileName(path: string): void {
   const fileName = path.split("/").at(-1) ?? path;
 
   if (fileName === "index.ts" || fileName === "index.tsx") {

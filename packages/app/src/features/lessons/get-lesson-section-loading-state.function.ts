@@ -1,5 +1,5 @@
 import type { LessonSectionContentQueries } from "./lesson-section-content-queries.interface";
-import type { LessonSectionContentViewModel } from "./lesson-section-content.view-model";
+import type { LessonSectionContentViewModel } from "./lesson-section-content-view-model.type";
 
 export function getLessonSectionLoadingState(
   queries: LessonSectionContentQueries,

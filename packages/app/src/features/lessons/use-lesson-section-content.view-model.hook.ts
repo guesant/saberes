@@ -1,7 +1,7 @@
 import { createLessonSectionContentViewModel } from "./create-lesson-section-content-view-model.function";
 import { useLessonSectionContentQueries } from "./use-lesson-section-content-queries.hook";
 import type { LessonSectionContentInput } from "./lesson-section-content-input.type";
-import type { LessonSectionContentViewModel } from "./lesson-section-content.view-model";
+import type { LessonSectionContentViewModel } from "./lesson-section-content-view-model.type";
 
 export function useLessonSectionContentViewModel(
   props: LessonSectionContentInput,

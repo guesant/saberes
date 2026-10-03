@@ -1,7 +1,7 @@
 import { Alert, Box, Paper, Typography } from "@guesant/saberes-ui";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 import type { WebGLRenderer } from "three";
 
 type ParametricSceneBlockProps = {

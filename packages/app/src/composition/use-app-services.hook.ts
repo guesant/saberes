@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppServicesContext } from "./app-services-context.component";
+import { AppServicesContext } from "./app-services-context.setup";
 
 export function useAppServices() {
   const services = useContext(AppServicesContext);

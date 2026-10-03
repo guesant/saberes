@@ -1,5 +1,5 @@
 import { defineAchievements, type AchievementStats } from "@guesant/saberes-domain";
-import { progressDb } from "../storage/progress.storage";
+import { progressDb } from "../storage/progress.database";
 
 export async function syncAchievements(stats: AchievementStats = {}) {
   const achievements = defineAchievements(stats);

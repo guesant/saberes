@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index.ts";
-import type { SaveDailyChallengePort } from "../ports/index.ts";
+import type { StudyRecord } from "../models/index";
+import type { SaveDailyChallengePort } from "../ports/index";
 
 export class SaveDailyChallengeCommandHandler {
   public constructor(private readonly port: SaveDailyChallengePort) {}

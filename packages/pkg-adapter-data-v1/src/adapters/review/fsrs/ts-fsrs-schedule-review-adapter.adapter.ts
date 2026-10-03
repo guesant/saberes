@@ -1,4 +1,4 @@
-import { scheduleReview } from "./schedule-review.function.ts";
+import { scheduleReview } from "./schedule-review.function";
 import type { ScheduleReviewPort, ReviewTarget } from "@guesant/saberes-application";
 
 export class TsFsrsScheduleReviewAdapter implements ScheduleReviewPort {

@@ -22,7 +22,9 @@ services:
     environment:
       DENO_DIR: /deno/cache
       DENO_NO_PROMPT: "1"
+      # yamllint disable rule:line-length
       PATH: /opt/mise/shims:/opt/mise/bin:/opt/aqua/bin:/app/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/bin
+      # yamllint enable rule:line-length
       VITE_BASE_PATH: ${VITE_BASE_PATH:-/}
       VITE_CONTENT_DB_URL: ${VITE_CONTENT_DB_URL:-}
       PLAYWRIGHT_BASE_URL: ${PLAYWRIGHT_BASE_URL:-http://web}

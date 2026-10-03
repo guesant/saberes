@@ -1,7 +1,7 @@
-import { progressDb } from "../../../storage/progress.storage";
-import type { AttemptDiagnosis } from "../../../storage/attempt-diagnosis.interface.ts";
-import type { Attempt } from "../../../storage/attempt.type.ts";
-import type { ReviewTarget } from "../../../storage/review-target.type.ts";
+import { progressDb } from "../../../storage/progress.database";
+import type { AttemptDiagnosis } from "../../../storage/attempt-diagnosis.interface";
+import type { Attempt } from "../../../storage/attempt.type";
+import type { ReviewTarget } from "../../../storage/review-target.type";
 import type { DiagnosisRecord, AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
 
 type SessionRecord = { id: string; [key: string]: unknown };

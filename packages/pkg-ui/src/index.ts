@@ -1,101 +1,101 @@
-export * from "./alert.component.tsx";
+export * from "./alert.component";
 
-export * from "./app-bar.component.tsx";
+export * from "./app-bar.component";
 
-export * from "./arrow-forward-icon.component.tsx";
+export * from "./arrow-forward-icon.component";
 
-export * from "./auto-stories-icon.component.tsx";
+export * from "./auto-stories-icon.component";
 
-export * from "./bookmark-border-icon.component.tsx";
+export * from "./bookmark-border-icon.component";
 
-export * from "./box.component.tsx";
+export * from "./box.component";
 
-export * from "./button.component.tsx";
+export * from "./button.component";
 
-export * from "./card.component.tsx";
+export * from "./card.component";
 
-export * from "./card-content.component.tsx";
+export * from "./card-content.component";
 
-export * from "./check-circle-icon.component.tsx";
+export * from "./check-circle-icon.component";
 
-export * from "./chip.component.tsx";
+export * from "./chip.component";
 
-export * from "./circular-progress.component.tsx";
+export * from "./circular-progress.component";
 
-export * from "./container.component.tsx";
+export * from "./container.component";
 
-export * from "./create-theme.function.ts";
+export * from "./create-theme.function";
 
-export * from "./css-baseline.component.tsx";
+export * from "./css-baseline.component";
 
-export * from "./divider.component.tsx";
+export * from "./divider.component";
 
-export * from "./drawer.component.tsx";
+export * from "./drawer.component";
 
-export * from "./event-note-icon.component.tsx";
+export * from "./event-note-icon.component";
 
-export * from "./explore-icon.component.tsx";
+export * from "./explore-icon.component";
 
-export * from "./grid.component.tsx";
+export * from "./grid.component";
 
-export * from "./html-strong-text.component.tsx";
+export * from "./html-strong-text.component";
 
-export * from "./html-table-body.component.tsx";
+export * from "./html-table-body.component";
 
-export * from "./html-table-cell.component.tsx";
+export * from "./html-table-cell.component";
 
-export * from "./html-table-head.component.tsx";
+export * from "./html-table-head.component";
 
-export * from "./html-table-header-cell.component.tsx";
+export * from "./html-table-header-cell.component";
 
-export * from "./html-table-row.component.tsx";
+export * from "./html-table-row.component";
 
-export * from "./icon-button.component.tsx";
+export * from "./icon-button.component";
 
-export * from "./input-adornment.component.tsx";
+export * from "./input-adornment.component";
 
-export * from "./link.component.tsx";
+export * from "./link.component";
 
-export * from "./list.component.tsx";
+export * from "./list.component";
 
-export * from "./list-item.component.tsx";
+export * from "./list-item.component";
 
-export * from "./list-item-button.component.tsx";
+export * from "./list-item-button.component";
 
-export * from "./list-item-text.component.tsx";
+export * from "./list-item-text.component";
 
-export * from "./menu-icon.component.tsx";
+export * from "./menu-icon.component";
 
-export * from "./offline-bolt-icon.component.tsx";
+export * from "./offline-bolt-icon.component";
 
-export * from "./open-in-new-icon.component.tsx";
+export * from "./open-in-new-icon.component";
 
-export * from "./paper.component.tsx";
+export * from "./paper.component";
 
-export * from "./play-arrow-icon.component.tsx";
+export * from "./play-arrow-icon.component";
 
-export * from "./quiz-icon.component.tsx";
+export * from "./quiz-icon.component";
 
-export * from "./refresh-icon.component.tsx";
+export * from "./refresh-icon.component";
 
-export * from "./stack.component.tsx";
+export * from "./stack.component";
 
-export * from "./step.component.tsx";
+export * from "./step.component";
 
-export * from "./step-button.component.tsx";
+export * from "./step-button.component";
 
-export * from "./stepper.component.tsx";
+export * from "./stepper.component";
 
-export * from "./tab.component.tsx";
+export * from "./tab.component";
 
-export * from "./table.component.tsx";
+export * from "./table.component";
 
-export * from "./tabs.component.tsx";
+export * from "./tabs.component";
 
-export * from "./text-field.component.tsx";
+export * from "./text-field.component";
 
-export * from "./theme-provider.component.tsx";
+export * from "./theme-provider.component";
 
-export * from "./toolbar.component.tsx";
+export * from "./toolbar.component";
 
-export * from "./typography.component.tsx";
+export * from "./typography.component";

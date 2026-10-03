@@ -4,7 +4,7 @@ import { getLessonSectionLoadingState } from "./get-lesson-section-loading-state
 import { getLessonSectionResultState } from "./get-lesson-section-result-state.function";
 import type { LessonSectionContentInput } from "./lesson-section-content-input.type";
 import type { LessonSectionContentQueries } from "./lesson-section-content-queries.interface";
-import type { LessonSectionContentViewModel } from "./lesson-section-content.view-model";
+import type { LessonSectionContentViewModel } from "./lesson-section-content-view-model.type";
 
 export function createLessonSectionContentViewModel(
   input: LessonSectionContentInput,

@@ -2,7 +2,7 @@ import { Box, Typography } from "@guesant/saberes-ui";
 import { ContentRenderer } from "@guesant/saberes-ui-content";
 import { ContentErrorState } from "../../components/content-error-state.component";
 import { ContentLoadingState } from "../../components/content-loading-state.component";
-import type { LessonSectionContentViewModel } from "./lesson-section-content.view-model";
+import type { LessonSectionContentViewModel } from "./lesson-section-content-view-model.type";
 
 export type LessonSectionContentViewProps = {
   viewModel: LessonSectionContentViewModel;

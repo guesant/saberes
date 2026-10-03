@@ -3,7 +3,7 @@ import { useAppServices } from "../../composition/use-app-services.hook";
 import { createStudyPlanStepUpdater } from "./create-study-plan-step-updater.function";
 import { getStudyPlanError } from "./get-study-plan-error.function";
 import { getStudyPlanViewState } from "./get-study-plan-view-state.function";
-import { reloadStudyPlanData } from "./reload-study-plan.function";
+import { reloadStudyPlanData } from "./reload-study-plan-data.function";
 import type { StudyPlanReadModel, StudyRecord } from "@guesant/saberes-application";
 
 export type StudyPlanViewModelState = "loading" | "error" | "ready";

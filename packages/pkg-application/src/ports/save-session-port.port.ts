@@ -1,4 +1,4 @@
-import type { StudySession } from "../models/index.ts";
+import type { StudySession } from "../models/index";
 
 export interface SaveSessionPort {
   execute(session: StudySession): Promise<void>;

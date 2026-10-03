@@ -1,4 +1,4 @@
-import { progressDb } from "../storage/progress.storage";
+import { progressDb } from "../storage/progress.database";
 
 export async function addStudyPoints(amount: number, reason: string) {
   const current = await progressDb.getSetting("studyPoints");

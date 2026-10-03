@@ -1,4 +1,4 @@
-import { DiagnosisCode, PedagogicalAction } from "../index.ts";
+import { DiagnosisCode, PedagogicalAction } from "../index";
 
 export function actionForDiagnosis(code: DiagnosisCode): PedagogicalAction {
   if (code === DiagnosisCode.ConceptGap || code === DiagnosisCode.DidNotKnow) {

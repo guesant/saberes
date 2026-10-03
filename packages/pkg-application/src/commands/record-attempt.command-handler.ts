@@ -1,5 +1,5 @@
-import type { Attempt } from "../models/index.ts";
-import type { RecordAttemptPort } from "../ports/index.ts";
+import type { Attempt } from "../models/index";
+import type { RecordAttemptPort } from "../ports/index";
 
 export class RecordAttemptCommandHandler {
   public constructor(private readonly port: RecordAttemptPort) {}

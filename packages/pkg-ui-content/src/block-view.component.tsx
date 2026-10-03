@@ -7,7 +7,7 @@ import { QuestionLinkBlockView } from "./blocks/question-link-block-view.compone
 import { SummaryBlockView } from "./blocks/summary-block-view.component";
 import { VideoBlockView } from "./blocks/video-block-view.component";
 import { ContentLoadingFallback } from "./content-loading-fallback.component";
-import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-domain";
+import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 import type { ReactNode } from "react";
 
 const ChartBlock = lazy(() =>

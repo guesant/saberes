@@ -1,4 +1,4 @@
-import { DiagnosisCode, type AttemptRecord } from "../index.ts";
+import { DiagnosisCode, type AttemptRecord } from "../index";
 
 export function suggestDiagnosis(
   attempt: Pick<AttemptRecord, "isCorrect" | "elapsedMs" | "attemptNumber">,

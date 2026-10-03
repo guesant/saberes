@@ -1,4 +1,4 @@
-import { DiagnosisCode } from "../index.ts";
+import { DiagnosisCode } from "../index";
 
 export function calculateDiagnosticWeight(code?: DiagnosisCode) {
   if (code === DiagnosisCode.ConceptGap || code === DiagnosisCode.DidNotKnow) {

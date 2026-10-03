@@ -1,5 +1,5 @@
 import { VideoPanel } from "./video-panel.component";
-import type { EditorialBlock } from "@guesant/saberes-domain";
+import type { EditorialBlock } from "@guesant/saberes-application";
 
 type VideoBlockViewProps = {
   block: Extract<EditorialBlock, { type: "video" }>;

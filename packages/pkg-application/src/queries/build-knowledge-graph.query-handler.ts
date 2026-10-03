@@ -1,4 +1,4 @@
-import type { BuildKnowledgeGraphPort } from "../ports/build-knowledge-graph-port.port.ts";
+import type { BuildKnowledgeGraphPort } from "../ports/build-knowledge-graph-port.port";
 import type { KnowledgeGraph, KnowledgeMapBlock } from "@guesant/saberes-domain";
 
 export class BuildKnowledgeGraphQueryHandler {

@@ -1,5 +1,5 @@
-import type { TopicMapReadModel } from "../models/index.ts";
-import type { GetTopicMapPort } from "../ports/index.ts";
+import type { TopicMapReadModel } from "../models/index";
+import type { GetTopicMapPort } from "../ports/index";
 
 export class GetTopicMapQueryHandler {
   public constructor(private readonly port: GetTopicMapPort) {}

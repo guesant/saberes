@@ -1,5 +1,5 @@
-import type { DiagnosisRecord } from "../models/index.ts";
-import type { ListDiagnosesPort } from "../ports/index.ts";
+import type { ListDiagnosesPort } from "../ports/index";
+import type { DiagnosisRecord } from "@guesant/saberes-domain";
 
 export class ListDiagnosesQueryHandler {
   public constructor(private readonly port: ListDiagnosesPort) {}

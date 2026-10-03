@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index.ts";
-import type { SaveAchievementPort } from "../ports/index.ts";
+import type { StudyRecord } from "../models/index";
+import type { SaveAchievementPort } from "../ports/index";
 
 export class SaveAchievementCommandHandler {
   public constructor(private readonly port: SaveAchievementPort) {}

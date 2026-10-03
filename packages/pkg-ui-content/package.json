@@ -29,6 +29,6 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./styles": "./src/styles.ts"
+    "./styles": "./src/content.styles.ts"
   }
 }

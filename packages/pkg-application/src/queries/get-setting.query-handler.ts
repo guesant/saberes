@@ -1,4 +1,4 @@
-import type { GetSettingPort } from "../ports/index.ts";
+import type { GetSettingPort } from "../ports/index";
 
 export class GetSettingQueryHandler {
   public constructor(private readonly port: GetSettingPort) {}

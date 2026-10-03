@@ -1,5 +1,5 @@
-import { calculateDiagnosticWeight } from "./calculate-diagnostic-weight.function.ts";
-import type { AttemptRecord } from "../index.ts";
+import { calculateDiagnosticWeight } from "./calculate-diagnostic-weight.function";
+import type { AttemptRecord } from "../index";
 
 export function calculateTopicMastery(attempts: AttemptRecord[] = []) {
   const map = new Map<

@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { createApplication, type ApplicationPorts, type GetCatalogPort } from "./index.ts";
+import { createApplication, type ApplicationPorts, type GetCatalogPort } from "./index";
 
 describe("application services", () => {
   it("orquestra uma query através de uma port", async () => {

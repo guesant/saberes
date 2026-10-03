@@ -1,4 +1,4 @@
-import type { ContentKey } from "./content-key.type.ts";
+import type { ContentKey } from "./content-key.type";
 
 export interface LessonProgressRecord {
   contentKey: ContentKey | string;

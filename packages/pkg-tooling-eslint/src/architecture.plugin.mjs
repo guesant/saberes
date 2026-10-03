@@ -37,12 +37,12 @@ const forbiddenDomainImports = [
   /^(?:@mui|@emotion|@tanstack)\//,
 ];
 
-function normalizedFilename(filename) {
+export function normalizeFilename(filename) {
   return filename.replaceAll("\\", "/");
 }
 
-function sourceLayer(filename) {
-  const normalized = normalizedFilename(filename);
+export function getSourceLayer(filename) {
+  const normalized = normalizeFilename(filename);
 
   if (normalized === "<input>.ts" || normalized.startsWith("<text")) {
     return undefined;
@@ -115,7 +115,7 @@ function sourceLayer(filename) {
   return undefined;
 }
 
-function packagePathFromSpecifier(source) {
+export function getPackagePathFromSpecifier(source) {
   for (const [specifier, packagePath] of workspacePackagePaths) {
     if (source === specifier || source.startsWith(`${specifier}/`)) {
       return packagePath;
@@ -125,19 +125,39 @@ function packagePathFromSpecifier(source) {
   return undefined;
 }
 
-function isWorkspaceModuleSource(source) {
-  return Boolean(packagePathFromSpecifier(source)) || source.startsWith("@guesant/saberes-");
+export function getAdapterPackageFromFilename(filename) {
+  return normalizeFilename(filename).match(/\/packages\/(pkg-adapter-[^/]+)\//)?.[1];
 }
 
-function isTestFilename(filename) {
+export function getAdapterPackageFromSource(filename, source) {
+  const packagePath = getPackagePathFromSpecifier(source);
+
+  if (packagePath) {
+    return packagePath.split("/").at(1)?.startsWith("pkg-adapter-")
+      ? packagePath.split("/").at(1)
+      : undefined;
+  }
+
+  if (source.startsWith(".")) {
+    return getAdapterPackageFromFilename(getRelativeTargetFilename(filename, source));
+  }
+
+  return undefined;
+}
+
+export function isWorkspaceModuleSource(source) {
+  return Boolean(getPackagePathFromSpecifier(source)) || source.startsWith("@guesant/saberes-");
+}
+
+export function isTestFilename(filename) {
   return /(?:\.test|\.spec)\.(?:js|jsx|mjs|ts|tsx)$/.test(filename);
 }
 
-function isExternalModuleSource(source) {
+export function isExternalModuleSource(source) {
   return !source.startsWith(".") && !isWorkspaceModuleSource(source);
 }
 
-function relativeTargetFilename(filename, source) {
+export function getRelativeTargetFilename(filename, source) {
   if (!source.startsWith(".")) {
     return undefined;
   }
@@ -145,7 +165,7 @@ function relativeTargetFilename(filename, source) {
   return resolve(dirname(filename), source).replaceAll("\\", "/");
 }
 
-function targetLayer(filename, source) {
+export function getTargetLayer(filename, source) {
   for (const [specifier, packagePath] of workspacePackagePaths) {
     if (source === specifier || source.startsWith(`${specifier}/`)) {
       const internalPath = source.slice(specifier.length).replace(/^\//, "");
@@ -154,7 +174,7 @@ function targetLayer(filename, source) {
         ? resolve(process.cwd(), packagePath, "src", internalPath)
         : resolve(process.cwd(), packagePath, "src/index.ts");
 
-      return sourceLayer(targetPath);
+      return getSourceLayer(targetPath);
     }
   }
 
@@ -163,13 +183,13 @@ function targetLayer(filename, source) {
   }
 
   if (source.startsWith(".")) {
-    return sourceLayer(relativeTargetFilename(filename, source));
+    return getSourceLayer(getRelativeTargetFilename(filename, source));
   }
 
   return undefined;
 }
 
-function staticModuleSource(node) {
+export function getStaticModuleSource(node) {
   if (node?.type === "Literal" && typeof node.value === "string") {
     return node.value;
   }
@@ -181,11 +201,11 @@ function staticModuleSource(node) {
   return undefined;
 }
 
-function moduleReferenceVisitors(context, visit) {
-  const filename = normalizedFilename(context.getFilename());
+export function createModuleReferenceVisitors(context, visit) {
+  const filename = normalizeFilename(context.getFilename());
 
   function inspect(node, sourceNode) {
-    const source = staticModuleSource(sourceNode);
+    const source = getStaticModuleSource(sourceNode);
 
     if (source) {
       visit({
@@ -193,8 +213,8 @@ function moduleReferenceVisitors(context, visit) {
         filename,
         node,
         source,
-        layer: sourceLayer(filename),
-        target: targetLayer(filename, source),
+        layer: getSourceLayer(filename),
+        target: getTargetLayer(filename, source),
       });
     }
   }
@@ -223,11 +243,11 @@ function moduleReferenceVisitors(context, visit) {
   };
 }
 
-function isJsx(node) {
+export function isJsx(node) {
   return Boolean(node && (node.type === "JSXElement" || node.type === "JSXFragment"));
 }
 
-function containsJsx(node, sourceCode) {
+export function containsJsx(node, sourceCode) {
   if (!node || typeof node !== "object") {
     return false;
   }
@@ -245,7 +265,7 @@ function containsJsx(node, sourceCode) {
   });
 }
 
-function containsControlFlow(node, sourceCode) {
+export function containsControlFlow(node, sourceCode) {
   if (!node || typeof node !== "object") {
     return false;
   }
@@ -274,7 +294,7 @@ function containsControlFlow(node, sourceCode) {
   });
 }
 
-function unwrapExpression(node) {
+export function unwrapExpression(node) {
   let current = node;
 
   while (
@@ -293,7 +313,7 @@ function unwrapExpression(node) {
   return current;
 }
 
-function callbackExpression(callback) {
+export function getCallbackExpression(callback) {
   if (callback.type === "ArrowFunctionExpression" && callback.body.type !== "BlockStatement") {
     return unwrapExpression(callback.body);
   }
@@ -313,7 +333,7 @@ function callbackExpression(callback) {
   return undefined;
 }
 
-function isImportedSelfClosingComponent(expression, importedBindings) {
+export function isImportedSelfClosingComponent(expression, importedBindings) {
   const node = unwrapExpression(expression);
 
   return Boolean(
@@ -325,7 +345,7 @@ function isImportedSelfClosingComponent(expression, importedBindings) {
   );
 }
 
-function isMapCall(node) {
+export function isMapCall(node) {
   return (
     node.callee?.type === "MemberExpression" &&
     !node.callee.computed &&
@@ -334,7 +354,7 @@ function isMapCall(node) {
   );
 }
 
-function collectImports(node) {
+export function collectImports(node) {
   const bindings = new Set();
 
   for (const specifier of node.specifiers) {
@@ -344,7 +364,7 @@ function collectImports(node) {
   return bindings;
 }
 
-function componentName(node) {
+export function getComponentName(node) {
   if (node.type === "FunctionDeclaration") {
     return node.id?.name;
   }
@@ -354,12 +374,36 @@ function componentName(node) {
     : undefined;
 }
 
-function isTopLevel(node) {
+const transparentFunctionParentTypes = new Set([
+  "ChainExpression",
+  "ParenthesizedExpression",
+  "TSAsExpression",
+  "TSTypeAssertion",
+  "TSNonNullExpression",
+]);
+
+export function getFunctionVariableDeclarator(node) {
+  let { parent } = node;
+
+  while (parent && transparentFunctionParentTypes.has(parent.type)) {
+    parent = parent.parent;
+  }
+
+  return parent?.type === "VariableDeclarator" ? parent : undefined;
+}
+
+export function isTopLevel(node) {
   let current = node.parent;
 
   while (
     current &&
-    ["ExportNamedDeclaration", "VariableDeclarator", "VariableDeclaration"].includes(current.type)
+    [
+      "ExportNamedDeclaration",
+      "ExportDefaultDeclaration",
+      "VariableDeclarator",
+      "VariableDeclaration",
+      ...transparentFunctionParentTypes,
+    ].includes(current.type)
   ) {
     current = current.parent;
   }
@@ -367,14 +411,58 @@ function isTopLevel(node) {
   return current?.type === "Program";
 }
 
-function isTopLevelFunction(node) {
+export function isTopLevelFunction(node) {
   return (
     ["FunctionDeclaration", "FunctionExpression", "ArrowFunctionExpression"].includes(node.type) &&
     isTopLevel(node)
   );
 }
 
-function isExportedFunction(node) {
+export function getExportedBindings(program) {
+  const bindings = new Set();
+
+  for (const statement of program.body) {
+    if (statement.type === "ExportDefaultDeclaration") {
+      const { declaration } = statement;
+
+      if (declaration.type === "Identifier") {
+        bindings.add(declaration.name);
+      } else if (declaration.id?.name) {
+        bindings.add(declaration.id.name);
+      }
+
+      continue;
+    }
+
+    if (statement.type !== "ExportNamedDeclaration") {
+      continue;
+    }
+
+    const { declaration } = statement;
+
+    if (declaration) {
+      if (declaration.type === "VariableDeclaration") {
+        for (const variable of declaration.declarations) {
+          if (variable.id.type === "Identifier") {
+            bindings.add(variable.id.name);
+          }
+        }
+      } else if (declaration.id?.name) {
+        bindings.add(declaration.id.name);
+      }
+    }
+
+    for (const specifier of statement.specifiers) {
+      if (specifier.local?.name) {
+        bindings.add(specifier.local.name);
+      }
+    }
+  }
+
+  return bindings;
+}
+
+export function isExportedFunction(node, program) {
   let current = node;
 
   while (current) {
@@ -389,18 +477,21 @@ function isExportedFunction(node) {
         "ArrowFunctionExpression",
         "VariableDeclarator",
         "VariableDeclaration",
+        ...transparentFunctionParentTypes,
       ].includes(current.type)
     ) {
-      return false;
+      break;
     }
 
     current = current.parent;
   }
 
-  return false;
+  const name = getFunctionDeclarationName(node);
+
+  return Boolean(name && getExportedBindings(program).has(name));
 }
 
-function functionPolicyIgnored(filename) {
+export function shouldIgnoreFunctionPolicy(filename) {
   return (
     !filename.includes("/packages/") ||
     /(?:\.test|\.spec|\.config|\.setup|\.tool|\.operator)\.(?:ts|tsx)$/.test(filename) ||
@@ -409,17 +500,17 @@ function functionPolicyIgnored(filename) {
   );
 }
 
-function functionDeclarationName(node) {
+export function getFunctionDeclarationName(node) {
   if (node.type === "FunctionDeclaration") {
     return node.id?.name;
   }
 
-  return node.parent?.type === "VariableDeclarator" && node.parent.id.type === "Identifier"
-    ? node.parent.id.name
-    : undefined;
+  const declarator = getFunctionVariableDeclarator(node);
+
+  return declarator?.id.type === "Identifier" ? declarator.id.name : undefined;
 }
 
-function startsWithPurposeVerb(name) {
+export function startsWithPurposeVerb(name) {
   const verbs = [
     "act",
     "action",
@@ -444,7 +535,13 @@ function startsWithPurposeVerb(name) {
     "get",
     "handle",
     "has",
+    "is",
+    "can",
+    "collect",
+    "contains",
     "import",
+    "inspect",
+    "increment",
     "list",
     "load",
     "map",
@@ -455,6 +552,7 @@ function startsWithPurposeVerb(name) {
     "read",
     "recommend",
     "record",
+    "report",
     "reduce",
     "register",
     "reload",
@@ -471,14 +569,19 @@ function startsWithPurposeVerb(name) {
     "set",
     "should",
     "start",
+    "starts",
     "stop",
     "submit",
     "suggest",
     "sync",
     "transform",
+    "convert",
+    "current",
+    "unwrap",
     "update",
     "use",
     "validate",
+    "verify",
     "write",
   ];
 
@@ -487,7 +590,7 @@ function startsWithPurposeVerb(name) {
   );
 }
 
-function classSuffix(filename) {
+export function getClassSuffix(filename) {
   if (/\.(?:adapter|adapters)\.ts$/.test(filename)) {
     return "Adapter";
   }
@@ -511,7 +614,7 @@ function classSuffix(filename) {
   return undefined;
 }
 
-function contractSuffix(filename) {
+export function getContractSuffix(filename) {
   if (/\.ports?\.ts$/.test(filename)) {
     return ["Port", "Ports"];
   }
@@ -531,13 +634,882 @@ function contractSuffix(filename) {
   return [];
 }
 
-function isReactComponentFunction(node, sourceCode) {
-  const name = componentName(node);
+const fileKinds = new Set([
+  "adapter",
+  "command",
+  "command-handler",
+  "command-result",
+  "component",
+  "composition",
+  "config",
+  "database",
+  "declaration",
+  "enum",
+  "enums",
+  "function",
+  "hook",
+  "interface",
+  "locale",
+  "model",
+  "operator",
+  "plugin",
+  "port",
+  "ports",
+  "query",
+  "query-handler",
+  "query-result",
+  "repository",
+  "schema",
+  "service",
+  "services",
+  "setup",
+  "spec",
+  "storage",
+  "store",
+  "styles",
+  "test",
+  "test-support",
+  "tool",
+  "type",
+  "view-model",
+]);
+
+const fileKindAliases = new Map([
+  ["d", "declaration"],
+  ["spec", "spec"],
+  ["test", "test"],
+  ["test-support", "test-support"],
+]);
+
+export function getFileDescriptor(filename) {
+  const normalized = normalizeFilename(filename);
+
+  const basename = normalized.split("/").at(-1) || "";
+
+  if (/^index\.(?:js|jsx|mjs|ts|tsx)$/.test(basename)) {
+    return { basename, extension: basename.split(".").at(-1), kind: "index", stem: "index" };
+  }
+
+  if (/\.d\.ts$/.test(basename)) {
+    return {
+      basename,
+      extension: "ts",
+      kind: "declaration",
+      stem: basename.slice(0, -5),
+    };
+  }
+
+  const match = basename.match(/^(.*)\.([a-z0-9-]+)\.(js|jsx|mjs|ts|tsx)$/);
+
+  if (!match) {
+    return { basename, extension: basename.split(".").at(-1), kind: undefined, stem: basename };
+  }
+
+  const [, stem, rawKind, extension] = match;
+
+  const kind = fileKindAliases.get(rawKind) || rawKind;
+
+  return { basename, extension, kind, stem };
+}
+
+export function isSmallKebabCase(value) {
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);
+}
+
+export function getFileStemParts(descriptor) {
+  return descriptor.stem.split(".").filter(Boolean);
+}
+
+export function getFileStemName(descriptor) {
+  const parts = getFileStemParts(descriptor);
+
+  return parts.at(-1) === "index" ? parts.slice(0, -1).join("-") : parts.join("-");
+}
+
+export function getFileNamePascalCase(descriptor) {
+  return toPascalCase(getFileStemName(descriptor));
+}
+
+export function getFileNameCamelCase(descriptor) {
+  const pascal = getFileNamePascalCase(descriptor);
+
+  return pascal ? `${pascal[0].toLowerCase()}${pascal.slice(1)}` : pascal;
+}
+
+export function getFileBaseForContract(descriptor) {
+  return getFileStemName(descriptor);
+}
+
+export function isFileLocationAllowed(filename, kind) {
+  const normalized = normalizeFilename(filename);
+
+  if (kind === "index" || kind === "test" || kind === "spec" || kind === "test-support") {
+    return /\/packages\/|(?:^|\/)\.local\/operator\//.test(normalized);
+  }
+
+  if (kind === "declaration") {
+    return /\/packages\//.test(normalized);
+  }
+
+  if (kind === "config") {
+    return /(?:^|\/)\.config\/|\/packages\/app\/src\//.test(normalized);
+  }
+
+  if (kind === "operator") {
+    return /(?:^|\/)\.local\/operator\//.test(normalized);
+  }
+
+  if (kind === "tool" || kind === "plugin") {
+    return /\/packages\/pkg-tooling(?:-eslint)?\/|(?:^|\/)\.local\/operator\//.test(normalized);
+  }
+
+  if (kind === "component") {
+    return /\/packages\/(?:pkg-ui|pkg-ui-content|app)\//.test(normalized);
+  }
+
+  if (kind === "styles") {
+    return /\/packages\/pkg-ui(?:-content)?\//.test(normalized);
+  }
+
+  if (kind === "view-model" || kind === "hook" || kind === "locale") {
+    return /\/packages\/app\/(?:src|tests)\//.test(normalized);
+  }
+
+  if (kind === "composition") {
+    return /\/packages\/app\/src\/composition\//.test(normalized);
+  }
+
+  if (["command", "command-handler", "command-result"].includes(kind)) {
+    return /\/packages\/pkg-application\/src\/commands\//.test(normalized);
+  }
+
+  if (["query", "query-handler", "query-result"].includes(kind)) {
+    return /\/packages\/pkg-application\/src\/queries\//.test(normalized);
+  }
+
+  if (kind === "port") {
+    return /\/packages\/pkg-application\/src\/ports\//.test(normalized);
+  }
+
+  if (kind === "ports" || kind === "services") {
+    return /\/packages\/pkg-application\/src\//.test(normalized);
+  }
+
+  if (kind === "enums") {
+    return /\/packages\/pkg-domain\/src\/models\//.test(normalized);
+  }
+
+  if (
+    ["adapter", "repository", "database", "storage", "store", "service", "schema"].includes(kind)
+  ) {
+    return /\/packages\/pkg-adapter-[^/]+\/(?:src|tests)\//.test(normalized);
+  }
+
+  if (kind === "function") {
+    return /\/packages\/(?:pkg-domain|pkg-application|pkg-adapter-[^/]+|pkg-utils|pkg-ui|pkg-ui-content|app|pkg-tooling(?:-eslint)?)\/(?:src|tests)\//.test(
+      normalized,
+    );
+  }
+
+  if (["interface", "type", "enum"].includes(kind)) {
+    return /\/packages\/(?:pkg-domain|pkg-application|pkg-adapter-[^/]+|pkg-utils|app|pkg-ui|pkg-ui-content)\/(?:src|tests)\//.test(
+      normalized,
+    );
+  }
+
+  if (kind === "model") {
+    return /\/packages\/(?:pkg-domain|pkg-application)\/(?:src|tests)\//.test(normalized);
+  }
+
+  if (kind === "setup") {
+    return /\/packages\/app\/(?:src|tests)\//.test(normalized);
+  }
+
+  return false;
+}
+
+export function getTopLevelDeclarations(program) {
+  const declarations = [];
+
+  for (const statement of program.body) {
+    const declaration = statement.type.startsWith("Export") ? statement.declaration : statement;
+
+    if (!declaration) {
+      continue;
+    }
+
+    if (declaration.type === "VariableDeclaration") {
+      declarations.push(...declaration.declarations);
+
+      continue;
+    }
+
+    if (
+      [
+        "ClassDeclaration",
+        "FunctionDeclaration",
+        "TSInterfaceDeclaration",
+        "TSTypeAliasDeclaration",
+        "TSEnumDeclaration",
+      ].includes(declaration.type)
+    ) {
+      declarations.push(declaration);
+    }
+  }
+
+  return declarations;
+}
+
+export function isExportedTopLevelDeclaration(program, declaration) {
+  return program.body.some((statement) => {
+    const exportedDeclaration = statement.type.startsWith("Export")
+      ? statement.declaration
+      : statement;
+
+    if (exportedDeclaration === declaration) {
+      return statement.type.startsWith("Export");
+    }
+
+    return (
+      exportedDeclaration?.type === "VariableDeclaration" &&
+      declaration.parent === exportedDeclaration &&
+      statement.type.startsWith("Export")
+    );
+  });
+}
+
+export function getExportedName(node) {
+  if (node.type === "FunctionDeclaration" || node.type === "ClassDeclaration") {
+    return node.id?.name;
+  }
+
+  if (node.type === "VariableDeclarator") {
+    return node.id.type === "Identifier" ? node.id.name : undefined;
+  }
+
+  if (
+    ["TSInterfaceDeclaration", "TSTypeAliasDeclaration", "TSEnumDeclaration"].includes(node.type)
+  ) {
+    return node.id?.name;
+  }
+
+  return undefined;
+}
+
+export function getFunctionDeclarationNode(node) {
+  if (node.type === "FunctionDeclaration") {
+    return node;
+  }
+
+  if (
+    node.type === "VariableDeclarator" &&
+    ["ArrowFunctionExpression", "FunctionExpression"].includes(node.init?.type)
+  ) {
+    return node.init;
+  }
+
+  return undefined;
+}
+
+export function isFunctionDeclaration(node) {
+  return Boolean(getFunctionDeclarationNode(node));
+}
+
+export function isPrincipalStatement(statement) {
+  return ![
+    "ImportDeclaration",
+    "ExportAllDeclaration",
+    "ExportNamedDeclaration",
+    "ExportDefaultDeclaration",
+    "ExpressionStatement",
+  ].includes(statement.type);
+}
+
+export function getFileContractExpectedNames(descriptor) {
+  const base = getFileNamePascalCase({ ...descriptor, stem: getFileBaseForContract(descriptor) });
+
+  const camel = getFileNameCamelCase({ ...descriptor, stem: getFileBaseForContract(descriptor) });
+
+  switch (descriptor.kind) {
+    case "adapter":
+      return [base.endsWith("Adapter") ? base : `${base}Adapter`];
+
+    case "command":
+      return [`${base}Command`];
+
+    case "query":
+      return [`${base}Query`];
+
+    case "command-handler":
+      return [`${base}CommandHandler`];
+
+    case "query-handler":
+      return [`${base}QueryHandler`];
+
+    case "command-result":
+      return [`${base}CommandResult`];
+
+    case "query-result":
+      return [`${base}QueryResult`];
+
+    case "port":
+      return [`${base}Port`];
+
+    case "repository":
+      return [`${base}Repository`];
+
+    case "database":
+      return [`${base}Database`];
+
+    case "store":
+      return [`${base}Store`];
+
+    case "storage":
+      return [`${base}Storage`];
+
+    case "service":
+      return [`${base}Service`];
+
+    case "component":
+      return [base];
+
+    case "function":
+      return [camel];
+
+    case "hook":
+      return [camel];
+
+    case "view-model":
+      return [`use${base}ViewModel`, `${base}ViewModel`];
+
+    case "model":
+
+    case "interface":
+
+    case "type":
+
+    case "enum":
+      return [base];
+
+    default:
+      return [];
+  }
+}
+
+export function getFileKindContractMessageId(kind) {
+  if (["command", "query", "command-result", "query-result"].includes(kind)) {
+    return "cqrsDeclaration";
+  }
+
+  if (["port", "adapter"].includes(kind)) {
+    return "boundaryDeclaration";
+  }
+
+  return "declaration";
+}
+
+const fileNameContract = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      invalidName: "Files must use small-kebab-case.tipo.extensao with a known file kind.",
+      unknownKind: "The file suffix '{{kind}}' is not an approved file kind.",
+      invalidExtension: "The file kind '{{kind}}' requires extension '{{extension}}'.",
+    },
+  },
+  create(context) {
+    const filename = normalizeFilename(context.getFilename());
+
+    const descriptor = getFileDescriptor(filename);
+
+    return {
+      Program(node) {
+        if (!/\/packages\/|(?:^|\/)\.config\/|(?:^|\/)\.local\/operator\//.test(filename)) {
+          return;
+        }
+
+        if (descriptor.kind === "index" || descriptor.kind === "declaration") {
+          return;
+        }
+
+        if (!descriptor.kind || !fileKinds.has(descriptor.kind)) {
+          context.report({ node, messageId: "unknownKind", data: { kind: descriptor.kind || "" } });
+
+          return;
+        }
+
+        const validSegments = getFileStemParts(descriptor).every(isSmallKebabCase);
+
+        if (!validSegments || descriptor.basename !== descriptor.basename.toLowerCase()) {
+          context.report({ node, messageId: "invalidName" });
+        }
+
+        if (
+          descriptor.kind === "component" &&
+          descriptor.extension !== "tsx" &&
+          !["test", "spec", "test-support"].includes(descriptor.kind)
+        ) {
+          context.report({
+            node,
+            messageId: "invalidExtension",
+            data: { kind: descriptor.kind, extension: "tsx" },
+          });
+        }
+
+        if (
+          descriptor.kind !== "component" &&
+          descriptor.extension === "tsx" &&
+          !["test", "spec", "test-support"].includes(descriptor.kind)
+        ) {
+          context.report({
+            node,
+            messageId: "invalidExtension",
+            data: { kind: descriptor.kind, extension: "ts" },
+          });
+        }
+      },
+    };
+  },
+};
+
+const fileKindLocation = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      invalidLocation: "The '{{kind}}' file kind is not allowed in this directory.",
+    },
+  },
+  create(context) {
+    const filename = normalizeFilename(context.getFilename());
+
+    const descriptor = getFileDescriptor(filename);
+
+    return {
+      Program(node) {
+        if (descriptor.kind && !isFileLocationAllowed(filename, descriptor.kind)) {
+          context.report({
+            node,
+            messageId: "invalidLocation",
+            data: { kind: descriptor.kind },
+          });
+        }
+      },
+    };
+  },
+};
+
+const fileKindContract = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      declaration: "A '{{kind}}' file must contain exactly one declaration matching its contract.",
+      exportedDeclaration: "The principal declaration of a '{{kind}}' file must be exported.",
+      expectedName:
+        "The principal declaration of this '{{kind}}' file must be named one of: {{names}}.",
+      jsxOnlyComponent: "JSX is allowed only in component files.",
+      componentOnlyTsx: "A component file must contain exactly one exported React component.",
+      cqrsDeclaration:
+        "A '{{kind}}' file must contain exactly one exported CQRS declaration with the expected name.",
+      boundaryDeclaration:
+        "A '{{kind}}' file must contain exactly one declaration satisfying its boundary contract.",
+      portExecute: "A port must expose execute() with zero or one parameter.",
+      adapterPort: "An adapter must implement exactly one interface ending in Port.",
+      indexOnly:
+        "index files may contain only export * from './...'; declarations and imports are forbidden.",
+      indexPath: "index re-exports must target a child path in the same directory.",
+      implementation: "A contract file may contain imports and its principal declaration only.",
+    },
+  },
+  create(context) {
+    const filename = normalizeFilename(context.getFilename());
+
+    const descriptor = getFileDescriptor(filename);
+
+    const { sourceCode } = context;
+
+    function reportContract(node, messageId = getFileKindContractMessageId(descriptor.kind)) {
+      context.report({ node, messageId, data: { kind: descriptor.kind } });
+    }
+
+    function validatePrincipal(program, expectedTypes, options = {}) {
+      const { allowSupporting = false, expectedNames } = options;
+
+      const declarations = getTopLevelDeclarations(program);
+
+      const matching = declarations.filter((declaration) =>
+        expectedTypes.includes(declaration.type),
+      );
+
+      if ((!allowSupporting && declarations.length !== 1) || matching.length !== 1) {
+        reportContract(program);
+
+        return;
+      }
+
+      const declaration = matching[0];
+
+      const name = getExportedName(declaration);
+
+      if (!isExportedTopLevelDeclaration(program, declaration)) {
+        context.report({
+          node: declaration,
+          messageId: "exportedDeclaration",
+          data: { kind: descriptor.kind },
+        });
+      }
+
+      if (expectedNames.length > 0 && !expectedNames.includes(name)) {
+        context.report({
+          node: declaration,
+          messageId: "expectedName",
+          data: { kind: descriptor.kind, names: expectedNames.join(", ") },
+        });
+      }
+    }
+
+    function validateFunctionFile(program) {
+      const declarations = getTopLevelDeclarations(program).filter(isFunctionDeclaration);
+
+      const expectedNames = getFileContractExpectedNames(descriptor);
+
+      if (declarations.length !== 1) {
+        reportContract(program);
+
+        return;
+      }
+
+      const declaration = declarations[0];
+
+      const name = getExportedName(declaration);
+
+      if (!isExportedTopLevelDeclaration(program, declaration)) {
+        context.report({
+          node: declaration,
+          messageId: "exportedDeclaration",
+          data: { kind: descriptor.kind },
+        });
+      }
+
+      if (expectedNames.length > 0 && name !== expectedNames[0]) {
+        context.report({
+          node: declaration,
+          messageId: "expectedName",
+          data: { kind: descriptor.kind, names: expectedNames.join(", ") },
+        });
+      }
+    }
+
+    function validateComponentFile(program) {
+      const declarations = getTopLevelDeclarations(program).filter(isFunctionDeclaration);
+
+      const components = declarations.filter((declaration) => {
+        const functionNode = getFunctionDeclarationNode(declaration);
+
+        return Boolean(functionNode && isReactComponentFunction(functionNode, sourceCode));
+      });
+
+      if (declarations.length !== 1 || components.length !== 1) {
+        context.report({ node: program, messageId: "componentOnlyTsx" });
+
+        return;
+      }
+
+      const declaration = components[0];
+
+      const name = getExportedName(declaration);
+
+      const expectedNames = getFileContractExpectedNames(descriptor);
+
+      if (!isExportedTopLevelDeclaration(program, declaration)) {
+        context.report({
+          node: declaration,
+          messageId: "exportedDeclaration",
+          data: { kind: descriptor.kind },
+        });
+      }
+
+      if (!expectedNames.includes(name)) {
+        context.report({
+          node: declaration,
+          messageId: "expectedName",
+          data: { kind: descriptor.kind, names: expectedNames.join(", ") },
+        });
+      }
+    }
+
+    function validatePort(program) {
+      const declarations = getTopLevelDeclarations(program);
+
+      const interfaces = declarations.filter(
+        (declaration) => declaration.type === "TSInterfaceDeclaration",
+      );
+
+      if (
+        declarations.length !== 1 ||
+        interfaces.length !== 1 ||
+        !interfaces[0].id.name.endsWith("Port")
+      ) {
+        reportContract(program);
+
+        return;
+      }
+
+      const executeMembers = interfaces[0].body.body.filter(
+        (member) => member.key?.type === "Identifier" && member.key.name === "execute",
+      );
+
+      if (executeMembers.length !== 1 || executeMembers[0].params?.length > 1) {
+        context.report({ node: interfaces[0], messageId: "portExecute" });
+      }
+    }
+
+    function validateAdapter(program) {
+      const declarations = getTopLevelDeclarations(program);
+
+      const classes = declarations.filter((declaration) => declaration.type === "ClassDeclaration");
+
+      if (
+        declarations.length !== 1 ||
+        classes.length !== 1 ||
+        !classes[0].id?.name.endsWith("Adapter")
+      ) {
+        reportContract(program);
+
+        return;
+      }
+
+      const implementedPorts = classes[0].implements?.filter(
+        (item) => item.expression?.type === "Identifier" && item.expression.name.endsWith("Port"),
+      );
+
+      if (implementedPorts?.length !== 1) {
+        context.report({ node: classes[0], messageId: "adapterPort" });
+      }
+
+      const expectedNames = getFileContractExpectedNames(descriptor);
+
+      if (!expectedNames.some((expectedName) => classes[0].id.name.endsWith(expectedName))) {
+        context.report({
+          node: classes[0],
+          messageId: "expectedName",
+          data: { kind: descriptor.kind, names: expectedNames.join(", ") },
+        });
+      }
+    }
+
+    function validateIndex(program) {
+      for (const statement of program.body) {
+        if (statement.type !== "ExportAllDeclaration") {
+          context.report({ node: statement, messageId: "indexOnly" });
+
+          continue;
+        }
+
+        const source = statement.source?.value;
+
+        const isLocalChild = typeof source === "string" && source.startsWith("./");
+
+        const isExternalPackage = typeof source === "string" && !source.startsWith(".");
+
+        if (
+          typeof source !== "string" ||
+          (!isLocalChild && !isExternalPackage) ||
+          source.includes("../")
+        ) {
+          context.report({ node: statement, messageId: "indexPath" });
+        }
+      }
+    }
+
+    return {
+      Program(program) {
+        if (descriptor.kind === "index") {
+          validateIndex(program);
+
+          return;
+        }
+
+        if (!descriptor.kind || descriptor.kind === "declaration") {
+          return;
+        }
+
+        if (
+          descriptor.kind === "test" ||
+          descriptor.kind === "spec" ||
+          descriptor.kind === "test-support"
+        ) {
+          return;
+        }
+
+        if (descriptor.kind === "config") {
+          return;
+        }
+
+        if (descriptor.kind !== "component" && containsJsx(program, sourceCode)) {
+          context.report({ node: program, messageId: "jsxOnlyComponent" });
+        }
+
+        if (descriptor.kind === "component") {
+          validateComponentFile(program);
+
+          return;
+        }
+
+        if (["function", "hook", "view-model", "composition"].includes(descriptor.kind)) {
+          validateFunctionFile(program);
+
+          return;
+        }
+
+        if (descriptor.kind === "port") {
+          validatePort(program);
+
+          return;
+        }
+
+        if (descriptor.kind === "adapter") {
+          validateAdapter(program);
+
+          return;
+        }
+
+        if (["command", "query", "command-result", "query-result"].includes(descriptor.kind)) {
+          const declarationType = ["TSInterfaceDeclaration", "TSTypeAliasDeclaration"];
+
+          validatePrincipal(program, declarationType, {
+            expectedNames: getFileContractExpectedNames(descriptor),
+          });
+
+          return;
+        }
+
+        if (["interface", "type", "model", "enum"].includes(descriptor.kind)) {
+          const declarationTypes = {
+            interface: ["TSInterfaceDeclaration"],
+            type: ["TSTypeAliasDeclaration"],
+            model: ["TSInterfaceDeclaration", "TSTypeAliasDeclaration"],
+            enum: ["TSEnumDeclaration"],
+          };
+
+          validatePrincipal(program, declarationTypes[descriptor.kind], {
+            expectedNames: getFileContractExpectedNames(descriptor),
+          });
+
+          return;
+        }
+
+        if (["repository", "database", "storage", "store", "service"].includes(descriptor.kind)) {
+          if (descriptor.kind === "service") {
+            const functions = getTopLevelDeclarations(program).filter(isFunctionDeclaration);
+
+            if (functions.length !== 1 || !isExportedTopLevelDeclaration(program, functions[0])) {
+              reportContract(program);
+            }
+
+            return;
+          }
+
+          validatePrincipal(program, ["ClassDeclaration"], {
+            allowSupporting: true,
+            expectedNames: getFileContractExpectedNames(descriptor),
+          });
+
+          return;
+        }
+
+        if (descriptor.kind === "ports") {
+          const interfaces = getTopLevelDeclarations(program).filter(
+            (declaration) => declaration.type === "TSInterfaceDeclaration",
+          );
+
+          if (
+            interfaces.length === 0 ||
+            interfaces.some(
+              (declaration) =>
+                !declaration.id.name.endsWith("Port") && declaration.id.name !== "ApplicationPorts",
+            )
+          ) {
+            reportContract(program);
+          }
+
+          return;
+        }
+
+        if (descriptor.kind === "services") {
+          const declarations = getTopLevelDeclarations(program);
+
+          const functions = declarations.filter(isFunctionDeclaration);
+
+          const interfaces = declarations.filter(
+            (declaration) => declaration.type === "TSInterfaceDeclaration",
+          );
+
+          if (functions.length !== 1 || interfaces.length !== 1) {
+            reportContract(program);
+          }
+
+          return;
+        }
+
+        if (descriptor.kind === "enums") {
+          const declarations = getTopLevelDeclarations(program);
+
+          if (
+            declarations.length === 0 ||
+            declarations.some((declaration) => declaration.type !== "TSEnumDeclaration")
+          ) {
+            reportContract(program);
+          }
+
+          return;
+        }
+
+        if (descriptor.kind === "schema") {
+          const declarations = getTopLevelDeclarations(program).filter(
+            (declaration) =>
+              declaration.type === "VariableDeclarator" &&
+              getExportedName(declaration)?.toLowerCase().endsWith("schema"),
+          );
+
+          if (declarations.length === 0) {
+            reportContract(program);
+          }
+
+          return;
+        }
+
+        if (
+          ["config", "locale", "styles", "setup", "tool", "operator", "plugin"].includes(
+            descriptor.kind,
+          )
+        ) {
+          if (
+            ["tool", "operator", "plugin", "styles", "locale", "setup"].includes(descriptor.kind)
+          ) {
+            return;
+          }
+
+          const implementationStatements = program.body.filter(isPrincipalStatement);
+
+          if (implementationStatements.length > 1) {
+            context.report({ node: program, messageId: "implementation" });
+          }
+        }
+      },
+    };
+  },
+};
+
+export function isReactComponentFunction(node, sourceCode) {
+  const name = getComponentName(node);
 
   return Boolean(name && /^[A-Z]/.test(name) && containsJsx(node.body, sourceCode));
 }
 
-function typeName(parameter) {
+export function getTypeName(parameter) {
   const annotation = parameter.typeAnnotation?.typeAnnotation;
 
   return annotation?.type === "TSTypeReference" && annotation.typeName.type === "Identifier"
@@ -576,9 +1548,9 @@ const componentPropsContract = {
         context.report({ node: parameter, messageId: "parameterName" });
       }
 
-      const expected = `${componentName(node)}Props`;
+      const expected = `${getComponentName(node)}Props`;
 
-      const actual = typeName(parameter);
+      const actual = getTypeName(parameter);
 
       if (!actual) {
         context.report({ node: parameter, messageId: "missingType" });
@@ -631,7 +1603,7 @@ const mapToImportedComponent = {
           return;
         }
 
-        if (!isImportedSelfClosingComponent(callbackExpression(callback), importedBindings)) {
+        if (!isImportedSelfClosingComponent(getCallbackExpression(callback), importedBindings)) {
           context.report({ node, messageId: "invalidMap" });
         }
       },
@@ -639,7 +1611,7 @@ const mapToImportedComponent = {
   },
 };
 
-function unwrapBranch(node) {
+export function unwrapBranch(node) {
   const current = unwrapExpression(node);
 
   if (current?.type === "ReturnStatement" || current?.type === "ExpressionStatement") {
@@ -655,7 +1627,7 @@ function unwrapBranch(node) {
   return current;
 }
 
-function isInsideComponent(node, sourceCode) {
+export function isInsideComponent(node, sourceCode) {
   let current = node.parent;
 
   while (current) {
@@ -1103,21 +2075,16 @@ const oneFunctionPerFile = {
 const oneExportedFunctionPerFile = {
   meta: {
     type: "problem",
+    fixable: "code",
     schema: [],
     messages: {
       multipleFunctions:
-        "Production files may declare only one top-level function; extract each function into its own file.",
-      notExported: "Top-level production functions must be exported.",
+        "Project files may declare only one top-level function; extract each function into its own file.",
+      notExported: "Top-level project functions must be exported.",
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
-
     const functions = [];
-
-    if (functionPolicyIgnored(filename)) {
-      return {};
-    }
 
     function collect(node) {
       if (isTopLevelFunction(node)) {
@@ -1135,8 +2102,30 @@ const oneExportedFunctionPerFile = {
         }
 
         for (const functionNode of functions) {
-          if (!isExportedFunction(functionNode)) {
-            context.report({ node: functionNode, messageId: "notExported" });
+          if (!isExportedFunction(functionNode, node)) {
+            const declarator = getFunctionVariableDeclarator(functionNode);
+
+            const variableDeclaration = declarator?.parent;
+
+            const canFixVariable =
+              variableDeclaration?.type === "VariableDeclaration" &&
+              variableDeclaration.declarations.length === 1;
+
+            context.report({
+              node: functionNode,
+              messageId: "notExported",
+              fix(fixer) {
+                if (functionNode.type === "FunctionDeclaration") {
+                  return fixer.insertTextBefore(functionNode, "export ");
+                }
+
+                if (canFixVariable) {
+                  return fixer.insertTextBefore(variableDeclaration, "export ");
+                }
+
+                return null;
+              },
+            });
           }
         }
       },
@@ -1155,9 +2144,13 @@ const purposefulNaming = {
       componentCase: "React component functions must use PascalCase.",
       viewModelName: "ViewModel hooks must use the use<Name>ViewModel naming convention.",
       classCase: "Class names must use PascalCase.",
+      getClassSuffix:
+        "Classes in this file must end with {{suffix}} to match the file responsibility.",
       classSuffix:
         "Classes in this file must end with {{suffix}} to match the file responsibility.",
       contractCase: "Interfaces and type aliases must use PascalCase.",
+      getContractSuffix:
+        "Interfaces and type aliases in this file must end with one of: {{suffixes}}.",
       contractSuffix:
         "Interfaces and type aliases in this file must end with one of: {{suffixes}}.",
     },
@@ -1167,15 +2160,15 @@ const purposefulNaming = {
 
     const { sourceCode } = context;
 
-    if (functionPolicyIgnored(filename)) {
+    if (shouldIgnoreFunctionPolicy(filename)) {
       return {};
     }
 
     const viewModelFile = filename.endsWith(".view-model.ts");
 
-    const requiredClassSuffix = classSuffix(filename);
+    const requiredClassSuffix = getClassSuffix(filename);
 
-    const requiredContractSuffixes = contractSuffix(filename);
+    const requiredContractSuffixes = getContractSuffix(filename);
 
     function reportFunctionName(node, name) {
       if (!name) {
@@ -1228,13 +2221,13 @@ const purposefulNaming = {
 
     return {
       FunctionDeclaration(node) {
-        reportFunctionName(node, functionDeclarationName(node));
+        reportFunctionName(node, getFunctionDeclarationName(node));
       },
       FunctionExpression(node) {
-        reportFunctionName(node, functionDeclarationName(node));
+        reportFunctionName(node, getFunctionDeclarationName(node));
       },
       ArrowFunctionExpression(node) {
-        reportFunctionName(node, functionDeclarationName(node));
+        reportFunctionName(node, getFunctionDeclarationName(node));
       },
       ClassDeclaration(node) {
         const name = node.id?.name;
@@ -1552,7 +2545,7 @@ const noParentReexports = {
   },
 };
 
-function isExecuteNode(node) {
+export function isExecuteNode(node) {
   if (
     [
       "ClassMethod",
@@ -1649,11 +2642,11 @@ const executeSingleParameter = {
   },
 };
 
-function isAdapterFile(filename) {
+export function isAdapterFile(filename) {
   return filename.includes("/packages/pkg-adapter-") && filename.includes("/src/adapters/");
 }
 
-function isClassMethodNamed(node, name) {
+export function isClassMethodNamed(node, name) {
   return (
     ["ClassMethod", "MethodDefinition"].includes(node.type) &&
     ((node.key.type === "Identifier" && node.key.name === name) ||
@@ -1661,7 +2654,7 @@ function isClassMethodNamed(node, name) {
   );
 }
 
-function pascalCase(value) {
+export function toPascalCase(value) {
   return value
     .split("-")
     .filter(Boolean)
@@ -1669,7 +2662,7 @@ function pascalCase(value) {
     .join("");
 }
 
-function cqrsFile(filename) {
+export function getCqrsFile(filename) {
   const match = filename.match(
     /\/packages\/pkg-application\/src\/(commands|queries|use-cases)\/([a-z0-9-]+)\.(command|command-handler|command-result|query|query-handler|query-result)\.ts$/,
   );
@@ -1679,7 +2672,7 @@ function cqrsFile(filename) {
   }
 
   return {
-    operation: pascalCase(match[2]),
+    operation: toPascalCase(match[2]),
     family: match[1] === "commands" ? "Command" : "Query",
     kind: match[3],
   };
@@ -1855,7 +2848,7 @@ const cqrsFileContract = {
       filename,
     );
 
-    const contract = cqrsFile(filename);
+    const contract = getCqrsFile(filename);
 
     const declarations = new Set();
 
@@ -1990,7 +2983,7 @@ const allowedLayerDependencies = {
   data: new Set(["data"]),
 };
 
-function isDisallowedLayerDependency(origin, target) {
+export function isDisallowedLayerDependency(origin, target) {
   if (!origin || !target || target === "unknown-workspace") {
     return false;
   }
@@ -2009,7 +3002,7 @@ const layerBoundaries = {
     },
   },
   create(context) {
-    return moduleReferenceVisitors(
+    return createModuleReferenceVisitors(
       context,
       ({ context: ruleContext, node, source, layer, target }) => {
         if (!layer || (!target && !source.startsWith("."))) {
@@ -2034,13 +3027,13 @@ const layerBoundaries = {
   },
 };
 
-function reportForbiddenImport({ context, forbiddenImports, node, source }) {
+export function reportForbiddenImport({ context, forbiddenImports, node, source }) {
   if (forbiddenImports.some((pattern) => pattern.test(source))) {
     context.report({ node, messageId: "forbidden", data: { source } });
   }
 }
 
-function purityRule({ name, message, layers, forbiddenImports, allowExternal }) {
+export function createPurityRule({ name, message, layers, forbiddenImports, allowExternal }) {
   return {
     meta: {
       type: "problem",
@@ -2048,7 +3041,7 @@ function purityRule({ name, message, layers, forbiddenImports, allowExternal }) 
       messages: { forbidden: message },
     },
     create(context) {
-      return moduleReferenceVisitors(context, ({ node, source, layer, filename }) => {
+      return createModuleReferenceVisitors(context, ({ node, source, layer, filename }) => {
         if (layers.has(layer)) {
           if (isExternalModuleSource(source) && !allowExternal(source, filename)) {
             context.report({ node, messageId: "forbidden", data: { source } });
@@ -2064,7 +3057,7 @@ function purityRule({ name, message, layers, forbiddenImports, allowExternal }) 
   };
 }
 
-const applicationPurity = purityRule({
+const applicationPurity = createPurityRule({
   name: "application-purity",
   layers: applicationLayers,
   forbiddenImports: forbiddenApplicationImports,
@@ -2074,7 +3067,7 @@ const applicationPurity = purityRule({
     "Application code must remain technology-independent; move presentation, persistence and browser dependencies behind ports and adapters.",
 });
 
-const domainPurity = purityRule({
+const domainPurity = createPurityRule({
   name: "domain-purity",
   layers: new Set(["domain"]),
   forbiddenImports: forbiddenDomainImports,
@@ -2095,7 +3088,7 @@ const noDomainInPresentation = {
     },
   },
   create(context) {
-    return moduleReferenceVisitors(context, ({ node, target, layer }) => {
+    return createModuleReferenceVisitors(context, ({ node, target, layer }) => {
       if (["app-presentation", "ui-content"].includes(layer) && target === "domain") {
         context.report({ node, messageId: "forbidden" });
       }
@@ -2113,7 +3106,7 @@ const noAdapterCrossImport = {
     },
   },
   create(context) {
-    const filename = normalizedFilename(context.getFilename());
+    const filename = normalizeFilename(context.getFilename());
 
     const originAdapter = filename.match(/\/packages\/(pkg-adapter-[^/]+)\//)?.[1];
 
@@ -2121,8 +3114,8 @@ const noAdapterCrossImport = {
       return {};
     }
 
-    return moduleReferenceVisitors(context, ({ node, source }) => {
-      const targetPackage = packagePathFromSpecifier(source)?.split("/").at(1);
+    return createModuleReferenceVisitors(context, ({ node, source }) => {
+      const targetPackage = getPackagePathFromSpecifier(source)?.split("/").at(1);
 
       if (
         targetPackage &&
@@ -2135,7 +3128,7 @@ const noAdapterCrossImport = {
       }
 
       if (source.startsWith(".")) {
-        const target = relativeTargetFilename(filename, source);
+        const target = getRelativeTargetFilename(filename, source);
 
         const targetAdapter = target.match(/\/packages\/(pkg-adapter-[^/]+)\//)?.[1];
 
@@ -2158,25 +3151,35 @@ const compositionRoot = {
     },
   },
   create(context) {
-    const filename = normalizedFilename(context.getFilename());
+    const filename = normalizeFilename(context.getFilename());
 
-    const isComposition = sourceLayer(filename) === "app-composition";
+    const isComposition = getSourceLayer(filename) === "app-composition";
+
+    const originAdapter = getAdapterPackageFromFilename(filename);
 
     const importedAdapters = new Set();
 
     return {
-      ...moduleReferenceVisitors(context, ({ node, target }) => {
+      ...createModuleReferenceVisitors(context, ({ node, source, target }) => {
         if (target !== "adapter") {
           return;
         }
 
+        const targetAdapter = getAdapterPackageFromSource(filename, source);
+
+        const isInternalAdapterImport = Boolean(
+          originAdapter && targetAdapter && originAdapter === targetAdapter,
+        );
+
         if (node.type === "ImportDeclaration") {
-          for (const specifier of node.specifiers) {
-            importedAdapters.add(specifier.local.name);
+          if (!isInternalAdapterImport) {
+            for (const specifier of node.specifiers) {
+              importedAdapters.add(specifier.local.name);
+            }
           }
         }
 
-        if (!isComposition) {
+        if (!isComposition && !isInternalAdapterImport) {
           context.report({ node, messageId: "import" });
         }
       }),
@@ -2206,9 +3209,9 @@ const cqrsLayerBoundaries = {
     },
   },
   create(context) {
-    const origin = sourceLayer(context.getFilename());
+    const origin = getSourceLayer(context.getFilename());
 
-    return moduleReferenceVisitors(context, ({ node, target }) => {
+    return createModuleReferenceVisitors(context, ({ node, target }) => {
       if (origin === "application-commands" && target === "application-queries") {
         context.report({ node, messageId: "commandQuery" });
       }
@@ -2250,14 +3253,14 @@ const mvvmLayerBoundaries = {
     },
   },
   create(context) {
-    const filename = normalizedFilename(context.getFilename());
+    const filename = normalizeFilename(context.getFilename());
 
-    const origin = sourceLayer(filename);
+    const origin = getSourceLayer(filename);
 
     const isViewModel = /(?:\.view-model|\.view-model\.hook)\.(?:ts|tsx)$/.test(filename);
 
     return {
-      ...moduleReferenceVisitors(context, ({ node, source }) => {
+      ...createModuleReferenceVisitors(context, ({ node, source }) => {
         if (
           isViewModel &&
           source.startsWith(".") &&
@@ -2306,7 +3309,7 @@ const portContract = {
     },
   },
   create(context) {
-    const filename = normalizedFilename(context.getFilename());
+    const filename = normalizeFilename(context.getFilename());
 
     if (!/\/packages\/pkg-application\/src\/ports\/[^/]+\.port\.ts$/.test(filename)) {
       return {};
@@ -2356,7 +3359,7 @@ const adapterContract = {
     },
   },
   create(context) {
-    const filename = normalizedFilename(context.getFilename());
+    const filename = normalizeFilename(context.getFilename());
 
     if (!/\/packages\/pkg-adapter-[^/]+\/src\/.*\.adapter\.ts$/.test(filename)) {
       return {};
@@ -2431,5 +3434,8 @@ export default {
     "mvvm-layer-boundaries": mvvmLayerBoundaries,
     "port-contract": portContract,
     "adapter-contract": adapterContract,
+    "file-name-contract": fileNameContract,
+    "file-kind-location": fileKindLocation,
+    "file-kind-contract": fileKindContract,
   },
 };

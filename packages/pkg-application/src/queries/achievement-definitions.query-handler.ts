@@ -1,4 +1,4 @@
-import type { AchievementDefinitionsPort } from "../ports/index.ts";
+import type { AchievementDefinitionsPort } from "../ports/index";
 
 export class AchievementDefinitionsQueryHandler {
   public constructor(private readonly port: AchievementDefinitionsPort) {}

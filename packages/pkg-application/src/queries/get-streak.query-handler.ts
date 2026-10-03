@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index.ts";
-import type { GetStreakPort } from "../ports/index.ts";
+import type { StudyRecord } from "../models/index";
+import type { GetStreakPort } from "../ports/index";
 
 export class GetStreakQueryHandler {
   public constructor(private readonly port: GetStreakPort) {}

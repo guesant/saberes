@@ -1,5 +1,5 @@
-import type { ContentKey } from "./content-key.type.ts";
-import type { DiagnosisCode } from "./domain.enums.ts";
+import type { ContentKey } from "./content-key.type";
+import type { DiagnosisCode } from "./domain.enums";
 
 export interface AttemptRecord {
   id?: string;

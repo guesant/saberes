@@ -1,7 +1,7 @@
 import { FsrsRating, type ReviewTargetRecord } from "@guesant/saberes-domain";
 import { fsrs, Rating } from "ts-fsrs";
-import { reviveReviewCard, type ReviewDateFactory } from "./revive-review-card.function.ts";
-import type { StoredReviewCard } from "./stored-review-card.type.ts";
+import { reviveReviewCard, type ReviewDateFactory } from "./revive-review-card.function";
+import type { StoredReviewCard } from "./stored-review-card.type";
 
 const scheduler = fsrs({ request_retention: 0.9, enable_fuzz: false });
 

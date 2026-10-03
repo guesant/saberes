@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index.ts";
-import type { SaveReviewItemPort } from "../ports/index.ts";
+import type { StudyRecord } from "../models/index";
+import type { SaveReviewItemPort } from "../ports/index";
 
 export class SaveReviewItemCommandHandler {
   public constructor(private readonly port: SaveReviewItemPort) {}

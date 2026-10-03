@@ -1,5 +1,5 @@
-import type { StudySession } from "../models/index.ts";
-import type { SaveSessionPort } from "../ports/index.ts";
+import type { StudySession } from "../models/index";
+import type { SaveSessionPort } from "../ports/index";
 
 export class SaveSessionCommandHandler {
   public constructor(private readonly port: SaveSessionPort) {}

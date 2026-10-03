@@ -1,1 +1,1 @@
-export * from "./adapters/parse-editorial-blocks.adapter.ts";
+export * from "./adapters/parse-editorial-blocks.adapter";

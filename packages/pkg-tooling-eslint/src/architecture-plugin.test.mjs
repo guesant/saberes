@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { resolve } from "node:path";
 import test from "node:test";
-import architecture from "./architecture-plugin.mjs";
+import architecture from "./architecture.plugin.mjs";
 
 const require = createRequire(resolve(process.cwd(), "package.json"));
 
@@ -18,7 +18,7 @@ const languageOptions = {
   },
 };
 
-function verify(code, rule, filename = "<input>.ts") {
+export function verify(code, rule, filename = "<input>.ts") {
   const linter = new Linter({ configType: "flat" });
 
   const config = [
@@ -35,7 +35,7 @@ function verify(code, rule, filename = "<input>.ts") {
     : linter.verify(code, config, { filename: resolve(process.cwd(), filename) });
 }
 
-function runRuleCases(name, rule, cases) {
+export function runRuleCases(name, rule, cases) {
   const ruleTester = new RuleTester({ languageOptions });
 
   ruleTester.run(name, rule, cases);
@@ -111,14 +111,14 @@ test("typescript safety rules reject any and double casts", () => {
 
 test("wildcard-reexports-only allows wildcard exports only in index files", () => {
   assert.equal(
-    verify('export * from "./value.ts";', "wildcard-reexports-only", "packages/pkg-ui/src/index.ts")
+    verify('export * from "./value";', "wildcard-reexports-only", "packages/pkg-ui/src/index.ts")
       .length,
     0,
   );
 
   assert.equal(
     verify(
-      'export * from "./value.ts";',
+      'export * from "./value";',
       "wildcard-reexports-only",
       "packages/pkg-ui/src/button.component.tsx",
     ).length,
@@ -127,7 +127,7 @@ test("wildcard-reexports-only allows wildcard exports only in index files", () =
 
   assert.equal(
     verify(
-      'export { value } from "./value.ts";',
+      'export { value } from "./value";',
       "wildcard-reexports-only",
       "packages/pkg-ui/src/button.component.tsx",
     ).length,
@@ -136,15 +136,15 @@ test("wildcard-reexports-only allows wildcard exports only in index files", () =
 });
 
 test("no-named-reexports rejects named re-exports", () => {
-  assert.equal(verify('export { value } from "./value.ts";', "no-named-reexports").length, 1);
+  assert.equal(verify('export { value } from "./value";', "no-named-reexports").length, 1);
 
   assert.equal(verify("export const value = 1;", "no-named-reexports").length, 0);
 });
 
 test("no-parent-reexports rejects exports from parent directories", () => {
-  assert.equal(verify('export { value } from "../value.ts";', "no-parent-reexports").length, 1);
+  assert.equal(verify('export { value } from "../value";', "no-parent-reexports").length, 1);
 
-  assert.equal(verify('export { value } from "./value.ts";', "no-parent-reexports").length, 0);
+  assert.equal(verify('export { value } from "./value";', "no-parent-reexports").length, 0);
 });
 
 test("no-sql-outside-repository restricts SQL.js to the repository adapter", () => {
@@ -356,6 +356,22 @@ test("one-exported-function-per-file enforces one exported top-level function", 
             code: "export function createValue() { return 1; }",
             filename: resolve(process.cwd(), "packages/pkg-domain/src/create-value.ts"),
           },
+          {
+            code: "const createValue = () => 1; export { createValue };",
+            filename: resolve(process.cwd(), "packages/pkg-domain/src/create-value.ts"),
+          },
+          {
+            code: "export function createValue() { function normalizeValue() { return 1; } return normalizeValue(); }",
+            filename: resolve(process.cwd(), "packages/pkg-domain/src/create-value.ts"),
+          },
+          {
+            code: "const handlers = { run() { return 1; } }; [1].map(() => 1);",
+            filename: resolve(process.cwd(), "packages/pkg-domain/src/handlers.type.ts"),
+          },
+          {
+            code: "export default function createValue() { return 1; }",
+            filename: resolve(process.cwd(), "packages/pkg-domain/src/create-value.ts"),
+          },
         ],
         invalid: [
           {
@@ -367,6 +383,20 @@ test("one-exported-function-per-file enforces one exported top-level function", 
             code: "function createValue() { return 1; }",
             filename: resolve(process.cwd(), "packages/pkg-domain/src/create-value.ts"),
             errors: [{ messageId: "notExported" }],
+            output: "export function createValue() { return 1; }",
+          },
+          {
+            code: "export function createValue() { return 1; } function readValue() { return 2; }",
+            filename: resolve(process.cwd(), "packages/pkg-domain/src/values.ts"),
+            errors: [{ messageId: "multipleFunctions" }, { messageId: "notExported" }],
+            output:
+              "export function createValue() { return 1; } export function readValue() { return 2; }",
+          },
+          {
+            code: "const createValue = () => 1;",
+            filename: resolve(process.cwd(), "packages/pkg-domain/src/create-value.ts"),
+            errors: [{ messageId: "notExported" }],
+            output: "export const createValue = () => 1;",
           },
         ],
       },
@@ -609,7 +639,7 @@ test("layer-boundaries enforces the dependency direction across packages and imp
 
   assert.equal(
     verify(
-      'import architecture from "../packages/pkg-tooling-eslint/src/architecture-plugin.mjs";',
+      'import architecture from "../packages/pkg-tooling-eslint/src/architecture.plugin.mjs";',
       "layer-boundaries",
       ".config/eslint.config.mjs",
     ).length,
@@ -788,5 +818,177 @@ test("CQRS, MVVM, port and adapter rules enforce their file contracts", () => {
       "packages/pkg-adapter-data-v1/src/load-course.adapter.ts",
     ).length,
     1,
+  );
+});
+
+test("file-name-contract enforces typed kebab-case suffixes", () => {
+  assert.equal(
+    verify(
+      "export type CatalogFilters = { search?: string };",
+      "file-name-contract",
+      "packages/pkg-application/src/models/catalog-filters.type.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export type CatalogFilters = { search?: string };",
+      "file-name-contract",
+      "packages/pkg-application/src/models/CatalogFilters.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "export type CatalogFilters = { search?: string };",
+      "file-name-contract",
+      "packages/pkg-application/src/models/catalog-filters.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "import type { Props } from './props.type'; export function Card(props: Props) { return <span />; }",
+      "file-name-contract",
+      "packages/pkg-ui/src/card.component.tsx",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "describe('Card', () => { it('renders', () => {}); });",
+      "file-name-contract",
+      "packages/pkg-ui/src/card.component.test.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("file-kind-location restricts file kinds to their layers", () => {
+  assert.equal(
+    verify(
+      "export function calculateScore() { return 1; }",
+      "file-kind-location",
+      "packages/pkg-domain/src/study/calculate-score.function.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export function calculateScore() { return 1; }",
+      "file-kind-location",
+      "packages/app/src/features/catalog/calculate-score.function.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export interface GetCoursePort { execute(input: string): Promise<string>; }",
+      "file-kind-location",
+      "packages/pkg-application/src/ports/get-course-port.port.ts",
+    ).length,
+    0,
+  );
+});
+
+test("file-kind-contract enforces principal declarations and names", () => {
+  assert.equal(
+    verify(
+      "export type GetCourseQuery = { slug: string };",
+      "file-kind-contract",
+      "packages/pkg-application/src/queries/get-course.query.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export type OtherQuery = { slug: string };",
+      "file-kind-contract",
+      "packages/pkg-application/src/queries/get-course.query.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "export type First = string; export type Second = number;",
+      "file-kind-contract",
+      "packages/pkg-domain/src/models/value.type.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "export function Card(props: CardProps) { return <span />; }",
+      "file-kind-contract",
+      "packages/pkg-ui/src/card.component.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("file-kind-contract keeps ports, adapters and barrels explicit", () => {
+  assert.equal(
+    verify(
+      "export interface GetCoursePort { execute(input: string): Promise<string>; }",
+      "file-kind-contract",
+      "packages/pkg-application/src/ports/get-course-port.port.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export interface GetCoursePort { read(input: string): Promise<string>; }",
+      "file-kind-contract",
+      "packages/pkg-application/src/ports/get-course-port.port.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "export class GetCourseAdapter implements GetCoursePort { execute(input: string) { return input; } }",
+      "file-kind-contract",
+      "packages/pkg-adapter-data-v1/src/adapters/get-course.adapter.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      'export * from "./button.component";',
+      "file-kind-contract",
+      "packages/pkg-ui/src/index.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      'export { Button } from "./button.component";',
+      "file-kind-contract",
+      "packages/pkg-ui/src/index.ts",
+    ).length,
+    1,
+  );
+});
+
+test("file-kind-contract leaves explicit configuration files to their config contract", () => {
+  assert.equal(
+    verify(
+      "const base = '/'; export default { base };",
+      "file-kind-contract",
+      ".config/vite.config.ts",
+    ).length,
+    0,
   );
 });

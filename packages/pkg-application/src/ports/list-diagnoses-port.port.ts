@@ -1,4 +1,4 @@
-import type { DiagnosisRecord } from "../models/index.ts";
+import type { DiagnosisRecord } from "@guesant/saberes-domain";
 
 export interface ListDiagnosesPort {
   execute(): Promise<DiagnosisRecord[]>;

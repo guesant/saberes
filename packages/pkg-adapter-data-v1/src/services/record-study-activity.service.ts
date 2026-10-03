@@ -1,5 +1,5 @@
 import { format, isSameDay, parseISO, subDays } from "date-fns";
-import { progressDb } from "../storage/progress.storage";
+import { progressDb } from "../storage/progress.database";
 
 export type StudyActivity = {
   at?: Date | string;

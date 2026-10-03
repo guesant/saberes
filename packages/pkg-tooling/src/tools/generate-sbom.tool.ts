@@ -42,13 +42,13 @@ type CycloneDxComponent = {
   properties?: Array<{ name: string; value: string }>;
 };
 
-function readDenoLock(): DenoLock {
+export function readDenoLock(): DenoLock {
   const text = Deno.readTextFileSync("deno.lock");
 
   return v.parse(denoLockSchema, JSON.parse(text));
 }
 
-function parseNpmPackageKey(packageKey: string): {
+export function parseNpmPackageKey(packageKey: string): {
   name: string;
   version: string;
 } {
@@ -71,17 +71,20 @@ function parseNpmPackageKey(packageKey: string): {
   return { name, version };
 }
 
-function npmPurl(name: string, version: string): string {
+export function npmPurl(name: string, version: string): string {
   const encodedName = name.startsWith("@") ? `%40${name.slice(1)}` : name;
 
   return `pkg:npm/${encodedName}@${version}`;
 }
 
-function jsrPurl(name: string, version: string): string {
+export function jsrPurl(name: string, version: string): string {
   return `pkg:generic/jsr/${name}@${version}`;
 }
 
-function createNpmComponent(packageKey: string, packageData: LockPackage): CycloneDxComponent {
+export function createNpmComponent(
+  packageKey: string,
+  packageData: LockPackage,
+): CycloneDxComponent {
   const packageInfo = parseNpmPackageKey(packageKey);
 
   const purl = npmPurl(packageInfo.name, packageInfo.version);
@@ -107,7 +110,10 @@ function createNpmComponent(packageKey: string, packageData: LockPackage): Cyclo
   return component;
 }
 
-function createJsrComponent(packageKey: string, packageData: LockPackage): CycloneDxComponent {
+export function createJsrComponent(
+  packageKey: string,
+  packageData: LockPackage,
+): CycloneDxComponent {
   const separator = packageKey.lastIndexOf("@");
 
   if (separator < 1) {
@@ -142,7 +148,7 @@ function createJsrComponent(packageKey: string, packageData: LockPackage): Cyclo
   return component;
 }
 
-function createSourceBom(lockFile: DenoLock): string {
+export function createSourceBom(lockFile: DenoLock): string {
   const npmComponents = Object.entries(lockFile.npm).map(([packageKey, packageData]) =>
     createNpmComponent(packageKey, packageData),
   );
@@ -179,7 +185,7 @@ function createSourceBom(lockFile: DenoLock): string {
   );
 }
 
-async function generateSourceSbom(): Promise<void> {
+export async function generateSourceSbom(): Promise<void> {
   const lockFile = readDenoLock();
 
   await Deno.mkdir(outputDirectory, { recursive: true });
@@ -187,7 +193,7 @@ async function generateSourceSbom(): Promise<void> {
   await Deno.writeTextFile(`${outputDirectory}/source.cdx.json`, `${createSourceBom(lockFile)}\n`);
 }
 
-async function runSyft(source: string, outputFile: string): Promise<void> {
+export async function runSyft(source: string, outputFile: string): Promise<void> {
   const command = new Deno.Command("syft", {
     args: [
       source,
@@ -209,7 +215,7 @@ async function runSyft(source: string, outputFile: string): Promise<void> {
   }
 }
 
-async function generateImageSbom(): Promise<void> {
+export async function generateImageSbom(): Promise<void> {
   const image = Deno.env.get("SBOM_IMAGE");
 
   if (!image) {

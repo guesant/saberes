@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index.ts";
-import type { EnrollCoursePort } from "../ports/index.ts";
+import type { StudyRecord } from "../models/index";
+import type { EnrollCoursePort } from "../ports/index";
 
 export class EnrollCourseCommandHandler {
   public constructor(private readonly port: EnrollCoursePort) {}

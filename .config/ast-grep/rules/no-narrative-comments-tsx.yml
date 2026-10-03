@@ -1,7 +1,9 @@
 id: no-narrative-comments-tsx
 language: Tsx
 severity: error
-message: Comentários narrativos não são permitidos; use documentação versionada ou um comentário de configuração de ferramenta.
+message: >-
+  Comentários narrativos não são permitidos; use documentação versionada ou um
+  comentário de configuração de ferramenta.
 rule:
   all:
     - kind: comment

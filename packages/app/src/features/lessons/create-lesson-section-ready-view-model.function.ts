@@ -1,6 +1,6 @@
 import type { LessonSectionContentInput } from "./lesson-section-content-input.type";
-import type { LessonSectionContentViewModel } from "./lesson-section-content.view-model";
-import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-domain";
+import type { LessonSectionContentViewModel } from "./lesson-section-content-view-model.type";
+import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 
 export function createLessonSectionReadyViewModel(
   input: LessonSectionContentInput,

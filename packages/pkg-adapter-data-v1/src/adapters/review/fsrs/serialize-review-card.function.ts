@@ -1,4 +1,4 @@
-import type { StoredReviewCard } from "./stored-review-card.type.ts";
+import type { StoredReviewCard } from "./stored-review-card.type";
 import type { Card } from "ts-fsrs";
 
 export function serializeReviewCard(card: Card): StoredReviewCard {

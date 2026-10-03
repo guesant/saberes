@@ -1,4 +1,4 @@
-import type { SaveSettingPort } from "../ports/index.ts";
+import type { SaveSettingPort } from "../ports/index";
 
 export class SaveSettingCommandHandler {
   public constructor(private readonly port: SaveSettingPort) {}

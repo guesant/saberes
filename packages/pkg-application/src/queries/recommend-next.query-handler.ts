@@ -1,4 +1,4 @@
-import type { RecommendNextPort } from "../ports/index.ts";
+import type { RecommendNextPort } from "../ports/index";
 
 export class RecommendNextQueryHandler {
   public constructor(private readonly port: RecommendNextPort) {}

@@ -6,8 +6,8 @@ import typescriptParser from "@typescript-eslint/parser";
 import boundaries from "eslint-plugin-boundaries";
 import importPlugin from "eslint-plugin-import";
 import sonarjs from "eslint-plugin-sonarjs";
-import architecture from "../packages/pkg-tooling-eslint/src/architecture-plugin.mjs";
-import importFormat from "../packages/pkg-tooling-eslint/src/import-format-plugin.mjs";
+import architecture from "../packages/pkg-tooling-eslint/src/architecture.plugin.mjs";
+import importFormat from "../packages/pkg-tooling-eslint/src/import-format.plugin.mjs";
 
 const compat = new FlatCompat({ baseDirectory: dirname(fileURLToPath(import.meta.url)) });
 
@@ -72,12 +72,26 @@ const architectureRules = {
   "architecture/mvvm-layer-boundaries": "error",
   "architecture/port-contract": "error",
   "architecture/adapter-contract": "error",
+  "architecture/file-name-contract": "error",
+  "architecture/file-kind-location": "error",
+  "architecture/file-kind-contract": "error",
 };
 
 const safetyRules = {
   ...architectureRules,
   curly: ["error", "all"],
   "import/first": "error",
+  "import/extensions": [
+    "error",
+    "never",
+    {
+      js: "never",
+      jsx: "never",
+      mjs: "always",
+      ts: "never",
+      tsx: "never",
+    },
+  ],
   "import/newline-after-import": ["error", { count: 1 }],
   "import/no-duplicates": "error",
   "import/order": [
@@ -476,6 +490,33 @@ export default [
       "import/no-extraneous-dependencies": "off",
       "import/no-unresolved": "off",
       "no-undef": "off",
+    },
+  },
+  {
+    files: [
+      "packages/pkg-tooling-eslint/src/**/*.{js,jsx,mjs,ts,tsx}",
+      "packages/pkg-tooling/src/**/*.tool.ts",
+    ],
+    rules: {
+      "architecture/one-exported-function-per-file": "off",
+      "architecture/no-sql-outside-repository": "off",
+      "architecture/purposeful-naming": "off",
+      "func-names": "off",
+      "import/no-extraneous-dependencies": "off",
+      "no-await-in-loop": "off",
+      "no-console": "off",
+      "no-continue": "off",
+      "no-fallthrough": "off",
+      "no-restricted-syntax": "off",
+      "no-use-before-define": "off",
+      "architecture/max-function-parameters": "off",
+    },
+  },
+  {
+    files: operatorFiles,
+    rules: {
+      "architecture/layer-boundaries": "off",
+      "architecture/one-exported-function-per-file": "off",
     },
   },
   { files: uiFiles, rules: { "architecture/no-mui-reexport": "error" } },
