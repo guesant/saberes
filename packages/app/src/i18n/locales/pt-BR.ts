@@ -24,6 +24,7 @@ const ptBR = {
         loadingQuestion: "Carregando questão...",
         loadingMap: "Carregando mapa...",
         loadingPlan: "Carregando plano...",
+        openMenu: "Abrir menu de navegação",
         retry: "Tentar novamente",
         notFound: "Conteúdo não encontrado.",
         open: "Abrir",

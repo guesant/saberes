@@ -155,6 +155,7 @@ function Shell({ children }) {
             <AppBar position="sticky" color="primary">
                 <Toolbar>
                     <IconButton
+                        aria-label={t("common.openMenu")}
                         color="inherit"
                         edge="start"
                         sx={{
@@ -2500,6 +2501,11 @@ export function LegacyStudyPlanPage() {
                                     >
                                         <Stack direction="row" spacing={2} alignItems="flex-start">
                                             <IconButton
+                                                aria-label={
+                                                    complete
+                                                        ? t("lesson.completed")
+                                                        : t("lesson.complete")
+                                                }
                                                 color={complete ? "success" : "default"}
                                                 onClick={() => toggle(step)}
                                             >

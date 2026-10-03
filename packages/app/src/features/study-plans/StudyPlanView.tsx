@@ -48,6 +48,7 @@ export function StudyPlanView() {
                         >
                             <Stack direction="row" spacing={2} alignItems="flex-start">
                                 <IconButton
+                                    aria-label={done ? t("lesson.completed") : t("lesson.complete")}
                                     color={done ? "success" : "default"}
                                     onClick={() => viewModel.toggleStep(step, !done)}
                                 >
