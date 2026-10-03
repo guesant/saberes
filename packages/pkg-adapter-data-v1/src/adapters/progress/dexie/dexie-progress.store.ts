@@ -1,9 +1,7 @@
-import {
-  progressDb,
-  type Attempt,
-  type AttemptDiagnosis,
-  type ReviewTarget,
-} from "../../../storage/progress.storage";
+import { progressDb } from "../../../storage/progress.storage";
+import type { AttemptDiagnosis } from "../../../storage/attempt-diagnosis.interface.ts";
+import type { Attempt } from "../../../storage/attempt.type.ts";
+import type { ReviewTarget } from "../../../storage/review-target.type.ts";
 import type { DiagnosisRecord, AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
 
 type SessionRecord = { id: string; [key: string]: unknown };
@@ -125,5 +123,3 @@ export class DexieProgressStore {
     return progressDb.listTopicMastery();
   }
 }
-
-export type { Attempt, ReviewTarget };

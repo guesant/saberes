@@ -1,5 +1,5 @@
-import type { SaveAttemptPort } from "../application.ports.ts";
-import type { Attempt } from "../models/progress.models.ts";
+import type { Attempt } from "../models/index.ts";
+import type { SaveAttemptPort } from "../ports/index.ts";
 
 export class SaveAttemptCommandHandler {
   public constructor(private readonly port: SaveAttemptPort) {}

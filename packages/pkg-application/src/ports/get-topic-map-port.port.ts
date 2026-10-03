@@ -1,4 +1,4 @@
-import type { TopicMapReadModel } from "../models/content.models.ts";
+import type { TopicMapReadModel } from "../models/index.ts";
 
 export interface GetTopicMapPort {
   execute(mapKey: string): Promise<TopicMapReadModel | null>;

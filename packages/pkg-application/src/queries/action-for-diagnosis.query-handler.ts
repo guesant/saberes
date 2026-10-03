@@ -1,4 +1,4 @@
-import type { ActionForDiagnosisPort } from "../application.ports.ts";
+import type { ActionForDiagnosisPort } from "../ports/index.ts";
 import type { DiagnosisCode, PedagogicalAction } from "@guesant/saberes-domain";
 
 export class ActionForDiagnosisQueryHandler {

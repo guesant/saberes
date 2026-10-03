@@ -135,6 +135,12 @@ test("wildcard-reexports-only allows wildcard exports only in index files", () =
   );
 });
 
+test("no-named-reexports rejects named re-exports", () => {
+  assert.equal(verify('export { value } from "./value.ts";', "no-named-reexports").length, 1);
+
+  assert.equal(verify("export const value = 1;", "no-named-reexports").length, 0);
+});
+
 test("no-parent-reexports rejects exports from parent directories", () => {
   assert.equal(verify('export { value } from "../value.ts";', "no-parent-reexports").length, 1);
 

@@ -58,6 +58,7 @@ const architectureRules = {
   "architecture/purposeful-naming": "error",
   "architecture/utils-module-boundary": "error",
   "architecture/wildcard-reexports-only": "error",
+  "architecture/no-named-reexports": "error",
   "architecture/no-parent-reexports": "error",
   "architecture/execute-single-parameter": "error",
   "architecture/no-sql-outside-repository": "error",

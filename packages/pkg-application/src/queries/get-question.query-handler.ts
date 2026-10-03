@@ -1,5 +1,5 @@
-import type { GetQuestionPort } from "../application.ports.ts";
-import type { ContentKey, QuestionReadModel } from "../models/content.models.ts";
+import type { ContentKey, QuestionReadModel } from "../models/index.ts";
+import type { GetQuestionPort } from "../ports/index.ts";
 
 export class GetQuestionQueryHandler {
   public constructor(private readonly port: GetQuestionPort) {}

@@ -1,5 +1,4 @@
-import type { ContentKey } from "../models/content.models.ts";
-import type { ReviewTarget } from "../models/progress.models.ts";
+import type { ContentKey, ReviewTarget } from "../models/index.ts";
 
 export interface SaveReviewTargetPort {
   execute(input: {

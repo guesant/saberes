@@ -1,4 +1,4 @@
-import type { ContentKey } from "./content.models.ts";
+import type { ContentKey } from "./content-key.type.ts";
 import type { DiagnosisCode } from "./domain.enums.ts";
 
 export interface AttemptRecord {

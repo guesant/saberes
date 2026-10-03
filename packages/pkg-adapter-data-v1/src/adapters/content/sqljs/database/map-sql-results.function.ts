@@ -1,4 +1,5 @@
-import type { ContentRow, SqlResult } from "./content-database.types";
+import type { ContentRow } from "./content-row.type.ts";
+import type { SqlResult } from "./sql-result.type.ts";
 
 export function mapSqlResults(result: SqlResult[] | undefined): ContentRow[] {
   if (!result?.[0]) {

@@ -1284,6 +1284,25 @@ const wildcardReexportsOnlyInIndex = {
   },
 };
 
+const noNamedReexports = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      namedReexport: "Use export * only from index.ts files; named re-exports are not allowed.",
+    },
+  },
+  create(context) {
+    return {
+      ExportNamedDeclaration(node) {
+        if (node.source) {
+          context.report({ node, messageId: "namedReexport" });
+        }
+      },
+    };
+  },
+};
+
 const noParentReexports = {
   meta: {
     type: "problem",
@@ -1607,6 +1626,10 @@ const cqrsFileContract = {
   create(context) {
     const filename = context.getFilename().replaceAll("\\", "/");
 
+    const isCqrsBarrel = /\/packages\/pkg-application\/src\/(commands|queries)\/index\.ts$/.test(
+      filename,
+    );
+
     const contract = cqrsFile(filename);
 
     const declarations = new Set();
@@ -1626,7 +1649,7 @@ const cqrsFileContract = {
           filename.includes("/packages/pkg-application/src/queries/") ||
           filename.includes("/packages/pkg-application/src/use-cases/")
         ) {
-          if (!contract) {
+          if (!contract && !isCqrsBarrel) {
             context.report({ node, messageId: "invalidFileName" });
           }
         }
@@ -1707,6 +1730,7 @@ export default {
     "max-function-parameters": maxFunctionParameters,
     "no-mui-reexport": noMuiReexport,
     "wildcard-reexports-only": wildcardReexportsOnlyInIndex,
+    "no-named-reexports": noNamedReexports,
     "no-parent-reexports": noParentReexports,
     "execute-single-parameter": executeSingleParameter,
     "no-unsafe-double-cast": noUnsafeDoubleCast,

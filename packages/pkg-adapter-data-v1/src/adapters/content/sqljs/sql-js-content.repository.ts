@@ -1,7 +1,7 @@
 import { CatalogCardType } from "@guesant/saberes-domain";
 import { loadContentDatabase } from "./database/content.database";
 import { getContentIdentifier } from "./extract-content-identifier.function";
-import type { ContentDatabase } from "./database/content-database.types";
+import type { ContentDatabase } from "./database/content-database.type.ts";
 import type {
   AssessmentReadModel,
   CatalogFilters,

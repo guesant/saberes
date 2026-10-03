@@ -9,11 +9,7 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./models/content": "./src/models/content.models.ts",
-    "./models/progress": "./src/models/progress.models.ts",
-    "./ports": "./src/application.ports.ts",
-    "./content.use-cases": "./src/content.use-cases.ts",
-    "./progress.use-cases": "./src/progress.use-cases.ts",
-    "./study.use-cases": "./src/study.use-cases.ts"
+    "./models": "./src/models/index.ts",
+    "./ports": "./src/ports/index.ts"
   }
 }

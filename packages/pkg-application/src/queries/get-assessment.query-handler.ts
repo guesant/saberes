@@ -1,5 +1,5 @@
-import type { GetAssessmentPort } from "../application.ports.ts";
-import type { AssessmentReadModel, ContentKey } from "../models/content.models.ts";
+import type { AssessmentReadModel, ContentKey } from "../models/index.ts";
+import type { GetAssessmentPort } from "../ports/index.ts";
 
 export class GetAssessmentQueryHandler {
   public constructor(private readonly port: GetAssessmentPort) {}

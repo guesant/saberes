@@ -1,5 +1,5 @@
-import type { ScheduleReviewPort } from "../application.ports.ts";
-import type { ReviewTarget } from "../models/progress.models.ts";
+import type { ReviewTarget } from "../models/index.ts";
+import type { ScheduleReviewPort } from "../ports/index.ts";
 import type { FsrsRating } from "@guesant/saberes-domain";
 
 export interface ReviewScheduleInput {

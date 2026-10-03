@@ -1,4 +1,4 @@
-import type { AddStudyPointsPort } from "../application.ports.ts";
+import type { AddStudyPointsPort } from "../ports/index.ts";
 
 export interface AddStudyPointsInput {
   amount: number;

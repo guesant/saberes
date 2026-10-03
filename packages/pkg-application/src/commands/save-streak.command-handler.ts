@@ -1,5 +1,5 @@
-import type { SaveStreakPort } from "../application.ports.ts";
-import type { StudyRecord } from "../models/progress.models.ts";
+import type { StudyRecord } from "../models/index.ts";
+import type { SaveStreakPort } from "../ports/index.ts";
 
 export class SaveStreakCommandHandler {
   public constructor(private readonly port: SaveStreakPort) {}

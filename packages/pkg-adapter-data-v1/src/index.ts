@@ -12,4 +12,4 @@ export * from "./adapters/review/fsrs/index";
 
 export * from "./adapters/study/index";
 
-export * from "./storage/progress.storage";
+export * from "./storage/index.ts";

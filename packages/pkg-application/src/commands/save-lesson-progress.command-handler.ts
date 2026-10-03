@@ -1,5 +1,5 @@
-import type { SaveLessonProgressPort } from "../application.ports.ts";
-import type { StudyRecord } from "../models/progress.models.ts";
+import type { StudyRecord } from "../models/index.ts";
+import type { SaveLessonProgressPort } from "../ports/index.ts";
 
 export class SaveLessonProgressCommandHandler {
   public constructor(private readonly port: SaveLessonProgressPort) {}

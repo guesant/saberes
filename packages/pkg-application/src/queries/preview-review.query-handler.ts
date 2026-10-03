@@ -1,5 +1,5 @@
-import type { PreviewReviewPort } from "../application.ports.ts";
-import type { ReviewTarget } from "../models/progress.models.ts";
+import type { ReviewTarget } from "../models/index.ts";
+import type { PreviewReviewPort } from "../ports/index.ts";
 
 export interface ReviewPreviewInput {
   target: ReviewTarget;

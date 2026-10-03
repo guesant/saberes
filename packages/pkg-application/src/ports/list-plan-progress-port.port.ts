@@ -1,4 +1,4 @@
-import type { StudyRecord } from "../models/progress.models.ts";
+import type { StudyRecord } from "../models/index.ts";
 
 export interface ListPlanProgressPort {
   execute(): Promise<StudyRecord[]>;

@@ -1,5 +1,5 @@
-import type { SaveReviewTargetPort } from "../application.ports.ts";
-import type { ReviewTarget } from "../models/progress.models.ts";
+import type { ReviewTarget } from "../models/index.ts";
+import type { SaveReviewTargetPort } from "../ports/index.ts";
 
 export class SaveReviewTargetCommandHandler {
   public constructor(private readonly port: SaveReviewTargetPort) {}

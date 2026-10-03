@@ -1,4 +1,4 @@
-import type { CatalogFilters, CatalogReadModel } from "../models/content.models.ts";
+import type { CatalogFilters, CatalogReadModel } from "../models/index.ts";
 
 export interface GetCatalogPort {
   execute(filters?: CatalogFilters): Promise<CatalogReadModel>;

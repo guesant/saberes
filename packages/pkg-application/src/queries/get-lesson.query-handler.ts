@@ -1,5 +1,5 @@
-import type { GetLessonPort } from "../application.ports.ts";
-import type { ContentKey, LessonReadModel } from "../models/content.models.ts";
+import type { ContentKey, LessonReadModel } from "../models/index.ts";
+import type { GetLessonPort } from "../ports/index.ts";
 
 export class GetLessonQueryHandler {
   public constructor(private readonly port: GetLessonPort) {}

@@ -1,4 +1,4 @@
-import type { ContentKey } from "./content.models.ts";
+import type { ContentKey } from "./content-key.type.ts";
 import type { ReviewState, ReviewTargetType } from "./domain.enums.ts";
 
 export interface ReviewTargetRecord {

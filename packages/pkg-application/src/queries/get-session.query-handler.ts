@@ -1,5 +1,5 @@
-import type { GetSessionPort } from "../application.ports.ts";
-import type { StudySession } from "../models/progress.models.ts";
+import type { StudySession } from "../models/index.ts";
+import type { GetSessionPort } from "../ports/index.ts";
 
 export class GetSessionQueryHandler {
   public constructor(private readonly port: GetSessionPort) {}

@@ -15,6 +15,6 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./progress": "./src/storage/progress.storage.ts"
+    "./progress": "./src/storage/index.ts"
   }
 }

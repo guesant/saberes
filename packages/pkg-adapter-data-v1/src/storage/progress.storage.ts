@@ -26,12 +26,6 @@ import type { ReviewDatabaseEvent } from "./review-database-event.interface.ts";
 import type { ReviewTarget } from "./review-target.type.ts";
 import type { SessionRecord } from "./session-record.interface.ts";
 
-export { type Attempt } from "./attempt.type.ts";
-
-export { type AttemptDiagnosis } from "./attempt-diagnosis.interface.ts";
-
-export { type ReviewTarget } from "./review-target.type.ts";
-
 export type { DiagnosisCode, DiagnosisConfidence, DiagnosisSource, PedagogicalAction, ReviewState };
 
 const ContentKeySchema = pipe(

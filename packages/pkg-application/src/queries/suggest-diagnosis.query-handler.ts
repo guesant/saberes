@@ -1,5 +1,5 @@
-import type { SuggestDiagnosisPort } from "../application.ports.ts";
-import type { Attempt } from "../models/progress.models.ts";
+import type { Attempt } from "../models/index.ts";
+import type { SuggestDiagnosisPort } from "../ports/index.ts";
 
 export interface SuggestDiagnosisInput {
   isCorrect: boolean | null;

@@ -1,5 +1,4 @@
-import type { ContentKey } from "../models/content.models.ts";
-import type { StudyRecord } from "../models/progress.models.ts";
+import type { ContentKey, StudyRecord } from "../models/index.ts";
 
 export interface SaveBookmarkPort {
   execute(input: {
