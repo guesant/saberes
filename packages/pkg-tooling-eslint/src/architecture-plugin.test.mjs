@@ -606,6 +606,15 @@ test("layer-boundaries enforces the dependency direction across packages and imp
     ).length,
     0,
   );
+
+  assert.equal(
+    verify(
+      'import architecture from "../packages/pkg-tooling-eslint/src/architecture-plugin.mjs";',
+      "layer-boundaries",
+      ".config/eslint.config.mjs",
+    ).length,
+    0,
+  );
 });
 
 test("layer-boundaries accepts and rejects the declared package matrix", () => {

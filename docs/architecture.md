@@ -112,7 +112,7 @@ O código TypeScript sob `packages/` usa nomes `small-kebab-case` com um sufixo 
 - `*.schema.ts`, `*.models.ts`, `*.database.ts`, `*.config.ts`: artefatos tipados por responsabilidade;
 - `*.test.ts` ou `*.spec.ts`: testes sem JSX.
 
-Ferramentas em `.tools/` usam `*.tool.ts`. Operações locais em `.local/operator/` usam `*.operator.ts`. Configurações em `.config/` usam `*.config.ts` quando forem TypeScript.
+Ferramentas em `packages/pkg-tooling/src/tools/` usam `*.tool.ts`. O diretório `.tools/` contém apenas fachadas simbólicas para CLI. Operações locais em `.local/operator/` usam `*.operator.ts`. Configurações em `.config/` usam `*.config.ts` quando forem TypeScript.
 
 Casos de uso seguem CQRS granular: `*.command.ts`, `*.command-handler.ts` e `*.command-result.ts` para comandos; `*.query.ts`, `*.query-handler.ts` e `*.query-result.ts` para consultas. Cada handler possui uma classe e um `execute()`. Arquivos `*.use-case.ts` legados e arquivos `*.adapters.ts` agregadores são rejeitados pelo linter arquitetural.
 

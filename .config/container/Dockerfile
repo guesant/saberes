@@ -150,7 +150,7 @@ RUN mise exec -- deno task build
 
 FROM app-build AS build-check
 
-RUN mise exec -- deno run --allow-read --allow-env .tools/check-build.ts
+RUN mise exec -- deno run --allow-read --allow-env packages/pkg-tooling/src/tools/check-build.tool.ts
 
 FROM nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de AS runtime
 

@@ -6,8 +6,8 @@ import typescriptParser from "@typescript-eslint/parser";
 import boundaries from "eslint-plugin-boundaries";
 import importPlugin from "eslint-plugin-import";
 import sonarjs from "eslint-plugin-sonarjs";
-import architecture from "./eslint/architecture-plugin.mjs";
-import importFormat from "./eslint/import-format-plugin.mjs";
+import architecture from "../packages/pkg-tooling-eslint/src/architecture-plugin.mjs";
+import importFormat from "../packages/pkg-tooling-eslint/src/import-format-plugin.mjs";
 
 const compat = new FlatCompat({ baseDirectory: dirname(fileURLToPath(import.meta.url)) });
 
@@ -206,6 +206,8 @@ export default [
         { type: "app-presentation", pattern: "packages/app", partialMatch: false },
         { type: "utils", pattern: "packages/pkg-utils", partialMatch: false },
         { type: "data", pattern: "packages/thedata", partialMatch: false },
+        { type: "tooling", pattern: "packages/pkg-tooling", partialMatch: false },
+        { type: "tooling", pattern: "packages/pkg-tooling-eslint", partialMatch: false },
       ],
       "boundaries/files": [
         { category: "tooling", pattern: ".tools/**" },
@@ -331,7 +333,14 @@ export default [
             },
             {
               from: { file: { categories: ["tooling", "config", "data"] } },
-              allow: [{ to: { file: { categories: ["tooling", "config", "data"] } } }],
+              allow: [
+                { to: { file: { categories: ["tooling", "config", "data"] } } },
+                { to: { element: { type: "tooling" } } },
+              ],
+            },
+            {
+              from: { element: { type: "tooling" } },
+              allow: [{ to: { element: { type: "tooling" } } }],
             },
           ],
           checkAllOrigins: true,

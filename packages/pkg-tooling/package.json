@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "name": "@guesant/saberes-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Unlicense",
+  "type": "module",
+  "dependencies": {
+    "sql-formatter": "^15.9.0",
+    "sql.js": "^1.13.0",
+    "valibot": "^1.1.0"
+  },
+  "exports": {
+    "./tools/*": "./src/tools/*.ts"
+  }
+}

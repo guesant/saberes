@@ -16,7 +16,7 @@ e executa os gates diretamente nela, sem instalar Deno ou dependências novament
 
 Todos os arquivos JavaScript e TypeScript do repositório (`.js`, `.jsx`, `.mjs`, `.ts`
 e `.tsx`) entram explicitamente no Prettier e no ESLint, inclusive em `.config/`,
-`.tools/`, `.github/` e nos pacotes. A política de código exige aspas duplas, imports
+`packages/pkg-tooling/`, `.github/` e nos pacotes. A política de código exige aspas duplas, imports
 no topo em ordem alfabética, sem linhas vazias entre imports e com uma linha vazia após
 o último import. Estruturas de controle usam chaves sempre; o ESLint também exige
 separação visual antes e depois de controles e exports. A regra local
@@ -106,8 +106,8 @@ just e2e
 - A configuração única do ESLint reúne as regras inspiradas no Airbnb e as regras próprias de React/TypeScript; não há perfil rápido alternativo.
   Essas regras estão
   documentadas em [`docs/eslint-prettier-airbnb.md`](eslint-prettier-airbnb.md).
-- ast-grep aplica regras estruturais versionadas em `.config/ast-grep/rules`, executa seus próprios casos de teste e escaneia `packages/` e `.tools/`. Em TypeScript e TSX, as regras cobrem contratos de props nomeados, ausência de desestruturação de props na assinatura, ausência de tipos de objeto inline em parâmetros, componentes React declarados no escopo do módulo, callbacks de `map` delegados a componentes e ausência de ternários aninhados ou JSX complexo em callbacks. O ESLint estrito limita a profundidade do JSX a três níveis. Ele também bloqueia HTML arbitrário, execução dinâmica (`eval`/`new Function`), atribuições a `innerHTML` e `console.log`; o gate Deno residual verifica apenas URLs `javascript:` dentro de texto.
-- A política de comentários é de tolerância zero para narrativa. ast-grep valida comentários em TypeScript, TSX e YAML; `.tools/check-comments.tool.ts` cobre formatos que não possuem parser ast-grep adequado no toolchain, incluindo Dockerfile, Justfile, HCL, JSONC, TOML, Markdown e SQL. Só são aceitas diretivas de ferramentas, como `@ts-*`, `# syntax=...`, shebangs de receitas, marcadores `renovate:`, a linha gerada pelo `mise lock` e `-- migrate:up/down` do Dbmate.
+- ast-grep aplica regras estruturais versionadas em `.config/ast-grep/rules`, executa seus próprios casos de teste e escaneia `packages/`, `.config/` e `.github/`; as regras específicas de tooling escaneiam `packages/pkg-tooling/src/` e `.local/operator/`. Em TypeScript e TSX, as regras cobrem contratos de props nomeados, ausência de desestruturação de props na assinatura, ausência de tipos de objeto inline em parâmetros, componentes React declarados no escopo do módulo, callbacks de `map` delegados a componentes e ausência de ternários aninhados ou JSX complexo em callbacks. O ESLint estrito limita a profundidade do JSX a três níveis. Ele também bloqueia HTML arbitrário, execução dinâmica (`eval`/`new Function`), atribuições a `innerHTML` e `console.log`; o gate Deno residual verifica apenas URLs `javascript:` dentro de texto.
+- A política de comentários é de tolerância zero para narrativa. ast-grep valida comentários em TypeScript, TSX e YAML; `packages/pkg-tooling/src/tools/check-comments.tool.ts` cobre formatos que não possuem parser ast-grep adequado no toolchain, incluindo Dockerfile, Justfile, HCL, JSONC, TOML, Markdown e SQL. Só são aceitas diretivas de ferramentas, como `@ts-*`, `# syntax=...`, shebangs de receitas, marcadores `renovate:`, a linha gerada pelo `mise lock` e `-- migrate:up/down` do Dbmate.
 - Deno usa `deno.lock` e instalação congelada no CI. O `.config/container/Dockerfile` usa cache mount do BuildKit para o `DENO_DIR`; o Compose mantém o mesmo cache em `.cache/deno` no desenvolvimento.
 - O Mise é a fonte dos runtimes do projeto: `.config/mise/mise.toml` declara Deno
   e Python e `.config/mise/mise.lock` fixa as resoluções por plataforma. O Aqua é

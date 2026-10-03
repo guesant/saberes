@@ -9,6 +9,8 @@ const workspacePackagePaths = new Map([
   ["@guesant/saberes-ui", "packages/pkg-ui"],
   ["@guesant/saberes-ui-content", "packages/pkg-ui-content"],
   ["@guesant/saberes-app", "packages/app"],
+  ["@guesant/saberes-tooling", "packages/pkg-tooling"],
+  ["@guesant/saberes-tooling-eslint", "packages/pkg-tooling-eslint"],
 ]);
 
 const applicationLayers = new Set([
@@ -95,6 +97,10 @@ function sourceLayer(filename) {
   }
 
   if (/(?:^|\/)\.tools\//.test(normalized)) {
+    return "tooling";
+  }
+
+  if (/\/packages\/pkg-tooling(?:-eslint)?\/(?:src|tests)\//.test(normalized)) {
     return "tooling";
   }
 
@@ -1980,7 +1986,7 @@ const allowedLayerDependencies = {
   ]),
   utils: new Set(["utils"]),
   tooling: new Set(["tooling"]),
-  config: new Set(["config"]),
+  config: new Set(["config", "tooling"]),
   data: new Set(["data"]),
 };
 

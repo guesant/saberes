@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "name": "@guesant/saberes-tooling-eslint",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Unlicense",
+  "type": "module",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.28.4",
+    "eslint": "^9.36.0"
+  },
+  "exports": {
+    "./architecture-plugin": "./src/architecture-plugin.mjs",
+    "./import-format-plugin": "./src/import-format-plugin.mjs"
+  }
+}

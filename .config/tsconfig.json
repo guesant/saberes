@@ -30,5 +30,6 @@
     "vite.config.ts",
     "playwright.config.ts",
     "../packages/app/tests/e2e/**/*.ts"
-  ]
+  ],
+  "exclude": ["../packages/pkg-tooling/src/**/*.ts"]
 }

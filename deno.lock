@@ -11324,6 +11324,23 @@
           ]
         }
       },
+      "packages/pkg-tooling": {
+        "packageJson": {
+          "dependencies": [
+            "npm:sql-formatter@^15.9.0",
+            "npm:sql.js@^1.13.0",
+            "npm:valibot@^1.1.0"
+          ]
+        }
+      },
+      "packages/pkg-tooling-eslint": {
+        "packageJson": {
+          "dependencies": [
+            "npm:@babel/eslint-parser@^7.28.4",
+            "npm:eslint@^9.36.0"
+          ]
+        }
+      },
       "packages/pkg-ui": {
         "packageJson": {
           "dependencies": [

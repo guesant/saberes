@@ -57,7 +57,7 @@ jobs:
               aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo
               aqua exec -- osv-scanner scan source --recursive /repo
               aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo
-              semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools
+              semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages
             '
 
       - name: Gerar e validar SBOM da imagem dentro do Docker
@@ -69,7 +69,7 @@ jobs:
             -e SBOM_IMAGE="$APP_IMAGE" \
             "$QUALITY_CI_IMAGE" \
             bash -c '
-              mise exec -- deno run --allow-read --allow-write --allow-env --allow-run=syft .tools/generate-sbom.tool.ts image
+              mise exec -- deno run --allow-read --allow-write --allow-env --allow-run=syft packages/pkg-tooling/src/tools/generate-sbom.tool.ts image
               trivy sbom --config .config/trivy.yaml --scanners vuln --severity HIGH,CRITICAL --exit-code 1 .cache/sbom/image.cdx.json
             '
 

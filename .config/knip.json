@@ -2,14 +2,16 @@
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "entry": [
     ".config/vite.config.ts",
-    ".tools/**/*.ts",
+    "packages/pkg-tooling/src/tools/**/*.ts",
+    "packages/pkg-tooling-eslint/src/**/*.mjs",
     ".local/operator/**/*.ts",
     "packages/app/src/main.component.tsx",
     "packages/app/src/**/*.test.{ts,tsx}"
   ],
   "project": [
     ".config/vite.config.ts",
-    ".tools/**/*.ts",
+    "packages/pkg-tooling/src/tools/**/*.ts",
+    "packages/pkg-tooling-eslint/src/**/*.mjs",
     ".local/operator/**/*.ts",
     "packages/app/src/**/*.{ts,tsx}",
     "packages/pkg-domain/src/**/*.{ts,tsx}",
