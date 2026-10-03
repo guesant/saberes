@@ -26,8 +26,20 @@ const extensionPolicies = new Map<string, FilePolicy>([
   [".jsx", { markers: ["//", "/*"], allow: () => false }],
   [".mjs", { markers: ["//", "/*"], allow: () => false }],
   [".cjs", { markers: ["//", "/*"], allow: () => false }],
-  [".ts", { markers: ["//", "/*"], allow: () => false }],
-  [".tsx", { markers: ["//", "/*"], allow: () => false }],
+  [
+    ".ts",
+    {
+      markers: ["//", "/*"],
+      allow: (comment) => /^\/\/\s*awkward-type-ignore:\s+\S/.test(comment),
+    },
+  ],
+  [
+    ".tsx",
+    {
+      markers: ["//", "/*"],
+      allow: (comment) => /^\/\/\s*awkward-type-ignore:\s+\S/.test(comment),
+    },
+  ],
   [".hcl", { markers: ["#", "//", "/*"], allow: () => false }],
   [".jsonc", { markers: ["//", "/*"], allow: () => false }],
   [".md", { markers: ["<!--", "/*"], allow: () => false }],

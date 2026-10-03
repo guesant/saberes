@@ -62,6 +62,7 @@ const architectureRules = {
   "architecture/no-parent-reexports": "error",
   "architecture/execute-single-parameter": "error",
   "architecture/no-sql-outside-repository": "error",
+  "architecture/no-forbidden-type-casts": "error",
   "architecture/layer-boundaries": "error",
   "architecture/composition-root": "error",
   "architecture/no-domain-in-presentation": "error",

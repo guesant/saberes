@@ -1829,6 +1829,69 @@ const noUnsafeDoubleCast = {
   },
 };
 
+const noForbiddenTypeCasts = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      forbiddenCast:
+        'Avoid casting to {{type}}. Add a nearby "awkward-type-ignore: <reason>" comment only when the cast is unavoidable.',
+    },
+  },
+  create(context) {
+    const { sourceCode } = context;
+
+    const comments = sourceCode.getAllComments();
+
+    function getForbiddenType(node) {
+      if (node.type === "TSAnyKeyword") {
+        return "any";
+      }
+
+      if (node.type === "TSNeverKeyword") {
+        return "never";
+      }
+
+      if (node.type === "TSUnknownKeyword") {
+        return "unknown";
+      }
+
+      if (
+        node.type === "TSTypeReference" &&
+        node.typeName.type === "Identifier" &&
+        node.typeName.name === "Record"
+      ) {
+        return "Record";
+      }
+
+      return undefined;
+    }
+
+    function hasJustification(node) {
+      return comments.some((comment) => {
+        const isAdjacent =
+          comment.loc.end.line === node.loc.start.line ||
+          comment.loc.end.line === node.loc.start.line - 1;
+
+        return isAdjacent && /^\s*awkward-type-ignore:\s+\S/u.test(comment.value);
+      });
+    }
+
+    function reportCast(node) {
+      const type = getForbiddenType(node.typeAnnotation);
+
+      if (type !== undefined && !hasJustification(node)) {
+        context.report({ node, messageId: "forbiddenCast", data: { type } });
+      }
+    }
+
+    return {
+      TSAsExpression: reportCast,
+      TSTypeAssertion: reportCast,
+    };
+  },
+};
+
 const maxFunctionParameters = {
   meta: {
     type: "problem",
@@ -3406,6 +3469,7 @@ export default {
     "no-parent-reexports": noParentReexports,
     "execute-single-parameter": executeSingleParameter,
     "no-unsafe-double-cast": noUnsafeDoubleCast,
+    "no-forbidden-type-casts": noForbiddenTypeCasts,
     "no-unjustified-suppression": noUnjustifiedSuppression,
     "no-visual-props-outside-ui": noVisualPropsOutsideUi,
     "no-aggregated-adapters": noAggregatedAdapters,

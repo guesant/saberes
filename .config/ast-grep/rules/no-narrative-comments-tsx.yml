@@ -8,4 +8,4 @@ rule:
   all:
     - kind: comment
     - not:
-        regex: '^//\s*@(?:ts-[a-z-]+|vite-ignore|vitest-[a-z-]+)\b'
+        regex: '^//\s*(?:@(?:ts-[a-z-]+|vite-ignore|vitest-[a-z-]+)\b|awkward-type-ignore:\s+\S)'

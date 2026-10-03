@@ -42,6 +42,7 @@ const localContentPlugin = {
 
       fs.createReadStream(localContentPath)
         .on("error", next)
+        // awkward-type-ignore: the local Vite response adapter exposes a compatible writable stream at runtime
         .pipe(response as never);
     });
   },
@@ -65,7 +66,7 @@ export default defineConfig({
       ],
     }),
     VitePWA({
-      registerType: "prompt",
+      registerType: "autoUpdate",
       includeAssets: ["icons/*.svg"],
       manifest: {
         name: "Portal Guesant Saberes",
@@ -90,9 +91,12 @@ export default defineConfig({
         ],
       },
       workbox: {
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
         navigateFallback: asset("index.html"),
         navigateFallbackDenylist: [/\/-\/backstage\/database\/schema(?:\/|$)/u],
         globPatterns: ["**/*.{js,css,html,svg,wasm,json}"],
+        skipWaiting: true,
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.hostname === "raw.githubusercontent.com",

@@ -109,6 +109,26 @@ test("typescript safety rules reject any and double casts", () => {
   );
 });
 
+test("no-forbidden-type-casts rejects unsafe casts without a justification", () => {
+  for (const code of [
+    "const value = input as never;",
+    "const value = input as any;",
+    "const value = input as Record<string, string>;",
+    "const value = input as unknown;",
+  ]) {
+    assert.equal(verify(code, "no-forbidden-type-casts").length, 1);
+  }
+});
+
+test("no-forbidden-type-casts accepts a nearby explicit justification", () => {
+  for (const code of [
+    "// awkward-type-ignore: legacy parser output has no runtime discriminator\nconst value = input as never;",
+    "const value = input as unknown; // awkward-type-ignore: browser API lacks a typed declaration",
+  ]) {
+    assert.equal(verify(code, "no-forbidden-type-casts").length, 0);
+  }
+});
+
 test("wildcard-reexports-only allows wildcard exports only in index files", () => {
   assert.equal(
     verify('export * from "./value";', "wildcard-reexports-only", "packages/pkg-ui/src/index.ts")
