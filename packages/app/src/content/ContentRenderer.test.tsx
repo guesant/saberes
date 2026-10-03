@@ -1,4 +1,4 @@
-// @ts-nocheck -- fixtures do renderer serão tipadas junto da migração do componente.
+// @ts-nocheck
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { ContentRenderer } from "./ContentRenderer";

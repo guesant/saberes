@@ -1,0 +1,8 @@
+id: no-narrative-comments-yaml
+valid:
+  - |
+    value: 1 # renovate: depName=example/tool
+invalid:
+  - |
+    # explicação narrativa não permitida
+    value: 1

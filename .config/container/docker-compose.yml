@@ -11,25 +11,25 @@ services:
     pull_policy: never
     working_dir: /app
     env_file:
-      - path: ../.local/operator/.env
+      - path: ../../.local/operator/.env
         required: false
     ports:
       - "5173:5173"
     volumes:
-      - ..:/app
+      - ../..:/app
       - workspace_modules:/app/node_modules
-      - ../.cache/deno:/deno/cache
+      - ../../.cache/deno:/deno/cache
     environment:
       DENO_DIR: /deno/cache
       DENO_NO_PROMPT: "1"
-      PATH: /app/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      PATH: /opt/mise/shims:/opt/mise/bin:/opt/aqua/bin:/app/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/bin
       VITE_BASE_PATH: ${VITE_BASE_PATH:-/}
       VITE_CONTENT_DB_URL: ${VITE_CONTENT_DB_URL:-}
       PLAYWRIGHT_BASE_URL: ${PLAYWRIGHT_BASE_URL:-http://web}
       SOURCE_DB: ${SOURCE_DB:-}
       OUTPUT_DB: ${OUTPUT_DB:-}
       CONTENT_DB: ${CONTENT_DB:-}
-    command: sh -lc "deno install --frozen --node-modules-dir=auto && deno task dev"
+    command: bash -c "mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task dev"
 
 volumes:
   workspace_modules:

@@ -32,7 +32,7 @@ jobs:
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435
 
       - name: Build pelo Docker
-        run: docker buildx bake --file .container/docker-bake.hcl --load runtime
+        run: docker buildx bake --file .config/container/docker-bake.hcl --load runtime
 
       - name: Extrair artefato estático da imagem
         run: |

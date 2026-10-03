@@ -1,6 +1,6 @@
 const roots = [
     ".config",
-    ".container",
+    ".config/container",
     ".github",
     "docs",
     "packages",

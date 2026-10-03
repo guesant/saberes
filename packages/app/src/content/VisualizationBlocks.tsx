@@ -1,4 +1,4 @@
-// @ts-nocheck -- migração incremental das visualizações editoriais legadas.
+// @ts-nocheck
 import { Alert, Box, Paper, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";

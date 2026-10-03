@@ -1,0 +1,6 @@
+id: no-inner-html-assignment-tsx
+language: Tsx
+severity: error
+message: Não atribua innerHTML; use o renderer sanitizado da aplicação.
+rule:
+    pattern: $TARGET.innerHTML = $VALUE

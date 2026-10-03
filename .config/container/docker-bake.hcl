@@ -52,7 +52,7 @@ variable "VITE_CONTENT_DB_URL" {
 
 target "_common" {
   context = "."
-  dockerfile = ".container/Dockerfile"
+  dockerfile = ".config/container/Dockerfile"
   args = {
     VCS_REF = VCS_REF
     BUILD_DATE = BUILD_DATE
@@ -61,7 +61,7 @@ target "_common" {
   cache-from = [CACHE_FROM]
   cache-to = [CACHE_TO]
   labels = {
-    "org.opencontainers.image.title" = "Portal Guesant Saberes unified toolchain"
+    "org.opencontainers.image.title" = "Portal Guesant Saberes unified mise and Aqua toolchain"
     "org.opencontainers.image.revision" = VCS_REF
     "org.opencontainers.image.version" = VERSION
   }

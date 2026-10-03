@@ -1,0 +1,9 @@
+id: no-narrative-comments-tsx
+valid:
+  - |
+    // @ts-expect-error
+    const value = <span />;
+invalid:
+  - |
+    // explicação narrativa não permitida
+    const value = <span />;

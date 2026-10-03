@@ -1,22 +1,30 @@
-import fs from "node:fs";
-import path from "node:path";
+import { join, resolve } from "@std/path";
 
-const root = path.resolve(process.cwd(), "dist");
-const requiredFiles = ["index.html", "manifest.webmanifest", "sw.js", "sql-wasm.wasm"];
+const root = resolve(Deno.cwd(), "dist");
+const requiredFiles = [
+    "index.html",
+    "manifest.webmanifest",
+    "sw.js",
+    "sql-wasm.wasm",
+    "-/backstage/database/schema/index.html",
+];
 
 for (const relativePath of requiredFiles) {
-    const filePath = path.join(root, relativePath);
-    if (!fs.existsSync(filePath)) {
+    const filePath = join(root, relativePath);
+    try {
+        await Deno.stat(filePath);
+    } catch (error) {
+        if (!(error instanceof Deno.errors.NotFound)) throw error;
         throw new Error(`Build incompleto: arquivo ausente em dist/${relativePath}`);
     }
 }
 
-const index = fs.readFileSync(path.join(root, "index.html"), "utf8");
+const index = await Deno.readTextFile(join(root, "index.html"));
 if (!index.includes('<div id="root">') && !index.includes('<div id="root"></div>')) {
     throw new Error("Build inválido: o ponto de montagem React não foi encontrado.");
 }
 
-const manifest = JSON.parse(fs.readFileSync(path.join(root, "manifest.webmanifest"), "utf8"));
+const manifest = JSON.parse(await Deno.readTextFile(join(root, "manifest.webmanifest")));
 if (
     !manifest.name ||
     !manifest.start_url ||

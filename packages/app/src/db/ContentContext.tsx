@@ -1,4 +1,4 @@
-// @ts-nocheck -- migração incremental do provider legado de conteúdo.
+// @ts-nocheck
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { loadContentDatabase } from "@guesant/saberes-adapter-data-v1";
 
@@ -22,7 +22,6 @@ export function ContentProvider({ children }) {
     const reload = useCallback(() => setAttempt((current) => current + 1), []);
 
     useEffect(() => {
-        // The counter intentionally re-runs this effect after a user-requested retry.
         void attempt;
         let active = true;
         setContent({ status: "loading", db: null, error: null });

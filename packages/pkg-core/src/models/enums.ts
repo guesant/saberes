@@ -1,9 +1,3 @@
-/**
- * Tokens estáveis do domínio editorial e do estudo local.
- *
- * O conteúdo textual continua livre; estes enums representam somente códigos
- * persistidos, discriminadores e estados usados em mais de um módulo.
- */
 export enum UniversityCode {
     Unicamp = "unicamp",
     Usp = "usp",

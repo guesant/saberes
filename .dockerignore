@@ -1,5 +1,6 @@
 .git
-.github
+!.github
+!.github/**
 node_modules
 .deno
 **/.deno

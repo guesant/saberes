@@ -3,6 +3,9 @@ BuildKit
 CSpell
 Comvest
 CSS
+Aqua
+actionlint
+aquaproj
 Dexie
 Deno
 ECharts
@@ -19,6 +22,9 @@ MVVM
 PWA
 Qlty
 React
+lychee
+mise
+pipx
 Laravel
 Semgrep
 SQLite

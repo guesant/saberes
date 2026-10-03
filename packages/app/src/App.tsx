@@ -1,4 +1,4 @@
-// @ts-nocheck -- migração incremental do shell legado para TypeScript.
+// @ts-nocheck
 import {
     clearProgress,
     enrollCourse,
@@ -2588,9 +2588,7 @@ function MyStudyPage() {
             let achievements = achievementDefinitions(stats);
             try {
                 achievements = await syncAchievements(stats);
-            } catch {
-                /* IndexedDB continua opcional para a leitura do conteúdo. */
-            }
+            } catch {}
             const storedAchievements = await safe(listAchievements(), []);
             if (active)
                 setState({

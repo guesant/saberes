@@ -1,0 +1,5 @@
+id: no-inner-html-assignment-typescript
+valid:
+    - element.textContent = content
+invalid:
+    - element.innerHTML = content

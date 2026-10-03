@@ -4,7 +4,8 @@ Portal educacional local-first para vestibulares e aprendizagem estruturada, fei
 
 [![quality](https://img.shields.io/github/actions/workflow/status/guesant/saberes/quality.yml?branch=main&label=quality&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/quality.yml)
 [![deploy](https://img.shields.io/github/actions/workflow/status/guesant/saberes/deploy-pages.yml?branch=main&label=deploy&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/deploy-pages.yml)
-[![licença](https://img.shields.io/github/license/guesant/saberes?style=for-the-badge&labelColor=0b1120&color=7c3aed&logo=github&logoColor=white)](LICENSE)
+[![licença do código](https://img.shields.io/badge/c%C3%B3digo-The%20Unlicense-7c3aed?style=for-the-badge&labelColor=0b1120)](LICENSE)
+[![licença do conteúdo](https://img.shields.io/badge/conte%C3%BAdo-CC0%201.0-059669?style=for-the-badge&labelColor=0b1120)](LICENSE-CONTENT)
 
 [![último commit](https://img.shields.io/github/last-commit/guesant/saberes/main?label=%C3%BAltimo%20commit&style=flat-square&labelColor=0b1120&color=b45309&logo=git&logoColor=white)](https://github.com/guesant/saberes/commits/main)
 [![commits por mês](https://img.shields.io/github/commit-activity/m/guesant/saberes?label=commits%2Fm%C3%AAs&style=flat-square&labelColor=0b1120&color=b45309&logo=git&logoColor=white)](https://github.com/guesant/saberes/graphs/commit-activity)
@@ -35,10 +36,10 @@ O CC0 cobre o conteúdo editorial original deste projeto. Questões, trechos, im
 - Arquitetura MVVM com use cases, ports/adapters e factories tipadas para Dependency Injection.
 - Catálogo editorial com cursos gerais e específicos, mapas de tópicos, planos de estudo e área Meu estudo.
 - O SQLite editorial é local nesta fase e fica em `.local/content/content.sqlite`; durante o desenvolvimento o Vite o serve em `/data/content.sqlite`. A URL pode ser substituída por `VITE_CONTENT_DB_URL` em cenários locais alternativos.
-- Nginx serve o build final. Não há Laravel, PHP, Livewire ou backend de execução.
+- Nginx serve o build estático final da aplicação.
 - A distribuição de produção é feita no GitHub Pages pelo GitHub Actions.
 
-A estrutura de trabalho segue a convenção do projeto: a aplicação fica em [`packages/app/`](packages/app), o domínio puro em [`packages/pkg-core/`](packages/pkg-core), os adapters de dados em [`packages/pkg-adapter-data-v1/`](packages/pkg-adapter-data-v1), configurações de ferramentas em [`.config/`](.config), infraestrutura Docker em [`.container/`](.container), scripts de manutenção em [`.tools/`](.tools), insumos locais não publicados em [`.local/`](.local) e caches descartáveis em [`.cache/`](.cache). O Deno é a única ferramenta JavaScript/TypeScript do toolchain; o cache de dependências fica em `.cache/deno` e o build usa cache mount do BuildKit.
+A estrutura de trabalho segue a convenção do projeto: a aplicação fica em [`packages/app/`](packages/app), o domínio puro em [`packages/pkg-core/`](packages/pkg-core), os adapters de dados em [`packages/pkg-adapter-data-v1/`](packages/pkg-adapter-data-v1), o pacote de dados e migrations em [`packages/thedata/`](packages/thedata), configurações de ferramentas em [`.config/`](.config), infraestrutura Docker em [`.config/container/`](.config/container), scripts de manutenção em [`.tools/`](.tools), insumos locais não publicados em [`.local/`](.local) e caches descartáveis em [`.cache/`](.cache). O Deno é a única ferramenta JavaScript/TypeScript do toolchain; o cache de dependências fica em `.cache/deno` e o build usa cache mount do BuildKit.
 
 ## Executar com Docker
 
@@ -55,8 +56,8 @@ usando o arquivo de exemplo como fallback. Variáveis `VITE_*` são valores
 públicos de build e ficam incorporadas ao bundle; não use segredos no frontend.
 
 ```sh
-docker compose -f .container/docker-compose.yml build web
-docker compose -f .container/docker-compose.yml up web
+docker compose -f .config/container/docker-compose.yml build web
+docker compose -f .config/container/docker-compose.yml up web
 ```
 
 Acesse [http://localhost:8000](http://localhost:8000).
@@ -64,7 +65,7 @@ Acesse [http://localhost:8000](http://localhost:8000).
 Para desenvolvimento com Vite:
 
 ```sh
-docker compose -f .container/docker-compose.yml run --rm --service-ports dev
+docker compose -f .config/container/docker-compose.yml run --rm --service-ports dev
 ```
 
 Acesse [http://localhost:5173](http://localhost:5173).
@@ -73,7 +74,7 @@ Acesse [http://localhost:5173](http://localhost:5173).
 
 O workflow em `.github/workflows/deploy-pages.yml` constrói a aplicação dentro da imagem Docker e publica o conteúdo estático no GitHub Pages. O domínio público configurado é [saberes.guesant.net](https://saberes.guesant.net), com base `/` e [`CNAME`](packages/app/public/CNAME) incluído no artefato.
 
-O workflow exige apenas que o GitHub Pages esteja configurado para usar GitHub Actions nas configurações do repositório. Nenhum runtime JavaScript é instalado diretamente no runner: o bundle é gerado pelo `.container/Dockerfile`, que é a mesma fonte usada no desenvolvimento, build e CI.
+O workflow exige apenas que o GitHub Pages esteja configurado para usar GitHub Actions nas configurações do repositório. Nenhum runtime JavaScript é instalado diretamente no runner: o bundle é gerado pelo [`.config/container/Dockerfile`](.config/container/Dockerfile), que é a mesma fonte usada no desenvolvimento, build e CI.
 
 ## Banco SQLite local
 
@@ -85,13 +86,13 @@ armazenado nesse arquivo.
 Para gerar um novo snapshot multi-exame a partir de outro SQLite previamente revisado:
 
 ```sh
-docker buildx bake --file .container/docker-bake.hcl --load tools
+docker buildx bake --file .config/container/docker-bake.hcl --load tools
 docker run --rm -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace portal-guesant-saberes-tools:local deno task content:rebuild
 ```
 
 O script lê `.local/content/source.sqlite` por padrão e gera `.local/content/content.sqlite` com o modelo multi-processo. É possível informar `SOURCE_DB` e `OUTPUT_DB` no container. O banco inicial pode conter diferentes processos seletivos, mas o app não faz crawling, downloads, leitura de PDF, busca de conteúdo ou geração de questões durante a execução.
 
-O schema local de bootstrap fica em [`.config/dbmate/schema.sql`](.config/dbmate/schema.sql). As migrations Dbmate em [`.config/dbmate/migrations`](.config/dbmate/migrations) são DML-only nesta fase; elas não criam, alteram ou removem tabelas. O comando `content:rebuild` cria o staging a partir do schema local, aplica as migrations DML e só então importa o conteúdo revisado.
+As migrations em [`packages/thedata/dbmate/migrations/`](packages/thedata/dbmate/migrations) são a fonte de verdade do banco local: a migration inicial cria o schema completo e as seguintes aplicam alterações e dados editoriais versionados. O comando `content:rebuild` cria um banco vazio, aplica todas as migrations Dbmate e só então importa o conteúdo revisado. A documentação HTML do schema é gerada durante o build, sem substituir as migrations.
 
 ```sh
 docker run --rm -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace portal-guesant-saberes-tools:local deno task db:status
@@ -109,6 +110,19 @@ just migration-format-check
 
 A verificação também faz parte de `deno task heavy-checks`; não é executada pelo `just check`
 diário enquanto o produto estiver em MVP.
+
+## Documentação do schema
+
+O build cria a documentação estática do banco em `/-/backstage/database/schema/`. O processo
+parte de um SQLite vazio, aplica todas as migrations do Dbmate e executa o SchemaSpy dentro da
+mesma imagem Docker de ferramentas. Assim, o mapa do schema publicado acompanha a aplicação sem
+depender do banco editorial local.
+
+```sh
+just schema-docs
+```
+
+Após o build, o índice estará disponível em `saberes.guesant.net/-/backstage/database/schema/`.
 
 O modelo diferencia cursos universitários (`degree_programs`) de cursos preparatórios (`learning_courses`). Cursos preparatórios são compostos por módulos e itens; mapas usam tópicos e pré-requisitos; planos organizam uma sequência editorial de estudo. O contrato completo está em [`docs/data-model.md`](docs/data-model.md).
 

@@ -3,4 +3,6 @@ language: Tsx
 severity: error
 message: Renderize Markdown editorial sanitizado; não use dangerouslySetInnerHTML.
 rule:
-    pattern: <$TAG dangerouslySetInnerHTML={$VALUE} />
+    any:
+        - pattern: <$TAG dangerouslySetInnerHTML={$VALUE} />
+        - pattern: dangerouslySetInnerHTML={$VALUE}

@@ -30,7 +30,7 @@ jobs:
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435
 
       - name: Construir toolchain com cache
-        run: docker buildx bake --file .container/docker-bake.hcl --load quality-ci
+        run: docker buildx bake --file .config/container/docker-bake.hcl --load quality-ci
 
       - name: Executar gates rápidos na imagem imutável
-        run: docker run --rm "$QUALITY_CI_IMAGE" deno task quality:check:fast
+        run: docker run --rm "$QUALITY_CI_IMAGE" mise exec -- deno task quality:check:fast

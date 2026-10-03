@@ -1,4 +1,4 @@
-// @ts-nocheck -- migração incremental do renderer editorial legado.
+// @ts-nocheck
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Alert, Box, Button, Chip, Link as MuiLink, Paper, Stack, Typography } from "@mui/material";

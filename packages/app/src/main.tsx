@@ -1,4 +1,4 @@
-// @ts-nocheck -- bootstrap legado será tipado na migração da composição da aplicação.
+// @ts-nocheck
 import "@fontsource/roboto-slab/400.css";
 import "@fontsource/roboto-slab/500.css";
 import "@fontsource/roboto-slab/600.css";

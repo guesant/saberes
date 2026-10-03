@@ -52,6 +52,10 @@ export default defineConfig({
                     src: "../pkg-adapter-data-v1/node_modules/sql.js/dist/sql-wasm.wasm",
                     dest: ".",
                 },
+                {
+                    src: "../../.cache/schema-docs/site/**/*",
+                    dest: "-/backstage/database/schema",
+                },
             ],
         }),
         VitePWA({
@@ -81,6 +85,7 @@ export default defineConfig({
             },
             workbox: {
                 navigateFallback: asset("index.html"),
+                navigateFallbackDenylist: [/\/-\/backstage\/database\/schema(?:\/|$)/u],
                 globPatterns: ["**/*.{js,css,html,svg,wasm,json}"],
                 runtimeCaching: [
                     {

@@ -1,6 +1,8 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@std/internal@^1.0.14": "1.0.14",
+    "jsr:@std/path@1.1.6": "1.1.6",
     "npm:@ast-grep/cli@*": "0.45.3",
     "npm:@ast-grep/cli@~0.45.3": "0.45.3",
     "npm:@axe-core/playwright@^4.10.2": "4.13.0",
@@ -37,6 +39,7 @@
     "npm:katex@~0.16.25": "0.16.47",
     "npm:knip@^6.39.0": "6.39.0",
     "npm:markdownlint-cli2@0.20": "0.20.0",
+    "npm:react-complex-tree@^2.6.4": "2.6.4_react@19.3.0",
     "npm:react-dom@^19.1.1": "19.3.0_react@19.3.0",
     "npm:react-i18next@^16.0.1": "16.6.6_i18next@25.10.10_react@19.3.0_typescript@5.9.3",
     "npm:react-markdown@^10.1.0": "10.1.0_@types+react@19.3.0_react@19.3.0",
@@ -60,6 +63,17 @@
     "npm:vite@8": "8.3.2_@types+node@24.19.0",
     "npm:vitest@^5.0.3": "5.0.3_@types+node@24.19.0_jsdom@26.1.0_vite@8.3.2",
     "npm:workbox-window@^7.4.1": "7.4.1"
+  },
+  "jsr": {
+    "@std/internal@1.0.14": {
+      "integrity": "291516b3d4c35024d6ffbc0a9df5bf4c64116e05b50012cf846710152d2ffdf7"
+    },
+    "@std/path@1.1.6": {
+      "integrity": "c68485c2a4dfbb5ae3cc74fae4e8c4e5d874cf8a8ed12927917235c758b46cbe",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    }
   },
   "npm": {
     "@adobe/css-tools@4.5.0": {
@@ -5836,6 +5850,12 @@
         "unpipe"
       ]
     },
+    "react-complex-tree@2.6.4_react@19.3.0": {
+      "integrity": "sha512-hb0ORIQwuYQbWPO7fmL4nZbCFCKVX8NEwf5czfwsMU5bnQcYva3Zc6nSjydA42W3qwb3OJILWoB4PHY2bK3BNg==",
+      "dependencies": [
+        "react"
+      ]
+    },
     "react-dom@19.3.0_react@19.3.0": {
       "integrity": "sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==",
       "dependencies": [
@@ -7450,6 +7470,9 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "jsr:@std/path@1.1.6"
+    ],
     "packageJson": {
       "dependencies": [
         "npm:@ast-grep/cli@~0.45.3",
@@ -7499,6 +7522,7 @@
             "npm:graphology@0.26",
             "npm:i18next@^25.5.2",
             "npm:katex@~0.16.25",
+            "npm:react-complex-tree@^2.6.4",
             "npm:react-dom@^19.1.1",
             "npm:react-i18next@^16.0.1",
             "npm:react-markdown@^10.1.0",

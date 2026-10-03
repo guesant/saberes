@@ -1,0 +1,6 @@
+id: no-console-log-typescript
+language: TypeScript
+severity: error
+message: Use the application logger or an explicit user-facing feedback mechanism instead of console.log.
+rule:
+  pattern: console.log($$$ARGS)

@@ -24,7 +24,7 @@ jobs:
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435
 
       - name: Construir toolchain pelo Docker
-        run: docker buildx bake --file .container/docker-bake.hcl --load quality-ci
+        run: docker buildx bake --file .config/container/docker-bake.hcl --load quality-ci
 
       - name: Validar workflows dentro do Docker
         run: |
@@ -33,10 +33,10 @@ jobs:
             -w /workspace \
             "$QUALITY_CI_IMAGE" \
             bash -c '
-              yamllint -c .config/.yamllint.yml .github .config/.yamllint.yml
-              hadolint --config .config/.hadolint.yaml .container/Dockerfile
+              aqua exec -- yamllint -c .config/.yamllint.yml .github .config/.yamllint.yml
+              aqua exec -- hadolint --config .config/.hadolint.yaml .config/container/Dockerfile
               for workflow in .github/workflows/*.yml; do
-                actionlint -color "$workflow"
+                aqua exec -- actionlint -color "$workflow"
               done
-              zizmor .github/workflows
+              aqua exec -- zizmor .github/workflows
             '

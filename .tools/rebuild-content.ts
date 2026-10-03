@@ -1,6 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
 import initSqlJs from "sql.js";
+import { dirname, join } from "@std/path";
 import {
     AdmissionProcessCode,
     AdmissionProcessKind,
@@ -23,34 +22,40 @@ import {
     UniversityCode,
 } from "@guesant/saberes-core";
 
-const root = process.cwd();
-const sourcePath = process.env.SOURCE_DB || path.join(root, ".local/content/source.sqlite");
-const outputPath = process.env.OUTPUT_DB || path.join(root, ".local/content/content.sqlite");
-const migrationDbPath = path.join(root, ".cache/content/editorial.sqlite");
-const schemaPath = path.join(root, ".config/dbmate/schema.sql");
+const root = Deno.cwd();
+const sourcePath = Deno.env.get("SOURCE_DB") || join(root, ".local/content/source.sqlite");
+const outputPath = Deno.env.get("OUTPUT_DB") || join(root, ".local/content/content.sqlite");
+const migrationDbPath = join(root, ".cache/content/editorial.sqlite");
+const migrationsDirectory = join(root, "packages/thedata/dbmate/migrations");
 const now = new Date().toISOString();
 
-if (!fs.existsSync(sourcePath)) throw new Error(`Banco de origem não encontrado: ${sourcePath}`);
+try {
+    await Deno.stat(sourcePath);
+} catch (error) {
+    if (error instanceof Deno.errors.NotFound)
+        throw new Error(`Banco de origem não encontrado: ${sourcePath}`);
+    throw error;
+}
 
 const SQL = await initSqlJs({
-    locateFile: (file) => path.join(root, "node_modules/sql.js/dist", file),
+    locateFile: (file) => join(root, "node_modules/sql.js/dist", file),
 });
-const source = new SQL.Database(fs.readFileSync(sourcePath));
-fs.mkdirSync(path.dirname(migrationDbPath), { recursive: true });
-if (fs.existsSync(migrationDbPath)) fs.rmSync(migrationDbPath);
-const schema = fs
-    .readFileSync(schemaPath, "utf8")
-    .split("-- migrate:down", 1)[0]
-    .replace(/^-- migrate:up\s*/, "");
+const source = new SQL.Database(Deno.readFileSync(sourcePath));
+Deno.mkdirSync(dirname(migrationDbPath), { recursive: true });
+try {
+    Deno.removeSync(migrationDbPath);
+} catch (error) {
+    if (!(error instanceof Deno.errors.NotFound)) throw error;
+}
 const bootstrap = new SQL.Database();
-bootstrap.run(schema);
-fs.writeFileSync(migrationDbPath, Buffer.from(bootstrap.export()));
+Deno.writeFileSync(migrationDbPath, bootstrap.export());
+bootstrap.close();
 const migration = new Deno.Command("dbmate", {
     args: [
         "--url",
         `sqlite:${migrationDbPath}`,
         "--migrations-dir",
-        ".config/dbmate/migrations",
+        migrationsDirectory,
         "--no-dump-schema",
         "up",
     ],
@@ -64,7 +69,7 @@ if (!migrationResult.success) {
         `Falha ao aplicar migrations do Dbmate:\n${new TextDecoder().decode(migrationResult.stderr)}`,
     );
 }
-const target = new SQL.Database(fs.readFileSync(migrationDbPath));
+const target = new SQL.Database(Deno.readFileSync(migrationDbPath));
 target.run("PRAGMA foreign_keys = ON");
 
 function oldRows(table) {
@@ -715,7 +720,6 @@ for (const [editionKey, degreeProgramId] of [
         });
 }
 
-// Camada editorial de aprendizagem: cursos, mapas e planos reutilizam o conteúdo acima.
 const editorialTopicIds = old.topics.map((topic) => topicIdByOld[topic.id]).filter(Boolean);
 const assessmentSetIds = {};
 const unicampQuestionOccurrences =
@@ -1042,6 +1046,6 @@ insert("content_releases", {
 
 target.run("DROP TABLE IF EXISTS schema_migrations");
 const binary = target.export();
-fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, Buffer.from(binary));
+Deno.mkdirSync(dirname(outputPath), { recursive: true });
+Deno.writeFileSync(outputPath, binary);
 console.log(`Snapshot multi-exame exportado: ${outputPath} (${binary.byteLength} bytes)`);

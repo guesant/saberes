@@ -1,0 +1,28 @@
+---
+checksum:
+  enabled: true
+  require_checksum: true
+  supported_envs:
+    - linux
+
+registries:
+  - name: standard
+    type: standard
+    ref: v4.570.0 # renovate: depName=aquaproj/aqua-registry
+  - name: guesant
+    type: local
+    path: registry.yaml
+
+packages:
+  - name: astral-sh/uv@0.12.22
+  - name: jqlang/jq@jq-1.8.1
+  - name: koalaman/shellcheck@v0.11.0
+  - name: zizmorcore/zizmor@v1.11.0
+  - name: wasilibs/go-yamllint@v1.37.1
+  - name: gitleaks/gitleaks@v8.28.0
+  - name: google/osv-scanner@v2.0.2
+  - name: aquasecurity/trivy@v0.75.0
+  - name: rhysd/actionlint@v1.7.9
+  - name: hadolint/hadolint@v2.14.0
+  - name: lycheeverse/lychee@lychee-v0.24.2
+  - name: amacneil/dbmate@v2.36.0

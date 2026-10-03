@@ -29,7 +29,7 @@ jobs:
         uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435
 
       - name: Construir toolchain, runtime e Playwright pelo Docker
-        run: docker buildx bake --file .container/docker-bake.hcl --load quality-ci runtime playwright
+        run: docker buildx bake --file .config/container/docker-bake.hcl --load quality-ci runtime playwright
 
       - name: Executar auditoria completa dentro do Docker
         run: |
@@ -39,11 +39,11 @@ jobs:
             -w /workspace \
             "$QUALITY_CI_IMAGE" \
             bash -c '
-              deno install --frozen --node-modules-dir=auto
-              deno task heavy-checks
-              deno task build:check
-              deno task security:check
-              deno task supply-chain
+              mise exec -- deno install --frozen --node-modules-dir=auto
+              mise exec -- deno task heavy-checks
+              mise exec -- deno task build:check
+              mise exec -- deno task security:check
+              mise exec -- deno task supply-chain
             '
 
       - name: Executar E2E e acessibilidade dentro do Docker
@@ -53,7 +53,10 @@ jobs:
             --name portal-guesant-saberes-web-ci \
             --network portal-guesant-saberes-ci \
             "$QUALITY_CI_IMAGE" \
-            bash -c 'deno task build && python3 -m http.server 8080 --directory dist' >/dev/null
+            bash -c '
+              mise exec -- deno task build &&
+              mise exec -- python -m http.server 8080 --directory dist
+            ' >/dev/null
           cleanup_e2e() {
             docker rm -f portal-guesant-saberes-web-ci >/dev/null 2>&1 || true
             docker network rm portal-guesant-saberes-ci >/dev/null 2>&1 || true
@@ -68,14 +71,14 @@ jobs:
             -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium \
             "$PLAYWRIGHT_IMAGE" \
             bash -c '
-              deno install --frozen --node-modules-dir=auto
+              mise exec -- deno install --frozen --node-modules-dir=auto
               for attempt in $(seq 1 30); do
                 curl -fsS "$PLAYWRIGHT_BASE_URL" >/dev/null && break
                 sleep 1
               done
               curl -fsS "$PLAYWRIGHT_BASE_URL" >/dev/null
-              deno task e2e
-              deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts
+              mise exec -- deno task e2e
+              mise exec -- deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts
             '
 
       - name: Gerar relatórios pesados dentro do Docker
@@ -87,7 +90,7 @@ jobs:
             --network portal-guesant-saberes-reports \
             --network-alias web \
             "$QUALITY_CI_IMAGE" \
-            bash -c 'deno task build && python3 -m http.server 80 --directory dist' >/dev/null
+            bash -c 'mise exec -- deno task build && mise exec -- python -m http.server 80 --directory dist' >/dev/null
           cleanup_reports() {
             docker rm -f portal-guesant-saberes-reports-web >/dev/null 2>&1 || true
             docker network rm portal-guesant-saberes-reports >/dev/null 2>&1 || true
@@ -100,14 +103,14 @@ jobs:
             -w /workspace \
             "$QUALITY_CI_IMAGE" \
             bash -c '
-              deno install --frozen --node-modules-dir=auto
+              mise exec -- deno install --frozen --node-modules-dir=auto
               for attempt in $(seq 1 30); do
                 curl -fsS http://web/ >/dev/null && break
                 sleep 1
               done
               curl -fsS http://web/ >/dev/null
               set +e
-              deno task lighthouse
+              mise exec -- deno task lighthouse
               lighthouse_status=$?
               set -e
               mkdir -p .cache

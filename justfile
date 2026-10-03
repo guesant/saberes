@@ -1,14 +1,14 @@
 set shell := ["bash", "-euo", "pipefail", "-c"]
 
 operator_env := if path_exists(".local/operator/.env") == "true" { ".local/operator/.env" } else { ".local/operator/.env.example" }
-compose := "docker compose --env-file " + operator_env + " --project-name portal-guesant-saberes -f .container/docker-compose.yml"
-bake := "docker buildx bake --file .container/docker-bake.hcl"
+compose := "docker compose --env-file " + operator_env + " --project-name portal-guesant-saberes -f .config/container/docker-compose.yml"
+bake := "docker buildx bake --file .config/container/docker-bake.hcl"
 quality_image := env_var_or_default("QUALITY_IMAGE", "portal-guesant-saberes-quality:local")
 tools_image := env_var_or_default("TOOLS_IMAGE", "portal-guesant-saberes-tools:local")
 dev_image := env_var_or_default("DEV_IMAGE", "portal-guesant-saberes-dev:local")
 playwright_image := env_var_or_default("PLAYWRIGHT_IMAGE", "portal-guesant-saberes-playwright:local")
 workspace_modules_volume := "portal-guesant-saberes-workspace-modules"
-app := compose + " run --rm -T dev sh -lc"
+app := compose + " run --rm -T dev bash -c"
 
 default: check
 
@@ -33,10 +33,10 @@ tools-shell: tools-build
     docker run --rm -it -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace {{tools_image}} bash
 
 check: dev-build
-	docker run --rm {{dev_image}} deno task quality:check:fast
+	docker run --rm {{dev_image}} mise exec -- deno task quality:check:fast
 
 heavy-checks: dev-build
-	{{app}} 'deno install --frozen --node-modules-dir=auto && deno task heavy-checks'
+	{{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task heavy-checks'
 	just build-check
 	just e2e
 	just accessibility
@@ -48,55 +48,61 @@ heavy-checks: dev-build
 	just reuse-check
 
 format:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task format'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task format'
 
 format-check:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task check:format'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task check:format'
 
 migration-format:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task db:format'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task db:format'
 
 migration-format-check:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task db:format:check'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task db:format:check'
 
 spelling:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task cspell'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task cspell'
 
 docs-links:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task docs:links'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task docs:links'
 
 placeholders:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task placeholders'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task placeholders'
 
 commit-check:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task commit:check'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task commit:check'
 
 lint:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task check:lint'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task check:lint'
 
 typecheck:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task typecheck'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task typecheck'
 
 ast-grep:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task ast-grep'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task ast-grep'
+
+comments:
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task comments'
 
 test:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task test'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task test'
 
 architecture:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task architecture:check'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task architecture:check'
 
 content:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task content:validate'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task content:validate'
 
 content-migrate: dev-build
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task db:migrate'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task db:migrate'
 
 content-migration-status: dev-build
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task db:status'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task db:status'
+
+schema-docs: dev-build
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task database:schema-docs'
 
 security:
-    {{app}} 'deno install --frozen --node-modules-dir=auto && deno task security:check'
+    {{app}} 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task security:check'
 
 build:
     just runtime-build
@@ -110,7 +116,7 @@ e2e: runtime-build playwright-build
     {{compose}} up -d web
     trap '{{compose}} down' EXIT
     docker volume create {{workspace_modules_volume}} >/dev/null
-    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'deno install --frozen --node-modules-dir=auto && deno task e2e'
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task e2e'
 
 accessibility: runtime-build playwright-build
     #!/usr/bin/env bash
@@ -118,28 +124,28 @@ accessibility: runtime-build playwright-build
     {{compose}} up -d web
     trap '{{compose}} down' EXIT
     docker volume create {{workspace_modules_volume}} >/dev/null
-    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'deno install --frozen --node-modules-dir=auto && deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts'
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts'
 
 lighthouse: runtime-build quality-build
     #!/usr/bin/env bash
     set -euo pipefail
     {{compose}} up -d web
     trap '{{compose}} down' EXIT
-    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e LHCI_BUILD_CONTEXT__CURRENT_HASH=local {{quality_image}} bash -c 'deno install --frozen --node-modules-dir=auto && deno task lighthouse'
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e LHCI_BUILD_CONTEXT__CURRENT_HASH=local {{quality_image}} bash -c 'mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task lighthouse'
 
 ci: check
 
 repository-lint: quality-build
-    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'yamllint -c .config/.yamllint.yml .github .config/.yamllint.yml && hadolint --config .config/.hadolint.yaml .container/Dockerfile && for workflow in .github/workflows/*.yml; do actionlint -color "$workflow"; done && zizmor .github/workflows'
+    docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'aqua exec -- yamllint -c .config/.yamllint.yml .github .config/.yamllint.yml && aqua exec -- hadolint --config .config/.hadolint.yaml .config/container/Dockerfile && for workflow in .github/workflows/*.yml; do aqua exec -- actionlint -color "$workflow"; done && aqua exec -- zizmor .github/workflows'
 
 reuse-check: quality-build
     docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'reuse lint'
 
 security-audit: quality-build
-    docker run --rm -v "$PWD:/repo:ro" {{quality_image}} bash -c 'gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && osv-scanner scan source --recursive /repo && trivy fs --skip-version-check --no-progress --scanners vuln,secret --severity CRITICAL,HIGH --exit-code 1 /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
+    docker run --rm -v "$PWD:/repo:ro" {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --recursive /repo && aqua exec -- trivy fs --skip-version-check --no-progress --scanners vuln,secret --severity CRITICAL,HIGH --exit-code 1 /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.tools'
 
 supply-chain: quality-build
-    {{app}} 'deno run --allow-read --allow-env .tools/check-supply-chain.ts'
+    {{app}} 'mise exec -- deno run --allow-read --allow-env .tools/check-supply-chain.ts'
 
 complexity-report: quality-build
     mkdir -p .cache

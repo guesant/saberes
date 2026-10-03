@@ -1,9 +1,8 @@
-import fs from "node:fs";
-import path from "node:path";
 import initSqlJs from "sql.js";
+import { join } from "@std/path";
 
-const root = process.cwd();
-const file = process.env.CONTENT_DB || path.join(root, ".local/content/content.sqlite");
+const root = Deno.cwd();
+const file = Deno.env.get("CONTENT_DB") || join(root, ".local/content/content.sqlite");
 const required = [
     "universities",
     "organizers",
@@ -50,9 +49,9 @@ const required = [
     "content_releases",
 ];
 const SQL = await initSqlJs({
-    locateFile: (name) => path.join(root, "node_modules/sql.js/dist", name),
+    locateFile: (name) => join(root, "node_modules/sql.js/dist", name),
 });
-const db = new SQL.Database(fs.readFileSync(file));
+const db = new SQL.Database(Deno.readFileSync(file));
 const tables =
     db.exec("SELECT name FROM sqlite_master WHERE type = 'table'")[0]?.values.flat() || [];
 const missing = required.filter((table) => !tables.includes(table));
