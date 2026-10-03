@@ -4,7 +4,8 @@ Portal educacional local-first para vestibulares e aprendizagem estruturada, fei
 
 [![quality](https://img.shields.io/github/actions/workflow/status/guesant/saberes/quality.yml?branch=main&label=quality&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/quality.yml)
 [![deploy](https://img.shields.io/github/actions/workflow/status/guesant/saberes/deploy-pages.yml?branch=main&label=deploy&style=for-the-badge&labelColor=0b1120&color=2563eb&logo=githubactions&logoColor=white)](https://github.com/guesant/saberes/actions/workflows/deploy-pages.yml)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/guesant/saberes/badge)](https://scorecard.dev/viewer/?uri=github.com/guesant/saberes)
+[![OpenSSF Scorecard](https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.scorecard.dev%2Fprojects%2Fgithub.com%2Fguesant%2Fsaberes%2Fbadge&style=for-the-badge&label=OpenSSF%20Scorecard&labelColor=0b1120&color=2563eb&logo=openssf&logoColor=white)](https://scorecard.dev/viewer/?uri=github.com/guesant/saberes)
+
 [![licença do código](https://img.shields.io/badge/c%C3%B3digo-The%20Unlicense-7c3aed?style=for-the-badge&labelColor=0b1120&logo=unlicense&logoColor=white)](LICENSE)
 [![licença do conteúdo](https://img.shields.io/badge/conte%C3%BAdo-CC0%201.0-059669?style=for-the-badge&labelColor=0b1120&logo=creativecommons&logoColor=white)](LICENSE-CONTENT)
 
