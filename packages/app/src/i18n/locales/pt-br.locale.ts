@@ -209,6 +209,13 @@ const ptBR = {
     breadcrumb: "Catálogo / Curso / Tópicos",
     readingTime: "Lição · {{minutes}} min de leitura",
     progressError: "O progresso local desta aula não pôde ser carregado: {{message}}",
+    editorialMetadata: "Sobre esta aula",
+    level: "Nível: {{value}}",
+    duration: "Duração: {{value}} min",
+    editorialVersion: "Versão: {{value}}",
+    reviewStatus: "Revisão: {{value}}",
+    sources: "Fontes",
+    sourcesUnavailable: "Fonte editorial não disponível neste snapshot.",
   },
   exercise: {
     notFound: "Questão não encontrada.",

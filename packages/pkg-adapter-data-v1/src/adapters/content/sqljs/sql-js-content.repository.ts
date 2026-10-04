@@ -215,6 +215,10 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
       sections: db.query("SELECT * FROM lesson_sections WHERE lesson_id = ? ORDER BY position", [
         lesson.id,
       ]),
+      sources: db.query(
+        "SELECT sd.title, sd.url, sd.provider, sd.kind FROM lesson_sources ls JOIN source_documents sd ON sd.id = ls.source_document_id WHERE ls.lesson_id = ? ORDER BY sd.title",
+        [lesson.id],
+      ),
     };
   }
 

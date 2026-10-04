@@ -8,6 +8,7 @@ import {
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { LessonActions } from "./lesson-actions.component";
+import { LessonEditorialMetadataPanel } from "./lesson-editorial-metadata-panel.component";
 import { LessonSectionNavigation } from "./lesson-section-navigation.component";
 import { LessonSections } from "./lesson-sections.component";
 import { useLessonResume } from "./use-lesson-resume.hook";
@@ -49,6 +50,8 @@ export function LessonReadyView(props: LessonReadyViewProps) {
           onBookmark={onBookmark}
         />
       </UISplitContentRow>
+
+      <LessonEditorialMetadataPanel data={data} />
 
       <UIPaper variant="outlined">
         <LessonSectionNavigation

@@ -3,7 +3,6 @@ import {
   boolean,
   literal,
   minLength,
-  minValue,
   number,
   object,
   optional,
@@ -102,14 +101,3 @@ export const editorialBlocksSchema = array(
     }),
   ]),
 );
-
-export const lessonMetadataSchema = object({
-  objective: pipe(string(), minLength(1)),
-  audience: pipe(string(), minLength(1)),
-  level: picklist(["basic", "intermediate", "advanced", "all"]),
-  estimatedMinutes: pipe(number(), minValue(1)),
-  prerequisites: array(string()),
-  sources: array(string()),
-  editorialVersion: pipe(string(), minLength(1)),
-  reviewStatus: picklist(["draft", "review", "published"]),
-});
