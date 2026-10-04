@@ -28,6 +28,7 @@ import { CalculateTopicMasteryQueryHandler } from "./queries/calculate-topic-mas
 import { ExportProgressQueryHandler } from "./queries/export-progress.query-handler";
 import { GetAssessmentQueryHandler } from "./queries/get-assessment.query-handler";
 import { GetCatalogQueryHandler } from "./queries/get-catalog.query-handler";
+import { GetContentReleaseQueryHandler } from "./queries/get-content-release.query-handler";
 import { GetCourseQueryHandler } from "./queries/get-course.query-handler";
 import { GetLessonQueryHandler } from "./queries/get-lesson.query-handler";
 import { GetQuestionQueryHandler } from "./queries/get-question.query-handler";
@@ -54,6 +55,7 @@ import { ParseEditorialBlocksQueryHandler } from "./queries/parse-editorial-bloc
 import { PreviewReviewQueryHandler } from "./queries/preview-review.query-handler";
 import { RecommendNextQueryHandler } from "./queries/recommend-next.query-handler";
 import { SuggestDiagnosisQueryHandler } from "./queries/suggest-diagnosis.query-handler";
+import { ValidateContentSnapshotQueryHandler } from "./queries/validate-content-snapshot.query-handler";
 import type { ApplicationPorts } from "./application.ports";
 import type { IdPort } from "./ports/id-port.port";
 
@@ -89,6 +91,8 @@ export interface ApplicationServices {
   };
   editorial: {
     parseBlocks: ParseEditorialBlocksQueryHandler;
+    validateSnapshot: ValidateContentSnapshotQueryHandler;
+    getRelease: GetContentReleaseQueryHandler;
   };
   studyPlans: {
     get: GetStudyPlanQueryHandler;
@@ -158,6 +162,8 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
   const getQuestion = new GetQuestionQueryHandler(ports.getQuestion);
 
   const getAssessment = new GetAssessmentQueryHandler(ports.getAssessment);
+
+  const getContentRelease = new GetContentReleaseQueryHandler(ports.getContentRelease);
 
   const getTopicMap = new GetTopicMapQueryHandler(ports.getTopicMap);
 
@@ -267,6 +273,10 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
 
   const parseEditorialBlocks = new ParseEditorialBlocksQueryHandler(ports.parseEditorialBlocks);
 
+  const validateContentSnapshot = new ValidateContentSnapshotQueryHandler(
+    ports.validateContentSnapshot,
+  );
+
   const buildKnowledgeGraph = new BuildKnowledgeGraphQueryHandler(ports.buildKnowledgeGraph);
 
   return {
@@ -278,7 +288,11 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
     assessments: { get: getAssessment },
     maps: { get: getTopicMap, buildGraph: buildKnowledgeGraph },
     topics: { get: getTopic },
-    editorial: { parseBlocks: parseEditorialBlocks },
+    editorial: {
+      parseBlocks: parseEditorialBlocks,
+      validateSnapshot: validateContentSnapshot,
+      getRelease: getContentRelease,
+    },
     studyPlans: { get: getStudyPlan, saveProgress: savePlanProgress },
     progress: {
       listAttempts,

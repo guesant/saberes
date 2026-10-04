@@ -354,11 +354,22 @@ export default [
               allow: [
                 { to: { file: { categories: ["tooling", "config", "data"] } } },
                 { to: { element: { type: "tooling" } } },
+                {
+                  to: {
+                    element: { type: ["adapter", "application", "domain"] },
+                  },
+                },
               ],
             },
             {
               from: { element: { type: "tooling" } },
-              allow: [{ to: { element: { type: "tooling" } } }],
+              allow: [
+                {
+                  to: {
+                    element: { type: ["tooling", "adapter", "application", "domain"] },
+                  },
+                },
+              ],
             },
           ],
           checkAllOrigins: true,
@@ -387,6 +398,22 @@ export default [
     files: ["packages/pkg-application/src/use-cases/**/*.ts"],
     rules: {
       "max-classes-per-file": "off",
+    },
+  },
+  {
+    files: operatorFiles,
+    rules: {
+      "import/extensions": [
+        "error",
+        "never",
+        {
+          js: "never",
+          jsx: "never",
+          mjs: "always",
+          ts: "always",
+          tsx: "always",
+        },
+      ],
     },
   },
   {

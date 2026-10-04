@@ -8,6 +8,7 @@ import type {
   AssessmentReadModel,
   CatalogFilters,
   CatalogReadModel,
+  ContentReleaseReadModel,
   ContentKey,
   CourseReadModel,
   LessonReadModel,
@@ -277,6 +278,26 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
         "SELECT * FROM assessment_set_items WHERE assessment_set_id = ? ORDER BY position",
         [assessment.id],
       ),
+    };
+  }
+
+  async getContentRelease(): Promise<ContentReleaseReadModel | null> {
+    const db = await this.database();
+
+    const release = db.query(
+      "SELECT version, schema_version, generated_at, notes FROM content_releases ORDER BY generated_at DESC, id DESC LIMIT 1",
+    )[0];
+
+    if (!release) {
+      return null;
+    }
+
+    return {
+      version: String(release.version || ""),
+      schemaVersion: Number(release.schema_version || 0),
+      generatedAt: String(release.generated_at || ""),
+      notes: String(release.notes || ""),
+      source: db.source,
     };
   }
 

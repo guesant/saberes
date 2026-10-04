@@ -2,7 +2,7 @@ import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-applicatio
 
 export type LessonSectionContentViewModel =
   | { status: "loading" }
-  | { status: "error"; error: unknown }
+  | { status: "error"; error: unknown; onRetry: () => Promise<void> }
   | { status: "invalid"; message: string }
   | {
       status: "ready";

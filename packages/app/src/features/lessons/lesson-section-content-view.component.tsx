@@ -17,7 +17,7 @@ export function LessonSectionContentView(props: LessonSectionContentViewProps) {
   }
 
   if (viewModel.status === "error") {
-    return <ContentErrorState error={viewModel.error} />;
+    return <ContentErrorState error={viewModel.error} onRetry={viewModel.onRetry} />;
   }
 
   if (viewModel.status === "invalid") {

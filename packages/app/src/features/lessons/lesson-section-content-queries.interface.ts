@@ -13,4 +13,5 @@ export interface LessonSectionContentQueries {
     error: Error | null;
     data?: KnowledgeGraph;
   };
+  retry: () => Promise<void>;
 }

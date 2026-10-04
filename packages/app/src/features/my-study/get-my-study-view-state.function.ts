@@ -1,5 +1,9 @@
 import type { MyStudyViewModelState } from "./my-study.view-model";
 
-export function getMyStudyViewState(state: MyStudyViewModelState): MyStudyViewModelState {
-  return state === "error" ? "error" : state;
+export function getMyStudyViewState(isPending: boolean): MyStudyViewModelState {
+  if (isPending) {
+    return "loading";
+  }
+
+  return "ready";
 }

@@ -7,6 +7,7 @@ export const applicationDependencyTokens = {
   getLesson: Symbol.for("saberes.get-lesson-port"),
   getQuestion: Symbol.for("saberes.get-question-port"),
   getAssessment: Symbol.for("saberes.get-assessment-port"),
+  getContentRelease: Symbol.for("saberes.get-content-release-port"),
   getTopicMap: Symbol.for("saberes.get-topic-map-port"),
   getTopic: Symbol.for("saberes.get-topic-port"),
   getStudyPlan: Symbol.for("saberes.get-study-plan-port"),
@@ -60,4 +61,5 @@ export const applicationDependencyTokens = {
   ids: Symbol.for("saberes.id-port"),
   parseEditorialBlocks: Symbol.for("saberes.parse-editorial-blocks-port"),
   buildKnowledgeGraph: Symbol.for("saberes.build-knowledge-graph-port"),
+  validateContentSnapshot: Symbol.for("saberes.validate-content-snapshot-port"),
 };

@@ -10,6 +10,7 @@ import type { EnrollCoursePort } from "./ports/enroll-course-port.port";
 import type { ExportProgressPort } from "./ports/export-progress-port.port";
 import type { GetAssessmentPort } from "./ports/get-assessment-port.port";
 import type { GetCatalogPort } from "./ports/get-catalog-port.port";
+import type { GetContentReleasePort } from "./ports/get-content-release-port.port";
 import type { GetCoursePort } from "./ports/get-course-port.port";
 import type { GetLessonPort } from "./ports/get-lesson-port.port";
 import type { GetQuestionPort } from "./ports/get-question-port.port";
@@ -56,6 +57,7 @@ import type { SaveTopicMasteryPort } from "./ports/save-topic-mastery-port.port"
 import type { ScheduleReviewPort } from "./ports/schedule-review-port.port";
 import type { SuggestDiagnosisPort } from "./ports/suggest-diagnosis-port.port";
 import type { SyncAchievementsPort } from "./ports/sync-achievements-port.port";
+import type { ValidateContentSnapshotPort } from "./ports/validate-content-snapshot-port.port";
 
 export interface ApplicationPorts {
   getCatalog: GetCatalogPort;
@@ -63,6 +65,7 @@ export interface ApplicationPorts {
   getLesson: GetLessonPort;
   getQuestion: GetQuestionPort;
   getAssessment: GetAssessmentPort;
+  getContentRelease: GetContentReleasePort;
   getTopicMap: GetTopicMapPort;
   getTopic: GetTopicPort;
   getStudyPlan: GetStudyPlanPort;
@@ -116,4 +119,5 @@ export interface ApplicationPorts {
   ids: IdPort;
   parseEditorialBlocks: ParseEditorialBlocksPort;
   buildKnowledgeGraph: BuildKnowledgeGraphPort;
+  validateContentSnapshot: ValidateContentSnapshotPort;
 }

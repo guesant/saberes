@@ -18,6 +18,9 @@ export function PerformanceDiagnosisStatRow(props: PerformanceDiagnosisStatRowPr
           diagnosis: t(`exercise.diagnosis.${props.stat.code}`),
         })}
       </UITypography>
+      <UITypography color="text.secondary" variant="body2">
+        {t(`performance.actionDescriptions.${props.stat.action}`)}
+      </UITypography>
       <UIInlineActions>
         <UIButton component={Link} size="small" to={getPerformanceActionPath(props.stat.action)}>
           {t("performance.openAction")}

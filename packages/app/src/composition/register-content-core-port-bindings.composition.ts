@@ -2,6 +2,7 @@ import {
   SqlJsGetAssessmentAdapter,
   SqlJsGetCatalogAdapter,
   SqlJsGetCourseAdapter,
+  SqlJsGetContentReleaseAdapter,
   SqlJsGetLessonAdapter,
   SqlJsGetQuestionAdapter,
   type ContentRepositoryContract,
@@ -38,6 +39,10 @@ export function registerContentCorePortBindings(container: Container): void {
     [
       applicationDependencyTokens.getAssessment,
       () => new SqlJsGetAssessmentAdapter(getContentRepository()),
+    ],
+    [
+      applicationDependencyTokens.getContentRelease,
+      () => new SqlJsGetContentReleaseAdapter(getContentRepository()),
     ],
   ];
 

@@ -30,5 +30,13 @@ export function useLessonSectionContentQueries(
     queryFn: () => executeKnowledgeGraph(services.maps.buildGraph, mapBlock),
   });
 
-  return { blocks: blocksQuery, graph: graphQuery };
+  const createLessonSectionContentRetry = async (): Promise<void> => {
+    await blocksQuery.refetch();
+
+    if (mapBlock) {
+      await graphQuery.refetch();
+    }
+  };
+
+  return { blocks: blocksQuery, graph: graphQuery, retry: createLessonSectionContentRetry };
 }

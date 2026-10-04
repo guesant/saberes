@@ -1,6 +1,12 @@
 export * from "./assessment-read-model.model";
 export * from "./attempt.type";
 export * from "./catalog-read-model.model";
+export * from "./content-snapshot-validation-input.interface";
+export * from "./content-snapshot-validation-issue.interface";
+export * from "./content-snapshot-validation-result.type";
+export * from "./content-snapshot-validation-summary.interface";
+
+export * from "./content-release-read-model.model";
 export * from "./course-read-model.model";
 export * from "./editorial-validation-issue.interface";
 export * from "./import-progress-input.interface";

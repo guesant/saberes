@@ -2,6 +2,7 @@ import type {
   AssessmentReadModel,
   CatalogFilters,
   CatalogReadModel,
+  ContentReleaseReadModel,
   ContentKey,
   CourseReadModel,
   LessonReadModel,
@@ -13,6 +14,8 @@ import type {
 
 export interface ContentRepositoryContract {
   getAssessment(key: ContentKey | string): Promise<AssessmentReadModel | null>;
+
+  getContentRelease(): Promise<ContentReleaseReadModel | null>;
 
   getCatalog(filters?: CatalogFilters): Promise<CatalogReadModel>;
 

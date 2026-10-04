@@ -12,11 +12,13 @@ export function resolveContentPorts(
   | "getLesson"
   | "getQuestion"
   | "getAssessment"
+  | "getContentRelease"
   | "getTopicMap"
   | "getTopic"
   | "getStudyPlan"
   | "parseEditorialBlocks"
   | "buildKnowledgeGraph"
+  | "validateContentSnapshot"
 > {
   return {
     getCatalog: resolvePort(container, applicationDependencyTokens.getCatalog),
@@ -24,10 +26,15 @@ export function resolveContentPorts(
     getLesson: resolvePort(container, applicationDependencyTokens.getLesson),
     getQuestion: resolvePort(container, applicationDependencyTokens.getQuestion),
     getAssessment: resolvePort(container, applicationDependencyTokens.getAssessment),
+    getContentRelease: resolvePort(container, applicationDependencyTokens.getContentRelease),
     getTopicMap: resolvePort(container, applicationDependencyTokens.getTopicMap),
     getTopic: resolvePort(container, applicationDependencyTokens.getTopic),
     getStudyPlan: resolvePort(container, applicationDependencyTokens.getStudyPlan),
     parseEditorialBlocks: resolvePort(container, applicationDependencyTokens.parseEditorialBlocks),
     buildKnowledgeGraph: resolvePort(container, applicationDependencyTokens.buildKnowledgeGraph),
+    validateContentSnapshot: resolvePort(
+      container,
+      applicationDependencyTokens.validateContentSnapshot,
+    ),
   };
 }

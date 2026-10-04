@@ -3062,7 +3062,7 @@ const allowedLayerDependencies = {
     "ui-content",
   ]),
   utils: new Set(["utils"]),
-  tooling: new Set(["tooling"]),
+  tooling: new Set(["tooling", "adapter", "application", "domain"]),
   config: new Set(["config", "tooling"]),
   data: new Set(["data"]),
 };
@@ -3237,7 +3237,13 @@ const compositionRoot = {
   create(context) {
     const filename = normalizeFilename(context.getFilename());
 
-    const isComposition = getSourceLayer(filename) === "app-composition";
+    const sourceLayer = getSourceLayer(filename);
+
+    const isComposition = sourceLayer === "app-composition";
+
+    if (sourceLayer === "tooling") {
+      return {};
+    }
 
     const originAdapter = getAdapterPackageFromFilename(filename);
 

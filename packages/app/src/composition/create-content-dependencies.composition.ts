@@ -1,6 +1,9 @@
 import { SqlJsContentRepository } from "@guesant/saberes-adapter-data-v1";
 import { GraphologyBuildKnowledgeGraphAdapter } from "@guesant/saberes-adapter-graphology-v1";
-import { ValibotParseEditorialBlocksAdapter } from "@guesant/saberes-adapter-validation-v1";
+import {
+  ValibotParseEditorialBlocksAdapter,
+  ValidateContentSnapshotAdapter,
+} from "@guesant/saberes-adapter-validation-v1";
 import { applicationDependencyTokens } from "./application-dependency-tokens.config";
 import { registerContentCorePortBindings } from "./register-content-core-port-bindings.composition";
 import { registerContentGraphPortBindings } from "./register-content-graph-port-bindings.composition";
@@ -28,5 +31,11 @@ export function createContentDependencies(container: Container): void {
     container,
     applicationDependencyTokens.buildKnowledgeGraph,
     () => new GraphologyBuildKnowledgeGraphAdapter(),
+  );
+
+  registerPort(
+    container,
+    applicationDependencyTokens.validateContentSnapshot,
+    () => new ValidateContentSnapshotAdapter(),
   );
 }
