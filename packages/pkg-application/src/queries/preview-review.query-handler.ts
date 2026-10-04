@@ -4,6 +4,7 @@ import type { PreviewReviewPort } from "../ports/index";
 export interface ReviewPreviewInput {
   target: ReviewTarget;
   now?: Date;
+  requestRetention?: number;
 }
 
 export class PreviewReviewQueryHandler {

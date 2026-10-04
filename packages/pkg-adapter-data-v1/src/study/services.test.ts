@@ -75,7 +75,7 @@ describe("serviços pedagógicos locais", () => {
         targetType: ReviewTargetType.Question,
       },
       FsrsRating.Again,
-      { now: new Date(), createDate: (value) => new Date(value) },
+      { now: new Date(), createDate: (value) => new Date(value), requestRetention: 0.9 },
     );
 
     expect(review.schedulerVersion).toBe("ts-fsrs-v6");

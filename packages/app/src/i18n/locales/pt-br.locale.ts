@@ -334,6 +334,12 @@ const ptBR = {
     title: "Questões para revisar",
     description:
       "A fila combina erros, esquecimento e a agenda FSRS. Você controla cada adiamento ou suspensão.",
+    retentionTitle: "Meta de retenção",
+    retentionDescription:
+      "A meta orienta os próximos intervalos do scheduler e permanece salva somente neste dispositivo.",
+    retentionLabel: "Retenção desejada (%)",
+    retentionImpact:
+      "Meta de {{retention}}%: carga ativa estimada de {{estimated}} revisão(ões). Isso é uma estimativa, não uma obrigação.",
     states: {
       new: "Novo",
       learning: "Aprendendo",

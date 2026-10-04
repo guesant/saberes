@@ -19,6 +19,12 @@ export function ReviewSessionReadyContent(props: ReviewSessionReadyContentProps)
           total: props.viewModel.load.total,
         })}
       </UITypography>
+      <UITypography variant="body2">
+        {t("review.retentionImpact", {
+          estimated: props.viewModel.retentionImpact.estimatedReviews,
+          retention: props.viewModel.retentionImpact.retentionPercent,
+        })}
+      </UITypography>
       <ReviewTargetList
         targets={props.viewModel.targets}
         previews={props.viewModel.previews}

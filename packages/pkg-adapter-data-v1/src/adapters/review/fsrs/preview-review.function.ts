@@ -3,8 +3,6 @@ import { fsrs, Rating } from "ts-fsrs";
 import { reviveReviewCard, type ReviewDateFactory } from "./revive-review-card.function";
 import type { StoredReviewCard } from "./stored-review-card.type";
 
-const scheduler = fsrs({ request_retention: 0.9, enable_fuzz: false });
-
 const ratings = {
   [FsrsRating.Again]: Rating.Again,
   [FsrsRating.Hard]: Rating.Hard,
@@ -15,6 +13,7 @@ const ratings = {
 export type PreviewReviewOptions = {
   now: Date;
   createDate: ReviewDateFactory;
+  requestRetention: number;
 };
 
 export function previewReview(
@@ -22,6 +21,11 @@ export function previewReview(
   options: PreviewReviewOptions,
 ) {
   const { now, createDate } = options;
+
+  const scheduler = fsrs({
+    request_retention: options.requestRetention,
+    enable_fuzz: false,
+  });
 
   const result = scheduler.repeat(reviveReviewCard(target.fsrsCard, now, createDate), now);
 

@@ -1,14 +1,17 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { createReviewActions } from "./create-review-actions.function";
 import { createStartReviewStudySessionAction } from "./create-start-review-study-session-action.function";
-import { getDueReviewTargets } from "./get-due-review-targets.function";
-import { getReviewLoadSummary } from "./get-review-load-summary.function";
-import { getReviewPreviews } from "./get-review-previews.function";
+import { getReviewQueueState } from "./get-review-queue-state.function";
+import { getReviewRetentionImpact } from "./get-review-retention-impact.function";
+import { getReviewViewModelPreviews } from "./get-review-view-model-previews.function";
 import { getReviewViewState } from "./get-review-view-state.function";
+import { useReviewQuery } from "./use-review-query.hook";
+import { useReviewRetentionViewModel } from "./use-review-retention.view-model.hook";
 import type { ReviewLoadSummary } from "./review-load-summary.interface";
 import type { ReviewPreview } from "./review-preview.type";
+import type { ReviewRetentionImpact } from "./review-retention-impact.interface";
 import type { FsrsRating, ReviewTarget } from "@guesant/saberes-application";
 
 export type ReviewViewModelState = "loading" | "error" | "ready";
@@ -24,33 +27,32 @@ export interface ReviewViewModel {
   rate: (target: ReviewTarget, rating: FsrsRating) => Promise<void>;
   suspend: (target: ReviewTarget) => Promise<void>;
   startSession: () => Promise<void>;
+  retention: number;
+  retentionImpact: ReviewRetentionImpact;
+  setRetention: (value: number) => Promise<void>;
 }
 
 export function useReviewViewModel(): ReviewViewModel {
   const services = useAppServices();
 
-  const navigate = useNavigate();
-
   const queryClient = useQueryClient();
 
-  const query = useQuery({
-    queryKey: ["progress", "reviews"],
-    queryFn: () => services.progress.listReviewTargets.execute(),
-  });
+  const query = useReviewQuery(services);
 
-  const targets = getDueReviewTargets(query.data || [], new Date());
+  const { retention, setRetention } = useReviewRetentionViewModel({ queryClient, services });
 
-  const load = getReviewLoadSummary(query.data || [], new Date());
+  const { targets, load } = getReviewQueueState(query.data || [], new Date());
 
-  const previews: Record<string, ReviewPreview> = getReviewPreviews({
+  const previews = getReviewViewModelPreviews({
+    retention,
+    services,
     targets,
-    preview: (target) => services.scheduler.preview.execute({ target }),
   });
 
-  const actions = createReviewActions({ services, queryClient });
+  const actions = createReviewActions({ queryClient, retention, services });
 
   const startSession = createStartReviewStudySessionAction({
-    navigate,
+    navigate: useNavigate(),
     services,
     targets,
   });
@@ -68,5 +70,8 @@ export function useReviewViewModel(): ReviewViewModel {
     rate: actions.rate,
     suspend: actions.suspend,
     startSession,
+    retention,
+    retentionImpact: getReviewRetentionImpact({ load, retention }),
+    setRetention,
   };
 }

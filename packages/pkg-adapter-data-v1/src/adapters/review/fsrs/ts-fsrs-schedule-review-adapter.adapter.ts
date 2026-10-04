@@ -7,6 +7,7 @@ export class TsFsrsScheduleReviewAdapter implements ScheduleReviewPort {
     return scheduleReview(input.target as never, input.rating, {
       now: input.now || new Date(),
       createDate: (value) => new Date(value),
+      requestRetention: input.requestRetention || 0.9,
     }) as ReviewTarget;
   }
 }

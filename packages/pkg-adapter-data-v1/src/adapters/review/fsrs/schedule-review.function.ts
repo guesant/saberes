@@ -5,8 +5,6 @@ import { serializeReviewCard } from "./serialize-review-card.function";
 import type { ScheduleReviewOptions } from "./schedule-review-options.type";
 import type { StoredReviewCard } from "./stored-review-card.type";
 
-const scheduler = fsrs({ request_retention: 0.9, enable_fuzz: false });
-
 const ratings = {
   [FsrsRating.Again]: Rating.Again,
   [FsrsRating.Hard]: Rating.Hard,
@@ -20,6 +18,11 @@ export function scheduleReview(
   options: ScheduleReviewOptions,
 ) {
   const { now, createDate } = options;
+
+  const scheduler = fsrs({
+    request_retention: options.requestRetention,
+    enable_fuzz: false,
+  });
 
   const result = scheduler.next(
     reviveReviewCard(target.fsrsCard, now, createDate),

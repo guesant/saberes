@@ -7,6 +7,7 @@ export class TsFsrsPreviewReviewAdapter implements PreviewReviewPort {
     return previewReview(input.target as never, {
       now: input.now || new Date(),
       createDate: (value) => new Date(value),
+      requestRetention: input.requestRetention || 0.9,
     });
   }
 }

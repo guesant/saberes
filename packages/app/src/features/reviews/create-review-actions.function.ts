@@ -5,6 +5,7 @@ import type { ApplicationServices, FsrsRating, ReviewTarget } from "@guesant/sab
 import type { QueryClient } from "@tanstack/react-query";
 
 export type CreateReviewActionsInput = {
+  retention: number;
   services: ApplicationServices;
   queryClient: QueryClient;
 };
@@ -12,7 +13,7 @@ export type CreateReviewActionsInput = {
 export function createReviewActions(input: CreateReviewActionsInput) {
   const postpone = createPostponeReviewAction({ services: input.services });
 
-  const rate = createRateReviewAction({ services: input.services });
+  const rate = createRateReviewAction({ retention: input.retention, services: input.services });
 
   const suspend = createSuspendReviewAction({ services: input.services });
 
