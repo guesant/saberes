@@ -20,6 +20,13 @@ export function StudyPlanControls(props: StudyPlanControlsProps) {
           {t(props.state.status === "paused" ? "plan.resume" : "plan.pause")}
         </UIButton>
         <UITextField
+          label={t("plan.startDate")}
+          type="date"
+          value={props.state.startDate}
+          onChange={(event) => props.onStartDateChange(event.target.value)}
+          slotProps={{ inputLabel: { shrink: true } }}
+        />
+        <UITextField
           label={t("plan.targetDate")}
           type="date"
           value={props.state.targetDate}

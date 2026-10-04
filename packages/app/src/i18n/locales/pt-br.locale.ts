@@ -368,10 +368,13 @@ const ptBR = {
     },
     pause: "Pausar plano",
     resume: "Retomar plano",
+    startDate: "Data inicial",
     targetDate: "Data-alvo",
     dailyMinutes: "Minutos por dia",
     skipStep: "Pular etapa",
     skipped: "Etapa pulada",
+    moveStepUp: "Mover etapa para cima",
+    moveStepDown: "Mover etapa para baixo",
     editorialNotice:
       "O plano é editorial; seu progresso e suas alterações ficam somente neste dispositivo.",
     recommendedPace: "Ritmo recomendado",

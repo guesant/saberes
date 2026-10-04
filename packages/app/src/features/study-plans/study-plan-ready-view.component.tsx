@@ -1,11 +1,10 @@
-import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { createCompletedStepSet } from "./create-completed-step-set.function";
-import { getStudyPlanDescription } from "./get-study-plan-description.function";
 import { getStudyPlanProgress } from "./get-study-plan-progress.function";
 import { StudyPlanControls } from "./study-plan-controls.component";
 import { StudyPlanEditorialNotice } from "./study-plan-editorial-notice.component";
 import { StudyPlanProgressSummary } from "./study-plan-progress-summary.component";
+import { StudyPlanReadyHeader } from "./study-plan-ready-header.component";
 import { StudyPlanSteps } from "./study-plan-steps.component";
 import type { StudyPlanLocalState } from "./study-plan-local-state.interface";
 import type { StudyPlanReadModel } from "@guesant/saberes-application";
@@ -18,30 +17,27 @@ export type StudyPlanReadyViewProps = {
   localState: StudyPlanLocalState;
   nextStep: Record<string, unknown> | null;
   onTogglePause: () => Promise<void>;
+  onStartDateChange: (startDate: string) => Promise<void>;
   onTargetDateChange: (targetDate: string) => Promise<void>;
   onDailyMinutesChange: (dailyMinutes: number) => Promise<void>;
   skippedStepIds: Set<string>;
   onSkip: (stepId: string) => Promise<void>;
+  onMove: (stepId: string, direction: -1 | 1) => Promise<void>;
 };
 
 export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {
-  const { t } = useTranslation();
-
   const completed = createCompletedStepSet(props.progress);
 
   const planProgress = getStudyPlanProgress({ steps: props.data.steps, completed });
 
   return (
     <>
-      <UITypography variant="overline">{t("plan.eyebrow")}</UITypography>
-
-      <UITypography variant="h3">{String(props.data.plan?.title)}</UITypography>
-
-      <UITypography color="text.secondary">{getStudyPlanDescription(props.data)}</UITypography>
+      <StudyPlanReadyHeader data={props.data} />
 
       <StudyPlanControls
         state={props.localState}
         onTogglePause={props.onTogglePause}
+        onStartDateChange={props.onStartDateChange}
         onTargetDateChange={props.onTargetDateChange}
         onDailyMinutesChange={props.onDailyMinutesChange}
       />
@@ -60,6 +56,7 @@ export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {
           skipped={props.skippedStepIds}
           onToggle={props.onToggle}
           onSkip={props.onSkip}
+          onMove={props.onMove}
         />
       </UIContentGroup>
 

@@ -1,6 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { createStudyPlanActions } from "./create-study-plan-actions.function";
+import { createStudyPlanViewModelResult } from "./create-study-plan-view-model-result.function";
 import { getStudyPlanContentSteps } from "./get-study-plan-content-steps.function";
 import { getStudyPlanDerivedState } from "./get-study-plan-derived-state.function";
 import { getStudyPlanError } from "./get-study-plan-error.function";
@@ -24,49 +25,43 @@ export interface StudyPlanViewModel {
   reload: () => Promise<void>;
   toggleStep: (step: Record<string, unknown>, completed: boolean) => Promise<void>;
   togglePause: () => Promise<void>;
+  updateStartDate: (startDate: string) => Promise<void>;
   updateTargetDate: (targetDate: string) => Promise<void>;
   updateDailyMinutes: (dailyMinutes: number) => Promise<void>;
   skipStep: (stepId: string) => Promise<void>;
+  moveStep: (stepId: string, direction: -1 | 1) => Promise<void>;
 }
 
 export function useStudyPlanViewModel(slug?: string): StudyPlanViewModel {
   const services = useAppServices();
 
-  const queryClient = useQueryClient();
-
   const { planQuery: query, progressQuery } = useStudyPlanQueries(services, slug);
-
-  const progress = getStudyPlanProgressRecords(progressQuery.data);
 
   const derivedState = getStudyPlanDerivedState({
     steps: getStudyPlanContentSteps(query.data),
-    progress,
+    progress: getStudyPlanProgressRecords(progressQuery.data),
     slug,
   });
 
   const actions = createStudyPlanActions({
     services,
-    queryClient,
+    queryClient: useQueryClient(),
     data: query.data,
     slug,
     state: derivedState.localState,
+    steps: derivedState.orderedSteps,
     reloadPlan: query.refetch,
     reloadProgress: progressQuery.refetch,
   });
 
-  return {
+  return createStudyPlanViewModelResult({
     state: getStudyPlanViewState(query, progressQuery),
     data: getStudyPlanReadData(query.data),
-    progress,
+    progress: getStudyPlanProgressRecords(progressQuery.data),
     localState: derivedState.localState,
     steps: derivedState.orderedSteps,
     nextStep: derivedState.nextStep,
     error: getStudyPlanError(query.error, progressQuery.error),
-    reload: actions.reload,
-    toggleStep: actions.toggleStep,
-    togglePause: actions.togglePause,
-    updateTargetDate: actions.updateTargetDate,
-    updateDailyMinutes: actions.updateDailyMinutes,
-    skipStep: actions.skipStep,
-  };
+    actions,
+  });
 }

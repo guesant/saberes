@@ -34,10 +34,12 @@ export function StudyPlanView() {
       localState={viewModel.localState}
       nextStep={viewModel.nextStep}
       onTogglePause={viewModel.togglePause}
+      onStartDateChange={viewModel.updateStartDate}
       onTargetDateChange={viewModel.updateTargetDate}
       onDailyMinutesChange={viewModel.updateDailyMinutes}
       skippedStepIds={new Set(viewModel.localState.skippedStepIds)}
       onSkip={viewModel.skipStep}
+      onMove={viewModel.moveStep}
     />
   );
 }

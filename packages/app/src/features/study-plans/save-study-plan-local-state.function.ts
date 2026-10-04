@@ -14,6 +14,7 @@ export async function saveStudyPlanLocalState(input: SaveStudyPlanLocalStateInpu
     contentKey: getStudyPlanStateContentKey(input.slug),
     data: {
       status: input.state.status,
+      startDate: input.state.startDate,
       targetDate: input.state.targetDate,
       dailyMinutes: input.state.dailyMinutes,
       orderedStepIds: input.state.orderedStepIds,

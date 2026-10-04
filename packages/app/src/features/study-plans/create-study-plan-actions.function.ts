@@ -1,4 +1,5 @@
 import { createStudyPlanLocalStateActions } from "./create-study-plan-local-state-actions.function";
+import { createStudyPlanMoveStepAction } from "./create-study-plan-move-step-action.function";
 import { createStudyPlanReloadAction } from "./create-study-plan-reload-action.function";
 import { createStudyPlanStepUpdater } from "./create-study-plan-step-updater.function";
 import type { CreateStudyPlanActionsInput } from "./create-study-plan-actions-input.type";
@@ -23,12 +24,16 @@ export function createStudyPlanActions(input: CreateStudyPlanActionsInput): Stud
     reloadProgress: input.reloadProgress,
   });
 
+  const moveStep = createStudyPlanMoveStepAction(input);
+
   return {
     toggleStep: stepUpdater,
     togglePause: localStateActions.togglePause,
+    updateStartDate: localStateActions.updateStartDate,
     updateTargetDate: localStateActions.updateTargetDate,
     updateDailyMinutes: localStateActions.updateDailyMinutes,
     skipStep: localStateActions.skipStep,
+    moveStep,
     reload,
   };
 }
