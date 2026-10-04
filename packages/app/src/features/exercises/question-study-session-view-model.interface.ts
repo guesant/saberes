@@ -14,4 +14,5 @@ export interface QuestionStudySessionViewModel {
   pause: () => Promise<void>;
   resume: () => Promise<void>;
   advance: (result: QuestionSubmissionResult) => Promise<void>;
+  skip: () => Promise<void>;
 }

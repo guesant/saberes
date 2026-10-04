@@ -42,5 +42,10 @@ export function createQuestionStudySessionViewModel(
         await actions.advance(data.session, data.questionKey, result);
       }
     },
+    skip: async (): Promise<void> => {
+      if (data.session && data.questionKey) {
+        await actions.skip(data.session, data.questionKey);
+      }
+    },
   };
 }

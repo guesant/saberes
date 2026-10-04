@@ -37,5 +37,15 @@ export function createQuestionStudySessionActions(
           completedAt: new Date().toISOString(),
         }),
       ),
+    skip: (session: StudySession, questionKey: string): Promise<void> =>
+      saveSession(
+        updateQuestionStudySession({
+          session,
+          questionKey,
+          correct: null,
+          completedAt: new Date().toISOString(),
+          skipped: true,
+        }),
+      ),
   };
 }

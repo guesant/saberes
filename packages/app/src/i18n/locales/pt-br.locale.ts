@@ -220,6 +220,7 @@ const ptBR = {
     sessionCorrect: "Acertos: {{correct}}",
     sessionNotFound: "Sessão não encontrada.",
     continueSession: "Próxima questão",
+    skipQuestion: "Pular questão",
     pauseSession: "Pausar sessão",
     resumeSession: "Retomar sessão",
     sessionQuantity: "Quantidade",

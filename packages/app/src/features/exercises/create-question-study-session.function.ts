@@ -15,6 +15,7 @@ export function createQuestionStudySession(input: CreateQuestionStudySessionInpu
     currentIndex: 0,
     status: "active",
     answeredQuestionKeys: [],
+    skippedQuestionKeys: [],
     correctAnswers: 0,
   };
 }

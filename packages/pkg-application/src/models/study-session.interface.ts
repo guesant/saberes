@@ -11,6 +11,7 @@ export interface StudySession {
   currentIndex?: number;
   status?: StudySessionStatus;
   answeredQuestionKeys?: string[];
+  skippedQuestionKeys?: string[];
   correctAnswers?: number;
   [key: string]: unknown;
 }

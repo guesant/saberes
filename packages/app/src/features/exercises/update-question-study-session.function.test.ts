@@ -50,4 +50,22 @@ describe("updateQuestionStudySession", () => {
 
     expect(session.completedAt).toBe("2026-10-04T12:00:00.000Z");
   });
+
+  it("avança sem criar acerto quando a questão é pulada", () => {
+    const session = updateQuestionStudySession({
+      completedAt: "2026-10-04T12:00:00.000Z",
+      correct: null,
+      questionKey: "question:1",
+      session: activeSession,
+      skipped: true,
+    });
+
+    expect(session.currentIndex).toBe(1);
+
+    expect(session.answeredQuestionKeys).toEqual(["question:1"]);
+
+    expect(session.skippedQuestionKeys).toEqual(["question:1"]);
+
+    expect(session.correctAnswers).toBe(0);
+  });
 });
