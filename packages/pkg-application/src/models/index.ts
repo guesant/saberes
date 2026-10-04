@@ -11,5 +11,6 @@ export * from "./review-target.type";
 export * from "./study-plan-read-model.model";
 export * from "./study-record.interface";
 export * from "./study-session.interface";
+export * from "./study-session-status.type";
 export * from "./topic-map-read-model.model";
 export * from "./topic-read-model.model";

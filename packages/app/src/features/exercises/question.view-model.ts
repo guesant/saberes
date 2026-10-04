@@ -31,7 +31,10 @@ export interface QuestionViewModel {
   saveDiagnosis: (code: DiagnosisCode) => Promise<void>;
 }
 
-export function useQuestionViewModel(key: string | undefined): QuestionViewModel {
+export function useQuestionViewModel(
+  key: string | undefined,
+  sessionId?: string,
+): QuestionViewModel {
   const services = useAppServices();
 
   const queryClient = useQueryClient();
@@ -40,29 +43,24 @@ export function useQuestionViewModel(key: string | undefined): QuestionViewModel
 
   const query = useQuestionContentQuery({ key, services });
 
-  const data = query.data || null;
-
   const bookmark = useQuestionBookmark({
-    data,
+    data: query.data || null,
     key,
     queryClient,
     services,
   });
 
   const submitAnswer = createQuestionSubmissionAction({
-    data,
+    data: query.data || null,
     queryClient,
     services,
     setAttemptId,
+    sessionId,
   });
 
-  const saveDiagnosis = createQuestionDiagnosisAction({ attemptId, services });
-
-  const state: QuestionViewModelState = getQueryViewState(query);
-
   return {
-    state,
-    data,
+    state: getQueryViewState(query),
+    data: query.data || null,
     bookmarked: bookmark.bookmarked,
     bookmarkError: bookmark.error,
     error: query.error ?? null,
@@ -71,6 +69,6 @@ export function useQuestionViewModel(key: string | undefined): QuestionViewModel
     },
     saveBookmark: bookmark.save,
     submit: submitAnswer,
-    saveDiagnosis,
+    saveDiagnosis: createQuestionDiagnosisAction({ attemptId, services }),
   };
 }

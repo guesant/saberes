@@ -13,6 +13,7 @@ export type CreateQuestionSubmissionInput = {
   queryClient: QueryClient;
   services: ApplicationServices;
   setAttemptId: Dispatch<SetStateAction<string | null>>;
+  sessionId?: string;
 };
 
 export function createQuestionSubmissionAction(
@@ -33,7 +34,14 @@ export function createQuestionSubmissionAction(
       return { attemptId: "", confidence, correct: null };
     }
 
-    const result = await submitQuestionAnswer({ answer, confidence, data, elapsedMs, services });
+    const result = await submitQuestionAnswer({
+      answer,
+      confidence,
+      data,
+      elapsedMs,
+      services,
+      sessionId: input.sessionId,
+    });
 
     setAttemptId(result.attemptId);
 

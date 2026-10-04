@@ -4,6 +4,7 @@ import { QuestionAnswerKey } from "./question-answer-key.component";
 import { QuestionDiagnosisPanel } from "./question-diagnosis-panel.component";
 import { QuestionExplanation } from "./question-explanation.component";
 import { QuestionResult } from "./question-result.component";
+import { QuestionSessionContinueAction } from "./question-session-continue-action.component";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
 import type { DiagnosisCode, QuestionReadModel } from "@guesant/saberes-application";
 
@@ -11,6 +12,7 @@ export type QuestionSubmissionFeedbackProps = {
   data: QuestionReadModel;
   onDiagnose: (code: DiagnosisCode) => Promise<void>;
   onRetry: () => void;
+  onContinue?: (result: QuestionSubmissionResult) => Promise<void>;
   result: QuestionSubmissionResult;
 };
 
@@ -32,6 +34,13 @@ export function QuestionSubmissionFeedback(props: QuestionSubmissionFeedbackProp
       <UIButton variant="outlined" onClick={onRetry}>
         {t("exercise.retry")}
       </UIButton>
+      {props.onContinue ? (
+        <QuestionSessionContinueAction
+          label={t("exercise.continueSession")}
+          onContinue={props.onContinue}
+          result={result}
+        />
+      ) : null}
     </UIContentGroup>
   );
 }

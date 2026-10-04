@@ -17,6 +17,7 @@ export type QuestionReadyContentProps = {
   onBookmark: () => Promise<void>;
   onRetryBookmark: () => Promise<void>;
   onRetry: () => void;
+  onContinue?: (result: QuestionSubmissionResult) => Promise<void>;
   onSubmit: () => Promise<void>;
   result: QuestionSubmissionResult | null;
 };

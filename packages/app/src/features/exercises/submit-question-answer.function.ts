@@ -15,12 +15,13 @@ export type SubmitQuestionAnswerInput = {
   answer: string;
   confidence: AttemptConfidence;
   elapsedMs: number;
+  sessionId?: string;
 };
 
 export async function submitQuestionAnswer(
   input: SubmitQuestionAnswerInput,
 ): Promise<QuestionSubmissionResult> {
-  const { confidence, data, answer, elapsedMs, services } = input;
+  const { confidence, data, answer, elapsedMs, services, sessionId } = input;
 
   const { question } = data;
 
@@ -44,6 +45,7 @@ export async function submitQuestionAnswer(
     confidence,
     elapsedMs,
     isCorrect: correct,
+    sessionId,
     topicIds: data.topics.map((topic) => String(topic.topic_id)),
   });
 

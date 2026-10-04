@@ -45,6 +45,12 @@ const QuestionView = lazy(() =>
   })),
 );
 
+const QuestionStudySessionView = lazy(() =>
+  import("./features/exercises/question-study-session-view.component").then(
+    ({ QuestionStudySessionView: Component }) => ({ default: Component }),
+  ),
+);
+
 const StudyPlanView = lazy(() =>
   import("./features/study-plans/study-plan-view.component").then(
     ({ StudyPlanView: Component }) => ({
@@ -89,6 +95,8 @@ export function App() {
           <Route element={<LessonView />} path="/licoes/:lessonId" />
 
           <Route element={<QuestionView />} path="/questoes/:questionId" />
+
+          <Route element={<QuestionStudySessionView />} path="/sessoes/questoes/:sessionId" />
 
           <Route element={<AssessmentView />} path="/avaliacoes/:assessmentId" />
 

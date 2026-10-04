@@ -38,6 +38,7 @@ export function QuestionReadyContent(props: QuestionReadyContentProps) {
           <QuestionSubmissionFeedback
             data={data}
             onDiagnose={onDiagnose}
+            onContinue={props.onContinue}
             onRetry={onRetry}
             result={result}
           />

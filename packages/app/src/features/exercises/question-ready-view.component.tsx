@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
 import { QuestionReadyContent } from "./question-ready-content.component";
+import { useQuestionReadyInteraction } from "./use-question-ready-interaction.hook";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
 import type {
   AttemptConfidence,
@@ -14,6 +14,7 @@ export type QuestionReadyViewProps = {
   onDiagnose: (code: DiagnosisCode) => Promise<void>;
   onBookmark: () => Promise<void>;
   onRetryBookmark: () => Promise<void>;
+  onContinue?: (result: QuestionSubmissionResult) => Promise<void>;
   onSubmit: (
     answer: string,
     elapsedMs: number,
@@ -22,47 +23,24 @@ export type QuestionReadyViewProps = {
 };
 
 export function QuestionReadyView(props: QuestionReadyViewProps) {
-  const { data, onDiagnose, onSubmit } = props;
-
-  const [answer, setAnswer] = useState<string | null>(null);
-
-  const [confidence, setConfidence] = useState<AttemptConfidence | null>(null);
-
-  const [result, setResult] = useState<QuestionSubmissionResult | null>(null);
-
-  const startedAt = useRef(Date.now());
-
-  const handleSubmit = async () => {
-    if (answer?.trim() && confidence) {
-      setResult(await onSubmit(answer.trim(), Date.now() - startedAt.current, confidence));
-    }
-  };
-
-  const handleRetry = () => {
-    setAnswer(null);
-
-    setConfidence(null);
-
-    setResult(null);
-
-    startedAt.current = Date.now();
-  };
+  const interaction = useQuestionReadyInteraction({ onSubmit: props.onSubmit });
 
   return (
     <QuestionReadyContent
-      answer={answer}
+      answer={interaction.answer}
       bookmarkError={props.bookmarkError}
       bookmarked={props.bookmarked}
-      confidence={confidence}
-      data={data}
-      onAnswerChange={setAnswer}
+      confidence={interaction.confidence}
+      data={props.data}
+      onAnswerChange={interaction.changeAnswer}
       onBookmark={props.onBookmark}
       onRetryBookmark={props.onRetryBookmark}
-      onConfidenceChange={setConfidence}
-      onDiagnose={onDiagnose}
-      onRetry={handleRetry}
-      onSubmit={handleSubmit}
-      result={result}
+      onConfidenceChange={interaction.changeConfidence}
+      onContinue={props.onContinue}
+      onDiagnose={props.onDiagnose}
+      onRetry={interaction.clear}
+      onSubmit={interaction.submit}
+      result={interaction.result}
     />
   );
 }
