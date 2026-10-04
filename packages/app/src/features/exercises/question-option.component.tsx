@@ -14,7 +14,9 @@ export function QuestionOption(props: QuestionOptionProps) {
       interactive
       selected={selected}
       variant="outlined"
-      onClick={() => onSelect(String(option.code))}
+      onClick={() => {
+        return onSelect(String(option.code));
+      }}
     >
       <UITypography>
         <UIHtmlStrongText>{String(option.code)})</UIHtmlStrongText> {String(option.text)}

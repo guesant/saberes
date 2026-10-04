@@ -34,11 +34,13 @@ export function useQuestionStudySessionViewModel(
 
     completionRequested.current = true;
 
-    actions.complete(data.session).catch(() => undefined);
+    actions.complete(data.session)
+      .catch(() => {
+        return undefined;
+      });
   }, [actions, data.session, remainingSeconds]);
 
-  return useMemo(
-    () => createQuestionStudySessionViewModel({ actions, data, remainingSeconds }),
-    [actions, data, remainingSeconds],
-  );
+  return useMemo(() => {
+    return createQuestionStudySessionViewModel({ actions, data, remainingSeconds });
+  }, [actions, data, remainingSeconds]);
 }

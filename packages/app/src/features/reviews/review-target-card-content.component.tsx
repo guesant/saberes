@@ -25,29 +25,33 @@ export type ReviewTargetCardContentProps = {
 export function ReviewTargetCardContent(props: ReviewTargetCardContentProps) {
   const { t } = useTranslation();
 
-  const { target } = props;
-
   return (
     <UIContentGroup variant="tight">
       <UIChip
-        label={target.state ? t(`review.states.${target.state}`) : t("review.availableNow")}
+        label={props.target.state ? t(`review.states.${props.target.state}`) : t("review.availableNow")}
         size="small"
       />
-      <UITypography variant="h6">{target.contentKey}</UITypography>
+      <UITypography variant="h6">{props.target.contentKey}</UITypography>
       <UITypography color="text.secondary">
-        {target.dueAt
-          ? t("review.nextReview", { date: formatReviewDate(target.dueAt) })
+        {props.target.dueAt
+          ? t("review.nextReview", { date: formatReviewDate(props.target.dueAt) })
           : t("review.availableNow")}
       </UITypography>
       <UIInlineActions wrap>
         <UIButton href={`/questoes/${props.questionId}`} variant="contained">
           {t("review.review")}
         </UIButton>
-        <ReviewRatingControls target={target} preview={props.preview} onRate={props.onRate} />
-        <UIButton variant="outlined" onClick={() => props.onPostpone(target)}>
+        <ReviewRatingControls target={props.target} preview={props.preview} onRate={props.onRate} />
+        <UIButton
+          variant="outlined"
+          onClick={() => { return props.onPostpone(props.target); }}
+        >
           {t("review.postpone")}
         </UIButton>
-        <UIButton variant="text" onClick={() => props.onSuspend(target)}>
+        <UIButton
+          variant="text"
+          onClick={() => { return props.onSuspend(props.target); }}
+        >
           {t("review.suspend")}
         </UIButton>
       </UIInlineActions>

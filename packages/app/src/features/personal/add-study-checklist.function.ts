@@ -15,12 +15,14 @@ export function addStudyChecklist(input: AddStudyChecklistInput): PersonalWorksp
     id: input.id,
     title: input.title,
     contentKey: input.contentKey,
-    items: input.items.map((label, position) => ({
-      id: input.itemIds[position],
-      label,
-      completed: false,
-      position,
-    })),
+    items: input.items.map((label, position) => {
+      return {
+        id: input.itemIds[position],
+        label,
+        completed: false,
+        position,
+      };
+    }),
     archived: false,
     createdAt: input.now,
     updatedAt: input.now,

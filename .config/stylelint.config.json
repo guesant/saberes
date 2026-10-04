@@ -9,6 +9,14 @@
     "selector-pseudo-element-no-unknown": true,
     "value-keyword-case": "lower",
     "color-no-invalid-hex": true,
-    "custom-property-pattern": "^[a-z][a-z0-9-]*$"
+    "custom-property-pattern": "^[a-z][a-z0-9-]*$",
+    "declaration-no-important": true,
+    "property-disallowed-list": ["/^margin(?:-|$)/"],
+    "declaration-property-value-disallowed-list": {
+      "/^(?:padding|gap|row-gap|column-gap|margin|top|right|bottom|left)/": ["/^-/", "/calc\\(/"],
+      "overflow": ["hidden"],
+      "overflow-x": ["hidden"],
+      "overflow-y": ["hidden"]
+    }
   }
 }

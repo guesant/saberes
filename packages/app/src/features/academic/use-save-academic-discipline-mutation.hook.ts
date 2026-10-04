@@ -5,7 +5,9 @@ export function useSaveAcademicDisciplineMutation(services: ApplicationServices)
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (discipline: AcademicDiscipline) => services.academic.save.execute(discipline),
+    mutationFn: (discipline: AcademicDiscipline) => {
+      return services.academic.save.execute(discipline);
+    },
     onSuccess: async (): Promise<void> => {
       await queryClient.invalidateQueries({ queryKey: ["academic", "disciplines"] });
     },

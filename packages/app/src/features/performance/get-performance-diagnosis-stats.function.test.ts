@@ -41,6 +41,7 @@ const diagnosisExpected = [
 
 describe("getPerformanceDiagnosisStats", () => {
   it("identifica diagnósticos recorrentes", () => {
-    expect(getPerformanceDiagnosisStats(diagnosisInput)).toEqual(diagnosisExpected);
+    expect(getPerformanceDiagnosisStats(diagnosisInput))
+      .toEqual(diagnosisExpected);
   });
 });

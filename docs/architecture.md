@@ -57,7 +57,7 @@ espalhadas como strings literais em cada camada.
 
 ## Portas atuais
 
-As portas públicas ficam em [`packages/pkg-application/src/ports.ts`](../packages/pkg-application/src/ports.ts)
+As portas públicas ficam em [`packages/pkg-application/src/application.ports.ts`](../packages/pkg-application/src/application.ports.ts)
 e são contratos unitários, entre outros:
 
 - `GetCatalogPort`, `GetCoursePort`, `GetLessonPort`, `GetQuestionPort`, `GetAssessmentPort`,

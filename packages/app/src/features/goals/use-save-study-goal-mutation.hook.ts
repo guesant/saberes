@@ -5,7 +5,9 @@ export function useSaveStudyGoalMutation(services: ApplicationServices) {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (goal: StudyGoal) => services.goals.save.execute(goal),
+    mutationFn: (goal: StudyGoal) => {
+      return services.goals.save.execute(goal);
+    },
     onSuccess: async (): Promise<void> => {
       await queryClient.invalidateQueries({ queryKey: ["study", "goals"] });
     },

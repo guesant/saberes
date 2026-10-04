@@ -17,7 +17,9 @@ export function useLessonSectionContentQueries(
 
   const blocksQuery = useQuery({
     queryKey: ["editorial-blocks", section.id, blocksJson],
-    queryFn: () => services.editorial.parseBlocks.execute({ blocksJson }),
+    queryFn: () => {
+      return services.editorial.parseBlocks.execute({ blocksJson });
+    },
   });
 
   const blocks = getEditorialBlocks(blocksQuery.data);
@@ -27,7 +29,9 @@ export function useLessonSectionContentQueries(
   const graphQuery = useQuery({
     queryKey: ["knowledge-graph", section.id, mapBlock],
     enabled: Boolean(mapBlock),
-    queryFn: () => executeKnowledgeGraph(services.maps.buildGraph, mapBlock),
+    queryFn: () => {
+      return executeKnowledgeGraph(services.maps.buildGraph, mapBlock);
+    },
   });
 
   const createLessonSectionContentRetry = async (): Promise<void> => {

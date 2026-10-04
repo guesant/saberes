@@ -25,7 +25,10 @@ export function StudyChecklistEditor(props: StudyChecklistEditorProps) {
 
     event.stopPropagation();
 
-    form.handleSubmit().catch(() => undefined);
+    form.handleSubmit()
+      .catch(() => {
+        return undefined;
+      });
   };
 
   return (

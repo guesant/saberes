@@ -6,11 +6,12 @@ export function getReviewViewModelPreviews(
   input: GetReviewViewModelPreviewsInput,
 ): Record<string, ReviewPreview> {
   return getReviewPreviews({
-    preview: (target) =>
-      input.services.scheduler.preview.execute({
+    preview: (target) => {
+      return input.services.scheduler.preview.execute({
         requestRetention: input.retention,
         target,
-      }),
+      });
+    },
     targets: input.targets,
   });
 }

@@ -41,7 +41,9 @@ export function useStudyGoalsViewModel(): UseStudyGoalsViewModel {
 
   const actions = createStudyGoalsActions({
     goals,
-    id: () => services.platform.ids.execute(),
+    id: () => {
+      return services.platform.ids.execute();
+    },
     save: async (goal): Promise<void> => {
       await mutation.mutateAsync(goal);
     },

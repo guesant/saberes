@@ -25,5 +25,9 @@ export function getQuestionStudySessionScreen(
     { enabled: true, screen: "question" },
   ];
 
-  return screens.find((item) => item.enabled)?.screen || "question";
+  return (
+    screens.find((item) => {
+      return item.enabled;
+    })?.screen || "question"
+  );
 }

@@ -16,9 +16,9 @@ describe("getContentSnapshotValidationInput", () => {
       source: "test",
       query(sql: string) {
         return (
-          [...validationQueries.entries()].find(([prefix]) => sql.startsWith(prefix))?.[1] || [
-            { count: 0 },
-          ]
+          [...validationQueries.entries()].find(([prefix]) => {
+            return sql.startsWith(prefix);
+          })?.[1] || [{ count: 0 }]
         );
       },
       get() {
@@ -26,13 +26,14 @@ describe("getContentSnapshotValidationInput", () => {
       },
     };
 
-    expect(collectContentSnapshotValidationInput(database)).toMatchObject({
-      tables: ["questions"],
-      questionCount: 3,
-      publishedProcessCount: 2,
-      publishedCourseCount: 1,
-      assessmentSetCount: 4,
-      orphanOccurrenceCount: 0,
-    });
+    expect(collectContentSnapshotValidationInput(database))
+      .toMatchObject({
+        tables: ["questions"],
+        questionCount: 3,
+        publishedProcessCount: 2,
+        publishedCourseCount: 1,
+        assessmentSetCount: 4,
+        orphanOccurrenceCount: 0,
+      });
   });
 });

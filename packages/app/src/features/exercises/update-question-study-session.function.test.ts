@@ -26,13 +26,17 @@ it("avança a sessão e registra o acerto", () => {
     session: activeSession,
   });
 
-  expect(session.currentIndex).toBe(1);
+  expect(session.currentIndex)
+    .toBe(1);
 
-  expect(session.answeredQuestionKeys).toEqual(["question:1"]);
+  expect(session.answeredQuestionKeys)
+    .toEqual(["question:1"]);
 
-  expect(session.correctAnswers).toBe(1);
+  expect(session.correctAnswers)
+    .toBe(1);
 
-  expect(session.status).toBe("active");
+  expect(session.status)
+    .toBe("active");
 });
 
 it("conclui a sessão quando a última questão é respondida", () => {
@@ -43,11 +47,14 @@ it("conclui a sessão quando a última questão é respondida", () => {
     session: almostCompletedSession,
   });
 
-  expect(session.currentIndex).toBe(2);
+  expect(session.currentIndex)
+    .toBe(2);
 
-  expect(session.status).toBe("completed");
+  expect(session.status)
+    .toBe("completed");
 
-  expect(session.completedAt).toBe("2026-10-04T12:00:00.000Z");
+  expect(session.completedAt)
+    .toBe("2026-10-04T12:00:00.000Z");
 });
 
 it("avança sem criar acerto quando a questão é pulada", () => {
@@ -59,11 +66,15 @@ it("avança sem criar acerto quando a questão é pulada", () => {
     skipped: true,
   });
 
-  expect(session.currentIndex).toBe(1);
+  expect(session.currentIndex)
+    .toBe(1);
 
-  expect(session.answeredQuestionKeys).toEqual(["question:1"]);
+  expect(session.answeredQuestionKeys)
+    .toEqual(["question:1"]);
 
-  expect(session.skippedQuestionKeys).toEqual(["question:1"]);
+  expect(session.skippedQuestionKeys)
+    .toEqual(["question:1"]);
 
-  expect(session.correctAnswers).toBe(0);
+  expect(session.correctAnswers)
+    .toBe(0);
 });

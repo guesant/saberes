@@ -16,10 +16,13 @@ describe("prioritizeQuestionSessionQuestions", () => {
       ],
     });
 
-    expect(result[0].id).toBe(3);
+    expect(result[0].id)
+      .toBe(3);
 
-    expect(result[1].id).toBe(2);
+    expect(result[1].id)
+      .toBe(2);
 
-    expect(result[2].id).toBe(1);
+    expect(result[2].id)
+      .toBe(1);
   });
 });

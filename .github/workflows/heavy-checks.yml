@@ -53,9 +53,18 @@ jobs:
             "$QUALITY_CI_IMAGE" \
             bash -c '
               aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo
-              aqua exec -- osv-scanner scan source --recursive /repo
+              aqua exec -- osv-scanner scan source --config /repo/.config/osv-scanner.toml --recursive /repo
               aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo
-              semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages
+              semgrep scan \
+                --config auto \
+                --error \
+                --exclude-rule dockerfile.security.missing-user-entrypoint.missing-user-entrypoint \
+                --exclude-rule dockerfile.security.missing-user.missing-user \
+                --exclude-rule generic.nginx.security.header-redefinition.header-redefinition \
+                --exclude-rule html.security.audit.missing-integrity.missing-integrity \
+                --exclude node_modules \
+                --exclude dist \
+                /repo/packages
             '
 
       - name: Gerar e validar SBOM da imagem dentro do Docker

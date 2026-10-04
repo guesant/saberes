@@ -14,7 +14,8 @@ export function createPostponeReviewAction(
       contentKey: target.contentKey,
       data: {
         ...target,
-        dueAt: addDays(new Date(), 1).toISOString(),
+        dueAt: addDays(new Date(), 1)
+          .toISOString(),
         suspended: false,
       },
     });

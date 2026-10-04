@@ -15,7 +15,8 @@ export async function startAssessmentStudySession(
     ...createQuestionStudySession({
       id: input.services.platform.ids.execute(),
       questionKeys: input.questionKeys,
-      startedAt: new Date().toISOString(),
+      startedAt: new Date()
+        .toISOString(),
     }),
     activityType: "assessment",
     contentKey: input.assessmentKey,

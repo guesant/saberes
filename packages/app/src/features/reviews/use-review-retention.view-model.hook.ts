@@ -8,7 +8,9 @@ export function useReviewRetentionViewModel(
 ): ReviewRetentionViewModel {
   const query = useQuery({
     queryKey: ["settings", "review-retention"],
-    queryFn: () => input.services.progress.getSetting.execute("reviewRetention"),
+    queryFn: () => {
+      return input.services.progress.getSetting.execute("reviewRetention");
+    },
   });
 
   const retention = getReviewRetention(query.data?.value);

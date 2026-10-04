@@ -32,7 +32,9 @@ export function useCourseViewModel(slug: string | undefined): CourseViewModel {
   const query = useQuery({
     queryKey: ["course", slug],
     enabled: Boolean(slug),
-    queryFn: () => loadCourse({ services, slug }),
+    queryFn: () => {
+      return loadCourse({ services, slug });
+    },
   });
 
   const progressQueries = useCourseProgressQueries(services);

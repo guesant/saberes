@@ -7,7 +7,9 @@ export type SelectDailyQuestionInput = {
 };
 
 export function selectDailyQuestion(input: SelectDailyQuestionInput): CatalogCard | null {
-  const questions = input.content.filter((card) => card.type === CatalogCardType.Question);
+  const questions = input.content.filter((card) => {
+    return card.type === CatalogCardType.Question;
+  });
 
   if (!questions.length) {
     return null;
@@ -15,10 +17,10 @@ export function selectDailyQuestion(input: SelectDailyQuestionInput): CatalogCar
 
   const dateKey = format(input.date, "yyyy-MM-dd");
 
-  const seed = Array.from(dateKey).reduce(
-    (total, character, index) => total + character.charCodeAt(0) * (index + 1),
-    0,
-  );
+  const seed = Array.from(dateKey)
+    .reduce((total, character, index) => {
+      return total + character.charCodeAt(0) * (index + 1);
+    }, 0);
 
   return questions[seed % questions.length] || null;
 }

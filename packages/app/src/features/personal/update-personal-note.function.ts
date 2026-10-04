@@ -9,8 +9,8 @@ export interface UpdatePersonalNoteInput {
 export function updatePersonalNote(input: UpdatePersonalNoteInput): PersonalWorkspace {
   return {
     ...input.workspace,
-    notes: input.workspace.notes.map((note) =>
-      note.id === input.id ? { ...note, archived: true, updatedAt: input.now } : note,
-    ),
+    notes: input.workspace.notes.map((note) => {
+      return note.id === input.id ? { ...note, archived: true, updatedAt: input.now } : note;
+    }),
   };
 }

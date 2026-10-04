@@ -28,7 +28,6 @@
     "@types/three": "^0.180.0"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./styles": "./src/content.styles.ts"
+    ".": "./src/index.ts"
   }
 }

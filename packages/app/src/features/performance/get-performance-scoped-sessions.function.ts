@@ -12,9 +12,10 @@ export function getPerformanceScopedSessions(
 ): StudySession[] {
   const periodDays = getPerformancePeriodDays(filter.period);
 
-  return sessions.filter(
-    (session) =>
+  return sessions.filter((session) => {
+    return (
       matchesPerformanceScope(session.contentKey, filter.scopeKey) &&
-      isPerformanceValueInPeriod(getPerformanceSessionTime(session), periodDays, now),
-  );
+      isPerformanceValueInPeriod(getPerformanceSessionTime(session), periodDays, now)
+    );
+  });
 }

@@ -14,9 +14,10 @@ export function FocusSessionList(props: FocusSessionListProps) {
 
   return (
     <UIContentGroup variant="list">
-      {props.sessions.slice(0, 5).map((session) => (
-        <FocusSessionItem key={session.id} session={session} />
-      ))}
+      {props.sessions.slice(0, 5)
+        .map((session) => {
+          return <FocusSessionItem key={session.id} session={session} />;
+        })}
     </UIContentGroup>
   );
 }

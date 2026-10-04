@@ -10,7 +10,9 @@ export type MyStudyBookmarkQueries = {
 export function useMyStudyBookmarkQueries(services: ApplicationServices): MyStudyBookmarkQueries {
   const bookmarksQuery = useQuery({
     queryKey: ["progress", "bookmarks"],
-    queryFn: () => services.progress.listBookmarks.execute(),
+    queryFn: () => {
+      return services.progress.listBookmarks.execute();
+    },
   });
 
   return {

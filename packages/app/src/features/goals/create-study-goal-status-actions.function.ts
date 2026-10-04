@@ -7,18 +7,31 @@ export function createStudyGoalStatusActions(
   input: StudyGoalsActionDependencies,
 ): Pick<UseStudyGoalsViewModel, "archive" | "complete" | "pause" | "restore" | "resume"> {
   const update = async (contentKey: string, status: StudyGoalStatus): Promise<void> => {
-    const goal = input.goals.find((item) => item.contentKey === contentKey);
+    const goal = input.goals.find((item) => {
+      return item.contentKey === contentKey;
+    });
 
     if (goal) {
-      await input.save(updateStudyGoalStatus({ goal, now: new Date().toISOString(), status }));
+      await input.save(updateStudyGoalStatus({ goal, now: new Date()
+        .toISOString(), status }));
     }
   };
 
   return {
-    archive: (contentKey) => update(contentKey, input.status.Archived),
-    complete: (contentKey) => update(contentKey, input.status.Completed),
-    pause: (contentKey) => update(contentKey, input.status.Paused),
-    restore: (contentKey) => update(contentKey, input.status.Active),
-    resume: (contentKey) => update(contentKey, input.status.Active),
+    archive: (contentKey) => {
+      return update(contentKey, input.status.Archived);
+    },
+    complete: (contentKey) => {
+      return update(contentKey, input.status.Completed);
+    },
+    pause: (contentKey) => {
+      return update(contentKey, input.status.Paused);
+    },
+    restore: (contentKey) => {
+      return update(contentKey, input.status.Active);
+    },
+    resume: (contentKey) => {
+      return update(contentKey, input.status.Active);
+    },
   };
 }

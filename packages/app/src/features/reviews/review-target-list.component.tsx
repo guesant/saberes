@@ -16,16 +16,18 @@ export type ReviewTargetListProps = {
 export function ReviewTargetList(props: ReviewTargetListProps) {
   return (
     <UIContentGroup variant="content">
-      {props.targets.map((target) => (
-        <ReviewTargetCard
-          key={target.contentKey}
-          target={target}
-          preview={props.previews[target.contentKey || ""]}
-          onPostpone={props.onPostpone}
-          onRate={props.onRate}
-          onSuspend={props.onSuspend}
-        />
-      ))}
+      {props.targets.map((target) => {
+        return (
+          <ReviewTargetCard
+            key={target.contentKey}
+            target={target}
+            preview={props.previews[target.contentKey || ""]}
+            onPostpone={props.onPostpone}
+            onRate={props.onRate}
+            onSuspend={props.onSuspend}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

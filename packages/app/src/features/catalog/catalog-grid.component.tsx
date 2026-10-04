@@ -9,9 +9,9 @@ export type CatalogGridProps = {
 export function CatalogGrid(props: CatalogGridProps) {
   return (
     <UICatalogCardGrid>
-      {props.items.map((item) => (
-        <CatalogGridItem item={item} key={`${item.type}-${item.id}`} />
-      ))}
+      {props.items.map((item) => {
+        return <CatalogGridItem item={item} key={`${item.type}-${item.id}`} />;
+      })}
     </UICatalogCardGrid>
   );
 }

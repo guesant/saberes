@@ -11,7 +11,9 @@ export interface GoalMetricButtonProps {
 export function GoalMetricButton(props: GoalMetricButtonProps) {
   return (
     <UIButton
-      onClick={() => props.onSelect(props.metric)}
+      onClick={() => {
+        return props.onSelect(props.metric);
+      }}
       variant={props.selected ? "contained" : "outlined"}
     >
       {props.label}

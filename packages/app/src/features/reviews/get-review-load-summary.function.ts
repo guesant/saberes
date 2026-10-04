@@ -3,7 +3,9 @@ import type { ReviewLoadSummary } from "./review-load-summary.interface";
 import type { ReviewTarget } from "@guesant/saberes-application";
 
 export function getReviewLoadSummary(targets: ReviewTarget[], now: Date): ReviewLoadSummary {
-  const activeTargets = targets.filter((target) => !target.suspended);
+  const activeTargets = targets.filter((target) => {
+    return !target.suspended;
+  });
 
   const due = activeTargets.filter((target) => {
     if (!target.dueAt) {

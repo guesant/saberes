@@ -21,19 +21,20 @@ export interface StudyChecklistViewItemProps {
 export function StudyChecklistViewItem(props: StudyChecklistViewItemProps) {
   const editor = useStudyChecklistEditingState(props.checklist);
 
-  const save = (values: StudyChecklistEditorValues) =>
-    saveStudyChecklistEditorValues({
+  const save = (values: StudyChecklistEditorValues) => {
+    return saveStudyChecklistEditorValues({
       id: props.checklist.id,
-      onSaved: () => editor.setEditing(false),
+      onSaved: () => { return editor.setEditing(false); },
       onUpdateContent: props.onUpdateContent,
       values,
     });
+  };
 
   if (editor.editing) {
     return (
       <StudyChecklistEditor
         initialValues={createStudyChecklistEditorValues(props.checklist)}
-        onCancel={() => editor.setEditing(false)}
+        onCancel={() => { return editor.setEditing(false); }}
         onSave={save}
       />
     );
@@ -42,8 +43,8 @@ export function StudyChecklistViewItem(props: StudyChecklistViewItemProps) {
   return (
     <StudyChecklistDisplay
       checklist={props.checklist}
-      onDelete={() => props.onDelete(props.checklist.id)}
-      onEdit={() => editor.setEditing(true)}
+      onDelete={() => { return props.onDelete(props.checklist.id); }}
+      onEdit={() => { return editor.setEditing(true); }}
       onMoveItem={props.onMoveItem}
       onUpdateItem={props.onUpdateItem}
     />

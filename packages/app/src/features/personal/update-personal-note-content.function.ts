@@ -6,16 +6,17 @@ export function updatePersonalNoteContent(
 ): PersonalWorkspace {
   return {
     ...input.workspace,
-    notes: input.workspace.notes.map((note) =>
-      note.id === input.id
+    notes: input.workspace.notes.map((note) => {
+      return note.id === input.id
         ? {
-            ...note,
-            title: input.title,
-            body: input.body,
-            contentKey: input.contentKey,
-            updatedAt: new Date().toISOString(),
-          }
-        : note,
-    ),
+          ...note,
+          title: input.title,
+          body: input.body,
+          contentKey: input.contentKey,
+          updatedAt: new Date()
+            .toISOString(),
+        }
+        : note;
+    }),
   };
 }

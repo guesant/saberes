@@ -21,7 +21,10 @@ export function GoalForm(props: GoalFormProps) {
 
     event.stopPropagation();
 
-    form.handleSubmit().catch(() => undefined);
+    form.handleSubmit()
+      .catch(() => {
+        return undefined;
+      });
   };
 
   return (

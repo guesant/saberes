@@ -11,13 +11,14 @@ export function registerProgressReadFocusPorts(container: Container): void {
   registerPortFactories(container, [
     [
       applicationDependencyTokens.listFocusSessions,
-      () =>
-        new ListFocusSessionsAdapter(
+      () => {
+        return new ListFocusSessionsAdapter(
           resolvePort<ProgressStorageContract>(
             container,
             applicationDependencyTokens.progressStore,
           ),
-        ),
+        );
+      },
     ],
   ]);
 }

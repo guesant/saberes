@@ -33,15 +33,17 @@ describe("updateStudyChecklistContent", () => {
       workspace,
     });
 
-    expect(result.checklists[0]).toMatchObject({
-      title: "Novo checklist",
-      updatedAt: "2026-10-04T12:00:00.000Z",
-    });
+    expect(result.checklists[0])
+      .toMatchObject({
+        title: "Novo checklist",
+        updatedAt: "2026-10-04T12:00:00.000Z",
+      });
 
-    expect(result.checklists[0].items).toEqual([
-      { completed: true, id: "item-1", label: "Ler novamente", position: 0 },
-      { completed: false, id: "item-2", label: "Praticar", position: 1 },
-      { completed: false, id: "new-item-3", label: "Revisar", position: 2 },
-    ]);
+    expect(result.checklists[0].items)
+      .toEqual([
+        { completed: true, id: "item-1", label: "Ler novamente", position: 0 },
+        { completed: false, id: "item-2", label: "Praticar", position: 1 },
+        { completed: false, id: "new-item-3", label: "Revisar", position: 2 },
+      ]);
   });
 });

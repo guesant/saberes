@@ -69,7 +69,8 @@ export function parseNpmPackageKey(packageKey: string): ParsedNpmPackage {
 
   const name = packageKey.slice(0, packageSeparator);
 
-  const version = packageKey.slice(packageSeparator + 1).split("_")[0];
+  const version = packageKey.slice(packageSeparator + 1)
+    .split("_")[0];
 
   if (version.length === 0) {
     throw new Error(`Versão npm ausente no deno.lock: ${packageKey}`);
@@ -156,17 +157,19 @@ export function createJsrComponent(
 }
 
 export function createSourceBom(lockFile: DenoLock): string {
-  const npmComponents = Object.entries(lockFile.npm).map(([packageKey, packageData]) =>
-    createNpmComponent(packageKey, packageData),
-  );
+  const npmComponents = Object.entries(lockFile.npm)
+    .map(([packageKey, packageData]) => {
+      return createNpmComponent(packageKey, packageData);
+    });
 
-  const jsrComponents = Object.entries(lockFile.jsr).map(([packageKey, packageData]) =>
-    createJsrComponent(packageKey, packageData),
-  );
+  const jsrComponents = Object.entries(lockFile.jsr)
+    .map(([packageKey, packageData]) => {
+      return createJsrComponent(packageKey, packageData);
+    });
 
-  const components = [...npmComponents, ...jsrComponents].sort((left, right) =>
-    left.purl.localeCompare(right.purl),
-  );
+  const components = [...npmComponents, ...jsrComponents].sort((left, right) => {
+    return left.purl.localeCompare(right.purl);
+  });
 
   return JSON.stringify(
     {

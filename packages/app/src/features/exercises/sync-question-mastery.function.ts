@@ -10,11 +10,12 @@ export async function syncQuestionMastery(input: SyncQuestionMasteryInput): Prom
   const mastery = input.services.study.calculateTopicMastery.execute(attempts);
 
   await Promise.all(
-    Object.entries(mastery).map(([topicId, data]) =>
-      input.services.progress.saveTopicMastery.execute({
-        contentKey: `topic:${topicId}`,
-        data,
+    Object.entries(mastery)
+      .map(([topicId, data]) => {
+        return input.services.progress.saveTopicMastery.execute({
+          contentKey: `topic:${topicId}`,
+          data,
+        });
       }),
-    ),
   );
 }

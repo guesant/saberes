@@ -8,7 +8,9 @@ export function usePrioritizedQuestionSessionQuestions(questions: CatalogCard[])
 
   const attemptsQuery = useQuery({
     queryKey: ["progress", "attempts"],
-    queryFn: () => services.progress.listAttempts.execute(),
+    queryFn: () => {
+      return services.progress.listAttempts.execute();
+    },
   });
 
   return getPrioritizedQuestionSessionQuestions({

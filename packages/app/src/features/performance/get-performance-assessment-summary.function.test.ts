@@ -15,12 +15,13 @@ describe("getPerformanceAssessmentSummary", () => {
           { id: "practice-1", activityType: "question", status: "completed" },
         ],
       }),
-    ).toEqual({
-      answered: 2,
-      accuracy: 50,
-      completedSessions: 1,
-      correct: 1,
-      sessions: 1,
-    });
+    )
+      .toEqual({
+        answered: 2,
+        accuracy: 50,
+        completedSessions: 1,
+        correct: 1,
+        sessions: 1,
+      });
   });
 });

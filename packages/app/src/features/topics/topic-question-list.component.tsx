@@ -10,9 +10,9 @@ export function TopicQuestionList(props: TopicQuestionListProps) {
     <UIContentGroup variant="list">
       <UITypography variant="h5">{t("topics.questions")}</UITypography>
       <UIList>
-        {props.questions.map((question) => (
-          <TopicQuestionLink key={String(question.id)} question={question} />
-        ))}
+        {props.questions.map((question) => {
+          return <TopicQuestionLink key={String(question.id)} question={question} />;
+        })}
       </UIList>
     </UIContentGroup>
   );

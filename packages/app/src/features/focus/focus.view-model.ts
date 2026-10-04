@@ -28,15 +28,23 @@ export function useFocusViewModel(): FocusViewModel {
 
   const sessions = query.data || [];
 
-  const active = sessions.find((session) => session.status === FocusSessionStatus.Active) || null;
+  const active =
+    sessions.find((session) => {
+      return session.status === FocusSessionStatus.Active;
+    }) || null;
 
-  const paused = sessions.find((session) => session.status === FocusSessionStatus.Paused) || null;
+  const paused =
+    sessions.find((session) => {
+      return session.status === FocusSessionStatus.Paused;
+    }) || null;
 
   const state = getQueryViewState(query);
 
   const actions = createFocusViewModelActions({
     active,
-    createId: () => services.platform.ids.execute(),
+    createId: () => {
+      return services.platform.ids.execute();
+    },
     paused,
     reload: async (): Promise<void> => {
       await query.refetch();

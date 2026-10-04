@@ -9,7 +9,12 @@ export type QuestionSessionContinueActionProps = {
 
 export function QuestionSessionContinueAction(props: QuestionSessionContinueActionProps) {
   return (
-    <UIButton variant="contained" onClick={() => props.onContinue(props.result)}>
+    <UIButton
+      variant="contained"
+      onClick={() => {
+        return props.onContinue(props.result);
+      }}
+    >
       {props.label}
     </UIButton>
   );

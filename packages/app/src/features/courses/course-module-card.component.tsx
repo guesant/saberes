@@ -9,7 +9,9 @@ export type CourseModuleCardProps = {
 export function CourseModuleCard(props: CourseModuleCardProps) {
   const { module, items } = props;
 
-  const moduleItems = items.filter((item) => item.module_id === module.id);
+  const moduleItems = items.filter((item) => {
+    return item.module_id === module.id;
+  });
 
   return (
     <UICard>
@@ -25,9 +27,9 @@ export function CourseModuleCard(props: CourseModuleCardProps) {
         </UIContentGroup>
 
         <UIList>
-          {moduleItems.map((item) => (
-            <CourseItemRow key={String(item.id)} item={item} />
-          ))}
+          {moduleItems.map((item) => {
+            return <CourseItemRow key={String(item.id)} item={item} />;
+          })}
         </UIList>
       </UICardContent>
     </UICard>

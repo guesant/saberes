@@ -13,9 +13,11 @@ describe("getMyStudySavedLessons", () => {
       bookmarks: [{ contentKey: "lesson:functions" }],
     });
 
-    expect(lessons).toHaveLength(1);
+    expect(lessons)
+      .toHaveLength(1);
 
-    expect(lessons[0]?.slug).toBe("functions");
+    expect(lessons[0]?.slug)
+      .toBe("functions");
   });
 
   it("returns an empty list when there are no local bookmarks", () => {
@@ -24,6 +26,7 @@ describe("getMyStudySavedLessons", () => {
         content: [{ id: 1, slug: "functions", title: "Funções", type: CatalogCardType.Lesson }],
         bookmarks: undefined,
       }),
-    ).toEqual([]);
+    )
+      .toEqual([]);
   });
 });

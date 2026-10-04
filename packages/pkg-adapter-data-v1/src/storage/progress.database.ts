@@ -157,46 +157,49 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
         savedCatalogFilters: "id, updatedAt",
       })
       .upgrade(async (tx) => {
-        const legacyItems = await tx.table("reviewItems").toArray();
+        const legacyItems = await tx.table("reviewItems")
+          .toArray();
 
         await Promise.all(
-          legacyItems.map((item) =>
-            tx.table("reviewTargets").put({
-              ...item,
-              contentKey: item.contentKey,
-              targetType: item.targetType || ReviewTargetTypeEnum.Question,
-              state: item.state || ReviewStateEnum.New,
-              schedulerVersion: item.schedulerVersion || "legacy",
-              updatedAt: item.updatedAt || this.nowIso(),
-            }),
-          ),
+          legacyItems.map((item) => {
+            return tx.table("reviewTargets")
+              .put({
+                ...item,
+                contentKey: item.contentKey,
+                targetType: item.targetType || ReviewTargetTypeEnum.Question,
+                state: item.state || ReviewStateEnum.New,
+                schedulerVersion: item.schedulerVersion || "legacy",
+                updatedAt: item.updatedAt || this.nowIso(),
+              });
+          }),
         );
       });
 
-    this.version(6).stores({
-      attempts: "id, answeredAt, sessionId, contentKey",
-      sessions: "id, startedAt, completedAt",
-      settings: "key",
-      enrollments: "contentKey, startedAt",
-      lessonProgress: "contentKey, completed, updatedAt",
-      courseProgress: "contentKey, completed, updatedAt",
-      moduleProgress: "contentKey, completed, updatedAt",
-      planProgress: "contentKey, completed, updatedAt",
-      bookmarks: "contentKey, updatedAt",
-      reviewItems: "contentKey, dueAt, updatedAt",
-      reviewTargets: "contentKey, dueAt, targetType, suspended, updatedAt",
-      reviewEvents: "id, contentKey, reviewedAt",
-      diagnoses: "attemptId, code, createdAt",
-      dailyChallenges: "contentKey, date",
-      studyGoals: "contentKey, dueDate, dueAt, status, updatedAt",
-      focusSessions: "id, startedAt, endedAt, status, contentKey",
-      academicDisciplines: "id, updatedAt, name",
-      streaks: "contentKey, lastDate",
-      achievements: "contentKey, unlockedAt",
-      goals: "contentKey, updatedAt",
-      topicMastery: "contentKey, percentage, updatedAt",
-      savedCatalogFilters: "id, updatedAt",
-    });
+    this.version(6)
+      .stores({
+        attempts: "id, answeredAt, sessionId, contentKey",
+        sessions: "id, startedAt, completedAt",
+        settings: "key",
+        enrollments: "contentKey, startedAt",
+        lessonProgress: "contentKey, completed, updatedAt",
+        courseProgress: "contentKey, completed, updatedAt",
+        moduleProgress: "contentKey, completed, updatedAt",
+        planProgress: "contentKey, completed, updatedAt",
+        bookmarks: "contentKey, updatedAt",
+        reviewItems: "contentKey, dueAt, updatedAt",
+        reviewTargets: "contentKey, dueAt, targetType, suspended, updatedAt",
+        reviewEvents: "id, contentKey, reviewedAt",
+        diagnoses: "attemptId, code, createdAt",
+        dailyChallenges: "contentKey, date",
+        studyGoals: "contentKey, dueDate, dueAt, status, updatedAt",
+        focusSessions: "id, startedAt, endedAt, status, contentKey",
+        academicDisciplines: "id, updatedAt, name",
+        streaks: "contentKey, lastDate",
+        achievements: "contentKey, unlockedAt",
+        goals: "contentKey, updatedAt",
+        topicMastery: "contentKey, percentage, updatedAt",
+        savedCatalogFilters: "id, updatedAt",
+      });
 
     this.version(7)
       .stores({
@@ -225,30 +228,35 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
         backupEvents: "id, operation, result, createdAt",
       })
       .upgrade(async (tx) => {
-        const legacyItems = await tx.table("reviewItems").toArray();
+        const legacyItems = await tx.table("reviewItems")
+          .toArray();
 
         await Promise.all(
-          legacyItems.map((item) =>
-            tx.table("reviewTargets").put({
-              ...item,
-              contentKey: item.contentKey,
-              targetType: item.targetType || ReviewTargetTypeEnum.Question,
-              state: item.state || ReviewStateEnum.New,
-              schedulerVersion: item.schedulerVersion || "legacy",
-              updatedAt: item.updatedAt || this.nowIso(),
-            }),
-          ),
+          legacyItems.map((item) => {
+            return tx.table("reviewTargets")
+              .put({
+                ...item,
+                contentKey: item.contentKey,
+                targetType: item.targetType || ReviewTargetTypeEnum.Question,
+                state: item.state || ReviewStateEnum.New,
+                schedulerVersion: item.schedulerVersion || "legacy",
+                updatedAt: item.updatedAt || this.nowIso(),
+              });
+          }),
         );
       });
   }
 
   private nowIso() {
-    return new Date().toISOString();
+    return new Date()
+      .toISOString();
   }
 
   private generatedId() {
     return (
-      globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`
+      globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()
+        .toString(16)
+        .slice(2)}`
     );
   }
 
@@ -264,13 +272,15 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   private async putStudy(store: string, contentKey: string, data: Record<string, unknown> = {}) {
     const value = { ...data, contentKey, updatedAt: this.nowIso() };
 
-    await this.table(store).put(value);
+    await this.table(store)
+      .put(value);
 
     return value;
   }
 
   private listStudy(store: string) {
-    return this.table(store).toArray();
+    return this.table(store)
+      .toArray();
   }
 
   async saveAttempt(attempt: Attempt) {
@@ -280,29 +290,36 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
       answeredAt: attempt.answeredAt || this.nowIso(),
     }) as AttemptWithId;
 
-    await this.table("attempts").put(normalized);
+    await this.table("attempts")
+      .put(normalized);
 
     return normalized;
   }
 
   listAttempts() {
-    return this.table("attempts").toArray() as Promise<AttemptWithId[]>;
+    return this.table("attempts")
+      .toArray() as Promise<AttemptWithId[]>;
   }
 
   async saveSession(session: SessionRecord): Promise<void> {
-    await this.table("sessions").put(session);
+    await this.table("sessions")
+      .put(session);
   }
 
   getSession(id: string) {
-    return this.table("sessions").get(id);
+    return this.table("sessions")
+      .get(id);
   }
 
   listSessions() {
-    return this.table("sessions").toArray();
+    return this.table("sessions")
+      .toArray();
   }
 
   listSavedCatalogFilters(): Promise<SavedCatalogFilter[]> {
-    return this.savedCatalogFilters.orderBy("updatedAt").reverse().toArray();
+    return this.savedCatalogFilters.orderBy("updatedAt")
+      .reverse()
+      .toArray();
   }
 
   async saveSavedCatalogFilter(filter: SavedCatalogFilter): Promise<void> {
@@ -314,16 +331,21 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   }
 
   async saveSetting(key: string, value: unknown): Promise<void> {
-    await this.table("settings").put({ key, value });
+    await this.table("settings")
+      .put({ key, value });
   }
 
   getSetting(key: string) {
-    return this.table("settings").get(key);
+    return this.table("settings")
+      .get(key);
   }
 
   async clearProgress() {
     await Promise.all(
-      [...studyStores, "attempts", "sessions"].map((store) => this.table(store).clear()),
+      [...studyStores, "attempts", "sessions"].map((store) => {
+        return this.table(store)
+          .clear();
+      }),
     );
   }
 
@@ -408,28 +430,38 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   }
 
   async saveReviewEvent(event: ReviewEventInput): Promise<void> {
-    await this.table("reviewEvents").put({ ...event, id: event.id || this.generatedId() });
+    await this.table("reviewEvents")
+      .put({ ...event, id: event.id || this.generatedId() });
   }
 
   listReviewEvents(contentKey?: string) {
     return contentKey
-      ? this.table("reviewEvents").where("contentKey").equals(contentKey).toArray()
-      : this.table("reviewEvents").toArray();
+      ? this.table("reviewEvents")
+        .where("contentKey")
+        .equals(contentKey)
+        .toArray()
+      : this.table("reviewEvents")
+        .toArray();
   }
 
   listBackupEvents(): Promise<ProgressBackupEvent[]> {
-    return this.table("backupEvents").orderBy("createdAt").reverse().toArray();
+    return this.table("backupEvents")
+      .orderBy("createdAt")
+      .reverse()
+      .toArray();
   }
 
   async saveDiagnosis(diagnosis: AttemptDiagnosis): Promise<void> {
-    await this.table("diagnoses").put({
-      ...diagnosis,
-      createdAt: diagnosis.createdAt || this.nowIso(),
-    });
+    await this.table("diagnoses")
+      .put({
+        ...diagnosis,
+        createdAt: diagnosis.createdAt || this.nowIso(),
+      });
   }
 
   listDiagnoses() {
-    return this.table("diagnoses").toArray();
+    return this.table("diagnoses")
+      .toArray();
   }
 
   saveDailyChallenge(contentKey: string, data: Record<string, unknown> = {}) {
@@ -453,10 +485,12 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
 
     return {
       ...setting.value,
-      references: setting.value.references.map((reference: PersonalReference) => ({
-        ...reference,
-        archived: reference.archived ?? false,
-      })),
+      references: setting.value.references.map((reference: PersonalReference) => {
+        return {
+          ...reference,
+          archived: reference.archived ?? false,
+        };
+      }),
     };
   }
 
@@ -473,7 +507,9 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   }
 
   listFocusSessions(): Promise<FocusSession[]> {
-    return this.focusSessions.orderBy("startedAt").reverse().toArray();
+    return this.focusSessions.orderBy("startedAt")
+      .reverse()
+      .toArray();
   }
 
   async saveFocusSession(session: FocusSession): Promise<FocusSession> {
@@ -483,7 +519,8 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   }
 
   listAcademicDisciplines(): Promise<AcademicDiscipline[]> {
-    return this.academicDisciplines.orderBy("name").toArray();
+    return this.academicDisciplines.orderBy("name")
+      .toArray();
   }
 
   async saveAcademicDiscipline(discipline: AcademicDiscipline): Promise<AcademicDiscipline> {
@@ -501,7 +538,8 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   }
 
   getStreak() {
-    return this.table("streaks").get("current");
+    return this.table("streaks")
+      .get("current");
   }
 
   saveAchievement(contentKey: string, data: Record<string, unknown> = {}) {
@@ -522,10 +560,10 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
 
   async exportProgress() {
     const entries = await Promise.all(
-      progressStoreNames.map(async (storeName) => [
-        storeName,
-        await this.table(storeName).toArray(),
-      ]),
+      progressStoreNames.map(async (storeName) => {
+        return [storeName, await this.table(storeName)
+          .toArray()];
+      }),
     );
 
     const stores = Object.fromEntries(entries);
@@ -542,16 +580,17 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
       stores,
     });
 
-    await this.table("backupEvents").put({
-      id: this.generatedId(),
-      operation: "export",
-      result: "success",
-      scope: progressStoreNames,
-      checksum,
-      schemaVersion: 2,
-      contentVersion: "editorial-snapshot",
-      createdAt: this.nowIso(),
-    });
+    await this.table("backupEvents")
+      .put({
+        id: this.generatedId(),
+        operation: "export",
+        result: "success",
+        scope: progressStoreNames,
+        checksum,
+        schemaVersion: 2,
+        contentVersion: "editorial-snapshot",
+        createdAt: this.nowIso(),
+      });
 
     return snapshot;
   }
@@ -609,28 +648,37 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
     try {
       await this.transaction("rw", [...progressStoreNames, "backupEvents"], async () => {
         if (input.strategy === "replace") {
-          await Promise.all(progressStoreNames.map((storeName) => this.table(storeName).clear()));
+          await Promise.all(
+            progressStoreNames.map((storeName) => {
+              return this.table(storeName)
+                .clear();
+            }),
+          );
         }
 
         await Promise.all(
           Object.entries(validation.output.stores)
-            .filter(([storeName]) => progressStoreNames.includes(storeName))
-            .map(([storeName, rows]) =>
-              Array.isArray(rows) ? this.table(storeName).bulkPut(rows) : Promise.resolve(),
-            ),
+            .filter(([storeName]) => {
+              return progressStoreNames.includes(storeName);
+            })
+            .map(([storeName, rows]) => {
+              return Array.isArray(rows) ? this.table(storeName)
+                .bulkPut(rows) : Promise.resolve();
+            }),
         );
 
-        await this.table("backupEvents").put({
-          id: this.generatedId(),
-          operation: "import",
-          result: "success",
-          scope: progressStoreNames,
-          strategy: input.strategy,
-          checksum: validation.output.checksum,
-          schemaVersion: validation.output.schemaVersion,
-          contentVersion: validation.output.contentVersion,
-          createdAt: this.nowIso(),
-        });
+        await this.table("backupEvents")
+          .put({
+            id: this.generatedId(),
+            operation: "import",
+            result: "success",
+            scope: progressStoreNames,
+            strategy: input.strategy,
+            checksum: validation.output.checksum,
+            schemaVersion: validation.output.schemaVersion,
+            contentVersion: validation.output.contentVersion,
+            createdAt: this.nowIso(),
+          });
       });
     } catch (error) {
       await this.recordBackupEvent({
@@ -651,10 +699,11 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   private async recordBackupEvent(
     event: Omit<ProgressBackupEvent, "id" | "createdAt">,
   ): Promise<void> {
-    await this.table("backupEvents").put({
-      ...event,
-      id: this.generatedId(),
-      createdAt: this.nowIso(),
-    });
+    await this.table("backupEvents")
+      .put({
+        ...event,
+        id: this.generatedId(),
+        createdAt: this.nowIso(),
+      });
   }
 }

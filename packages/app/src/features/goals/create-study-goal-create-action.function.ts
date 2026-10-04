@@ -7,7 +7,8 @@ export function createStudyGoalCreateAction(
   input: StudyGoalsActionDependencies,
 ): CreateStudyGoalAction {
   return async (goalInput): Promise<void> => {
-    const now = new Date().toISOString();
+    const now = new Date()
+      .toISOString();
 
     const goal: StudyGoal = {
       contentKey: `goal:${input.id()}`,

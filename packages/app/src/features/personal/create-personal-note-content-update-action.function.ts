@@ -6,8 +6,8 @@ import type { AsyncAction } from "../../types/async-action.type";
 export function createPersonalNoteContentUpdateAction(
   input: PersonalWorkspaceActionsInput,
 ): AsyncAction<[UpdatePersonalNoteContentActionInput], void> {
-  return async (actionInput: UpdatePersonalNoteContentActionInput): Promise<void> =>
-    input.save(
+  return async (actionInput: UpdatePersonalNoteContentActionInput): Promise<void> => {
+    return input.save(
       updatePersonalNoteContent({
         body: actionInput.body,
         contentKey: actionInput.contentKey,
@@ -16,4 +16,5 @@ export function createPersonalNoteContentUpdateAction(
         workspace: input.workspace,
       }),
     );
+  };
 }

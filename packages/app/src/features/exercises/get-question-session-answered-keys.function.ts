@@ -5,9 +5,9 @@ export function getQuestionSessionAnsweredKeys(
   questionKey: string,
 ): string[] {
   return [
-    ...(session.answeredQuestionKeys ?? []).filter(
-      (answeredQuestionKey) => answeredQuestionKey !== questionKey,
-    ),
+    ...(session.answeredQuestionKeys ?? []).filter((answeredQuestionKey) => {
+      return answeredQuestionKey !== questionKey;
+    }),
     questionKey,
   ];
 }

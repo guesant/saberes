@@ -18,38 +18,19 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function createProgressReadAttemptPortBindings(container: Container): void {
-  const getProgressStore = (): ProgressStorageContract =>
-    resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
+  const getProgressStore = (): ProgressStorageContract => { return resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore); };
 
   const bindings: PortFactoryBinding[] = [
-    [applicationDependencyTokens.listAttempts, () => new ListAttemptsAdapter(getProgressStore())],
-    [applicationDependencyTokens.getSession, () => new GetSessionAdapter(getProgressStore())],
-    [applicationDependencyTokens.getSetting, () => new GetSettingAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.listEnrollments,
-      () => new ListEnrollmentsAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.listLessonProgress,
-      () => new ListLessonProgressAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.listPlanProgress,
-      () => new ListPlanProgressAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.listBookmarks, () => new ListBookmarksAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.listReviewItems,
-      () => new ListReviewItemsAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.listStudySessions,
-      () => new ListStudySessionsAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.listSavedCatalogFilters,
-      () => new ListSavedCatalogFiltersAdapter(getProgressStore()),
-    ],
+    [applicationDependencyTokens.listAttempts, () => { return new ListAttemptsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.getSession, () => { return new GetSessionAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.getSetting, () => { return new GetSettingAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listEnrollments, () => { return new ListEnrollmentsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listLessonProgress, () => { return new ListLessonProgressAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listPlanProgress, () => { return new ListPlanProgressAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listBookmarks, () => { return new ListBookmarksAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listReviewItems, () => { return new ListReviewItemsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listStudySessions, () => { return new ListStudySessionsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listSavedCatalogFilters, () => { return new ListSavedCatalogFiltersAdapter(getProgressStore()); }],
   ];
 
   registerPortFactories(container, bindings);

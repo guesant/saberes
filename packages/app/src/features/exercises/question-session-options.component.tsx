@@ -18,14 +18,18 @@ export function QuestionSessionOptions(props: QuestionSessionOptionsProps) {
       <UITextField
         label={t("exercise.sessionQuantity")}
         inputProps={{ min: 1, max: props.maxQuantity }}
-        onChange={(event) => props.onQuantityChange(event.target.value)}
+        onChange={(event) => {
+          return props.onQuantityChange(event.target.value);
+        }}
         type="number"
         value={props.quantity}
       />
       <UITextField
         label={t("exercise.sessionDuration")}
         inputProps={{ min: 1 }}
-        onChange={(event) => props.onDurationChange(event.target.value)}
+        onChange={(event) => {
+          return props.onDurationChange(event.target.value);
+        }}
         type="number"
         value={props.durationMinutes}
       />

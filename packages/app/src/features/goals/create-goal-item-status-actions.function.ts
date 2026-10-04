@@ -19,27 +19,27 @@ export function createGoalItemStatusActions(
     createGoalItemStatusAction({
       hidden: !isActive,
       label: value.labels.pause,
-      onClick: () => value.onPause(value.goal.contentKey),
+      onClick: () => { return value.onPause(value.goal.contentKey); },
     } satisfies CreateGoalItemStatusActionInput),
     createGoalItemStatusAction({
       hidden: !isPaused,
       label: value.labels.resume,
-      onClick: () => value.onResume(value.goal.contentKey),
+      onClick: () => { return value.onResume(value.goal.contentKey); },
     } satisfies CreateGoalItemStatusActionInput),
     createGoalItemStatusAction({
       hidden: status === StudyGoalStatus.Completed || isArchived,
       label: value.labels.complete,
-      onClick: () => value.onComplete(value.goal.contentKey),
+      onClick: () => { return value.onComplete(value.goal.contentKey); },
     } satisfies CreateGoalItemStatusActionInput),
     createGoalItemStatusAction({
       hidden: isArchived,
       label: value.labels.archive,
-      onClick: () => value.onArchive(value.goal.contentKey),
+      onClick: () => { return value.onArchive(value.goal.contentKey); },
     } satisfies CreateGoalItemStatusActionInput),
     createGoalItemStatusAction({
       hidden: !isArchived,
       label: value.labels.restore,
-      onClick: () => value.onRestore(value.goal.contentKey),
+      onClick: () => { return value.onRestore(value.goal.contentKey); },
     } satisfies CreateGoalItemStatusActionInput),
   ];
 }

@@ -5,10 +5,12 @@ import type { StudySession } from "@guesant/saberes-application";
 export function createCompleteQuestionStudySessionAction(
   saveSession: SaveQuestionStudySessionAction,
 ): AsyncAction<[StudySession], void> {
-  return (session: StudySession): Promise<void> =>
-    saveSession({
+  return (session: StudySession): Promise<void> => {
+    return saveSession({
       ...session,
-      completedAt: new Date().toISOString(),
+      completedAt: new Date()
+        .toISOString(),
       status: "completed",
     });
+  };
 }

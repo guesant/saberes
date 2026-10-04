@@ -9,8 +9,12 @@ export async function syncStudyAchievements(services: ApplicationServices): Prom
 
   await services.study.syncAchievements.execute({
     attempts: attempts.length,
-    correct: attempts.filter((attempt) => attempt.isCorrect === true).length,
-    lessons: lessons.filter((lesson) => lesson.completed === true).length,
+    correct: attempts.filter((attempt) => {
+      return attempt.isCorrect === true;
+    }).length,
+    lessons: lessons.filter((lesson) => {
+      return lesson.completed === true;
+    }).length,
     streak: Number(streak?.current || 0),
   });
 }

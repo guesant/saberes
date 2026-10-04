@@ -11,19 +11,27 @@ export function StudyChecklistEditorTitleField(props: StudyChecklistEditorTitleF
   return (
     <form.Field
       name="content.title"
-      validators={{ onChange: ({ value }) => (value.trim() ? undefined : "Informe um título.") }}
+      validators={{
+        onChange: ({ value }) => {
+          return value.trim() ? undefined : "Informe um título.";
+        },
+      }}
     >
-      {(field) => (
-        <UITextField
-          error={!field.state.meta.isValid}
-          fullWidth
-          helperText={field.state.meta.errors.join(", ")}
-          label="Título"
-          onBlur={field.handleBlur}
-          onChange={(event) => field.handleChange(event.target.value)}
-          value={field.state.value}
-        />
-      )}
+      {(field) => {
+        return (
+          <UITextField
+            error={!field.state.meta.isValid}
+            fullWidth
+            helperText={field.state.meta.errors.join(", ")}
+            label="Título"
+            onBlur={field.handleBlur}
+            onChange={(event) => {
+              return field.handleChange(event.target.value);
+            }}
+            value={field.state.value}
+          />
+        );
+      }}
     </form.Field>
   );
 }

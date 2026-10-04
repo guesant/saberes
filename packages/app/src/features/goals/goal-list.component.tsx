@@ -25,18 +25,20 @@ export function GoalList(props: GoalListProps) {
 
   return (
     <UIContentGroup variant="list">
-      {props.goals.map((goal) => (
-        <GoalItem
-          goal={goal}
-          onArchive={props.onArchive}
-          key={goal.contentKey}
-          onComplete={props.onComplete}
-          onPause={props.onPause}
-          onResume={props.onResume}
-          onRestore={props.onRestore}
-          onUpdateProgress={props.onUpdateProgress}
-        />
-      ))}
+      {props.goals.map((goal) => {
+        return (
+          <GoalItem
+            goal={goal}
+            onArchive={props.onArchive}
+            key={goal.contentKey}
+            onComplete={props.onComplete}
+            onPause={props.onPause}
+            onResume={props.onResume}
+            onRestore={props.onRestore}
+            onUpdateProgress={props.onUpdateProgress}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

@@ -7,8 +7,8 @@ import type { AsyncAction } from "../../types/async-action.type";
 export function createStudyPlanMoveStepAction(
   input: CreateStudyPlanActionsInput,
 ): AsyncAction<[string, -1 | 1], void> {
-  return (stepId: string, direction: -1 | 1): Promise<void> =>
-    saveStudyPlanLocalState({
+  return (stepId: string, direction: -1 | 1): Promise<void> => {
+    return saveStudyPlanLocalState({
       services: input.services,
       queryClient: input.queryClient,
       slug: input.slug,
@@ -21,4 +21,5 @@ export function createStudyPlanMoveStepAction(
         ),
       },
     });
+  };
 }

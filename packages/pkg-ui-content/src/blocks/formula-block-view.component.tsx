@@ -1,4 +1,4 @@
-import { UIPaper } from "@guesant/saberes-ui";
+import { UIContentSurface } from "@guesant/saberes-ui";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import rehypeSanitize from "rehype-sanitize";
@@ -14,12 +14,12 @@ export function UIFormulaBlockView(props: UIFormulaBlockViewProps) {
   const { block } = props;
 
   return (
-    <UIPaper variant="outlined" sx={{ p: 2, my: 3, overflowX: "auto" }}>
+    <UIContentSurface mode="scrolling">
       <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeSanitize]}>
         {`$$${block.formula}$$`}
       </ReactMarkdown>
 
       <UIFormulaCaption caption={block.caption} />
-    </UIPaper>
+    </UIContentSurface>
   );
 }

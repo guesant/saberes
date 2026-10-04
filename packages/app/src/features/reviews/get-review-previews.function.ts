@@ -8,6 +8,8 @@ export type GetReviewPreviewsInput = {
 
 export function getReviewPreviews(input: GetReviewPreviewsInput): Record<string, ReviewPreview> {
   return Object.fromEntries(
-    input.targets.map((target) => [target.contentKey, input.preview(target)]),
+    input.targets.map((target) => {
+      return [target.contentKey, input.preview(target)];
+    }),
   );
 }

@@ -3,7 +3,9 @@ import { normalizeQuestionAnswerText } from "./normalize-question-answer-text.fu
 export function splitQuestionAnswerChoices(value: string): string[] {
   return value
     .split(/[;,\s]+/)
-    .map((item) => normalizeQuestionAnswerText(item))
+    .map((item) => {
+      return normalizeQuestionAnswerText(item);
+    })
     .filter(Boolean)
     .sort();
 }

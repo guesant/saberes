@@ -1,8 +1,11 @@
-import { Alert as MuiAlert, type AlertProps as MuiAlertProps } from "@mui/material";
+import { Alert as MuiAlert } from "@mui/material";
+import type { UIContentAlertProps } from "./content-alert-props.interface";
 import type { ReactElement } from "react";
 
-export type UIContentAlertProps = MuiAlertProps;
-
 export function UIContentAlert(props: UIContentAlertProps): ReactElement {
-  return <MuiAlert {...props} sx={{ my: 3, ...props.sx }} />;
+  return (
+    <MuiAlert role={props.role} severity={props.severity} sx={{ my: 3 }}>
+      {props.children}
+    </MuiAlert>
+  );
 }

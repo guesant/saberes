@@ -14,15 +14,17 @@ export function PerformancePeriodFilters(props: PerformancePeriodFiltersProps) {
 
   return (
     <UIContentGroup variant="inline">
-      {periods.map((period) => (
-        <PerformancePeriodButton
-          key={period}
-          label={props.label(period)}
-          onSelect={props.onSelect}
-          period={period}
-          selected={props.selected === period}
-        />
-      ))}
+      {periods.map((period) => {
+        return (
+          <PerformancePeriodButton
+            key={period}
+            label={props.label(period)}
+            onSelect={props.onSelect}
+            period={period}
+            selected={props.selected === period}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

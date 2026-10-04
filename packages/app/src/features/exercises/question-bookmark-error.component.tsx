@@ -9,7 +9,12 @@ export function QuestionBookmarkError(props: QuestionBookmarkErrorProps) {
     <UIAlert severity="warning">
       <UIContentGroup variant="tight">
         {t("exercise.bookmarkError", { message: props.error.message })}
-        <UIButton onClick={() => props.onRetry()} size="small">
+        <UIButton
+          onClick={() => {
+            return props.onRetry();
+          }}
+          size="small"
+        >
           {t("common.retry")}
         </UIButton>
       </UIContentGroup>

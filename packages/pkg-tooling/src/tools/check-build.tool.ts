@@ -55,6 +55,6 @@ if (
   throw new Error("Build inválido: manifest PWA incompleto.");
 }
 
-console.log(
+console.info(
   `Build válido: ${requiredFiles.length} artefatos essenciais e manifest PWA verificados.`,
 );

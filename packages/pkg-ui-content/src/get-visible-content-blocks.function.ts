@@ -6,7 +6,7 @@ export function getVisibleContentBlocks(
 ): EditorialBlock[] {
   return showRichContent
     ? blocks
-    : blocks.filter(
-        (block) => !["chart", "knowledge_map", "parametric_scene", "video"].includes(block.type),
-      );
+    : blocks.filter((block) => {
+      return !["chart", "knowledge_map", "parametric_scene", "video"].includes(block.type);
+    });
 }

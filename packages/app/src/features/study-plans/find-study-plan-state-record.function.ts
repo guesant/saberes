@@ -4,5 +4,7 @@ export function findStudyPlanStateRecord(
   progress: StudyRecord[],
   contentKey: string,
 ): StudyRecord | undefined {
-  return progress.find((item) => item.contentKey === contentKey);
+  return progress.find((item) => {
+    return item.contentKey === contentKey;
+  });
 }

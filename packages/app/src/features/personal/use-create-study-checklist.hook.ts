@@ -13,11 +13,14 @@ export function useCreateStudyChecklist(
       addStudyChecklist({
         workspace,
         id: generateId(),
-        itemIds: items.map(() => generateId()),
+        itemIds: items.map(() => {
+          return generateId();
+        }),
         title,
         items,
         contentKey,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
       }),
     );
   };

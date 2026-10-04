@@ -10,5 +10,9 @@ export function getCourseQuestionItemCompleted(
 ): boolean {
   const questionId = String(input.item.question_occurrence_id);
 
-  return Boolean(input.attempts?.some((attempt) => String(attempt.questionId) === questionId));
+  return Boolean(
+    input.attempts?.some((attempt) => {
+      return String(attempt.questionId) === questionId;
+    }),
+  );
 }

@@ -14,17 +14,19 @@ export type StudyPlanStepsProps = {
 export function StudyPlanSteps(props: StudyPlanStepsProps) {
   return (
     <>
-      {props.steps.map((step) => (
-        <StudyPlanStep
-          key={String(step.id)}
-          step={step}
-          completed={props.completed.has(String(step.id))}
-          skipped={props.skipped.has(String(step.id))}
-          onToggle={props.onToggle}
-          onSkip={props.onSkip}
-          onMove={props.onMove}
-        />
-      ))}
+      {props.steps.map((step) => {
+        return (
+          <StudyPlanStep
+            key={String(step.id)}
+            step={step}
+            completed={props.completed.has(String(step.id))}
+            skipped={props.skipped.has(String(step.id))}
+            onToggle={props.onToggle}
+            onSkip={props.onSkip}
+            onMove={props.onMove}
+          />
+        );
+      })}
     </>
   );
 }

@@ -6,11 +6,15 @@ export function mapPersonalCommandPaletteItems(
   prefix: string,
 ): CommandPaletteEntry[] {
   return items
-    .filter((item) => !item.archived)
-    .map((item) => ({
-      description: item.contentKey,
-      id: `${prefix}:${item.id}`,
-      label: item.title,
-      value: "/meu-espaco",
-    }));
+    .filter((item) => {
+      return !item.archived;
+    })
+    .map((item) => {
+      return {
+        description: item.contentKey,
+        id: `${prefix}:${item.id}`,
+        label: item.title,
+        value: "/meu-espaco",
+      };
+    });
 }

@@ -8,7 +8,11 @@ export function mapSqlResults(result: SqlResult[] | undefined): ContentRow[] {
 
   const { columns, values } = result[0];
 
-  return values.map((value) =>
-    Object.fromEntries(columns.map((column, index) => [column, value[index]])),
-  );
+  return values.map((value) => {
+    return Object.fromEntries(
+      columns.map((column, index) => {
+        return [column, value[index]];
+      }),
+    );
+  });
 }

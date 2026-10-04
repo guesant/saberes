@@ -4,8 +4,12 @@ export async function saveStudyChecklistEditorValues(
   input: SaveStudyChecklistEditorValuesInput,
 ): Promise<void> {
   const items = input.values.items
-    .map((item) => item.label.trim())
-    .filter((item) => item.length > 0)
+    .map((item) => {
+      return item.label.trim();
+    })
+    .filter((item) => {
+      return item.length > 0;
+    })
     .join("\n");
 
   if (!input.values.content.title.trim() || !items) {

@@ -9,6 +9,7 @@ describe("filtros do catálogo", () => {
         search: "  função ",
         year: 2027,
       }),
-    ).toEqual({ processName: "processo", search: "função", year: 2027 });
+    )
+      .toEqual({ processName: "processo", search: "função", year: 2027 });
   });
 });

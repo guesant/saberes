@@ -10,27 +10,33 @@ import { UIContentLoadingFallback } from "./content-loading-fallback.component";
 import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 import type { ReactNode } from "react";
 
-const UIChartBlock = lazy(() =>
-  import("./visualization/chart-block.component").then(({ UIChartBlock: Component }) => ({
-    default: Component,
-  })),
-);
-
-const UIKnowledgeMapBlock = lazy(() =>
-  import("./visualization/knowledge-map-block.component").then(
-    ({ UIKnowledgeMapBlock: Component }) => ({
+const UIChartBlock = lazy(() => {
+  return import("./visualization/chart-block.component").then(({ UIChartBlock: Component }) => {
+    return {
       default: Component,
-    }),
-  ),
-);
+    };
+  });
+});
 
-const UIParametricSceneBlock = lazy(() =>
-  import("./visualization/parametric-scene-block.component").then(
-    ({ UIParametricSceneBlock: Component }) => ({
-      default: Component,
-    }),
-  ),
-);
+const UIKnowledgeMapBlock = lazy(() => {
+  return import("./visualization/knowledge-map-block.component").then(
+    ({ UIKnowledgeMapBlock: Component }) => {
+      return {
+        default: Component,
+      };
+    },
+  );
+});
+
+const UIParametricSceneBlock = lazy(() => {
+  return import("./visualization/parametric-scene-block.component").then(
+    ({ UIParametricSceneBlock: Component }) => {
+      return {
+        default: Component,
+      };
+    },
+  );
+});
 
 export interface UIBlockViewProps {
   block: EditorialBlock;

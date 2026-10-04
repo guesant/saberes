@@ -16,7 +16,8 @@ export function useCatalogSavedFilterActions(filters: CatalogFilters): CatalogSa
           filters,
           id: services.platform.ids.execute(),
           name,
-          updatedAt: new Date().toISOString(),
+          updatedAt: new Date()
+            .toISOString(),
         }),
       );
     },
@@ -26,17 +27,18 @@ export function useCatalogSavedFilterActions(filters: CatalogFilters): CatalogSa
   });
 
   const deleteMutation = useMutation({
-    mutationFn: (id: string): Promise<void> =>
-      services.progress.deleteSavedCatalogFilter.execute(id),
+    mutationFn: (id: string): Promise<void> => {
+      return services.progress.deleteSavedCatalogFilter.execute(id);
+    },
     onSuccess: async (): Promise<void> => {
       await queryClient.invalidateQueries({ queryKey: ["catalog", "saved-filters"] });
     },
   });
 
   return {
-    deleteFilter: (id: string): Promise<void> => deleteMutation.mutateAsync(id),
+    deleteFilter: (id: string): Promise<void> => { return deleteMutation.mutateAsync(id); },
     saveError: saveMutation.error ?? null,
-    saveFilter: (name: string): Promise<void> => saveMutation.mutateAsync(name),
+    saveFilter: (name: string): Promise<void> => { return saveMutation.mutateAsync(name); },
     saving: saveMutation.isPending,
   };
 }

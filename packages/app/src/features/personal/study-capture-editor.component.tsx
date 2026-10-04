@@ -21,18 +21,18 @@ export function StudyCaptureEditor(props: StudyCaptureEditorProps) {
     <UIContentGroup variant="tight">
       <UITextField
         label="Título"
-        onChange={(event) => props.onTitleChange(event.target.value)}
+        onChange={(event) => { return props.onTitleChange(event.target.value); }}
         value={props.title}
       />
       <UITextField
         label="Descrição"
         multiline
-        onChange={(event) => props.onDescriptionChange(event.target.value)}
+        onChange={(event) => { return props.onDescriptionChange(event.target.value); }}
         value={props.description}
       />
       <UITextField
         label="Prazo (opcional)"
-        onChange={(event) => props.onDueDateChange(event.target.value)}
+        onChange={(event) => { return props.onDueDateChange(event.target.value); }}
         type="date"
         value={props.dueDate}
       />

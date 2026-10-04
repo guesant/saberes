@@ -10,7 +10,8 @@ describe("gradeQuestionAnswer", () => {
         expectedAnswer: "C",
         questionType: "single_choice",
       }),
-    ).toBe(true);
+    )
+      .toBe(true);
   });
 
   it("corrige múltiplas alternativas em qualquer ordem", () => {
@@ -21,7 +22,8 @@ describe("gradeQuestionAnswer", () => {
         expectedAnswer: "A;B",
         questionType: "multiple_choice",
       }),
-    ).toBe(true);
+    )
+      .toBe(true);
   });
 
   it("corrige números com separador decimal local", () => {
@@ -32,7 +34,8 @@ describe("gradeQuestionAnswer", () => {
         expectedAnswer: "3.14",
         questionType: "numeric",
       }),
-    ).toBe(true);
+    )
+      .toBe(true);
   });
 
   it("normaliza verdadeiro e falso", () => {
@@ -43,7 +46,8 @@ describe("gradeQuestionAnswer", () => {
         expectedAnswer: "true",
         questionType: "true_false",
       }),
-    ).toBe(true);
+    )
+      .toBe(true);
   });
 
   it("mantém questões não automáticas pendentes", () => {
@@ -54,6 +58,7 @@ describe("gradeQuestionAnswer", () => {
         expectedAnswer: "",
         questionType: "essay",
       }),
-    ).toBeNull();
+    )
+      .toBeNull();
   });
 });

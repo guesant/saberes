@@ -11,17 +11,23 @@ export type CourseProgressQueries = {
 export function useCourseProgressQueries(services: ApplicationServices): CourseProgressQueries {
   const enrollmentsQuery = useQuery({
     queryKey: ["progress", "enrollments"],
-    queryFn: () => services.progress.listEnrollments.execute(),
+    queryFn: () => {
+      return services.progress.listEnrollments.execute();
+    },
   });
 
   const lessonProgressQuery = useQuery({
     queryKey: ["progress", "lessons"],
-    queryFn: () => services.progress.listLessonProgress.execute(),
+    queryFn: () => {
+      return services.progress.listLessonProgress.execute();
+    },
   });
 
   const attemptsQuery = useQuery({
     queryKey: ["progress", "attempts"],
-    queryFn: () => services.progress.listAttempts.execute(),
+    queryFn: () => {
+      return services.progress.listAttempts.execute();
+    },
   });
 
   return {

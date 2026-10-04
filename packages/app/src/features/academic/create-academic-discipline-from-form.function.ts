@@ -12,14 +12,14 @@ export function createAcademicDisciplineFromForm(
 
   const grades = gradeLabel
     ? [
-        {
-          id,
-          label: gradeLabel,
-          value: input.gradeValue,
-          maximum: input.gradeMaximum,
-          weight: input.gradeWeight,
-        },
-      ]
+      {
+        id,
+        label: gradeLabel,
+        value: input.gradeValue,
+        maximum: input.gradeMaximum,
+        weight: input.gradeWeight,
+      },
+    ]
     : [];
 
   const disciplineInput: CreateAcademicDisciplineInput = {

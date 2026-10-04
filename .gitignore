@@ -13,6 +13,7 @@ auth.json
 node_modules
 dist
 .cache/
+.lighthouseci/
 .qlty/logs
 .qlty/out
 .qlty/plugin_cachedir

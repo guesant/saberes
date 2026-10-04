@@ -11,10 +11,10 @@ export function updateStudyCaptureCompletion(
 ): PersonalWorkspace {
   return {
     ...input.workspace,
-    captures: input.workspace.captures.map((capture) =>
-      capture.id === input.id
+    captures: input.workspace.captures.map((capture) => {
+      return capture.id === input.id
         ? { ...capture, completed: !capture.completed, updatedAt: input.now }
-        : capture,
-    ),
+        : capture;
+    }),
   };
 }

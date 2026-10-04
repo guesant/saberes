@@ -9,21 +9,27 @@ export function CatalogCourseTypeFilter(props: CatalogCourseTypeFilterProps) {
   return (
     <UIInlineActions>
       <UIButton
-        onClick={() => props.onChange(undefined)}
+        onClick={() => {
+          return props.onChange(undefined);
+        }}
         size="small"
         variant={!props.value ? "contained" : "outlined"}
       >
         {t("catalog.courseType.all")}
       </UIButton>
       <UIButton
-        onClick={() => props.onChange(LearningCourseType.General)}
+        onClick={() => {
+          return props.onChange(LearningCourseType.General);
+        }}
         size="small"
         variant={props.value === LearningCourseType.General ? "contained" : "outlined"}
       >
         {t("catalog.courseType.general")}
       </UIButton>
       <UIButton
-        onClick={() => props.onChange(LearningCourseType.Specific)}
+        onClick={() => {
+          return props.onChange(LearningCourseType.Specific);
+        }}
         size="small"
         variant={props.value === LearningCourseType.Specific ? "contained" : "outlined"}
       >

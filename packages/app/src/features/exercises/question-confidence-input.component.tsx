@@ -14,19 +14,25 @@ export function QuestionConfidenceInput(props: QuestionConfidenceInputProps) {
       <UIInlineActions>
         <UIButton
           variant={value === AttemptConfidence.Confident ? "contained" : "outlined"}
-          onClick={() => onChange(AttemptConfidence.Confident)}
+          onClick={() => {
+            return onChange(AttemptConfidence.Confident);
+          }}
         >
           {t("exercise.confidence.confident")}
         </UIButton>
         <UIButton
           variant={value === AttemptConfidence.Doubt ? "contained" : "outlined"}
-          onClick={() => onChange(AttemptConfidence.Doubt)}
+          onClick={() => {
+            return onChange(AttemptConfidence.Doubt);
+          }}
         >
           {t("exercise.confidence.doubt")}
         </UIButton>
         <UIButton
           variant={value === AttemptConfidence.Guess ? "contained" : "outlined"}
-          onClick={() => onChange(AttemptConfidence.Guess)}
+          onClick={() => {
+            return onChange(AttemptConfidence.Guess);
+          }}
         >
           {t("exercise.confidence.guess")}
         </UIButton>

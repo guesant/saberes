@@ -9,5 +9,7 @@ paths = [
   '''/node_modules/''',
   '''/\.deno/''',
   '''/vendor/''',
-  '''/dist/'''
+  '''/dist/''',
+  '''/\.cache/''',
+  '''/\.lighthouseci/'''
 ]

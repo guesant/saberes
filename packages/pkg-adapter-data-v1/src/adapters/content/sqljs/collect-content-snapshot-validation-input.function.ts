@@ -8,10 +8,14 @@ export function collectContentSnapshotValidationInput(
     "SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' ORDER BY name",
   );
 
-  const readCount = (sql: string): number => Number(database.query(sql)[0]?.count || 0);
+  const readCount = (sql: string): number => {
+    return Number(database.query(sql)[0]?.count || 0);
+  };
 
   return {
-    tables: tables.map((row) => String(row.name || "")),
+    tables: tables.map((row) => {
+      return String(row.name || "");
+    }),
     questionCount: readCount("SELECT COUNT(*) count FROM questions WHERE status = 'published'"),
     publishedProcessCount: readCount(
       "SELECT COUNT(*) count FROM admission_processes WHERE is_published = 1",

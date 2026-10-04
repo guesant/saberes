@@ -10,11 +10,12 @@ describe("getMyStudyFeatureVisibility", () => {
         reminders: false,
         richContent: false,
       }),
-    ).toEqual({
-      showGamification: false,
-      showRecommendations: false,
-      showReminders: false,
-      showRichContent: false,
-    });
+    )
+      .toEqual({
+        showGamification: false,
+        showRecommendations: false,
+        showReminders: false,
+        showRichContent: false,
+      });
   });
 });

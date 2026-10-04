@@ -21,14 +21,19 @@ describe("createAcademicDiscipline", () => {
       updatedAt: "2026-10-04T00:00:00.000Z",
     });
 
-    expect(discipline.modality).toBe(AcademicModality.InPerson);
+    expect(discipline.modality)
+      .toBe(AcademicModality.InPerson);
 
-    expect(discipline.grades).toHaveLength(1);
+    expect(discipline.grades)
+      .toHaveLength(1);
 
-    expect(discipline.grades[0].value).toBe(8);
+    expect(discipline.grades[0].value)
+      .toBe(8);
 
-    expect(discipline.minimumAttendancePercentage).toBe(75);
+    expect(discipline.minimumAttendancePercentage)
+      .toBe(75);
 
-    expect(discipline.minimumGrade).toBe(5);
+    expect(discipline.minimumGrade)
+      .toBe(5);
   });
 });

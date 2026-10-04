@@ -13,9 +13,12 @@ export function createStudyChecklistContentUpdateAction(
     await input.save(
       updateStudyChecklistContent({
         id: actionInput.id,
-        itemIds: values.map(() => input.generateId()),
+        itemIds: values.map(() => {
+          return input.generateId();
+        }),
         items: values,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
         contentKey: actionInput.contentKey,
         title: actionInput.title,
         workspace: input.workspace,

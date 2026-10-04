@@ -14,7 +14,9 @@ export function QuestionTextAnswerInput(props: QuestionTextAnswerInputProps) {
       minRows={isLongText ? 5 : 1}
       label={t("exercise.answerLabel")}
       value={props.value}
-      onChange={(event) => props.onChange(event.target.value)}
+      onChange={(event) => {
+        return props.onChange(event.target.value);
+      }}
     />
   );
 }

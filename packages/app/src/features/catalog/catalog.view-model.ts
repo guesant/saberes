@@ -42,7 +42,7 @@ export function useCatalogViewModel(): CatalogViewModel {
 
   const query = useQuery({
     queryKey: ["catalog", filters],
-    queryFn: () => services.catalog.get.execute(filters),
+    queryFn: () => { return services.catalog.get.execute(filters); },
   });
 
   const savedFiltersQuery = useCatalogSavedFiltersQuery();
@@ -51,8 +51,8 @@ export function useCatalogViewModel(): CatalogViewModel {
 
   const state: CatalogViewModelState = getQueryViewState(query);
 
-  return useMemo(
-    () => ({
+  return useMemo(() => {
+    return {
       state,
       data: query.data ?? null,
       error: query.error ?? null,
@@ -64,13 +64,12 @@ export function useCatalogViewModel(): CatalogViewModel {
       savingSavedFilter: savedFilterActions.saving,
       saveSavedFilterError: savedFilterActions.saveError,
       saveFilter: savedFilterActions.saveFilter,
-      selectFilter: (filter: SavedCatalogFilter): void => setFilters(filter.filters),
+      selectFilter: (filter: SavedCatalogFilter): void => { return setFilters(filter.filters); },
       deleteFilter: savedFilterActions.deleteFilter,
       reloadSavedFilters: savedFiltersQuery.reload,
       reload: async (): Promise<void> => {
         await Promise.all([query.refetch(), savedFiltersQuery.reload()]);
       },
-    }),
-    [filters, query, savedFilterActions, savedFiltersQuery, setFilters, state],
-  );
+    };
+  }, [filters, query, savedFilterActions, savedFiltersQuery, setFilters, state]);
 }

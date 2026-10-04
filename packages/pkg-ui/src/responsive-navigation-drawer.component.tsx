@@ -3,36 +3,28 @@ import type { ReactElement, ReactNode } from "react";
 
 export interface UIResponsiveNavigationDrawerProps {
   children: ReactNode;
-  mobileOpen: boolean;
-  onMobileClose(): void;
 }
 
 export function UIResponsiveNavigationDrawer(
   props: UIResponsiveNavigationDrawerProps,
 ): ReactElement {
   return (
-    <>
-      <UIDrawer
-        anchor="left"
-        open
-        sx={{
-          display: { md: "block", xs: "none" },
+    <UIDrawer
+      anchor="left"
+      open
+      sx={{
+        display: { md: "block", xs: "none" },
+        width: 264,
+        "& .MuiDrawer-paper": {
+          boxSizing: "border-box",
+          height: { md: "calc(100% - 64px)", xs: "100%" },
+          top: { md: "64px", xs: 0 },
           width: 264,
-          "& .MuiDrawer-paper": { boxSizing: "border-box", width: 264 },
-        }}
-        variant="permanent"
-      >
-        {props.children}
-      </UIDrawer>
-      <UIDrawer
-        anchor="left"
-        onClose={props.onMobileClose}
-        open={props.mobileOpen}
-        sx={{ display: { md: "none", xs: "block" } }}
-        variant="temporary"
-      >
-        {props.children}
-      </UIDrawer>
-    </>
+        },
+      }}
+      variant="permanent"
+    >
+      {props.children}
+    </UIDrawer>
   );
 }

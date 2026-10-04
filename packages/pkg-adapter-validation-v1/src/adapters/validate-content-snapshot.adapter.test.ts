@@ -83,18 +83,19 @@ describe("ValidateContentSnapshotAdapter", () => {
 
     const result = await adapter.execute(validInput);
 
-    expect(result).toEqual({
-      status: "valid",
-      issues: [],
-      summary: {
-        tableCount: requiredContentSnapshotTables.length,
-        questionCount: 1,
-        publishedProcessCount: 1,
-        publishedCourseCount: 1,
-        assessmentSetCount: 1,
-        issueCount: 0,
-      },
-    });
+    expect(result)
+      .toEqual({
+        status: "valid",
+        issues: [],
+        summary: {
+          tableCount: requiredContentSnapshotTables.length,
+          questionCount: 1,
+          publishedProcessCount: 1,
+          publishedCourseCount: 1,
+          assessmentSetCount: 1,
+          issueCount: 0,
+        },
+      });
   });
 
   it("reports missing tables and invalid snapshot counts", async () => {
@@ -109,21 +110,25 @@ describe("ValidateContentSnapshotAdapter", () => {
       assessmentSetCount: 0,
     });
 
-    expect(result.status).toBe("invalid");
+    expect(result.status)
+      .toBe("invalid");
 
-    expect(result.issues).toHaveLength(requiredContentSnapshotTables.length + 3);
+    expect(result.issues)
+      .toHaveLength(requiredContentSnapshotTables.length + 3);
 
-    expect(result.issues[0]).toEqual({
-      code: "tables.missing",
-      path: "tables.universities",
-      message: "Required table is missing: universities.",
-    });
+    expect(result.issues[0])
+      .toEqual({
+        code: "tables.missing",
+        path: "tables.universities",
+        message: "Required table is missing: universities.",
+      });
 
-    expect(result.issues[result.issues.length - 1]).toEqual({
-      code: "assessment-sets.empty",
-      path: "assessment_sets",
-      message: "The snapshot does not contain assessment sets.",
-    });
+    expect(result.issues[result.issues.length - 1])
+      .toEqual({
+        code: "assessment-sets.empty",
+        path: "assessment_sets",
+        message: "The snapshot does not contain assessment sets.",
+      });
   });
 
   it("reports each invalid relationship and editorial rule", async () => {
@@ -143,17 +148,22 @@ describe("ValidateContentSnapshotAdapter", () => {
       invalidLessonSectionCount: 1,
     });
 
-    expect(result.issues.map((issue) => issue.code)).toEqual([
-      "question-occurrences.orphaned",
-      "question-occurrences.key-missing",
-      "course-items.orphaned",
-      "plan-steps.orphaned",
-      "lesson-sections.blocks-invalid",
-      "lesson-sections.role-invalid",
-      "lessons.progression-incomplete",
-      "lessons.metadata-invalid",
-      "lesson-sources.orphaned",
-      "lesson-sections.invalid",
-    ]);
+    expect(
+      result.issues.map((issue) => {
+        return issue.code;
+      }),
+    )
+      .toEqual([
+        "question-occurrences.orphaned",
+        "question-occurrences.key-missing",
+        "course-items.orphaned",
+        "plan-steps.orphaned",
+        "lesson-sections.blocks-invalid",
+        "lesson-sections.role-invalid",
+        "lessons.progression-incomplete",
+        "lessons.metadata-invalid",
+        "lesson-sources.orphaned",
+        "lesson-sections.invalid",
+      ]);
   });
 });

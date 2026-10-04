@@ -15,29 +15,33 @@ export function GoalFormTitleField(props: GoalFormTitleFieldProps) {
       asyncDebounceMs={350}
       name="details.title"
       validators={{
-        onBlur: ({ value }) => (value.trim() ? undefined : "Informe um título."),
+        onBlur: ({ value }) => { return value.trim() ? undefined : "Informe um título."; },
         onChangeAsync: async ({ value }) => {
-          const normalizedValue = value.trim().toLocaleLowerCase();
+          const normalizedValue = value.trim()
+            .toLocaleLowerCase();
 
-          const alreadyExists = props.existingTitles.some(
-            (title) => title.trim().toLocaleLowerCase() === normalizedValue,
-          );
+          const alreadyExists = props.existingTitles.some((title) => {
+            return title.trim()
+              .toLocaleLowerCase() === normalizedValue;
+          });
 
           return alreadyExists ? "Já existe uma meta com este título." : undefined;
         },
       }}
     >
-      {(field) => (
-        <UITextField
-          error={!field.state.meta.isValid}
-          fullWidth
-          helperText={field.state.meta.errors.join(", ")}
-          label={props.label}
-          onBlur={field.handleBlur}
-          onChange={(event) => field.handleChange(event.target.value)}
-          value={field.state.value}
-        />
-      )}
+      {(field) => {
+        return (
+          <UITextField
+            error={!field.state.meta.isValid}
+            fullWidth
+            helperText={field.state.meta.errors.join(", ")}
+            label={props.label}
+            onBlur={field.handleBlur}
+            onChange={(event) => { return field.handleChange(event.target.value); }}
+            value={field.state.value}
+          />
+        );
+      }}
     </form.Field>
   );
 }

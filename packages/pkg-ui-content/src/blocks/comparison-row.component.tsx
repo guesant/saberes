@@ -11,9 +11,9 @@ export function UIComparisonRow(props: UIComparisonRowProps) {
 
   return (
     <UIHtmlTableRow>
-      {row.map((cell) => (
-        <UIComparisonDataCell key={`${rowKey}-${cell}`} value={cell} />
-      ))}
+      {row.map((cell) => {
+        return <UIComparisonDataCell key={`${rowKey}-${cell}`} value={cell} />;
+      })}
     </UIHtmlTableRow>
   );
 }

@@ -9,7 +9,12 @@ export function AssessmentProgressError(props: AssessmentProgressErrorProps) {
     <UIAlert severity="warning">
       <UIContentGroup variant="tight">
         {t("assessment.progressError", { message: props.error.message })}
-        <UIButton onClick={() => props.onRetry()} size="small">
+        <UIButton
+          onClick={() => {
+            return props.onRetry();
+          }}
+          size="small"
+        >
           {t("common.retry")}
         </UIButton>
       </UIContentGroup>

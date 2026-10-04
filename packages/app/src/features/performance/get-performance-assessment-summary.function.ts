@@ -4,24 +4,33 @@ import type { PerformanceAssessmentSummary } from "./performance-assessment-summ
 export function getPerformanceAssessmentSummary(
   input: GetPerformanceAssessmentSummaryInput,
 ): PerformanceAssessmentSummary {
-  const assessmentSessions = input.sessions.filter(
-    (session) => session.activityType === "assessment",
+  const assessmentSessions = input.sessions.filter((session) => {
+    return session.activityType === "assessment";
+  });
+
+  const assessmentSessionIds = new Set(
+    assessmentSessions.map((session) => {
+      return session.id;
+    }),
   );
 
-  const assessmentSessionIds = new Set(assessmentSessions.map((session) => session.id));
+  const attempts = input.attempts.filter((attempt) => {
+    return attempt.sessionId && assessmentSessionIds.has(attempt.sessionId);
+  });
 
-  const attempts = input.attempts.filter(
-    (attempt) => attempt.sessionId && assessmentSessionIds.has(attempt.sessionId),
-  );
+  const correctedAttempts = attempts.filter((attempt) => {
+    return attempt.isCorrect !== null;
+  });
 
-  const correctedAttempts = attempts.filter((attempt) => attempt.isCorrect !== null);
-
-  const correctAttempts = correctedAttempts.filter((attempt) => attempt.isCorrect === true);
+  const correctAttempts = correctedAttempts.filter((attempt) => {
+    return attempt.isCorrect === true;
+  });
 
   return {
     sessions: assessmentSessions.length,
-    completedSessions: assessmentSessions.filter((session) => session.status === "completed")
-      .length,
+    completedSessions: assessmentSessions.filter((session) => {
+      return session.status === "completed";
+    }).length,
     answered: attempts.length,
     correct: correctAttempts.length,
     accuracy: correctedAttempts.length

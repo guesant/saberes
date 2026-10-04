@@ -250,6 +250,11 @@ const ptBR = {
       assessment: "Conjunto de avaliação",
       review: "Revisão",
     },
+    quickAccess: {
+      title: "Acesso rápido",
+      description: "Abra as áreas principais do seu estudo.",
+      openDescription: "Acessar esta área.",
+    },
   },
   topics: {
     eyebrow: "Programas de conteúdo",

@@ -24,23 +24,25 @@ const catalog: CatalogReadModel = {
 
 describe("getCatalogCommandPaletteItems", () => {
   it("retorna uma lista vazia sem catálogo local", () => {
-    expect(getCatalogCommandPaletteItems(undefined)).toEqual([]);
+    expect(getCatalogCommandPaletteItems(undefined))
+      .toEqual([]);
   });
 
   it("combina cursos, mapas, planos e conteúdo em uma lista navegável", () => {
-    expect(getCatalogCommandPaletteItems(catalog)).toEqual([
-      {
-        description: undefined,
-        id: "catalog:course:course-1",
-        label: "Curso local",
-        value: "/cursos/course-1",
-      },
-      {
-        description: "Leia a teoria",
-        id: "catalog:lesson:lesson-1",
-        label: "Introdução",
-        value: "/licoes/lesson-1",
-      },
-    ]);
+    expect(getCatalogCommandPaletteItems(catalog))
+      .toEqual([
+        {
+          description: undefined,
+          id: "catalog:course:course-1",
+          label: "Curso local",
+          value: "/cursos/course-1",
+        },
+        {
+          description: "Leia a teoria",
+          id: "catalog:lesson:lesson-1",
+          label: "Introdução",
+          value: "/licoes/lesson-1",
+        },
+      ]);
   });
 });

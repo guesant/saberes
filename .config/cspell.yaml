@@ -20,6 +20,7 @@ ignorePaths:
   - node_modules/**
   - deno.lock
   - LICENSE*
+  - docs/backlog.md
   - packages/app/public/data/**
 ignoreRegExpList:
   - /`[\s\S]*?`/g

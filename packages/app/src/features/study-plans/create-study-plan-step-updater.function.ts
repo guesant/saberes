@@ -12,10 +12,11 @@ type CreateStudyPlanStepUpdaterInput = {
 export function createStudyPlanStepUpdater(
   input: CreateStudyPlanStepUpdaterInput,
 ): AsyncAction<[Record<string, unknown>, boolean], void> {
-  return (step: Record<string, unknown>, completed: boolean): Promise<void> =>
-    updateStudyPlanStep({
+  return (step: Record<string, unknown>, completed: boolean): Promise<void> => {
+    return updateStudyPlanStep({
       ...input,
       step,
       completed,
     });
+  };
 }

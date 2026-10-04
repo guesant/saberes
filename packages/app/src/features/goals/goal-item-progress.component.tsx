@@ -16,7 +16,9 @@ export function GoalItemProgress(props: GoalItemProgressProps) {
       <UITextField
         inputProps={{ max: props.target, min: 0, step: 1 }}
         label={props.label}
-        onChange={(event) => props.onChange(event.target.value)}
+        onChange={(event) => {
+          return props.onChange(event.target.value);
+        }}
         type="number"
         value={props.current}
       />

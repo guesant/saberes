@@ -22,12 +22,15 @@ export async function startQuestionStudySession(
   const questions =
     durationMinutes > 0 ? input.questions : input.questions.slice(0, selectedQuantity);
 
-  const questionKeys = questions.map((question) => `question:${String(question.id)}`);
+  const questionKeys = questions.map((question) => {
+    return `question:${String(question.id)}`;
+  });
 
   const session: StudySession = createQuestionStudySession({
     id: input.services.platform.ids.execute(),
     questionKeys,
-    startedAt: new Date().toISOString(),
+    startedAt: new Date()
+      .toISOString(),
     timeLimitMs: durationMinutes > 0 ? durationMinutes * 60 * 1000 : undefined,
   });
 

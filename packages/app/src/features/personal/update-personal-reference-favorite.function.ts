@@ -11,10 +11,10 @@ export function updatePersonalReferenceFavorite(
 ): PersonalWorkspace {
   return {
     ...input.workspace,
-    references: input.workspace.references.map((reference) =>
-      reference.id === input.id
+    references: input.workspace.references.map((reference) => {
+      return reference.id === input.id
         ? { ...reference, favorite: !reference.favorite, updatedAt: input.now }
-        : reference,
-    ),
+        : reference;
+    }),
   };
 }

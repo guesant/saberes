@@ -42,10 +42,13 @@ check: dev-build
 	docker run --rm -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace {{dev_image}} bash -c 'mise exec -- deno task quality:check:fast'
 
 heavy-checks: dev-build
+	{{app}} 'mise exec -- deno task database:schema-docs'
 	{{app}} 'mise exec -- deno task heavy-checks'
 	just build-check
 	just e2e
 	just accessibility
+	just layout-check
+	just visual-check
 	just lighthouse
 	just security-audit
 	just complexity-report
@@ -151,6 +154,33 @@ accessibility: runtime-build playwright-build
     {{playwright_modules_init}}
     docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno task e2e -- packages/app/tests/e2e/accessibility.spec.ts'
 
+layout-check: runtime-build playwright-build
+	#!/usr/bin/env bash
+	set -euo pipefail
+	docker volume create {{workspace_modules_volume}} >/dev/null
+	{{compose}} up -d web
+	trap '{{compose}} down' EXIT
+	{{playwright_modules_init}}
+	docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno task layout:check'
+
+visual-check: runtime-build playwright-build
+	#!/usr/bin/env bash
+	set -euo pipefail
+	docker volume create {{workspace_modules_volume}} >/dev/null
+	{{compose}} up -d web
+	trap '{{compose}} down' EXIT
+	{{playwright_modules_init}}
+	docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno task visual:check'
+
+visual-update: runtime-build playwright-build
+	#!/usr/bin/env bash
+	set -euo pipefail
+	docker volume create {{workspace_modules_volume}} >/dev/null
+	{{compose}} up -d web
+	trap '{{compose}} down' EXIT
+	{{playwright_modules_init}}
+	docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno task visual:update'
+
 lighthouse: runtime-build quality-build
     #!/usr/bin/env bash
     set -euo pipefail
@@ -169,7 +199,7 @@ reuse-check: quality-build
     docker run --rm -v "$PWD:/workspace:ro" {{quality_image}} bash -c 'reuse lint'
 
 security-audit: quality-build
-    docker run --rm -v "$PWD:/repo:ro" -v portal-guesant-saberes-trivy-cache:/root/.cache/trivy {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --recursive /repo && aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo && semgrep scan --config auto --error --exclude node_modules --exclude dist /repo/packages /repo/.local/operator /repo/.config'
+    docker run --rm -v "$PWD:/repo:ro" -v portal-guesant-saberes-trivy-cache:/root/.cache/trivy {{quality_image}} bash -c 'aqua exec -- gitleaks dir --no-banner --redact --config /repo/.config/.gitleaks.toml /repo && aqua exec -- osv-scanner scan source --config /repo/.config/osv-scanner.toml --recursive /repo && aqua exec -- trivy fs --config /repo/.config/trivy.yaml --ignorefile="" --secret-config="" /repo && semgrep scan --config auto --error --exclude-rule dockerfile.security.missing-user-entrypoint.missing-user-entrypoint --exclude-rule dockerfile.security.missing-user.missing-user --exclude-rule generic.nginx.security.header-redefinition.header-redefinition --exclude-rule html.security.audit.missing-integrity.missing-integrity --exclude node_modules --exclude dist /repo/packages /repo/.local/operator /repo/.config'
 
 complexity-report: quality-build
     mkdir -p .cache

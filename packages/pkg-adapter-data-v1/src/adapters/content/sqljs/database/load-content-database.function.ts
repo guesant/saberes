@@ -35,7 +35,9 @@ export async function loadContentDatabase(): Promise<ContentDatabase> {
       }
 
       const SQL = await initSqlJs({
-        locateFile: () => `${import.meta.env.BASE_URL}sql-wasm.wasm`,
+        locateFile: () => {
+          return `${import.meta.env.BASE_URL}sql-wasm.wasm`;
+        },
       });
 
       const db = new SQL.Database(bytes);

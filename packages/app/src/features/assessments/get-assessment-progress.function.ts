@@ -6,9 +6,9 @@ import type { Attempt } from "@guesant/saberes-application";
 export function getAssessmentProgress(input: GetAssessmentProgressInput): AssessmentProgress {
   const questionIds = new Set(
     input.items
-      .map((item) => item.question_occurrence_id)
-      .filter((questionId) => questionId !== undefined && questionId !== null)
-      .map((questionId) => String(questionId)),
+      .map((item) => { return item.question_occurrence_id; })
+      .filter((questionId) => { return questionId !== undefined && questionId !== null; })
+      .map((questionId) => { return String(questionId); }),
   );
 
   const attempts = getAssessmentQuestionAttempts(input.attempts, questionIds);
@@ -23,8 +23,8 @@ export function getAssessmentProgress(input: GetAssessmentProgressInput): Assess
 
   const correctIds = new Set(
     Array.from(latestAttempts.values())
-      .filter((attempt) => attempt.isCorrect === true)
-      .map((attempt) => String(attempt.questionId)),
+      .filter((attempt) => { return attempt.isCorrect === true; })
+      .map((attempt) => { return String(attempt.questionId); }),
   );
 
   const totalItems = questionIds.size;

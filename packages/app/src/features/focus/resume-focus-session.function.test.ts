@@ -14,12 +14,16 @@ describe("resumeFocusSession", () => {
   it("keeps elapsed time while returning to active state", () => {
     const result = resumeFocusSession(session, new Date("2026-01-01T11:00:00.000Z"));
 
-    expect(result.status).toBe(FocusSessionStatus.Active);
+    expect(result.status)
+      .toBe(FocusSessionStatus.Active);
 
-    expect(result.elapsedMs).toBe(session.elapsedMs);
+    expect(result.elapsedMs)
+      .toBe(session.elapsedMs);
 
-    expect(result.startedAt).toBe("2026-01-01T10:35:00.000Z");
+    expect(result.startedAt)
+      .toBe("2026-01-01T10:35:00.000Z");
 
-    expect(result.pausedAt).toBeUndefined();
+    expect(result.pausedAt)
+      .toBeUndefined();
   });
 });

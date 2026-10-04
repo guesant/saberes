@@ -3,6 +3,7 @@ import { createRequire } from "node:module";
 import { resolve } from "node:path";
 import test from "node:test";
 import architecture from "./architecture.plugin.mjs";
+import layout from "./layout.plugin.mjs";
 
 const require = createRequire(resolve(process.cwd(), "package.json"));
 
@@ -39,6 +40,25 @@ export function runRuleCases(name, rule, cases) {
   const ruleTester = new RuleTester({ languageOptions });
 
   ruleTester.run(name, rule, cases);
+}
+
+export function verifyLayout(
+  code,
+  rule,
+  filename = "packages/app/src/features/layout/view.component.tsx",
+) {
+  const linter = new Linter({ configType: "flat" });
+
+  const config = [
+    {
+      files: ["**/*.{js,jsx,mjs,ts,tsx}"],
+      languageOptions,
+      plugins: { layout },
+      rules: { [`layout/${rule}`]: "error" },
+    },
+  ];
+
+  return linter.verify(code, config, { filename: resolve(process.cwd(), filename) });
 }
 
 test("map-to-imported-component accepts an imported self-closing component", () => {
@@ -304,8 +324,8 @@ test("one-function-per-file counts only top-level implementations", () => {
 });
 
 test("no-aggregated-adapters rejects plural adapter files and multiple classes", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("no-aggregated-adapters", architecture.rules["no-aggregated-adapters"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("no-aggregated-adapters", architecture.rules["no-aggregated-adapters"], {
       valid: [
         {
           code: "export class FirstAdapter {}",
@@ -333,13 +353,13 @@ test("no-aggregated-adapters rejects plural adapter files and multiple classes",
           errors: [{ messageId: "pluralFile" }],
         },
       ],
-    }),
-  );
+    });
+  });
 });
 
 test("cqrs-file-contract accepts granular command and query files", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("cqrs-file-contract", architecture.rules["cqrs-file-contract"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("cqrs-file-contract", architecture.rules["cqrs-file-contract"], {
       valid: [
         {
           code: "export type CreateLessonCommand = { title: string };",
@@ -385,13 +405,13 @@ test("cqrs-file-contract accepts granular command and query files", () => {
         },
       ],
       invalid: [],
-    }),
-  );
+    });
+  });
 });
 
 test("cqrs-file-contract rejects legacy use cases and incomplete handlers", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("cqrs-file-contract-invalid", architecture.rules["cqrs-file-contract"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("cqrs-file-contract-invalid", architecture.rules["cqrs-file-contract"], {
       valid: [],
       invalid: [
         {
@@ -411,13 +431,13 @@ test("cqrs-file-contract rejects legacy use cases and incomplete handlers", () =
           errors: [{ messageId: "missingExecute" }],
         },
       ],
-    }),
-  );
+    });
+  });
 });
 
 test("one-exported-function-per-file enforces one exported top-level function", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases(
+  assert.doesNotThrow(() => {
+    return runRuleCases(
       "one-exported-function-per-file",
       architecture.rules["one-exported-function-per-file"],
       {
@@ -470,13 +490,13 @@ test("one-exported-function-per-file enforces one exported top-level function", 
           },
         ],
       },
-    ),
-  );
+    );
+  });
 });
 
 test("one-interface-per-file rejects multiple interfaces in a package file", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("one-interface-per-file", architecture.rules["one-interface-per-file"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("one-interface-per-file", architecture.rules["one-interface-per-file"], {
       valid: [
         {
           code: "export interface Lesson { title: string }",
@@ -490,13 +510,13 @@ test("one-interface-per-file rejects multiple interfaces in a package file", () 
           errors: [{ messageId: "multipleInterfaces" }],
         },
       ],
-    }),
-  );
+    });
+  });
 });
 
 test("one-type-per-file rejects multiple type aliases in a package file", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("one-type-per-file", architecture.rules["one-type-per-file"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("one-type-per-file", architecture.rules["one-type-per-file"], {
       valid: [
         {
           code: "export type LessonId = string;",
@@ -510,13 +530,13 @@ test("one-type-per-file rejects multiple type aliases in a package file", () => 
           errors: [{ messageId: "multipleTypes" }],
         },
       ],
-    }),
-  );
+    });
+  });
 });
 
 test("domain-function-purity rejects external state and parameter mutation", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("domain-function-purity", architecture.rules["domain-function-purity"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("domain-function-purity", architecture.rules["domain-function-purity"], {
       valid: [
         {
           code: "export function add(left: number, right: number) { return left + right; }",
@@ -535,13 +555,13 @@ test("domain-function-purity rejects external state and parameter mutation", () 
           errors: [{ messageId: "parameterMutation" }],
         },
       ],
-    }),
-  );
+    });
+  });
 });
 
 test("domain-functions-in-domain-package rejects domain logic in adapters", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases(
+  assert.doesNotThrow(() => {
+    return runRuleCases(
       "domain-functions-in-domain-package",
       architecture.rules["domain-functions-in-domain-package"],
       {
@@ -557,13 +577,13 @@ test("domain-functions-in-domain-package rejects domain logic in adapters", () =
           },
         ],
       },
-    ),
-  );
+    );
+  });
 });
 
 test("utils-module-boundary rejects domain dependencies", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("utils-module-boundary", architecture.rules["utils-module-boundary"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("utils-module-boundary", architecture.rules["utils-module-boundary"], {
       valid: [
         {
           code: "export function clamp(value: number) { return value; }",
@@ -577,13 +597,13 @@ test("utils-module-boundary rejects domain dependencies", () => {
           errors: [{ messageId: "domainImport" }],
         },
       ],
-    }),
-  );
+    });
+  });
 });
 
 test("purposeful-naming enforces names that match the symbol responsibility", () => {
-  assert.doesNotThrow(() =>
-    runRuleCases("purposeful-naming", architecture.rules["purposeful-naming"], {
+  assert.doesNotThrow(() => {
+    return runRuleCases("purposeful-naming", architecture.rules["purposeful-naming"], {
       valid: [
         {
           code: "export function calculateValue() { return 1; }",
@@ -639,8 +659,8 @@ test("purposeful-naming enforces names that match the symbol responsibility", ()
           errors: [{ messageId: "contractSuffix" }],
         },
       ],
-    }),
-  );
+    });
+  });
 });
 
 test("layer-boundaries enforces the dependency direction across packages and import forms", () => {
@@ -780,6 +800,70 @@ test("no-low-level-layout-outside-ui rejects layout primitives and props in app"
     ).length,
     0,
   );
+});
+
+test("no-style-definition-outside-ui rejects visual escape hatches outside UI", () => {
+  for (const code of [
+    'function View() { return <section className="view" />; }',
+    'function View() { return <section sx={{ color: "primary.main" }} />; }',
+    'function View() { return <section style={{ color: "red" }} />; }',
+    'import "./view.css";',
+    "function View() { return <section {...props} />; }",
+  ]) {
+    assert.equal(verifyLayout(code, "no-style-definition-outside-ui").length, 1);
+  }
+
+  assert.equal(
+    verifyLayout(
+      'function View() { return <section className="view" />; }',
+      "no-style-definition-outside-ui",
+      "packages/pkg-ui/src/view.component.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("no-spacing-definition-outside-ui rejects spacing props and style objects", () => {
+  for (const code of [
+    "function View() { return <UIStack gap={2} />; }",
+    "function View() { return <UIStack spacing={2} />; }",
+    "function View() { return <UIBox sx={{ padding: 2 }} />; }",
+    "function View() { return <UIBox style={{ marginTop: 8 }} />; }",
+    "function View() { return <UIBox sx={styles} />; }",
+  ]) {
+    assert.ok(verifyLayout(code, "no-spacing-definition-outside-ui").length > 0);
+  }
+
+  assert.equal(
+    verifyLayout(
+      "function UIStack() { return <MuiStack spacing={2} />; }",
+      "no-spacing-definition-outside-ui",
+      "packages/pkg-ui/src/stack.component.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("no-layout-definition-outside-ui rejects structural geometry", () => {
+  for (const code of [
+    'function View() { return <UIBox sx={{ width: "50%" }} />; }',
+    'function View() { return <UIBox sx={{ flexWrap: "wrap" }} />; }',
+    'function View() { return <UIBox sx={{ justifyContent: "space-between" }} />; }',
+    'function View() { return <UIBox sx={{ transform: "translateY(2px)" }} />; }',
+    "function View() { return <UIBox sx={styles} />; }",
+  ]) {
+    assert.ok(verifyLayout(code, "no-layout-definition-outside-ui").length > 0);
+  }
+});
+
+test("no-negative-spacing-outside-ui rejects negative spacing and offsets", () => {
+  for (const code of [
+    "function View() { return <UIBox sx={{ marginTop: -2 }} />; }",
+    'function View() { return <UIBox sx={{ gap: "-8px" }} />; }',
+    "function View() { return <UIBox marginTop={-1} />; }",
+  ]) {
+    assert.ok(verifyLayout(code, "no-negative-spacing-outside-ui").length > 0);
+  }
 });
 
 test("purity rules reject technology imports in domain and application", () => {
@@ -1032,6 +1116,12 @@ test("file-kind-location restricts file kinds to their layers", () => {
       "file-kind-location",
       "packages/pkg-application/src/ports/get-course-port.port.ts",
     ).length,
+    0,
+  );
+
+  assert.equal(
+    verify("export const theme = {};", "file-kind-location", "packages/pkg-ui/src/theme.config.ts")
+      .length,
     0,
   );
 });

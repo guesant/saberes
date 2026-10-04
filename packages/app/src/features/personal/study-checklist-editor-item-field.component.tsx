@@ -6,22 +6,26 @@ export function StudyChecklistEditorItemField(props: StudyChecklistEditorItemFie
 
   return (
     <form.Field name={`items[${props.index}].label`}>
-      {(field) => (
-        <UIContentGroup variant="tight">
-          <UITextField
-            error={!field.state.meta.isValid}
-            fullWidth
-            helperText={field.state.meta.errors.join(", ")}
-            label={`Item ${props.index + 1}`}
-            onBlur={field.handleBlur}
-            onChange={(event) => field.handleChange(event.target.value)}
-            value={field.state.value}
-          />
-          <UIButton onClick={props.remove} type="button" variant="text">
-            Remover
-          </UIButton>
-        </UIContentGroup>
-      )}
+      {(field) => {
+        return (
+          <UIContentGroup variant="tight">
+            <UITextField
+              error={!field.state.meta.isValid}
+              fullWidth
+              helperText={field.state.meta.errors.join(", ")}
+              label={`Item ${props.index + 1}`}
+              onBlur={field.handleBlur}
+              onChange={(event) => {
+                return field.handleChange(event.target.value);
+              }}
+              value={field.state.value}
+            />
+            <UIButton onClick={props.remove} type="button" variant="text">
+              Remover
+            </UIButton>
+          </UIContentGroup>
+        );
+      }}
     </form.Field>
   );
 }

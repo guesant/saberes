@@ -43,7 +43,9 @@ export function usePreferencesViewModel(): PreferencesViewModel {
     const defaults = getDefaultPreferences();
 
     await Promise.all(
-      preferenceKeys.map((key) => mutation.mutateAsync({ key, value: defaults[key] })),
+      preferenceKeys.map((key) => {
+        return mutation.mutateAsync({ key, value: defaults[key] });
+      }),
     );
   };
 

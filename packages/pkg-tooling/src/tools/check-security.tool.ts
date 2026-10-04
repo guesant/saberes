@@ -1,11 +1,6 @@
 import { basename, extname, join, relative, resolve } from "@std/path";
 
-const roots = [
-  resolve(Deno.cwd(), "packages/app/src"),
-  resolve(Deno.cwd(), "packages/pkg-core/src"),
-  resolve(Deno.cwd(), "packages/pkg-adapter-data-v1/src"),
-  resolve(Deno.cwd(), "packages/pkg-tooling/src"),
-];
+const roots = [resolve(Deno.cwd(), "packages")];
 
 const extensions = new Set([".ts", ".tsx"]);
 
@@ -56,5 +51,5 @@ if (violations.length) {
 
   Deno.exitCode = 1;
 } else {
-  console.log("Security check válido: nenhuma API de execução ou HTML inseguro foi encontrado.");
+  console.info("Security check válido: nenhuma API de execução ou HTML inseguro foi encontrado.");
 }

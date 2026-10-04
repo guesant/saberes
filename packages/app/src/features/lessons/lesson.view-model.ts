@@ -67,7 +67,7 @@ export function useLessonViewModel(key: string | undefined): LessonViewModel {
     sectionIndex: progressState.sectionIndex,
     error: query.error ?? null,
     progressError: progressQueries.progressError || progressQueries.bookmarksError || null,
-    reload: (): Promise<void> => query.refetch().then(() => undefined),
+    reload: async (): Promise<void> => { await query.refetch(); },
     saveProgress: progressActions.saveProgress,
     saveBookmark: progressActions.saveBookmark,
     saveSection: progressActions.saveSection,

@@ -12,7 +12,9 @@ export function ReviewRetentionControl(props: ReviewRetentionControlProps) {
       <UITextField
         inputProps={{ max: 99, min: 80, step: 1 }}
         label={t("review.retentionLabel")}
-        onChange={(event) => props.onChange(Number(event.target.value) / 100)}
+        onChange={(event) => {
+          return props.onChange(Number(event.target.value) / 100);
+        }}
         type="number"
         value={Math.round(props.retention * 100)}
       />

@@ -12,13 +12,17 @@ export function PersonalArchivedList(props: PersonalArchivedListProps) {
   return (
     <UIContentGroup variant="tight">
       <UITypography variant="h6">{props.title}</UITypography>
-      {props.items.map((item) => (
-        <PersonalArchivedItem
-          key={item.id}
-          onRestore={() => props.onRestore(item.id)}
-          title={item.title}
-        />
-      ))}
+      {props.items.map((item) => {
+        return (
+          <PersonalArchivedItem
+            key={item.id}
+            onRestore={() => {
+              return props.onRestore(item.id);
+            }}
+            title={item.title}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

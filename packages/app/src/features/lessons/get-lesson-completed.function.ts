@@ -7,8 +7,8 @@ export type GetLessonCompletedInput = {
 
 export function getLessonCompleted(input: GetLessonCompletedInput): boolean {
   return Boolean(
-    input.records?.some(
-      (record) => record.contentKey === input.contentKey && record.completed === true,
-    ),
+    input.records?.some((record) => {
+      return record.contentKey === input.contentKey && record.completed === true;
+    }),
   );
 }

@@ -5,8 +5,11 @@ export function getQuestionAttempt(
   attempts: Attempt[],
 ): Attempt | undefined {
   return attempts
-    .filter((attempt) => String(attempt.questionId) === String(question.id))
-    .sort((left, right) =>
-      String(right.answeredAt || "").localeCompare(String(left.answeredAt || "")),
-    )[0];
+    .filter((attempt) => {
+      return String(attempt.questionId) === String(question.id);
+    })
+    .sort((left, right) => {
+      return String(right.answeredAt || "")
+        .localeCompare(String(left.answeredAt || ""));
+    })[0];
 }

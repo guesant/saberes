@@ -66,9 +66,9 @@ export class ValidateContentSnapshotAdapter implements ValidateContentSnapshotPo
   public async execute(
     input: ContentSnapshotValidationInput,
   ): Promise<ContentSnapshotValidationResult> {
-    const missingTables = ValidateContentSnapshotAdapter.requiredTables.filter(
-      (table) => !input.tables.includes(table),
-    );
+    const missingTables = ValidateContentSnapshotAdapter.requiredTables.filter((table) => {
+      return !input.tables.includes(table);
+    });
 
     const countChecks = [
       {
@@ -161,25 +161,35 @@ export class ValidateContentSnapshotAdapter implements ValidateContentSnapshotPo
     ];
 
     const issues: ContentSnapshotValidationIssue[] = [
-      ...missingTables.map((table) => ({
-        code: "tables.missing",
-        path: `tables.${table}`,
-        message: `Required table is missing: ${table}.`,
-      })),
+      ...missingTables.map((table) => {
+        return {
+          code: "tables.missing",
+          path: `tables.${table}`,
+          message: `Required table is missing: ${table}.`,
+        };
+      }),
       ...countChecks
-        .filter((check) => check.count < 1)
-        .map(({ code, path, message }) => ({
-          code,
-          path,
-          message,
-        })),
+        .filter((check) => {
+          return check.count < 1;
+        })
+        .map(({ code, path, message }) => {
+          return {
+            code,
+            path,
+            message,
+          };
+        }),
       ...relationChecks
-        .filter((check) => check.count > 0)
-        .map(({ code, path, message }) => ({
-          code,
-          path,
-          message,
-        })),
+        .filter((check) => {
+          return check.count > 0;
+        })
+        .map(({ code, path, message }) => {
+          return {
+            code,
+            path,
+            message,
+          };
+        }),
     ];
 
     const summary = {

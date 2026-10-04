@@ -1,4 +1,4 @@
-import { UIButton, UIOpenInNewIcon, UIPaper, UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIContentSurface, UIContentText, UIOpenInNewIcon } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { VideoBlock } from "@guesant/saberes-application";
 
@@ -13,12 +13,12 @@ export function UIVideoPanel(props: UIVideoPanelProps) {
   const { t } = useTranslation();
 
   return (
-    <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <UITypography fontWeight={700}>{block.title || t("content.recommendedVideo")}</UITypography>
+    <UIContentSurface mode="outlined">
+      <UIContentText variant="title">{block.title || t("content.recommendedVideo")}</UIContentText>
 
       <UIButton href={url} target="_blank" rel="noreferrer" endIcon={<UIOpenInNewIcon />}>
         {t("content.openVideo")}
       </UIButton>
-    </UIPaper>
+    </UIContentSurface>
   );
 }

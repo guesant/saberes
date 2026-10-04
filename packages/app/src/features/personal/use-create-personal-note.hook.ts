@@ -16,7 +16,8 @@ export function useCreatePersonalNote(
         title,
         body,
         contentKey,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
       }),
     );
   };

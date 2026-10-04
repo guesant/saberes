@@ -13,10 +13,16 @@ export function getTopicMapWithMastery(
     return null;
   }
 
-  const masteryByKey = new Map((input.mastery || []).map((record) => [record.contentKey, record]));
+  const masteryByKey = new Map(
+    (input.mastery || []).map((record) => {
+      return [record.contentKey, record];
+    }),
+  );
 
   return {
     ...input.data,
-    nodes: input.data.nodes.map((node) => getTopicMapNodeWithMastery({ masteryByKey, node })),
+    nodes: input.data.nodes.map((node) => {
+      return getTopicMapNodeWithMastery({ masteryByKey, node });
+    }),
   };
 }

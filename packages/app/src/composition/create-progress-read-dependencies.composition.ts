@@ -15,23 +15,18 @@ import { resolvePort } from "./resolve-port.composition";
 import type { Container } from "inversify";
 
 export function createProgressReadDependencies(container: Container): void {
-  registerPort(
-    container,
-    applicationDependencyTokens.progressDatabase,
-    () => new ProgressDatabase(),
-  );
+  registerPort(container, applicationDependencyTokens.progressDatabase, () => {
+    return new ProgressDatabase();
+  });
 
-  registerPort(
-    container,
-    applicationDependencyTokens.progressStore,
-    () =>
-      new DexieProgressStore(
-        resolvePort<ProgressDatabaseContract>(
-          container,
-          applicationDependencyTokens.progressDatabase,
-        ),
+  registerPort(container, applicationDependencyTokens.progressStore, () => {
+    return new DexieProgressStore(
+      resolvePort<ProgressDatabaseContract>(
+        container,
+        applicationDependencyTokens.progressDatabase,
       ),
-  );
+    );
+  });
 
   createProgressReadAttemptPortBindings(container);
 

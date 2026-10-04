@@ -12,7 +12,9 @@ export function PerformancePeriodButton(props: PerformancePeriodButtonProps) {
   return (
     <UIButton
       aria-pressed={props.selected}
-      onClick={() => props.onSelect(props.period)}
+      onClick={() => {
+        return props.onSelect(props.period);
+      }}
       size="small"
       variant={props.selected ? "contained" : "outlined"}
     >

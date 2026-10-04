@@ -12,12 +12,18 @@ export function getStudyPlanDerivedState(
   const orderedSteps = getStudyPlanOrderedSteps(input.steps, localState);
 
   const completed = new Set(
-    input.progress.filter((item) => item.completed === true).map((item) => String(item.stepId)),
+    input.progress
+      .filter((item) => {
+        return item.completed === true;
+      })
+      .map((item) => {
+        return String(item.stepId);
+      }),
   );
 
-  const availableSteps = orderedSteps.filter(
-    (step) => !localState.skippedStepIds.includes(String(step.id)),
-  );
+  const availableSteps = orderedSteps.filter((step) => {
+    return !localState.skippedStepIds.includes(String(step.id));
+  });
 
   return {
     localState,

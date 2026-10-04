@@ -12,7 +12,9 @@ export function PerformanceScopeButton(props: PerformanceScopeButtonProps) {
   return (
     <UIButton
       aria-pressed={props.selected}
-      onClick={() => props.onSelect(props.scope)}
+      onClick={() => {
+        return props.onSelect(props.scope);
+      }}
       size="small"
       variant={props.selected ? "contained" : "outlined"}
     >

@@ -59,116 +59,144 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
 
     const { processName } = normalizedFilters;
 
-    const hasYearMatch = (value: unknown) =>
-      !normalizedFilters.year || Number(value || 0) === normalizedFilters.year;
+    const hasYearMatch = (value: unknown) => {
+      return !normalizedFilters.year || Number(value || 0) === normalizedFilters.year;
+    };
 
-    const hasProcessMatch = (value: unknown) =>
-      !processName ||
-      String(value || "")
-        .toLocaleLowerCase()
-        .includes(processName);
+    const hasProcessMatch = (value: unknown) => {
+      return (
+        !processName ||
+        String(value || "")
+          .toLocaleLowerCase()
+          .includes(processName)
+      );
+    };
 
-    const hasCourseTypeMatch = (value: unknown) =>
-      !normalizedFilters.courseType || String(value || "") === normalizedFilters.courseType;
+    const hasCourseTypeMatch = (value: unknown) => {
+      return !normalizedFilters.courseType || String(value || "") === normalizedFilters.courseType;
+    };
 
-    const hasCatalogMatch = (value: unknown) =>
-      !search ||
-      String(value || "")
-        .toLocaleLowerCase()
-        .includes(search);
+    const hasCatalogMatch = (value: unknown) => {
+      return (
+        !search ||
+        String(value || "")
+          .toLocaleLowerCase()
+          .includes(search)
+      );
+    };
 
     return {
       courses: courses
-        .filter(
-          (item) =>
+        .filter((item) => {
+          return (
             hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
-            hasCourseTypeMatch(item.course_type),
-        )
-        .map((item) => ({
-          ...item,
-          id: item.id as number,
-          title: String(item.title),
-          type: CatalogCardType.Course,
-          slug: String(item.slug),
-          description: String(item.description || ""),
-          moduleCount: Number(item.module_count || 0),
-          totalMinutes: Number(item.total_minutes || 0),
-          courseType: String(item.course_type || ""),
-        })),
-      maps: maps
-        .filter(
-          (item) =>
-            hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
-            hasProcessMatch(item.process_name) &&
-            hasYearMatch(item.year),
-        )
-        .map((item) => ({
-          ...item,
-          id: item.id as number,
-          title: String(item.title),
-          type: CatalogCardType.Map,
-          slug: String(item.slug),
-          description: String(item.description || ""),
-          topicCount: Number(item.topic_count || 0),
-          processName: String(item.process_name || ""),
-          year: Number(item.year || 0),
-        })),
-      plans: plans
-        .filter(
-          (item) =>
-            hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
-            hasProcessMatch(item.process_name) &&
-            hasYearMatch(item.year),
-        )
-        .map((item) => ({
-          ...item,
-          id: item.id as number,
-          title: String(item.title),
-          type: CatalogCardType.Plan,
-          slug: String(item.slug),
-          description: String(item.description || ""),
-          stepCount: Number(item.step_count || 0),
-          processName: String(item.process_name || ""),
-          year: Number(item.year || 0),
-        })),
-      content: [
-        ...lessons
-          .filter((item) => hasCatalogMatch(`${item.title} ${item.description || ""}`))
-          .map((item) => ({
+            hasCourseTypeMatch(item.course_type)
+          );
+        })
+        .map((item) => {
+          return {
             ...item,
             id: item.id as number,
             title: String(item.title),
-            type: CatalogCardType.Lesson,
+            type: CatalogCardType.Course,
             slug: String(item.slug),
             description: String(item.description || ""),
-          })),
-        ...resources
-          .filter((item) => hasCatalogMatch(`${item.title} ${item.description || ""}`))
-          .map((item) => ({
+            moduleCount: Number(item.module_count || 0),
+            totalMinutes: Number(item.total_minutes || 0),
+            courseType: String(item.course_type || ""),
+          };
+        }),
+      maps: maps
+        .filter((item) => {
+          return (
+            hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
+            hasProcessMatch(item.process_name) &&
+            hasYearMatch(item.year)
+          );
+        })
+        .map((item) => {
+          return {
             ...item,
             id: item.id as number,
             title: String(item.title),
-            type: CatalogCardType.Resource,
+            type: CatalogCardType.Map,
+            slug: String(item.slug),
             description: String(item.description || ""),
-            href: String(item.url || ""),
-            meta: String(item.provider || ""),
-          })),
-        ...questions
-          .map((item) => ({
-            ...item,
-            id: item.id as number,
-            title: `${item.process_name} ${item.year} · questão ${item.number}`,
-            type: CatalogCardType.Question,
-            description: "Questão de prova",
+            topicCount: Number(item.topic_count || 0),
             processName: String(item.process_name || ""),
             year: Number(item.year || 0),
-          }))
-          .filter(
-            (item) =>
+          };
+        }),
+      plans: plans
+        .filter((item) => {
+          return (
+            hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
+            hasProcessMatch(item.process_name) &&
+            hasYearMatch(item.year)
+          );
+        })
+        .map((item) => {
+          return {
+            ...item,
+            id: item.id as number,
+            title: String(item.title),
+            type: CatalogCardType.Plan,
+            slug: String(item.slug),
+            description: String(item.description || ""),
+            stepCount: Number(item.step_count || 0),
+            processName: String(item.process_name || ""),
+            year: Number(item.year || 0),
+          };
+        }),
+      content: [
+        ...lessons
+          .filter((item) => {
+            return hasCatalogMatch(`${item.title} ${item.description || ""}`);
+          })
+          .map((item) => {
+            return {
+              ...item,
+              id: item.id as number,
+              title: String(item.title),
+              type: CatalogCardType.Lesson,
+              slug: String(item.slug),
+              description: String(item.description || ""),
+            };
+          }),
+        ...resources
+          .filter((item) => {
+            return hasCatalogMatch(`${item.title} ${item.description || ""}`);
+          })
+          .map((item) => {
+            return {
+              ...item,
+              id: item.id as number,
+              title: String(item.title),
+              type: CatalogCardType.Resource,
+              description: String(item.description || ""),
+              href: String(item.url || ""),
+              meta: String(item.provider || ""),
+            };
+          }),
+        ...questions
+          .map((item) => {
+            return {
+              ...item,
+              id: item.id as number,
+              title: `${item.process_name} ${item.year} · questão ${item.number}`,
+              type: CatalogCardType.Question,
+              description: "Questão de prova",
+              processName: String(item.process_name || ""),
+              year: Number(item.year || 0),
+            };
+          })
+          .filter((item) => {
+            return (
               hasCatalogMatch(item.title) &&
               hasProcessMatch(item.processName) &&
-              hasYearMatch(item.year),
-          ),
+              hasYearMatch(item.year)
+            );
+          }),
       ],
     };
   }
@@ -370,8 +398,8 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
       plan,
       steps: plan
         ? db.query("SELECT * FROM study_plan_steps WHERE study_plan_id = ? ORDER BY position", [
-            plan.id,
-          ])
+          plan.id,
+        ])
         : [],
     };
   }

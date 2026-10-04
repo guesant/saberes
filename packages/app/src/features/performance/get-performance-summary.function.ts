@@ -10,11 +10,11 @@ import type { PerformanceSummary } from "./performance-summary.interface";
 export function getPerformanceSummary(input: GetPerformanceSummaryInput): PerformanceSummary {
   const filteredData = input.filter
     ? getPerformanceFilteredData({
-        attempts: input.attempts,
-        filter: input.filter,
-        now: input.now,
-        sessions: input.sessions,
-      })
+      attempts: input.attempts,
+      filter: input.filter,
+      now: input.now,
+      sessions: input.sessions,
+    })
     : { attempts: input.attempts, sessions: input.sessions };
 
   const attempts = getPerformanceAttemptMetrics({
@@ -31,7 +31,7 @@ export function getPerformanceSummary(input: GetPerformanceSummaryInput): Perfor
       ? Math.round((attempts.correctAttempts.length / attempts.correctedAttempts.length) * 100)
       : 0,
     recentAnswered: attempts.recentAttempts.length,
-    recentCorrect: attempts.recentAttempts.filter((attempt) => attempt.isCorrect === true).length,
+    recentCorrect: attempts.recentAttempts.filter((attempt) => { return attempt.isCorrect === true; }).length,
     averageTimeSeconds: attempts.elapsedAttempts.length
       ? Math.round(attempts.elapsedMs / attempts.elapsedAttempts.length / 1000)
       : 0,

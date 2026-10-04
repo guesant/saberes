@@ -19,17 +19,23 @@ export type MyStudyActivityQueries = {
 export function useMyStudyActivityQueries(services: ApplicationServices): MyStudyActivityQueries {
   const attemptsQuery = useQuery({
     queryKey: ["progress", "attempts"],
-    queryFn: () => services.progress.listAttempts.execute(),
+    queryFn: () => {
+      return services.progress.listAttempts.execute();
+    },
   });
 
   const reviewsQuery = useQuery({
     queryKey: ["progress", "reviews"],
-    queryFn: () => services.progress.listReviewTargets.execute(),
+    queryFn: () => {
+      return services.progress.listReviewTargets.execute();
+    },
   });
 
   const sessionsQuery = useQuery({
     queryKey: ["progress", "sessions"],
-    queryFn: () => services.progress.listStudySessions.execute(),
+    queryFn: () => {
+      return services.progress.listStudySessions.execute();
+    },
   });
 
   return {

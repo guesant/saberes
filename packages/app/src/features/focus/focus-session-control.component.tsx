@@ -38,7 +38,9 @@ export function FocusSessionControl(props: FocusSessionControlProps) {
           <UITextField
             disabled={props.active || props.paused}
             label={t("focus.contentKey")}
-            onChange={(event) => setContentKey(event.target.value)}
+            onChange={(event) => {
+              return setContentKey(event.target.value);
+            }}
             value={contentKey}
           />
           <FocusPauseAction active={props.active} onPause={props.onPause} />

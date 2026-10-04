@@ -18,6 +18,8 @@ export function getMyStudyProgressError(input: GetMyStudyProgressErrorInput): Er
       input.achievementsError,
       input.topicMasteryError,
       input.bookmarksError,
-    ].find((error): error is Error => Boolean(error)) || null
+    ].find((error): error is Error => {
+      return Boolean(error);
+    }) || null
   );
 }

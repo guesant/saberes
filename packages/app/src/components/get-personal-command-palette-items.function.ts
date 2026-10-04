@@ -11,7 +11,7 @@ export function getPersonalCommandPaletteItems(
 
   const prefixes = ["note", "reference", "capture", "checklist"];
 
-  return collections.flatMap((items, index) =>
-    mapPersonalCommandPaletteItems(items, prefixes[index]),
-  );
+  return collections.flatMap((items, index) => {
+    return mapPersonalCommandPaletteItems(items, prefixes[index]);
+  });
 }

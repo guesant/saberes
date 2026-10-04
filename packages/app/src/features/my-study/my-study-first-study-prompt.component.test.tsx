@@ -27,17 +27,20 @@ describe("MyStudyFirstStudyPrompt", () => {
   it("exibe o ciclo local e as ações de retomada", () => {
     render(<MyStudyFirstStudyPrompt course={course} release={release} />);
 
-    expect(screen.getByText("Primeiro estudo local")).toBeTruthy();
+    expect(screen.getByText("Primeiro estudo local"))
+      .toBeTruthy();
 
-    expect(screen.getByRole("link", { name: "Continuar primeiro estudo" })).toHaveAttribute(
-      "href",
-      "/cursos/curso-sintetico-primeiro-estudo",
-    );
+    expect(screen.getByRole("link", { name: "Continuar primeiro estudo" }))
+      .toHaveAttribute(
+        "href",
+        "/cursos/curso-sintetico-primeiro-estudo",
+      );
 
-    expect(screen.getByRole("link", { name: "Restaurar dados locais" })).toHaveAttribute(
-      "href",
-      "/meu-estudo#dados-locais",
-    );
+    expect(screen.getByRole("link", { name: "Restaurar dados locais" }))
+      .toHaveAttribute(
+        "href",
+        "/meu-estudo#dados-locais",
+      );
   });
 
   it("não aparece para releases editoriais", () => {
@@ -48,6 +51,7 @@ describe("MyStudyFirstStudyPrompt", () => {
       />,
     );
 
-    expect(screen.queryByText("Primeiro estudo local")).toBeNull();
+    expect(screen.queryByText("Primeiro estudo local"))
+      .toBeNull();
   });
 });

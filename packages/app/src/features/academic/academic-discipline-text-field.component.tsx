@@ -15,7 +15,9 @@ export function AcademicDisciplineTextField(props: AcademicDisciplineTextFieldPr
       fullWidth
       inputProps={{ min: props.inputMin, step: props.inputStep }}
       label={props.label}
-      onChange={(event) => props.onChange(event.target.value)}
+      onChange={(event) => {
+        return props.onChange(event.target.value);
+      }}
       type={props.type}
       value={props.value}
     />

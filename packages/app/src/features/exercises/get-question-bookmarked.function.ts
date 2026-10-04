@@ -4,5 +4,9 @@ export function getQuestionBookmarked(
   bookmarks: StudyRecord[] | undefined,
   contentKey: string,
 ): boolean {
-  return Boolean(bookmarks?.some((bookmark) => bookmark.contentKey === contentKey));
+  return Boolean(
+    bookmarks?.some((bookmark) => {
+      return bookmark.contentKey === contentKey;
+    }),
+  );
 }

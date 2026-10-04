@@ -21,13 +21,17 @@ export function PersonalNoteEditor(props: PersonalNoteEditorProps) {
     <UIContentGroup variant="tight">
       <UITextField
         label="Título"
-        onChange={(event) => props.onTitleChange(event.target.value)}
+        onChange={(event) => {
+          return props.onTitleChange(event.target.value);
+        }}
         value={props.title}
       />
       <UITextField
         label="Texto"
         multiline
-        onChange={(event) => props.onBodyChange(event.target.value)}
+        onChange={(event) => {
+          return props.onBodyChange(event.target.value);
+        }}
         value={props.body}
       />
       <PersonalContentKeyField onChange={props.onContentKeyChange} value={props.contentKey} />

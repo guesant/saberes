@@ -15,32 +15,16 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function createProgressReadReviewPortBindings(container: Container): void {
-  const getProgressStore = (): ProgressStorageContract =>
-    resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
+  const getProgressStore = (): ProgressStorageContract => { return resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore); };
 
   const bindings: PortFactoryBinding[] = [
-    [
-      applicationDependencyTokens.listReviewTargets,
-      () => new ListReviewTargetsAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.listDiagnoses, () => new ListDiagnosesAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.listDailyChallenges,
-      () => new ListDailyChallengesAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.getStreak, () => new GetStreakAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.exportProgress,
-      () => new ExportProgressAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.listAchievements,
-      () => new ListAchievementsAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.listTopicMastery,
-      () => new ListTopicMasteryAdapter(getProgressStore()),
-    ],
+    [applicationDependencyTokens.listReviewTargets, () => { return new ListReviewTargetsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listDiagnoses, () => { return new ListDiagnosesAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listDailyChallenges, () => { return new ListDailyChallengesAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.getStreak, () => { return new GetStreakAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.exportProgress, () => { return new ExportProgressAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listAchievements, () => { return new ListAchievementsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.listTopicMastery, () => { return new ListTopicMasteryAdapter(getProgressStore()); }],
   ];
 
   registerPortFactories(container, bindings);

@@ -11,6 +11,8 @@ export function useLessonContentQuery(input: UseLessonContentQueryInput) {
   return useQuery<LessonReadModel | null>({
     queryKey: ["lesson", input.key],
     enabled: Boolean(input.key),
-    queryFn: () => loadLesson({ services: input.services, key: input.key }),
+    queryFn: () => {
+      return loadLesson({ services: input.services, key: input.key });
+    },
   });
 }

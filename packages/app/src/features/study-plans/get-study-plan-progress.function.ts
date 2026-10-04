@@ -8,7 +8,9 @@ export interface GetStudyPlanProgressInput {
 export function getStudyPlanProgress(input: GetStudyPlanProgressInput): StudyPlanProgress {
   const totalSteps = input.steps.length;
 
-  const completedSteps = input.steps.filter((step) => input.completed.has(String(step.id))).length;
+  const completedSteps = input.steps.filter((step) => {
+    return input.completed.has(String(step.id));
+  }).length;
 
   return {
     completedSteps,

@@ -11,13 +11,14 @@ export function registerProgressReadAcademicPorts(container: Container): void {
   registerPortFactories(container, [
     [
       applicationDependencyTokens.listAcademicDisciplines,
-      () =>
-        new ListAcademicDisciplinesAdapter(
+      () => {
+        return new ListAcademicDisciplinesAdapter(
           resolvePort<ProgressStorageContract>(
             container,
             applicationDependencyTokens.progressStore,
           ),
-        ),
+        );
+      },
     ],
   ]);
 }

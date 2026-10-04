@@ -12,13 +12,13 @@ export interface GetCourseProgressInput {
 export function getCourseProgress(input: GetCourseProgressInput): CourseProgress {
   const trackableItems = getCourseTrackableItems(input.items);
 
-  const completedItems = trackableItems.filter((item) =>
-    getCourseItemCompleted({
+  const completedItems = trackableItems.filter((item) => {
+    return getCourseItemCompleted({
       attempts: input.attempts,
       item,
       lessonProgress: input.lessonProgress,
-    }),
-  ).length;
+    });
+  }).length;
 
   const totalItems = trackableItems.length;
 

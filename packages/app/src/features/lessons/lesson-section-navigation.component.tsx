@@ -10,15 +10,17 @@ export type LessonSectionNavigationProps = {
 export function LessonSectionNavigation(props: LessonSectionNavigationProps) {
   return (
     <UIList dense>
-      {props.sections.map((section, index) => (
-        <LessonSectionLink
-          key={String(section.id)}
-          section={section}
-          index={index}
-          selected={props.selectedIndex === index}
-          onSelect={props.onSectionSelect}
-        />
-      ))}
+      {props.sections.map((section, index) => {
+        return (
+          <LessonSectionLink
+            key={String(section.id)}
+            section={section}
+            index={index}
+            selected={props.selectedIndex === index}
+            onSelect={props.onSectionSelect}
+          />
+        );
+      })}
     </UIList>
   );
 }

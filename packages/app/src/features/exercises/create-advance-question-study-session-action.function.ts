@@ -13,13 +13,15 @@ export interface AdvanceQuestionStudySessionInput {
 export function createAdvanceQuestionStudySessionAction(
   saveSession: SaveQuestionStudySessionAction,
 ): AsyncAction<[AdvanceQuestionStudySessionInput], void> {
-  return (input: AdvanceQuestionStudySessionInput): Promise<void> =>
-    saveSession(
+  return (input: AdvanceQuestionStudySessionInput): Promise<void> => {
+    return saveSession(
       updateQuestionStudySession({
-        completedAt: new Date().toISOString(),
+        completedAt: new Date()
+          .toISOString(),
         correct: input.result.correct,
         questionKey: input.questionKey,
         session: input.session,
       }),
     );
+  };
 }

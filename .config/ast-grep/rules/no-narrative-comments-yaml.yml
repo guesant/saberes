@@ -8,4 +8,4 @@ rule:
   all:
     - kind: comment
     - not:
-        regex: '^#\s*(?:renovate:|yamllint:|cspell:|actionlint:)'
+        regex: '^#\s*(?:renovate:|yamllint(?:[:\s]|$)|cspell:|actionlint:)'

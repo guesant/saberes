@@ -10,7 +10,9 @@ export type MyStudyMasteryQueries = {
 export function useMyStudyMasteryQueries(services: ApplicationServices): MyStudyMasteryQueries {
   const topicMasteryQuery = useQuery({
     queryKey: ["progress", "topic-mastery"],
-    queryFn: () => services.progress.listTopicMastery.execute(),
+    queryFn: () => {
+      return services.progress.listTopicMastery.execute();
+    },
   });
 
   return {

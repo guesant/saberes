@@ -1,4 +1,4 @@
-import { UIBox, UIChip, UIStack } from "@guesant/saberes-ui";
+import { UIBox, UIChip, UIContentGroup } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
@@ -29,8 +29,8 @@ export function UIContentRenderer(props: UIContentRendererProps) {
   const hasHiddenRichContent = visibleBlocks.length !== blocks.length;
 
   return (
-    <UIStack className="content-renderer" spacing={1}>
-      <UIBox className="content-renderer__markdown">
+    <UIContentGroup variant="tight">
+      <UIBox>
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex, rehypeSanitize]}
@@ -44,16 +44,18 @@ export function UIContentRenderer(props: UIContentRendererProps) {
         <UIChip label={t("content.richContentDisabled")} size="small" />
       ) : null}
 
-      {visibleBlocks.map((block) => (
-        <UIBlockView
-          key={`${block.type}-${JSON.stringify(block)}`}
-          block={block}
-          knowledgeGraph={knowledgeGraph}
-          onQuestion={onQuestion}
-        />
-      ))}
+      {visibleBlocks.map((block) => {
+        return (
+          <UIBlockView
+            key={`${block.type}-${JSON.stringify(block)}`}
+            block={block}
+            knowledgeGraph={knowledgeGraph}
+            onQuestion={onQuestion}
+          />
+        );
+      })}
 
       <UIChip size="small" label={t("content.reviewed")} variant="outlined" />
-    </UIStack>
+    </UIContentGroup>
   );
 }

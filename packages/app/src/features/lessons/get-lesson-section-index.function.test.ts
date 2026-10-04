@@ -8,7 +8,8 @@ describe("getLessonSectionIndex", () => {
         contentKey: "lesson:functions",
         records: [{ contentKey: "lesson:functions", sectionIndex: 2 }],
       }),
-    ).toBe(2);
+    )
+      .toBe(2);
   });
 
   it("ignores missing or invalid section indexes", () => {
@@ -17,6 +18,7 @@ describe("getLessonSectionIndex", () => {
         contentKey: "lesson:functions",
         records: [{ contentKey: "lesson:functions", sectionIndex: -1 }],
       }),
-    ).toBeUndefined();
+    )
+      .toBeUndefined();
   });
 });

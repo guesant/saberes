@@ -25,12 +25,18 @@ export function GoalFormFields(props: GoalFormFieldsProps) {
         titleLabel={props.titleLabel}
       />
       <GoalFormMetrics labels={props.metricLabels} form={props.form} />
-      <props.form.Subscribe selector={(state) => [state.canSubmit, state.isSubmitting]}>
-        {([canSubmit, isSubmitting]) => (
-          <UIButton disabled={!canSubmit || isSubmitting} type="submit" variant="contained">
-            {isSubmitting ? "..." : props.createLabel}
-          </UIButton>
-        )}
+      <props.form.Subscribe
+        selector={(state) => {
+          return [state.canSubmit, state.isSubmitting];
+        }}
+      >
+        {([canSubmit, isSubmitting]) => {
+          return (
+            <UIButton disabled={!canSubmit || isSubmitting} type="submit" variant="contained">
+              {isSubmitting ? "..." : props.createLabel}
+            </UIButton>
+          );
+        }}
       </props.form.Subscribe>
     </>
   );

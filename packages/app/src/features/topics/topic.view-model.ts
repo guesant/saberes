@@ -18,7 +18,9 @@ export function useTopicViewModel(slug: string): TopicViewModel {
   const query = useQuery({
     queryKey: ["topic", slug],
     enabled: Boolean(slug),
-    queryFn: () => services.topics.get.execute(slug),
+    queryFn: () => {
+      return services.topics.get.execute(slug);
+    },
   });
 
   return {

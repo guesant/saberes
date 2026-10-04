@@ -15,15 +15,17 @@ const targets = [
     name: "mise",
     pattern:
       /(?<prefix>ARG MISE_VERSION=)(?<version>[^\s]+)(?<amd64Prefix>[\s\S]*?ARG MISE_SHA256_AMD64=)(?<amd64>[a-f0-9]+)(?<arm64Prefix>[\s\S]*?ARG MISE_SHA256_ARM64=)(?<arm64>[a-f0-9]+)/,
-    url: (version: string, architecture: string): string =>
-      `https://github.com/jdx/mise/releases/download/v${version}/mise-v${version}-linux-${architecture}`,
+    url: (version: string, architecture: string): string => {
+      return `https://github.com/jdx/mise/releases/download/v${version}/mise-v${version}-linux-${architecture}`;
+    },
   },
   {
     name: "aqua",
     pattern:
       /(?<prefix>ARG AQUA_VERSION=)(?<version>[^\s]+)(?<amd64Prefix>[\s\S]*?ARG AQUA_SHA256_AMD64=)(?<amd64>[a-f0-9]+)(?<arm64Prefix>[\s\S]*?ARG AQUA_SHA256_ARM64=)(?<arm64>[a-f0-9]+)/,
-    url: (version: string, architecture: string): string =>
-      `https://github.com/aquaproj/aqua/releases/download/v${version}/aqua_linux_${architecture}.tar.gz`,
+    url: (version: string, architecture: string): string => {
+      return `https://github.com/aquaproj/aqua/releases/download/v${version}/aqua_linux_${architecture}.tar.gz`;
+    },
   },
 ];
 
@@ -42,17 +44,35 @@ for (const target of targets) {
     const assetArchitecture =
       target.name === "mise" && architecture === "amd64" ? "x64" : architecture;
 
-    const response = await fetch(target.url(version, assetArchitecture));
+    let response: Response | undefined;
 
-    if (!response.ok) {
-      throw new Error(`Download falhou: ${response.status} ${target.name} ${architecture}`);
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      try {
+        response = await fetch(target.url(version, assetArchitecture), {
+          signal: AbortSignal.timeout(30_000),
+        });
+      } catch {
+        if (attempt === 2) {
+          throw new Error(`Download falhou após 3 tentativas: ${target.name} ${architecture}`);
+        }
+      }
+
+      if (response?.ok) {
+        break;
+      }
+    }
+
+    if (!response?.ok) {
+      throw new Error(`Download falhou: ${response?.status ?? "sem resposta"} ${target.name} ${architecture}`);
     }
 
     const digest = await crypto.subtle.digest("SHA-256", await response.arrayBuffer());
 
-    const checksum = Array.from(new Uint8Array(digest), (byte) =>
-      byte.toString(16).padStart(2, "0"),
-    ).join("");
+    const checksum = Array.from(new Uint8Array(digest), (byte) => {
+      return byte.toString(16)
+        .padStart(2, "0");
+    })
+      .join("");
 
     checksums.set(architecture, checksum);
   }

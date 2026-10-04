@@ -1,5 +1,6 @@
 export function parseQuestionAnswerNumber(value: string): number | null {
-  const normalized = value.trim().replace(",", ".");
+  const normalized = value.trim()
+    .replace(",", ".");
 
   const number = Number(normalized);
 

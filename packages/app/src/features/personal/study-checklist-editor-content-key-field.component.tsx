@@ -12,12 +12,16 @@ export function StudyChecklistEditorContentKeyField(
 
   return (
     <form.Field name="content.contentKey">
-      {(field) => (
-        <PersonalContentKeyField
-          onChange={(value) => field.handleChange(value)}
-          value={field.state.value}
-        />
-      )}
+      {(field) => {
+        return (
+          <PersonalContentKeyField
+            onChange={(value) => {
+              return field.handleChange(value);
+            }}
+            value={field.state.value}
+          />
+        );
+      }}
     </form.Field>
   );
 }

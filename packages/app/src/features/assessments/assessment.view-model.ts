@@ -23,12 +23,16 @@ export function useAssessmentViewModel(key?: string): AssessmentViewModel {
   const query = useQuery({
     queryKey: ["assessment", key || ""],
     enabled: Boolean(key),
-    queryFn: () => services.assessments.get.execute(key || ""),
+    queryFn: () => {
+      return services.assessments.get.execute(key || "");
+    },
   });
 
   const attemptsQuery = useQuery({
     queryKey: ["progress", "attempts"],
-    queryFn: () => services.progress.listAttempts.execute(),
+    queryFn: () => {
+      return services.progress.listAttempts.execute();
+    },
   });
 
   const progress = useMemo(() => {

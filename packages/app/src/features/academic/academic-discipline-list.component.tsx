@@ -16,14 +16,16 @@ export function AcademicDisciplineList(props: AcademicDisciplineListProps) {
 
   return (
     <UIContentGroup variant="list">
-      {props.disciplines.map((discipline, index) => (
-        <AcademicDisciplineItem
-          discipline={discipline}
-          key={discipline.id}
-          metrics={props.metrics[index]}
-          onRemove={props.onRemove}
-        />
-      ))}
+      {props.disciplines.map((discipline, index) => {
+        return (
+          <AcademicDisciplineItem
+            discipline={discipline}
+            key={discipline.id}
+            metrics={props.metrics[index]}
+            onRemove={props.onRemove}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

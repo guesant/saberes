@@ -9,9 +9,9 @@ export interface UICommandPaletteItemListProps {
 export function UICommandPaletteItemList(props: UICommandPaletteItemListProps) {
   return (
     <>
-      {props.items.map((item) => (
-        <UICommandPaletteItem item={item} key={item.id} onSelect={props.onSelect} />
-      ))}
+      {props.items.map((item) => {
+        return <UICommandPaletteItem item={item} key={item.id} onSelect={props.onSelect} />;
+      })}
     </>
   );
 }

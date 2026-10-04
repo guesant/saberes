@@ -7,10 +7,22 @@ export function CatalogSavedFilterItem(props: CatalogSavedFilterItemProps) {
 
   return (
     <UIInlineActions wrap>
-      <UIButton onClick={() => props.onSelect(props.filter)} size="small" variant="outlined">
+      <UIButton
+        onClick={() => {
+          return props.onSelect(props.filter);
+        }}
+        size="small"
+        variant="outlined"
+      >
         {props.filter.name}
       </UIButton>
-      <UIButton onClick={() => props.onDelete(props.filter.id)} size="small" variant="text">
+      <UIButton
+        onClick={() => {
+          return props.onDelete(props.filter.id);
+        }}
+        size="small"
+        variant="text"
+      >
         {t("catalog.deleteSavedFilter")}
       </UIButton>
     </UIInlineActions>

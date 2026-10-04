@@ -8,13 +8,14 @@ export function calculateAcademicMetrics(input: CalculateAcademicMetricsInput): 
     ? Math.round((discipline.attendedClasses / discipline.totalClasses) * 10000) / 100
     : 100;
 
-  const weightedTotal = discipline.grades.reduce((total, grade) => total + grade.weight, 0);
+  const weightedTotal = discipline.grades.reduce((total, grade) => {
+    return total + grade.weight;
+  }, 0);
 
   const currentAverage = weightedTotal
-    ? (discipline.grades.reduce(
-        (total, grade) => total + (grade.value / grade.maximum) * grade.weight,
-        0,
-      ) /
+    ? (discipline.grades.reduce((total, grade) => {
+      return total + (grade.value / grade.maximum) * grade.weight;
+    }, 0) /
         weightedTotal) *
       10
     : 0;

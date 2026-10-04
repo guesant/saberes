@@ -11,13 +11,17 @@ export function PerformanceFilters(props: PerformanceFiltersProps) {
     <UIContentGroup variant="tight">
       <UITypography variant="h5">{t("performance.filtersTitle")}</UITypography>
       <PerformancePeriodFilters
-        label={(period) => t(`performance.periods.${period}`)}
+        label={(period) => {
+          return t(`performance.periods.${period}`);
+        }}
         onSelect={props.onChangePeriod}
         selected={props.filter.period}
       />
       <PerformanceScopeFilters
         courseLabel={props.courseLabel}
-        label={() => t("performance.scopes.all")}
+        label={() => {
+          return t("performance.scopes.all");
+        }}
         onSelect={props.onChangeScope}
         planLabel={props.planLabel}
         selected={props.filter.scope}

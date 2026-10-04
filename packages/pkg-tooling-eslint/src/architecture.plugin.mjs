@@ -122,15 +122,19 @@ export function getPackagePathFromSpecifier(source) {
 }
 
 export function getAdapterPackageFromFilename(filename) {
-  return normalizeFilename(filename).match(/\/packages\/(pkg-adapter-[^/]+)\//)?.[1];
+  return normalizeFilename(filename)
+    .match(/\/packages\/(pkg-adapter-[^/]+)\//)?.[1];
 }
 
 export function getAdapterPackageFromSource(filename, source) {
   const packagePath = getPackagePathFromSpecifier(source);
 
   if (packagePath) {
-    return packagePath.split("/").at(1)?.startsWith("pkg-adapter-")
-      ? packagePath.split("/").at(1)
+    return packagePath.split("/")
+      .at(1)
+      ?.startsWith("pkg-adapter-")
+      ? packagePath.split("/")
+        .at(1)
       : undefined;
   }
 
@@ -158,13 +162,15 @@ export function getRelativeTargetFilename(filename, source) {
     return undefined;
   }
 
-  return resolve(dirname(filename), source).replaceAll("\\", "/");
+  return resolve(dirname(filename), source)
+    .replaceAll("\\", "/");
 }
 
 export function getTargetLayer(filename, source) {
   for (const [specifier, packagePath] of workspacePackagePaths) {
     if (source === specifier || source.startsWith(`${specifier}/`)) {
-      const internalPath = source.slice(specifier.length).replace(/^\//, "");
+      const internalPath = source.slice(specifier.length)
+        .replace(/^\//, "");
 
       const targetPath = internalPath
         ? resolve(process.cwd(), packagePath, "src", internalPath)
@@ -256,7 +262,9 @@ export function containsJsx(node, sourceCode) {
     const value = node[key];
 
     return Array.isArray(value)
-      ? value.some((child) => containsJsx(child, sourceCode))
+      ? value.some((child) => {
+        return containsJsx(child, sourceCode);
+      })
       : containsJsx(value, sourceCode);
   });
 }
@@ -285,7 +293,9 @@ export function containsControlFlow(node, sourceCode) {
     const value = node[key];
 
     return Array.isArray(value)
-      ? value.some((child) => containsControlFlow(child, sourceCode))
+      ? value.some((child) => {
+        return containsControlFlow(child, sourceCode);
+      })
       : containsControlFlow(value, sourceCode);
   });
 }
@@ -315,9 +325,9 @@ export function getCallbackExpression(callback) {
   }
 
   if (callback.body?.type === "BlockStatement") {
-    const statements = callback.body.body.filter(
-      (statement) => statement.type !== "EmptyStatement",
-    );
+    const statements = callback.body.body.filter((statement) => {
+      return statement.type !== "EmptyStatement";
+    });
 
     if (statements.length !== 1 || statements[0].type !== "ReturnStatement") {
       return undefined;
@@ -484,7 +494,8 @@ export function isExportedFunction(node, program) {
 
   const name = getFunctionDeclarationName(node);
 
-  return Boolean(name && getExportedBindings(program).has(name));
+  return Boolean(name && getExportedBindings(program)
+    .has(name));
 }
 
 export function shouldIgnoreFunctionPolicy(filename) {
@@ -593,9 +604,9 @@ export function startsWithPurposeVerb(name) {
     "write",
   ];
 
-  return verbs.some(
-    (verb) => name === verb || (name.startsWith(verb) && /^[A-Z]/.test(name.slice(verb.length))),
-  );
+  return verbs.some((verb) => {
+    return name === verb || (name.startsWith(verb) && /^[A-Z]/.test(name.slice(verb.length)));
+  });
 }
 
 export function getClassSuffix(filename) {
@@ -693,10 +704,12 @@ const fileKindAliases = new Map([
 export function getFileDescriptor(filename) {
   const normalized = normalizeFilename(filename);
 
-  const basename = normalized.split("/").at(-1) || "";
+  const basename = normalized.split("/")
+    .at(-1) || "";
 
   if (/^index\.(?:js|jsx|mjs|ts|tsx)$/.test(basename)) {
-    return { basename, extension: basename.split(".").at(-1), kind: "index", stem: "index" };
+    return { basename, extension: basename.split(".")
+      .at(-1), kind: "index", stem: "index" };
   }
 
   if (/\.d\.ts$/.test(basename)) {
@@ -711,7 +724,8 @@ export function getFileDescriptor(filename) {
   const match = basename.match(/^(.*)\.([a-z0-9-]+)\.(js|jsx|mjs|ts|tsx)$/);
 
   if (!match) {
-    return { basename, extension: basename.split(".").at(-1), kind: undefined, stem: basename };
+    return { basename, extension: basename.split(".")
+      .at(-1), kind: undefined, stem: basename };
   }
 
   const [, stem, rawKind, extension] = match;
@@ -726,13 +740,15 @@ export function isSmallKebabCase(value) {
 }
 
 export function getFileStemParts(descriptor) {
-  return descriptor.stem.split(".").filter(Boolean);
+  return descriptor.stem.split(".")
+    .filter(Boolean);
 }
 
 export function getFileStemName(descriptor) {
   const parts = getFileStemParts(descriptor);
 
-  return parts.at(-1) === "index" ? parts.slice(0, -1).join("-") : parts.join("-");
+  return parts.at(-1) === "index" ? parts.slice(0, -1)
+    .join("-") : parts.join("-");
 }
 
 export function getFileNamePascalCase(descriptor) {
@@ -761,7 +777,7 @@ export function isFileLocationAllowed(filename, kind) {
   }
 
   if (kind === "config") {
-    return /(?:^|\/)\.config\/|\/packages\/app\/src\//.test(normalized);
+    return /(?:^|\/)\.config\/|\/packages\/(?:app|pkg-ui)\/src\//.test(normalized);
   }
 
   if (kind === "operator") {
@@ -1055,7 +1071,8 @@ const fileNameContract = {
           return;
         }
 
-        const validSegments = getFileStemParts(descriptor).every(isSmallKebabCase);
+        const validSegments = getFileStemParts(descriptor)
+          .every(isSmallKebabCase);
 
         if (!validSegments || descriptor.basename !== descriptor.basename.toLowerCase()) {
           context.report({ node, messageId: "invalidName" });
@@ -1155,9 +1172,9 @@ const fileKindContract = {
 
       const declarations = getTopLevelDeclarations(program);
 
-      const matching = declarations.filter((declaration) =>
-        expectedTypes.includes(declaration.type),
-      );
+      const matching = declarations.filter((declaration) => {
+        return expectedTypes.includes(declaration.type);
+      });
 
       if ((!allowSupporting && declarations.length !== 1) || matching.length !== 1) {
         reportContract(program);
@@ -1187,7 +1204,8 @@ const fileKindContract = {
     }
 
     function validateFunctionFile(program) {
-      const declarations = getTopLevelDeclarations(program).filter(isFunctionDeclaration);
+      const declarations = getTopLevelDeclarations(program)
+        .filter(isFunctionDeclaration);
 
       const expectedNames = getFileContractExpectedNames(descriptor);
 
@@ -1219,7 +1237,8 @@ const fileKindContract = {
     }
 
     function validateComponentFile(program) {
-      const declarations = getTopLevelDeclarations(program).filter(isFunctionDeclaration);
+      const declarations = getTopLevelDeclarations(program)
+        .filter(isFunctionDeclaration);
 
       const components = declarations.filter((declaration) => {
         const functionNode = getFunctionDeclarationNode(declaration);
@@ -1241,8 +1260,11 @@ const fileKindContract = {
 
       const allowedNames = [
         ...expectedNames,
-        ...(new Set(["ui", "ui-content"]).has(getSourceLayer(filename))
-          ? expectedNames.map((expectedName) => `UI${expectedName}`)
+        ...(new Set(["ui", "ui-content"])
+          .has(getSourceLayer(filename))
+          ? expectedNames.map((expectedName) => {
+            return `UI${expectedName}`;
+          })
           : []),
       ];
 
@@ -1266,9 +1288,9 @@ const fileKindContract = {
     function validatePort(program) {
       const declarations = getTopLevelDeclarations(program);
 
-      const interfaces = declarations.filter(
-        (declaration) => declaration.type === "TSInterfaceDeclaration",
-      );
+      const interfaces = declarations.filter((declaration) => {
+        return declaration.type === "TSInterfaceDeclaration";
+      });
 
       if (
         declarations.length !== 1 ||
@@ -1280,9 +1302,9 @@ const fileKindContract = {
         return;
       }
 
-      const executeMembers = interfaces[0].body.body.filter(
-        (member) => member.key?.type === "Identifier" && member.key.name === "execute",
-      );
+      const executeMembers = interfaces[0].body.body.filter((member) => {
+        return member.key?.type === "Identifier" && member.key.name === "execute";
+      });
 
       if (executeMembers.length !== 1 || executeMembers[0].params?.length > 1) {
         context.report({ node: interfaces[0], messageId: "portExecute" });
@@ -1292,7 +1314,9 @@ const fileKindContract = {
     function validateAdapter(program) {
       const declarations = getTopLevelDeclarations(program);
 
-      const classes = declarations.filter((declaration) => declaration.type === "ClassDeclaration");
+      const classes = declarations.filter((declaration) => {
+        return declaration.type === "ClassDeclaration";
+      });
 
       if (
         declarations.length !== 1 ||
@@ -1304,9 +1328,9 @@ const fileKindContract = {
         return;
       }
 
-      const implementedPorts = classes[0].implements?.filter(
-        (item) => item.expression?.type === "Identifier" && item.expression.name.endsWith("Port"),
-      );
+      const implementedPorts = classes[0].implements?.filter((item) => {
+        return item.expression?.type === "Identifier" && item.expression.name.endsWith("Port");
+      });
 
       if (implementedPorts?.length !== 1) {
         context.report({ node: classes[0], messageId: "adapterPort" });
@@ -1314,7 +1338,11 @@ const fileKindContract = {
 
       const expectedNames = getFileContractExpectedNames(descriptor);
 
-      if (!expectedNames.some((expectedName) => classes[0].id.name.endsWith(expectedName))) {
+      if (
+        !expectedNames.some((expectedName) => {
+          return classes[0].id.name.endsWith(expectedName);
+        })
+      ) {
         context.report({
           node: classes[0],
           messageId: "expectedName",
@@ -1420,12 +1448,20 @@ const fileKindContract = {
           const expectedNames = getFileContractExpectedNames(descriptor);
 
           const isUiPropsFile =
-            new Set(["ui", "ui-content"]).has(getSourceLayer(filename)) &&
-            expectedNames.some((expectedName) => expectedName.endsWith("Props"));
+            new Set(["ui", "ui-content"])
+              .has(getSourceLayer(filename)) &&
+            expectedNames.some((expectedName) => {
+              return expectedName.endsWith("Props");
+            });
 
           validatePrincipal(program, declarationTypes[descriptor.kind], {
             expectedNames: isUiPropsFile
-              ? [...expectedNames, ...expectedNames.map((expectedName) => `UI${expectedName}`)]
+              ? [
+                ...expectedNames,
+                ...expectedNames.map((expectedName) => {
+                  return `UI${expectedName}`;
+                }),
+              ]
               : expectedNames,
           });
 
@@ -1434,7 +1470,8 @@ const fileKindContract = {
 
         if (["repository", "database", "storage", "store", "service"].includes(descriptor.kind)) {
           if (descriptor.kind === "service") {
-            const functions = getTopLevelDeclarations(program).filter(isFunctionDeclaration);
+            const functions = getTopLevelDeclarations(program)
+              .filter(isFunctionDeclaration);
 
             if (functions.length !== 1 || !isExportedTopLevelDeclaration(program, functions[0])) {
               reportContract(program);
@@ -1452,16 +1489,18 @@ const fileKindContract = {
         }
 
         if (descriptor.kind === "ports") {
-          const interfaces = getTopLevelDeclarations(program).filter(
-            (declaration) => declaration.type === "TSInterfaceDeclaration",
-          );
+          const interfaces = getTopLevelDeclarations(program)
+            .filter((declaration) => {
+              return declaration.type === "TSInterfaceDeclaration";
+            });
 
           if (
             interfaces.length === 0 ||
-            interfaces.some(
-              (declaration) =>
-                !declaration.id.name.endsWith("Port") && declaration.id.name !== "ApplicationPorts",
-            )
+            interfaces.some((declaration) => {
+              return (
+                !declaration.id.name.endsWith("Port") && declaration.id.name !== "ApplicationPorts"
+              );
+            })
           ) {
             reportContract(program);
           }
@@ -1474,9 +1513,9 @@ const fileKindContract = {
 
           const functions = declarations.filter(isFunctionDeclaration);
 
-          const interfaces = declarations.filter(
-            (declaration) => declaration.type === "TSInterfaceDeclaration",
-          );
+          const interfaces = declarations.filter((declaration) => {
+            return declaration.type === "TSInterfaceDeclaration";
+          });
 
           if (functions.length !== 1 || interfaces.length !== 1) {
             reportContract(program);
@@ -1490,7 +1529,9 @@ const fileKindContract = {
 
           if (
             declarations.length === 0 ||
-            declarations.some((declaration) => declaration.type !== "TSEnumDeclaration")
+            declarations.some((declaration) => {
+              return declaration.type !== "TSEnumDeclaration";
+            })
           ) {
             reportContract(program);
           }
@@ -1499,11 +1540,15 @@ const fileKindContract = {
         }
 
         if (descriptor.kind === "schema") {
-          const declarations = getTopLevelDeclarations(program).filter(
-            (declaration) =>
-              declaration.type === "VariableDeclarator" &&
-              getExportedName(declaration)?.toLowerCase().endsWith("schema"),
-          );
+          const declarations = getTopLevelDeclarations(program)
+            .filter((declaration) => {
+              return (
+                declaration.type === "VariableDeclarator" &&
+              getExportedName(declaration)
+                ?.toLowerCase()
+                .endsWith("schema")
+              );
+            });
 
           if (declarations.length === 0) {
             reportContract(program);
@@ -1650,7 +1695,9 @@ export function unwrapBranch(node) {
   }
 
   if (current?.type === "BlockStatement") {
-    const statements = current.body.filter((statement) => statement.type !== "EmptyStatement");
+    const statements = current.body.filter((statement) => {
+      return statement.type !== "EmptyStatement";
+    });
 
     return statements.length === 1 ? unwrapBranch(statements[0]) : current;
   }
@@ -1809,7 +1856,8 @@ const noSqlOutsideRepository = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     const isRepository = filename.includes(
       "/packages/pkg-adapter-data-v1/src/adapters/content/sqljs/",
@@ -2144,7 +2192,9 @@ const noUnjustifiedSuppression = {
             } else if (
               suppression[1]
                 .split(",")
-                .map((rule) => rule.trim())
+                .map((rule) => {
+                  return rule.trim();
+                })
                 .filter(Boolean).length !== 1
             ) {
               context.report({ node: comment, messageId: "multipleRules" });
@@ -2310,7 +2360,8 @@ const purposefulNaming = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     const { sourceCode } = context;
 
@@ -2363,7 +2414,9 @@ const purposefulNaming = {
 
       if (
         requiredContractSuffixes.length > 0 &&
-        !requiredContractSuffixes.some((suffix) => name.endsWith(suffix))
+        !requiredContractSuffixes.some((suffix) => {
+          return name.endsWith(suffix);
+        })
       ) {
         context.report({
           node,
@@ -2418,7 +2471,8 @@ const domainFunctionsInDomainPackage = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     if (!filename.includes("/packages/pkg-adapter-data-v1/src/study/")) {
       return {};
@@ -2449,7 +2503,8 @@ const domainFunctionPurity = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     const functionStack = [];
 
@@ -2465,9 +2520,9 @@ const domainFunctionPurity = {
       const functionNode = currentFunction();
 
       return Boolean(
-        functionNode?.params.some(
-          (parameter) => parameter.type === "Identifier" && parameter.name === node.name,
-        ),
+        functionNode?.params.some((parameter) => {
+          return parameter.type === "Identifier" && parameter.name === node.name;
+        }),
       );
     }
 
@@ -2482,12 +2537,24 @@ const domainFunctionPurity = {
     }
 
     return {
-      FunctionDeclaration: (node) => functionStack.push(node),
-      FunctionExpression: (node) => functionStack.push(node),
-      ArrowFunctionExpression: (node) => functionStack.push(node),
-      "FunctionDeclaration:exit": () => functionStack.pop(),
-      "FunctionExpression:exit": () => functionStack.pop(),
-      "ArrowFunctionExpression:exit": () => functionStack.pop(),
+      FunctionDeclaration: (node) => {
+        return functionStack.push(node);
+      },
+      FunctionExpression: (node) => {
+        return functionStack.push(node);
+      },
+      ArrowFunctionExpression: (node) => {
+        return functionStack.push(node);
+      },
+      "FunctionDeclaration:exit": () => {
+        return functionStack.pop();
+      },
+      "FunctionExpression:exit": () => {
+        return functionStack.pop();
+      },
+      "ArrowFunctionExpression:exit": () => {
+        return functionStack.pop();
+      },
       NewExpression(node) {
         if (currentFunction() && node.callee.type === "Identifier" && node.callee.name === "Date") {
           context.report({ node, messageId: "externalState" });
@@ -2545,7 +2612,8 @@ const utilsModuleBoundary = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     if (!filename.includes("/packages/pkg-utils/")) {
       return {};
@@ -2646,7 +2714,9 @@ const wildcardReexportsOnlyInIndex = {
   create(context) {
     return {
       ExportAllDeclaration(node) {
-        const fileName = context.getFilename().split(/[\\/]/).at(-1);
+        const fileName = context.getFilename()
+          .split(/[\\/]/)
+          .at(-1);
 
         if (fileName !== "index.ts" && fileName !== "index.tsx") {
           context.report({ node, messageId: "wildcardReexport" });
@@ -2743,7 +2813,9 @@ const executeSingleParameter = {
     function validateExecute(node) {
       const parameters = node.params ?? [];
 
-      const restParameter = parameters.find((parameter) => parameter.type === "RestElement");
+      const restParameter = parameters.find((parameter) => {
+        return parameter.type === "RestElement";
+      });
 
       if (restParameter) {
         context.report({ node: restParameter, messageId: "restParameter" });
@@ -2812,7 +2884,9 @@ export function toPascalCase(value) {
   return value
     .split("-")
     .filter(Boolean)
-    .map((part) => `${part[0].toUpperCase()}${part.slice(1)}`)
+    .map((part) => {
+      return `${part[0].toUpperCase()}${part.slice(1)}`;
+    })
     .join("");
 }
 
@@ -2844,7 +2918,8 @@ const noAggregatedAdapters = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     const classes = [];
 
@@ -2884,7 +2959,8 @@ const oneClassPerFile = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     if (
       !filename.includes("/packages/") ||
@@ -2921,7 +2997,8 @@ const oneInterfacePerFile = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     if (
       !filename.includes("/packages/") ||
@@ -2955,7 +3032,8 @@ const oneTypePerFile = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     if (
       !filename.includes("/packages/") ||
@@ -2996,7 +3074,8 @@ const cqrsFileContract = {
     },
   },
   create(context) {
-    const filename = context.getFilename().replaceAll("\\", "/");
+    const filename = context.getFilename()
+      .replaceAll("\\", "/");
 
     const isCqrsBarrel = /\/packages\/pkg-application\/src\/(commands|queries)\/index\.ts$/.test(
       filename,
@@ -3067,7 +3146,9 @@ const cqrsFileContract = {
         if (contract.kind === "command-handler" || contract.kind === "query-handler") {
           const expected = `${expectedPrefix}Handler`;
 
-          const handler = classes.find((item) => item.id?.name === expected);
+          const handler = classes.find((item) => {
+            return item.id?.name === expected;
+          });
 
           if (!handler) {
             context.report({ node, messageId: "missingHandler", data: { name: expectedPrefix } });
@@ -3077,7 +3158,12 @@ const cqrsFileContract = {
             context.report({ node, messageId: "multipleClasses" });
           }
 
-          if (handler && !handler.body.body.some((item) => isClassMethodNamed(item, "execute"))) {
+          if (
+            handler &&
+            !handler.body.body.some((item) => {
+              return isClassMethodNamed(item, "execute");
+            })
+          ) {
             context.report({ node: handler, messageId: "missingExecute" });
           }
         }
@@ -3182,7 +3268,11 @@ const layerBoundaries = {
 };
 
 export function reportForbiddenImport({ context, forbiddenImports, node, source }) {
-  if (forbiddenImports.some((pattern) => pattern.test(source))) {
+  if (
+    forbiddenImports.some((pattern) => {
+      return pattern.test(source);
+    })
+  ) {
     context.report({ node, messageId: "forbidden", data: { source } });
   }
 }
@@ -3215,8 +3305,9 @@ const applicationPurity = createPurityRule({
   name: "application-purity",
   layers: applicationLayers,
   forbiddenImports: forbiddenApplicationImports,
-  allowExternal: (source, filename) =>
-    isTestFilename(filename) && /^(?:vitest|node:test)$/.test(source),
+  allowExternal: (source, filename) => {
+    return isTestFilename(filename) && /^(?:vitest|node:test)$/.test(source);
+  },
   message:
     "Application code must remain technology-independent; move presentation, persistence and browser dependencies behind ports and adapters.",
 });
@@ -3225,9 +3316,12 @@ const domainPurity = createPurityRule({
   name: "domain-purity",
   layers: new Set(["domain"]),
   forbiddenImports: forbiddenDomainImports,
-  allowExternal: (source, filename) =>
-    /^date-fns(?:\/|$)/.test(source) ||
-    (isTestFilename(filename) && /^(?:vitest|node:test)$/.test(source)),
+  allowExternal: (source, filename) => {
+    return (
+      /^date-fns(?:\/|$)/.test(source) ||
+      (isTestFilename(filename) && /^(?:vitest|node:test)$/.test(source))
+    );
+  },
   message:
     "Domain code must remain pure and independent of presentation, persistence, browser APIs and infrastructure.",
 });
@@ -3269,7 +3363,9 @@ const noAdapterCrossImport = {
     }
 
     return createModuleReferenceVisitors(context, ({ node, source }) => {
-      const targetPackage = getPackagePathFromSpecifier(source)?.split("/").at(1);
+      const targetPackage = getPackagePathFromSpecifier(source)
+        ?.split("/")
+        .at(1);
 
       if (
         targetPackage &&
@@ -3494,12 +3590,13 @@ const portContract = {
           return;
         }
 
-        const hasExecute = interfaces[0].body.body.some(
-          (member) =>
+        const hasExecute = interfaces[0].body.body.some((member) => {
+          return (
             (member.type === "TSMethodSignature" || member.type === "TSPropertySignature") &&
             member.key.type === "Identifier" &&
-            member.key.name === "execute",
-        );
+            member.key.name === "execute"
+          );
+        });
 
         if (!hasExecute) {
           context.report({ node: interfaces[0], messageId: "execute" });
@@ -3538,9 +3635,9 @@ const adapterContract = {
           return;
         }
 
-        const implementedPorts = classes[0].implements?.filter(
-          (item) => item.expression?.type === "Identifier" && item.expression.name.endsWith("Port"),
-        );
+        const implementedPorts = classes[0].implements?.filter((item) => {
+          return item.expression?.type === "Identifier" && item.expression.name.endsWith("Port");
+        });
 
         if (implementedPorts?.length !== 1) {
           context.report({ node: classes[0], messageId: "port" });
@@ -3570,9 +3667,9 @@ const adapterDependencyInjection = {
       NewExpression(node) {
         const ancestors = context.sourceCode.getAncestors(node);
 
-        const hasConstructorAncestor = ancestors.some(
-          (ancestor) => ancestor.type === "MethodDefinition" && ancestor.kind === "constructor",
-        );
+        const hasConstructorAncestor = ancestors.some((ancestor) => {
+          return ancestor.type === "MethodDefinition" && ancestor.kind === "constructor";
+        });
 
         if (hasConstructorAncestor) {
           context.report({ node, messageId: "constructor" });
@@ -3604,9 +3701,12 @@ const constructorDependencyInversion = {
 
     const importedImplementationNamespaces = new Set();
 
-    const isConcreteName = (name) =>
-      /(?:Adapter|Repository|Store|Database|Client|Service)$/.test(name) &&
-      !/(?:Contract|Port)$/.test(name);
+    const isConcreteName = (name) => {
+      return (
+        /(?:Adapter|Repository|Store|Database|Client|Service)$/.test(name) &&
+        !/(?:Contract|Port)$/.test(name)
+      );
+    };
 
     const containsImportedImplementation = (node, sourceCode) => {
       if (!node || typeof node !== "object") {
@@ -3638,7 +3738,9 @@ const constructorDependencyInversion = {
         const value = node[key];
 
         return Array.isArray(value)
-          ? value.some((child) => containsImportedImplementation(child, sourceCode))
+          ? value.some((child) => {
+            return containsImportedImplementation(child, sourceCode);
+          })
           : containsImportedImplementation(value, sourceCode);
       });
     };
@@ -3664,11 +3766,12 @@ const constructorDependencyInversion = {
       NewExpression(node) {
         const ancestors = context.sourceCode.getAncestors(node);
 
-        const hasConstructorAncestor = ancestors.some(
-          (ancestor) =>
+        const hasConstructorAncestor = ancestors.some((ancestor) => {
+          return (
             ["ClassMethod", "MethodDefinition"].includes(ancestor.type) &&
-            ancestor.kind === "constructor",
-        );
+            ancestor.kind === "constructor"
+          );
+        });
 
         if (hasConstructorAncestor) {
           context.report({ node, messageId: "constructor" });
@@ -3787,7 +3890,8 @@ const uiComponentPrefix = {
   create(context) {
     const layer = getSourceLayer(context.getFilename());
 
-    if (!new Set(["ui", "ui-content"]).has(layer)) {
+    if (!new Set(["ui", "ui-content"])
+      .has(layer)) {
       return {};
     }
 
@@ -3795,10 +3899,15 @@ const uiComponentPrefix = {
 
     const isUiComponentFile = kind === "component";
 
-    const isExported = (node) => node.parent?.type === "ExportNamedDeclaration";
+    const isExported = (node) => {
+      return node.parent?.type === "ExportNamedDeclaration";
+    };
 
-    const isComponentFunction = (node) =>
-      ["FunctionDeclaration", "FunctionExpression", "ArrowFunctionExpression"].includes(node.type);
+    const isComponentFunction = (node) => {
+      return ["FunctionDeclaration", "FunctionExpression", "ArrowFunctionExpression"].includes(
+        node.type,
+      );
+    };
 
     return {
       FunctionDeclaration(node) {

@@ -11,21 +11,31 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function registerContentGraphPortBindings(container: Container): void {
-  const getContentRepository = (): ContentRepositoryContract =>
-    resolvePort<ContentRepositoryContract>(
+  const getContentRepository = (): ContentRepositoryContract => {
+    return resolvePort<ContentRepositoryContract>(
       container,
       applicationDependencyTokens.contentRepository,
     );
+  };
 
   const bindings: PortFactoryBinding[] = [
     [
       applicationDependencyTokens.getTopicMap,
-      () => new SqlJsGetTopicMapAdapter(getContentRepository()),
+      () => {
+        return new SqlJsGetTopicMapAdapter(getContentRepository());
+      },
     ],
-    [applicationDependencyTokens.getTopic, () => new SqlJsGetTopicAdapter(getContentRepository())],
+    [
+      applicationDependencyTokens.getTopic,
+      () => {
+        return new SqlJsGetTopicAdapter(getContentRepository());
+      },
+    ],
     [
       applicationDependencyTokens.getStudyPlan,
-      () => new SqlJsGetStudyPlanAdapter(getContentRepository()),
+      () => {
+        return new SqlJsGetStudyPlanAdapter(getContentRepository());
+      },
     ],
   ];
 

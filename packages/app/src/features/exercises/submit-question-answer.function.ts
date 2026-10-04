@@ -25,7 +25,8 @@ export async function submitQuestionAnswer(
 
   const { question } = data;
 
-  const expected = String(question.correct_answer || "").toUpperCase();
+  const expected = String(question.correct_answer || "")
+    .toUpperCase();
 
   const isGradable = Boolean(question.is_automatically_gradable);
 
@@ -46,7 +47,7 @@ export async function submitQuestionAnswer(
     elapsedMs,
     isCorrect: correct,
     sessionId,
-    topicIds: data.topics.map((topic) => String(topic.topic_id)),
+    topicIds: data.topics.map((topic) => { return String(topic.topic_id); }),
   });
 
   await syncQuestionMastery({ services });

@@ -3,12 +3,13 @@ import { createApplication, type ApplicationPorts, type GetCatalogPort } from ".
 
 describe("application services", () => {
   it("orquestra uma query através de uma port", async () => {
-    const getCatalog = vi.fn().mockResolvedValue({
-      courses: [],
-      maps: [],
-      plans: [],
-      content: [],
-    });
+    const getCatalog = vi.fn()
+      .mockResolvedValue({
+        courses: [],
+        maps: [],
+        plans: [],
+        content: [],
+      });
 
     const ports = {
       getCatalog: { execute: getCatalog } as GetCatalogPort,
@@ -16,6 +17,7 @@ describe("application services", () => {
 
     await createApplication(ports).catalog.get.execute({ search: "matemática" });
 
-    expect(getCatalog).toHaveBeenCalledWith({ search: "matemática" });
+    expect(getCatalog)
+      .toHaveBeenCalledWith({ search: "matemática" });
   });
 });

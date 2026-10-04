@@ -28,15 +28,16 @@ export function useAcademicViewModel(): AcademicViewModel {
 
   const disciplines = query.data || [];
 
-  const metrics = disciplines.map((discipline) =>
-    services.academic.calculateMetrics.execute({ discipline }),
-  );
+  const metrics = disciplines.map((discipline) => {
+    return services.academic.calculateMetrics.execute({ discipline });
+  });
 
   const save = async (input: SaveAcademicDisciplineInput): Promise<void> => {
     const discipline = createAcademicDisciplineFromForm(
       input,
       services.platform.ids.execute(),
-      new Date().toISOString(),
+      new Date()
+        .toISOString(),
     );
 
     await mutation.mutateAsync(discipline);

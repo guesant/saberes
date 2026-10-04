@@ -4,6 +4,8 @@ import type { ApplicationServices, ReviewTarget } from "@guesant/saberes-applica
 export function useReviewQuery(services: ApplicationServices) {
   return useQuery<ReviewTarget[]>({
     queryKey: ["progress", "reviews"],
-    queryFn: () => services.progress.listReviewTargets.execute(),
+    queryFn: () => {
+      return services.progress.listReviewTargets.execute();
+    },
   });
 }

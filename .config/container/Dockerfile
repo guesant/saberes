@@ -49,6 +49,7 @@ RUN apt-get update \
         chromium \
         curl \
         git \
+        graphviz \
     && rm -rf /var/lib/apt/lists/*
 
 COPY .config/aqua ./.config/aqua

@@ -23,21 +23,23 @@ export function PersonalChecklistsSection(props: PersonalChecklistsSectionProps)
       <UITypography variant="h5">Checklists</UITypography>
       <UIList>
         {props.workspace.checklists
-          .filter((checklist) => !checklist.archived)
-          .map((checklist) => (
-            <StudyChecklistViewItem
-              checklist={checklist}
-              key={checklist.id}
-              onDelete={props.onDelete}
-              onMoveItem={props.onMoveItem}
-              onUpdateContent={props.onUpdateContent}
-              onUpdateItem={props.onUpdateItem}
-            />
-          ))}
+          .filter((checklist) => { return !checklist.archived; })
+          .map((checklist) => {
+            return (
+              <StudyChecklistViewItem
+                checklist={checklist}
+                key={checklist.id}
+                onDelete={props.onDelete}
+                onMoveItem={props.onMoveItem}
+                onUpdateContent={props.onUpdateContent}
+                onUpdateItem={props.onUpdateItem}
+              />
+            );
+          })}
       </UIList>
-      {props.workspace.checklists.some((checklist) => checklist.archived) ? (
+      {props.workspace.checklists.some((checklist) => { return checklist.archived; }) ? (
         <PersonalArchivedList
-          items={props.workspace.checklists.filter((checklist) => checklist.archived)}
+          items={props.workspace.checklists.filter((checklist) => { return checklist.archived; })}
           onRestore={props.onRestore}
           title="Arquivados"
         />

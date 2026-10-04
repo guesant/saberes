@@ -25,13 +25,16 @@ const allowedCommitTypes = config.commitTypes ?? [];
 const output = new Deno.Command("git", {
   args: ["log", "-1", "--format=%B"],
   stdout: "piped",
-}).outputSync();
+})
+  .outputSync();
 
 if (!output.success) {
   throw new Error("Unable to read the latest commit.");
 }
 
-const message = new TextDecoder().decode(output.stdout).trimEnd();
+const message = new TextDecoder()
+  .decode(output.stdout)
+  .trimEnd();
 
 const lines = message.split("\n");
 
@@ -49,12 +52,24 @@ if ((config.headerMaxLength ?? 0) > 0 && subject.length > (config.headerMaxLengt
   throw new Error("Latest commit subject exceeds the configured header length.");
 }
 
-if (config.bodyEmpty && lines.slice(1).some((line) => line.trim() !== "")) {
+if (
+  config.bodyEmpty &&
+  lines.slice(1)
+    .some((line) => {
+      return line.trim() !== "";
+    })
+) {
   throw new Error("Commit body is not allowed by the repository policy.");
 }
 
-if (config.footerEmpty && lines.slice(1).some((line) => /^[A-Za-z][A-Za-z-]*:/.test(line))) {
+if (
+  config.footerEmpty &&
+  lines.slice(1)
+    .some((line) => {
+      return /^[A-Za-z][A-Za-z-]*:/.test(line);
+    })
+) {
   throw new Error("Commit footers are not allowed by the repository policy.");
 }
 
-console.log("Commit policy passed.");
+console.info("Commit policy passed.");

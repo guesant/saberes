@@ -17,28 +17,18 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function createProgressWriteCorePortBindings(container: Container): void {
-  const getProgressStore = (): ProgressStorageContract =>
-    resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
+  const getProgressStore = (): ProgressStorageContract => { return resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore); };
 
   const bindings: PortFactoryBinding[] = [
-    [applicationDependencyTokens.recordAttempt, () => new RecordAttemptAdapter(getProgressStore())],
-    [applicationDependencyTokens.saveAttempt, () => new SaveAttemptAdapter(getProgressStore())],
-    [applicationDependencyTokens.saveSession, () => new SaveSessionAdapter(getProgressStore())],
-    [applicationDependencyTokens.saveSetting, () => new SaveSettingAdapter(getProgressStore())],
-    [applicationDependencyTokens.clearProgress, () => new ClearProgressAdapter(getProgressStore())],
-    [applicationDependencyTokens.enrollCourse, () => new EnrollCourseAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.importProgress,
-      () => new ImportProgressAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.saveLessonProgress,
-      () => new SaveLessonProgressAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.savePlanProgress,
-      () => new SavePlanProgressAdapter(getProgressStore()),
-    ],
+    [applicationDependencyTokens.recordAttempt, () => { return new RecordAttemptAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveAttempt, () => { return new SaveAttemptAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveSession, () => { return new SaveSessionAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveSetting, () => { return new SaveSettingAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.clearProgress, () => { return new ClearProgressAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.enrollCourse, () => { return new EnrollCourseAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.importProgress, () => { return new ImportProgressAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveLessonProgress, () => { return new SaveLessonProgressAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.savePlanProgress, () => { return new SavePlanProgressAdapter(getProgressStore()); }],
   ];
 
   registerPortFactories(container, bindings);

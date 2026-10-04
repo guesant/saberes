@@ -10,16 +10,16 @@ export interface UpdateStudyChecklistItemInput {
 export function updateStudyChecklistItem(input: UpdateStudyChecklistItemInput): PersonalWorkspace {
   return {
     ...input.workspace,
-    checklists: input.workspace.checklists.map((checklist) =>
-      checklist.id === input.checklistId
+    checklists: input.workspace.checklists.map((checklist) => {
+      return checklist.id === input.checklistId
         ? {
-            ...checklist,
-            items: checklist.items.map((item) =>
-              item.id === input.itemId ? { ...item, completed: !item.completed } : item,
-            ),
-            updatedAt: input.now,
-          }
-        : checklist,
-    ),
+          ...checklist,
+          items: checklist.items.map((item) => {
+            return item.id === input.itemId ? { ...item, completed: !item.completed } : item;
+          }),
+          updatedAt: input.now,
+        }
+        : checklist;
+    }),
   };
 }

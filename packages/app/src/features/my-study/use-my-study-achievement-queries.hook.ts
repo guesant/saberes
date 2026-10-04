@@ -14,12 +14,16 @@ export function useMyStudyAchievementQueries(
 ): MyStudyAchievementQueries {
   const streakQuery = useQuery({
     queryKey: ["progress", "streak"],
-    queryFn: () => services.progress.getStreak.execute(),
+    queryFn: () => {
+      return services.progress.getStreak.execute();
+    },
   });
 
   const achievementsQuery = useQuery({
     queryKey: ["progress", "achievements"],
-    queryFn: () => services.progress.listAchievements.execute(),
+    queryFn: () => {
+      return services.progress.listAchievements.execute();
+    },
   });
 
   return {

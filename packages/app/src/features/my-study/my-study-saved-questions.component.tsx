@@ -15,9 +15,9 @@ export function MyStudySavedQuestions(props: MyStudySavedQuestionsProps) {
       <UICardContent>
         <UIContentGroup variant="content">
           <UITypography variant="h5">{t("home.savedQuestions")}</UITypography>
-          {props.questions.map((question) => (
-            <MyStudySavedQuestionItem key={String(question.id)} question={question} />
-          ))}
+          {props.questions.map((question) => {
+            return <MyStudySavedQuestionItem key={String(question.id)} question={question} />;
+          })}
         </UIContentGroup>
       </UICardContent>
     </UICard>

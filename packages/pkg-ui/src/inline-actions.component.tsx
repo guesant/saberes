@@ -10,9 +10,13 @@ export function UIInlineActions(props: UIInlineActionsProps): ReactElement {
   return (
     <MuiStack
       alignItems="center"
+      data-ui-gap="sm"
+      data-ui-layout={props.wrap ? "cluster" : "row"}
       direction="row"
       flexWrap={props.wrap ? "wrap" : "nowrap"}
+      minWidth={0}
       spacing={1}
+      sx={{ maxWidth: "100%" }}
     >
       {props.children}
     </MuiStack>

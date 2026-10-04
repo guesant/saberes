@@ -41,3 +41,7 @@ multi-processo
 recência
 read-model
 ViewModel
+enforça
+Gamificação
+SARIF
+unskip

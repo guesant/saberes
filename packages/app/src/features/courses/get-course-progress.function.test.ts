@@ -13,7 +13,8 @@ describe("progresso do curso", () => {
       lessonProgress: [{ contentKey: "lesson:intro", completed: true }],
     });
 
-    expect(progress).toEqual({ completedItems: 2, percentage: 67, totalItems: 3 });
+    expect(progress)
+      .toEqual({ completedItems: 2, percentage: 67, totalItems: 3 });
   });
 
   it("ignora itens sem referência estudável", () => {
@@ -23,6 +24,7 @@ describe("progresso do curso", () => {
       lessonProgress: [],
     });
 
-    expect(progress).toEqual({ completedItems: 0, percentage: 0, totalItems: 0 });
+    expect(progress)
+      .toEqual({ completedItems: 0, percentage: 0, totalItems: 0 });
   });
 });

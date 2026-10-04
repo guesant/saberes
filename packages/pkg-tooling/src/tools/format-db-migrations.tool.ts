@@ -12,10 +12,16 @@ const writeMode = Deno.args.includes("--write");
 const configuration = JSON.parse(await Deno.readTextFile(configurationPath));
 
 const files = [...Deno.readDirSync(migrationsDirectory)]
-  .filter((entry) => entry.isFile && entry.name.endsWith(".sql"))
-  .map((entry) => entry.name)
+  .filter((entry) => {
+    return entry.isFile && entry.name.endsWith(".sql");
+  })
+  .map((entry) => {
+    return entry.name;
+  })
   .sort()
-  .map((file) => join(migrationsDirectory, file));
+  .map((file) => {
+    return join(migrationsDirectory, file);
+  });
 
 if (files.length === 0) {
   throw new Error("Nenhuma migration Dbmate encontrada.");
@@ -26,7 +32,8 @@ const failures = [];
 for (const file of files) {
   const original = await Deno.readTextFile(file);
 
-  const formatted = `${format(original, configuration).trimEnd()}\n`;
+  const formatted = `${format(original, configuration)
+    .trimEnd()}\n`;
 
   if (!formatted.includes("-- migrate:up") || !formatted.includes("-- migrate:down")) {
     failures.push(`${relative(root, file)}: marcadores do Dbmate foram removidos`);
@@ -53,6 +60,6 @@ if (failures.length > 0) {
   Deno.exit(1);
 }
 
-console.log(
+console.info(
   `${writeMode ? "Migrations formatadas" : "Migrations formatadas e verificadas"}: ${files.length}`,
 );

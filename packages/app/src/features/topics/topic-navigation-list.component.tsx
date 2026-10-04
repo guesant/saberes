@@ -7,9 +7,9 @@ export function TopicNavigationList(props: TopicNavigationListProps) {
     <UIContentGroup variant="list">
       <UITypography variant="h5">{props.title}</UITypography>
       <UIList>
-        {props.topics.map((topic) => (
-          <TopicRelatedLink key={String(topic.slug)} topic={topic} />
-        ))}
+        {props.topics.map((topic) => {
+          return <TopicRelatedLink key={String(topic.slug)} topic={topic} />;
+        })}
       </UIList>
     </UIContentGroup>
   );

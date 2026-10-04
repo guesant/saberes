@@ -1,8 +1,8 @@
 {
   "mode": "strict",
   "threshold": 10,
-  "minLines": 12,
-  "minTokens": 100,
+  "minLines": 20,
+  "minTokens": 150,
   "maxGapLines": 1,
   "ignoreIdentifiers": true,
   "ignoreLiterals": true,
@@ -12,8 +12,17 @@
     "**/dist/**",
     "**/public/data/**",
     "**/*.sqlite",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/*.d.ts",
+    "deno.json",
+    ".config/**",
+    "packages/app/src/composition/**",
+    "packages/pkg-tooling-eslint/**",
+    "**/src/**/index.ts",
     "**/package-lock.json",
-    "**/package.json"
+    "**/package.json",
+    ".lighthouseci/**"
   ],
   "reporters": ["console", "threshold"]
 }

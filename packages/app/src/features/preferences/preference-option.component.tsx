@@ -14,7 +14,9 @@ export function PreferenceOption(props: PreferenceOptionProps) {
     <UISelectableSurface
       aria-pressed={props.value}
       interactive
-      onClick={() => props.onToggle(props.preferenceKey)}
+      onClick={() => {
+        return props.onToggle(props.preferenceKey);
+      }}
       selected={props.value}
     >
       <UIContentGroup variant="tight">

@@ -6,16 +6,17 @@ export function updateStudyCaptureContent(
 ): PersonalWorkspace {
   return {
     ...input.workspace,
-    captures: input.workspace.captures.map((capture) =>
-      capture.id === input.id
+    captures: input.workspace.captures.map((capture) => {
+      return capture.id === input.id
         ? {
-            ...capture,
-            title: input.title,
-            description: input.description,
-            dueDate: input.dueDate || undefined,
-            updatedAt: new Date().toISOString(),
-          }
-        : capture,
-    ),
+          ...capture,
+          title: input.title,
+          description: input.description,
+          dueDate: input.dueDate || undefined,
+          updatedAt: new Date()
+            .toISOString(),
+        }
+        : capture;
+    }),
   };
 }

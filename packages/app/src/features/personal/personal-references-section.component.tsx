@@ -20,24 +20,32 @@ export function PersonalReferencesSection(props: PersonalReferencesSectionProps)
       <UITypography variant="h5">Referências</UITypography>
       <UIList>
         {props.workspace.references
-          .filter((reference) => !reference.archived)
-          .map((reference) => (
-            <PersonalReferenceItem
-              key={reference.id}
-              onUpdateFavorite={props.onUpdateFavorite}
-              onDelete={props.onDelete}
-              onUpdateContent={props.onUpdateContent}
-              reference={reference}
-            />
-          ))}
+          .filter((reference) => {
+            return !reference.archived;
+          })
+          .map((reference) => {
+            return (
+              <PersonalReferenceItem
+                key={reference.id}
+                onUpdateFavorite={props.onUpdateFavorite}
+                onDelete={props.onDelete}
+                onUpdateContent={props.onUpdateContent}
+                reference={reference}
+              />
+            );
+          })}
       </UIList>
-      {props.workspace.references.some((reference) => reference.archived) ? (
-        <PersonalArchivedList
-          items={props.workspace.references.filter((reference) => reference.archived)}
-          onRestore={props.onRestore}
-          title="Arquivadas"
-        />
-      ) : null}
+      {props.workspace.references.some((reference) => {
+        return reference.archived;
+      }) ? (
+          <PersonalArchivedList
+            items={props.workspace.references.filter((reference) => {
+              return reference.archived;
+            })}
+            onRestore={props.onRestore}
+            title="Arquivadas"
+          />
+        ) : null}
     </UIContentGroup>
   );
 }

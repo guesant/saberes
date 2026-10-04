@@ -4,7 +4,8 @@ export function resumeFocusSession(session: FocusSession, resumedAt: Date): Focu
   return {
     ...session,
     pausedAt: undefined,
-    startedAt: new Date(resumedAt.getTime() - session.elapsedMs).toISOString(),
+    startedAt: new Date(resumedAt.getTime() - session.elapsedMs)
+      .toISOString(),
     status: FocusSessionStatus.Active,
   };
 }

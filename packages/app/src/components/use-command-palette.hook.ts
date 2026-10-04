@@ -17,7 +17,9 @@ export function useCommandPalette(): CommandPaletteState {
 
     window.addEventListener("keydown", handleKeyDown);
 
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      return window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const close = (): void => {

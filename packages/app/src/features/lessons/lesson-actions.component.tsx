@@ -26,7 +26,9 @@ export function LessonActions(props: LessonActionsProps) {
       <UIButton
         variant="contained"
         startIcon={<UICheckCircleIcon />}
-        onClick={() => props.onComplete(!props.completed)}
+        onClick={() => {
+          return props.onComplete(!props.completed);
+        }}
       >
         {props.completed ? t("lesson.completed") : t("lesson.complete")}
       </UIButton>

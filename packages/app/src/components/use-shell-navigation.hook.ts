@@ -14,11 +14,13 @@ export function useShellNavigation() {
 
   const links = createShellNavigationLinks(t);
 
-  const navigationItems = links.map((link) => ({
-    id: link.to,
-    label: link.label,
-    value: link.to,
-  }));
+  const navigationItems = links.map((link) => {
+    return {
+      id: link.to,
+      label: link.label,
+      value: link.to,
+    };
+  });
 
   const personalItems = getPersonalCommandPaletteItems(workspaceQuery.data);
 

@@ -32,15 +32,20 @@ export async function filesIn(directory: string): Promise<string[]> {
 
 for (const [layer, root] of Object.entries(roots)) {
   for (const file of await filesIn(root)) {
-    const relativePath = relative(root, file).replaceAll("\\", "/");
+    const relativePath = relative(root, file)
+      .replaceAll("\\", "/");
 
     const source = await Deno.readTextFile(file);
 
-    const imports = [...source.matchAll(/(?:from|import\()\s*["']([^"']+)["']/g)].map(
-      (match) => match[1],
-    );
+    const imports = [...source.matchAll(/(?:from|import\()\s*["']([^"']+)["']/g)].map((match) => {
+      return match[1];
+    });
 
-    const has = (pattern: RegExp) => imports.some((value) => pattern.test(value));
+    const has = (pattern: RegExp) => {
+      return imports.some((value) => {
+        return pattern.test(value);
+      });
+    };
 
     const isTest = /\.(?:test|spec)\.tsx?$/u.test(relativePath);
 
@@ -54,7 +59,13 @@ for (const [layer, root] of Object.entries(roots)) {
 
     const isViewModel = /\.view-model\.ts$/u.test(relativePath);
 
-    if (layer === "domain" && !isTest && imports.some((value) => !value.startsWith("."))) {
+    if (
+      layer === "domain" &&
+      !isTest &&
+      imports.some((value) => {
+        return !value.startsWith(".");
+      })
+    ) {
       violations.push(`${relativePath}: domain importa dependência externa`);
     }
 
@@ -106,7 +117,7 @@ if (violations.length) {
 
   Deno.exitCode = 1;
 } else {
-  console.log(
+  console.info(
     "Arquitetura válida: domínio, aplicação, adapters e apresentação respeitam as fronteiras.",
   );
 }

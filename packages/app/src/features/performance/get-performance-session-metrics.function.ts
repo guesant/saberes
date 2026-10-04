@@ -4,9 +4,13 @@ import type { PerformanceSessionMetrics } from "./performance-session-metrics.in
 export function getPerformanceSessionMetrics(
   input: GetPerformanceSessionMetricsInput,
 ): PerformanceSessionMetrics {
-  const completedSessions = input.sessions.filter((session) => session.status === "completed");
+  const completedSessions = input.sessions.filter((session) => {
+    return session.status === "completed";
+  });
 
-  const studyMs = input.sessions.reduce((total, session) => total + (session.durationMs || 0), 0);
+  const studyMs = input.sessions.reduce((total, session) => {
+    return total + (session.durationMs || 0);
+  }, 0);
 
   return { completedSessions, studyMs };
 }

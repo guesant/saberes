@@ -11,16 +11,20 @@ export function GoalFormDueDateField(props: GoalFormDueDateFieldProps) {
 
   return (
     <form.Field name="details.dueAt">
-      {(field) => (
-        <UITextField
-          fullWidth
-          label={props.label}
-          onBlur={field.handleBlur}
-          onChange={(event) => field.handleChange(event.target.value)}
-          type="date"
-          value={field.state.value}
-        />
-      )}
+      {(field) => {
+        return (
+          <UITextField
+            fullWidth
+            label={props.label}
+            onBlur={field.handleBlur}
+            onChange={(event) => {
+              return field.handleChange(event.target.value);
+            }}
+            type="date"
+            value={field.state.value}
+          />
+        );
+      }}
     </form.Field>
   );
 }

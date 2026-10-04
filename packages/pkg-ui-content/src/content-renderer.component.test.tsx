@@ -18,13 +18,17 @@ describe("renderizador de conteúdo editorial", () => {
       />,
     );
 
-    expect(screen.getByRole("heading", { name: "Conceito" })).toBeTruthy();
+    expect(screen.getByRole("heading", { name: "Conceito" }))
+      .toBeTruthy();
 
-    expect(screen.getByText("Atenção")).toBeTruthy();
+    expect(screen.getByText("Atenção"))
+      .toBeTruthy();
 
-    expect(screen.getByText("Revise antes de praticar.")).toBeTruthy();
+    expect(screen.getByText("Revise antes de praticar."))
+      .toBeTruthy();
 
-    expect(screen.getByText("Conteúdo editorial revisado")).toBeTruthy();
+    expect(screen.getByText("Conteúdo editorial revisado"))
+      .toBeTruthy();
   });
 
   it("não interpreta HTML arbitrário como conteúdo executável", () => {
@@ -32,8 +36,10 @@ describe("renderizador de conteúdo editorial", () => {
       <UIContentRenderer markdown={"<script>alert(&quot;x&quot;)</script>\n\nTexto seguro"} />,
     );
 
-    expect(screen.getByText("Texto seguro")).toBeTruthy();
+    expect(screen.getByText("Texto seguro"))
+      .toBeTruthy();
 
-    expect(document.querySelector("script")).toBeNull();
+    expect(document.querySelector("script"))
+      .toBeNull();
   });
 });

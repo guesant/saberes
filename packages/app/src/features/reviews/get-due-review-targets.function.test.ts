@@ -12,15 +12,17 @@ describe("seleção de revisões vencidas", () => {
 
     const result = getDueReviewTargets(targets, new Date("2026-10-03T12:00:00.000Z"));
 
-    expect(result).toMatchObject([
-      { contentKey: "question:without-date" },
-      { contentKey: "question:overdue" },
-    ]);
+    expect(result)
+      .toMatchObject([
+        { contentKey: "question:without-date" },
+        { contentKey: "question:overdue" },
+      ]);
   });
 
   it("não inclui itens suspensos", () => {
     const targets: ReviewTarget[] = [{ contentKey: "question:suspended", suspended: true }];
 
-    expect(getDueReviewTargets(targets, new Date("2026-10-03T12:00:00.000Z"))).toEqual([]);
+    expect(getDueReviewTargets(targets, new Date("2026-10-03T12:00:00.000Z")))
+      .toEqual([]);
   });
 });

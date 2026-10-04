@@ -7,12 +7,17 @@ import type { Attempt } from "@guesant/saberes-application";
 export function getPerformanceScopedAttempts(input: GetPerformanceScopedAttemptsInput): Attempt[] {
   const periodDays = getPerformancePeriodDays(input.filter.period);
 
-  const sessionIds = new Set(input.sessions.map((session) => session.id));
+  const sessionIds = new Set(
+    input.sessions.map((session) => {
+      return session.id;
+    }),
+  );
 
-  return input.attempts.filter(
-    (attempt) =>
+  return input.attempts.filter((attempt) => {
+    return (
       isPerformanceValueInPeriod(attempt.answeredAt, periodDays, input.now) &&
       (matchesPerformanceScope(attempt.contentKey, input.filter.scopeKey) ||
-        (attempt.sessionId !== undefined && sessionIds.has(attempt.sessionId))),
-  );
+        (attempt.sessionId !== undefined && sessionIds.has(attempt.sessionId)))
+    );
+  });
 }

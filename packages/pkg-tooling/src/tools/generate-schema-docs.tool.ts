@@ -6,7 +6,11 @@ const root = Deno.cwd();
 const databasePath =
   Deno.env.get("SCHEMA_DOCS_DATABASE") || join(root, ".cache/schema-docs/editorial.sqlite");
 
-const outputPath = Deno.env.get("SCHEMA_DOCS_OUTPUT") || join(root, ".cache/schema-docs/site");
+const requestedOutputPath = Deno.env.get("SCHEMA_DOCS_OUTPUT");
+
+const outputPath = requestedOutputPath || join(root, ".cache/schema-docs/site-staging");
+
+const publishedOutputPath = requestedOutputPath || join(root, ".cache/schema-docs/site");
 
 const migrationsDirectory = join(root, "packages/thedata/dbmate/migrations");
 
@@ -36,11 +40,16 @@ export async function run(command: string, args: string[]) {
     cwd: root,
     stdout: "piped",
     stderr: "piped",
-  }).output();
+  })
+    .output();
 
-  const stdout = new TextDecoder().decode(result.stdout).trim();
+  const stdout = new TextDecoder()
+    .decode(result.stdout)
+    .trim();
 
-  const stderr = new TextDecoder().decode(result.stderr).trim();
+  const stderr = new TextDecoder()
+    .decode(result.stderr)
+    .trim();
 
   if (!result.success) {
     throw new Error(
@@ -49,7 +58,7 @@ export async function run(command: string, args: string[]) {
   }
 
   if (stdout) {
-    console.log(stdout);
+    console.info(stdout);
   }
 }
 
@@ -67,10 +76,10 @@ await removeIfPresent(outputPath);
 
 await Deno.mkdir(dirname(databasePath), { recursive: true });
 
-await Deno.mkdir(outputPath, { recursive: true });
-
 const SQL = await initSqlJs({
-  locateFile: (file: string) => join(root, "node_modules/sql.js/dist", file),
+  locateFile: (file: string) => {
+    return join(root, "node_modules/sql.js/dist", file);
+  },
 });
 
 const emptyDatabase = new SQL.Database();
@@ -88,32 +97,84 @@ await run(dbmate, [
   "up",
 ]);
 
-await run("mise", [
-  "exec",
-  "--",
-  "java",
-  "-jar",
-  schemaspyJar,
-  "-t",
-  schemaspyType,
-  "-u",
-  "schema-docs",
-  "-cat",
-  "%",
-  "-s",
-  "main",
-  "-dp",
-  sqliteJdbcJar,
-  "-db",
-  databasePath,
-  "-o",
-  outputPath,
-  "-vizjs",
-  "-norows",
-]);
+let successfulOutputPath = outputPath;
 
-const indexPath = resolve(outputPath, "index.html");
+let lastSchemaSpyError = "";
+
+for (let attempt = 1; attempt <= 3; attempt += 1) {
+  const attemptOutputPath = outputPath;
+
+  await removeIfPresent(attemptOutputPath);
+
+  await Deno.mkdir(attemptOutputPath, { recursive: true });
+
+  try {
+    const javaHome = Deno.env.get("JAVA_HOME");
+
+    const javaExecutable = javaHome ? join(javaHome, "bin/java") : "java";
+
+    const javaEnvironment = Object.fromEntries(
+      Object.entries(Deno.env.toObject())
+        .filter(([name]) => {
+          return ["PATH", "HOME", "LANG", "LC_ALL", "TZ", "TMPDIR"].includes(name);
+        }),
+    );
+
+    const schemaSpyCommand = new Deno.Command(javaExecutable, {
+      args: [
+        "-jar",
+        schemaspyJar,
+        "-t",
+        schemaspyType,
+        "-u",
+        "schema-docs",
+        "-cat",
+        "%",
+        "-s",
+        "main",
+        "-dp",
+        sqliteJdbcJar,
+        "-db",
+        databasePath,
+        "-o",
+        attemptOutputPath,
+      ],
+      cwd: root,
+      env: javaEnvironment,
+      stdout: "inherit",
+      stderr: "inherit",
+    });
+
+    const schemaSpyProcess = schemaSpyCommand.spawn();
+
+    const schemaSpyStatus = await schemaSpyProcess.status;
+
+    if (!schemaSpyStatus.success) {
+      throw new Error(`Falha ao executar java (código ${schemaSpyStatus.code}).`);
+    }
+
+    successfulOutputPath = attemptOutputPath;
+
+    break;
+  } catch (error) {
+    lastSchemaSpyError = error instanceof Error ? error.message : String(error);
+
+    if (attempt === 3) {
+      throw new Error(`SchemaSpy falhou após 3 tentativas.\n${lastSchemaSpyError}`);
+    }
+
+    await removeIfPresent(attemptOutputPath);
+  }
+}
+
+if (!requestedOutputPath) {
+  await removeIfPresent(publishedOutputPath);
+
+  await Deno.rename(successfulOutputPath, publishedOutputPath);
+}
+
+const indexPath = resolve(publishedOutputPath, "index.html");
 
 await Deno.stat(indexPath);
 
-console.log(`Documentação SchemaSpy gerada em ${indexPath}`);
+console.info(`Documentação SchemaSpy gerada em ${indexPath}`);

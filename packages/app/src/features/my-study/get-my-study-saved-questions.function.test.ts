@@ -12,6 +12,7 @@ describe("getMyStudySavedQuestions", () => {
       ],
     });
 
-    expect(questions[0]?.id).toBe(42);
+    expect(questions[0]?.id)
+      .toBe(42);
   });
 });

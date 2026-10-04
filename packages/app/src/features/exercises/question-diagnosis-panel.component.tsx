@@ -41,9 +41,9 @@ export function QuestionDiagnosisPanel(props: QuestionDiagnosisPanelProps) {
     <UIContentGroup variant="tight">
       <UITypography variant="h6">{t("exercise.diagnosisLabel")}</UITypography>
       <UITypography>{t("exercise.diagnosisHint")}</UITypography>
-      {diagnosisOptions.map((option) => (
-        <DiagnosisOption key={option.code} option={option} onSelect={handleDiagnosis} />
-      ))}
+      {diagnosisOptions.map((option) => {
+        return <DiagnosisOption key={option.code} option={option} onSelect={handleDiagnosis} />;
+      })}
       {diagnosisSaved ? <QuestionDiagnosisSaved /> : null}
     </UIContentGroup>
   );

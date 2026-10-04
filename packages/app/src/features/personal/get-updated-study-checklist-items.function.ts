@@ -5,10 +5,12 @@ export function getUpdatedStudyChecklistItems(
   input: UpdateStudyChecklistContentInput,
   previousItems: StudyChecklistItem[],
 ): StudyChecklistItem[] {
-  return input.items.map((label, position) => ({
-    completed: previousItems[position]?.completed ?? false,
-    id: previousItems[position]?.id ?? input.itemIds[position],
-    label,
-    position,
-  }));
+  return input.items.map((label, position) => {
+    return {
+      completed: previousItems[position]?.completed ?? false,
+      id: previousItems[position]?.id ?? input.itemIds[position],
+      label,
+      position,
+    };
+  });
 }

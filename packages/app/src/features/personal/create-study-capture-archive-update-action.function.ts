@@ -5,12 +5,14 @@ import type { AsyncAction } from "../../types/async-action.type";
 export function createStudyCaptureArchiveUpdateAction(
   input: PersonalWorkspaceActionsInput,
 ): AsyncAction<[string], void> {
-  return async (id: string): Promise<void> =>
-    input.save(
+  return async (id: string): Promise<void> => {
+    return input.save(
       updateStudyCaptureArchive({
         workspace: input.workspace,
         id,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
       }),
     );
+  };
 }

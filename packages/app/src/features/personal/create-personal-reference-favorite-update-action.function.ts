@@ -5,12 +5,14 @@ import type { AsyncAction } from "../../types/async-action.type";
 export function createPersonalReferenceFavoriteUpdateAction(
   input: PersonalWorkspaceActionsInput,
 ): AsyncAction<[string], void> {
-  return async (id: string): Promise<void> =>
-    input.save(
+  return async (id: string): Promise<void> => {
+    return input.save(
       updatePersonalReferenceFavorite({
         workspace: input.workspace,
         id,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
       }),
     );
+  };
 }

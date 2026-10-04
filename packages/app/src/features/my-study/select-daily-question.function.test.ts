@@ -12,7 +12,8 @@ describe("seleção da questão do dia", () => {
   it("seleciona uma questão de forma determinística", () => {
     const date = new Date("2026-10-03T12:00:00.000Z");
 
-    expect(selectDailyQuestion({ content, date })).toEqual(selectDailyQuestion({ content, date }));
+    expect(selectDailyQuestion({ content, date }))
+      .toEqual(selectDailyQuestion({ content, date }));
   });
 
   it("retorna vazio quando não há questões publicadas", () => {
@@ -21,6 +22,7 @@ describe("seleção da questão do dia", () => {
         content: [content[0]],
         date: new Date("2026-10-03T12:00:00.000Z"),
       }),
-    ).toBeNull();
+    )
+      .toBeNull();
   });
 });

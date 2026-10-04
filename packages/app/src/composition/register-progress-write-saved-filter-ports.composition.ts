@@ -10,17 +10,25 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function createProgressWriteSavedFilterPortBindings(container: Container): void {
-  const getProgressStore = (): ProgressStorageContract =>
-    resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
+  const getProgressStore = (): ProgressStorageContract => {
+    return resolvePort<ProgressStorageContract>(
+      container,
+      applicationDependencyTokens.progressStore,
+    );
+  };
 
   const bindings: PortFactoryBinding[] = [
     [
       applicationDependencyTokens.saveSavedCatalogFilter,
-      () => new SaveSavedCatalogFilterAdapter(getProgressStore()),
+      () => {
+        return new SaveSavedCatalogFilterAdapter(getProgressStore());
+      },
     ],
     [
       applicationDependencyTokens.deleteSavedCatalogFilter,
-      () => new DeleteSavedCatalogFilterAdapter(getProgressStore()),
+      () => {
+        return new DeleteSavedCatalogFilterAdapter(getProgressStore());
+      },
     ],
   ];
 

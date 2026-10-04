@@ -9,7 +9,8 @@ export function createFocusViewModelActions(
   input: FocusViewModelActionDependencies,
 ): Pick<FocusViewModel, "pause" | "resume" | "start" | "stop" | "reload"> {
   const start = async (contentKey?: string): Promise<void> => {
-    const session = createFocusSession(input.createId(), new Date().toISOString(), contentKey);
+    const session = createFocusSession(input.createId(), new Date()
+      .toISOString(), contentKey);
 
     await input.save(session);
   };

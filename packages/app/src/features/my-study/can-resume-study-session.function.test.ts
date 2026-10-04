@@ -11,7 +11,8 @@ describe("canResumeStudySession", () => {
       status: "active",
     };
 
-    expect(canResumeStudySession(session)).toBe(true);
+    expect(canResumeStudySession(session))
+      .toBe(true);
   });
 
   it("rejects completed sessions and sessions without questions", () => {
@@ -28,8 +29,10 @@ describe("canResumeStudySession", () => {
       status: "paused",
     };
 
-    expect(canResumeStudySession(completed)).toBe(false);
+    expect(canResumeStudySession(completed))
+      .toBe(false);
 
-    expect(canResumeStudySession(empty)).toBe(false);
+    expect(canResumeStudySession(empty))
+      .toBe(false);
   });
 });

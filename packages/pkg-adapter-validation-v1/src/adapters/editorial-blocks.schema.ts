@@ -19,31 +19,29 @@ const baseBlock = { type: string() };
 
 const safeEditorialText = pipe(
   string(),
-  check(
-    (value) => !/<\s*(?:script|style|iframe|object|embed|form)\b|javascript\s*:/iu.test(value),
-    "Editorial text contains a forbidden executable or embedded pattern.",
-  ),
+  check((value) => {
+    return !/<\s*(?:script|style|iframe|object|embed|form)\b|javascript\s*:/iu.test(value);
+  }, "Editorial text contains a forbidden executable or embedded pattern."),
 );
 
 const localImageSource = pipe(
   string(),
   minLength(1),
-  check(
-    (value) => /^(?:\/|\.\/)[^?#]+\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#].*)?$/iu.test(value),
-    "Editorial images must use a local published asset.",
-  ),
+  check((value) => {
+    return /^(?:\/|\.\/)[^?#]+\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#].*)?$/iu.test(value);
+  }, "Editorial images must use a local published asset."),
 );
 
 const controlledVideoUrl = pipe(
   string(),
-  check(
-    (value) =>
+  check((value) => {
+    return (
       /^(?:\/|\.\/)[^?#]+\.(?:mp4|webm|ogg)(?:[?#].*)?$/iu.test(value) ||
       /^https:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/|vimeo\.com\/|player\.vimeo\.com\/video\/)[^\s]+$/iu.test(
         value,
-      ),
-    "Editorial videos must use a local asset or an approved HTTPS provider.",
-  ),
+      )
+    );
+  }, "Editorial videos must use a local asset or an approved HTTPS provider."),
 );
 
 const chartValue = union([string(), number(), boolean(), array(union([string(), number()]))]);

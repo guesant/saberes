@@ -29,7 +29,9 @@ export function StudyCaptureItem(props: StudyCaptureItemProps) {
     return (
       <StudyCaptureEditing
         capture={props.capture}
-        onCancel={() => setEditing(false)}
+        onCancel={() => {
+          return setEditing(false);
+        }}
         onSave={save}
       />
     );
@@ -38,10 +40,18 @@ export function StudyCaptureItem(props: StudyCaptureItemProps) {
   return (
     <StudyCaptureDisplay
       capture={props.capture}
-      onArchive={() => props.onUpdateArchive(props.capture.id)}
-      onDelete={() => props.onDelete(props.capture.id)}
-      onEdit={() => setEditing(true)}
-      onUpdateCompletion={() => props.onUpdateCompletion(props.capture.id)}
+      onArchive={() => {
+        return props.onUpdateArchive(props.capture.id);
+      }}
+      onDelete={() => {
+        return props.onDelete(props.capture.id);
+      }}
+      onEdit={() => {
+        return setEditing(true);
+      }}
+      onUpdateCompletion={() => {
+        return props.onUpdateCompletion(props.capture.id);
+      }}
     />
   );
 }

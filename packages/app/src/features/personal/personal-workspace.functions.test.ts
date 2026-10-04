@@ -24,15 +24,20 @@ describe("personal workspace creation", () => {
   it("adds private records without changing existing collections", () => {
     const result = createPersonalWorkspaceTestFixture();
 
-    expect(result.notes).toHaveLength(1);
+    expect(result.notes)
+      .toHaveLength(1);
 
-    expect(result.checklists[0].items[0].completed).toBe(false);
+    expect(result.checklists[0].items[0].completed)
+      .toBe(false);
 
-    expect(result.captures[0].completed).toBe(false);
+    expect(result.captures[0].completed)
+      .toBe(false);
 
-    expect(result.references[0].source).toBe("https://example.com");
+    expect(result.references[0].source)
+      .toBe("https://example.com");
 
-    expect(emptyWorkspace.notes).toHaveLength(0);
+    expect(emptyWorkspace.notes)
+      .toHaveLength(0);
   });
 });
 
@@ -48,23 +53,32 @@ describe("personal workspace archive", () => {
 
     const withoutReference = deletePersonalReference(workspace, "reference-1");
 
-    expect(withoutNote.notes).toHaveLength(1);
+    expect(withoutNote.notes)
+      .toHaveLength(1);
 
-    expect(withoutNote.notes[0].archived).toBe(true);
+    expect(withoutNote.notes[0].archived)
+      .toBe(true);
 
-    expect(withoutNote.references).toHaveLength(1);
+    expect(withoutNote.references)
+      .toHaveLength(1);
 
-    expect(withoutChecklist.checklists).toHaveLength(1);
+    expect(withoutChecklist.checklists)
+      .toHaveLength(1);
 
-    expect(withoutChecklist.checklists[0].archived).toBe(true);
+    expect(withoutChecklist.checklists[0].archived)
+      .toBe(true);
 
-    expect(withoutCapture.captures).toHaveLength(1);
+    expect(withoutCapture.captures)
+      .toHaveLength(1);
 
-    expect(withoutCapture.captures[0].archived).toBe(true);
+    expect(withoutCapture.captures[0].archived)
+      .toBe(true);
 
-    expect(withoutReference.references).toHaveLength(1);
+    expect(withoutReference.references)
+      .toHaveLength(1);
 
-    expect(withoutReference.references[0].archived).toBe(true);
+    expect(withoutReference.references[0].archived)
+      .toBe(true);
   });
 });
 
@@ -88,13 +102,17 @@ describe("personal workspace restore", () => {
       "reference-1",
     );
 
-    expect(restored.notes[0].archived).toBe(false);
+    expect(restored.notes[0].archived)
+      .toBe(false);
 
-    expect(restored.checklists[0].archived).toBe(false);
+    expect(restored.checklists[0].archived)
+      .toBe(false);
 
-    expect(restored.captures[0].archived).toBe(false);
+    expect(restored.captures[0].archived)
+      .toBe(false);
 
-    expect(restored.references[0].archived).toBe(false);
+    expect(restored.references[0].archived)
+      .toBe(false);
   });
 });
 
@@ -104,13 +122,17 @@ describe("personal workspace updates", () => {
       createPersonalWorkspaceTestFixture(),
     );
 
-    expect(updatedReference.notes[0].id).toBe("note-1");
+    expect(updatedReference.notes[0].id)
+      .toBe("note-1");
 
-    expect(updatedReference.notes[0].title).toBe("Novo título");
+    expect(updatedReference.notes[0].title)
+      .toBe("Novo título");
 
-    expect(updatedReference.captures[0].description).toBe("Nova descrição");
+    expect(updatedReference.captures[0].description)
+      .toBe("Nova descrição");
 
-    expect(updatedReference.references[0].source).toBe("https://example.org");
+    expect(updatedReference.references[0].source)
+      .toBe("https://example.org");
   });
 });
 
@@ -124,11 +146,14 @@ describe("personal capture ordering", () => {
       { ...workspace.captures[0], id: "completed", completed: true, dueDate: "2026-10-04" },
     ]);
 
-    expect(ordered[0].id).toBe("high");
+    expect(ordered[0].id)
+      .toBe("high");
 
-    expect(ordered[1].id).toBe("low");
+    expect(ordered[1].id)
+      .toBe("low");
 
-    expect(ordered[2].id).toBe("completed");
+    expect(ordered[2].id)
+      .toBe("completed");
   });
 });
 
@@ -146,16 +171,22 @@ describe("personal checklist ordering", () => {
       workspace,
     });
 
-    expect(moved.checklists[0].items[0].id).toBe(firstChecklist.items[1].id);
+    expect(moved.checklists[0].items[0].id)
+      .toBe(firstChecklist.items[1].id);
 
-    expect(moved.checklists[0].items[1].id).toBe(firstChecklist.items[0].id);
+    expect(moved.checklists[0].items[1].id)
+      .toBe(firstChecklist.items[0].id);
 
-    expect(moved.checklists[0].items[0].completed).toBe(false);
+    expect(moved.checklists[0].items[0].completed)
+      .toBe(false);
 
-    expect(moved.checklists[0].items[1].completed).toBe(false);
+    expect(moved.checklists[0].items[1].completed)
+      .toBe(false);
 
-    expect(moved.checklists[0].items[0].position).toBe(0);
+    expect(moved.checklists[0].items[0].position)
+      .toBe(0);
 
-    expect(moved.checklists[0].items[1].position).toBe(1);
+    expect(moved.checklists[0].items[1].position)
+      .toBe(1);
   });
 });

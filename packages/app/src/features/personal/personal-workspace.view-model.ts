@@ -22,13 +22,19 @@ export function usePersonalWorkspaceViewModel(): PersonalWorkspaceViewModel {
 
   const workspace = query.data ?? emptyWorkspace;
 
-  const save = async (next: PersonalWorkspace): Promise<void> =>
-    mutation.mutateAsync(next).then(() => undefined);
+  const save = async (next: PersonalWorkspace): Promise<void> => {
+    return mutation.mutateAsync(next)
+      .then(() => {
+        return undefined;
+      });
+  };
 
   const actions = createPersonalWorkspaceActions({
     workspace,
     save,
-    generateId: (): string => services.platform.ids.execute(),
+    generateId: (): string => {
+      return services.platform.ids.execute();
+    },
   });
 
   return {
@@ -37,6 +43,11 @@ export function usePersonalWorkspaceViewModel(): PersonalWorkspaceViewModel {
     error: query.error ?? null,
     saveError: mutation.error,
     ...actions,
-    reload: async (): Promise<void> => query.refetch().then(() => undefined),
+    reload: async (): Promise<void> => {
+      return query.refetch()
+        .then(() => {
+          return undefined;
+        });
+    },
   };
 }

@@ -8,9 +8,10 @@ export type PerformanceDiagnosisRowsProps = {
 };
 
 export function PerformanceDiagnosisRows(props: PerformanceDiagnosisRowsProps) {
-  return props.stats
-    .slice(0, 5)
-    .map((stat) => (
-      <PerformanceDiagnosisStatRow key={stat.code} onDecision={props.onDecision} stat={stat} />
-    ));
+  return props.stats.slice(0, 5)
+    .map((stat) => {
+      return (
+        <PerformanceDiagnosisStatRow key={stat.code} onDecision={props.onDecision} stat={stat} />
+      );
+    });
 }

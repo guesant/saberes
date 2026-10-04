@@ -20,7 +20,9 @@ export function GoalsReadyView(props: GoalsReadyViewProps) {
         <UITypography color="text.secondary">{t("goals.description")}</UITypography>
       </UIContentGroup>
       <GoalForm
-        existingTitles={props.viewModel.goals.map((goal) => goal.title)}
+        existingTitles={props.viewModel.goals.map((goal) => {
+          return goal.title;
+        })}
         onCreate={props.viewModel.create}
       />
       <GoalSaveError error={props.viewModel.saveError} />

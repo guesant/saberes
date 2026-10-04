@@ -13,23 +13,31 @@ export function PerformanceDiagnosisStatActions(props: PerformanceDiagnosisStatA
   return (
     <UIContentGroup variant="inline">
       <UIButton
-        onClick={() => props.onSelect(PedagogicalAction.Theory)}
+        onClick={() => { return props.onSelect(PedagogicalAction.Theory); }}
         size="small"
         variant="text"
       >
         {t("performance.actions.theory")}
       </UIButton>
       <UIButton
-        onClick={() => props.onSelect(PedagogicalAction.Practice)}
+        onClick={() => { return props.onSelect(PedagogicalAction.Practice); }}
         size="small"
         variant="text"
       >
         {t("performance.actions.practice")}
       </UIButton>
-      <UIButton onClick={() => props.onSelect("deferred")} size="small" variant="text">
+      <UIButton
+        onClick={() => { return props.onSelect("deferred"); }}
+        size="small"
+        variant="text"
+      >
         {t("performance.deferAction")}
       </UIButton>
-      <UIButton onClick={() => props.onSelect("ignored")} size="small" variant="text">
+      <UIButton
+        onClick={() => { return props.onSelect("ignored"); }}
+        size="small"
+        variant="text"
+      >
         {t("performance.ignoreAction")}
       </UIButton>
     </UIContentGroup>

@@ -8,5 +8,9 @@ export type GetCourseStartedInput = {
 export function getCourseStarted(input: GetCourseStartedInput): boolean {
   const contentKey = `course:${String(input.slug)}`;
 
-  return Boolean(input.records?.some((record) => record.contentKey === contentKey));
+  return Boolean(
+    input.records?.some((record) => {
+      return record.contentKey === contentKey;
+    }),
+  );
 }

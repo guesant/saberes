@@ -7,7 +7,13 @@ export type UIMetricGridProps = {
 
 export function UIMetricGrid(props: UIMetricGridProps): ReactElement {
   return (
-    <MuiGrid container spacing={2}>
+    <MuiGrid
+      container
+      data-ui-closure="closed"
+      data-ui-gap="md"
+      data-ui-layout="equal-grid"
+      spacing={2}
+    >
       {props.children}
     </MuiGrid>
   );

@@ -12,5 +12,6 @@ export function loadLessonSectionView(input: LoadLessonSectionViewInput): void {
     return;
   }
 
-  document.getElementById(`section-${sectionId}`)?.scrollIntoView({ block: "start" });
+  document.getElementById(`section-${sectionId}`)
+    ?.scrollIntoView({ block: "start" });
 }

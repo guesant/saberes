@@ -16,11 +16,13 @@ const goal: StudyGoal = {
 
 describe("getStudyGoalTiming", () => {
   it("identifies an active goal that is on track", () => {
-    expect(getStudyGoalTiming(goal, new Date("2026-01-05T10:00:00.000Z"))).toBe("on_track");
+    expect(getStudyGoalTiming(goal, new Date("2026-01-05T10:00:00.000Z")))
+      .toBe("on_track");
   });
 
   it("identifies an active goal that is overdue", () => {
-    expect(getStudyGoalTiming(goal, new Date("2026-01-11T10:00:00.000Z"))).toBe("overdue");
+    expect(getStudyGoalTiming(goal, new Date("2026-01-11T10:00:00.000Z")))
+      .toBe("overdue");
   });
 
   it("identifies completed and undated goals", () => {
@@ -29,8 +31,10 @@ describe("getStudyGoalTiming", () => {
         { ...goal, status: StudyGoalStatus.Completed },
         new Date("2026-01-11T10:00:00.000Z"),
       ),
-    ).toBe("completed");
+    )
+      .toBe("completed");
 
-    expect(getStudyGoalTiming({ ...goal, dueAt: undefined }, new Date())).toBe("no_deadline");
+    expect(getStudyGoalTiming({ ...goal, dueAt: undefined }, new Date()))
+      .toBe("no_deadline");
   });
 });

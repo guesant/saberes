@@ -8,10 +8,12 @@ describe("getQuestionContentKey", () => {
         { question: { occurrence_id: 42 }, options: [], parts: [], related: [], topics: [] },
         "question:old",
       ),
-    ).toBe("question:42");
+    )
+      .toBe("question:42");
   });
 
   it("usa o caminho informado quando o conteúdo ainda não foi carregado", () => {
-    expect(getQuestionContentKey(null, "question:42")).toBe("question:42");
+    expect(getQuestionContentKey(null, "question:42"))
+      .toBe("question:42");
   });
 });

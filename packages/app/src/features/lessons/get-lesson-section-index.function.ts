@@ -6,7 +6,9 @@ export type GetLessonSectionIndexInput = {
 };
 
 export function getLessonSectionIndex(input: GetLessonSectionIndexInput): number | undefined {
-  const record = input.records?.find((item) => item.contentKey === input.contentKey);
+  const record = input.records?.find((item) => {
+    return item.contentKey === input.contentKey;
+  });
 
   const sectionIndex = Number(record?.sectionIndex);
 

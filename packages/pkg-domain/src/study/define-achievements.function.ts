@@ -39,10 +39,12 @@ export function defineAchievements(stats: AchievementStats = {}) {
     ["review-ten", "Revisão ativa", "Revise 10 questões erradas.", stats.reviews || 0, 10],
   ] as const;
 
-  return definitions.map(([key, title, description, value, threshold]) => ({
-    key,
-    title,
-    description,
-    isUnlocked: value >= threshold,
-  }));
+  return definitions.map(([key, title, description, value, threshold]) => {
+    return {
+      key,
+      title,
+      description,
+      isUnlocked: value >= threshold,
+    };
+  });
 }

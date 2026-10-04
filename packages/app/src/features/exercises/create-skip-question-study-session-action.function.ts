@@ -11,14 +11,16 @@ export interface SkipQuestionStudySessionInput {
 export function createSkipQuestionStudySessionAction(
   saveSession: SaveQuestionStudySessionAction,
 ): AsyncAction<[SkipQuestionStudySessionInput], void> {
-  return (input: SkipQuestionStudySessionInput): Promise<void> =>
-    saveSession(
+  return (input: SkipQuestionStudySessionInput): Promise<void> => {
+    return saveSession(
       updateQuestionStudySession({
-        completedAt: new Date().toISOString(),
+        completedAt: new Date()
+          .toISOString(),
         correct: null,
         questionKey: input.questionKey,
         session: input.session,
         skipped: true,
       }),
     );
+  };
 }

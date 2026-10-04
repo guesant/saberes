@@ -12,6 +12,7 @@ describe("getReviewLoadSummary", () => {
       new Date("2026-10-04T12:00:00.000Z"),
     );
 
-    expect(result).toEqual({ due: 1, upcoming: 1, suspended: 1, total: 3 });
+    expect(result)
+      .toEqual({ due: 1, upcoming: 1, suspended: 1, total: 3 });
   });
 });

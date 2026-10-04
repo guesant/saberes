@@ -1,38 +1,65 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
-  "entry": [
-    ".config/vite.config.ts",
-    "packages/pkg-tooling/src/tools/**/*.ts",
-    "packages/pkg-tooling-eslint/src/**/*.mjs",
-    ".local/operator/**/*.ts",
-    "packages/app/src/main.setup.ts",
-    "packages/app/src/**/*.test.{ts,tsx}"
-  ],
-  "project": [
-    ".config/vite.config.ts",
-    "packages/pkg-tooling/src/tools/**/*.ts",
-    "packages/pkg-tooling-eslint/src/**/*.mjs",
-    ".local/operator/**/*.ts",
-    "packages/app/src/**/*.{ts,tsx}",
-    "packages/pkg-domain/src/**/*.{ts,tsx}",
-    "packages/pkg-application/src/**/*.{ts,tsx}",
-    "packages/pkg-adapter-data-v1/src/**/*.{ts,tsx}",
-    "packages/pkg-ui/src/**/*.{ts,tsx}"
-  ],
-  "ignore": [
-    "packages/app/src/content/schema.ts",
-    "packages/app/src/hooks.ts",
-    "packages/app/src/test/setup.test-support.ts",
-    "packages/pkg-adapter-data-v1/src/storage/progress.database.ts"
-  ],
-  "ignoreDependencies": [
-    "@ast-grep/cli",
-    "@fontsource/inter",
-    "@types/cytoscape",
-    "@types/node",
-    "@types/react",
-    "@types/react-dom",
-    "@types/three",
-    "workbox-window"
-  ]
+  "workspaces": {
+    ".": {
+      "entry": [".config/vite.config.ts", ".local/operator/**/*.ts"],
+      "project": [".config/vite.config.ts", ".local/operator/**/*.ts"],
+      "ignoreDependencies": [".*"]
+    },
+    "packages/app": {
+      "entry": ["src/main.setup.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"],
+      "ignore": [
+        "src/content/schema.ts",
+        "src/hooks.ts",
+        "src/test/setup.test-support.ts",
+        "src/components/navigation-button.component.tsx",
+        "src/features/exercises/question-study-session-progress.interface.ts",
+        "src/features/focus/use-save-focus-session-mutation.hook.ts",
+        "src/features/personal/create-save-study-checklist-content-action.function.ts",
+        "src/features/personal/save-study-checklist-content-action.interface.ts",
+        "src/features/personal/save-study-checklist-content-input.interface.ts"
+      ],
+      "ignoreIssues": {
+        "src/features/*/*.view-model.ts": ["types"]
+      }
+    },
+    "packages/pkg-domain": {
+      "entry": ["src/index.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "packages/pkg-application": {
+      "entry": ["src/index.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "packages/pkg-adapter-data-v1": {
+      "entry": ["src/index.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"],
+      "ignore": ["src/storage/progress.database.ts", "src/adapters/content/sqljs/database/index.ts"]
+    },
+    "packages/pkg-adapter-graphology-v1": {
+      "entry": ["src/index.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "packages/pkg-adapter-validation-v1": {
+      "entry": ["src/index.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "packages/pkg-ui": {
+      "entry": ["src/index.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "packages/pkg-ui-content": {
+      "entry": ["src/index.ts", "src/**/*.test.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "packages/pkg-tooling": {
+      "entry": ["src/tools/**/*.ts"],
+      "project": ["src/**/*.ts"]
+    },
+    "packages/pkg-tooling-eslint": {
+      "entry": ["src/**/*.mjs"],
+      "project": ["src/**/*.mjs"]
+    }
+  }
 }

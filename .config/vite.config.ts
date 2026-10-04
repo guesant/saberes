@@ -7,7 +7,9 @@ import { defineConfig } from "vitest/config";
 
 const base = process.env.VITE_BASE_PATH || "/";
 
-export const asset = (name: string) => `${base}${name}`.replace("//", "/");
+export const asset = (name: string) => {
+  return `${base}${name}`.replace("//", "/");
+};
 
 const localContentPath = path.resolve(process.cwd(), ".local/content/content.sqlite");
 
@@ -18,11 +20,11 @@ const sqlWasmPath = path.resolve(process.cwd(), "node_modules/sql.js/dist/sql-wa
 const staticCopyTargets = [
   ...(fs.existsSync(localContentPath)
     ? [
-        {
-          src: localContentPath,
-          dest: "data",
-        },
-      ]
+      {
+        src: localContentPath,
+        dest: "data",
+      },
+    ]
     : []),
   {
     src: sqlWasmPath,
@@ -30,11 +32,11 @@ const staticCopyTargets = [
   },
   ...(fs.existsSync(schemaDocsPath)
     ? [
-        {
-          src: `${schemaDocsPath}/**/*`,
-          dest: "-/backstage/database/schema",
-        },
-      ]
+      {
+        src: `${schemaDocsPath}/**/*`,
+        dest: "-/backstage/database/schema",
+      },
+    ]
     : []),
 ];
 
@@ -162,7 +164,9 @@ export default defineConfig({
         skipWaiting: true,
         runtimeCaching: [
           {
-            urlPattern: ({ url }) => url.hostname === "raw.githubusercontent.com",
+            urlPattern: ({ url }) => {
+              return url.hostname === "raw.githubusercontent.com";
+            },
             handler: "CacheFirst",
             options: {
               cacheName: "saberes-external-content",

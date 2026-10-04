@@ -16,9 +16,11 @@ describe("alternativa textual do gráfico", () => {
       />,
     );
 
-    expect(screen.getByText("Alternativa textual")).toBeTruthy();
+    expect(screen.getByText("Alternativa textual"))
+      .toBeTruthy();
 
-    expect(screen.getByText(/series/u)).toBeTruthy();
+    expect(screen.getByText(/series/u))
+      .toBeTruthy();
   });
 });
 
@@ -35,9 +37,11 @@ describe("alternativa textual do mapa", () => {
       />,
     );
 
-    expect(screen.getByText(/Tópicos: 1/u)).toBeTruthy();
+    expect(screen.getByText(/Tópicos: 1/u))
+      .toBeTruthy();
 
-    expect(screen.getByText(/topic-a → topic-b/u)).toBeTruthy();
+    expect(screen.getByText(/topic-a → topic-b/u))
+      .toBeTruthy();
   });
 });
 
@@ -56,8 +60,10 @@ describe("alternativa textual da cena parametrizada", () => {
       />,
     );
 
-    expect(screen.getByText(/Forma: cubo/u)).toBeTruthy();
+    expect(screen.getByText(/Forma: cubo/u))
+      .toBeTruthy();
 
-    expect(screen.getByText(/Escala: 2/u)).toBeTruthy();
+    expect(screen.getByText(/Escala: 2/u))
+      .toBeTruthy();
   });
 });

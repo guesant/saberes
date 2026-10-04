@@ -23,22 +23,12 @@ export function createProgressWriteDependencies(container: Container): void {
 
   registerProgressWritePersonalWorkspacePorts(container);
 
-  const getProgressStore = (): ProgressStorageContract =>
-    resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
+  const getProgressStore = (): ProgressStorageContract => { return resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore); };
 
   registerPortFactories(container, [
-    [
-      applicationDependencyTokens.saveAcademicDiscipline,
-      () => new SaveAcademicDisciplineAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.deleteAcademicDiscipline,
-      () => new DeleteAcademicDisciplineAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.saveFocusSession,
-      () => new SaveFocusSessionAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.saveStudyGoal, () => new SaveStudyGoalAdapter(getProgressStore())],
+    [applicationDependencyTokens.saveAcademicDiscipline, () => { return new SaveAcademicDisciplineAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.deleteAcademicDiscipline, () => { return new DeleteAcademicDisciplineAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveFocusSession, () => { return new SaveFocusSessionAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveStudyGoal, () => { return new SaveStudyGoalAdapter(getProgressStore()); }],
   ]);
 }

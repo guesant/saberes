@@ -6,8 +6,8 @@ export function restorePersonalReference(
 ): PersonalWorkspace {
   return {
     ...workspace,
-    references: workspace.references.map((reference) =>
-      reference.id === id ? { ...reference, archived: false } : reference,
-    ),
+    references: workspace.references.map((reference) => {
+      return reference.id === id ? { ...reference, archived: false } : reference;
+    }),
   };
 }

@@ -9,9 +9,9 @@ export type CourseModulesProps = {
 export function CourseModules(props: CourseModulesProps) {
   return (
     <UIContentGroup variant="content">
-      {props.modules.map((module) => (
-        <CourseModuleCard key={String(module.id)} module={module} items={props.items} />
-      ))}
+      {props.modules.map((module) => {
+        return <CourseModuleCard key={String(module.id)} module={module} items={props.items} />;
+      })}
     </UIContentGroup>
   );
 }

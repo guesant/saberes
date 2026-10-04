@@ -5,5 +5,7 @@ import type { AsyncAction } from "../../types/async-action.type";
 export function createStudyPlanReloadAction(
   input: CreateStudyPlanReloadActionInput,
 ): AsyncAction<[], void> {
-  return (): Promise<void> => reloadStudyPlanData(input);
+  return (): Promise<void> => {
+    return reloadStudyPlanData(input);
+  };
 }

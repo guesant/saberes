@@ -16,23 +16,26 @@ export type SaveQuestionPriorKnowledgeInput = {
 export async function saveQuestionPriorKnowledge(
   input: SaveQuestionPriorKnowledgeInput,
 ): Promise<void> {
-  const timestamp = new Date().toISOString();
+  const timestamp = new Date()
+    .toISOString();
 
   const masteryRecords = await input.services.progress.listTopicMastery.execute();
 
   await Promise.all(
     input.data.topics
       .map(getQuestionTopicContentKey)
-      .filter((contentKey): contentKey is string => contentKey !== null)
-      .map((contentKey) =>
-        input.services.progress.saveTopicMastery.execute({
+      .filter((contentKey): contentKey is string => {
+        return contentKey !== null;
+      })
+      .map((contentKey) => {
+        return input.services.progress.saveTopicMastery.execute({
           contentKey,
           data: createQuestionPriorKnowledgeRecord({
             existing: findStudyRecordByContentKey(masteryRecords, contentKey),
             status: input.status,
             timestamp,
           }),
-        }),
-      ),
+        });
+      }),
   );
 }

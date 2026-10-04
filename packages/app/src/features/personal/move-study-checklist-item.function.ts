@@ -5,15 +5,15 @@ import type { PersonalWorkspace } from "@guesant/saberes-application";
 export function moveStudyChecklistItem(input: MoveStudyChecklistItemInput): PersonalWorkspace {
   return {
     ...input.workspace,
-    checklists: input.workspace.checklists.map((checklist) =>
-      checklist.id === input.checklistId
+    checklists: input.workspace.checklists.map((checklist) => {
+      return checklist.id === input.checklistId
         ? moveStudyChecklist({
-            checklist,
-            direction: input.direction,
-            itemId: input.itemId,
-            now: input.now,
-          })
-        : checklist,
-    ),
+          checklist,
+          direction: input.direction,
+          itemId: input.itemId,
+          now: input.now,
+        })
+        : checklist;
+    }),
   };
 }

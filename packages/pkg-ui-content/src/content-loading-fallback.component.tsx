@@ -1,9 +1,9 @@
-import { UICircularProgress, UIStack } from "@guesant/saberes-ui";
+import { UICircularProgress, UIContentLoadingLayout } from "@guesant/saberes-ui";
 
 export function UIContentLoadingFallback() {
   return (
-    <UIStack alignItems="center" justifyContent="center" minHeight={120}>
+    <UIContentLoadingLayout>
       <UICircularProgress size={24} />
-    </UIStack>
+    </UIContentLoadingLayout>
   );
 }

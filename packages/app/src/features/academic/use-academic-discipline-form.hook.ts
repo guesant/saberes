@@ -19,11 +19,13 @@ export function useAcademicDisciplineForm(
 ): AcademicDisciplineFormState {
   const [values, setValues] = useState(initialValues);
 
-  const createAcademicFieldUpdater =
-    (field: keyof AcademicDisciplineFormValues) =>
-    (value: string): void => {
-      setValues((current) => ({ ...current, [field]: value }));
+  const createAcademicFieldUpdater = (field: keyof AcademicDisciplineFormValues) => {
+    return (value: string): void => {
+      setValues((current) => {
+        return { ...current, [field]: value };
+      });
     };
+  };
 
   const save = async (): Promise<void> => {
     if (!values.name.trim()) {

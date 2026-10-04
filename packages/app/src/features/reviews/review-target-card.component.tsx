@@ -16,7 +16,8 @@ export type ReviewTargetCardProps = {
 export function ReviewTargetCard(props: ReviewTargetCardProps) {
   const { target } = props;
 
-  const questionId = String(target.contentKey).replace("question:", "");
+  const questionId = String(target.contentKey)
+    .replace("question:", "");
 
   return (
     <UICard>

@@ -19,7 +19,9 @@ export function useQuestionStudySessionData(
   const sessionQuery = useQuery({
     queryKey: ["study-session", sessionId],
     enabled: Boolean(sessionId),
-    queryFn: () => services.progress.getSession.execute(sessionId || ""),
+    queryFn: () => {
+      return services.progress.getSession.execute(sessionId || "");
+    },
   });
 
   const session = sessionQuery.data || null;

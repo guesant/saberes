@@ -12,6 +12,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import sonarjs from "eslint-plugin-sonarjs";
 import architecture from "../packages/pkg-tooling-eslint/src/architecture.plugin.mjs";
 import importFormat from "../packages/pkg-tooling-eslint/src/import-format.plugin.mjs";
+import layout from "../packages/pkg-tooling-eslint/src/layout.plugin.mjs";
 
 const airbnbPackageDirectory = dirname(fileURLToPath(import.meta.resolve("eslint-config-airbnb")));
 
@@ -20,9 +21,15 @@ const compat = new FlatCompat({
   resolvePluginsRelativeTo: airbnbPackageDirectory,
 });
 
-const airbnbConfigs = compat
-  .config(airbnb)
-  .map((config) => Object.fromEntries(Object.entries(config).filter(([key]) => key !== "plugins")));
+const airbnbConfigs = compat.config(airbnb)
+  .map((config) => {
+    return Object.fromEntries(
+      Object.entries(config)
+        .filter(([key]) => {
+          return key !== "plugins";
+        }),
+    );
+  });
 
 const sourceFiles = ["**/*.{js,jsx,mjs,ts,tsx}"];
 
@@ -30,6 +37,11 @@ const presentationFiles = ["packages/app/src/**/*.{js,jsx,ts,tsx}"];
 
 const uiFiles = [
   "packages/pkg-ui/src/**/*.{js,jsx,ts,tsx}",
+  "packages/pkg-ui-content/src/**/*.{js,jsx,ts,tsx}",
+];
+
+const layoutProtectedFiles = [
+  "packages/app/src/**/*.{js,jsx,ts,tsx}",
   "packages/pkg-ui-content/src/**/*.{js,jsx,ts,tsx}",
 ];
 
@@ -98,6 +110,7 @@ const architectureRules = {
 
 const safetyRules = {
   ...architectureRules,
+  "arrow-body-style": ["error", "always"],
   curly: ["error", "all"],
   "import/first": "error",
   "import/extensions": [
@@ -134,6 +147,15 @@ const safetyRules = {
   "react/jsx-one-expression-per-line": "off",
   eqeqeq: ["error", "always"],
   "consistent-return": "error",
+  "@stylistic/arrow-parens": ["error", "always"],
+  "@stylistic/dot-location": ["error", "property"],
+  "@stylistic/indent": ["error", 2],
+  "@stylistic/newline-per-chained-call": [
+    "error",
+    {
+      ignoreChainWithDepth: 1,
+    },
+  ],
   "@stylistic/padding-line-between-statements": [
     "error",
     {
@@ -152,6 +174,7 @@ const safetyRules = {
       next: "directive",
     },
   ],
+  "@stylistic/semi": ["error", "always"],
 };
 
 const presentationRules = {
@@ -201,6 +224,7 @@ export default [
       boundaries,
       import: importPlugin,
       "import-format": importFormat,
+      layout,
       "@stylistic": stylistic,
       "jsx-a11y": jsxA11y,
       react,
@@ -589,6 +613,16 @@ export default [
     files: ["**/index.ts", "**/index.tsx"],
     rules: {
       "@stylistic/padding-line-between-statements": "off",
+    },
+  },
+  {
+    files: layoutProtectedFiles,
+    ignores: ["**/*.test.ts", "**/*.test.tsx"],
+    rules: {
+      "layout/no-style-definition-outside-ui": "error",
+      "layout/no-spacing-definition-outside-ui": "error",
+      "layout/no-layout-definition-outside-ui": "error",
+      "layout/no-negative-spacing-outside-ui": "error",
     },
   },
 ];

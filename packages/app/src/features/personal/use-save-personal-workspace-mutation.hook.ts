@@ -8,7 +8,9 @@ export function useSavePersonalWorkspaceMutation() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (workspace: PersonalWorkspace) => services.personal.save.execute(workspace),
+    mutationFn: (workspace: PersonalWorkspace) => {
+      return services.personal.save.execute(workspace);
+    },
     onSuccess: async () => {
       await queryClient.invalidateQueries({ queryKey: ["personal-workspace"] });
     },

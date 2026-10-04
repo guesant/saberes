@@ -21,35 +21,22 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function createStudyDependencies(container: Container): void {
-  const getProgressStore = (): ProgressStorageContract =>
-    resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
+  const getProgressStore = (): ProgressStorageContract => { return resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore); };
 
   const bindings: PortFactoryBinding[] = [
-    [applicationDependencyTokens.scheduleReview, () => new TsFsrsScheduleReviewAdapter()],
-    [applicationDependencyTokens.previewReview, () => new TsFsrsPreviewReviewAdapter()],
-    [
-      applicationDependencyTokens.recordStudyActivity,
-      () => new RecordStudyActivityAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.calculateTopicMastery, () => new CalculateTopicMasteryAdapter()],
-    [
-      applicationDependencyTokens.calculateAcademicMetrics,
-      () => new CalculateAcademicMetricsAdapter(),
-    ],
-    [applicationDependencyTokens.suggestDiagnosis, () => new SuggestDiagnosisAdapter()],
-    [applicationDependencyTokens.actionForDiagnosis, () => new ActionForDiagnosisAdapter()],
-    [applicationDependencyTokens.recommendNext, () => new RecommendNextAdapter()],
-    [applicationDependencyTokens.achievementDefinitions, () => new AchievementDefinitionsAdapter()],
-    [
-      applicationDependencyTokens.syncAchievements,
-      () => new SyncAchievementsAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.addStudyPoints,
-      () => new AddStudyPointsAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.clock, () => new DateFnsClockAdapter()],
-    [applicationDependencyTokens.ids, () => new CryptoIdAdapter()],
+    [applicationDependencyTokens.scheduleReview, () => { return new TsFsrsScheduleReviewAdapter(); }],
+    [applicationDependencyTokens.previewReview, () => { return new TsFsrsPreviewReviewAdapter(); }],
+    [applicationDependencyTokens.recordStudyActivity, () => { return new RecordStudyActivityAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.calculateTopicMastery, () => { return new CalculateTopicMasteryAdapter(); }],
+    [applicationDependencyTokens.calculateAcademicMetrics, () => { return new CalculateAcademicMetricsAdapter(); }],
+    [applicationDependencyTokens.suggestDiagnosis, () => { return new SuggestDiagnosisAdapter(); }],
+    [applicationDependencyTokens.actionForDiagnosis, () => { return new ActionForDiagnosisAdapter(); }],
+    [applicationDependencyTokens.recommendNext, () => { return new RecommendNextAdapter(); }],
+    [applicationDependencyTokens.achievementDefinitions, () => { return new AchievementDefinitionsAdapter(); }],
+    [applicationDependencyTokens.syncAchievements, () => { return new SyncAchievementsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.addStudyPoints, () => { return new AddStudyPointsAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.clock, () => { return new DateFnsClockAdapter(); }],
+    [applicationDependencyTokens.ids, () => { return new CryptoIdAdapter(); }],
   ];
 
   registerPortFactories(container, bindings);

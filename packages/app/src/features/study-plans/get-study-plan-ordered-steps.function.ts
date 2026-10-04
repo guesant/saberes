@@ -4,7 +4,11 @@ export function getStudyPlanOrderedSteps(
   steps: Array<Record<string, unknown>>,
   state: StudyPlanLocalState,
 ): Array<Record<string, unknown>> {
-  const byId = new Map(steps.map((step) => [String(step.id), step]));
+  const byId = new Map(
+    steps.map((step) => {
+      return [String(step.id), step];
+    }),
+  );
 
   const ordered = state.orderedStepIds.flatMap((id) => {
     const step = byId.get(id);
@@ -12,7 +16,9 @@ export function getStudyPlanOrderedSteps(
     return step ? [step] : [];
   });
 
-  const remaining = steps.filter((step) => !state.orderedStepIds.includes(String(step.id)));
+  const remaining = steps.filter((step) => {
+    return !state.orderedStepIds.includes(String(step.id));
+  });
 
   return [...ordered, ...remaining];
 }

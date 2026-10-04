@@ -39,7 +39,9 @@ export function LessonView() {
         onComplete={viewModel.saveProgress}
         onBookmark={viewModel.saveBookmark}
         onSectionChange={viewModel.saveSection}
-        onQuestion={(id) => navigate(`/questoes/${id}`)}
+        onQuestion={(id) => {
+          return navigate(`/questoes/${id}`);
+        }}
       />
     </>
   );

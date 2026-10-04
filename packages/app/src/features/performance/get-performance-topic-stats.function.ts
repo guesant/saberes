@@ -20,5 +20,7 @@ export function getPerformanceTopicStats(attempts: Attempt[]): PerformanceTopicS
     }
   }
 
-  return [...stats.values()].sort((left, right) => right.attempts - left.attempts);
+  return [...stats.values()].sort((left, right) => {
+    return right.attempts - left.attempts;
+  });
 }

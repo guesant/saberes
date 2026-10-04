@@ -8,7 +8,9 @@ export function useCatalogSavedFiltersQuery(): CatalogSavedFiltersQueryViewModel
 
   const query = useQuery({
     queryKey: ["catalog", "saved-filters"],
-    queryFn: () => services.progress.listSavedCatalogFilters.execute(),
+    queryFn: () => {
+      return services.progress.listSavedCatalogFilters.execute();
+    },
   });
 
   return {

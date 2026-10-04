@@ -9,13 +9,16 @@ export async function syncAchievements(
 
   await Promise.all(
     achievements
-      .filter((item) => item.isUnlocked)
-      .map((item) =>
-        storage.saveAchievement(`achievement:${item.key}`, {
+      .filter((item) => {
+        return item.isUnlocked;
+      })
+      .map((item) => {
+        return storage.saveAchievement(`achievement:${item.key}`, {
           ...item,
-          unlockedAt: new Date().toISOString(),
-        }),
-      ),
+          unlockedAt: new Date()
+            .toISOString(),
+        });
+      }),
   );
 
   return achievements;

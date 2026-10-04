@@ -9,10 +9,11 @@ describe("ValibotParseEditorialBlocksAdapter", () => {
       blocksJson: JSON.stringify([{ type: "summary", content: "Resumo" }]),
     });
 
-    expect(result).toEqual({
-      status: "valid",
-      blocks: [{ type: "summary", content: "Resumo" }],
-    });
+    expect(result)
+      .toEqual({
+        status: "valid",
+        blocks: [{ type: "summary", content: "Resumo" }],
+      });
   });
 
   it("returns a local validation result for invalid JSON", async () => {
@@ -20,7 +21,8 @@ describe("ValibotParseEditorialBlocksAdapter", () => {
 
     const result = await adapter.execute({ blocksJson: "{" });
 
-    expect(result.status).toBe("invalid");
+    expect(result.status)
+      .toBe("invalid");
   });
 
   it("rejects unsupported block types", async () => {
@@ -30,7 +32,8 @@ describe("ValibotParseEditorialBlocksAdapter", () => {
       blocksJson: JSON.stringify([{ type: "script", content: "alert(1)" }]),
     });
 
-    expect(result.status).toBe("invalid");
+    expect(result.status)
+      .toBe("invalid");
   });
 
   it("rejects remote images and executable editorial content", async () => {
@@ -43,7 +46,8 @@ describe("ValibotParseEditorialBlocksAdapter", () => {
       ]),
     });
 
-    expect(result.status).toBe("invalid");
+    expect(result.status)
+      .toBe("invalid");
   });
 
   it("accepts local images and controlled video providers", async () => {
@@ -56,6 +60,7 @@ describe("ValibotParseEditorialBlocksAdapter", () => {
       ]),
     });
 
-    expect(result.status).toBe("valid");
+    expect(result.status)
+      .toBe("valid");
   });
 });

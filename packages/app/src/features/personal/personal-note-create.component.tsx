@@ -29,13 +29,13 @@ export function PersonalNoteCreate(props: PersonalNoteCreateProps) {
     <UIContentGroup variant="tight">
       <UITextField
         label="Título da nota"
-        onChange={(event) => setTitle(event.target.value)}
+        onChange={(event) => { return setTitle(event.target.value); }}
         value={title}
       />
       <UITextField
         label="Texto da nota"
         multiline
-        onChange={(event) => setBody(event.target.value)}
+        onChange={(event) => { return setBody(event.target.value); }}
         value={body}
       />
       <PersonalContentKeyField onChange={setContentKey} value={contentKey} />

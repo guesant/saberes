@@ -7,7 +7,11 @@ import type { ReactElement } from "react";
 
 export function UICommandPaletteItem(props: UICommandPaletteItemProps): ReactElement {
   return (
-    <MuiListItemButton onClick={() => props.onSelect(props.item)}>
+    <MuiListItemButton
+      onClick={() => {
+        return props.onSelect(props.item);
+      }}
+    >
       <MuiListItemText primary={props.item.label} secondary={props.item.description} />
     </MuiListItemButton>
   );

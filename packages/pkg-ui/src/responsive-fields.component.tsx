@@ -7,7 +7,12 @@ export type UIResponsiveFieldsProps = {
 
 export function UIResponsiveFields(props: UIResponsiveFieldsProps): ReactElement {
   return (
-    <MuiStack direction={{ md: "row", xs: "column" }} spacing={1}>
+    <MuiStack
+      direction={{ md: "row", xs: "column" }}
+      minWidth={0}
+      spacing={1}
+      sx={{ maxWidth: "100%", width: "100%" }}
+    >
       {props.children}
     </MuiStack>
   );

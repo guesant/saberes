@@ -20,17 +20,25 @@ export function StudyChecklistDisplay(props: StudyChecklistDisplayProps) {
       <UITypography color="text.secondary">
         {props.checklist.items.length} itens locais para acompanhar
       </UITypography>
-      {props.checklist.items.map((item, index) => (
-        <StudyChecklistEntry
-          canMoveDown={index < props.checklist.items.length - 1}
-          canMoveUp={index > 0}
-          key={item.id}
-          label={item.label}
-          onMoveDown={() => props.onMoveItem(props.checklist.id, item.id, "down")}
-          onMoveUp={() => props.onMoveItem(props.checklist.id, item.id, "up")}
-          onUpdate={() => props.onUpdateItem(props.checklist.id, item.id)}
-        />
-      ))}
+      {props.checklist.items.map((item, index) => {
+        return (
+          <StudyChecklistEntry
+            canMoveDown={index < props.checklist.items.length - 1}
+            canMoveUp={index > 0}
+            key={item.id}
+            label={item.label}
+            onMoveDown={() => {
+              return props.onMoveItem(props.checklist.id, item.id, "down");
+            }}
+            onMoveUp={() => {
+              return props.onMoveItem(props.checklist.id, item.id, "up");
+            }}
+            onUpdate={() => {
+              return props.onUpdateItem(props.checklist.id, item.id);
+            }}
+          />
+        );
+      })}
       <UIButton onClick={props.onDelete} variant="text">
         Excluir checklist
       </UIButton>

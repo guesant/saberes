@@ -21,16 +21,28 @@ export function ReviewRatingControls(props: ReviewRatingControlsProps) {
 
   return (
     <UIInlineActions wrap>
-      <UIButton variant="outlined" onClick={() => props.onRate(props.target, FsrsRating.Again)}>
+      <UIButton
+        variant="outlined"
+        onClick={() => { return props.onRate(props.target, FsrsRating.Again); }}
+      >
         {t("review.again")} · {getDueLabel(FsrsRating.Again)}
       </UIButton>
-      <UIButton variant="outlined" onClick={() => props.onRate(props.target, FsrsRating.Hard)}>
+      <UIButton
+        variant="outlined"
+        onClick={() => { return props.onRate(props.target, FsrsRating.Hard); }}
+      >
         {t("review.hard")} · {getDueLabel(FsrsRating.Hard)}
       </UIButton>
-      <UIButton variant="outlined" onClick={() => props.onRate(props.target, FsrsRating.Good)}>
+      <UIButton
+        variant="outlined"
+        onClick={() => { return props.onRate(props.target, FsrsRating.Good); }}
+      >
         {t("review.good")} · {getDueLabel(FsrsRating.Good)}
       </UIButton>
-      <UIButton variant="outlined" onClick={() => props.onRate(props.target, FsrsRating.Easy)}>
+      <UIButton
+        variant="outlined"
+        onClick={() => { return props.onRate(props.target, FsrsRating.Easy); }}
+      >
         {t("review.easy")} · {getDueLabel(FsrsRating.Easy)}
       </UIButton>
     </UIInlineActions>

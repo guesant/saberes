@@ -8,6 +8,7 @@ describe("getReviewRetentionImpact", () => {
       retention: 0.99,
     });
 
-    expect(impact).toEqual({ retentionPercent: 99, estimatedReviews: 6 });
+    expect(impact)
+      .toEqual({ retentionPercent: 99, estimatedReviews: 6 });
   });
 });

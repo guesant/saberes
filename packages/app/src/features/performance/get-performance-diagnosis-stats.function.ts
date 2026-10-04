@@ -22,14 +22,16 @@ export function getPerformanceDiagnosisStats(
   }
 
   return [...counts.entries()]
-    .map(([code, count]) =>
-      getPerformanceDiagnosisStat({
+    .map(([code, count]) => {
+      return getPerformanceDiagnosisStat({
         actionForDiagnosis: input.actionForDiagnosis,
         attempts: attemptsByCode.get(code) || [],
         code,
         count,
         now: input.now,
-      }),
-    )
-    .sort((left, right) => right.attempts - left.attempts);
+      });
+    })
+    .sort((left, right) => {
+      return right.attempts - left.attempts;
+    });
 }

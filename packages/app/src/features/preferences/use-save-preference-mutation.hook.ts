@@ -6,7 +6,9 @@ export function useSavePreferenceMutation(services: ApplicationServices) {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (input: SavePreferenceInput) => services.progress.saveSetting.execute(input),
+    mutationFn: (input: SavePreferenceInput) => {
+      return services.progress.saveSetting.execute(input);
+    },
     onSuccess: async (): Promise<void> => {
       await queryClient.invalidateQueries({ queryKey: ["settings", "experience"] });
     },

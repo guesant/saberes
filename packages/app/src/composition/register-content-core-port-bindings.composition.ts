@@ -14,36 +14,37 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function registerContentCorePortBindings(container: Container): void {
-  const getContentRepository = (): ContentRepositoryContract =>
-    resolvePort<ContentRepositoryContract>(
+  const getContentRepository = (): ContentRepositoryContract => {
+    return resolvePort<ContentRepositoryContract>(
       container,
       applicationDependencyTokens.contentRepository,
     );
+  };
 
   const bindings: PortFactoryBinding[] = [
     [
       applicationDependencyTokens.getCatalog,
-      () => new SqlJsGetCatalogAdapter(getContentRepository()),
+      () => { return new SqlJsGetCatalogAdapter(getContentRepository()); },
     ],
     [
       applicationDependencyTokens.getCourse,
-      () => new SqlJsGetCourseAdapter(getContentRepository()),
+      () => { return new SqlJsGetCourseAdapter(getContentRepository()); },
     ],
     [
       applicationDependencyTokens.getLesson,
-      () => new SqlJsGetLessonAdapter(getContentRepository()),
+      () => { return new SqlJsGetLessonAdapter(getContentRepository()); },
     ],
     [
       applicationDependencyTokens.getQuestion,
-      () => new SqlJsGetQuestionAdapter(getContentRepository()),
+      () => { return new SqlJsGetQuestionAdapter(getContentRepository()); },
     ],
     [
       applicationDependencyTokens.getAssessment,
-      () => new SqlJsGetAssessmentAdapter(getContentRepository()),
+      () => { return new SqlJsGetAssessmentAdapter(getContentRepository()); },
     ],
     [
       applicationDependencyTokens.getContentRelease,
-      () => new SqlJsGetContentReleaseAdapter(getContentRepository()),
+      () => { return new SqlJsGetContentReleaseAdapter(getContentRepository()); },
     ],
   ];
 

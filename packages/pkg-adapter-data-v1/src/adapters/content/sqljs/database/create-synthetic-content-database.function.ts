@@ -175,14 +175,14 @@ export function createSyntheticContentDatabase(): ContentDatabase {
     if (sql.includes("FROM assessment_sets")) {
       return firstParameter === "1" || firstParameter === "assessment-primeiro-estudo"
         ? [
-            {
-              id: 1,
-              slug: "assessment-primeiro-estudo",
-              title: "Prática do primeiro estudo",
-              description: "Uma avaliação sintética.",
-              is_published: 1,
-            },
-          ]
+          {
+            id: 1,
+            slug: "assessment-primeiro-estudo",
+            title: "Prática do primeiro estudo",
+            description: "Uma avaliação sintética.",
+            is_published: 1,
+          },
+        ]
         : [];
     }
 

@@ -42,11 +42,12 @@ describe("getLessonSectionErrorState", () => {
       retry,
     });
 
-    expect(result).toEqual({
-      status: "error",
-      error: new Error("blocks unavailable"),
-      onRetry: retry,
-    });
+    expect(result)
+      .toEqual({
+        status: "error",
+        error: new Error("blocks unavailable"),
+        onRetry: retry,
+      });
   });
 
   it("isolates a graph failure from the rest of the lesson", () => {
@@ -58,12 +59,15 @@ describe("getLessonSectionErrorState", () => {
       retry,
     });
 
-    expect(result?.status).toBe("error");
+    expect(result?.status)
+      .toBe("error");
 
     if (result?.status === "error") {
-      expect(result.error).toEqual(new Error("graph unavailable"));
+      expect(result.error)
+        .toEqual(new Error("graph unavailable"));
 
-      expect(result.onRetry).toBe(retry);
+      expect(result.onRetry)
+        .toBe(retry);
     }
   });
 });

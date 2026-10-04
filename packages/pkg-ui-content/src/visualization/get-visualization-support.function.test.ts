@@ -5,8 +5,10 @@ describe("getVisualizationSupport", () => {
   it("descreve as capacidades gráficas disponíveis no ambiente", () => {
     const support = getVisualizationSupport();
 
-    expect(typeof support.canvas2d).toBe("boolean");
+    expect(typeof support.canvas2d)
+      .toBe("boolean");
 
-    expect(typeof support.webgl).toBe("boolean");
+    expect(typeof support.webgl)
+      .toBe("boolean");
   });
 });

@@ -28,7 +28,7 @@ export function PersonalReferenceItem(props: PersonalReferenceItemProps) {
   if (editing) {
     return (
       <PersonalReferenceEditor
-        onCancel={() => setEditing(false)}
+        onCancel={() => { return setEditing(false); }}
         onSave={save}
         onSourceChange={setSource}
         onTitleChange={setTitle}
@@ -41,9 +41,9 @@ export function PersonalReferenceItem(props: PersonalReferenceItemProps) {
   return (
     <PersonalReferenceDisplay
       reference={props.reference}
-      onDelete={() => props.onDelete(props.reference.id)}
-      onEdit={() => setEditing(true)}
-      onFavorite={() => props.onUpdateFavorite(props.reference.id)}
+      onDelete={() => { return props.onDelete(props.reference.id); }}
+      onEdit={() => { return setEditing(true); }}
+      onFavorite={() => { return props.onUpdateFavorite(props.reference.id); }}
     />
   );
 }

@@ -25,7 +25,9 @@ export function CatalogSavedFilterForm(props: CatalogSavedFilterFormProps) {
       <UITextField
         fullWidth
         label={t("catalog.savedFilterName")}
-        onChange={(event) => setName(event.target.value)}
+        onChange={(event) => {
+          return setName(event.target.value);
+        }}
         placeholder={t("catalog.savedFilterPlaceholder")}
         value={name}
       />

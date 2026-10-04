@@ -7,12 +7,14 @@ describe("estado persistido da aula", () => {
   it("identifica conclusão pelo contentKey e pelo estado concluído", () => {
     const records: StudyRecord[] = [{ contentKey: "lesson:algebra-1", completed: true }];
 
-    expect(getLessonCompleted({ records, contentKey: "lesson:algebra-1" })).toBe(true);
+    expect(getLessonCompleted({ records, contentKey: "lesson:algebra-1" }))
+      .toBe(true);
   });
 
   it("identifica favoritos pelo contentKey", () => {
     const records: StudyRecord[] = [{ contentKey: "lesson:algebra-1" }];
 
-    expect(getLessonBookmarked({ records, contentKey: "lesson:algebra-1" })).toBe(true);
+    expect(getLessonBookmarked({ records, contentKey: "lesson:algebra-1" }))
+      .toBe(true);
   });
 });

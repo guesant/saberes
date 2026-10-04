@@ -6,6 +6,8 @@ export function useMyStudyCatalogQuery(
 ): UseQueryResult<CatalogReadModel, Error> {
   return useQuery({
     queryKey: ["catalog", { search: "" }],
-    queryFn: () => services.catalog.get.execute({ search: "" }),
+    queryFn: () => {
+      return services.catalog.get.execute({ search: "" });
+    },
   });
 }

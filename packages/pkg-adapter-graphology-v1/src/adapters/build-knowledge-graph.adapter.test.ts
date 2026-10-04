@@ -17,13 +17,14 @@ describe("GraphologyBuildKnowledgeGraphAdapter", () => {
       ],
     });
 
-    expect(result.edges).toEqual([
-      {
-        id: "intro->practice",
-        source: "intro",
-        target: "practice",
-        relation: "prerequisite",
-      },
-    ]);
+    expect(result.edges)
+      .toEqual([
+        {
+          id: "intro->practice",
+          source: "intro",
+          target: "practice",
+          relation: "prerequisite",
+        },
+      ]);
   });
 });

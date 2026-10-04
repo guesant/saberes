@@ -17,7 +17,12 @@ export function LocalBackupPreview(props: LocalBackupPreviewProps) {
       </UITypography>
       <UITypography color="text.secondary">{t("backup.scope")}</UITypography>
       <UIInlineActions>
-        <UIButton variant="outlined" onClick={() => props.onImport("merge")}>
+        <UIButton
+          variant="outlined"
+          onClick={() => {
+            return props.onImport("merge");
+          }}
+        >
           {t("backup.merge")}
         </UIButton>
         <LocalBackupReplaceControl onImport={props.onImport} />

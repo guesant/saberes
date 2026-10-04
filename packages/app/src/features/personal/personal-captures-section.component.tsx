@@ -24,21 +24,23 @@ export function PersonalCapturesSection(props: PersonalCapturesSectionProps) {
       <UITypography variant="h5">Pendências</UITypography>
       <UIList>
         {getOrderedStudyCaptures(props.workspace.captures)
-          .filter((capture) => !capture.archived)
-          .map((capture) => (
-            <StudyCaptureItem
-              capture={capture}
-              key={capture.id}
-              onDelete={props.onDelete}
-              onUpdateContent={props.onUpdateContent}
-              onUpdateArchive={props.onUpdateArchive}
-              onUpdateCompletion={props.onUpdateCompletion}
-            />
-          ))}
+          .filter((capture) => { return !capture.archived; })
+          .map((capture) => {
+            return (
+              <StudyCaptureItem
+                capture={capture}
+                key={capture.id}
+                onDelete={props.onDelete}
+                onUpdateContent={props.onUpdateContent}
+                onUpdateArchive={props.onUpdateArchive}
+                onUpdateCompletion={props.onUpdateCompletion}
+              />
+            );
+          })}
       </UIList>
-      {props.workspace.captures.some((capture) => capture.archived) ? (
+      {props.workspace.captures.some((capture) => { return capture.archived; }) ? (
         <PersonalArchivedList
-          items={props.workspace.captures.filter((capture) => capture.archived)}
+          items={props.workspace.captures.filter((capture) => { return capture.archived; })}
           onRestore={props.onRestore}
           title="Arquivadas"
         />

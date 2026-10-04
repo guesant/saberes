@@ -32,7 +32,9 @@ export function getPerformanceReadyViewData(
       now: input.now,
     }),
     filteredData,
-    hasErrors: filteredData.attempts.some((attempt) => attempt.isCorrect === false),
+    hasErrors: filteredData.attempts.some((attempt) => {
+      return attempt.isCorrect === false;
+    }),
     plan,
     summary: getPerformanceSummary({
       attempts: filteredData.attempts,

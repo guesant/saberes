@@ -13,13 +13,16 @@ export function createLocalBackupActions(
   LocalBackupViewModel,
   "cancelImport" | "exportBackup" | "importBackup" | "handleRestoreBackup" | "undoImport"
 > {
-  const buildContext = (strategy: "merge" | "replace") =>
-    createLocalBackupActionContext(input, strategy);
+  const buildContext = (strategy: "merge" | "replace") => {
+    return createLocalBackupActionContext(input, strategy);
+  };
 
   return {
     cancelImport: createCancelLocalBackupAction(buildContext("replace")),
     exportBackup: createExportLocalBackupAction(buildContext("replace")),
-    handleRestoreBackup: (strategy) => createConfirmLocalBackupAction(buildContext(strategy))(),
+    handleRestoreBackup: (strategy) => {
+      return createConfirmLocalBackupAction(buildContext(strategy))();
+    },
     importBackup: createSelectLocalBackupAction(buildContext("replace")),
     undoImport: createUndoLocalBackupAction(buildContext("replace"), input.undoSnapshot),
   };

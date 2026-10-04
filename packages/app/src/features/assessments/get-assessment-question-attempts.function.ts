@@ -4,5 +4,7 @@ export function getAssessmentQuestionAttempts(
   attempts: Attempt[],
   questionIds: Set<string>,
 ): Attempt[] {
-  return attempts.filter((attempt) => questionIds.has(String(attempt.questionId)));
+  return attempts.filter((attempt) => {
+    return questionIds.has(String(attempt.questionId));
+  });
 }

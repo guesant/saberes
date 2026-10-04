@@ -15,7 +15,9 @@ export function LessonSectionLink(props: LessonSectionLinkProps) {
       component="a"
       href={`#section-${String(section.id)}`}
       selected={props.selected}
-      onClick={() => props.onSelect(props.index)}
+      onClick={() => {
+        return props.onSelect(props.index);
+      }}
     >
       <UIListItemText primary={`${index + 1}. ${String(section.title || "Conteúdo")}`} />
     </UIListItemButton>

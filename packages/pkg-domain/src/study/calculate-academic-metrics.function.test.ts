@@ -26,14 +26,19 @@ describe("calculateAcademicMetrics", () => {
       },
     });
 
-    expect(result.attendancePercentage).toBe(75);
+    expect(result.attendancePercentage)
+      .toBe(75);
 
-    expect(result.attendanceRisk).toBe(false);
+    expect(result.attendanceRisk)
+      .toBe(false);
 
-    expect(result.currentAverage).toBe(5);
+    expect(result.currentAverage)
+      .toBe(5);
 
-    expect(result.requiredFinalGrade).toBe(1);
+    expect(result.requiredFinalGrade)
+      .toBe(1);
 
-    expect(result.gradeRisk).toBe(true);
+    expect(result.gradeRisk)
+      .toBe(true);
   });
 });

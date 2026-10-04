@@ -20,12 +20,16 @@ export function useTopicMapViewModel(mapKey: string): TopicMapViewModel {
 
   const query = useQuery({
     queryKey: ["topic-map", mapKey],
-    queryFn: () => services.maps.get.execute(mapKey),
+    queryFn: () => {
+      return services.maps.get.execute(mapKey);
+    },
   });
 
   const masteryQuery = useQuery({
     queryKey: ["progress", "topic-mastery"],
-    queryFn: () => services.progress.listTopicMastery.execute(),
+    queryFn: () => {
+      return services.progress.listTopicMastery.execute();
+    },
   });
 
   const state: TopicMapViewModelState = getQueryViewState(query);

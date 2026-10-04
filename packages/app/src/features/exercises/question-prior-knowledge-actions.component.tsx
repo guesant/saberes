@@ -11,21 +11,27 @@ export function QuestionPriorKnowledgeActions(props: QuestionPriorKnowledgeActio
       <UIButton
         variant={props.selected === PriorKnowledgeStatus.Known ? "contained" : "outlined"}
         disabled={props.disabled}
-        onClick={() => props.onSelect(PriorKnowledgeStatus.Known)}
+        onClick={() => {
+          return props.onSelect(PriorKnowledgeStatus.Known);
+        }}
       >
         {t("exercise.priorKnowledge.known")}
       </UIButton>
       <UIButton
         variant={props.selected === PriorKnowledgeStatus.Uncertain ? "contained" : "outlined"}
         disabled={props.disabled}
-        onClick={() => props.onSelect(PriorKnowledgeStatus.Uncertain)}
+        onClick={() => {
+          return props.onSelect(PriorKnowledgeStatus.Uncertain);
+        }}
       >
         {t("exercise.priorKnowledge.uncertain")}
       </UIButton>
       <UIButton
         variant={props.selected === PriorKnowledgeStatus.Unknown ? "contained" : "outlined"}
         disabled={props.disabled}
-        onClick={() => props.onSelect(PriorKnowledgeStatus.Unknown)}
+        onClick={() => {
+          return props.onSelect(PriorKnowledgeStatus.Unknown);
+        }}
       >
         {t("exercise.priorKnowledge.unknown")}
       </UIButton>

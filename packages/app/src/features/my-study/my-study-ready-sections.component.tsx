@@ -2,6 +2,7 @@ import { UIContentGroup, UISectionAnchor } from "@guesant/saberes-ui";
 import { ContentReleaseSummary } from "./content-release-summary.component";
 import { LocalBackupPanel } from "./local-backup-panel.component";
 import { MyStudyFirstStudyPrompt } from "./my-study-first-study-prompt.component";
+import { MyStudyQuickAccessGrid } from "./my-study-quick-access-grid.component";
 import { MyStudyReadyOptionalContent } from "./my-study-ready-optional-content.component";
 import { MyStudySavedContent } from "./my-study-saved-content.component";
 import { MyStudySessionHistory } from "./my-study-session-history.component";
@@ -26,6 +27,7 @@ export function MyStudyReadySections(props: MyStudyReadySectionsProps) {
         course={props.viewModel.data.catalog.courses[0] || null}
         release={props.viewModel.contentRelease}
       />
+      <MyStudyQuickAccessGrid />
       <UISectionAnchor id="dados-locais">
         <LocalBackupPanel viewModel={props.backupViewModel} />
       </UISectionAnchor>

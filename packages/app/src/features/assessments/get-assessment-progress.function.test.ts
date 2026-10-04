@@ -16,12 +16,13 @@ describe("getAssessmentProgress", () => {
       ],
     });
 
-    expect(result).toEqual({
-      answeredItems: 2,
-      correctItems: 1,
-      percentage: 67,
-      totalItems: 3,
-    });
+    expect(result)
+      .toEqual({
+        answeredItems: 2,
+        correctItems: 1,
+        percentage: 67,
+        totalItems: 3,
+      });
   });
 
   it("ignora tentativas de questões que não pertencem ao conjunto", () => {
@@ -30,8 +31,10 @@ describe("getAssessmentProgress", () => {
       items: [{ position: 1, question_occurrence_id: 10 }],
     });
 
-    expect(result.answeredItems).toBe(0);
+    expect(result.answeredItems)
+      .toBe(0);
 
-    expect(result.totalItems).toBe(1);
+    expect(result.totalItems)
+      .toBe(1);
   });
 });

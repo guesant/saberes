@@ -11,13 +11,14 @@ export function registerProgressReadGoalsPorts(container: Container): void {
   registerPortFactories(container, [
     [
       applicationDependencyTokens.listStudyGoals,
-      () =>
-        new ListStudyGoalsAdapter(
+      () => {
+        return new ListStudyGoalsAdapter(
           resolvePort<ProgressStorageContract>(
             container,
             applicationDependencyTokens.progressStore,
           ),
-        ),
+        );
+      },
     ],
   ]);
 }

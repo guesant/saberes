@@ -27,12 +27,14 @@ export function previewReview(target: FsrsReviewTarget, options: PreviewReviewOp
   const result = scheduler.repeat(reviveReviewCard(target.fsrsCard, now, createDate), now);
 
   return Object.fromEntries(
-    (Object.values(FsrsRating) as FsrsRating[]).map((rating) => [
-      rating,
-      {
-        dueAt: result[ratings[rating]].card.due.toISOString(),
-        interval: result[ratings[rating]].card.due.getTime() - now.getTime(),
-      },
-    ]),
+    (Object.values(FsrsRating) as FsrsRating[]).map((rating) => {
+      return [
+        rating,
+        {
+          dueAt: result[ratings[rating]].card.due.toISOString(),
+          interval: result[ratings[rating]].card.due.getTime() - now.getTime(),
+        },
+      ];
+    }),
   );
 }

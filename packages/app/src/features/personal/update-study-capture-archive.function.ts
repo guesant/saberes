@@ -11,8 +11,10 @@ export function updateStudyCaptureArchive(
 ): PersonalWorkspace {
   return {
     ...input.workspace,
-    captures: input.workspace.captures.map((capture) =>
-      capture.id === input.id ? { ...capture, archived: true, updatedAt: input.now } : capture,
-    ),
+    captures: input.workspace.captures.map((capture) => {
+      return capture.id === input.id
+        ? { ...capture, archived: true, updatedAt: input.now }
+        : capture;
+    }),
   };
 }

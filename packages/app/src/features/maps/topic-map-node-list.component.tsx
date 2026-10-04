@@ -8,9 +8,9 @@ export type TopicMapNodeListProps = {
 export function TopicMapNodeList(props: TopicMapNodeListProps) {
   return (
     <UIStepper orientation="vertical" activeStep={-1}>
-      {props.nodes.map((node) => (
-        <TopicMapNode key={String(node.curriculum_topic_id)} node={node} />
-      ))}
+      {props.nodes.map((node) => {
+        return <TopicMapNode key={String(node.curriculum_topic_id)} node={node} />;
+      })}
     </UIStepper>
   );
 }

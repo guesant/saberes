@@ -6,7 +6,9 @@ export function usePersonalWorkspaceQuery() {
 
   return useQuery({
     queryKey: ["personal-workspace"],
-    queryFn: () => services.personal.get.execute(),
+    queryFn: () => {
+      return services.personal.get.execute();
+    },
     staleTime: Infinity,
   });
 }

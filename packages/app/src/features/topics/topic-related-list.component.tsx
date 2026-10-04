@@ -10,9 +10,9 @@ export function TopicRelatedList(props: TopicRelatedListProps) {
     <UIContentGroup variant="list">
       <UITypography variant="h5">{t("topics.relatedTopics")}</UITypography>
       <UIList>
-        {props.topics.map((topic) => (
-          <TopicRelatedLink key={String(topic.slug)} topic={topic} />
-        ))}
+        {props.topics.map((topic) => {
+          return <TopicRelatedLink key={String(topic.slug)} topic={topic} />;
+        })}
       </UIList>
     </UIContentGroup>
   );

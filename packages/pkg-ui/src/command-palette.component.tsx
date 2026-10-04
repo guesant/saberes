@@ -5,7 +5,8 @@ import type { UICommandPaletteProps } from "./command-palette-props.interface";
 import type { ReactElement } from "react";
 
 export function UICommandPalette(props: UICommandPaletteProps): ReactElement {
-  const normalizedQuery = props.query.trim().toLocaleLowerCase();
+  const normalizedQuery = props.query.trim()
+    .toLocaleLowerCase();
 
   const filteredItems = props.items.filter((item) => {
     const searchableText = `${item.label} ${item.description ?? ""}`.toLocaleLowerCase();
@@ -21,7 +22,9 @@ export function UICommandPalette(props: UICommandPaletteProps): ReactElement {
           autoFocus
           fullWidth
           label={props.inputLabel}
-          onChange={(event) => props.onQueryChange(event.target.value)}
+          onChange={(event) => {
+            return props.onQueryChange(event.target.value);
+          }}
           value={props.query}
         />
         <UICommandPaletteResults

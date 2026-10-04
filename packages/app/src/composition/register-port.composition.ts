@@ -6,5 +6,7 @@ export function registerPort<T>(
   token: symbol,
   factory: PortFactory<T>,
 ): void {
-  container.bind<T>(token).toDynamicValue(factory).inSingletonScope();
+  container.bind<T>(token)
+    .toDynamicValue(factory)
+    .inSingletonScope();
 }

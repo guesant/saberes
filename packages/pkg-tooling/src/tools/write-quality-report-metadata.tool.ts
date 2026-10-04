@@ -7,7 +7,8 @@ const outputDirectory = outputPath.includes("/")
 
 const report = {
   schemaVersion: 1,
-  generatedAt: Deno.env.get("REPORT_GENERATED_AT") ?? new Date().toISOString(),
+  generatedAt: Deno.env.get("REPORT_GENERATED_AT") ?? new Date()
+    .toISOString(),
   commit: Deno.env.get("SOURCE_COMMIT") ?? "local-uncommitted",
   toolchainImage: Deno.env.get("TOOLCHAIN_IMAGE") ?? "local-toolchain",
   scope: Deno.env.get("REPORT_SCOPE") ?? "unspecified",

@@ -17,12 +17,16 @@ export function PersonalReferenceEditor(props: PersonalReferenceEditorProps) {
     <UIContentGroup variant="tight">
       <UITextField
         label="Título"
-        onChange={(event) => props.onTitleChange(event.target.value)}
+        onChange={(event) => {
+          return props.onTitleChange(event.target.value);
+        }}
         value={props.title}
       />
       <UITextField
         label="Fonte ou endereço"
-        onChange={(event) => props.onSourceChange(event.target.value)}
+        onChange={(event) => {
+          return props.onSourceChange(event.target.value);
+        }}
         value={props.source}
       />
       <UIButton

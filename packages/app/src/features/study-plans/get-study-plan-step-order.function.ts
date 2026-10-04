@@ -4,5 +4,9 @@ export function getStudyPlanStepOrder(
   steps: Array<Record<string, unknown>>,
   state: StudyPlanLocalState,
 ): string[] {
-  return state.orderedStepIds.length ? state.orderedStepIds : steps.map((step) => String(step.id));
+  return state.orderedStepIds.length
+    ? state.orderedStepIds
+    : steps.map((step) => {
+      return String(step.id);
+    });
 }

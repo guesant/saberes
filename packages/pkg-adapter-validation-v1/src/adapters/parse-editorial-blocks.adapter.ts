@@ -26,10 +26,17 @@ export class ValibotParseEditorialBlocksAdapter implements ParseEditorialBlocksP
       return { status: "valid", blocks: result.output };
     }
 
-    const issues: EditorialValidationIssue[] = result.issues.map((issue) => ({
-      path: issue.path?.map((item) => String(item.key)).join(".") || "root",
-      message: issue.message,
-    }));
+    const issues: EditorialValidationIssue[] = result.issues.map((issue) => {
+      return {
+        path:
+          issue.path
+            ?.map((item) => {
+              return String(item.key);
+            })
+            .join(".") || "root",
+        message: issue.message,
+      };
+    });
 
     return { status: "invalid", issues };
   }

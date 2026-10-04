@@ -17,17 +17,19 @@ export function AcademicDisciplineFields(props: AcademicDisciplineFieldsProps) {
     <UIContentGroup variant="content">
       <UITypography variant="h5">{t("academic.newDiscipline")}</UITypography>
       <UIResponsiveFields>
-        {fields.map((field) => (
-          <AcademicDisciplineTextField
-            inputMin={field.inputMin}
-            inputStep={field.inputStep}
-            key={field.label}
-            label={field.label}
-            onChange={field.onChange}
-            type={field.type}
-            value={field.value}
-          />
-        ))}
+        {fields.map((field) => {
+          return (
+            <AcademicDisciplineTextField
+              inputMin={field.inputMin}
+              inputStep={field.inputStep}
+              key={field.label}
+              label={field.label}
+              onChange={field.onChange}
+              type={field.type}
+              value={field.value}
+            />
+          );
+        })}
       </UIResponsiveFields>
       <UIButton disabled={!props.form.name.trim()} onClick={props.form.onSave} variant="contained">
         {t("academic.save")}

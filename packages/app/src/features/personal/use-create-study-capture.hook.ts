@@ -18,7 +18,8 @@ export function useCreateStudyCapture(
         description: input.description,
         contentKey: input.contentKey,
         dueDate: input.dueDate || undefined,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
       }),
     );
   };

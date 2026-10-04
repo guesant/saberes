@@ -10,7 +10,9 @@ export type UseLessonStudySessionInput = {
 export function useLessonStudySession(input: UseLessonStudySessionInput): void {
   useEffect(() => {
     if (!input.enabled) {
-      return () => undefined;
+      return () => {
+        return undefined;
+      };
     }
 
     const startedAt = Date.now();
@@ -27,11 +29,15 @@ export function useLessonStudySession(input: UseLessonStudySessionInput): void {
           id: sessionId,
           contentKey: input.contentKey,
           activityType: "lesson",
-          startedAt: new Date(startedAt).toISOString(),
-          completedAt: new Date(completedAt).toISOString(),
+          startedAt: new Date(startedAt)
+            .toISOString(),
+          completedAt: new Date(completedAt)
+            .toISOString(),
           durationMs,
         })
-        .catch(() => undefined);
+        .catch(() => {
+          return undefined;
+        });
     };
   }, [input.contentKey, input.enabled, input.services]);
 }

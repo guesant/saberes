@@ -81,7 +81,8 @@ export function getFinalType(fileName: string): string | null {
 }
 
 export function checkFileName(path: string): void {
-  const fileName = path.split("/").at(-1) ?? path;
+  const fileName = path.split("/")
+    .at(-1) ?? path;
 
   if (fileName === "index.ts" || fileName === "index.tsx") {
     return;
@@ -123,13 +124,14 @@ export function checkFileName(path: string): void {
 let fileCount = 0;
 
 for (const root of roots) {
-  const rootInfo = await Deno.stat(root).catch((error: unknown) => {
-    if (error instanceof Deno.errors.NotFound) {
-      return null;
-    }
+  const rootInfo = await Deno.stat(root)
+    .catch((error: unknown) => {
+      if (error instanceof Deno.errors.NotFound) {
+        return null;
+      }
 
-    throw error;
-  });
+      throw error;
+    });
 
   if (!rootInfo?.isDirectory) {
     continue;
@@ -148,4 +150,4 @@ if (errors.length > 0) {
   Deno.exit(1);
 }
 
-console.log(`File convention check passed for ${fileCount} files.`);
+console.info(`File convention check passed for ${fileCount} files.`);

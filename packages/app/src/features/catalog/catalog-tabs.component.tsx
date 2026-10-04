@@ -1,4 +1,4 @@
-import { UITab, UITabs } from "@guesant/saberes-ui";
+import { UITab, UIResponsiveTabs } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { CatalogReadModel } from "@guesant/saberes-application";
 
@@ -12,10 +12,11 @@ export function CatalogTabs(props: CatalogTabsProps) {
   const { t } = useTranslation();
 
   return (
-    <UITabs
+    <UIResponsiveTabs
       value={props.tab}
-      onChange={(_, value) => props.onTabChange(value)}
-      variant="scrollable"
+      onChange={(_, value) => {
+        return props.onTabChange(value);
+      }}
     >
       <UITab label={`${t("catalog.courses")} ${props.catalog.courses.length}`} />
 
@@ -24,6 +25,6 @@ export function CatalogTabs(props: CatalogTabsProps) {
       <UITab label={`${t("catalog.plans")} ${props.catalog.plans.length}`} />
 
       <UITab label={`${t("catalog.contents")} ${props.catalog.content.length}`} />
-    </UITabs>
+    </UIResponsiveTabs>
   );
 }

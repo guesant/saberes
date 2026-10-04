@@ -32,13 +32,13 @@ export function StudyChecklistCreate(props: StudyChecklistCreateProps) {
     <UIContentGroup variant="tight">
       <UITextField
         label="Título do checklist"
-        onChange={(event) => setTitle(event.target.value)}
+        onChange={(event) => { return setTitle(event.target.value); }}
         value={title}
       />
       <UITextField
         label="Itens, um por linha"
         multiline
-        onChange={(event) => setItems(event.target.value)}
+        onChange={(event) => { return setItems(event.target.value); }}
         value={items}
       />
       <PersonalContentKeyField onChange={setContentKey} value={contentKey} />

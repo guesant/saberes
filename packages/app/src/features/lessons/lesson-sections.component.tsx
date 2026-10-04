@@ -9,13 +9,15 @@ export type LessonSectionsProps = {
 export function LessonSections(props: LessonSectionsProps) {
   return (
     <UIContentGroup variant="list">
-      {props.sections.map((section) => (
-        <LessonSectionContent
-          key={String(section.id)}
-          section={section}
-          onQuestion={props.onQuestion}
-        />
-      ))}
+      {props.sections.map((section) => {
+        return (
+          <LessonSectionContent
+            key={String(section.id)}
+            section={section}
+            onQuestion={props.onQuestion}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

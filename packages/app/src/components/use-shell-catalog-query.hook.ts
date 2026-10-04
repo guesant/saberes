@@ -6,7 +6,9 @@ export function useShellCatalogQuery() {
 
   const query = useQuery({
     queryKey: ["shell-catalog"],
-    queryFn: () => services.catalog.get.execute({ search: "" }),
+    queryFn: () => {
+      return services.catalog.get.execute({ search: "" });
+    },
   });
 
   return query.data;

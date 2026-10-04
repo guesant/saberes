@@ -13,10 +13,13 @@ describe("pauseFocusSession", () => {
   it("persists the elapsed time and paused state", () => {
     const result = pauseFocusSession(session, new Date("2026-01-01T10:25:00.000Z"));
 
-    expect(result.status).toBe(FocusSessionStatus.Paused);
+    expect(result.status)
+      .toBe(FocusSessionStatus.Paused);
 
-    expect(result.elapsedMs).toBe(25 * 60 * 1000);
+    expect(result.elapsedMs)
+      .toBe(25 * 60 * 1000);
 
-    expect(result.pausedAt).toBe("2026-01-01T10:25:00.000Z");
+    expect(result.pausedAt)
+      .toBe("2026-01-01T10:25:00.000Z");
   });
 });

@@ -13,7 +13,12 @@ export function DiagnosisOption(props: DiagnosisOptionProps) {
   const { t } = useTranslation();
 
   return (
-    <UIButton variant="outlined" onClick={() => onSelect(option.code)}>
+    <UIButton
+      variant="outlined"
+      onClick={() => {
+        return onSelect(option.code);
+      }}
+    >
       {t(option.labelKey)}
     </UIButton>
   );

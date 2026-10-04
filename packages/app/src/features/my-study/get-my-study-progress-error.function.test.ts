@@ -22,10 +22,12 @@ describe("getMyStudyProgressError", () => {
       bookmarksError: new Error("bookmarks unavailable"),
     });
 
-    expect(result).toBe(attemptsError);
+    expect(result)
+      .toBe(attemptsError);
   });
 
   it("keeps the study view healthy when every progress query succeeds", () => {
-    expect(getMyStudyProgressError(emptyErrors)).toBeNull();
+    expect(getMyStudyProgressError(emptyErrors))
+      .toBeNull();
   });
 });

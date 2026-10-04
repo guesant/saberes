@@ -4,7 +4,9 @@ import type { MoveStudyChecklistInput } from "./move-study-checklist-input.inter
 import type { StudyChecklist } from "@guesant/saberes-application";
 
 export function moveStudyChecklist(input: MoveStudyChecklistInput): StudyChecklist {
-  const currentIndex = input.checklist.items.findIndex((item) => item.id === input.itemId);
+  const currentIndex = input.checklist.items.findIndex((item) => {
+    return item.id === input.itemId;
+  });
 
   const targetIndex = getStudyChecklistTargetIndex(currentIndex, input.direction);
 

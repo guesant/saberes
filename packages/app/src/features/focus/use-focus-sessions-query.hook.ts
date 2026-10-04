@@ -4,6 +4,8 @@ import type { ApplicationServices, FocusSession } from "@guesant/saberes-applica
 export function useFocusSessionsQuery(services: ApplicationServices) {
   return useQuery<FocusSession[], Error>({
     queryKey: ["study", "focus"],
-    queryFn: () => services.focus.list.execute(),
+    queryFn: () => {
+      return services.focus.list.execute();
+    },
   });
 }

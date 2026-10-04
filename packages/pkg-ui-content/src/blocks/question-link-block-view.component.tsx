@@ -1,4 +1,4 @@
-import { UIArrowForwardIcon, UIButton, UIPaper, UITypography } from "@guesant/saberes-ui";
+import { UIArrowForwardIcon, UIButton, UIContentSurface, UIContentText } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { QuestionLinkBlock } from "@guesant/saberes-application";
 
@@ -13,14 +13,19 @@ export function UIQuestionLinkBlockView(props: UIQuestionLinkBlockViewProps) {
   const { t } = useTranslation();
 
   return (
-    <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <UITypography fontWeight={700}>{block.title || t("content.practiceConcept")}</UITypography>
+    <UIContentSurface mode="outlined">
+      <UIContentText variant="title">{block.title || t("content.practiceConcept")}</UIContentText>
 
-      <UITypography variant="body2">{block.description}</UITypography>
+      <UIContentText variant="body">{block.description}</UIContentText>
 
-      <UIButton onClick={() => onQuestion?.(block.questionId)} endIcon={<UIArrowForwardIcon />}>
+      <UIButton
+        onClick={() => {
+          return onQuestion?.(block.questionId);
+        }}
+        endIcon={<UIArrowForwardIcon />}
+      >
         {t("content.solveQuestion")}
       </UIButton>
-    </UIPaper>
+    </UIContentSurface>
   );
 }

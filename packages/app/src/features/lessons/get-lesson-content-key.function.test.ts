@@ -8,10 +8,12 @@ describe("getLessonContentKey", () => {
         lesson: { slug: "functions" },
         fallback: "lesson:42",
       }),
-    ).toBe("lesson:functions");
+    )
+      .toBe("lesson:functions");
   });
 
   it("does not duplicate the lesson prefix in a route fallback", () => {
-    expect(getLessonContentKey({ lesson: undefined, fallback: "lesson:42" })).toBe("lesson:42");
+    expect(getLessonContentKey({ lesson: undefined, fallback: "lesson:42" }))
+      .toBe("lesson:42");
   });
 });

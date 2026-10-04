@@ -6,10 +6,13 @@ export function createStudyGoalProgressAction(
   input: StudyGoalsActionDependencies,
 ): CreateStudyGoalProgressAction {
   return async (contentKey: string, current: number): Promise<void> => {
-    const goal = input.goals.find((item) => item.contentKey === contentKey);
+    const goal = input.goals.find((item) => {
+      return item.contentKey === contentKey;
+    });
 
     if (goal) {
-      await input.save(updateStudyGoalProgress({ goal, current, now: new Date().toISOString() }));
+      await input.save(updateStudyGoalProgress({ goal, current, now: new Date()
+        .toISOString() }));
     }
   };
 }

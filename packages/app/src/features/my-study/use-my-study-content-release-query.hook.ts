@@ -6,6 +6,8 @@ export function useMyStudyContentReleaseQuery(
 ): UseQueryResult<ContentReleaseReadModel, Error> {
   return useQuery({
     queryKey: ["content", "release"],
-    queryFn: () => services.editorial.getRelease.execute(),
+    queryFn: () => {
+      return services.editorial.getRelease.execute();
+    },
   });
 }

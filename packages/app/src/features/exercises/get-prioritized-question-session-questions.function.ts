@@ -7,11 +7,17 @@ export function getPrioritizedQuestionSessionQuestions(
   input: PrioritizeQuestionSessionInput,
 ): CatalogCard[] {
   return input.questions
-    .map((question, index) => ({
-      index,
-      priority: getQuestionPriority(getQuestionAttempt(question, input.attempts)),
-      question,
-    }))
-    .sort((left, right) => left.priority - right.priority || left.index - right.index)
-    .map((item) => item.question);
+    .map((question, index) => {
+      return {
+        index,
+        priority: getQuestionPriority(getQuestionAttempt(question, input.attempts)),
+        question,
+      };
+    })
+    .sort((left, right) => {
+      return left.priority - right.priority || left.index - right.index;
+    })
+    .map((item) => {
+      return item.question;
+    });
 }

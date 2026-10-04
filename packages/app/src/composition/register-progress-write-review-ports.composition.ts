@@ -16,33 +16,17 @@ import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function createProgressWriteReviewPortBindings(container: Container): void {
-  const getProgressStore = (): ProgressStorageContract =>
-    resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
+  const getProgressStore = (): ProgressStorageContract => { return resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore); };
 
   const bindings: PortFactoryBinding[] = [
-    [applicationDependencyTokens.saveBookmark, () => new SaveBookmarkAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.saveReviewItem,
-      () => new SaveReviewItemAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.saveReviewTarget,
-      () => new SaveReviewTargetAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.saveDiagnosis, () => new SaveDiagnosisAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.saveDailyChallenge,
-      () => new SaveDailyChallengeAdapter(getProgressStore()),
-    ],
-    [applicationDependencyTokens.saveStreak, () => new SaveStreakAdapter(getProgressStore())],
-    [
-      applicationDependencyTokens.saveAchievement,
-      () => new SaveAchievementAdapter(getProgressStore()),
-    ],
-    [
-      applicationDependencyTokens.saveTopicMastery,
-      () => new SaveTopicMasteryAdapter(getProgressStore()),
-    ],
+    [applicationDependencyTokens.saveBookmark, () => { return new SaveBookmarkAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveReviewItem, () => { return new SaveReviewItemAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveReviewTarget, () => { return new SaveReviewTargetAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveDiagnosis, () => { return new SaveDiagnosisAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveDailyChallenge, () => { return new SaveDailyChallengeAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveStreak, () => { return new SaveStreakAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveAchievement, () => { return new SaveAchievementAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.saveTopicMastery, () => { return new SaveTopicMasteryAdapter(getProgressStore()); }],
   ];
 
   registerPortFactories(container, bindings);

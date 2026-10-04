@@ -9,6 +9,7 @@ describe("getAssessmentQuestionKeys", () => {
         { question_id: "11" },
         { title: "sem questão" },
       ]),
-    ).toEqual(["question:10", "question:11"]);
+    )
+      .toEqual(["question:10", "question:11"]);
   });
 });

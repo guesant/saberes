@@ -6,6 +6,8 @@ export function createStudyChecklistEditorValues(
 ): StudyChecklistEditorValues {
   return {
     content: { contentKey: checklist.contentKey ?? "", title: checklist.title },
-    items: checklist.items.map((item) => ({ id: item.id, label: item.label })),
+    items: checklist.items.map((item) => {
+      return { id: item.id, label: item.label };
+    }),
   };
 }

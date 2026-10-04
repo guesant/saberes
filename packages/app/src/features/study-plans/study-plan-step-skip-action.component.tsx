@@ -10,7 +10,9 @@ export function StudyPlanStepSkipAction(props: StudyPlanStepSkipActionProps) {
       disabled={props.disabled}
       size="small"
       variant="text"
-      onClick={() => props.onSkip(props.stepId)}
+      onClick={() => {
+        return props.onSkip(props.stepId);
+      }}
     >
       {props.skipped ? t("plan.unskipStep") : t("plan.skipStep")}
     </UIButton>

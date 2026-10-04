@@ -21,24 +21,32 @@ export function PersonalNotesSection(props: PersonalNotesSectionProps) {
       <UITypography variant="h5">Notas</UITypography>
       <UIList>
         {props.workspace.notes
-          .filter((note) => !note.archived)
-          .map((note) => (
-            <PersonalNoteItem
-              key={note.id}
-              note={note}
-              onDelete={props.onDelete}
-              onUpdateContent={props.onUpdateContent}
-              onUpdate={props.onUpdate}
-            />
-          ))}
+          .filter((note) => {
+            return !note.archived;
+          })
+          .map((note) => {
+            return (
+              <PersonalNoteItem
+                key={note.id}
+                note={note}
+                onDelete={props.onDelete}
+                onUpdateContent={props.onUpdateContent}
+                onUpdate={props.onUpdate}
+              />
+            );
+          })}
       </UIList>
-      {props.workspace.notes.some((note) => note.archived) ? (
-        <PersonalArchivedList
-          items={props.workspace.notes.filter((note) => note.archived)}
-          onRestore={props.onRestore}
-          title="Arquivadas"
-        />
-      ) : null}
+      {props.workspace.notes.some((note) => {
+        return note.archived;
+      }) ? (
+          <PersonalArchivedList
+            items={props.workspace.notes.filter((note) => {
+              return note.archived;
+            })}
+            onRestore={props.onRestore}
+            title="Arquivadas"
+          />
+        ) : null}
     </UIContentGroup>
   );
 }

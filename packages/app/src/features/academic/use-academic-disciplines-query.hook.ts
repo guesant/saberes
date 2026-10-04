@@ -4,6 +4,8 @@ import type { AcademicDiscipline, ApplicationServices } from "@guesant/saberes-a
 export function useAcademicDisciplinesQuery(services: ApplicationServices) {
   return useQuery<AcademicDiscipline[], Error>({
     queryKey: ["academic", "disciplines"],
-    queryFn: () => services.academic.list.execute(),
+    queryFn: () => {
+      return services.academic.list.execute();
+    },
   });
 }

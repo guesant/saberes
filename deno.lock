@@ -11429,6 +11429,7 @@
             "npm:@fontsource/roboto-slab@^5.2.6",
             "npm:@mui/icons-material@^7.3.1",
             "npm:@mui/material@^7.3.1",
+            "npm:katex@~0.16.25",
             "npm:react-dom@^19.1.1",
             "npm:react@^19.1.1"
           ]

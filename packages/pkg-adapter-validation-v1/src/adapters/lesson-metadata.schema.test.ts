@@ -15,7 +15,8 @@ describe("lessonMetadataSchema", () => {
       reviewStatus: "published",
     });
 
-    expect(result.success).toBe(true);
+    expect(result.success)
+      .toBe(true);
   });
 
   it("rejects published metadata without a source", () => {
@@ -30,6 +31,7 @@ describe("lessonMetadataSchema", () => {
       reviewStatus: "published",
     });
 
-    expect(result.success).toBe(false);
+    expect(result.success)
+      .toBe(false);
   });
 });

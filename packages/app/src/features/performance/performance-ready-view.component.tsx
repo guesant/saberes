@@ -36,8 +36,8 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
       <PerformanceFilters
         courseLabel={viewData.course?.title}
         filter={filter}
-        onChangePeriod={(period) => setFilter((current) => ({ ...current, period }))}
-        onChangeScope={(scope) => setFilter((current) => ({ ...current, scope }))}
+        onChangePeriod={(period) => { return setFilter((current) => { return { ...current, period }; }); }}
+        onChangeScope={(scope) => { return setFilter((current) => { return { ...current, scope }; }); }}
         planLabel={viewData.plan?.title}
       />
       <PerformanceSummaryGrid summary={viewData.summary} />

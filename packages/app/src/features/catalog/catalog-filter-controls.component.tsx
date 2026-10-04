@@ -8,13 +8,19 @@ export function CatalogFilterControls(props: CatalogFilterControlsProps) {
   return (
     <UIContentGroup variant="tight">
       <CatalogSearchField
-        onChange={(search) => props.viewModel.setFilters((filters) => ({ ...filters, search }))}
+        onChange={(search) => {
+          return props.viewModel.setFilters((filters) => {
+            return { ...filters, search };
+          });
+        }}
         value={props.viewModel.filters.search || ""}
       />
 
       <CatalogFilterBar
         filters={props.viewModel.filters}
-        onChange={(filters) => props.viewModel.setFilters(filters)}
+        onChange={(filters) => {
+          return props.viewModel.setFilters(filters);
+        }}
       />
 
       <CatalogSavedFilters

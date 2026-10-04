@@ -9,8 +9,8 @@ export function getCourseLessonItemCompleted(input: GetCourseLessonItemCompleted
   const lessonKey = `lesson:${String(input.item.lesson_slug || input.item.lesson_id)}`;
 
   return Boolean(
-    input.lessonProgress?.some(
-      (progress) => progress.contentKey === lessonKey && progress.completed === true,
-    ),
+    input.lessonProgress?.some((progress) => {
+      return progress.contentKey === lessonKey && progress.completed === true;
+    }),
   );
 }

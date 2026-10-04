@@ -2,3 +2,4 @@ import "@fontsource/roboto-slab/400.css";
 import "@fontsource/roboto-slab/500.css";
 import "@fontsource/roboto-slab/600.css";
 import "@fontsource/roboto-slab/700.css";
+import "katex/dist/katex.min.css";

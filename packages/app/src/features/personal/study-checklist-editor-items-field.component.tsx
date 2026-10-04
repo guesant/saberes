@@ -11,25 +11,33 @@ export function StudyChecklistEditorItemsField(props: StudyChecklistEditorItemsF
 
   return (
     <form.Field mode="array" name="items">
-      {(field) => (
-        <UIContentGroup variant="tight">
-          {field.state.value.map((_, index) => (
-            <StudyChecklistEditorItemField
-              form={form}
-              index={index}
-              key={field.state.value[index].id}
-              remove={() => field.removeValue(index)}
-            />
-          ))}
-          <UIButton
-            onClick={() => field.pushValue({ id: crypto.randomUUID(), label: "" })}
-            type="button"
-            variant="outlined"
-          >
-            Adicionar item
-          </UIButton>
-        </UIContentGroup>
-      )}
+      {(field) => {
+        return (
+          <UIContentGroup variant="tight">
+            {field.state.value.map((_, index) => {
+              return (
+                <StudyChecklistEditorItemField
+                  form={form}
+                  index={index}
+                  key={field.state.value[index].id}
+                  remove={() => {
+                    return field.removeValue(index);
+                  }}
+                />
+              );
+            })}
+            <UIButton
+              onClick={() => {
+                return field.pushValue({ id: crypto.randomUUID(), label: "" });
+              }}
+              type="button"
+              variant="outlined"
+            >
+              Adicionar item
+            </UIButton>
+          </UIContentGroup>
+        );
+      }}
     </form.Field>
   );
 }

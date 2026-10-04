@@ -9,8 +9,12 @@ export async function startReviewStudySession(
   input: StartReviewStudySessionInput,
 ): Promise<string | null> {
   const questionKeys = input.targets
-    .map((target) => String(target.contentKey))
-    .filter((contentKey) => contentKey.startsWith("question:"));
+    .map((target) => {
+      return String(target.contentKey);
+    })
+    .filter((contentKey) => {
+      return contentKey.startsWith("question:");
+    });
 
   if (!questionKeys.length) {
     return null;
@@ -19,7 +23,8 @@ export async function startReviewStudySession(
   const session: StudySession = {
     id: input.services.platform.ids.execute(),
     activityType: "review",
-    startedAt: new Date().toISOString(),
+    startedAt: new Date()
+      .toISOString(),
     questionKeys,
     currentIndex: 0,
     status: "active",

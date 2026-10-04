@@ -32,7 +32,12 @@ export function AcademicDisciplineItem(props: AcademicDisciplineItemProps) {
             discipline={props.discipline}
             metrics={props.metrics}
           />
-          <UIButton onClick={() => props.onRemove(props.discipline.id)} variant="text">
+          <UIButton
+            onClick={() => {
+              return props.onRemove(props.discipline.id);
+            }}
+            variant="text"
+          >
             {t("academic.remove")}
           </UIButton>
         </UIContentGroup>

@@ -5,5 +5,7 @@ import type { StudySession } from "@guesant/saberes-application";
 export function createPauseQuestionStudySessionAction(
   saveSession: SaveQuestionStudySessionAction,
 ): AsyncAction<[StudySession], void> {
-  return (session: StudySession): Promise<void> => saveSession({ ...session, status: "paused" });
+  return (session: StudySession): Promise<void> => {
+    return saveSession({ ...session, status: "paused" });
+  };
 }

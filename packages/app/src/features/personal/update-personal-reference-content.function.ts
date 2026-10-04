@@ -6,15 +6,16 @@ export function updatePersonalReferenceContent(
 ): PersonalWorkspace {
   return {
     ...input.workspace,
-    references: input.workspace.references.map((reference) =>
-      reference.id === input.id
+    references: input.workspace.references.map((reference) => {
+      return reference.id === input.id
         ? {
-            ...reference,
-            title: input.title,
-            source: input.source,
-            updatedAt: new Date().toISOString(),
-          }
-        : reference,
-    ),
+          ...reference,
+          title: input.title,
+          source: input.source,
+          updatedAt: new Date()
+            .toISOString(),
+        }
+        : reference;
+    }),
   };
 }

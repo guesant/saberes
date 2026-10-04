@@ -1,4 +1,4 @@
-import { UIAlert, UIBox, UIPaper, UITypography } from "@guesant/saberes-ui";
+import { UIAlert, UIBox, UIContentSurface, UIContentText } from "@guesant/saberes-ui";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { getVisualizationSupport } from "./get-visualization-support.function";
@@ -62,14 +62,14 @@ export function UIChartBlock(props: UIChartBlockProps) {
   }, [block.option]);
 
   return (
-    <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <UITypography fontWeight={700}>{title}</UITypography>
+    <UIContentSurface mode="outlined">
+      <UIContentText variant="title">{title}</UIContentText>
 
       {hasError ? <UIAlert severity="info">{t("content.chartFallback")}</UIAlert> : null}
 
       <UIBox ref={containerRef} role="img" aria-label={title || t("content.editorialChart")} />
 
       <UIVisualizationTextSummary summary={textSummary} title={t("content.textualAlternative")} />
-    </UIPaper>
+    </UIContentSurface>
   );
 }

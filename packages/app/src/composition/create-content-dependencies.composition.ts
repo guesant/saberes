@@ -11,31 +11,23 @@ import { registerPort } from "./register-port.composition";
 import type { Container } from "inversify";
 
 export function createContentDependencies(container: Container): void {
-  registerPort(
-    container,
-    applicationDependencyTokens.contentRepository,
-    () => new SqlJsContentRepository(),
-  );
+  registerPort(container, applicationDependencyTokens.contentRepository, () => {
+    return new SqlJsContentRepository();
+  });
 
   registerContentCorePortBindings(container);
 
   registerContentGraphPortBindings(container);
 
-  registerPort(
-    container,
-    applicationDependencyTokens.parseEditorialBlocks,
-    () => new ValibotParseEditorialBlocksAdapter(),
-  );
+  registerPort(container, applicationDependencyTokens.parseEditorialBlocks, () => {
+    return new ValibotParseEditorialBlocksAdapter();
+  });
 
-  registerPort(
-    container,
-    applicationDependencyTokens.buildKnowledgeGraph,
-    () => new GraphologyBuildKnowledgeGraphAdapter(),
-  );
+  registerPort(container, applicationDependencyTokens.buildKnowledgeGraph, () => {
+    return new GraphologyBuildKnowledgeGraphAdapter();
+  });
 
-  registerPort(
-    container,
-    applicationDependencyTokens.validateContentSnapshot,
-    () => new ValidateContentSnapshotAdapter(),
-  );
+  registerPort(container, applicationDependencyTokens.validateContentSnapshot, () => {
+    return new ValidateContentSnapshotAdapter();
+  });
 }

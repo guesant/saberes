@@ -29,12 +29,16 @@ export function PersonalReferenceCreate(props: PersonalReferenceCreateProps) {
     <UIContentGroup variant="tight">
       <UITextField
         label="Título da referência"
-        onChange={(event) => setTitle(event.target.value)}
+        onChange={(event) => {
+          return setTitle(event.target.value);
+        }}
         value={title}
       />
       <UITextField
         label="Fonte ou endereço"
-        onChange={(event) => setSource(event.target.value)}
+        onChange={(event) => {
+          return setSource(event.target.value);
+        }}
         value={source}
       />
       <PersonalContentKeyField onChange={setContentKey} value={contentKey} />

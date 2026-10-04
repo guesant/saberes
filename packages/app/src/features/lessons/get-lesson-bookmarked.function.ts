@@ -6,5 +6,9 @@ export type GetLessonBookmarkedInput = {
 };
 
 export function getLessonBookmarked(input: GetLessonBookmarkedInput): boolean {
-  return Boolean(input.records?.some((record) => record.contentKey === input.contentKey));
+  return Boolean(
+    input.records?.some((record) => {
+      return record.contentKey === input.contentKey;
+    }),
+  );
 }

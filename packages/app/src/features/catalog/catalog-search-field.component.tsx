@@ -10,7 +10,9 @@ export function CatalogSearchField(props: CatalogSearchFieldProps) {
       fullWidth
       placeholder={t("catalog.searchPlaceholder")}
       value={props.value}
-      onChange={(event) => props.onChange(event.target.value)}
+      onChange={(event) => {
+        return props.onChange(event.target.value);
+      }}
       InputProps={{
         startAdornment: (
           <UIInputAdornment position="start">

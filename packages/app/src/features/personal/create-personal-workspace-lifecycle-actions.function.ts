@@ -23,21 +23,13 @@ export function createPersonalWorkspaceLifecycleActions(
   | "restoreReference"
 > {
   return {
-    deleteNote: async (id: string): Promise<void> =>
-      input.save(deletePersonalNote(input.workspace, id)),
-    deleteChecklist: async (id: string): Promise<void> =>
-      input.save(deleteStudyChecklist(input.workspace, id)),
-    deleteCapture: async (id: string): Promise<void> =>
-      input.save(deleteStudyCapture(input.workspace, id)),
-    deleteReference: async (id: string): Promise<void> =>
-      input.save(deletePersonalReference(input.workspace, id)),
-    restoreNote: async (id: string): Promise<void> =>
-      input.save(restorePersonalNote(input.workspace, id)),
-    restoreChecklist: async (id: string): Promise<void> =>
-      input.save(restoreStudyChecklist(input.workspace, id)),
-    restoreCapture: async (id: string): Promise<void> =>
-      input.save(restoreStudyCapture(input.workspace, id)),
-    restoreReference: async (id: string): Promise<void> =>
-      input.save(restorePersonalReference(input.workspace, id)),
+    deleteNote: async (id: string): Promise<void> => { return input.save(deletePersonalNote(input.workspace, id)); },
+    deleteChecklist: async (id: string): Promise<void> => { return input.save(deleteStudyChecklist(input.workspace, id)); },
+    deleteCapture: async (id: string): Promise<void> => { return input.save(deleteStudyCapture(input.workspace, id)); },
+    deleteReference: async (id: string): Promise<void> => { return input.save(deletePersonalReference(input.workspace, id)); },
+    restoreNote: async (id: string): Promise<void> => { return input.save(restorePersonalNote(input.workspace, id)); },
+    restoreChecklist: async (id: string): Promise<void> => { return input.save(restoreStudyChecklist(input.workspace, id)); },
+    restoreCapture: async (id: string): Promise<void> => { return input.save(restoreStudyCapture(input.workspace, id)); },
+    restoreReference: async (id: string): Promise<void> => { return input.save(restorePersonalReference(input.workspace, id)); },
   };
 }

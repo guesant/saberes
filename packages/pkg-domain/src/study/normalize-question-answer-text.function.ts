@@ -1,3 +1,4 @@
 export function normalizeQuestionAnswerText(value: string): string {
-  return value.trim().toLocaleLowerCase();
+  return value.trim()
+    .toLocaleLowerCase();
 }

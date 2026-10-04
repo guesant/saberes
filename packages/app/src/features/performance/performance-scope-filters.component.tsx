@@ -25,19 +25,21 @@ export function PerformanceScopeFilters(props: PerformanceScopeFiltersProps) {
 
   return (
     <UIContentGroup variant="inline">
-      {scopes.map((scope) => (
-        <PerformanceScopeButton
-          key={scope}
-          label={
-            scope === "all"
-              ? props.label(scope)
-              : getPerformanceScopeLabel(scope, props.courseLabel, props.planLabel)
-          }
-          onSelect={props.onSelect}
-          scope={scope}
-          selected={props.selected === scope}
-        />
-      ))}
+      {scopes.map((scope) => {
+        return (
+          <PerformanceScopeButton
+            key={scope}
+            label={
+              scope === "all"
+                ? props.label(scope)
+                : getPerformanceScopeLabel(scope, props.courseLabel, props.planLabel)
+            }
+            onSelect={props.onSelect}
+            scope={scope}
+            selected={props.selected === scope}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

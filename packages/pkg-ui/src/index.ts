@@ -10,6 +10,10 @@ export * from "./bookmark-border-icon.component";
 
 export * from "./box.component";
 
+export * from "./bottom-navigation-action.component";
+
+export * from "./bottom-navigation.component";
+
 export * from "./button.component";
 
 export * from "./card.component";
@@ -36,11 +40,35 @@ export * from "./command-palette.component";
 
 export * from "./content-alert.component";
 
+export * from "./content-alert-props.interface";
+
 export * from "./content-loading-label.component";
 
 export * from "./content-loading-layout.component";
 
 export * from "./content-group.component";
+
+export * from "./content-figure-props.interface";
+
+export * from "./content-figure.component";
+
+export * from "./content-surface-props.interface";
+
+export * from "./content-surface.component";
+
+export * from "./content-surface-config.type";
+
+export * from "./content-table-props.interface";
+
+export * from "./content-table.component";
+
+export * from "./content-text-props.interface";
+
+export * from "./content-text.component";
+
+export * from "./get-content-surface-config.function";
+
+export * from "./get-content-typography-variant.function";
 
 export * from "./course-hero-card.component";
 
@@ -135,6 +163,10 @@ export * from "./offline-status-chip-props.interface";
 
 export * from "./open-in-new-icon.component";
 
+export * from "./overflow-boundary.component";
+
+export * from "./overflow-boundary-props.type";
+
 export * from "./paper.component";
 
 export * from "./page-content.component";
@@ -153,7 +185,15 @@ export * from "./search-icon.component";
 
 export * from "./question-statement.component";
 
+export * from "./quick-access-card.component";
+
+export * from "./quick-access-grid-item.component";
+
+export * from "./quick-access-grid.component";
+
 export * from "./responsive-fields.component";
+
+export * from "./responsive-tabs.component";
 
 export * from "./stack.component";
 
@@ -180,6 +220,8 @@ export * from "./tabs.component";
 export * from "./text-field.component";
 
 export * from "./theme-provider.component";
+
+export * from "./theme.config";
 
 export * from "./toolbar.component";
 

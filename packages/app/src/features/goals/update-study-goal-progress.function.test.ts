@@ -17,6 +17,7 @@ describe("updateStudyGoalProgress", () => {
   it("keeps progress inside the goal range", () => {
     expect(
       updateStudyGoalProgress({ goal, current: 50, now: "2026-10-04T01:00:00.000Z" }),
-    ).toMatchObject({ current: 30, updatedAt: "2026-10-04T01:00:00.000Z" });
+    )
+      .toMatchObject({ current: 30, updatedAt: "2026-10-04T01:00:00.000Z" });
   });
 });

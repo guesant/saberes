@@ -14,17 +14,20 @@ export function GoalFormMetrics(props: GoalFormMetricsProps) {
   return (
     <UIContentGroup variant="tight">
       <form.Field name="metric">
-        {(field) =>
-          Object.values(StudyGoalMetric).map((metric) => (
-            <GoalMetricButton
-              key={metric}
-              label={props.labels[metric]}
-              metric={metric}
-              onSelect={field.handleChange}
-              selected={field.state.value === metric}
-            />
-          ))
-        }
+        {(field) => {
+          return Object.values(StudyGoalMetric)
+            .map((metric) => {
+              return (
+                <GoalMetricButton
+                  key={metric}
+                  label={props.labels[metric]}
+                  metric={metric}
+                  onSelect={field.handleChange}
+                  selected={field.state.value === metric}
+                />
+              );
+            });
+        }}
       </form.Field>
     </UIContentGroup>
   );

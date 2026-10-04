@@ -14,12 +14,16 @@ export function useLessonProgressQueries(
 ): LessonProgressQueries {
   const progressQuery = useQuery({
     queryKey: ["progress", "lesson", key],
-    queryFn: () => services.progress.listLessonProgress.execute(),
+    queryFn: () => {
+      return services.progress.listLessonProgress.execute();
+    },
   });
 
   const bookmarksQuery = useQuery({
     queryKey: ["progress", "bookmarks"],
-    queryFn: () => services.progress.listBookmarks.execute(),
+    queryFn: () => {
+      return services.progress.listBookmarks.execute();
+    },
   });
 
   return {

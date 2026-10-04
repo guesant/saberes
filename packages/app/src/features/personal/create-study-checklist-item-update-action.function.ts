@@ -5,13 +5,15 @@ import type { AsyncAction } from "../../types/async-action.type";
 export function createStudyChecklistItemUpdateAction(
   input: PersonalWorkspaceActionsInput,
 ): AsyncAction<[string, string], void> {
-  return async (checklistId: string, itemId: string): Promise<void> =>
-    input.save(
+  return async (checklistId: string, itemId: string): Promise<void> => {
+    return input.save(
       updateStudyChecklistItem({
         workspace: input.workspace,
         checklistId,
         itemId,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
       }),
     );
+  };
 }

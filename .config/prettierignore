@@ -8,3 +8,4 @@
 **/.lighthouseci/**
 **/*.timestamp-*.mjs
 .cache/**
+**/backlog.md

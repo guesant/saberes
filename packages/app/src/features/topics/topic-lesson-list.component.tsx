@@ -10,9 +10,9 @@ export function TopicLessonList(props: TopicLessonListProps) {
     <UIContentGroup variant="list">
       <UITypography variant="h5">{t("topics.lessons")}</UITypography>
       <UIList>
-        {props.lessons.map((lesson) => (
-          <TopicLessonLink key={String(lesson.id)} lesson={lesson} />
-        ))}
+        {props.lessons.map((lesson) => {
+          return <TopicLessonLink key={String(lesson.id)} lesson={lesson} />;
+        })}
       </UIList>
     </UIContentGroup>
   );

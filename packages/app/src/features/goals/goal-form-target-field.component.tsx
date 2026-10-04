@@ -13,23 +13,28 @@ export function GoalFormTargetField(props: GoalFormTargetFieldProps) {
     <form.Field
       name="details.target"
       validators={{
-        onChange: ({ value }) =>
-          Number(value) > 0 ? undefined : "Informe uma quantidade maior que zero.",
+        onChange: ({ value }) => {
+          return Number(value) > 0 ? undefined : "Informe uma quantidade maior que zero.";
+        },
       }}
     >
-      {(field) => (
-        <UITextField
-          error={!field.state.meta.isValid}
-          fullWidth
-          helperText={field.state.meta.errors.join(", ")}
-          inputProps={{ min: 1, step: 1 }}
-          label={props.label}
-          onBlur={field.handleBlur}
-          onChange={(event) => field.handleChange(event.target.value)}
-          type="number"
-          value={field.state.value}
-        />
-      )}
+      {(field) => {
+        return (
+          <UITextField
+            error={!field.state.meta.isValid}
+            fullWidth
+            helperText={field.state.meta.errors.join(", ")}
+            inputProps={{ min: 1, step: 1 }}
+            label={props.label}
+            onBlur={field.handleBlur}
+            onChange={(event) => {
+              return field.handleChange(event.target.value);
+            }}
+            type="number"
+            value={field.state.value}
+          />
+        );
+      }}
     </form.Field>
   );
 }

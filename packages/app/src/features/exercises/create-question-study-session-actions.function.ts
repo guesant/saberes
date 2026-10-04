@@ -21,12 +21,14 @@ export function createQuestionStudySessionActions(
   const saveSession = createSaveQuestionStudySessionAction(input);
 
   return {
-    advance: (session: StudySession, questionKey: string, result: QuestionSubmissionResult) =>
-      createAdvanceQuestionStudySessionAction(saveSession)({ questionKey, result, session }),
+    advance: (session: StudySession, questionKey: string, result: QuestionSubmissionResult) => {
+      return createAdvanceQuestionStudySessionAction(saveSession)({ questionKey, result, session });
+    },
     complete: createCompleteQuestionStudySessionAction(saveSession),
     pause: createPauseQuestionStudySessionAction(saveSession),
     resume: createResumeQuestionStudySessionAction(saveSession),
-    skip: (session: StudySession, questionKey: string) =>
-      createSkipQuestionStudySessionAction(saveSession)({ questionKey, session }),
+    skip: (session: StudySession, questionKey: string) => {
+      return createSkipQuestionStudySessionAction(saveSession)({ questionKey, session });
+    },
   };
 }

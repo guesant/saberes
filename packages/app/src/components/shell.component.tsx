@@ -4,9 +4,9 @@ import {
   UIPageSurface,
   type CommandPaletteEntry,
 } from "@guesant/saberes-ui";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "./footer.component";
+import { MobileBottomNavigation } from "./mobile-bottom-navigation.component";
 import { NavigationDrawer } from "./navigation-drawer.component";
 import { NavigationHeader } from "./navigation-header.component";
 import { ShellCommandPalette } from "./shell-command-palette.component";
@@ -19,8 +19,6 @@ export type ShellProps = {
 };
 
 export function Shell(props: ShellProps) {
-  const [open, setOpen] = useState(false);
-
   const navigate = useNavigate();
 
   const commandPalette = useCommandPalette();
@@ -35,11 +33,7 @@ export function Shell(props: ShellProps) {
 
   return (
     <UIPageSurface>
-      <NavigationHeader
-        links={links}
-        onOpenCommandPalette={commandPalette.openPalette}
-        onOpenMenu={() => setOpen(true)}
-      />
+      <NavigationHeader onOpenCommandPalette={commandPalette.openPalette} />
 
       <ShellCommandPalette
         items={commandPaletteItems}
@@ -50,11 +44,13 @@ export function Shell(props: ShellProps) {
         query={commandPalette.query}
       />
 
-      <UIResponsiveNavigationDrawer mobileOpen={open} onMobileClose={() => setOpen(false)}>
-        <NavigationDrawer links={links} onSelect={() => setOpen(false)} />
+      <UIResponsiveNavigationDrawer>
+        <NavigationDrawer links={links} />
       </UIResponsiveNavigationDrawer>
 
       <UIPageContent sidebarAware>{props.children}</UIPageContent>
+
+      <MobileBottomNavigation links={links} />
 
       <Footer />
     </UIPageSurface>

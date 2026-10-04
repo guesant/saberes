@@ -25,16 +25,18 @@ export function PreferenceOptionList(props: PreferenceOptionListProps) {
 
   return (
     <UIContentGroup variant="list">
-      {options.map((option) => (
-        <PreferenceOption
-          description={option.description}
-          key={option.key}
-          onToggle={props.onToggle}
-          preferenceKey={option.key}
-          title={option.title}
-          value={option.value}
-        />
-      ))}
+      {options.map((option) => {
+        return (
+          <PreferenceOption
+            description={option.description}
+            key={option.key}
+            onToggle={props.onToggle}
+            preferenceKey={option.key}
+            title={option.title}
+            value={option.value}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

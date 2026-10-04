@@ -8,7 +8,9 @@ import type { UseQuestionBookmarkInput } from "./use-question-bookmark-input.typ
 export function useQuestionBookmark(input: UseQuestionBookmarkInput): QuestionBookmarkState {
   const query = useQuery({
     queryKey: ["progress", "bookmarks"],
-    queryFn: () => input.services.progress.listBookmarks.execute(),
+    queryFn: () => {
+      return input.services.progress.listBookmarks.execute();
+    },
   });
 
   const contentKey = getQuestionContentKey(input.data, input.key);

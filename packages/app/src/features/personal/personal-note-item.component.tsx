@@ -34,7 +34,7 @@ export function PersonalNoteItem(props: PersonalNoteItemProps) {
         contentKey={editor.contentKey}
         onBodyChange={editor.setBody}
         onContentKeyChange={editor.setContentKey}
-        onCancel={() => editor.setEditing(false)}
+        onCancel={() => { return editor.setEditing(false); }}
         onSave={save}
         onTitleChange={editor.setTitle}
         title={editor.title}
@@ -45,9 +45,9 @@ export function PersonalNoteItem(props: PersonalNoteItemProps) {
   return (
     <PersonalNoteDisplay
       note={props.note}
-      onArchive={() => props.onUpdate(props.note.id)}
-      onDelete={() => props.onDelete(props.note.id)}
-      onEdit={() => editor.setEditing(true)}
+      onArchive={() => { return props.onUpdate(props.note.id); }}
+      onDelete={() => { return props.onDelete(props.note.id); }}
+      onEdit={() => { return editor.setEditing(true); }}
     />
   );
 }

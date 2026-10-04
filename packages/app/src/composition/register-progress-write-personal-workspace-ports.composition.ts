@@ -11,13 +11,14 @@ export function registerProgressWritePersonalWorkspacePorts(container: Container
   registerPortFactories(container, [
     [
       applicationDependencyTokens.savePersonalWorkspace,
-      () =>
-        new SavePersonalWorkspaceAdapter(
+      () => {
+        return new SavePersonalWorkspaceAdapter(
           resolvePort<ProgressStorageContract>(
             container,
             applicationDependencyTokens.progressStore,
           ),
-        ),
+        );
+      },
     ],
   ]);
 }

@@ -17,7 +17,11 @@ export function UIHeaderBrand(props: UIHeaderBrandProps): ReactElement {
         color: "common.white",
         flexGrow: 1,
         ml: 1,
+        minWidth: 0,
+        overflow: "hidden",
         textDecoration: "none",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
       }}
       variant="h6"
     >

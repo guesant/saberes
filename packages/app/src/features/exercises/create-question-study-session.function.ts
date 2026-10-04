@@ -19,7 +19,8 @@ export function createQuestionStudySession(input: CreateQuestionStudySessionInpu
     skippedQuestionKeys: [],
     correctAnswers: 0,
     expiresAt: input.timeLimitMs
-      ? new Date(Date.parse(input.startedAt) + input.timeLimitMs).toISOString()
+      ? new Date(Date.parse(input.startedAt) + input.timeLimitMs)
+        .toISOString()
       : undefined,
     timeLimitMs: input.timeLimitMs,
   };

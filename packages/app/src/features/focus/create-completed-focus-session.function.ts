@@ -5,6 +5,7 @@ export function createCompletedFocusSession(session: FocusSession, endedAt: Date
     ...session,
     status: FocusSessionStatus.Completed,
     endedAt: endedAt.toISOString(),
-    elapsedMs: endedAt.getTime() - new Date(session.startedAt).getTime(),
+    elapsedMs: endedAt.getTime() - new Date(session.startedAt)
+      .getTime(),
   };
 }

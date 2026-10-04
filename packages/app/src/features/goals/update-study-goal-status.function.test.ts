@@ -21,10 +21,11 @@ describe("updateStudyGoalStatus", () => {
       status: StudyGoalStatus.Paused,
     });
 
-    expect(result).toEqual({
-      ...goal,
-      status: StudyGoalStatus.Paused,
-      updatedAt: "2026-01-01T11:00:00.000Z",
-    });
+    expect(result)
+      .toEqual({
+        ...goal,
+        status: StudyGoalStatus.Paused,
+        updatedAt: "2026-01-01T11:00:00.000Z",
+      });
   });
 });

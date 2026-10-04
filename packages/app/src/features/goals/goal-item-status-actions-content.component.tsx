@@ -8,15 +8,17 @@ export function GoalItemStatusActionsContent(props: GoalItemStatusActionsContent
 
   return (
     <UIContentGroup variant="inline">
-      {actions.map((action) => (
-        <GoalItemStatusButton
-          disabled={action.disabled}
-          hidden={action.hidden}
-          key={action.label}
-          label={action.label}
-          onClick={action.onClick}
-        />
-      ))}
+      {actions.map((action) => {
+        return (
+          <GoalItemStatusButton
+            disabled={action.disabled}
+            hidden={action.hidden}
+            key={action.label}
+            label={action.label}
+            onClick={action.onClick}
+          />
+        );
+      })}
     </UIContentGroup>
   );
 }

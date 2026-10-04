@@ -6,7 +6,8 @@ export type PerformanceTopicRowsProps = {
 };
 
 export function PerformanceTopicRows(props: PerformanceTopicRowsProps) {
-  return props.stats
-    .slice(0, 8)
-    .map((stat) => <PerformanceTopicStatRow key={stat.topicId} stat={stat} />);
+  return props.stats.slice(0, 8)
+    .map((stat) => {
+      return <PerformanceTopicStatRow key={stat.topicId} stat={stat} />;
+    });
 }

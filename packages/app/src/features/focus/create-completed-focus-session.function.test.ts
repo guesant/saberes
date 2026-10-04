@@ -11,12 +11,13 @@ describe("createCompletedFocusSession", () => {
       status: FocusSessionStatus.Active,
     };
 
-    expect(createCompletedFocusSession(session, new Date("2026-10-04T12:30:00.000Z"))).toEqual({
-      id: "focus:1",
-      startedAt: "2026-10-04T12:00:00.000Z",
-      elapsedMs: 1800000,
-      endedAt: "2026-10-04T12:30:00.000Z",
-      status: FocusSessionStatus.Completed,
-    });
+    expect(createCompletedFocusSession(session, new Date("2026-10-04T12:30:00.000Z")))
+      .toEqual({
+        id: "focus:1",
+        startedAt: "2026-10-04T12:00:00.000Z",
+        elapsedMs: 1800000,
+        endedAt: "2026-10-04T12:30:00.000Z",
+        status: FocusSessionStatus.Completed,
+      });
   });
 });

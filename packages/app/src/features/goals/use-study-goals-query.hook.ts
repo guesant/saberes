@@ -4,6 +4,8 @@ import type { ApplicationServices, StudyGoal } from "@guesant/saberes-applicatio
 export function useStudyGoalsQuery(services: ApplicationServices) {
   return useQuery<StudyGoal[], Error>({
     queryKey: ["study", "goals"],
-    queryFn: () => services.goals.list.execute(),
+    queryFn: () => {
+      return services.goals.list.execute();
+    },
   });
 }

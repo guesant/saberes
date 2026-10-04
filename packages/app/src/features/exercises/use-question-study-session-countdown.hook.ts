@@ -27,7 +27,9 @@ export function useQuestionStudySessionCountdown(
 
     const interval = window.setInterval(update, 1000);
 
-    return () => window.clearInterval(interval);
+    return () => {
+      return window.clearInterval(interval);
+    };
   }, [input.session?.expiresAt, input.session?.status]);
 
   return remainingSeconds;

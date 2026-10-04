@@ -57,29 +57,32 @@ describe("getPerformanceSummary", () => {
   it("combina desempenho recente, tempo e sessões", () => {
     const result = getPerformanceSummary(summaryInput);
 
-    expect(result).toEqual({
-      accuracy: 67,
-      answered: 3,
-      averageTimeSeconds: 15,
-      completedSessions: 1,
-      correct: 2,
-      recentAnswered: 2,
-      recentCorrect: 1,
-      sessions: 2,
-      studyMinutes: 3,
-      studiedTopics: 2,
-      masteredTopics: 1,
-      confidencePercent: 60,
-      confidenceBand: "medium",
-      trend: "up",
-    });
+    expect(result)
+      .toEqual({
+        accuracy: 67,
+        answered: 3,
+        averageTimeSeconds: 15,
+        completedSessions: 1,
+        correct: 2,
+        recentAnswered: 2,
+        recentCorrect: 1,
+        sessions: 2,
+        studyMinutes: 3,
+        studiedTopics: 2,
+        masteredTopics: 1,
+        confidencePercent: 60,
+        confidenceBand: "medium",
+        trend: "up",
+      });
   });
 
   it("filtra o resumo por período e escopo local", () => {
     const result = getPerformanceSummary(filteredSummaryInput);
 
-    expect(result.answered).toBe(1);
+    expect(result.answered)
+      .toBe(1);
 
-    expect(result.sessions).toBe(1);
+    expect(result.sessions)
+      .toBe(1);
   });
 });

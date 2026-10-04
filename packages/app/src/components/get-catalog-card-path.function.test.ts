@@ -11,7 +11,8 @@ describe("getCatalogCardPath", () => {
       type: CatalogCardType.Course,
     };
 
-    expect(getCatalogCardPath(card)).toBe("/estudo/personalizado");
+    expect(getCatalogCardPath(card))
+      .toBe("/estudo/personalizado");
   });
 
   it("cria rotas locais por tipo e slug", () => {
@@ -22,7 +23,8 @@ describe("getCatalogCardPath", () => {
       type: CatalogCardType.Lesson,
     };
 
-    expect(getCatalogCardPath(card)).toBe("/licoes/funcoes");
+    expect(getCatalogCardPath(card))
+      .toBe("/licoes/funcoes");
   });
 
   it("usa o id quando o card não possui slug", () => {
@@ -32,6 +34,7 @@ describe("getCatalogCardPath", () => {
       type: CatalogCardType.Question,
     };
 
-    expect(getCatalogCardPath(card)).toBe("/questoes/7");
+    expect(getCatalogCardPath(card))
+      .toBe("/questoes/7");
   });
 });

@@ -31,7 +31,9 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
       <UIStartAlignedRow>
         <UIIconButton
           aria-label={props.completed ? t("lesson.completed") : t("lesson.complete")}
-          onClick={() => props.onToggle(props.step, !props.completed)}
+          onClick={() => {
+            return props.onToggle(props.step, !props.completed);
+          }}
         >
           {props.completed ? <UICheckCircleIcon /> : <UIEventNoteIcon />}
         </UIIconButton>

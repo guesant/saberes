@@ -5,5 +5,7 @@ import type { AsyncAction } from "../../types/async-action.type";
 export function createStartReviewStudySessionAction(
   input: StartReviewStudySessionInput,
 ): AsyncAction<[], string | null> {
-  return (): Promise<string | null> => startReviewStudySession(input);
+  return (): Promise<string | null> => {
+    return startReviewStudySession(input);
+  };
 }

@@ -1,4 +1,4 @@
-import { UIAlert, UITypography } from "@guesant/saberes-ui";
+import { UIContentAlert, UIContentText } from "@guesant/saberes-ui";
 import type { CalloutBlock } from "@guesant/saberes-application";
 
 type UICalloutBlockViewProps = {
@@ -9,10 +9,12 @@ export function UICalloutBlockView(props: UICalloutBlockViewProps) {
   const { block } = props;
 
   return (
-    <UIAlert severity={block.severity || "info"} sx={{ my: 3 }}>
-      <UITypography fontWeight={700}>{block.title}</UITypography>
+    <UIContentAlert severity={block.severity || "info"}>
+      <UIContentText variant="title">{block.title}</UIContentText>
 
-      <UITypography sx={{ mt: 0.5, whiteSpace: "pre-wrap" }}>{block.content}</UITypography>
-    </UIAlert>
+      <UIContentText preserveWhitespace variant="body">
+        {block.content}
+      </UIContentText>
+    </UIContentAlert>
   );
 }

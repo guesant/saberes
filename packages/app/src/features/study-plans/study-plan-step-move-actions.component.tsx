@@ -11,7 +11,9 @@ export function StudyPlanStepMoveActions(props: StudyPlanStepMoveActionsProps) {
         size="small"
         variant="text"
         aria-label={t("plan.moveStepUp")}
-        onClick={() => props.onMove(props.stepId, -1)}
+        onClick={() => {
+          return props.onMove(props.stepId, -1);
+        }}
       >
         ↑
       </UIButton>
@@ -19,7 +21,9 @@ export function StudyPlanStepMoveActions(props: StudyPlanStepMoveActionsProps) {
         size="small"
         variant="text"
         aria-label={t("plan.moveStepDown")}
-        onClick={() => props.onMove(props.stepId, 1)}
+        onClick={() => {
+          return props.onMove(props.stepId, 1);
+        }}
       >
         ↓
       </UIButton>

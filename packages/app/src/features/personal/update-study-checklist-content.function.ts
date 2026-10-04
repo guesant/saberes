@@ -7,16 +7,16 @@ export function updateStudyChecklistContent(
 ): PersonalWorkspace {
   return {
     ...input.workspace,
-    checklists: input.workspace.checklists.map((checklist) =>
-      checklist.id === input.id
+    checklists: input.workspace.checklists.map((checklist) => {
+      return checklist.id === input.id
         ? {
-            ...checklist,
-            items: getUpdatedStudyChecklistItems(input, checklist.items),
-            contentKey: input.contentKey,
-            title: input.title,
-            updatedAt: input.now,
-          }
-        : checklist,
-    ),
+          ...checklist,
+          items: getUpdatedStudyChecklistItems(input, checklist.items),
+          contentKey: input.contentKey,
+          title: input.title,
+          updatedAt: input.now,
+        }
+        : checklist;
+    }),
   };
 }

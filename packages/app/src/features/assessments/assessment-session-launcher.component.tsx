@@ -26,14 +26,14 @@ export function AssessmentSessionLauncher(props: AssessmentSessionLauncherProps)
   return (
     <UIButton
       variant="contained"
-      onClick={() =>
-        startAssessmentStudySession({
+      onClick={() => {
+        return startAssessmentStudySession({
           assessmentKey: props.assessmentKey,
           navigate,
           questionKeys,
           services,
-        })
-      }
+        });
+      }}
     >
       {t("assessment.start")}
     </UIButton>

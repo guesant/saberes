@@ -15,7 +15,8 @@ export function PerformanceDiagnosisStatRow(props: PerformanceDiagnosisStatRowPr
     const nextDecision: PerformanceActionDecision = {
       action,
       code: props.stat.code,
-      decidedAt: new Date().toISOString(),
+      decidedAt: new Date()
+        .toISOString(),
     };
 
     await props.onDecision(nextDecision);

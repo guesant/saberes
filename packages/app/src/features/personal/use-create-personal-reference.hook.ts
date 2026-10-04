@@ -16,7 +16,8 @@ export function useCreatePersonalReference(
         title,
         source,
         contentKey,
-        now: new Date().toISOString(),
+        now: new Date()
+          .toISOString(),
       }),
     );
   };

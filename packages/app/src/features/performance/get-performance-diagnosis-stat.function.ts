@@ -5,25 +5,28 @@ import type { PerformanceDiagnosisStat } from "./performance-diagnosis-stat.inte
 export function getPerformanceDiagnosisStat(
   input: GetPerformanceDiagnosisStatInput,
 ): PerformanceDiagnosisStat {
-  const recentAttempts = input.attempts.filter(
-    (attempt) =>
+  const recentAttempts = input.attempts.filter((attempt) => {
+    return (
       input.now &&
       attempt.answeredAt &&
-      differenceInCalendarDays(input.now || new Date(), parseISO(attempt.answeredAt)) < 7,
-  ).length;
+      differenceInCalendarDays(input.now || new Date(), parseISO(attempt.answeredAt)) < 7
+    );
+  }).length;
 
-  const topicIds = new Set(input.attempts.flatMap((attempt) => attempt.topicIds || []));
+  const topicIds = new Set(
+    input.attempts.flatMap((attempt) => { return attempt.topicIds || []; }),
+  );
 
   const questionIds = new Set(
     input.attempts
-      .filter((attempt) => attempt.questionId !== undefined)
-      .map((attempt) => attempt.questionId),
+      .filter((attempt) => { return attempt.questionId !== undefined; })
+      .map((attempt) => { return attempt.questionId; }),
   );
 
   const sessionIds = new Set(
     input.attempts
-      .filter((attempt) => attempt.sessionId !== undefined)
-      .map((attempt) => attempt.sessionId),
+      .filter((attempt) => { return attempt.sessionId !== undefined; })
+      .map((attempt) => { return attempt.sessionId; }),
   );
 
   return {
