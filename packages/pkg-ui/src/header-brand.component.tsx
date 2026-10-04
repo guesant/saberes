@@ -8,7 +8,19 @@ export type UIHeaderBrandProps = {
 
 export function UIHeaderBrand(props: UIHeaderBrandProps): ReactElement {
   return (
-    <MuiTypography component="a" href={props.href} sx={{ flexGrow: 1, ml: 1 }} variant="h6">
+    <MuiTypography
+      component="a"
+      href={props.href}
+      sx={{
+        "&:hover": { color: "common.white", textDecoration: "none" },
+        "&:visited": { color: "common.white", textDecoration: "none" },
+        color: "common.white",
+        flexGrow: 1,
+        ml: 1,
+        textDecoration: "none",
+      }}
+      variant="h6"
+    >
       {props.children}
     </MuiTypography>
   );

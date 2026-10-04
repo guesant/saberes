@@ -1,6 +1,7 @@
 const ptBR = {
   brand: {
     name: "Portal Guesant Saberes",
+    headerName: "Saberes",
     footer: "conteúdo previamente revisado",
   },
   nav: {

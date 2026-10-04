@@ -31,7 +31,7 @@ export function NavigationHeader(props: NavigationHeaderProps) {
           <UIMenuIcon />
         </UIIconButton>
 
-        <UIHeaderBrand href="/">{t("brand.name")}</UIHeaderBrand>
+        <UIHeaderBrand href="/">{t("brand.headerName")}</UIHeaderBrand>
 
         <UIHeaderNavigation>
           {props.links.map((link) => (
