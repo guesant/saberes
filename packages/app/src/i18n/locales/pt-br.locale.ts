@@ -360,6 +360,16 @@ const ptBR = {
     notFound: "Não há plano de estudo publicado.",
     sequence: "Sua sequência de estudo",
     nextStep: "Próxima etapa",
+    localCopyTitle: "Sua cópia local",
+    status: {
+      active: "Plano ativo",
+      paused: "Plano pausado",
+      completed: "Plano concluído",
+    },
+    pause: "Pausar plano",
+    resume: "Retomar plano",
+    targetDate: "Data-alvo",
+    dailyMinutes: "Minutos por dia",
     editorialNotice:
       "O plano é editorial; seu progresso e suas alterações ficam somente neste dispositivo.",
     recommendedPace: "Ritmo recomendado",

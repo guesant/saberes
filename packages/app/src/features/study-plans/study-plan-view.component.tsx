@@ -28,8 +28,14 @@ export function StudyPlanView() {
   return (
     <StudyPlanReadyView
       data={viewModel.data}
+      steps={viewModel.steps}
       progress={viewModel.progress}
       onToggle={viewModel.toggleStep}
+      localState={viewModel.localState}
+      nextStep={viewModel.nextStep}
+      onTogglePause={viewModel.togglePause}
+      onTargetDateChange={viewModel.updateTargetDate}
+      onDailyMinutesChange={viewModel.updateDailyMinutes}
     />
   );
 }
