@@ -17,5 +17,7 @@ export * from "./save-session.command-handler";
 export * from "./save-setting.command-handler";
 export * from "./save-streak.command-handler";
 export * from "./save-topic-mastery.command-handler";
+export * from "./save-saved-catalog-filter.command-handler";
+export * from "./delete-saved-catalog-filter.command-handler";
 export * from "./schedule-review.command-handler";
 export * from "./sync-achievements.command-handler";

@@ -32,6 +32,7 @@ import type { ProgressDatabaseContract } from "./progress-database.contract";
 import type { ReviewDatabaseEvent } from "./review-database-event.interface";
 import type { ReviewTarget } from "./review-target.type";
 import type { SessionRecord } from "./session-record.interface";
+import type { SavedCatalogFilter } from "@guesant/saberes-application";
 
 export type { DiagnosisCode, DiagnosisConfidence, DiagnosisSource, PedagogicalAction, ReviewState };
 
@@ -71,6 +72,7 @@ const studyStores = [
   "achievements",
   "goals",
   "topicMastery",
+  "savedCatalogFilters",
 ];
 
 const progressStoreNames = [...studyStores, "attempts", "sessions", "settings"];
@@ -94,10 +96,12 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
 
   reviewEvents!: Table<ReviewDatabaseEvent, string>;
 
+  savedCatalogFilters!: Table<SavedCatalogFilter, string>;
+
   constructor() {
     super("saberes-progress");
 
-    this.version(4)
+    this.version(5)
       .stores({
         attempts: "id, answeredAt, sessionId, contentKey",
         sessions: "id, startedAt, completedAt",
@@ -118,6 +122,7 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
         achievements: "contentKey, unlockedAt",
         goals: "contentKey, updatedAt",
         topicMastery: "contentKey, percentage, updatedAt",
+        savedCatalogFilters: "id, updatedAt",
       })
       .upgrade(async (tx) => {
         const legacyItems = await tx.table("reviewItems").toArray();
@@ -194,6 +199,18 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
 
   listSessions() {
     return this.table("sessions").toArray();
+  }
+
+  listSavedCatalogFilters(): Promise<SavedCatalogFilter[]> {
+    return this.savedCatalogFilters.orderBy("updatedAt").reverse().toArray();
+  }
+
+  async saveSavedCatalogFilter(filter: SavedCatalogFilter): Promise<void> {
+    await this.savedCatalogFilters.put(filter);
+  }
+
+  async deleteSavedCatalogFilter(id: string): Promise<void> {
+    await this.savedCatalogFilters.delete(id);
   }
 
   async saveSetting(key: string, value: unknown): Promise<void> {

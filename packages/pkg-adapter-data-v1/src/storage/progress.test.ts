@@ -4,6 +4,7 @@ import {
   DiagnosisCode,
   DiagnosisConfidence,
   DiagnosisSource,
+  LearningCourseType,
   PedagogicalAction,
   ReviewTargetType,
 } from "@guesant/saberes-domain";
@@ -79,6 +80,28 @@ describe("progresso local Dexie", () => {
         id: "session-1",
       }),
     ]);
+  });
+
+  it("persiste, lista e remove filtros do catálogo localmente", async () => {
+    await progressDb.saveSavedCatalogFilter({
+      id: "filter-1",
+      name: "Questões gerais",
+      filters: { courseType: LearningCourseType.General, search: "funções" },
+      updatedAt: "2026-10-04T10:00:00.000Z",
+    });
+
+    expect(await progressDb.listSavedCatalogFilters()).toEqual([
+      {
+        id: "filter-1",
+        name: "Questões gerais",
+        filters: { courseType: LearningCourseType.General, search: "funções" },
+        updatedAt: "2026-10-04T10:00:00.000Z",
+      },
+    ]);
+
+    await progressDb.deleteSavedCatalogFilter("filter-1");
+
+    expect(await progressDb.listSavedCatalogFilters()).toEqual([]);
   });
 
   it("exporta e restaura o progresso sem tocar no conteúdo editorial", async () => {

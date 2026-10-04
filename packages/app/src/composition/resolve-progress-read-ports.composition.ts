@@ -16,6 +16,7 @@ export function resolveProgressReadPorts(
   | "listBookmarks"
   | "listReviewItems"
   | "listStudySessions"
+  | "listSavedCatalogFilters"
   | "listReviewTargets"
   | "listDiagnoses"
   | "listDailyChallenges"

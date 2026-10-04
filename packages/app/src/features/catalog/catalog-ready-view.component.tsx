@@ -2,10 +2,9 @@ import { UIContentGroup } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { CatalogQuestionSessionLauncher } from "../exercises/catalog-question-session-launcher.component";
 import { CatalogEmptyState } from "./catalog-empty-state.component";
-import { CatalogFilterBar } from "./catalog-filter-bar.component";
+import { CatalogFilterControls } from "./catalog-filter-controls.component";
 import { CatalogGrid } from "./catalog-grid.component";
 import { CatalogHeader } from "./catalog-header.component";
-import { CatalogSearchField } from "./catalog-search-field.component";
 import { CatalogTabs } from "./catalog-tabs.component";
 import { getCatalogQuestionItemsForTab } from "./get-catalog-question-items-for-tab.function";
 import type { CatalogViewModel } from "./catalog-view-model.type";
@@ -36,15 +35,7 @@ export function CatalogReadyView(props: CatalogReadyViewProps) {
     <UIContentGroup variant="section">
       <CatalogHeader />
 
-      <CatalogSearchField
-        onChange={(search) => viewModel.setFilters((filters) => ({ ...filters, search }))}
-        value={viewModel.filters.search || ""}
-      />
-
-      <CatalogFilterBar
-        filters={viewModel.filters}
-        onChange={(filters) => viewModel.setFilters(filters)}
-      />
+      <CatalogFilterControls viewModel={viewModel} />
 
       <CatalogTabs catalog={catalog} tab={tab} onTabChange={setTab} />
 

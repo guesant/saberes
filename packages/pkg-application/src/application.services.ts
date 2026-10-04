@@ -1,5 +1,6 @@
 import { AddStudyPointsCommandHandler } from "./commands/add-study-points.command-handler";
 import { ClearProgressCommandHandler } from "./commands/clear-progress.command-handler";
+import { DeleteSavedCatalogFilterCommandHandler } from "./commands/delete-saved-catalog-filter.command-handler";
 import { EnrollCourseCommandHandler } from "./commands/enroll-course.command-handler";
 import { ImportProgressCommandHandler } from "./commands/import-progress.command-handler";
 import { RecordAttemptCommandHandler } from "./commands/record-attempt.command-handler";
@@ -13,6 +14,7 @@ import { SaveLessonProgressCommandHandler } from "./commands/save-lesson-progres
 import { SavePlanProgressCommandHandler } from "./commands/save-plan-progress.command-handler";
 import { SaveReviewItemCommandHandler } from "./commands/save-review-item.command-handler";
 import { SaveReviewTargetCommandHandler } from "./commands/save-review-target.command-handler";
+import { SaveSavedCatalogFilterCommandHandler } from "./commands/save-saved-catalog-filter.command-handler";
 import { SaveSessionCommandHandler } from "./commands/save-session.command-handler";
 import { SaveSettingCommandHandler } from "./commands/save-setting.command-handler";
 import { SaveStreakCommandHandler } from "./commands/save-streak.command-handler";
@@ -45,6 +47,7 @@ import { ListLessonProgressQueryHandler } from "./queries/list-lesson-progress.q
 import { ListPlanProgressQueryHandler } from "./queries/list-plan-progress.query-handler";
 import { ListReviewItemsQueryHandler } from "./queries/list-review-items.query-handler";
 import { ListReviewTargetsQueryHandler } from "./queries/list-review-targets.query-handler";
+import { ListSavedCatalogFiltersQueryHandler } from "./queries/list-saved-catalog-filters.query-handler";
 import { ListStudySessionsQueryHandler } from "./queries/list-study-sessions.query-handler";
 import { ListTopicMasteryQueryHandler } from "./queries/list-topic-mastery.query-handler";
 import { ParseEditorialBlocksQueryHandler } from "./queries/parse-editorial-blocks.query-handler";
@@ -125,6 +128,9 @@ export interface ApplicationServices {
     saveAchievement: SaveAchievementCommandHandler;
     listAchievements: ListAchievementsQueryHandler;
     listTopicMastery: ListTopicMasteryQueryHandler;
+    listSavedCatalogFilters: ListSavedCatalogFiltersQueryHandler;
+    saveSavedCatalogFilter: SaveSavedCatalogFilterCommandHandler;
+    deleteSavedCatalogFilter: DeleteSavedCatalogFilterCommandHandler;
   };
   study: {
     recordStudyActivity: RecordStudyActivityCommandHandler;
@@ -225,6 +231,18 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
 
   const listTopicMastery = new ListTopicMasteryQueryHandler(ports.listTopicMastery);
 
+  const listSavedCatalogFilters = new ListSavedCatalogFiltersQueryHandler(
+    ports.listSavedCatalogFilters,
+  );
+
+  const saveSavedCatalogFilter = new SaveSavedCatalogFilterCommandHandler(
+    ports.saveSavedCatalogFilter,
+  );
+
+  const deleteSavedCatalogFilter = new DeleteSavedCatalogFilterCommandHandler(
+    ports.deleteSavedCatalogFilter,
+  );
+
   const recordStudyActivity = new RecordStudyActivityCommandHandler(ports.recordStudyActivity);
 
   const calculateTopicMastery = new CalculateTopicMasteryQueryHandler(ports.calculateTopicMastery);
@@ -296,6 +314,9 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
       saveAchievement,
       listAchievements,
       listTopicMastery,
+      listSavedCatalogFilters,
+      saveSavedCatalogFilter,
+      deleteSavedCatalogFilter,
     },
     study: {
       recordStudyActivity,

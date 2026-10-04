@@ -26,6 +26,7 @@ export * from "./list-review-items.query-handler";
 export * from "./list-review-targets.query-handler";
 export * from "./list-study-sessions.query-handler";
 export * from "./list-topic-mastery.query-handler";
+export * from "./list-saved-catalog-filters.query-handler";
 export * from "./parse-editorial-blocks.query-handler";
 export * from "./preview-review.query-handler";
 export * from "./recommend-next.query-handler";

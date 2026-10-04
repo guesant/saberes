@@ -3,6 +3,7 @@ import type { Attempt } from "./attempt.type";
 import type { ReviewDatabaseEvent } from "./review-database-event.interface";
 import type { ReviewTarget } from "./review-target.type";
 import type { SessionRecord } from "./session-record.interface";
+import type { SavedCatalogFilter } from "@guesant/saberes-application";
 import type { AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
 
 export interface ProgressDatabaseContract {
@@ -45,6 +46,8 @@ export interface ProgressDatabaseContract {
 
   listSessions(): Promise<Array<SessionRecord>>;
 
+  listSavedCatalogFilters(): Promise<SavedCatalogFilter[]>;
+
   listTopicMastery(): Promise<Array<Record<string, unknown>>>;
 
   saveAchievement(
@@ -86,6 +89,10 @@ export interface ProgressDatabaseContract {
   saveReviewTarget(contentKey: string, data?: Partial<ReviewTarget>): Promise<ReviewTarget>;
 
   saveSession(session: SessionRecord): Promise<void>;
+
+  saveSavedCatalogFilter(filter: SavedCatalogFilter): Promise<void>;
+
+  deleteSavedCatalogFilter(id: string): Promise<void>;
 
   saveSetting(key: string, value: unknown): Promise<void>;
 

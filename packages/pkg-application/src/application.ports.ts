@@ -5,6 +5,7 @@ import type { BuildKnowledgeGraphPort } from "./ports/build-knowledge-graph-port
 import type { CalculateTopicMasteryPort } from "./ports/calculate-topic-mastery-port.port";
 import type { ClearProgressPort } from "./ports/clear-progress-port.port";
 import type { ClockPort } from "./ports/clock-port.port";
+import type { DeleteSavedCatalogFilterPort } from "./ports/delete-saved-catalog-filter-port.port";
 import type { EnrollCoursePort } from "./ports/enroll-course-port.port";
 import type { ExportProgressPort } from "./ports/export-progress-port.port";
 import type { GetAssessmentPort } from "./ports/get-assessment-port.port";
@@ -30,6 +31,7 @@ import type { ListLessonProgressPort } from "./ports/list-lesson-progress-port.p
 import type { ListPlanProgressPort } from "./ports/list-plan-progress-port.port";
 import type { ListReviewItemsPort } from "./ports/list-review-items-port.port";
 import type { ListReviewTargetsPort } from "./ports/list-review-targets-port.port";
+import type { ListSavedCatalogFiltersPort } from "./ports/list-saved-catalog-filters-port.port";
 import type { ListStudySessionsPort } from "./ports/list-study-sessions-port.port";
 import type { ListTopicMasteryPort } from "./ports/list-topic-mastery-port.port";
 import type { ParseEditorialBlocksPort } from "./ports/parse-editorial-blocks-port.port";
@@ -46,6 +48,7 @@ import type { SaveLessonProgressPort } from "./ports/save-lesson-progress-port.p
 import type { SavePlanProgressPort } from "./ports/save-plan-progress-port.port";
 import type { SaveReviewItemPort } from "./ports/save-review-item-port.port";
 import type { SaveReviewTargetPort } from "./ports/save-review-target-port.port";
+import type { SaveSavedCatalogFilterPort } from "./ports/save-saved-catalog-filter-port.port";
 import type { SaveSessionPort } from "./ports/save-session-port.port";
 import type { SaveSettingPort } from "./ports/save-setting-port.port";
 import type { SaveStreakPort } from "./ports/save-streak-port.port";
@@ -96,6 +99,9 @@ export interface ApplicationPorts {
   saveAchievement: SaveAchievementPort;
   listAchievements: ListAchievementsPort;
   listTopicMastery: ListTopicMasteryPort;
+  listSavedCatalogFilters: ListSavedCatalogFiltersPort;
+  saveSavedCatalogFilter: SaveSavedCatalogFilterPort;
+  deleteSavedCatalogFilter: DeleteSavedCatalogFilterPort;
   scheduleReview: ScheduleReviewPort;
   previewReview: PreviewReviewPort;
   recordStudyActivity: RecordStudyActivityPort;

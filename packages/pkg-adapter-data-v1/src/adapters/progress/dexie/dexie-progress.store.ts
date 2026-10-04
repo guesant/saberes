@@ -3,6 +3,7 @@ import type { Attempt } from "../../../storage/attempt.type";
 import type { ProgressDatabaseContract } from "../../../storage/progress-database.contract";
 import type { ProgressStorageContract } from "../../../storage/progress-storage.contract";
 import type { ReviewTarget } from "../../../storage/review-target.type";
+import type { SavedCatalogFilter } from "@guesant/saberes-application";
 import type { DiagnosisRecord, AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
 
 type SessionRecord = { id: string; [key: string]: unknown };
@@ -32,6 +33,18 @@ export class DexieProgressStore implements ProgressStorageContract {
 
   listSessions() {
     return this.database.listSessions();
+  }
+
+  listSavedCatalogFilters(): Promise<SavedCatalogFilter[]> {
+    return this.database.listSavedCatalogFilters();
+  }
+
+  saveSavedCatalogFilter(filter: SavedCatalogFilter): Promise<void> {
+    return this.database.saveSavedCatalogFilter(filter);
+  }
+
+  deleteSavedCatalogFilter(id: string): Promise<void> {
+    return this.database.deleteSavedCatalogFilter(id);
   }
 
   async saveSetting(key: string, value: unknown): Promise<void> {

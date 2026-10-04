@@ -31,3 +31,6 @@ export * from "./save-achievement-adapter.adapter";
 export * from "./list-achievements-adapter.adapter";
 export * from "./list-topic-mastery-adapter.adapter";
 export * from "./save-topic-mastery-adapter.adapter";
+export * from "./list-saved-catalog-filters-adapter.adapter";
+export * from "./save-saved-catalog-filter-adapter.adapter";
+export * from "./delete-saved-catalog-filter-adapter.adapter";

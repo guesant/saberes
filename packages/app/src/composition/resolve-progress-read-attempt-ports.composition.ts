@@ -16,6 +16,7 @@ export function resolveProgressReadAttemptPorts(
   | "listBookmarks"
   | "listReviewItems"
   | "listStudySessions"
+  | "listSavedCatalogFilters"
 > {
   return {
     listAttempts: resolvePort(container, applicationDependencyTokens.listAttempts),
@@ -27,5 +28,9 @@ export function resolveProgressReadAttemptPorts(
     listBookmarks: resolvePort(container, applicationDependencyTokens.listBookmarks),
     listReviewItems: resolvePort(container, applicationDependencyTokens.listReviewItems),
     listStudySessions: resolvePort(container, applicationDependencyTokens.listStudySessions),
+    listSavedCatalogFilters: resolvePort(
+      container,
+      applicationDependencyTokens.listSavedCatalogFilters,
+    ),
   };
 }

@@ -1,5 +1,6 @@
 import { resolveProgressWriteCorePorts } from "./resolve-progress-write-core-ports.composition";
 import { resolveProgressWriteReviewPorts } from "./resolve-progress-write-review-ports.composition";
+import { resolveProgressWriteSavedFilterPorts } from "./resolve-progress-write-saved-filter-ports.composition";
 import type { ApplicationPorts } from "@guesant/saberes-application";
 import type { Container } from "inversify";
 
@@ -16,6 +17,8 @@ export function resolveProgressWritePorts(
   | "importProgress"
   | "saveLessonProgress"
   | "savePlanProgress"
+  | "saveSavedCatalogFilter"
+  | "deleteSavedCatalogFilter"
   | "saveBookmark"
   | "saveReviewItem"
   | "saveReviewTarget"
@@ -28,5 +31,6 @@ export function resolveProgressWritePorts(
   return {
     ...resolveProgressWriteCorePorts(container),
     ...resolveProgressWriteReviewPorts(container),
+    ...resolveProgressWriteSavedFilterPorts(container),
   };
 }
