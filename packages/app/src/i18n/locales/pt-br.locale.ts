@@ -338,7 +338,15 @@ const ptBR = {
     masteredTopics: "tópicos dominados",
     topicRow:
       "{{topic}}: {{attempts}} tentativa(s), {{accuracy}}% de acerto, {{incorrect}} erro(s)",
-    diagnosisRow: "{{diagnosis}}: {{attempts}} ocorrência(s)",
+    diagnosisRow: "{{diagnosis}}: {{attempts}} ocorrência(s). Próxima ação: {{action}}.",
+    actions: {
+      theory: "retomar a teoria",
+      practice: "praticar o tópico",
+      review: "revisar este conteúdo",
+      retry: "tentar novamente",
+      none: "explorar o catálogo",
+    },
+    openAction: "Abrir ação",
     nextAction: "Próxima ação",
     nextActionErrors: "Você tem erros registrados que podem ser revisados agora.",
     nextActionContinue: "Continue praticando para transformar atividade em domínio.",

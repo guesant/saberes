@@ -1,12 +1,15 @@
 import { useTranslation } from "react-i18next";
 import { ContentErrorState } from "../../components/content-error-state.component";
 import { ContentLoadingState } from "../../components/content-loading-state.component";
+import { useAppServices } from "../../composition/use-app-services.hook";
 import { MyStudyProgressError } from "../my-study/my-study-progress-error.component";
 import { useMyStudyViewModel } from "../my-study/my-study.view-model";
 import { PerformanceReadyView } from "./performance-ready-view.component";
 
 export function PerformanceView() {
   const { t } = useTranslation();
+
+  const services = useAppServices();
 
   const viewModel = useMyStudyViewModel();
 
@@ -27,7 +30,10 @@ export function PerformanceView() {
           onRetry={viewModel.reload}
         />
       ) : null}
-      <PerformanceReadyView data={viewModel.data} />
+      <PerformanceReadyView
+        actionForDiagnosis={services.study.actionForDiagnosis.execute}
+        data={viewModel.data}
+      />
     </>
   );
 }

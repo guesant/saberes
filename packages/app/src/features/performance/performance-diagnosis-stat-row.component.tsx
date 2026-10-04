@@ -1,20 +1,28 @@
-import { UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import type { PerformanceDiagnosisStat } from "./performance-diagnosis-stat.interface";
-
-export type PerformanceDiagnosisStatRowProps = {
-  stat: PerformanceDiagnosisStat;
-};
+import { Link } from "react-router-dom";
+import { getPerformanceActionPath } from "./get-performance-action-path.function";
+import type { PerformanceDiagnosisStatRowProps } from "./performance-diagnosis-stat-row-props.type";
 
 export function PerformanceDiagnosisStatRow(props: PerformanceDiagnosisStatRowProps) {
   const { t } = useTranslation();
 
+  const actionLabel = t(`performance.actions.${props.stat.action}`);
+
   return (
-    <UITypography color="text.secondary">
-      {t("performance.diagnosisRow", {
-        attempts: props.stat.attempts,
-        diagnosis: t(`exercise.diagnosis.${props.stat.code}`),
-      })}
-    </UITypography>
+    <UIContentGroup variant="tight">
+      <UITypography color="text.secondary">
+        {t("performance.diagnosisRow", {
+          action: actionLabel,
+          attempts: props.stat.attempts,
+          diagnosis: t(`exercise.diagnosis.${props.stat.code}`),
+        })}
+      </UITypography>
+      <UIInlineActions>
+        <UIButton component={Link} size="small" to={getPerformanceActionPath(props.stat.action)}>
+          {t("performance.openAction")}
+        </UIButton>
+      </UIInlineActions>
+    </UIContentGroup>
   );
 }

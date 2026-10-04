@@ -10,8 +10,10 @@ import { PerformanceNextAction } from "./performance-next-action.component";
 import { PerformanceSummaryGrid } from "./performance-summary-grid.component";
 import { PerformanceTopicList } from "./performance-topic-list.component";
 import type { MyStudyReadModel } from "../my-study/my-study-read-model.interface";
+import type { DiagnosisCode, PedagogicalAction } from "@guesant/saberes-application";
 
 export type PerformanceReadyViewProps = {
+  actionForDiagnosis: (code: DiagnosisCode) => PedagogicalAction;
   data: MyStudyReadModel;
 };
 
@@ -32,7 +34,10 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
     sessions: props.data.sessions,
   });
 
-  const diagnosisStats = getPerformanceDiagnosisStats(props.data.attempts);
+  const diagnosisStats = getPerformanceDiagnosisStats({
+    actionForDiagnosis: props.actionForDiagnosis,
+    attempts: props.data.attempts,
+  });
 
   const hasErrors = props.data.attempts.some((attempt) => attempt.isCorrect === false);
 
