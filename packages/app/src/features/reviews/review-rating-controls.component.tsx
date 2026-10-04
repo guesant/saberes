@@ -7,7 +7,7 @@ import type { ReviewPreview } from "./review-preview.type";
 export type ReviewRatingControlsProps = {
   target: ReviewTarget;
   preview: ReviewPreview | undefined;
-  onRate: (target: ReviewTarget, rating: FsrsRating) => Promise<void>;
+  onRate(target: ReviewTarget, rating: FsrsRating): Promise<void>;
 };
 
 export function ReviewRatingControls(props: ReviewRatingControlsProps) {

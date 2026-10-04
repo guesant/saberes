@@ -4,10 +4,10 @@ import rehypeKatex from "rehype-katex";
 import rehypeSanitize from "rehype-sanitize";
 import remarkMath from "remark-math";
 import { UIFormulaCaption } from "./formula-caption.component";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { FormulaBlock } from "@guesant/saberes-application";
 
 type UIFormulaBlockViewProps = {
-  block: Extract<EditorialBlock, { type: "formula" }>;
+  block: FormulaBlock;
 };
 
 export function UIFormulaBlockView(props: UIFormulaBlockViewProps) {

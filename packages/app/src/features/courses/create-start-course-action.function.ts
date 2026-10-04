@@ -1,4 +1,5 @@
 import { startCourse } from "./start-course.function";
+import type { AsyncAction } from "../../types/async-action.type";
 import type { ApplicationServices, CourseReadModel } from "@guesant/saberes-application";
 import type { QueryClient } from "@tanstack/react-query";
 
@@ -8,7 +9,9 @@ export type CreateStartCourseActionInput = {
   course: CourseReadModel["course"] | undefined;
 };
 
-export function createStartCourseAction(input: CreateStartCourseActionInput): () => Promise<void> {
+export function createStartCourseAction(
+  input: CreateStartCourseActionInput,
+): AsyncAction<[], void> {
   return async (): Promise<void> => {
     if (!input.course) {
       return;

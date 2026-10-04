@@ -3,6 +3,7 @@ import type { ProgressImportStrategy } from "@guesant/saberes-application";
 
 export type LocalBackupPreviewProps = {
   pending: LocalBackupPending;
-  onCancel: () => void;
-  onImport: (strategy: ProgressImportStrategy) => Promise<void>;
+  onCancel(): void;
+
+  onImport(strategy: ProgressImportStrategy): Promise<void>;
 };

@@ -1,8 +1,8 @@
 import { UIAlert, UITypography } from "@guesant/saberes-ui";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { CalloutBlock } from "@guesant/saberes-application";
 
 type UICalloutBlockViewProps = {
-  block: Extract<EditorialBlock, { type: "callout" }>;
+  block: CalloutBlock;
 };
 
 export function UICalloutBlockView(props: UICalloutBlockViewProps) {

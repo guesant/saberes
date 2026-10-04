@@ -1,5 +1,6 @@
 import { submitQuestionAnswer } from "./submit-question-answer.function";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
+import type { AsyncAction } from "../../types/async-action.type";
 import type {
   ApplicationServices,
   AttemptConfidence,
@@ -18,11 +19,7 @@ export type CreateQuestionSubmissionInput = {
 
 export function createQuestionSubmissionAction(
   input: CreateQuestionSubmissionInput,
-): (
-  answer: string,
-  elapsedMs: number,
-  confidence: AttemptConfidence,
-) => Promise<QuestionSubmissionResult> {
+): AsyncAction<[string, number, AttemptConfidence], QuestionSubmissionResult> {
   const { data, services, setAttemptId } = input;
 
   return async (

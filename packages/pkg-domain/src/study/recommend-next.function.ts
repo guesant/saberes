@@ -1,9 +1,4 @@
-type RecommendationInput = {
-  incompleteItems?: Array<{ id: string | number; topicId?: string | number }>;
-  prerequisites?: Array<{ topicId?: string | number; completed?: boolean }>;
-  topicMastery?: Record<string, { percentage?: number }>;
-  recentErrors?: Array<{ topicIds?: Array<string | number> }>;
-};
+import type { RecommendationInput } from "./recommendation-input.interface";
 
 export function recommendNext(input: RecommendationInput = {}) {
   const { incompleteItems = [], prerequisites = [], topicMastery = {}, recentErrors = [] } = input;

@@ -4,7 +4,7 @@ import { LessonSectionLink } from "./lesson-section-link.component";
 export type LessonSectionNavigationProps = {
   sections: Array<Record<string, unknown>>;
   selectedIndex: number | undefined;
-  onSectionSelect: (sectionIndex: number) => Promise<void>;
+  onSectionSelect(sectionIndex: number): Promise<void>;
 };
 
 export function LessonSectionNavigation(props: LessonSectionNavigationProps) {

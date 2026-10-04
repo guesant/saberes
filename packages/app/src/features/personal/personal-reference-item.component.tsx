@@ -1,0 +1,49 @@
+import { useState } from "react";
+import { PersonalReferenceDisplay } from "./personal-reference-display.component";
+import { PersonalReferenceEditor } from "./personal-reference-editor.component";
+import type { PersonalReference } from "@guesant/saberes-application";
+
+export interface PersonalReferenceItemProps {
+  reference: PersonalReference;
+  onUpdateFavorite(id: string): Promise<void>;
+
+  onDelete(id: string): Promise<void>;
+
+  onUpdateContent(id: string, title: string, source: string): Promise<void>;
+}
+
+export function PersonalReferenceItem(props: PersonalReferenceItemProps) {
+  const [editing, setEditing] = useState(false);
+
+  const [title, setTitle] = useState(props.reference.title);
+
+  const [source, setSource] = useState(props.reference.source);
+
+  const save = async (): Promise<void> => {
+    await props.onUpdateContent(props.reference.id, title.trim(), source.trim());
+
+    setEditing(false);
+  };
+
+  if (editing) {
+    return (
+      <PersonalReferenceEditor
+        onCancel={() => setEditing(false)}
+        onSave={save}
+        onSourceChange={setSource}
+        onTitleChange={setTitle}
+        source={source}
+        title={title}
+      />
+    );
+  }
+
+  return (
+    <PersonalReferenceDisplay
+      reference={props.reference}
+      onDelete={() => props.onDelete(props.reference.id)}
+      onEdit={() => setEditing(true)}
+      onFavorite={() => props.onUpdateFavorite(props.reference.id)}
+    />
+  );
+}

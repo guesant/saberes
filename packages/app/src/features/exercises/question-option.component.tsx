@@ -3,7 +3,7 @@ import { UIHtmlStrongText, UISelectableSurface, UITypography } from "@guesant/sa
 export type QuestionOptionProps = {
   option: Record<string, unknown>;
   selected: boolean;
-  onSelect: (value: string) => void;
+  onSelect(value: string): void;
 };
 
 export function QuestionOption(props: QuestionOptionProps) {
@@ -11,6 +11,7 @@ export function QuestionOption(props: QuestionOptionProps) {
 
   return (
     <UISelectableSurface
+      interactive
       selected={selected}
       variant="outlined"
       onClick={() => onSelect(String(option.code))}

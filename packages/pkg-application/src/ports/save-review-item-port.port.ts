@@ -1,9 +1,5 @@
-import type { StudyRecord } from "../models/index";
-import type { ContentKey } from "@guesant/saberes-domain";
+import type { SaveStudyRecordInput, StudyRecord } from "../models/index";
 
 export interface SaveReviewItemPort {
-  execute(input: {
-    contentKey: ContentKey | string;
-    data?: Record<string, unknown>;
-  }): Promise<StudyRecord>;
+  execute(input: SaveStudyRecordInput): Promise<StudyRecord>;
 }

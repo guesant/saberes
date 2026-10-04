@@ -4,7 +4,7 @@
   "imports": {
     "@std/path": "jsr:@std/path@1.1.6"
   },
-  "nodeModulesDir": "auto",
+  "nodeModulesDir": "manual",
   "fmt": {
     "useTabs": true,
     "lineWidth": 100,
@@ -16,7 +16,7 @@
   "tasks": {
     "build": "deno task database:schema-docs && vite --config .config/vite.config.ts build",
     "dev": "vite --config .config/vite.config.ts --host 0.0.0.0",
-    "typecheck": "deno run --allow-all npm:typescript@5.9.3/tsc --project .config/tsconfig.json --noEmit",
+    "typecheck": "tsc --project .config/tsconfig.json --noEmit",
     "check": "deno task quality:check",
     "quality:check": "deno task quality:check:fast",
     "quality:check:fast": "deno task check:format && deno task check:lint && deno task typecheck && deno task test && deno task architecture:test && deno task file:conventions",
@@ -28,6 +28,7 @@
     "dependencies:checksums:check": "deno task aqua:checksums:check && deno run --allow-read --allow-net packages/pkg-tooling/src/tools/update-bootstrap-checksums.tool.ts check",
     "stylelint": "stylelint \"packages/**/*.{css,scss}\" \".config/**/*.{css,scss}\" \".local/**/*.{css,scss}\" --config .config/stylelint.config.json --allow-empty-input",
     "quality:report": "mkdir -p .cache && (aqua exec -- qlty check --all --no-cache --no-upgrade-check --no-progress --no-fail --sarif > .cache/qlty-report.sarif || test -s .cache/qlty-report.sarif)",
+    "quality:report:metadata": "deno run --allow-env --allow-write packages/pkg-tooling/src/tools/write-quality-report-metadata.tool.ts",
     "aqua:checksums:update": "deno run --allow-read --allow-write --allow-env --allow-run=aqua packages/pkg-tooling/src/tools/update-aqua-checksums.tool.ts update",
     "aqua:checksums:check": "deno run --allow-read --allow-write --allow-env --allow-run=aqua packages/pkg-tooling/src/tools/update-aqua-checksums.tool.ts check",
     "renovate": "mise exec -- node node_modules/.bin/renovate",
@@ -58,7 +59,7 @@
     "commit:check": "deno run --allow-read --allow-run packages/pkg-tooling/src/tools/check-commits.tool.ts",
     "test": "vitest run --config .config/vite.config.ts",
     "e2e": "playwright test --config .config/playwright.config.ts",
-    "lighthouse": "deno run --allow-all npm:@lhci/cli@0.15.1 autorun --config .config/lighthouserc.json",
+    "lighthouse": "lhci autorun --config .config/lighthouserc.json",
     "duplication": "jscpd --config .config/.jscpd.json .",
     "dead-code": "knip --config .config/knip.json"
   },

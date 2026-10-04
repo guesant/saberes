@@ -2,7 +2,7 @@ import { createQuestionStudySession } from "./create-question-study-session.func
 import type { CatalogCard, ApplicationServices, StudySession } from "@guesant/saberes-application";
 
 export interface StartQuestionStudySessionInput {
-  navigate: (path: string) => void;
+  navigate(path: string): void;
   questions: CatalogCard[];
   quantity: string;
   durationMinutes: string;

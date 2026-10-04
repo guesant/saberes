@@ -1,3 +1,5 @@
+import type { SaveSettingInput } from "../models/index";
+
 export interface SaveSettingPort {
-  execute(input: { key: string; value: unknown }): Promise<void>;
+  execute(input: SaveSettingInput): Promise<void>;
 }

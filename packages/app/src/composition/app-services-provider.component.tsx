@@ -1,8 +1,5 @@
 import { AppServicesContext } from "./app-services-context.setup";
-import type { ApplicationServices } from "@guesant/saberes-application";
-import type { PropsWithChildren } from "react";
-
-type AppServicesProviderProps = PropsWithChildren<{ services: ApplicationServices }>;
+import type { AppServicesProviderProps } from "./app-services-provider-props.interface";
 
 export function AppServicesProvider(props: AppServicesProviderProps) {
   const { services, children } = props;

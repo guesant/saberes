@@ -6,11 +6,12 @@ import type { LessonSectionContentViewModel } from "./lesson-section-content-vie
 
 export type LessonSectionContentViewProps = {
   viewModel: LessonSectionContentViewModel;
-  onQuestion: (questionId: string | number) => void;
+  showRichContent: boolean;
+  onQuestion(questionId: string | number): void;
 };
 
 export function LessonSectionContentView(props: LessonSectionContentViewProps) {
-  const { viewModel, onQuestion } = props;
+  const { viewModel, onQuestion, showRichContent } = props;
 
   if (viewModel.status === "loading") {
     return <ContentLoadingState />;
@@ -33,6 +34,7 @@ export function LessonSectionContentView(props: LessonSectionContentViewProps) {
         blocks={viewModel.blocks}
         knowledgeGraph={viewModel.knowledgeGraph}
         onQuestion={onQuestion}
+        showRichContent={showRichContent}
       />
     </UISectionAnchor>
   );

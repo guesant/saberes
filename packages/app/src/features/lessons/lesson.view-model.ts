@@ -20,10 +20,13 @@ export interface LessonViewModel {
   sectionIndex: number | undefined;
   error: Error | null;
   progressError: Error | null;
-  reload: () => Promise<void>;
-  saveProgress: (completed: boolean) => Promise<void>;
-  saveBookmark: () => Promise<void>;
-  saveSection: (sectionIndex: number) => Promise<void>;
+  reload(): Promise<void>;
+
+  saveProgress(completed: boolean): Promise<void>;
+
+  saveBookmark(): Promise<void>;
+
+  saveSection(sectionIndex: number): Promise<void>;
 }
 
 export function useLessonViewModel(key: string | undefined): LessonViewModel {

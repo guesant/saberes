@@ -1,11 +1,13 @@
 import { UIMetricGrid, UIMetricGridItem } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { getMyStudyMetrics } from "./get-my-study-metrics.function";
+import { MyStudyGamificationMetrics } from "./my-study-gamification-metrics.component";
 import { StudyMetric } from "./study-metric.component";
 import type { MyStudyReadModel } from "./my-study-read-model.interface";
 
 export type MyStudyMetricsGridProps = {
   data: MyStudyReadModel;
+  showGamification: boolean;
 };
 
 export function MyStudyMetricsGrid(props: MyStudyMetricsGridProps) {
@@ -24,12 +26,13 @@ export function MyStudyMetricsGrid(props: MyStudyMetricsGridProps) {
       <UIMetricGridItem>
         <StudyMetric label={t("course.reviews")} value={metrics.reviews} />
       </UIMetricGridItem>
-      <UIMetricGridItem>
-        <StudyMetric label={t("home.streak")} value={metrics.streak} />
-      </UIMetricGridItem>
-      <UIMetricGridItem>
-        <StudyMetric label={t("home.achievements")} value={metrics.achievements} />
-      </UIMetricGridItem>
+      {props.showGamification ? (
+        <MyStudyGamificationMetrics
+          achievementsLabel={t("home.achievements")}
+          metrics={metrics}
+          streakLabel={t("home.streak")}
+        />
+      ) : null}
       <UIMetricGridItem>
         <StudyMetric label={t("home.masteredTopics")} value={metrics.masteredTopics} />
       </UIMetricGridItem>

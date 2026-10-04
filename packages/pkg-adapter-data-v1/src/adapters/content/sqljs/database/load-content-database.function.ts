@@ -1,4 +1,5 @@
 import initSqlJs from "sql.js";
+import { createSyntheticContentDatabase } from "./create-synthetic-content-database.function";
 import { fetchContentDatabase } from "./fetch-content-database.function";
 import { mapSqlResults } from "./map-sql-results.function";
 import type { ContentDatabase } from "./content-database.type";
@@ -13,25 +14,29 @@ let databasePromise: Promise<ContentDatabase> | undefined;
 export async function loadContentDatabase(): Promise<ContentDatabase> {
   if (!databasePromise) {
     const pendingDatabase = (async () => {
-      const SQL = await initSqlJs({
-        locateFile: () => `${import.meta.env.BASE_URL}sql-wasm.wasm`,
-      });
-
       let bytes: Uint8Array;
 
       let source = primaryUrl;
 
       try {
         bytes = await fetchContentDatabase(primaryUrl);
-      } catch (primaryError) {
+      } catch {
         if (primaryUrl === fallbackUrl) {
-          throw primaryError;
+          return createSyntheticContentDatabase();
         }
 
-        bytes = await fetchContentDatabase(fallbackUrl);
+        try {
+          bytes = await fetchContentDatabase(fallbackUrl);
+        } catch {
+          return createSyntheticContentDatabase();
+        }
 
         source = fallbackUrl;
       }
+
+      const SQL = await initSqlJs({
+        locateFile: () => `${import.meta.env.BASE_URL}sql-wasm.wasm`,
+      });
 
       const db = new SQL.Database(bytes);
 

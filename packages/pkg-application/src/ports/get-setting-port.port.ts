@@ -1,3 +1,5 @@
+import type { SettingRecord } from "../models/index";
+
 export interface GetSettingPort {
-  execute(key: string): Promise<{ value?: unknown } | undefined>;
+  execute(key: string): Promise<SettingRecord | undefined>;
 }

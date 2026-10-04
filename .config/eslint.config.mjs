@@ -3,13 +3,26 @@ import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
 import stylistic from "@stylistic/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
+import airbnb from "eslint-config-airbnb";
 import boundaries from "eslint-plugin-boundaries";
 import importPlugin from "eslint-plugin-import";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 import sonarjs from "eslint-plugin-sonarjs";
 import architecture from "../packages/pkg-tooling-eslint/src/architecture.plugin.mjs";
 import importFormat from "../packages/pkg-tooling-eslint/src/import-format.plugin.mjs";
 
-const compat = new FlatCompat({ baseDirectory: dirname(fileURLToPath(import.meta.url)) });
+const airbnbPackageDirectory = dirname(fileURLToPath(import.meta.resolve("eslint-config-airbnb")));
+
+const compat = new FlatCompat({
+  baseDirectory: dirname(fileURLToPath(import.meta.url)),
+  resolvePluginsRelativeTo: airbnbPackageDirectory,
+});
+
+const airbnbConfigs = compat
+  .config(airbnb)
+  .map((config) => Object.fromEntries(Object.entries(config).filter(([key]) => key !== "plugins")));
 
 const sourceFiles = ["**/*.{js,jsx,mjs,ts,tsx}"];
 
@@ -49,6 +62,7 @@ const architectureRules = {
   "architecture/no-generic-identifiers": "error",
   "architecture/no-generic-props-type-name": "error",
   "architecture/no-inline-object-type-in-parameters": "error",
+  "architecture/no-anonymous-complex-types": "error",
   "architecture/max-function-parameters": ["error", 3],
   "architecture/no-unsafe-double-cast": "error",
   "architecture/no-unjustified-suppression": "error",
@@ -177,7 +191,7 @@ const presentationRules = {
 
 export default [
   { ignores: generatedFiles },
-  ...compat.extends("airbnb"),
+  ...airbnbConfigs,
   stylistic.configs["disable-legacy"],
   {
     files: sourceFiles,
@@ -188,6 +202,9 @@ export default [
       import: importPlugin,
       "import-format": importFormat,
       "@stylistic": stylistic,
+      "jsx-a11y": jsxA11y,
+      react,
+      "react-hooks": reactHooks,
       sonarjs,
     },
     settings: {

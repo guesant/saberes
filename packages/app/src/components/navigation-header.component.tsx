@@ -1,19 +1,22 @@
 import {
   UIAppBar,
-  UIChip,
   UIHeaderBrand,
   UIHeaderNavigation,
   UIIconButton,
   UIMenuIcon,
-  UIOfflineBoltIcon,
+  UIOfflineStatusChip,
+  UISearchIcon,
   UIToolbar,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { NavigationButton } from "./navigation-button.component";
+import type { NavigationLink } from "./navigation-link.interface";
 
 export type NavigationHeaderProps = {
-  links: Array<{ label: string; to: string }>;
-  onOpenMenu: () => void;
+  links: NavigationLink[];
+  onOpenMenu(): void;
+
+  onOpenCommandPalette(): void;
 };
 
 export function NavigationHeader(props: NavigationHeaderProps) {
@@ -33,13 +36,21 @@ export function NavigationHeader(props: NavigationHeaderProps) {
 
         <UIHeaderBrand href="/">{t("brand.headerName")}</UIHeaderBrand>
 
+        <UIIconButton
+          aria-label={t("common.openCommandPalette")}
+          color="inherit"
+          onClick={props.onOpenCommandPalette}
+        >
+          <UISearchIcon />
+        </UIIconButton>
+
         <UIHeaderNavigation>
           {props.links.map((link) => (
             <NavigationButton key={link.to} label={link.label} to={link.to} />
           ))}
         </UIHeaderNavigation>
 
-        <UIChip icon={<UIOfflineBoltIcon />} label={t("common.offline")} size="small" />
+        <UIOfflineStatusChip label={t("common.offline")} />
       </UIToolbar>
     </UIAppBar>
   );

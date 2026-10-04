@@ -6,7 +6,7 @@ export type MyStudyAchievementQueries = {
   achievements: StudyRecord[] | undefined;
   streakError: Error | null;
   achievementsError: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 };
 
 export function useMyStudyAchievementQueries(

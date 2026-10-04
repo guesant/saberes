@@ -1,9 +1,9 @@
 import { UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { SummaryBlock } from "@guesant/saberes-application";
 
 type UISummaryBlockViewProps = {
-  block: Extract<EditorialBlock, { type: "summary" }>;
+  block: SummaryBlock;
 };
 
 export function UISummaryBlockView(props: UISummaryBlockViewProps) {

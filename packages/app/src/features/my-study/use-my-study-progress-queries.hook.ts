@@ -25,7 +25,7 @@ export type MyStudyProgressQueries = {
   achievementsError: Error | null;
   topicMasteryError: Error | null;
   bookmarksError: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 };
 
 export function useMyStudyProgressQueries(services: ApplicationServices): MyStudyProgressQueries {

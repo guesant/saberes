@@ -1,11 +1,13 @@
 import { UIAlert, UIBox, UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import { getVisualizationSupport } from "./get-visualization-support.function";
+import { UIVisualizationTextSummary } from "./visualization-text-summary.component";
+import type { ParametricSceneBlock } from "@guesant/saberes-application";
 import type { WebGLRenderer } from "three";
 
 type UIParametricSceneBlockProps = {
-  block: Extract<EditorialBlock, { type: "parametric_scene" }>;
+  block: ParametricSceneBlock;
 };
 
 export function UIParametricSceneBlock(props: UIParametricSceneBlockProps) {
@@ -17,12 +19,29 @@ export function UIParametricSceneBlock(props: UIParametricSceneBlockProps) {
 
   const [hasError, setHasError] = useState(false);
 
+  const title = block.title || t("content.interactiveExperience");
+
+  const textSummary = [
+    `${t("content.sceneShape")}: ${t(`content.sceneShapes.${block.shape}`)}`,
+    `${t("content.sceneColor")}: ${block.color || t("content.sceneDefaultColor")}`,
+    `${t("content.sceneScale")}: ${block.scale || 1}`,
+    `${t("content.sceneRotationSpeed")}: ${block.rotationSpeed || 0}`,
+  ].join("\n");
+
   useEffect(() => {
     let renderer: WebGLRenderer | null = null;
 
     let frame = 0;
 
     let active = true;
+
+    if (!getVisualizationSupport().webgl) {
+      setHasError(true);
+
+      return () => {
+        active = false;
+      };
+    }
 
     import("three")
       .then((THREE) => {
@@ -84,22 +103,20 @@ export function UIParametricSceneBlock(props: UIParametricSceneBlockProps) {
     };
   }, [block]);
 
-  if (hasError) {
-    return <UIAlert severity="info">{t("content.sceneFallback")}</UIAlert>;
-  }
-
   return (
     <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <UITypography fontWeight={700}>
-        {block.title || t("content.interactiveExperience")}
-      </UITypography>
+      <UITypography fontWeight={700}>{title}</UITypography>
+
+      {hasError ? <UIAlert severity="info">{t("content.sceneFallback")}</UIAlert> : null}
 
       <UIBox
         component="canvas"
         ref={canvasRef}
         role="img"
-        aria-label={block.title || t("content.scene3d")}
+        aria-label={title || t("content.scene3d")}
       />
+
+      <UIVisualizationTextSummary summary={textSummary} title={t("content.textualAlternative")} />
     </UIPaper>
   );
 }

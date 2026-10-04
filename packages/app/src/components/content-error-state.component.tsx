@@ -5,7 +5,7 @@ import { ContentErrorDetails } from "./content-error-details.component";
 export type ContentErrorStateProps = {
   label?: string;
   error?: unknown;
-  onRetry?: () => void;
+  onRetry?(): void;
 };
 
 export function ContentErrorState(props: ContentErrorStateProps) {

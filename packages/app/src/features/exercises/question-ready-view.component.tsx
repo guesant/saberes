@@ -12,16 +12,21 @@ export type QuestionReadyViewProps = {
   bookmarkError: Error | null;
   bookmarked: boolean;
   data: QuestionReadModel;
-  onDiagnose: (code: DiagnosisCode) => Promise<void>;
-  onPriorKnowledge: (status: PriorKnowledgeStatus) => Promise<void>;
-  onBookmark: () => Promise<void>;
-  onRetryBookmark: () => Promise<void>;
-  onContinue?: (result: QuestionSubmissionResult) => Promise<void>;
-  onSubmit: (
+  onDiagnose(code: DiagnosisCode): Promise<void>;
+
+  onPriorKnowledge(status: PriorKnowledgeStatus): Promise<void>;
+
+  onBookmark(): Promise<void>;
+
+  onRetryBookmark(): Promise<void>;
+
+  onContinue?(result: QuestionSubmissionResult): Promise<void>;
+
+  onSubmit(
     answer: string,
     elapsedMs: number,
     confidence: AttemptConfidence,
-  ) => Promise<QuestionSubmissionResult>;
+  ): Promise<QuestionSubmissionResult>;
 };
 
 export function QuestionReadyView(props: QuestionReadyViewProps) {

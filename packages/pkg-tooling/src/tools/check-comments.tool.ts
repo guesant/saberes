@@ -1,9 +1,6 @@
 import { extname, join, relative } from "@std/path";
 
-type FilePolicy = {
-  allow: (comment: string) => boolean;
-  markers: string[];
-};
+type FilePolicy = { allow(comment: string): boolean; markers: string[] };
 
 const root = Deno.cwd();
 

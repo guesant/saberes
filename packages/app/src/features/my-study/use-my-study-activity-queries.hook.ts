@@ -13,7 +13,7 @@ export type MyStudyActivityQueries = {
   attemptsError: Error | null;
   reviewsError: Error | null;
   sessionsError: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 };
 
 export function useMyStudyActivityQueries(services: ApplicationServices): MyStudyActivityQueries {

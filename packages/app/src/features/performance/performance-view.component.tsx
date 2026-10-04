@@ -33,6 +33,12 @@ export function PerformanceView() {
       <PerformanceReadyView
         actionForDiagnosis={services.study.actionForDiagnosis.execute}
         data={viewModel.data}
+        saveActionDecision={async (decision) => {
+          await services.progress.saveSetting.execute({
+            key: `performance-decision:${decision.code}`,
+            value: decision,
+          });
+        }}
       />
     </>
   );

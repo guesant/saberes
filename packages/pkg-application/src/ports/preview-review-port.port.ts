@@ -1,9 +1,5 @@
-import type { ReviewTarget } from "../models/index";
+import type { PreviewReviewEntry, PreviewReviewInput } from "../models/index";
 
 export interface PreviewReviewPort {
-  execute(input: {
-    target: ReviewTarget;
-    now?: Date;
-    requestRetention?: number;
-  }): Record<string, { dueAt: string; interval: number }>;
+  execute(input: PreviewReviewInput): Record<string, PreviewReviewEntry>;
 }

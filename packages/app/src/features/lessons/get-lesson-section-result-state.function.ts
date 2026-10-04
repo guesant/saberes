@@ -1,10 +1,10 @@
+import type { LessonSectionContentInvalidState } from "./lesson-section-content-invalid-state.interface";
+import type { LessonSectionContentValidState } from "./lesson-section-content-valid-state.interface";
 import type { ParseEditorialBlocksResult } from "@guesant/saberes-application";
 
 export function getLessonSectionResultState(
   result?: ParseEditorialBlocksResult,
-):
-  | { status: "invalid"; message: string }
-  | { status: "valid"; result: Extract<ParseEditorialBlocksResult, { status: "valid" }> } {
+): LessonSectionContentInvalidState | LessonSectionContentValidState {
   if (!result) {
     return { status: "invalid", message: "Editorial blocks are invalid." };
   }

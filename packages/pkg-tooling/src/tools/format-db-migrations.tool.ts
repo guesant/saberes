@@ -1,5 +1,5 @@
 import { join, relative } from "@std/path";
-import { format } from "npm:sql-formatter@15.9.0";
+import { format } from "sql-formatter";
 
 const root = Deno.cwd();
 

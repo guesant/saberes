@@ -6,11 +6,12 @@ import { ContentNotFoundState } from "../../components/content-not-found-state.c
 import { CourseProgressError } from "./course-progress-error.component";
 import { CourseReadyView } from "./course-ready-view.component";
 import { useCourseViewModel } from "./course.view-model";
+import type { CourseRouteParams } from "./course-route-params.type";
 
 export function CourseView() {
   const { t } = useTranslation();
 
-  const routeParams = useParams<{ slug: string }>();
+  const routeParams = useParams<CourseRouteParams>();
 
   const viewModel = useCourseViewModel(routeParams.slug);
 

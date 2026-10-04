@@ -9,8 +9,9 @@ import { useTranslation } from "react-i18next";
 export type LessonActionsProps = {
   completed: boolean;
   bookmarked: boolean;
-  onComplete: (value: boolean) => Promise<void>;
-  onBookmark: () => Promise<void>;
+  onComplete(value: boolean): Promise<void>;
+
+  onBookmark(): Promise<void>;
 };
 
 export function LessonActions(props: LessonActionsProps) {

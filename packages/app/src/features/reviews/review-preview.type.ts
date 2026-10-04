@@ -1,1 +1,3 @@
-export type ReviewPreview = Record<string, { dueAt: string; interval: number }>;
+import type { ReviewPreviewEntry } from "./review-preview-entry.interface";
+
+export type ReviewPreview = Record<string, ReviewPreviewEntry>;

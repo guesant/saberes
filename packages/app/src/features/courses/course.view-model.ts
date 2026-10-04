@@ -19,8 +19,9 @@ export interface CourseViewModel {
   progress: CourseProgress;
   error: Error | null;
   progressError: Error | null;
-  reload: () => Promise<void>;
-  startCourse: () => Promise<void>;
+  reload(): Promise<void>;
+
+  startCourse(): Promise<void>;
 }
 
 export function useCourseViewModel(slug: string | undefined): CourseViewModel {

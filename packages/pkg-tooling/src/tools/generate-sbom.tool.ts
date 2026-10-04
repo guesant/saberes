@@ -1,4 +1,4 @@
-import * as v from "npm:valibot";
+import * as v from "valibot";
 
 const target = Deno.args[0] ?? "source";
 
@@ -31,6 +31,11 @@ type CycloneDxHash = {
   content: string;
 };
 
+type CycloneDxProperty = {
+  name: string;
+  value: string;
+};
+
 type CycloneDxComponent = {
   bomRef: string;
   type: "library";
@@ -39,8 +44,13 @@ type CycloneDxComponent = {
   version: string;
   hashes?: CycloneDxHash[];
   purl: string;
-  properties?: Array<{ name: string; value: string }>;
+  properties?: CycloneDxProperty[];
 };
+
+interface ParsedNpmPackage {
+  name: string;
+  version: string;
+}
 
 export function readDenoLock(): DenoLock {
   const text = Deno.readTextFileSync("deno.lock");
@@ -48,10 +58,7 @@ export function readDenoLock(): DenoLock {
   return v.parse(denoLockSchema, JSON.parse(text));
 }
 
-export function parseNpmPackageKey(packageKey: string): {
-  name: string;
-  version: string;
-} {
+export function parseNpmPackageKey(packageKey: string): ParsedNpmPackage {
   const packageSeparator = packageKey.startsWith("@")
     ? packageKey.indexOf("@", packageKey.indexOf("/") + 1)
     : packageKey.indexOf("@");

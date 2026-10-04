@@ -24,11 +24,15 @@ export interface CatalogViewModel {
   savedFiltersError: Error | null;
   savingSavedFilter: boolean;
   saveSavedFilterError: Error | null;
-  saveFilter: (name: string) => Promise<void>;
-  selectFilter: (filter: SavedCatalogFilter) => void;
-  deleteFilter: (id: string) => Promise<void>;
-  reloadSavedFilters: () => Promise<void>;
-  reload: () => Promise<void>;
+  saveFilter(name: string): Promise<void>;
+
+  selectFilter(filter: SavedCatalogFilter): void;
+
+  deleteFilter(id: string): Promise<void>;
+
+  reloadSavedFilters(): Promise<void>;
+
+  reload(): Promise<void>;
 }
 
 export function useCatalogViewModel(): CatalogViewModel {

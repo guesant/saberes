@@ -3,7 +3,7 @@ import type { ApplicationServices, StudySession } from "@guesant/saberes-applica
 
 export interface StartAssessmentStudySessionInput {
   assessmentKey: string;
-  navigate: (path: string) => void;
+  navigate(path: string): void;
   questionKeys: string[];
   services: ApplicationServices;
 }

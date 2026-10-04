@@ -1,6 +1,7 @@
 export interface ReloadStudyPlanInput<PlanResult, ProgressResult> {
-  reloadPlan: () => Promise<PlanResult>;
-  reloadProgress: () => Promise<ProgressResult>;
+  reloadPlan(): Promise<PlanResult>;
+
+  reloadProgress(): Promise<ProgressResult>;
 }
 
 export async function reloadStudyPlanData<PlanResult, ProgressResult>(

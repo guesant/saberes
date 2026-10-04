@@ -129,6 +129,56 @@ test("no-forbidden-type-casts accepts a nearby explicit justification", () => {
   }
 });
 
+test("no-anonymous-complex-types allows primitives, simple unions and named declarations", () => {
+  assert.equal(
+    verify(
+      `
+        type LessonId = string;
+        type LessonMetadata = { title: string };
+        type LessonHandler = (lessonId: string) => void;
+        const lessonId: string | null = null;
+        const lessonIds: string[] = [];
+        const metadata: LessonMetadata = { title: "Lesson" };
+        const handler: LessonHandler = () => undefined;
+      `,
+      "no-anonymous-complex-types",
+    ).length,
+    0,
+  );
+});
+
+test("no-anonymous-complex-types allows named generic references and interface members", () => {
+  assert.equal(
+    verify(
+      `
+        interface LessonMetadata {
+          title: string;
+          tags: string[];
+        }
+        type LessonIndex = Record<string, LessonMetadata>;
+        type LessonIdentifier = string | null;
+      `,
+      "no-anonymous-complex-types",
+    ).length,
+    0,
+  );
+});
+
+test("no-anonymous-complex-types rejects complex inline annotations", () => {
+  for (const code of [
+    "const metadata: { title: string } = { title: 'Lesson' };",
+    "function readLesson(input: { lessonId: string }): string { return input.lessonId; }",
+    "const handler: (lessonId: string) => void = () => undefined;",
+    "const lessonPair: [string, number] = ['lesson', 1];",
+    "type LessonEnvelope = { metadata: { title: string } };",
+    "interface LessonEnvelope { metadata: { title: string } }",
+    "function readLesson<T extends { lessonId: string }>(input: T): string { return input.lessonId; }",
+    "const lessonEnvelope = { metadata: { title: 'Lesson' } } satisfies { metadata: { title: string } };",
+  ]) {
+    assert.ok(verify(code, "no-anonymous-complex-types").length > 0);
+  }
+});
+
 test("wildcard-reexports-only allows wildcard exports only in index files", () => {
   assert.equal(
     verify('export * from "./value";', "wildcard-reexports-only", "packages/pkg-ui/src/index.ts")

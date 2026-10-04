@@ -1,9 +1,5 @@
-import type { StudyRecord } from "../models/index";
-import type { ContentKey } from "@guesant/saberes-domain";
+import type { EnrollCourseInput, StudyRecord } from "../models/index";
 
 export interface EnrollCoursePort {
-  execute(input: {
-    contentKey: ContentKey | string;
-    data?: Record<string, unknown>;
-  }): Promise<StudyRecord>;
+  execute(input: EnrollCourseInput): Promise<StudyRecord>;
 }

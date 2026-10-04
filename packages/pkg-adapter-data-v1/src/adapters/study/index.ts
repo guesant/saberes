@@ -1,5 +1,6 @@
 export * from "./record-study-activity-adapter.adapter";
 export * from "./calculate-topic-mastery-adapter.adapter";
+export * from "./calculate-academic-metrics-adapter.adapter";
 export * from "./suggest-diagnosis-adapter.adapter";
 export * from "./action-for-diagnosis-adapter.adapter";
 export * from "./recommend-next-adapter.adapter";

@@ -1,3 +1,5 @@
+import type { RecommendationInput, RecommendationItem } from "@guesant/saberes-domain";
+
 export interface RecommendNextPort {
-  execute(input?: Record<string, unknown>): Record<string, unknown> | null;
+  execute(input?: RecommendationInput): RecommendationItem | null;
 }

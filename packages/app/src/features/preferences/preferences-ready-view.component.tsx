@@ -1,0 +1,29 @@
+import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { useTranslation } from "react-i18next";
+import { PreferenceOptionList } from "./preference-option-list.component";
+import { PreferencesHeader } from "./preferences-header.component";
+import type { PreferencesViewModel } from "./preferences.view-model";
+
+export interface PreferencesReadyViewProps {
+  viewModel: PreferencesViewModel;
+}
+
+export function PreferencesReadyView(props: PreferencesReadyViewProps) {
+  const { t } = useTranslation();
+
+  return (
+    <UIContentGroup variant="section">
+      <PreferencesHeader />
+      <PreferenceOptionList
+        gamification={props.viewModel.gamification}
+        onToggle={props.viewModel.togglePreference}
+        recommendations={props.viewModel.recommendations}
+        reminders={props.viewModel.reminders}
+        richContent={props.viewModel.richContent}
+      />
+      <UIButton onClick={props.viewModel.restoreDefaults} variant="outlined">
+        {t("preferences.restoreDefaults")}
+      </UIButton>
+    </UIContentGroup>
+  );
+}

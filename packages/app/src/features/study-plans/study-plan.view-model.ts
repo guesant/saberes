@@ -22,14 +22,21 @@ export interface StudyPlanViewModel {
   steps: Array<Record<string, unknown>>;
   nextStep: Record<string, unknown> | null;
   error: Error | null;
-  reload: () => Promise<void>;
-  toggleStep: (step: Record<string, unknown>, completed: boolean) => Promise<void>;
-  togglePause: () => Promise<void>;
-  updateStartDate: (startDate: string) => Promise<void>;
-  updateTargetDate: (targetDate: string) => Promise<void>;
-  updateDailyMinutes: (dailyMinutes: number) => Promise<void>;
-  skipStep: (stepId: string) => Promise<void>;
-  moveStep: (stepId: string, direction: -1 | 1) => Promise<void>;
+  reload(): Promise<void>;
+
+  toggleStep(step: Record<string, unknown>, completed: boolean): Promise<void>;
+
+  togglePause(): Promise<void>;
+
+  updateStartDate(startDate: string): Promise<void>;
+
+  updateTargetDate(targetDate: string): Promise<void>;
+
+  updateDailyMinutes(dailyMinutes: number): Promise<void>;
+
+  skipStep(stepId: string): Promise<void>;
+
+  moveStep(stepId: string, direction: -1 | 1): Promise<void>;
 }
 
 export function useStudyPlanViewModel(slug?: string): StudyPlanViewModel {

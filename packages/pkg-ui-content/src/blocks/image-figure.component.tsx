@@ -1,8 +1,8 @@
 import { UIBox, UITypography } from "@guesant/saberes-ui";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { ImageBlock } from "@guesant/saberes-application";
 
 type UIImageFigureProps = {
-  block: Extract<EditorialBlock, { type: "image" }>;
+  block: ImageBlock;
   url: string;
 };
 

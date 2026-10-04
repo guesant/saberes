@@ -8,8 +8,9 @@ import type { QuestionSessionProgress } from "./get-question-session-progress.fu
 export type QuestionStudySessionHeaderProps = {
   progress: QuestionSessionProgress;
   status: "active" | "paused";
-  onPause: () => Promise<void>;
-  onResume: () => Promise<void>;
+  onPause(): Promise<void>;
+
+  onResume(): Promise<void>;
   remainingSeconds?: number | null;
 };
 

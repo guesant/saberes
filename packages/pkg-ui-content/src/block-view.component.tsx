@@ -32,11 +32,11 @@ const UIParametricSceneBlock = lazy(() =>
   ),
 );
 
-export type UIBlockViewProps = {
+export interface UIBlockViewProps {
   block: EditorialBlock;
   knowledgeGraph?: KnowledgeGraph;
-  onQuestion?: (questionId: string | number) => void;
-};
+  onQuestion?(questionId: string | number): void;
+}
 
 export function UIBlockView(props: UIBlockViewProps) {
   const { block, knowledgeGraph, onQuestion } = props;

@@ -1,12 +1,9 @@
 import { getDueReviewTargets } from "./get-due-review-targets.function";
 import { getReviewLoadSummary } from "./get-review-load-summary.function";
-import type { ReviewLoadSummary } from "./review-load-summary.interface";
+import type { ReviewQueueState } from "./review-queue-state.interface";
 import type { ReviewTarget } from "@guesant/saberes-application";
 
-export function getReviewQueueState(
-  reviewTargets: ReviewTarget[],
-  now: Date,
-): { targets: ReviewTarget[]; load: ReviewLoadSummary } {
+export function getReviewQueueState(reviewTargets: ReviewTarget[], now: Date): ReviewQueueState {
   return {
     targets: getDueReviewTargets(reviewTargets, now),
     load: getReviewLoadSummary(reviewTargets, now),

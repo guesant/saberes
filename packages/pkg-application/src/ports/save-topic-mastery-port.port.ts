@@ -1,5 +1,5 @@
-import type { StudyRecord } from "../models/index";
+import type { SaveStudyRecordInput, StudyRecord } from "../models/index";
 
 export interface SaveTopicMasteryPort {
-  execute(input: { contentKey: string; data?: StudyRecord }): Promise<StudyRecord>;
+  execute(input: SaveStudyRecordInput<StudyRecord>): Promise<StudyRecord>;
 }

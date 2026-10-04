@@ -1,4 +1,4 @@
 export type QuestionBookmarkActionProps = {
   bookmarked: boolean;
-  onBookmark: () => Promise<void>;
+  onBookmark(): Promise<void>;
 };

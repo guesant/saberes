@@ -106,15 +106,29 @@ RUN --mount=type=cache,id=portal-guesant-saberes-python-tools,target=/var/cache/
 WORKDIR /workspace
 
 COPY package.json deno.json deno.lock ./
+COPY packages/app/package.json packages/app/package.json
+COPY packages/pkg-adapter-data-v1/package.json packages/pkg-adapter-data-v1/package.json
+COPY packages/pkg-adapter-graphology-v1/package.json packages/pkg-adapter-graphology-v1/package.json
+COPY packages/pkg-adapter-validation-v1/package.json packages/pkg-adapter-validation-v1/package.json
+COPY packages/pkg-application/package.json packages/pkg-application/package.json
+COPY packages/pkg-domain/package.json packages/pkg-domain/package.json
+COPY packages/pkg-tooling-eslint/package.json packages/pkg-tooling-eslint/package.json
+COPY packages/pkg-tooling/package.json packages/pkg-tooling/package.json
+COPY packages/pkg-ui-content/package.json packages/pkg-ui-content/package.json
+COPY packages/pkg-ui/package.json packages/pkg-ui/package.json
+
+RUN --mount=type=cache,id=portal-guesant-saberes-deno,target=/deno/cache \
+    mise exec -- deno install --frozen --node-modules-dir=manual --node-modules-linker=hoisted \
+    && cp deno.lock node_modules/.toolchain-lock
+
+RUN mise exec -- deno cache jsr:@std/path@1.1.6
+
 COPY packages ./packages
 COPY .config ./.config
 COPY .github ./.github
 COPY README.md ./README.md
 COPY docs ./docs
 COPY justfile ./justfile
-
-RUN --mount=type=cache,id=portal-guesant-saberes-deno,target=/deno/cache \
-    mise exec -- deno install --frozen --node-modules-dir=auto
 
 ENV SCHEMASPY_JAR=/opt/aqua/jars/schemaspy.jar \
     SQLITE_JDBC_JAR=/opt/aqua/jars/sqlite-jdbc.jar
@@ -145,7 +159,8 @@ ARG VITE_CONTENT_DB_URL=
 ENV VITE_BASE_PATH=${VITE_BASE_PATH} \
     VITE_CONTENT_DB_URL=${VITE_CONTENT_DB_URL}
 
-RUN mise exec -- deno task build
+RUN --mount=type=cache,id=portal-guesant-saberes-deno,target=/deno/cache \
+    mise exec -- deno task build
 
 FROM app-build AS build-check
 

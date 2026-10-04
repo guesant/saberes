@@ -5,8 +5,9 @@ export interface QuestionSessionOptionsProps {
   maxQuantity: number;
   quantity: string;
   durationMinutes: string;
-  onQuantityChange: (value: string) => void;
-  onDurationChange: (value: string) => void;
+  onQuantityChange(value: string): void;
+
+  onDurationChange(value: string): void;
 }
 
 export function QuestionSessionOptions(props: QuestionSessionOptionsProps) {

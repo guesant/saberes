@@ -5,11 +5,12 @@ import { ContentLoadingState } from "../../components/content-loading-state.comp
 import { ContentNotFoundState } from "../../components/content-not-found-state.component";
 import { AssessmentReadyView } from "./assessment-ready-view.component";
 import { useAssessmentViewModel } from "./assessment.view-model";
+import type { AssessmentRouteParams } from "./assessment-route-params.type";
 
 export function AssessmentView() {
   const { t } = useTranslation();
 
-  const routeParams = useParams<{ assessmentId: string }>();
+  const routeParams = useParams<AssessmentRouteParams>();
 
   const viewModel = useAssessmentViewModel(routeParams.assessmentId);
 

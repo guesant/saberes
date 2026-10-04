@@ -4,7 +4,7 @@ import { RetryButton } from "./retry-button.component";
 
 type ContentErrorDetailsProps = {
   message: string;
-  onRetry?: () => void;
+  onRetry?(): void;
 };
 
 export function ContentErrorDetails(props: ContentErrorDetailsProps) {

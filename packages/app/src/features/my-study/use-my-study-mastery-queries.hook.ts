@@ -4,7 +4,7 @@ import type { ApplicationServices, StudyRecord } from "@guesant/saberes-applicat
 export type MyStudyMasteryQueries = {
   error: Error | null;
   topicMastery: StudyRecord[] | undefined;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 };
 
 export function useMyStudyMasteryQueries(services: ApplicationServices): MyStudyMasteryQueries {

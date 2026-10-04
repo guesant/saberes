@@ -4,7 +4,7 @@ import type { DiagnosisOption } from "./diagnosis-option.type";
 
 export type DiagnosisOptionProps = {
   option: DiagnosisOption;
-  onSelect: (code: DiagnosisOption["code"]) => void;
+  onSelect(code: DiagnosisOption["code"]): void;
 };
 
 export function DiagnosisOption(props: DiagnosisOptionProps) {

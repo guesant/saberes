@@ -1,3 +1,4 @@
+import type { AsyncAction } from "../../types/async-action.type";
 import type { ApplicationServices, ReviewTarget } from "@guesant/saberes-application";
 
 export type CreateSuspendReviewActionInput = {
@@ -6,7 +7,7 @@ export type CreateSuspendReviewActionInput = {
 
 export function createSuspendReviewAction(
   input: CreateSuspendReviewActionInput,
-): (target: ReviewTarget) => Promise<void> {
+): AsyncAction<[ReviewTarget], void> {
   return async (target: ReviewTarget): Promise<void> => {
     await input.services.progress.saveReviewTarget.execute({
       contentKey: target.contentKey,

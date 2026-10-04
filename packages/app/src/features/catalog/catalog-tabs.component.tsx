@@ -5,7 +5,7 @@ import type { CatalogReadModel } from "@guesant/saberes-application";
 type CatalogTabsProps = {
   catalog: CatalogReadModel;
   tab: number;
-  onTabChange: (value: number) => void;
+  onTabChange(value: number): void;
 };
 
 export function CatalogTabs(props: CatalogTabsProps) {

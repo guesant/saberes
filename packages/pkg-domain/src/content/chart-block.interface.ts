@@ -1,7 +1,7 @@
-import type { ChartOptionValue } from "./chart-option-value.type";
+import type { ChartOptionObject } from "./chart-option-object.interface";
 
 export interface ChartBlock {
   type: "chart";
   title?: string;
-  option: { [key: string]: ChartOptionValue };
+  option: ChartOptionObject;
 }

@@ -1,14 +1,10 @@
+import type { AddStudyPointsInput, AddStudyPointsResult } from "../models/index";
 import type { AddStudyPointsPort } from "../ports/index";
-
-export interface AddStudyPointsInput {
-  amount: number;
-  reason: string;
-}
 
 export class AddStudyPointsCommandHandler {
   public constructor(private readonly port: AddStudyPointsPort) {}
 
-  public execute(input: AddStudyPointsInput): Promise<{ points: number; reason: string }> {
+  public execute(input: AddStudyPointsInput): Promise<AddStudyPointsResult> {
     return this.port.execute(input);
   }
 }

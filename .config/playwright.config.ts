@@ -12,6 +12,11 @@ export default defineConfig({
     screenshot: "only-on-failure",
     launchOptions: process.env.PLAYWRIGHT_EXECUTABLE_PATH
       ? {
+          args: [
+            `--unsafely-treat-insecure-origin-as-secure=${
+              new URL(process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:8080").origin
+            }`,
+          ],
           executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH,
         }
       : undefined,

@@ -3,7 +3,7 @@ import type { QuestionSubmissionResult } from "./question-submission-result.inte
 
 export type QuestionSessionContinueActionProps = {
   label: string;
-  onContinue: (result: QuestionSubmissionResult) => Promise<void>;
+  onContinue(result: QuestionSubmissionResult): Promise<void>;
   result: QuestionSubmissionResult;
 };
 

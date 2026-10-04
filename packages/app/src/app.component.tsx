@@ -77,6 +77,36 @@ const TopicView = lazy(() =>
   })),
 );
 
+const GoalsView = lazy(() =>
+  import("./features/goals/goals-view.component").then(({ GoalsView: Component }) => ({
+    default: Component,
+  })),
+);
+
+const FocusView = lazy(() =>
+  import("./features/focus/focus-view.component").then(({ FocusView: Component }) => ({
+    default: Component,
+  })),
+);
+
+const AcademicView = lazy(() =>
+  import("./features/academic/academic-view.component").then(({ AcademicView: Component }) => ({
+    default: Component,
+  })),
+);
+
+const PreferencesView = lazy(() =>
+  import("./features/preferences/preferences-view.component").then(
+    ({ PreferencesView: Component }) => ({ default: Component }),
+  ),
+);
+
+const PersonalWorkspaceView = lazy(() =>
+  import("./features/personal/personal-workspace-view.component").then(
+    ({ PersonalWorkspaceView: Component }) => ({ default: Component }),
+  ),
+);
+
 export function App() {
   return (
     <Shell>
@@ -99,6 +129,16 @@ export function App() {
           <Route element={<TopicMapView />} path="/mapa/:slug" />
 
           <Route element={<TopicView />} path="/topicos/:slug" />
+
+          <Route element={<GoalsView />} path="/metas" />
+
+          <Route element={<FocusView />} path="/foco" />
+
+          <Route element={<AcademicView />} path="/academico" />
+
+          <Route element={<PreferencesView />} path="/preferencias" />
+
+          <Route element={<PersonalWorkspaceView />} path="/meu-espaco" />
 
           <Route element={<LessonView />} path="/licoes/:lessonId" />
 

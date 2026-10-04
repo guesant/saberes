@@ -1,32 +1,33 @@
-import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { getDiagnosisLabelKey } from "./get-diagnosis-label-key.function";
-import { getPerformanceActionPath } from "./get-performance-action-path.function";
+import { UIContentGroup } from "@guesant/saberes-ui";
+import { useState } from "react";
+import { PerformanceDecisionSaved } from "./performance-decision-saved.component";
+import { PerformanceDiagnosisStatActions } from "./performance-diagnosis-stat-actions.component";
+import { PerformanceDiagnosisStatContent } from "./performance-diagnosis-stat-content.component";
+import type { PerformanceActionDecision } from "./performance-action-decision.interface";
 import type { PerformanceDiagnosisStatRowProps } from "./performance-diagnosis-stat-row-props.type";
 
 export function PerformanceDiagnosisStatRow(props: PerformanceDiagnosisStatRowProps) {
-  const { t } = useTranslation();
+  const [decision, setDecision] = useState<PerformanceActionDecision | null>(null);
 
-  const actionLabel = t(`performance.actions.${props.stat.action}`);
+  const savePerformanceDecision = async (
+    action: PerformanceActionDecision["action"],
+  ): Promise<void> => {
+    const nextDecision: PerformanceActionDecision = {
+      action,
+      code: props.stat.code,
+      decidedAt: new Date().toISOString(),
+    };
+
+    await props.onDecision(nextDecision);
+
+    setDecision(nextDecision);
+  };
 
   return (
     <UIContentGroup variant="tight">
-      <UITypography color="text.secondary">
-        {t("performance.diagnosisRow", {
-          action: actionLabel,
-          attempts: props.stat.attempts,
-          diagnosis: t(getDiagnosisLabelKey(props.stat.code)),
-        })}
-      </UITypography>
-      <UITypography color="text.secondary" variant="body2">
-        {t(`performance.actionDescriptions.${props.stat.action}`)}
-      </UITypography>
-      <UIInlineActions>
-        <UIButton component={Link} size="small" to={getPerformanceActionPath(props.stat.action)}>
-          {t("performance.openAction")}
-        </UIButton>
-      </UIInlineActions>
+      <PerformanceDiagnosisStatContent stat={props.stat} />
+      <PerformanceDiagnosisStatActions onSelect={savePerformanceDecision} />
+      {decision ? <PerformanceDecisionSaved decision={decision} /> : null}
     </UIContentGroup>
   );
 }

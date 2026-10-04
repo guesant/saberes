@@ -1,37 +1,28 @@
-import { UIButton, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { ReviewTargetList } from "./review-target-list.component";
+import { useNavigate } from "react-router-dom";
+import { ReviewSessionReadyDetails } from "./review-session-ready-details.component";
 import type { ReviewSessionReadyContentProps } from "./review-session-ready-content-props.type";
 
 export function ReviewSessionReadyContent(props: ReviewSessionReadyContentProps) {
   const { t } = useTranslation();
 
+  const navigate = useNavigate();
+
+  const handleStartSession = async (): Promise<void> => {
+    const sessionId = await props.viewModel.startSession();
+
+    if (sessionId) {
+      navigate(`/sessoes/questoes/${sessionId}`);
+    }
+  };
+
   return (
     <UIContentGroup variant="tight">
-      <UIButton variant="contained" onClick={props.viewModel.startSession}>
+      <UIButton variant="contained" onClick={handleStartSession}>
         {t("review.startSession")}
       </UIButton>
-      <UITypography variant="body2">
-        {t("review.loadSummary", {
-          due: props.viewModel.load.due,
-          upcoming: props.viewModel.load.upcoming,
-          suspended: props.viewModel.load.suspended,
-          total: props.viewModel.load.total,
-        })}
-      </UITypography>
-      <UITypography variant="body2">
-        {t("review.retentionImpact", {
-          estimated: props.viewModel.retentionImpact.estimatedReviews,
-          retention: props.viewModel.retentionImpact.retentionPercent,
-        })}
-      </UITypography>
-      <ReviewTargetList
-        targets={props.viewModel.targets}
-        previews={props.viewModel.previews}
-        onPostpone={props.viewModel.postpone}
-        onRate={props.viewModel.rate}
-        onSuspend={props.viewModel.suspend}
-      />
+      <ReviewSessionReadyDetails viewModel={props.viewModel} />
     </UIContentGroup>
   );
 }

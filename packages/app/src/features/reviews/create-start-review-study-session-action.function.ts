@@ -1,8 +1,9 @@
 import { startReviewStudySession } from "./start-review-study-session.function";
 import type { StartReviewStudySessionInput } from "./start-review-study-session.function";
+import type { AsyncAction } from "../../types/async-action.type";
 
 export function createStartReviewStudySessionAction(
   input: StartReviewStudySessionInput,
-): () => Promise<void> {
-  return (): Promise<void> => startReviewStudySession(input);
+): AsyncAction<[], string | null> {
+  return (): Promise<string | null> => startReviewStudySession(input);
 }

@@ -9,7 +9,7 @@ export interface TopicViewModel {
   state: TopicViewModelState;
   data: TopicReadModel | null;
   error: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 }
 
 export function useTopicViewModel(slug: string): TopicViewModel {

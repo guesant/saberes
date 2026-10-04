@@ -1,8 +1,8 @@
 import { UIImageFigure } from "./image-figure.component";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { ImageBlock } from "@guesant/saberes-application";
 
 type UIImageBlockViewProps = {
-  block: Extract<EditorialBlock, { type: "image" }>;
+  block: ImageBlock;
 };
 
 export function UIImageBlockView(props: UIImageBlockViewProps) {

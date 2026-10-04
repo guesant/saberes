@@ -3,7 +3,7 @@ import { ContentErrorState } from "../../components/content-error-state.componen
 
 export type MyStudyCatalogErrorProps = {
   error: Error;
-  onRetry: () => Promise<void>;
+  onRetry(): Promise<void>;
 };
 
 export function MyStudyCatalogError(props: MyStudyCatalogErrorProps) {

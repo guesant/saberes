@@ -13,16 +13,22 @@ export type StudyPlanReadyViewProps = {
   data: StudyPlanReadModel;
   steps: Array<Record<string, unknown>>;
   progress: Array<Record<string, unknown>>;
-  onToggle: (step: Record<string, unknown>, completed: boolean) => Promise<void>;
+  onToggle(step: Record<string, unknown>, completed: boolean): Promise<void>;
+
   localState: StudyPlanLocalState;
   nextStep: Record<string, unknown> | null;
-  onTogglePause: () => Promise<void>;
-  onStartDateChange: (startDate: string) => Promise<void>;
-  onTargetDateChange: (targetDate: string) => Promise<void>;
-  onDailyMinutesChange: (dailyMinutes: number) => Promise<void>;
+  onTogglePause(): Promise<void>;
+
+  onStartDateChange(startDate: string): Promise<void>;
+
+  onTargetDateChange(targetDate: string): Promise<void>;
+
+  onDailyMinutesChange(dailyMinutes: number): Promise<void>;
+
   skippedStepIds: Set<string>;
-  onSkip: (stepId: string) => Promise<void>;
-  onMove: (stepId: string, direction: -1 | 1) => Promise<void>;
+  onSkip(stepId: string): Promise<void>;
+
+  onMove(stepId: string, direction: -1 | 1): Promise<void>;
 };
 
 export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {

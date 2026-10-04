@@ -1,5 +1,4 @@
 import {
-  UIButton,
   UICheckCircleIcon,
   UIContentGroup,
   UIStep,
@@ -7,7 +6,7 @@ import {
   UITypography,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export type TopicMapNodeProps = {
   node: Record<string, unknown>;
@@ -18,9 +17,19 @@ export function TopicMapNode(props: TopicMapNodeProps) {
 
   const { t } = useTranslation();
 
+  const navigate = useNavigate();
+
+  const openTopic = () => {
+    navigate(`/topicos/${String(node.slug)}`);
+  };
+
   return (
     <UIStep>
-      <UIStepButton icon={node.is_milestone ? <UICheckCircleIcon color="success" /> : undefined}>
+      <UIStepButton
+        aria-label={`Abrir tópico ${String(node.label)}`}
+        icon={node.is_milestone ? <UICheckCircleIcon color="success" /> : undefined}
+        onClick={openTopic}
+      >
         <UIContentGroup variant="tight">
           <UITypography fontWeight={700}>{String(node.label)}</UITypography>
 
@@ -32,10 +41,6 @@ export function TopicMapNode(props: TopicMapNodeProps) {
               state: String(node.learning_state),
             })}
           </UITypography>
-
-          <UIButton component={Link} to={`/topicos/${String(node.slug)}`} size="small">
-            Abrir tópico
-          </UIButton>
         </UIContentGroup>
       </UIStepButton>
     </UIStep>

@@ -1,4 +1,5 @@
 import { saveQuestionDiagnosis } from "./save-question-diagnosis.function";
+import type { AsyncAction } from "../../types/async-action.type";
 import type { ApplicationServices, DiagnosisCode } from "@guesant/saberes-application";
 
 export type CreateQuestionDiagnosisInput = {
@@ -8,7 +9,7 @@ export type CreateQuestionDiagnosisInput = {
 
 export function createQuestionDiagnosisAction(
   input: CreateQuestionDiagnosisInput,
-): (code: DiagnosisCode) => Promise<void> {
+): AsyncAction<[DiagnosisCode], void> {
   const { attemptId, services } = input;
 
   return (code: DiagnosisCode): Promise<void> => {

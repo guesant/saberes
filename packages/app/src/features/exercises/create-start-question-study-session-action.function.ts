@@ -1,8 +1,9 @@
 import { startQuestionStudySession } from "./start-question-study-session.function";
 import type { StartQuestionStudySessionInput } from "./start-question-study-session.function";
+import type { AsyncAction } from "../../types/async-action.type";
 
 export function createStartQuestionStudySessionAction(
   input: StartQuestionStudySessionInput,
-): () => Promise<void> {
+): AsyncAction<[], void> {
   return (): Promise<void> => startQuestionStudySession(input);
 }

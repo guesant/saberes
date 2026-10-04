@@ -11,9 +11,13 @@ export interface QuestionStudySessionViewModel {
   progress: QuestionSessionProgress | null;
   remainingSeconds: number | null;
   error: Error | null;
-  reload: () => Promise<void>;
-  pause: () => Promise<void>;
-  resume: () => Promise<void>;
-  advance: (result: QuestionSubmissionResult) => Promise<void>;
-  skip: () => Promise<void>;
+  reload(): Promise<void>;
+
+  pause(): Promise<void>;
+
+  resume(): Promise<void>;
+
+  advance(result: QuestionSubmissionResult): Promise<void>;
+
+  skip(): Promise<void>;
 }

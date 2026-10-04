@@ -1,4 +1,5 @@
 import { saveQuestionPriorKnowledge } from "./save-question-prior-knowledge.function";
+import type { AsyncAction } from "../../types/async-action.type";
 import type {
   ApplicationServices,
   PriorKnowledgeStatus,
@@ -14,7 +15,7 @@ export type CreateQuestionPriorKnowledgeActionInput = {
 
 export function createQuestionPriorKnowledgeAction(
   input: CreateQuestionPriorKnowledgeActionInput,
-): (status: PriorKnowledgeStatus) => Promise<void> {
+): AsyncAction<[PriorKnowledgeStatus], void> {
   return async (status: PriorKnowledgeStatus): Promise<void> => {
     if (!input.data) {
       return;

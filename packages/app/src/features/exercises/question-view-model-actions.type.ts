@@ -6,11 +6,13 @@ import type {
 } from "@guesant/saberes-application";
 
 export type QuestionViewModelActions = {
-  saveDiagnosis: (code: DiagnosisCode) => Promise<void>;
-  savePriorKnowledge: (status: PriorKnowledgeStatus) => Promise<void>;
-  submit: (
+  saveDiagnosis(code: DiagnosisCode): Promise<void>;
+
+  savePriorKnowledge(status: PriorKnowledgeStatus): Promise<void>;
+
+  submit(
     answer: string,
     elapsedMs: number,
     confidence: AttemptConfidence,
-  ) => Promise<QuestionSubmissionResult>;
+  ): Promise<QuestionSubmissionResult>;
 };

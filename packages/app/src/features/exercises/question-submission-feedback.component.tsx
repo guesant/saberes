@@ -10,9 +10,11 @@ import type { DiagnosisCode, QuestionReadModel } from "@guesant/saberes-applicat
 
 export type QuestionSubmissionFeedbackProps = {
   data: QuestionReadModel;
-  onDiagnose: (code: DiagnosisCode) => Promise<void>;
-  onRetry: () => void;
-  onContinue?: (result: QuestionSubmissionResult) => Promise<void>;
+  onDiagnose(code: DiagnosisCode): Promise<void>;
+
+  onRetry(): void;
+
+  onContinue?(result: QuestionSubmissionResult): Promise<void>;
   result: QuestionSubmissionResult;
 };
 

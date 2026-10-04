@@ -3,7 +3,7 @@ import type { ReviewTarget } from "@guesant/saberes-application";
 
 export type GetReviewPreviewsInput = {
   targets: ReviewTarget[];
-  preview: (target: ReviewTarget) => ReviewPreview;
+  preview(target: ReviewTarget): ReviewPreview;
 };
 
 export function getReviewPreviews(input: GetReviewPreviewsInput): Record<string, ReviewPreview> {

@@ -1,3 +1,5 @@
+import type { PerformanceConfidenceBand } from "./performance-confidence-band.type";
+
 export interface PerformanceSummary {
   answered: number;
   correct: number;
@@ -10,4 +12,7 @@ export interface PerformanceSummary {
   studyMinutes: number;
   studiedTopics: number;
   masteredTopics: number;
+  confidencePercent: number;
+  confidenceBand: PerformanceConfidenceBand;
+  trend: "down" | "stable" | "up";
 }

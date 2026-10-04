@@ -220,3 +220,29 @@ export enum FsrsRating {
   Good = "good",
   Easy = "easy",
 }
+
+export enum StudyGoalMetric {
+  Minutes = "minutes",
+  Questions = "questions",
+  Lessons = "lessons",
+  Steps = "steps",
+}
+
+export enum StudyGoalStatus {
+  Active = "active",
+  Paused = "paused",
+  Completed = "completed",
+  Archived = "archived",
+}
+
+export enum FocusSessionStatus {
+  Active = "active",
+  Paused = "paused",
+  Completed = "completed",
+}
+
+export enum AcademicModality {
+  InPerson = "in_person",
+  Remote = "remote",
+  Hybrid = "hybrid",
+}

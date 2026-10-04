@@ -1,18 +1,19 @@
 import type { ApplicationServices, ReviewTarget, StudySession } from "@guesant/saberes-application";
 
 export interface StartReviewStudySessionInput {
-  navigate: (path: string) => void;
   services: ApplicationServices;
   targets: ReviewTarget[];
 }
 
-export async function startReviewStudySession(input: StartReviewStudySessionInput): Promise<void> {
+export async function startReviewStudySession(
+  input: StartReviewStudySessionInput,
+): Promise<string | null> {
   const questionKeys = input.targets
     .map((target) => String(target.contentKey))
     .filter((contentKey) => contentKey.startsWith("question:"));
 
   if (!questionKeys.length) {
-    return;
+    return null;
   }
 
   const session: StudySession = {
@@ -29,5 +30,5 @@ export async function startReviewStudySession(input: StartReviewStudySessionInpu
 
   await input.services.progress.saveSession.execute(session);
 
-  input.navigate(`/sessoes/questoes/${session.id}`);
+  return session.id;
 }

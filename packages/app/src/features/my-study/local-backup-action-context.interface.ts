@@ -7,8 +7,12 @@ export interface LocalBackupActionContext {
   pending: LocalBackupPending | null;
   queryClient: QueryClient;
   services: ApplicationServices;
-  setError: (error: Error | null) => void;
-  setPending: (pending: LocalBackupPending | null) => void;
-  setState: (state: LocalBackupState) => void;
+  setError(error: Error | null): void;
+
+  setPending(pending: LocalBackupPending | null): void;
+
+  setUndoSnapshot(snapshot: string | null): void;
+
+  setState(state: LocalBackupState): void;
   strategy: ProgressImportStrategy;
 }

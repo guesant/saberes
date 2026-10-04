@@ -511,10 +511,13 @@ export function startsWithPurposeVerb(name) {
     "act",
     "action",
     "add",
+    "archive",
     "build",
     "calculate",
     "check",
     "clear",
+    "close",
+    "complete",
     "compute",
     "create",
     "delete",
@@ -542,9 +545,12 @@ export function startsWithPurposeVerb(name) {
     "list",
     "load",
     "map",
+    "matches",
+    "move",
     "normalize",
     "open",
     "parse",
+    "pause",
     "preview",
     "read",
     "recommend",
@@ -557,6 +563,7 @@ export function startsWithPurposeVerb(name) {
     "render",
     "replace",
     "resolve",
+    "restore",
     "revive",
     "run",
     "save",
@@ -568,11 +575,14 @@ export function startsWithPurposeVerb(name) {
     "start",
     "starts",
     "split",
+    "resume",
+    "swap",
     "stop",
     "submit",
     "suggest",
     "sync",
     "transform",
+    "toggle",
     "convert",
     "current",
     "unwrap",
@@ -2005,6 +2015,66 @@ const noInlineObjectTypeInParameters = {
           }
         }
       },
+    };
+  },
+};
+
+const noAnonymousComplexTypes = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      anonymousType:
+        "Complex type annotations must use a named type or interface. Extract this type into its own declaration.",
+    },
+  },
+  create(context) {
+    function isTransparentWrapper(node) {
+      return node.type === "TSParenthesizedType" || node.type === "TSTypeOperator";
+    }
+
+    function isNamedTypeRoot(node) {
+      let current = node;
+
+      let { parent } = current;
+
+      while (parent && isTransparentWrapper(parent) && parent.typeAnnotation === current) {
+        current = parent;
+
+        ({ parent } = current);
+      }
+
+      if (parent?.type === "TSTypeAliasDeclaration" && parent.typeAnnotation === current) {
+        return true;
+      }
+
+      if (
+        parent?.type === "TSTypeParameterInstantiation" &&
+        parent.parent?.type === "TSTypeReference"
+      ) {
+        return true;
+      }
+
+      return (
+        parent?.type === "ExportNamedDeclaration" &&
+        parent.declaration?.type === "TSTypeAliasDeclaration" &&
+        parent.declaration.typeAnnotation === current
+      );
+    }
+
+    function reportAnonymousType(node) {
+      if (!isNamedTypeRoot(node)) {
+        context.report({ node, messageId: "anonymousType" });
+      }
+    }
+
+    return {
+      TSTypeLiteral: reportAnonymousType,
+      TSFunctionType: reportAnonymousType,
+      TSConstructorType: reportAnonymousType,
+      TSMappedType: reportAnonymousType,
+      TSConditionalType: reportAnonymousType,
+      TSTupleType: reportAnonymousType,
     };
   },
 };
@@ -3780,6 +3850,7 @@ export default {
     "no-generic-identifiers": noGenericIdentifiers,
     "no-generic-props-type-name": noGenericPropsTypeName,
     "no-inline-object-type-in-parameters": noInlineObjectTypeInParameters,
+    "no-anonymous-complex-types": noAnonymousComplexTypes,
     "max-function-parameters": maxFunctionParameters,
     "no-mui-reexport": noMuiReexport,
     "wildcard-reexports-only": wildcardReexportsOnlyInIndex,

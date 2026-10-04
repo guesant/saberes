@@ -5,7 +5,11 @@ type CommitConfig = {
   footerEmpty?: boolean;
 };
 
-type CommitConfigFile = Omit<CommitConfig, "commitTypes"> & { types?: string[] };
+type CommitConfigFileBase = Omit<CommitConfig, "commitTypes">;
+
+interface CommitConfigFile extends CommitConfigFileBase {
+  types?: string[];
+}
 
 const fileConfig = JSON.parse(
   await Deno.readTextFile(".config/commitlint.json"),

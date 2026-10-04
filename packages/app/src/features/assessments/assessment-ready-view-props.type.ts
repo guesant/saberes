@@ -6,5 +6,5 @@ export type AssessmentReadyViewProps = {
   data: AssessmentReadModel;
   progress: AssessmentProgress | null;
   progressError: Error | null;
-  onReloadProgress: () => Promise<void>;
+  onReloadProgress(): Promise<void>;
 };

@@ -24,6 +24,16 @@ export * from "./catalog-card-grid.component";
 
 export * from "./code-text.component";
 
+export * from "./command-palette-entry.interface";
+
+export * from "./command-palette-item-props.interface";
+
+export * from "./command-palette-item.component";
+
+export * from "./command-palette-props.interface";
+
+export * from "./command-palette.component";
+
 export * from "./content-alert.component";
 
 export * from "./content-loading-label.component";
@@ -53,8 +63,13 @@ export * from "./download-file-button.component";
 export * from "./download-file-button-props.type";
 
 export * from "./drawer.component";
+export * from "./responsive-navigation-drawer.component";
 
 export * from "./footer-surface.component";
+
+export * from "./form.component";
+
+export * from "./form-props.interface";
 
 export * from "./full-height-card.component";
 
@@ -100,6 +115,8 @@ export * from "./list-item.component";
 
 export * from "./list-item-button.component";
 
+export * from "./list-item-icon.component";
+
 export * from "./list-item-text.component";
 
 export * from "./menu-icon.component";
@@ -111,6 +128,10 @@ export * from "./metric-grid-item.component";
 export * from "./metric-grid.component";
 
 export * from "./offline-bolt-icon.component";
+
+export * from "./offline-status-chip.component";
+
+export * from "./offline-status-chip-props.interface";
 
 export * from "./open-in-new-icon.component";
 
@@ -127,6 +148,8 @@ export * from "./quiz-icon.component";
 export * from "./refresh-icon.component";
 
 export * from "./selectable-surface.component";
+
+export * from "./search-icon.component";
 
 export * from "./question-statement.component";
 

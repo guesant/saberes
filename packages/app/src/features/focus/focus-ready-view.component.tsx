@@ -1,0 +1,32 @@
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { useTranslation } from "react-i18next";
+import { FocusSessionControl } from "./focus-session-control.component";
+import { FocusSessionList } from "./focus-session-list.component";
+import type { FocusViewModel } from "./focus.view-model";
+
+export interface FocusReadyViewProps {
+  viewModel: FocusViewModel;
+}
+
+export function FocusReadyView(props: FocusReadyViewProps) {
+  const { t } = useTranslation();
+
+  return (
+    <UIContentGroup variant="section">
+      <UIContentGroup variant="tight">
+        <UITypography variant="overline">{t("focus.eyebrow")}</UITypography>
+        <UITypography variant="h2">{t("focus.title")}</UITypography>
+        <UITypography color="text.secondary">{t("focus.description")}</UITypography>
+      </UIContentGroup>
+      <FocusSessionControl
+        active={props.viewModel.active !== null}
+        onPause={props.viewModel.pause}
+        onResume={props.viewModel.resume}
+        onStart={props.viewModel.start}
+        onStop={props.viewModel.stop}
+        paused={props.viewModel.paused !== null}
+      />
+      <FocusSessionList sessions={props.viewModel.sessions} />
+    </UIContentGroup>
+  );
+}

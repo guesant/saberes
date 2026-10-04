@@ -5,8 +5,11 @@ export interface QuestionReadyInteraction {
   answer: string | null;
   confidence: AttemptConfidence | null;
   result: QuestionSubmissionResult | null;
-  changeAnswer: (answer: string | null) => void;
-  changeConfidence: (confidence: AttemptConfidence) => void;
-  submit: () => Promise<void>;
-  clear: () => void;
+  changeAnswer(answer: string | null): void;
+
+  changeConfidence(confidence: AttemptConfidence): void;
+
+  submit(): Promise<void>;
+
+  clear(): void;
 }

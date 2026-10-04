@@ -7,10 +7,10 @@ import {
 } from "@guesant/saberes-ui";
 import { UIComparisonHeaderCell } from "./comparison-header-cell.component";
 import { UIComparisonRow } from "./comparison-row.component";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { ComparisonTableBlock } from "@guesant/saberes-application";
 
 type UIComparisonTableBlockViewProps = {
-  block: Extract<EditorialBlock, { type: "comparison_table" }>;
+  block: ComparisonTableBlock;
 };
 
 export function UIComparisonTableBlockView(props: UIComparisonTableBlockViewProps) {

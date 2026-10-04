@@ -1,12 +1,15 @@
 import { UIAlert, UIBox, UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
+import { getVisualizationSupport } from "./get-visualization-support.function";
+import { UIVisualizationTextSummary } from "./visualization-text-summary.component";
+import type { KnowledgeMapGraphView } from "./knowledge-map-graph-view.interface";
+import type { KnowledgeGraph, KnowledgeMapBlock } from "@guesant/saberes-application";
 
-type UIKnowledgeMapBlockProps = {
-  block: Extract<EditorialBlock, { type: "knowledge_map" }>;
+interface UIKnowledgeMapBlockProps {
+  block: KnowledgeMapBlock;
   graph?: KnowledgeGraph;
-};
+}
 
 export function UIKnowledgeMapBlock(props: UIKnowledgeMapBlockProps) {
   const { block, graph } = props;
@@ -17,22 +20,44 @@ export function UIKnowledgeMapBlock(props: UIKnowledgeMapBlockProps) {
 
   const [hasError, setHasError] = useState(false);
 
+  const title = block.title || t("content.knowledgeMap");
+
+  const nodes = graph?.nodes || block.nodes;
+
+  const edges =
+    graph?.edges || block.edges.map((edge) => ({ ...edge, id: `${edge.source}->${edge.target}` }));
+
+  const nodeSummary = nodes
+    .map((node) => `${node.label} — ${node.status || t("content.mapStatusUnknown")}`)
+    .join("\n");
+
+  const edgeSummary = edges.map((edge) => `${edge.source} → ${edge.target}`).join("\n");
+
+  const textSummary = [
+    `${t("content.mapNodes")}: ${nodes.length}`,
+    nodeSummary || t("content.mapNoNodes"),
+    `${t("content.mapRelations")}: ${edges.length}`,
+    edgeSummary || t("content.mapNoRelations"),
+  ].join("\n");
+
   useEffect(() => {
-    let graphView: { destroy: () => void } | null = null;
+    let graphView: KnowledgeMapGraphView | null = null;
 
     let active = true;
+
+    if (!getVisualizationSupport().canvas2d) {
+      setHasError(true);
+
+      return () => {
+        active = false;
+      };
+    }
 
     import("cytoscape")
       .then((cytoscapeModule) => {
         if (!active || !containerRef.current) {
           return;
         }
-
-        const nodes = graph?.nodes || block.nodes;
-
-        const edges =
-          graph?.edges ||
-          block.edges.map((edge) => ({ ...edge, id: `${edge.source}->${edge.target}` }));
 
         graphView = cytoscapeModule.default({
           container: containerRef.current,
@@ -59,15 +84,15 @@ export function UIKnowledgeMapBlock(props: UIKnowledgeMapBlockProps) {
     };
   }, [block, graph]);
 
-  if (hasError) {
-    return <UIAlert severity="info">{t("content.mapFallback")}</UIAlert>;
-  }
-
   return (
     <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <UITypography fontWeight={700}>{block.title || t("content.knowledgeMap")}</UITypography>
+      <UITypography fontWeight={700}>{title}</UITypography>
 
-      <UIBox ref={containerRef} role="img" aria-label={block.title || t("content.knowledgeMap")} />
+      {hasError ? <UIAlert severity="info">{t("content.mapFallback")}</UIAlert> : null}
+
+      <UIBox ref={containerRef} role="img" aria-label={title} />
+
+      <UIVisualizationTextSummary summary={textSummary} title={t("content.textualAlternative")} />
     </UIPaper>
   );
 }

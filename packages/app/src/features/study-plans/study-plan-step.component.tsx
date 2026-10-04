@@ -16,9 +16,11 @@ export type StudyPlanStepProps = {
   step: Record<string, unknown>;
   completed: boolean;
   skipped: boolean;
-  onToggle: (step: Record<string, unknown>, completed: boolean) => Promise<void>;
-  onSkip: (stepId: string) => Promise<void>;
-  onMove: (stepId: string, direction: -1 | 1) => Promise<void>;
+  onToggle(step: Record<string, unknown>, completed: boolean): Promise<void>;
+
+  onSkip(stepId: string): Promise<void>;
+
+  onMove(stepId: string, direction: -1 | 1): Promise<void>;
 };
 
 export function StudyPlanStep(props: StudyPlanStepProps) {

@@ -1,10 +1,10 @@
 import { UIArrowForwardIcon, UIButton, UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { QuestionLinkBlock } from "@guesant/saberes-application";
 
 type UIQuestionLinkBlockViewProps = {
-  block: Extract<EditorialBlock, { type: "question_link" }>;
-  onQuestion?: (questionId: string | number) => void;
+  block: QuestionLinkBlock;
+  onQuestion?(questionId: string | number): void;
 };
 
 export function UIQuestionLinkBlockView(props: UIQuestionLinkBlockViewProps) {

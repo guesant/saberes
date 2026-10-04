@@ -13,6 +13,8 @@ const localContentPath = path.resolve(process.cwd(), ".local/content/content.sql
 
 const schemaDocsPath = path.resolve(process.cwd(), ".cache/schema-docs/site");
 
+const sqlWasmPath = path.resolve(process.cwd(), "node_modules/sql.js/dist/sql-wasm.wasm");
+
 const staticCopyTargets = [
   ...(fs.existsSync(localContentPath)
     ? [
@@ -23,7 +25,7 @@ const staticCopyTargets = [
       ]
     : []),
   {
-    src: "../pkg-adapter-data-v1/node_modules/sql.js/dist/sql-wasm.wasm",
+    src: sqlWasmPath,
     dest: ".",
   },
   ...(fs.existsSync(schemaDocsPath)
@@ -38,18 +40,28 @@ const staticCopyTargets = [
 
 type ViteResponse = {
   statusCode: number;
-  setHeader: (headerName: string, value: string) => void;
-  end: (body?: string) => void;
+  setHeader(headerName: string, value: string): void;
+
+  end(body?: string): void;
 };
 
-type ViteServer = {
-  middlewares: {
-    use: (
-      route: string,
-      handler: (request: unknown, response: ViteResponse, next: (error?: unknown) => void) => void,
-    ) => void;
-  };
-};
+type ViteMiddlewareNext = (error?: unknown) => void;
+
+type ViteMiddlewareHandler = (
+  request: unknown,
+  response: ViteResponse,
+  next: ViteMiddlewareNext,
+) => void;
+
+type ViteMiddlewareUse = (route: string, handler: ViteMiddlewareHandler) => void;
+
+interface ViteMiddlewares {
+  use: ViteMiddlewareUse;
+}
+
+interface ViteServer {
+  middlewares: ViteMiddlewares;
+}
 
 const localContentPlugin = {
   name: "local-content-database",
@@ -86,7 +98,7 @@ export default defineConfig({
       includeAssets: ["icons/*.svg"],
       manifest: {
         id: base,
-        name: "Portal Guesant Saberes",
+        name: "Saberes",
         short_name: "Saberes",
         description: "Estudos offline para processos seletivos e áreas de conhecimento.",
         lang: "pt-BR",
@@ -140,7 +152,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        cacheId: "portal-guesant-saberes",
+        cacheId: "saberes",
         cleanupOutdatedCaches: true,
         clientsClaim: true,
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,

@@ -3,6 +3,7 @@ import {
   ActionForDiagnosisAdapter,
   AddStudyPointsAdapter,
   CalculateTopicMasteryAdapter,
+  CalculateAcademicMetricsAdapter,
   CryptoIdAdapter,
   DateFnsClockAdapter,
   RecommendNextAdapter,
@@ -16,13 +17,14 @@ import {
 import { applicationDependencyTokens } from "./application-dependency-tokens.config";
 import { registerPortFactories } from "./register-port-factories.composition";
 import { resolvePort } from "./resolve-port.composition";
+import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function createStudyDependencies(container: Container): void {
   const getProgressStore = (): ProgressStorageContract =>
     resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore);
 
-  const bindings: Array<readonly [symbol, () => object]> = [
+  const bindings: PortFactoryBinding[] = [
     [applicationDependencyTokens.scheduleReview, () => new TsFsrsScheduleReviewAdapter()],
     [applicationDependencyTokens.previewReview, () => new TsFsrsPreviewReviewAdapter()],
     [
@@ -30,6 +32,10 @@ export function createStudyDependencies(container: Container): void {
       () => new RecordStudyActivityAdapter(getProgressStore()),
     ],
     [applicationDependencyTokens.calculateTopicMastery, () => new CalculateTopicMasteryAdapter()],
+    [
+      applicationDependencyTokens.calculateAcademicMetrics,
+      () => new CalculateAcademicMetricsAdapter(),
+    ],
     [applicationDependencyTokens.suggestDiagnosis, () => new SuggestDiagnosisAdapter()],
     [applicationDependencyTokens.actionForDiagnosis, () => new ActionForDiagnosisAdapter()],
     [applicationDependencyTokens.recommendNext, () => new RecommendNextAdapter()],

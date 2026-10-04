@@ -3,7 +3,7 @@ import { LessonSectionContent } from "./lesson-section-content.component";
 
 export type LessonSectionsProps = {
   sections: Array<Record<string, unknown>>;
-  onQuestion: (questionId: string | number) => void;
+  onQuestion(questionId: string | number): void;
 };
 
 export function LessonSections(props: LessonSectionsProps) {

@@ -1,7 +1,7 @@
-import { FsrsRating, type ReviewTargetRecord } from "@guesant/saberes-domain";
+import { FsrsRating } from "@guesant/saberes-domain";
 import { fsrs, Rating } from "ts-fsrs";
 import { reviveReviewCard, type ReviewDateFactory } from "./revive-review-card.function";
-import type { StoredReviewCard } from "./stored-review-card.type";
+import type { FsrsReviewTarget } from "./fsrs-review-target.interface";
 
 const ratings = {
   [FsrsRating.Again]: Rating.Again,
@@ -16,10 +16,7 @@ export type PreviewReviewOptions = {
   requestRetention: number;
 };
 
-export function previewReview(
-  target: ReviewTargetRecord & { fsrsCard?: StoredReviewCard },
-  options: PreviewReviewOptions,
-) {
+export function previewReview(target: FsrsReviewTarget, options: PreviewReviewOptions) {
   const { now, createDate } = options;
 
   const scheduler = fsrs({

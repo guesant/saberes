@@ -1,11 +1,5 @@
-import type { ReviewTarget } from "../models/index";
-import type { FsrsRating } from "@guesant/saberes-domain";
+import type { ScheduleReviewInput, ReviewTarget } from "../models/index";
 
 export interface ScheduleReviewPort {
-  execute(input: {
-    target: ReviewTarget;
-    rating: FsrsRating;
-    now?: Date;
-    requestRetention?: number;
-  }): ReviewTarget;
+  execute(input: ScheduleReviewInput): ReviewTarget;
 }

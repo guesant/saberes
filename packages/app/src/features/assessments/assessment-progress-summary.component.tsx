@@ -14,7 +14,11 @@ export function AssessmentProgressSummary(props: AssessmentProgressSummaryProps)
           total: props.progress.totalItems,
         })}
       </UITypography>
-      <UILinearProgress value={props.progress.percentage} variant="determinate" />
+      <UILinearProgress
+        aria-label={t("assessment.progressLabel")}
+        value={props.progress.percentage}
+        variant="determinate"
+      />
     </UIContentGroup>
   );
 }

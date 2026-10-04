@@ -1,8 +1,9 @@
 import type { LocalBackupActionContext } from "./local-backup-action-context.interface";
+import type { AsyncAction } from "../../types/async-action.type";
 
 export function createSelectLocalBackupAction(
   context: LocalBackupActionContext,
-): (file: File) => Promise<void> {
+): AsyncAction<[File], void> {
   return async function selectLocalBackup(file: File): Promise<void> {
     context.setError(null);
 

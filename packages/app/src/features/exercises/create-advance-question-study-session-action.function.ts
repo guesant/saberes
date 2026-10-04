@@ -1,6 +1,7 @@
 import { updateQuestionStudySession } from "./update-question-study-session.function";
 import type { SaveQuestionStudySessionAction } from "./create-save-question-study-session-action.function";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
+import type { AsyncAction } from "../../types/async-action.type";
 import type { StudySession } from "@guesant/saberes-application";
 
 export interface AdvanceQuestionStudySessionInput {
@@ -11,7 +12,7 @@ export interface AdvanceQuestionStudySessionInput {
 
 export function createAdvanceQuestionStudySessionAction(
   saveSession: SaveQuestionStudySessionAction,
-): (input: AdvanceQuestionStudySessionInput) => Promise<void> {
+): AsyncAction<[AdvanceQuestionStudySessionInput], void> {
   return (input: AdvanceQuestionStudySessionInput): Promise<void> =>
     saveSession(
       updateQuestionStudySession({

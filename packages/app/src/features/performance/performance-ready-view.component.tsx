@@ -1,58 +1,56 @@
-import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
-import { getPerformanceAssessmentSummary } from "./get-performance-assessment-summary.function";
-import { getPerformanceDiagnosisStats } from "./get-performance-diagnosis-stats.function";
-import { getPerformanceSummary } from "./get-performance-summary.function";
-import { getPerformanceTopicStats } from "./get-performance-topic-stats.function";
+import { UIContentGroup } from "@guesant/saberes-ui";
+import { useState } from "react";
+import { getPerformanceReadyViewData } from "./get-performance-ready-view-data.function";
 import { PerformanceAssessmentSummary } from "./performance-assessment-summary.component";
 import { PerformanceDiagnosisList } from "./performance-diagnosis-list.component";
+import { PerformanceFilters } from "./performance-filters.component";
 import { PerformanceNextAction } from "./performance-next-action.component";
+import { PerformanceReadyViewHeader } from "./performance-ready-view-header.component";
 import { PerformanceSummaryGrid } from "./performance-summary-grid.component";
 import { PerformanceTopicList } from "./performance-topic-list.component";
+import type { PerformanceActionDecision } from "./performance-action-decision.interface";
+import type { PerformanceFilter } from "./performance-filter.interface";
 import type { MyStudyReadModel } from "../my-study/my-study-read-model.interface";
 import type { DiagnosisCode, PedagogicalAction } from "@guesant/saberes-application";
 
 export type PerformanceReadyViewProps = {
-  actionForDiagnosis: (code: DiagnosisCode) => PedagogicalAction;
+  actionForDiagnosis(code: DiagnosisCode): PedagogicalAction;
+
   data: MyStudyReadModel;
+  saveActionDecision(decision: PerformanceActionDecision): Promise<void>;
 };
 
 export function PerformanceReadyView(props: PerformanceReadyViewProps) {
-  const { t } = useTranslation();
+  const [filter, setFilter] = useState<PerformanceFilter>({ period: "all", scope: "all" });
 
-  const summary = getPerformanceSummary({
-    attempts: props.data.attempts,
-    now: new Date(),
-    sessions: props.data.sessions,
-    topicMastery: props.data.topicMastery,
-  });
-
-  const topicStats = getPerformanceTopicStats(props.data.attempts);
-
-  const assessmentSummary = getPerformanceAssessmentSummary({
-    attempts: props.data.attempts,
-    sessions: props.data.sessions,
-  });
-
-  const diagnosisStats = getPerformanceDiagnosisStats({
+  const viewData = getPerformanceReadyViewData({
     actionForDiagnosis: props.actionForDiagnosis,
-    attempts: props.data.attempts,
+    data: props.data,
+    filter,
+    now: new Date(),
   });
-
-  const hasErrors = props.data.attempts.some((attempt) => attempt.isCorrect === false);
 
   return (
     <UIContentGroup variant="section">
-      <UIContentGroup variant="tight">
-        <UITypography variant="overline">{t("performance.eyebrow")}</UITypography>
-        <UITypography variant="h2">{t("performance.title")}</UITypography>
-        <UITypography color="text.secondary">{t("performance.description")}</UITypography>
-      </UIContentGroup>
-      <PerformanceSummaryGrid summary={summary} />
-      <PerformanceAssessmentSummary summary={assessmentSummary} />
-      <PerformanceTopicList stats={topicStats} />
-      <PerformanceDiagnosisList stats={diagnosisStats} />
-      <PerformanceNextAction hasAttempts={props.data.attempts.length > 0} hasErrors={hasErrors} />
+      <PerformanceReadyViewHeader />
+      <PerformanceFilters
+        courseLabel={viewData.course?.title}
+        filter={filter}
+        onChangePeriod={(period) => setFilter((current) => ({ ...current, period }))}
+        onChangeScope={(scope) => setFilter((current) => ({ ...current, scope }))}
+        planLabel={viewData.plan?.title}
+      />
+      <PerformanceSummaryGrid summary={viewData.summary} />
+      <PerformanceAssessmentSummary summary={viewData.assessmentSummary} />
+      <PerformanceTopicList stats={viewData.topicStats} />
+      <PerformanceDiagnosisList
+        onDecision={props.saveActionDecision}
+        stats={viewData.diagnosisStats}
+      />
+      <PerformanceNextAction
+        hasAttempts={viewData.filteredData.attempts.length > 0}
+        hasErrors={viewData.hasErrors}
+      />
     </UIContentGroup>
   );
 }

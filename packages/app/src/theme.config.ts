@@ -24,7 +24,10 @@ export const theme = createTheme({
         },
       },
     },
-    MuiButton: { defaultProps: { disableElevation: true, disableRipple: true } },
+    MuiButton: {
+      defaultProps: { disableElevation: true, disableRipple: true },
+      styleOverrides: { root: { borderRadius: "0.25rem" } },
+    },
     MuiButtonBase: { defaultProps: { disableRipple: true } },
     MuiIconButton: { defaultProps: { disableRipple: true } },
     MuiListItemButton: { defaultProps: { disableRipple: true } },

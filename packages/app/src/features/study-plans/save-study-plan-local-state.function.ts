@@ -1,10 +1,11 @@
 import { getStudyPlanStateContentKey } from "./get-study-plan-state-content-key.function";
 import type { StudyPlanLocalState } from "./study-plan-local-state.interface";
 import type { ApplicationServices } from "@guesant/saberes-application";
+import type { QueryClient } from "@tanstack/react-query";
 
 export interface SaveStudyPlanLocalStateInput {
   services: ApplicationServices;
-  queryClient: { invalidateQueries: (input: { queryKey: string[] }) => Promise<void> };
+  queryClient: QueryClient;
   slug: string | undefined;
   state: StudyPlanLocalState;
 }

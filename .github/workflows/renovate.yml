@@ -48,7 +48,6 @@ jobs:
           docker run --rm \
             -e RENOVATE_TOKEN \
             -e RENOVATE_CONFIG_FILE=/workspace/.github/renovate.json \
-            -v "$GITHUB_WORKSPACE:/workspace" \
             -w /workspace \
             "$QUALITY_CI_IMAGE" \
             bash -c 'mise exec -- deno task renovate'

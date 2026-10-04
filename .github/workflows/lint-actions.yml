@@ -29,7 +29,6 @@ jobs:
       - name: Validar workflows dentro do Docker
         run: |
           docker run --rm \
-            -v "$GITHUB_WORKSPACE:/workspace:ro" \
             -w /workspace \
             "$QUALITY_CI_IMAGE" \
             bash -c '

@@ -4,6 +4,6 @@ import type { SavedCatalogFilter } from "@guesant/saberes-application";
 export interface CatalogSavedFiltersQueryViewModel {
   data: SavedCatalogFilter[];
   error: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
   state: QueryViewState;
 }

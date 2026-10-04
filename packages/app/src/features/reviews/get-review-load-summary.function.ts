@@ -1,4 +1,4 @@
-import { isAfter, isBefore, isSameDay, parseISO } from "date-fns";
+import { isAfter, isBefore, parseISO } from "date-fns";
 import type { ReviewLoadSummary } from "./review-load-summary.interface";
 import type { ReviewTarget } from "@guesant/saberes-application";
 
@@ -12,7 +12,7 @@ export function getReviewLoadSummary(targets: ReviewTarget[], now: Date): Review
 
     const dueAt = parseISO(target.dueAt);
 
-    return isSameDay(dueAt, now) || isBefore(dueAt, now);
+    return isBefore(dueAt, now);
   }).length;
 
   const upcoming = activeTargets.filter((target) => {

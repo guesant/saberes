@@ -1,3 +1,1 @@
-export type QuestionPriorKnowledgeErrorProps = {
-  onRetry: () => Promise<void>;
-};
+export type QuestionPriorKnowledgeErrorProps = { onRetry(): Promise<void> };

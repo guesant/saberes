@@ -19,7 +19,11 @@ export function StudyPlanProgressSummary(props: StudyPlanProgressSummaryProps) {
           total: props.totalSteps,
         })}
       </UITypography>
-      <UILinearProgress value={props.percentage} variant="determinate" />
+      <UILinearProgress
+        aria-label={t("plan.progressLabel")}
+        value={props.percentage}
+        variant="determinate"
+      />
     </UIContentGroup>
   );
 }

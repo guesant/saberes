@@ -1,3 +1,5 @@
+import type { AddStudyPointsInput, AddStudyPointsResult } from "../models/index";
+
 export interface AddStudyPointsPort {
-  execute(input: { amount: number; reason: string }): Promise<{ points: number; reason: string }>;
+  execute(input: AddStudyPointsInput): Promise<AddStudyPointsResult>;
 }

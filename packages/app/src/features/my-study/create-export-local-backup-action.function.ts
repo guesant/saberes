@@ -1,8 +1,9 @@
 import type { LocalBackupActionContext } from "./local-backup-action-context.interface";
+import type { AsyncAction } from "../../types/async-action.type";
 
 export function createExportLocalBackupAction(
   context: LocalBackupActionContext,
-): () => Promise<string> {
+): AsyncAction<[], string> {
   return async function exportLocalBackup(): Promise<string> {
     context.setError(null);
 

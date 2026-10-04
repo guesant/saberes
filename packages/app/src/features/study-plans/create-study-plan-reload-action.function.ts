@@ -1,8 +1,9 @@
 import { reloadStudyPlanData } from "./reload-study-plan-data.function";
 import type { CreateStudyPlanReloadActionInput } from "./create-study-plan-reload-action-input.type";
+import type { AsyncAction } from "../../types/async-action.type";
 
 export function createStudyPlanReloadAction(
   input: CreateStudyPlanReloadActionInput,
-): () => Promise<void> {
+): AsyncAction<[], void> {
   return (): Promise<void> => reloadStudyPlanData(input);
 }

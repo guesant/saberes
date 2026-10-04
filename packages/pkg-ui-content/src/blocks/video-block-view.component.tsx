@@ -1,8 +1,8 @@
 import { UIVideoPanel } from "./video-panel.component";
-import type { EditorialBlock } from "@guesant/saberes-application";
+import type { VideoBlock } from "@guesant/saberes-application";
 
 type UIVideoBlockViewProps = {
-  block: Extract<EditorialBlock, { type: "video" }>;
+  block: VideoBlock;
 };
 
 export function UIVideoBlockView(props: UIVideoBlockViewProps) {

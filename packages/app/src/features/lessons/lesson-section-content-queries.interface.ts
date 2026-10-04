@@ -1,17 +1,8 @@
-import type { KnowledgeGraph, ParseEditorialBlocksResult } from "@guesant/saberes-application";
+import type { LessonSectionContentQueryState } from "./lesson-section-content-query-state.interface";
+import type { LessonSectionGraphQueryState } from "./lesson-section-graph-query-state.interface";
 
 export interface LessonSectionContentQueries {
-  blocks: {
-    isPending: boolean;
-    isError: boolean;
-    error: Error | null;
-    data?: ParseEditorialBlocksResult;
-  };
-  graph: {
-    isPending: boolean;
-    isError: boolean;
-    error: Error | null;
-    data?: KnowledgeGraph;
-  };
-  retry: () => Promise<void>;
+  blocks: LessonSectionContentQueryState;
+  graph: LessonSectionGraphQueryState;
+  retry(): Promise<void>;
 }

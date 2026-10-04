@@ -1,5 +1,6 @@
 export * from "./callout-block.interface";
 export * from "./chart-block.interface";
+export * from "./chart-option-object.interface";
 export * from "./chart-option-value.type";
 export * from "./comparison-table-block.interface";
 export * from "./editorial-block.type";

@@ -4,7 +4,7 @@ import type { StudySession } from "@guesant/saberes-application";
 
 export type MyStudySessionActionsProps = {
   session: StudySession;
-  onResume: () => void;
+  onResume(): void;
 };
 
 export function MyStudySessionActions(props: MyStudySessionActionsProps) {

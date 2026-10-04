@@ -1,3 +1,4 @@
+import { resolveProgressReadAdditionalPorts } from "./resolve-progress-read-additional-ports.composition";
 import { resolveProgressReadAttemptPorts } from "./resolve-progress-read-attempt-ports.composition";
 import { resolveProgressReadReviewPorts } from "./resolve-progress-read-review-ports.composition";
 import type { ApplicationPorts } from "@guesant/saberes-application";
@@ -8,6 +9,10 @@ export function resolveProgressReadPorts(
 ): Pick<
   ApplicationPorts,
   | "listAttempts"
+  | "listAcademicDisciplines"
+  | "listFocusSessions"
+  | "listStudyGoals"
+  | "getPersonalWorkspace"
   | "getSession"
   | "getSetting"
   | "listEnrollments"
@@ -26,6 +31,7 @@ export function resolveProgressReadPorts(
   | "listTopicMastery"
 > {
   return {
+    ...resolveProgressReadAdditionalPorts(container),
     ...resolveProgressReadAttemptPorts(container),
     ...resolveProgressReadReviewPorts(container),
   };

@@ -9,9 +9,7 @@ import { DiagnosisOption } from "./diagnosis-option.component";
 import { QuestionDiagnosisSaved } from "./question-diagnosis-saved.component";
 import type { DiagnosisOption as DiagnosisOptionValue } from "./diagnosis-option.type";
 
-export type QuestionDiagnosisPanelProps = {
-  onDiagnose: (code: DiagnosisCodeValue) => Promise<void>;
-};
+export type QuestionDiagnosisPanelProps = { onDiagnose(code: DiagnosisCodeValue): Promise<void> };
 
 const diagnosisOptions: DiagnosisOptionValue[] = [
   { code: DiagnosisCode.ConceptGap, labelKey: "exercise.diagnosis.conceptGap" },

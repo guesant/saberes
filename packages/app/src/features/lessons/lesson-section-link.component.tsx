@@ -4,7 +4,7 @@ export type LessonSectionLinkProps = {
   section: Record<string, unknown>;
   index: number;
   selected: boolean;
-  onSelect: (sectionIndex: number) => Promise<void>;
+  onSelect(sectionIndex: number): Promise<void>;
 };
 
 export function LessonSectionLink(props: LessonSectionLinkProps) {

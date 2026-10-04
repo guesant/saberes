@@ -1,9 +1,7 @@
 import { UIRefreshIcon, UIStartAlignedButton } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
-export type RetryButtonProps = {
-  onRetry?: () => void;
-};
+export type RetryButtonProps = { onRetry?(): void };
 
 export function RetryButton(props: RetryButtonProps) {
   const { onRetry } = props;

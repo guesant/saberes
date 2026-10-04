@@ -1,4 +1,5 @@
 import { saveLessonProgress } from "./save-lesson-progress.function";
+import type { AsyncAction } from "../../types/async-action.type";
 import type { ApplicationServices, LessonReadModel } from "@guesant/saberes-application";
 import type { QueryClient } from "@tanstack/react-query";
 
@@ -12,7 +13,7 @@ export type CreateSaveLessonProgressActionInput = {
 
 export function createSaveLessonProgressAction(
   input: CreateSaveLessonProgressActionInput,
-): (completed: boolean) => Promise<void> {
+): AsyncAction<[boolean], void> {
   return async (completed: boolean): Promise<void> => {
     await saveLessonProgress({
       services: input.services,

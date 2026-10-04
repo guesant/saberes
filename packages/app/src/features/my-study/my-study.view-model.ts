@@ -20,7 +20,7 @@ export interface MyStudyViewModel {
   progressError: Error | null;
   contentRelease: ContentReleaseReadModel | null;
   contentReleaseError: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 }
 
 export function useMyStudyViewModel(): MyStudyViewModel {

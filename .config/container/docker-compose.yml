@@ -22,6 +22,9 @@ services:
     environment:
       DENO_DIR: /deno/cache
       DENO_NO_PROMPT: "1"
+      MISE_CONFIG_FILE: /app/.config/mise/mise.toml
+      AQUA_CONFIG: /app/.config/aqua/aqua.yaml
+      AQUA_POLICY_CONFIG: /app/.config/aqua/aqua-policy.yaml
       # yamllint disable rule:line-length
       PATH: /opt/mise/shims:/opt/mise/bin:/opt/aqua/bin:/app/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/bin
       # yamllint enable rule:line-length
@@ -31,7 +34,8 @@ services:
       SOURCE_DB: ${SOURCE_DB:-}
       OUTPUT_DB: ${OUTPUT_DB:-}
       CONTENT_DB: ${CONTENT_DB:-}
-    command: bash -c "mise exec -- deno install --frozen --node-modules-dir=auto && mise exec -- deno task dev"
+    command: bash -c "mise exec -- deno task dev"
 
 volumes:
   workspace_modules:
+    name: portal-guesant-saberes-workspace-modules-manual

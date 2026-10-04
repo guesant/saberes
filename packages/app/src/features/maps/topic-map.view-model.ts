@@ -12,7 +12,7 @@ export interface TopicMapViewModel {
   data: TopicMapReadModel | null;
   error: Error | null;
   progressError: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 }
 
 export function useTopicMapViewModel(mapKey: string): TopicMapViewModel {

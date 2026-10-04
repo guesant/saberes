@@ -15,9 +15,11 @@ export type ReviewTargetCardContentProps = {
   target: ReviewTarget;
   preview: ReviewPreview | undefined;
   questionId: string;
-  onPostpone: (target: ReviewTarget) => Promise<void>;
-  onRate: (target: ReviewTarget, rating: FsrsRating) => Promise<void>;
-  onSuspend: (target: ReviewTarget) => Promise<void>;
+  onPostpone(target: ReviewTarget): Promise<void>;
+
+  onRate(target: ReviewTarget, rating: FsrsRating): Promise<void>;
+
+  onSuspend(target: ReviewTarget): Promise<void>;
 };
 
 export function ReviewTargetCardContent(props: ReviewTargetCardContentProps) {

@@ -35,12 +35,10 @@ jobs:
       - name: Executar auditoria completa dentro do Docker
         run: |
           docker run --rm \
-            -v "$GITHUB_WORKSPACE:/workspace" \
-            -v "$GITHUB_WORKSPACE/.cache/deno:/deno/cache" \
+            -v "$GITHUB_WORKSPACE/.cache:/workspace/.cache" \
             -w /workspace \
             "$QUALITY_CI_IMAGE" \
             bash -c '
-              mise exec -- deno install --frozen --node-modules-dir=auto
               mise exec -- deno task heavy-checks
               mise exec -- deno task build:check
               mise exec -- deno task security:check
@@ -78,8 +76,7 @@ jobs:
       - name: Executar E2E e acessibilidade dentro do Docker
         run: |
           docker run --rm \
-            -v "$GITHUB_WORKSPACE:/workspace" \
-            -v "$GITHUB_WORKSPACE/.cache/deno:/deno/cache" \
+            -v "$GITHUB_WORKSPACE/.cache:/workspace/.cache" \
             -w /workspace \
             -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium \
             "$PLAYWRIGHT_IMAGE" \
@@ -88,7 +85,6 @@ jobs:
               mise exec -- python -m http.server 8080 --directory dist >/tmp/saberes-e2e-server.log 2>&1 &
               server_pid=$!
               trap "kill ${server_pid} >/dev/null 2>&1 || true" EXIT
-              mise exec -- deno install --frozen --node-modules-dir=auto
               for attempt in $(seq 1 30); do
                 curl -fsS http://127.0.0.1:8080/ >/dev/null && break
                 sleep 1
@@ -102,16 +98,17 @@ jobs:
         if: always()
         run: |
           docker run --rm \
-            -v "$GITHUB_WORKSPACE:/workspace" \
-            -v "$GITHUB_WORKSPACE/.cache/deno:/deno/cache" \
+            -v "$GITHUB_WORKSPACE/.cache:/workspace/.cache" \
             -w /workspace \
+            -e SOURCE_COMMIT="$GITHUB_SHA" \
+            -e TOOLCHAIN_IMAGE="$QUALITY_CI_IMAGE" \
+            -e REPORT_SCOPE=heavy-checks \
             "$QUALITY_CI_IMAGE" \
             bash -c '
               mise exec -- deno task build
               mise exec -- python -m http.server 8080 --directory dist >/tmp/saberes-reports-server.log 2>&1 &
               server_pid=$!
               trap "kill ${server_pid} >/dev/null 2>&1 || true" EXIT
-              mise exec -- deno install --frozen --node-modules-dir=auto
               for attempt in $(seq 1 30); do
                 curl -fsS http://127.0.0.1:8080/ >/dev/null && break
                 sleep 1
@@ -125,6 +122,7 @@ jobs:
               set -e
               mkdir -p .cache
               lizard -l typescript -C 5 -L 35 -a 3 packages | tee .cache/lizard.txt
+              mise exec -- deno task quality:report:metadata
               echo "Qlty report status: ${qlty_status}"
               exit "$lighthouse_status"
             '
@@ -151,6 +149,14 @@ jobs:
         with:
           name: qlty-report
           path: .cache/qlty-report.sarif
+          if-no-files-found: ignore
+
+      - name: Upload report metadata
+        if: always()
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08
+        with:
+          name: quality-report-metadata
+          path: .cache/quality-report-metadata.json
           if-no-files-found: ignore
 
       - name: Upload SBOMs

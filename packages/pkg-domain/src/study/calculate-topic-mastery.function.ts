@@ -1,16 +1,9 @@
 import { calculateDiagnosticWeight } from "./calculate-diagnostic-weight.function";
 import type { AttemptRecord } from "../index";
+import type { TopicMasteryAccumulator } from "./topic-mastery-accumulator.interface";
 
 export function calculateTopicMastery(attempts: AttemptRecord[] = []) {
-  const map = new Map<
-    string,
-    {
-      total: number;
-      correct: number;
-      weighted: number;
-      lastAnsweredAt: string | null;
-    }
-  >();
+  const map = new Map<string, TopicMasteryAccumulator>();
 
   attempts.forEach((attempt) => {
     if (attempt.isCorrect === null || attempt.isCorrect === undefined) {

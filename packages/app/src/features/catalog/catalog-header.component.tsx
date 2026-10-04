@@ -6,7 +6,7 @@ export function CatalogHeader() {
 
   return (
     <>
-      <UITypography variant="overline" color="secondary.main">
+      <UITypography variant="overline" color="text.secondary">
         {t("catalog.eyebrow")}
       </UITypography>
 

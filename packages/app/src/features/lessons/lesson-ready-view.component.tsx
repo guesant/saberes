@@ -19,10 +19,13 @@ export type LessonReadyViewProps = {
   completed: boolean;
   bookmarked: boolean;
   sectionIndex: number | undefined;
-  onComplete: (value: boolean) => Promise<void>;
-  onBookmark: () => Promise<void>;
-  onSectionChange: (sectionIndex: number) => Promise<void>;
-  onQuestion: (questionId: string | number) => void;
+  onComplete(value: boolean): Promise<void>;
+
+  onBookmark(): Promise<void>;
+
+  onSectionChange(sectionIndex: number): Promise<void>;
+
+  onQuestion(questionId: string | number): void;
 };
 
 export function LessonReadyView(props: LessonReadyViewProps) {

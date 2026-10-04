@@ -1,9 +1,7 @@
 import { UIButton } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
-export type MyStudySessionResumeActionProps = {
-  onResume: () => void;
-};
+export type MyStudySessionResumeActionProps = { onResume(): void };
 
 export function MyStudySessionResumeAction(props: MyStudySessionResumeActionProps) {
   const { t } = useTranslation();

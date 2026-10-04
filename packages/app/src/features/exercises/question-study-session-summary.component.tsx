@@ -4,8 +4,9 @@ import type { QuestionSessionProgress } from "./get-question-session-progress.fu
 
 export type QuestionStudySessionSummaryProps = {
   progress: QuestionSessionProgress;
-  onBack: () => void;
-  onReview: () => void;
+  onBack(): void;
+
+  onReview(): void;
 };
 
 export function QuestionStudySessionSummary(props: QuestionStudySessionSummaryProps) {

@@ -1,5 +1,9 @@
+interface SqlJsInitOptions {
+  locateFile?(file: string): string;
+}
+
 declare module "sql.js" {
-  const initSqlJs: (options?: InitSqlJsOptions) => Promise<SqlJs>;
+  function initSqlJs(options?: SqlJsInitOptions): Promise<SqlJs>;
 
   export default initSqlJs;
 }

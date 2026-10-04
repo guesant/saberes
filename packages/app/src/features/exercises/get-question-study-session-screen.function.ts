@@ -1,3 +1,4 @@
+import type { QuestionStudySessionScreenOption } from "./question-study-session-screen-option.interface";
 import type { QuestionStudySessionScreen } from "./question-study-session-screen.type";
 
 export interface GetQuestionStudySessionScreenInput {
@@ -12,7 +13,7 @@ export interface GetQuestionStudySessionScreenInput {
 export function getQuestionStudySessionScreen(
   input: GetQuestionStudySessionScreenInput,
 ): QuestionStudySessionScreen {
-  const screens: Array<{ enabled: boolean; screen: QuestionStudySessionScreen }> = [
+  const screens: QuestionStudySessionScreenOption[] = [
     { enabled: input.sessionState === "loading", screen: "loading" },
     { enabled: input.sessionState === "error", screen: "error" },
     { enabled: !input.hasSession, screen: "not-found" },

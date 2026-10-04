@@ -1,10 +1,19 @@
 import type { AttemptDiagnosis } from "../../../storage/attempt-diagnosis.interface";
 import type { Attempt } from "../../../storage/attempt.type";
+import type { ProgressBackupEvent } from "../../../storage/progress-backup-event.interface";
 import type { ProgressDatabaseContract } from "../../../storage/progress-database.contract";
 import type { ProgressStorageContract } from "../../../storage/progress-storage.contract";
-import type { ReviewTarget } from "../../../storage/review-target.type";
+import type { ReviewTarget } from "../../../storage/review-target.interface";
 import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
-import type { DiagnosisRecord, AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
+import type {
+  AcademicDiscipline,
+  AttemptRecord,
+  DiagnosisRecord,
+  FocusSession,
+  ReviewTargetRecord,
+  PersonalWorkspace,
+  StudyGoal,
+} from "@guesant/saberes-domain";
 
 type SessionRecord = { id: string; [key: string]: unknown };
 
@@ -13,6 +22,10 @@ export class DexieProgressStore implements ProgressStorageContract {
 
   listAttempts() {
     return this.database.listAttempts() as Promise<AttemptRecord[]>;
+  }
+
+  listAcademicDisciplines(): Promise<AcademicDiscipline[]> {
+    return this.database.listAcademicDisciplines();
   }
 
   saveAttempt(attempt: Attempt) {
@@ -33,6 +46,26 @@ export class DexieProgressStore implements ProgressStorageContract {
 
   listSessions() {
     return this.database.listSessions();
+  }
+
+  listBackupEvents(): Promise<ProgressBackupEvent[]> {
+    return this.database.listBackupEvents();
+  }
+
+  listFocusSessions(): Promise<FocusSession[]> {
+    return this.database.listFocusSessions();
+  }
+
+  listStudyGoals(): Promise<StudyGoal[]> {
+    return this.database.listStudyGoals();
+  }
+
+  getPersonalWorkspace(): Promise<PersonalWorkspace> {
+    return this.database.getPersonalWorkspace();
+  }
+
+  savePersonalWorkspace(workspace: PersonalWorkspace): Promise<PersonalWorkspace> {
+    return this.database.savePersonalWorkspace(workspace);
   }
 
   listSavedCatalogFilters(): Promise<SavedCatalogFilter[]> {
@@ -111,6 +144,10 @@ export class DexieProgressStore implements ProgressStorageContract {
     await this.database.saveDiagnosis(diagnosis as AttemptDiagnosis);
   }
 
+  saveFocusSession(session: FocusSession): Promise<FocusSession> {
+    return this.database.saveFocusSession(session);
+  }
+
   listDiagnoses() {
     return this.database.listDiagnoses();
   }
@@ -135,6 +172,14 @@ export class DexieProgressStore implements ProgressStorageContract {
     return this.database.saveAchievement(contentKey, data);
   }
 
+  saveAcademicDiscipline(discipline: AcademicDiscipline): Promise<AcademicDiscipline> {
+    return this.database.saveAcademicDiscipline(discipline);
+  }
+
+  deleteAcademicDiscipline(id: string): Promise<void> {
+    return this.database.deleteAcademicDiscipline(id);
+  }
+
   listAchievements() {
     return this.database.listAchievements();
   }
@@ -153,5 +198,9 @@ export class DexieProgressStore implements ProgressStorageContract {
 
   saveTopicMastery(contentKey: string, data: Record<string, unknown> = {}) {
     return this.database.saveTopicMastery(contentKey, data);
+  }
+
+  saveStudyGoal(goal: StudyGoal): Promise<StudyGoal> {
+    return this.database.saveStudyGoal(goal);
   }
 }

@@ -4,11 +4,11 @@ import type { QuestionSubmissionResult } from "./question-submission-result.inte
 import type { AttemptConfidence } from "@guesant/saberes-application";
 
 export interface UseQuestionReadyInteractionInput {
-  onSubmit: (
+  onSubmit(
     answer: string,
     elapsedMs: number,
     confidence: AttemptConfidence,
-  ) => Promise<QuestionSubmissionResult>;
+  ): Promise<QuestionSubmissionResult>;
 }
 
 export function useQuestionReadyInteraction(

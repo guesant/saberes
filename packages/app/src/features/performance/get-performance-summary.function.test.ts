@@ -30,6 +30,29 @@ const summaryInput: GetPerformanceSummaryInput = {
   ],
 };
 
+const filteredSummaryInput: GetPerformanceSummaryInput = {
+  ...summaryInput,
+  attempts: [
+    ...summaryInput.attempts,
+    {
+      answeredAt: "2026-10-03T10:00:00.000Z",
+      contentKey: "question:old",
+      isCorrect: false,
+      sessionId: "course-session",
+    },
+  ],
+  filter: { period: "30d", scope: "course", scopeKey: "course:sample" },
+  sessions: [
+    ...summaryInput.sessions,
+    {
+      contentKey: "course:sample",
+      id: "course-session",
+      startedAt: "2026-10-03T10:00:00.000Z",
+      status: "completed",
+    },
+  ],
+};
+
 describe("getPerformanceSummary", () => {
   it("combina desempenho recente, tempo e sessões", () => {
     const result = getPerformanceSummary(summaryInput);
@@ -46,6 +69,17 @@ describe("getPerformanceSummary", () => {
       studyMinutes: 3,
       studiedTopics: 2,
       masteredTopics: 1,
+      confidencePercent: 60,
+      confidenceBand: "medium",
+      trend: "up",
     });
+  });
+
+  it("filtra o resumo por período e escopo local", () => {
+    const result = getPerformanceSummary(filteredSummaryInput);
+
+    expect(result.answered).toBe(1);
+
+    expect(result.sessions).toBe(1);
   });
 });

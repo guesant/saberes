@@ -2,7 +2,7 @@ import { ContentErrorState } from "../../components/content-error-state.componen
 
 export type MyStudyProgressErrorProps = {
   error: Error;
-  onRetry: () => Promise<void>;
+  onRetry(): Promise<void>;
   label: string;
 };
 

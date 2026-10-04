@@ -1,3 +1,4 @@
+import type { AsyncAction } from "../../types/async-action.type";
 import type { ApplicationServices, FsrsRating, ReviewTarget } from "@guesant/saberes-application";
 
 export type CreateRateReviewActionInput = {
@@ -7,7 +8,7 @@ export type CreateRateReviewActionInput = {
 
 export function createRateReviewAction(
   input: CreateRateReviewActionInput,
-): (target: ReviewTarget, rating: FsrsRating) => Promise<void> {
+): AsyncAction<[ReviewTarget, FsrsRating], void> {
   return async (target: ReviewTarget, rating: FsrsRating): Promise<void> => {
     const scheduled = input.services.scheduler.schedule.execute({
       rating,

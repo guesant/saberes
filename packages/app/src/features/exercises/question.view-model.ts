@@ -21,15 +21,19 @@ export interface QuestionViewModel {
   bookmarked: boolean;
   bookmarkError: Error | null;
   error: Error | null;
-  reload: () => Promise<void>;
-  saveBookmark: () => Promise<void>;
-  submit: (
+  reload(): Promise<void>;
+
+  saveBookmark(): Promise<void>;
+
+  submit(
     answer: string,
     elapsedMs: number,
     confidence: AttemptConfidence,
-  ) => Promise<QuestionSubmissionResult>;
-  saveDiagnosis: (code: DiagnosisCode) => Promise<void>;
-  savePriorKnowledge: (status: PriorKnowledgeStatus) => Promise<void>;
+  ): Promise<QuestionSubmissionResult>;
+
+  saveDiagnosis(code: DiagnosisCode): Promise<void>;
+
+  savePriorKnowledge(status: PriorKnowledgeStatus): Promise<void>;
 }
 
 export function useQuestionViewModel(

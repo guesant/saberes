@@ -14,7 +14,7 @@ export interface AssessmentViewModel {
   error: Error | null;
   progress: AssessmentProgress | null;
   progressError: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 }
 
 export function useAssessmentViewModel(key?: string): AssessmentViewModel {

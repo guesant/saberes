@@ -7,6 +7,7 @@ import {
 import { applicationDependencyTokens } from "./application-dependency-tokens.config";
 import { registerPortFactories } from "./register-port-factories.composition";
 import { resolvePort } from "./resolve-port.composition";
+import type { PortFactoryBinding } from "./port-factory-binding.type";
 import type { Container } from "inversify";
 
 export function registerContentGraphPortBindings(container: Container): void {
@@ -16,7 +17,7 @@ export function registerContentGraphPortBindings(container: Container): void {
       applicationDependencyTokens.contentRepository,
     );
 
-  const bindings: Array<readonly [symbol, () => object]> = [
+  const bindings: PortFactoryBinding[] = [
     [
       applicationDependencyTokens.getTopicMap,
       () => new SqlJsGetTopicMapAdapter(getContentRepository()),

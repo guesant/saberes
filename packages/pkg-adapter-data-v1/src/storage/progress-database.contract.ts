@@ -1,10 +1,19 @@
 import type { AttemptDiagnosis } from "./attempt-diagnosis.interface";
+import type { AttemptWithId } from "./attempt-with-id.interface";
 import type { Attempt } from "./attempt.type";
-import type { ReviewDatabaseEvent } from "./review-database-event.interface";
-import type { ReviewTarget } from "./review-target.type";
+import type { ProgressBackupEvent } from "./progress-backup-event.interface";
+import type { ProgressSettingRecord } from "./progress-setting-record.interface";
+import type { ReviewEventInput } from "./review-event-input.interface";
+import type { ReviewTarget } from "./review-target.interface";
 import type { SessionRecord } from "./session-record.interface";
 import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
-import type { AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
+import type {
+  AcademicDiscipline,
+  FocusSession,
+  PersonalWorkspace,
+  ReviewTargetRecord,
+  StudyGoal,
+} from "@guesant/saberes-domain";
 
 export interface ProgressDatabaseContract {
   clearProgress(): Promise<void>;
@@ -18,15 +27,19 @@ export interface ProgressDatabaseContract {
 
   getSession(id: string): Promise<SessionRecord | undefined>;
 
-  getSetting(key: string): Promise<{ key: string; value: unknown } | undefined>;
+  getSetting(key: string): Promise<ProgressSettingRecord | undefined>;
 
   getStreak(): Promise<Record<string, unknown> | undefined>;
 
   importProgress(input: ImportProgressInput): Promise<void>;
 
+  listBackupEvents(): Promise<ProgressBackupEvent[]>;
+
   listAchievements(): Promise<Array<Record<string, unknown>>>;
 
-  listAttempts(): Promise<Array<AttemptRecord & { id: string }>>;
+  listAcademicDisciplines(): Promise<AcademicDiscipline[]>;
+
+  listAttempts(): Promise<AttemptWithId[]>;
 
   listBookmarks(): Promise<Array<Record<string, unknown>>>;
 
@@ -35,6 +48,8 @@ export interface ProgressDatabaseContract {
   listDiagnoses(): Promise<Array<AttemptDiagnosis>>;
 
   listEnrollments(): Promise<Array<Record<string, unknown>>>;
+
+  listFocusSessions(): Promise<FocusSession[]>;
 
   listLessonProgress(): Promise<Array<Record<string, unknown>>>;
 
@@ -46,16 +61,24 @@ export interface ProgressDatabaseContract {
 
   listSessions(): Promise<Array<SessionRecord>>;
 
+  listStudyGoals(): Promise<StudyGoal[]>;
+
   listSavedCatalogFilters(): Promise<SavedCatalogFilter[]>;
 
   listTopicMastery(): Promise<Array<Record<string, unknown>>>;
+
+  getPersonalWorkspace(): Promise<PersonalWorkspace>;
 
   saveAchievement(
     contentKey: string,
     data?: Record<string, unknown>,
   ): Promise<Record<string, unknown>>;
 
-  saveAttempt(attempt: Attempt): Promise<AttemptRecord & { id: string }>;
+  saveAcademicDiscipline(discipline: AcademicDiscipline): Promise<AcademicDiscipline>;
+
+  deleteAcademicDiscipline(id: string): Promise<void>;
+
+  saveAttempt(attempt: Attempt): Promise<AttemptWithId>;
 
   saveBookmark(
     contentKey: string,
@@ -69,6 +92,8 @@ export interface ProgressDatabaseContract {
 
   saveDiagnosis(diagnosis: AttemptDiagnosis): Promise<void>;
 
+  saveFocusSession(session: FocusSession): Promise<FocusSession>;
+
   saveLessonProgress(
     contentKey: string,
     data?: Record<string, unknown>,
@@ -79,7 +104,7 @@ export interface ProgressDatabaseContract {
     data?: Record<string, unknown>,
   ): Promise<Record<string, unknown>>;
 
-  saveReviewEvent(event: Omit<ReviewDatabaseEvent, "id"> & { id?: string }): Promise<void>;
+  saveReviewEvent(event: ReviewEventInput): Promise<void>;
 
   saveReviewItem(
     contentKey: string,
@@ -98,8 +123,12 @@ export interface ProgressDatabaseContract {
 
   saveStreak(data?: Record<string, unknown>): Promise<Record<string, unknown>>;
 
+  saveStudyGoal(goal: StudyGoal): Promise<StudyGoal>;
+
   saveTopicMastery(
     contentKey: string,
     data?: Record<string, unknown>,
   ): Promise<Record<string, unknown>>;
+
+  savePersonalWorkspace(workspace: PersonalWorkspace): Promise<PersonalWorkspace>;
 }

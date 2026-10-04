@@ -4,7 +4,7 @@ import type { ApplicationServices, StudyRecord } from "@guesant/saberes-applicat
 export type MyStudyBookmarkQueries = {
   bookmarks: StudyRecord[] | undefined;
   error: Error | null;
-  reload: () => Promise<void>;
+  reload(): Promise<void>;
 };
 
 export function useMyStudyBookmarkQueries(services: ApplicationServices): MyStudyBookmarkQueries {

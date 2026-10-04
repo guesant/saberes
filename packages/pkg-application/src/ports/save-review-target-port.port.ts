@@ -1,9 +1,5 @@
-import type { ReviewTarget } from "../models/index";
-import type { ContentKey } from "@guesant/saberes-domain";
+import type { ReviewTarget, SaveStudyRecordInput } from "../models/index";
 
 export interface SaveReviewTargetPort {
-  execute(input: {
-    contentKey: ContentKey | string;
-    data?: Partial<ReviewTarget>;
-  }): Promise<ReviewTarget>;
+  execute(input: SaveStudyRecordInput<Partial<ReviewTarget>>): Promise<ReviewTarget>;
 }

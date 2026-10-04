@@ -9,6 +9,7 @@ export type CreateStudyPlanActionsInput = {
   slug: string | undefined;
   state: StudyPlanLocalState;
   steps: Array<Record<string, unknown>>;
-  reloadPlan: () => Promise<unknown>;
-  reloadProgress: () => Promise<unknown>;
+  reloadPlan(): Promise<unknown>;
+
+  reloadProgress(): Promise<unknown>;
 };

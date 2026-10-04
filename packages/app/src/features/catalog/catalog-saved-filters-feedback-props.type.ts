@@ -1,5 +1,5 @@
 export type CatalogSavedFiltersFeedbackProps = {
   error: Error | null;
-  onRetry: () => Promise<void>;
+  onRetry(): Promise<void>;
   state: "loading" | "error" | "ready";
 };

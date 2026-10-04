@@ -6,9 +6,7 @@ import { QuestionPriorKnowledgeSaved } from "./question-prior-knowledge-saved.co
 import { useQuestionPriorKnowledgeSelection } from "./use-question-prior-knowledge-selection.hook";
 import type { PriorKnowledgeStatus } from "@guesant/saberes-application";
 
-export type QuestionPriorKnowledgeProps = {
-  onSelect: (status: PriorKnowledgeStatus) => Promise<void>;
-};
+export type QuestionPriorKnowledgeProps = { onSelect(status: PriorKnowledgeStatus): Promise<void> };
 
 export function QuestionPriorKnowledge(props: QuestionPriorKnowledgeProps) {
   const { t } = useTranslation();

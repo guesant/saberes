@@ -6,9 +6,11 @@ import type { FsrsRating, ReviewTarget } from "@guesant/saberes-application";
 export type ReviewTargetCardProps = {
   target: ReviewTarget;
   preview: ReviewPreview | undefined;
-  onPostpone: (target: ReviewTarget) => Promise<void>;
-  onRate: (target: ReviewTarget, rating: FsrsRating) => Promise<void>;
-  onSuspend: (target: ReviewTarget) => Promise<void>;
+  onPostpone(target: ReviewTarget): Promise<void>;
+
+  onRate(target: ReviewTarget, rating: FsrsRating): Promise<void>;
+
+  onSuspend(target: ReviewTarget): Promise<void>;
 };
 
 export function ReviewTargetCard(props: ReviewTargetCardProps) {

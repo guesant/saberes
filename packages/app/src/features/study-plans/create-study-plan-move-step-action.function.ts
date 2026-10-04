@@ -2,10 +2,11 @@ import { calculateMovedStudyPlanStepOrder } from "./calculate-moved-study-plan-s
 import { getStudyPlanStepOrder } from "./get-study-plan-step-order.function";
 import { saveStudyPlanLocalState } from "./save-study-plan-local-state.function";
 import type { CreateStudyPlanActionsInput } from "./create-study-plan-actions-input.type";
+import type { AsyncAction } from "../../types/async-action.type";
 
 export function createStudyPlanMoveStepAction(
   input: CreateStudyPlanActionsInput,
-): (stepId: string, direction: -1 | 1) => Promise<void> {
+): AsyncAction<[string, -1 | 1], void> {
   return (stepId: string, direction: -1 | 1): Promise<void> =>
     saveStudyPlanLocalState({
       services: input.services,
