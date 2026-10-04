@@ -12,7 +12,7 @@ export function StudyPlanStepSkipAction(props: StudyPlanStepSkipActionProps) {
       variant="text"
       onClick={() => props.onSkip(props.stepId)}
     >
-      {t("plan.skipStep")}
+      {props.skipped ? t("plan.unskipStep") : t("plan.skipStep")}
     </UIButton>
   );
 }

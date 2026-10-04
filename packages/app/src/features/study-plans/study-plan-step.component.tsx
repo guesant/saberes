@@ -43,7 +43,8 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
 
           <StudyPlanStepStatus completed={props.completed} skipped={props.skipped} />
           <StudyPlanStepSkipAction
-            disabled={props.completed || props.skipped}
+            disabled={props.completed}
+            skipped={props.skipped}
             stepId={String(props.step.id)}
             onSkip={props.onSkip}
           />

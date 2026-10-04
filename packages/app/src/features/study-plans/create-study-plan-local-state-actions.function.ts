@@ -1,4 +1,5 @@
 import { saveStudyPlanStateAction } from "./save-study-plan-state-action.function";
+import { updateStudyPlanStepSkip } from "./update-study-plan-step-skip.function";
 import type { CreateStudyPlanLocalStateActionsInput } from "./create-study-plan-local-state-actions-input.type";
 import type { StudyPlanLocalStateActions } from "./study-plan-local-state-actions.interface";
 
@@ -31,7 +32,7 @@ export function createStudyPlanLocalStateActions(
     skipStep: (stepId: string): Promise<void> =>
       saveStudyPlanStateAction(input, {
         ...input.state,
-        skippedStepIds: [...new Set([...input.state.skippedStepIds, stepId])],
+        skippedStepIds: updateStudyPlanStepSkip(input.state.skippedStepIds, stepId),
       }),
   };
 }

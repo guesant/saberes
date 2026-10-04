@@ -404,6 +404,7 @@ const ptBR = {
     targetDate: "Data-alvo",
     dailyMinutes: "Minutos por dia",
     skipStep: "Pular etapa",
+    unskipStep: "Retomar etapa",
     skipped: "Etapa pulada",
     moveStepUp: "Mover etapa para cima",
     moveStepDown: "Mover etapa para baixo",
