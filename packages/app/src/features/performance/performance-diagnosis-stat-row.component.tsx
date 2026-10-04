@@ -1,6 +1,7 @@
 import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { getDiagnosisLabelKey } from "./get-diagnosis-label-key.function";
 import { getPerformanceActionPath } from "./get-performance-action-path.function";
 import type { PerformanceDiagnosisStatRowProps } from "./performance-diagnosis-stat-row-props.type";
 
@@ -15,7 +16,7 @@ export function PerformanceDiagnosisStatRow(props: PerformanceDiagnosisStatRowPr
         {t("performance.diagnosisRow", {
           action: actionLabel,
           attempts: props.stat.attempts,
-          diagnosis: t(`exercise.diagnosis.${props.stat.code}`),
+          diagnosis: t(getDiagnosisLabelKey(props.stat.code)),
         })}
       </UITypography>
       <UITypography color="text.secondary" variant="body2">

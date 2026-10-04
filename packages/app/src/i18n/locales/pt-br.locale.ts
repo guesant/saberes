@@ -36,6 +36,9 @@ const ptBR = {
     study: "Estudar",
     practice: "Praticar",
     solve: "Resolver",
+    catalog: "Catálogo",
+    review: "Revisão",
+    myStudy: "Meu estudo",
     now: "agora",
     backToMyStudy: "Voltar para Meu estudo",
     all: "Todos",
@@ -93,6 +96,7 @@ const ptBR = {
     assessmentSummary:
       "{{completed}} de {{sessions}} avaliação(ões) concluída(s), {{answered}} questão(ões) respondida(s) e {{accuracy}}% de aproveitamento corrigido.",
     savedLessons: "Lições salvas",
+    savedQuestions: "Questões salvas",
     selectionProcesses: "processos seletivos",
     editionsInDatabase: "edições na base",
     contentRelease: "Versão do conteúdo",
@@ -200,6 +204,7 @@ const ptBR = {
       "Cada módulo combina teoria, exercícios e revisões curtas. Você pode pular uma etapa e voltar depois.",
     practice: "Prática",
     review: "Revisão",
+    reviews: "Revisões",
   },
   lesson: {
     label: "Lição",
@@ -373,6 +378,9 @@ const ptBR = {
     nextActionEmpty: "Comece uma atividade para criar sua primeira evidência de estudo.",
     reviewErrors: "Revisar erros",
     startStudy: "Começar estudo",
+    assessmentTitle: "Desempenho em avaliações",
+    assessmentSummary:
+      "{{completed}} de {{sessions}} avaliação(ões) concluída(s), {{answered}} questão(ões) respondida(s) e {{accuracy}}% de aproveitamento corrigido.",
   },
   review: {
     eyebrow: "Revisão inteligente",
@@ -476,6 +484,6 @@ const ptBR = {
     sceneFallback:
       "A cena 3D não está disponível neste dispositivo. Consulte a representação textual da aula.",
   },
-} as const;
+};
 
 export default ptBR;
