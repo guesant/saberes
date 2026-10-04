@@ -13,7 +13,9 @@ describe("getProgressSnapshotChecksum", () => {
   it("produz checksums diferentes para snapshots diferentes", async () => {
     const first = await getProgressSnapshotChecksum({ attempts: [{ contentKey: "question:one" }] });
 
-    const second = await getProgressSnapshotChecksum({ attempts: [{ contentKey: "question:two" }] });
+    const second = await getProgressSnapshotChecksum({
+      attempts: [{ contentKey: "question:two" }],
+    });
 
     expect(first).not.toBe(second);
   });
