@@ -1,7 +1,9 @@
 import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import { getPerformanceDiagnosisStats } from "./get-performance-diagnosis-stats.function";
 import { getPerformanceSummary } from "./get-performance-summary.function";
 import { getPerformanceTopicStats } from "./get-performance-topic-stats.function";
+import { PerformanceDiagnosisList } from "./performance-diagnosis-list.component";
 import { PerformanceNextAction } from "./performance-next-action.component";
 import { PerformanceSummaryGrid } from "./performance-summary-grid.component";
 import { PerformanceTopicList } from "./performance-topic-list.component";
@@ -22,6 +24,8 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
 
   const topicStats = getPerformanceTopicStats(props.data.attempts);
 
+  const diagnosisStats = getPerformanceDiagnosisStats(props.data.attempts);
+
   const hasErrors = props.data.attempts.some((attempt) => attempt.isCorrect === false);
 
   return (
@@ -33,6 +37,7 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
       </UIContentGroup>
       <PerformanceSummaryGrid summary={summary} />
       <PerformanceTopicList stats={topicStats} />
+      <PerformanceDiagnosisList stats={diagnosisStats} />
       <PerformanceNextAction hasAttempts={props.data.attempts.length > 0} hasErrors={hasErrors} />
     </UIContentGroup>
   );

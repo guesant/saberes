@@ -1,0 +1,12 @@
+import { PerformanceDiagnosisStatRow } from "./performance-diagnosis-stat-row.component";
+import type { PerformanceDiagnosisStat } from "./performance-diagnosis-stat.interface";
+
+export type PerformanceDiagnosisRowsProps = {
+  stats: PerformanceDiagnosisStat[];
+};
+
+export function PerformanceDiagnosisRows(props: PerformanceDiagnosisRowsProps) {
+  return props.stats
+    .slice(0, 5)
+    .map((stat) => <PerformanceDiagnosisStatRow key={stat.code} stat={stat} />);
+}
