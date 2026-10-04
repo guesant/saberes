@@ -11,6 +11,31 @@ export const asset = (name: string) => `${base}${name}`.replace("//", "/");
 
 const localContentPath = path.resolve(process.cwd(), ".local/content/content.sqlite");
 
+const schemaDocsPath = path.resolve(process.cwd(), ".cache/schema-docs/site");
+
+const staticCopyTargets = [
+  ...(fs.existsSync(localContentPath)
+    ? [
+        {
+          src: localContentPath,
+          dest: "data",
+        },
+      ]
+    : []),
+  {
+    src: "../pkg-adapter-data-v1/node_modules/sql.js/dist/sql-wasm.wasm",
+    dest: ".",
+  },
+  ...(fs.existsSync(schemaDocsPath)
+    ? [
+        {
+          src: schemaDocsPath,
+          dest: "-/backstage/database/schema",
+        },
+      ]
+    : []),
+];
+
 type ViteResponse = {
   statusCode: number;
   setHeader: (headerName: string, value: string) => void;
@@ -54,20 +79,7 @@ export default defineConfig({
     react(),
     localContentPlugin,
     viteStaticCopy({
-      targets: [
-        {
-          src: "../../.local/content/content.sqlite",
-          dest: "data",
-        },
-        {
-          src: "../pkg-adapter-data-v1/node_modules/sql.js/dist/sql-wasm.wasm",
-          dest: ".",
-        },
-        {
-          src: "../../.cache/schema-docs/site/**/*",
-          dest: "-/backstage/database/schema",
-        },
-      ],
+      targets: staticCopyTargets,
     }),
     VitePWA({
       registerType: "autoUpdate",
