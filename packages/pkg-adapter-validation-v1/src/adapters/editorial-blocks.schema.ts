@@ -1,6 +1,7 @@
 import {
   array,
   boolean,
+  check,
   literal,
   minLength,
   number,
@@ -16,6 +17,35 @@ import {
 
 const baseBlock = { type: string() };
 
+const safeEditorialText = pipe(
+  string(),
+  check(
+    (value) => !/<\s*(?:script|style|iframe|object|embed|form)\b|javascript\s*:/iu.test(value),
+    "Editorial text contains a forbidden executable or embedded pattern.",
+  ),
+);
+
+const localImageSource = pipe(
+  string(),
+  minLength(1),
+  check(
+    (value) => /^(?:\/|\.\/)[^?#]+\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#].*)?$/iu.test(value),
+    "Editorial images must use a local published asset.",
+  ),
+);
+
+const controlledVideoUrl = pipe(
+  string(),
+  check(
+    (value) =>
+      /^(?:\/|\.\/)[^?#]+\.(?:mp4|webm|ogg)(?:[?#].*)?$/iu.test(value) ||
+      /^https:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/|vimeo\.com\/|player\.vimeo\.com\/video\/)[^\s]+$/iu.test(
+        value,
+      ),
+    "Editorial videos must use a local asset or an approved HTTPS provider.",
+  ),
+);
+
 const chartValue = union([string(), number(), boolean(), array(union([string(), number()]))]);
 
 export const editorialBlocksSchema = array(
@@ -24,40 +54,40 @@ export const editorialBlocksSchema = array(
       ...baseBlock,
       type: literal("callout"),
       severity: optional(picklist(["info", "success", "warning", "error"])),
-      title: optional(string()),
-      content: string(),
+      title: optional(safeEditorialText),
+      content: safeEditorialText,
     }),
     object({
       ...baseBlock,
       type: literal("formula"),
       formula: string(),
-      caption: optional(string()),
+      caption: optional(safeEditorialText),
     }),
     object({
       ...baseBlock,
       type: literal("image"),
-      src: string(),
+      src: localImageSource,
       alt: pipe(string(), minLength(1)),
-      caption: optional(string()),
+      caption: optional(safeEditorialText),
     }),
     object({
       ...baseBlock,
       type: literal("video"),
-      url: string(),
-      title: optional(string()),
+      url: controlledVideoUrl,
+      title: optional(safeEditorialText),
     }),
     object({
       ...baseBlock,
       type: literal("question_link"),
       questionId: union([string(), number()]),
-      title: optional(string()),
-      description: optional(string()),
+      title: optional(safeEditorialText),
+      description: optional(safeEditorialText),
     }),
     object({
       ...baseBlock,
       type: literal("summary"),
-      title: optional(string()),
-      content: string(),
+      title: optional(safeEditorialText),
+      content: safeEditorialText,
     }),
     object({
       ...baseBlock,
