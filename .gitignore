@@ -23,7 +23,9 @@ dist
 !.local/operator/
 .local/operator/*
 !.local/operator/.env.example
-.local/content/
+.local/content/*
+!.local/content/
+!.local/content/content.sqlite
 playwright-report
 test-results
 public/build

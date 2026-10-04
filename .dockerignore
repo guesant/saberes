@@ -5,7 +5,10 @@ node_modules
 .deno
 **/.deno
 .cache
-.local
+.local/*
+!.local/
+!.local/content/
+!.local/content/content.sqlite
 vendor
 dist
 public/data/source.sqlite

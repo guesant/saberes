@@ -13,6 +13,12 @@ SPDX-FileCopyrightText = "2026 Portal Guesant Saberes contributors"
 SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
+path = ".local/content/**.sqlite"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Portal Guesant Saberes contributors"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
 path = "packages/app/public/data/LICENSE"
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 Portal Guesant Saberes contributors"

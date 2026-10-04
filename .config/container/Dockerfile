@@ -124,6 +124,7 @@ RUN --mount=type=cache,id=portal-guesant-saberes-deno,target=/deno/cache \
 RUN mise exec -- deno cache jsr:@std/path@1.1.6
 
 COPY packages ./packages
+COPY .local/content ./.local/content
 COPY .config ./.config
 COPY .github ./.github
 COPY README.md ./README.md
