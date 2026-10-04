@@ -4,8 +4,10 @@ import { useAppServices } from "../../composition/use-app-services.hook";
 import { createReviewActions } from "./create-review-actions.function";
 import { createStartReviewStudySessionAction } from "./create-start-review-study-session-action.function";
 import { getDueReviewTargets } from "./get-due-review-targets.function";
+import { getReviewLoadSummary } from "./get-review-load-summary.function";
 import { getReviewPreviews } from "./get-review-previews.function";
 import { getReviewViewState } from "./get-review-view-state.function";
+import type { ReviewLoadSummary } from "./review-load-summary.interface";
 import type { ReviewPreview } from "./review-preview.type";
 import type { FsrsRating, ReviewTarget } from "@guesant/saberes-application";
 
@@ -14,6 +16,7 @@ export type ReviewViewModelState = "loading" | "error" | "ready";
 export interface ReviewViewModel {
   state: ReviewViewModelState;
   targets: ReviewTarget[];
+  load: ReviewLoadSummary;
   previews: Record<string, ReviewPreview>;
   error: Error | null;
   reload: () => Promise<void>;
@@ -37,6 +40,8 @@ export function useReviewViewModel(): ReviewViewModel {
 
   const targets = getDueReviewTargets(query.data || [], new Date());
 
+  const load = getReviewLoadSummary(query.data || [], new Date());
+
   const previews: Record<string, ReviewPreview> = getReviewPreviews({
     targets,
     preview: (target) => services.scheduler.preview.execute({ target }),
@@ -53,6 +58,7 @@ export function useReviewViewModel(): ReviewViewModel {
   return {
     state: getReviewViewState(query.isPending, query.isError),
     targets,
+    load,
     previews,
     error: query.error || null,
     reload: async (): Promise<void> => {

@@ -27,7 +27,10 @@ export function ReviewTargetCardContent(props: ReviewTargetCardContentProps) {
 
   return (
     <UIContentGroup variant="tight">
-      <UIChip label={target.targetType || "review"} size="small" />
+      <UIChip
+        label={target.state ? t(`review.states.${target.state}`) : t("review.availableNow")}
+        size="small"
+      />
       <UITypography variant="h6">{target.contentKey}</UITypography>
       <UITypography color="text.secondary">
         {target.dueAt

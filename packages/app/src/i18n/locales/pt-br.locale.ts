@@ -313,6 +313,14 @@ const ptBR = {
     title: "Questões para revisar",
     description:
       "A fila combina erros, esquecimento e a agenda FSRS. Você controla cada adiamento ou suspensão.",
+    states: {
+      new: "Novo",
+      learning: "Aprendendo",
+      review: "Em revisão",
+      relearning: "Reaprendendo",
+    },
+    loadSummary:
+      "Carga local: {{due}} vencida(s), {{upcoming}} próxima(s), {{suspended}} suspensa(s), {{total}} no total.",
     suspended: "Suspensa",
     availableNow: "Disponível agora",
     nextReview: "Próxima revisão: {{date}}",
