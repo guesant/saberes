@@ -1,7 +1,7 @@
 import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { ReviewEmptyState } from "./review-empty-state.component";
-import { ReviewTargetList } from "./review-target-list.component";
+import { ReviewSessionReadyContent } from "./review-session-ready-content.component";
 import type { ReviewViewModel } from "./review.view-model";
 
 export type ReviewReadyViewProps = {
@@ -21,13 +21,7 @@ export function ReviewReadyView(props: ReviewReadyViewProps) {
         <UITypography color="text.secondary">{t("review.description")}</UITypography>
       </UIContentGroup>
       {viewModel.targets.length ? (
-        <ReviewTargetList
-          targets={viewModel.targets}
-          previews={viewModel.previews}
-          onPostpone={viewModel.postpone}
-          onRate={viewModel.rate}
-          onSuspend={viewModel.suspend}
-        />
+        <ReviewSessionReadyContent viewModel={viewModel} />
       ) : (
         <ReviewEmptyState />
       )}

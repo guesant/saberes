@@ -304,6 +304,7 @@ const ptBR = {
     good: "Bom",
     easy: "Fácil",
     nextReviewUnknown: "próximo intervalo",
+    startSession: "Começar revisão",
     postpone: "Adiar 1 dia",
     suspend: "Suspender",
     empty: "Nenhuma questão errada para revisar ainda.",

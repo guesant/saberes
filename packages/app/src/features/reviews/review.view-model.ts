@@ -1,6 +1,8 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { createReviewActions } from "./create-review-actions.function";
+import { createStartReviewStudySessionAction } from "./create-start-review-study-session-action.function";
 import { getDueReviewTargets } from "./get-due-review-targets.function";
 import { getReviewPreviews } from "./get-review-previews.function";
 import { getReviewViewState } from "./get-review-view-state.function";
@@ -18,10 +20,13 @@ export interface ReviewViewModel {
   postpone: (target: ReviewTarget) => Promise<void>;
   rate: (target: ReviewTarget, rating: FsrsRating) => Promise<void>;
   suspend: (target: ReviewTarget) => Promise<void>;
+  startSession: () => Promise<void>;
 }
 
 export function useReviewViewModel(): ReviewViewModel {
   const services = useAppServices();
+
+  const navigate = useNavigate();
 
   const queryClient = useQueryClient();
 
@@ -39,6 +44,12 @@ export function useReviewViewModel(): ReviewViewModel {
 
   const actions = createReviewActions({ services, queryClient });
 
+  const startSession = createStartReviewStudySessionAction({
+    navigate,
+    services,
+    targets,
+  });
+
   return {
     state: getReviewViewState(query.isPending, query.isError),
     targets,
@@ -50,5 +61,6 @@ export function useReviewViewModel(): ReviewViewModel {
     postpone: actions.postpone,
     rate: actions.rate,
     suspend: actions.suspend,
+    startSession,
   };
 }
