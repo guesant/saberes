@@ -1,9 +1,10 @@
-import { UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { createCompletedStepSet } from "./create-completed-step-set.function";
 import { getStudyPlanDescription } from "./get-study-plan-description.function";
 import { getStudyPlanProgress } from "./get-study-plan-progress.function";
 import { StudyPlanControls } from "./study-plan-controls.component";
+import { StudyPlanEditorialNotice } from "./study-plan-editorial-notice.component";
 import { StudyPlanProgressSummary } from "./study-plan-progress-summary.component";
 import { StudyPlanSteps } from "./study-plan-steps.component";
 import type { StudyPlanLocalState } from "./study-plan-local-state.interface";
@@ -19,24 +20,24 @@ export type StudyPlanReadyViewProps = {
   onTogglePause: () => Promise<void>;
   onTargetDateChange: (targetDate: string) => Promise<void>;
   onDailyMinutesChange: (dailyMinutes: number) => Promise<void>;
+  skippedStepIds: Set<string>;
+  onSkip: (stepId: string) => Promise<void>;
 };
 
 export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {
-  const { data, progress, onToggle } = props;
-
   const { t } = useTranslation();
 
-  const completed = createCompletedStepSet(progress);
+  const completed = createCompletedStepSet(props.progress);
 
-  const planProgress = getStudyPlanProgress({ steps: data.steps, completed });
+  const planProgress = getStudyPlanProgress({ steps: props.data.steps, completed });
 
   return (
     <>
       <UITypography variant="overline">{t("plan.eyebrow")}</UITypography>
 
-      <UITypography variant="h3">{String(data.plan?.title)}</UITypography>
+      <UITypography variant="h3">{String(props.data.plan?.title)}</UITypography>
 
-      <UITypography color="text.secondary">{getStudyPlanDescription(data)}</UITypography>
+      <UITypography color="text.secondary">{getStudyPlanDescription(props.data)}</UITypography>
 
       <StudyPlanControls
         state={props.localState}
@@ -53,12 +54,16 @@ export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {
       />
 
       <UIContentGroup variant="content">
-        <StudyPlanSteps steps={props.steps} completed={completed} onToggle={onToggle} />
+        <StudyPlanSteps
+          steps={props.steps}
+          completed={completed}
+          skipped={props.skippedStepIds}
+          onToggle={props.onToggle}
+          onSkip={props.onSkip}
+        />
       </UIContentGroup>
 
-      <UICard>
-        <UICardContent>{t("plan.editorialNotice")}</UICardContent>
-      </UICard>
+      <StudyPlanEditorialNotice />
     </>
   );
 }

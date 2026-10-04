@@ -15,9 +15,13 @@ export function getStudyPlanDerivedState(
     input.progress.filter((item) => item.completed === true).map((item) => String(item.stepId)),
   );
 
+  const availableSteps = orderedSteps.filter(
+    (step) => !localState.skippedStepIds.includes(String(step.id)),
+  );
+
   return {
     localState,
     orderedSteps,
-    nextStep: getStudyPlanNextStep(orderedSteps, completed),
+    nextStep: getStudyPlanNextStep(availableSteps, completed),
   };
 }

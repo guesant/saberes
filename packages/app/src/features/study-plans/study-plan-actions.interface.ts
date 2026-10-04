@@ -3,5 +3,6 @@ export interface StudyPlanActions {
   togglePause: () => Promise<void>;
   updateTargetDate: (targetDate: string) => Promise<void>;
   updateDailyMinutes: (dailyMinutes: number) => Promise<void>;
+  skipStep: (stepId: string) => Promise<void>;
   reload: () => Promise<void>;
 }

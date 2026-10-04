@@ -370,6 +370,8 @@ const ptBR = {
     resume: "Retomar plano",
     targetDate: "Data-alvo",
     dailyMinutes: "Minutos por dia",
+    skipStep: "Pular etapa",
+    skipped: "Etapa pulada",
     editorialNotice:
       "O plano é editorial; seu progresso e suas alterações ficam somente neste dispositivo.",
     recommendedPace: "Ritmo recomendado",

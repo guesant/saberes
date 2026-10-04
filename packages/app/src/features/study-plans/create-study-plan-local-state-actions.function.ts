@@ -30,5 +30,14 @@ export function createStudyPlanLocalStateActions(
       dailyMinutes: Math.max(1, Math.min(480, dailyMinutes)),
     });
 
-  return { togglePause: updateStudyPlanPause, updateTargetDate, updateDailyMinutes };
+  return {
+    togglePause: updateStudyPlanPause,
+    updateTargetDate,
+    updateDailyMinutes,
+    skipStep: (stepId: string): Promise<void> =>
+      saveStudyPlanState({
+        ...input.state,
+        skippedStepIds: [...new Set([...input.state.skippedStepIds, stepId])],
+      }),
+  };
 }

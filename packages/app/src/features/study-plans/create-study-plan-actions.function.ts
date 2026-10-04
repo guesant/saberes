@@ -28,6 +28,7 @@ export function createStudyPlanActions(input: CreateStudyPlanActionsInput): Stud
     togglePause: localStateActions.togglePause,
     updateTargetDate: localStateActions.updateTargetDate,
     updateDailyMinutes: localStateActions.updateDailyMinutes,
+    skipStep: localStateActions.skipStep,
     reload,
   };
 }

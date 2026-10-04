@@ -17,6 +17,7 @@ export async function saveStudyPlanLocalState(input: SaveStudyPlanLocalStateInpu
       targetDate: input.state.targetDate,
       dailyMinutes: input.state.dailyMinutes,
       orderedStepIds: input.state.orderedStepIds,
+      skippedStepIds: input.state.skippedStepIds,
     },
   });
 

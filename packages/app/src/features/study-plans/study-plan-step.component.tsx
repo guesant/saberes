@@ -6,14 +6,17 @@ import {
   UIContentGroup,
   UIStartAlignedRow,
   UITypography,
-  UIChip,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import { StudyPlanStepSkipAction } from "./study-plan-step-skip-action.component";
+import { StudyPlanStepStatus } from "./study-plan-step-status.component";
 
 export type StudyPlanStepProps = {
   step: Record<string, unknown>;
   completed: boolean;
+  skipped: boolean;
   onToggle: (step: Record<string, unknown>, completed: boolean) => Promise<void>;
+  onSkip: (stepId: string) => Promise<void>;
 };
 
 export function StudyPlanStep(props: StudyPlanStepProps) {
@@ -36,7 +39,12 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
 
           <UITypography color="text.secondary">{String(props.step.description || "")}</UITypography>
 
-          <UIChip size="small" label={props.completed ? t("plan.completed") : t("plan.nextStep")} />
+          <StudyPlanStepStatus completed={props.completed} skipped={props.skipped} />
+          <StudyPlanStepSkipAction
+            disabled={props.completed || props.skipped}
+            stepId={String(props.step.id)}
+            onSkip={props.onSkip}
+          />
         </UIContentGroup>
       </UIStartAlignedRow>
     </UIPaper>

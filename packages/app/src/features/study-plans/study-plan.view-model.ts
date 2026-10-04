@@ -26,6 +26,7 @@ export interface StudyPlanViewModel {
   togglePause: () => Promise<void>;
   updateTargetDate: (targetDate: string) => Promise<void>;
   updateDailyMinutes: (dailyMinutes: number) => Promise<void>;
+  skipStep: (stepId: string) => Promise<void>;
 }
 
 export function useStudyPlanViewModel(slug?: string): StudyPlanViewModel {
@@ -34,8 +35,6 @@ export function useStudyPlanViewModel(slug?: string): StudyPlanViewModel {
   const queryClient = useQueryClient();
 
   const { planQuery: query, progressQuery } = useStudyPlanQueries(services, slug);
-
-  const state = getStudyPlanViewState(query, progressQuery);
 
   const progress = getStudyPlanProgressRecords(progressQuery.data);
 
@@ -56,7 +55,7 @@ export function useStudyPlanViewModel(slug?: string): StudyPlanViewModel {
   });
 
   return {
-    state,
+    state: getStudyPlanViewState(query, progressQuery),
     data: getStudyPlanReadData(query.data),
     progress,
     localState: derivedState.localState,
@@ -68,5 +67,6 @@ export function useStudyPlanViewModel(slug?: string): StudyPlanViewModel {
     togglePause: actions.togglePause,
     updateTargetDate: actions.updateTargetDate,
     updateDailyMinutes: actions.updateDailyMinutes,
+    skipStep: actions.skipStep,
   };
 }

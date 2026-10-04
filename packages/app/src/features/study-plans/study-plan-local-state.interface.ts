@@ -3,4 +3,5 @@ export interface StudyPlanLocalState {
   targetDate: string;
   dailyMinutes: number;
   orderedStepIds: string[];
+  skippedStepIds: string[];
 }

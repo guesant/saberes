@@ -36,6 +36,8 @@ export function StudyPlanView() {
       onTogglePause={viewModel.togglePause}
       onTargetDateChange={viewModel.updateTargetDate}
       onDailyMinutesChange={viewModel.updateDailyMinutes}
+      skippedStepIds={new Set(viewModel.localState.skippedStepIds)}
+      onSkip={viewModel.skipStep}
     />
   );
 }
