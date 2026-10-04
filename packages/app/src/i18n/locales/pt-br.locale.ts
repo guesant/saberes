@@ -90,6 +90,12 @@ const ptBR = {
     view: "Ver",
     studySessions: "Sessões recentes",
     noStudySessions: "Suas sessões aparecerão aqui depois do primeiro estudo.",
+    resumeSession: "Retomar sessão",
+    sessionStatus: {
+      active: "Em andamento",
+      paused: "Pausada",
+      completed: "Concluída",
+    },
     sessionType: {
       lesson: "Lição",
       question: "Questão",

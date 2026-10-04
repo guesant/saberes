@@ -1,7 +1,6 @@
-import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
-import { format } from "date-fns";
-import { ptBR } from "date-fns/locale";
-import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import { MyStudySessionActions } from "./my-study-session-actions.component";
+import { MyStudySessionDetails } from "./my-study-session-details.component";
 import type { StudySession } from "@guesant/saberes-application";
 
 export type MyStudySessionItemProps = {
@@ -9,20 +8,16 @@ export type MyStudySessionItemProps = {
 };
 
 export function MyStudySessionItem(props: MyStudySessionItemProps) {
-  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleResumeStudySession = (): void => {
+    navigate(`/sessoes/questoes/${props.session.id}`);
+  };
 
   return (
-    <UIContentGroup variant="tight">
-      <UITypography variant="body2">
-        {t(`home.sessionType.${props.session.activityType || "lesson"}`)}
-      </UITypography>
-      <UITypography color="text.secondary" variant="caption">
-        {props.session.startedAt
-          ? format(new Date(props.session.startedAt), "dd/MM/yyyy HH:mm", { locale: ptBR })
-          : t("common.now")}{" "}
-        {" · "}
-        {Math.max(1, Math.round(Number(props.session.durationMs || 0) / 60000))} {t("common.min")}
-      </UITypography>
-    </UIContentGroup>
+    <>
+      <MyStudySessionDetails session={props.session} />
+      <MyStudySessionActions onResume={handleResumeStudySession} session={props.session} />
+    </>
   );
 }
