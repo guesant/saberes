@@ -224,6 +224,8 @@ const ptBR = {
     pauseSession: "Pausar sessão",
     resumeSession: "Retomar sessão",
     sessionQuantity: "Quantidade",
+    sessionDuration: "Duração em minutos (opcional)",
+    sessionTimeRemaining: "Tempo restante: {{seconds}} s",
     startSession: "Começar sessão",
     diagnosis: {
       conceptGap: "Faltou conceito",

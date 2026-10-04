@@ -2,6 +2,7 @@ import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { QuestionStudySessionPauseAction } from "./question-study-session-pause-action.component";
 import { QuestionStudySessionResumeAction } from "./question-study-session-resume-action.component";
+import { QuestionStudySessionTimeRemaining } from "./question-study-session-time-remaining.component";
 import type { QuestionSessionProgress } from "./get-question-session-progress.function";
 
 export type QuestionStudySessionHeaderProps = {
@@ -9,6 +10,7 @@ export type QuestionStudySessionHeaderProps = {
   status: "active" | "paused";
   onPause: () => Promise<void>;
   onResume: () => Promise<void>;
+  remainingSeconds?: number | null;
 };
 
 export function QuestionStudySessionHeader(props: QuestionStudySessionHeaderProps) {
@@ -23,6 +25,9 @@ export function QuestionStudySessionHeader(props: QuestionStudySessionHeaderProp
           total: props.progress.total,
         })}
       </UITypography>
+      {props.remainingSeconds !== null && props.remainingSeconds !== undefined ? (
+        <QuestionStudySessionTimeRemaining seconds={props.remainingSeconds} />
+      ) : null}
       {props.status === "active" ? (
         <QuestionStudySessionPauseAction onPause={props.onPause} />
       ) : (

@@ -1,9 +1,10 @@
-import { UIButton, UIContentGroup, UITextField, UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useAppServices } from "../../composition/use-app-services.hook";
-import { startQuestionStudySession } from "./start-question-study-session.function";
+import { createStartQuestionStudySessionAction } from "./create-start-question-study-session-action.function";
+import { QuestionSessionOptions } from "./question-session-options.component";
 import type { CatalogCard } from "@guesant/saberes-application";
 
 export type CatalogQuestionSessionLauncherProps = {
@@ -19,6 +20,16 @@ export function CatalogQuestionSessionLauncher(props: CatalogQuestionSessionLaun
 
   const [quantity, setQuantity] = useState("5");
 
+  const [durationMinutes, setDurationMinutes] = useState("");
+
+  const start = createStartQuestionStudySessionAction({
+    durationMinutes,
+    navigate,
+    questions: props.questions,
+    quantity,
+    services,
+  });
+
   if (!props.questions.length) {
     return null;
   }
@@ -26,19 +37,14 @@ export function CatalogQuestionSessionLauncher(props: CatalogQuestionSessionLaun
   return (
     <UIContentGroup variant="tight">
       <UITypography variant="h5">{t("exercise.sessionTitle")}</UITypography>
-      <UITextField
-        label={t("exercise.sessionQuantity")}
-        inputProps={{ min: 1, max: props.questions.length }}
-        onChange={(event) => setQuantity(event.target.value)}
-        type="number"
-        value={quantity}
+      <QuestionSessionOptions
+        durationMinutes={durationMinutes}
+        maxQuantity={props.questions.length}
+        onDurationChange={setDurationMinutes}
+        onQuantityChange={setQuantity}
+        quantity={quantity}
       />
-      <UIButton
-        variant="contained"
-        onClick={() =>
-          startQuestionStudySession({ navigate, questions: props.questions, quantity, services })
-        }
-      >
+      <UIButton variant="contained" onClick={start}>
         {t("exercise.startSession")}
       </UIButton>
     </UIContentGroup>

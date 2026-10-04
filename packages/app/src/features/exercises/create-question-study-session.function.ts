@@ -4,6 +4,7 @@ export interface CreateQuestionStudySessionInput {
   id: string;
   questionKeys: string[];
   startedAt: string;
+  timeLimitMs?: number;
 }
 
 export function createQuestionStudySession(input: CreateQuestionStudySessionInput): StudySession {
@@ -17,5 +18,9 @@ export function createQuestionStudySession(input: CreateQuestionStudySessionInpu
     answeredQuestionKeys: [],
     skippedQuestionKeys: [],
     correctAnswers: 0,
+    expiresAt: input.timeLimitMs
+      ? new Date(Date.parse(input.startedAt) + input.timeLimitMs).toISOString()
+      : undefined,
+    timeLimitMs: input.timeLimitMs,
   };
 }

@@ -13,4 +13,6 @@ export interface QuestionStudySessionActions {
   ): Promise<void>;
 
   skip(session: StudySession, questionKey: string): Promise<void>;
+
+  complete(session: StudySession): Promise<void>;
 }

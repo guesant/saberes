@@ -17,6 +17,7 @@ export function QuestionStudySessionReadyView(props: QuestionStudySessionReadyVi
         onPause={pause}
         onResume={props.viewModel.resume}
         progress={progress || { answered: 0, correct: 0, total: 0, percentage: 0 }}
+        remainingSeconds={props.viewModel.remainingSeconds}
         status="active"
       />
       <QuestionReadyView

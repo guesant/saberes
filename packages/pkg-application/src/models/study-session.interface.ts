@@ -7,6 +7,8 @@ export interface StudySession {
   startedAt?: string;
   completedAt?: string;
   durationMs?: number;
+  timeLimitMs?: number;
+  expiresAt?: string;
   questionKeys?: string[];
   currentIndex?: number;
   status?: StudySessionStatus;

@@ -1,8 +1,9 @@
 import { useQueryClient } from "@tanstack/react-query";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { createQuestionStudySessionActions } from "./create-question-study-session-actions.function";
 import { createQuestionStudySessionViewModel } from "./create-question-study-session-view-model.function";
+import { useQuestionStudySessionCountdown } from "./use-question-study-session-countdown.hook";
 import { useQuestionStudySessionData } from "./use-question-study-session-data.hook";
 import type { QuestionStudySessionViewModel } from "./question-study-session-view-model.interface";
 
@@ -15,7 +16,29 @@ export function useQuestionStudySessionViewModel(
 
   const data = useQuestionStudySessionData(sessionId);
 
+  const remainingSeconds = useQuestionStudySessionCountdown({ session: data.session });
+
+  const completionRequested = useRef(false);
+
   const actions = createQuestionStudySessionActions({ queryClient, services, sessionId });
 
-  return useMemo(() => createQuestionStudySessionViewModel({ actions, data }), [actions, data]);
+  useEffect(() => {
+    if (
+      remainingSeconds !== 0 ||
+      !data.session ||
+      data.session.status !== "active" ||
+      completionRequested.current
+    ) {
+      return;
+    }
+
+    completionRequested.current = true;
+
+    actions.complete(data.session).catch(() => undefined);
+  }, [actions, data.session, remainingSeconds]);
+
+  return useMemo(
+    () => createQuestionStudySessionViewModel({ actions, data, remainingSeconds }),
+    [actions, data, remainingSeconds],
+  );
 }

@@ -9,6 +9,7 @@ export interface QuestionStudySessionViewModel {
   session: StudySession | null;
   question: ReturnType<typeof useQuestionViewModel>;
   progress: QuestionSessionProgress | null;
+  remainingSeconds: number | null;
   error: Error | null;
   reload: () => Promise<void>;
   pause: () => Promise<void>;
