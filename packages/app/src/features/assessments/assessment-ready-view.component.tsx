@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { AssessmentItemsView } from "./assessment-items-view.component";
 import { AssessmentProgressError } from "./assessment-progress-error.component";
 import { AssessmentProgressSummary } from "./assessment-progress-summary.component";
+import { AssessmentSessionLauncher } from "./assessment-session-launcher.component";
 import type { AssessmentReadyViewProps } from "./assessment-ready-view-props.type";
 
 export function AssessmentReadyView(props: AssessmentReadyViewProps) {
@@ -25,6 +26,8 @@ export function AssessmentReadyView(props: AssessmentReadyViewProps) {
       {props.progressError ? (
         <AssessmentProgressError error={props.progressError} onRetry={props.onReloadProgress} />
       ) : null}
+
+      <AssessmentSessionLauncher assessmentKey={props.assessmentKey} items={props.data.items} />
 
       <UICard>
         <UICardContent>

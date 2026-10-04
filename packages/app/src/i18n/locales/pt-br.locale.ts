@@ -246,6 +246,7 @@ const ptBR = {
     noResults: "Nenhuma questão corresponde aos filtros.",
   },
   assessment: {
+    start: "Iniciar conjunto",
     practice: "Prática e avaliações",
     questions: "Questões da lista",
     howToStudy: "Como estudar",

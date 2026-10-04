@@ -27,6 +27,7 @@ export function AssessmentView() {
 
   return (
     <AssessmentReadyView
+      assessmentKey={`assessment:${routeParams.assessmentId || ""}`}
       data={viewModel.data}
       onReloadProgress={viewModel.reload}
       progress={viewModel.progress}
