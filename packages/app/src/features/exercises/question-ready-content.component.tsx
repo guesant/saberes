@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { QuestionBookmarkAction } from "./question-bookmark-action.component";
 import { QuestionBookmarkError } from "./question-bookmark-error.component";
 import { QuestionHeader } from "./question-header.component";
+import { QuestionPriorKnowledge } from "./question-prior-knowledge.component";
 import { QuestionReadyAnswerForm } from "./question-ready-answer-form.component";
 import { QuestionSubmissionFeedback } from "./question-submission-feedback.component";
 import type { QuestionReadyContentProps } from "./question-ready-content-props.type";
@@ -18,6 +19,8 @@ export function QuestionReadyContent(props: QuestionReadyContentProps) {
         <UITypography variant="overline">{t("common.selectionProcess")}</UITypography>
 
         <QuestionHeader data={data} />
+
+        <QuestionPriorKnowledge onSelect={props.onPriorKnowledge} />
 
         <QuestionBookmarkAction bookmarked={props.bookmarked} onBookmark={props.onBookmark} />
 

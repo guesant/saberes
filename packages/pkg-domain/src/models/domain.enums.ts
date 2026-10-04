@@ -195,6 +195,12 @@ export enum AttemptConfidence {
   Guess = "guess",
 }
 
+export enum PriorKnowledgeStatus {
+  Known = "known",
+  Uncertain = "uncertain",
+  Unknown = "unknown",
+}
+
 export enum DiagnosisSource {
   Heuristic = "heuristic",
   Student = "student",

@@ -88,6 +88,9 @@ const ptBR = {
     streak: "dias de sequência",
     achievements: "conquistas",
     masteredTopics: "tópicos dominados",
+    assessmentTitle: "Desempenho em avaliações",
+    assessmentSummary:
+      "{{completed}} de {{sessions}} avaliação(ões) concluída(s), {{answered}} questão(ões) respondida(s) e {{accuracy}}% de aproveitamento corrigido.",
     savedLessons: "Lições salvas",
     selectionProcesses: "processos seletivos",
     editionsInDatabase: "edições na base",
@@ -235,6 +238,15 @@ const ptBR = {
     diagnosisHint:
       "Essa escolha muda a orientação pedagógica e a sugestão de revisão, mas você pode alterá-la depois.",
     diagnosisSaved: "Diagnóstico salvo localmente.",
+    priorKnowledgeLabel: "Antes de responder",
+    priorKnowledgeHint: "Como você se sente em relação a este tópico? Você pode mudar depois.",
+    priorKnowledgeSaved: "Seu conhecimento prévio foi salvo neste dispositivo.",
+    priorKnowledgeError: "Não foi possível salvar seu conhecimento prévio.",
+    priorKnowledge: {
+      known: "Já conheço",
+      uncertain: "Tenho dúvida",
+      unknown: "Ainda não conheço",
+    },
     relatedQuestions: "Questões relacionadas",
     open: "Abrir",
     sessionTitle: "Sessão de questões",

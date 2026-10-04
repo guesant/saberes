@@ -1,15 +1,15 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { useAppServices } from "../../composition/use-app-services.hook";
-import { getQueryViewState } from "../../view-models/get-query-view-state.function";
-import { createQuestionDiagnosisAction } from "./create-question-diagnosis-action.function";
-import { createQuestionSubmissionAction } from "./create-question-submission-action.function";
-import { useQuestionBookmark } from "./use-question-bookmark.hook";
+import { createQuestionViewModelActions } from "./create-question-view-model-actions.function";
+import { createQuestionViewModelResult } from "./create-question-view-model-result.function";
 import { useQuestionContentQuery } from "./use-question-content-query.hook";
+import { useQuestionViewModelBookmark } from "./use-question-view-model-bookmark.hook";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
 import type {
   AttemptConfidence,
   DiagnosisCode,
+  PriorKnowledgeStatus,
   QuestionReadModel,
 } from "@guesant/saberes-application";
 
@@ -29,6 +29,7 @@ export interface QuestionViewModel {
     confidence: AttemptConfidence,
   ) => Promise<QuestionSubmissionResult>;
   saveDiagnosis: (code: DiagnosisCode) => Promise<void>;
+  savePriorKnowledge: (status: PriorKnowledgeStatus) => Promise<void>;
 }
 
 export function useQuestionViewModel(
@@ -43,32 +44,23 @@ export function useQuestionViewModel(
 
   const query = useQuestionContentQuery({ key, services });
 
-  const bookmark = useQuestionBookmark({
-    data: query.data || null,
+  const data = query.data ?? null;
+
+  const bookmark = useQuestionViewModelBookmark({
+    data,
     key,
     queryClient,
     services,
   });
 
-  const submitAnswer = createQuestionSubmissionAction({
-    data: query.data || null,
+  const actions = createQuestionViewModelActions({
+    attemptId,
+    data,
     queryClient,
     services,
     setAttemptId,
     sessionId,
   });
 
-  return {
-    state: getQueryViewState(query),
-    data: query.data || null,
-    bookmarked: bookmark.bookmarked,
-    bookmarkError: bookmark.error,
-    error: query.error ?? null,
-    reload: async (): Promise<void> => {
-      await Promise.all([query.refetch(), bookmark.reload()]);
-    },
-    saveBookmark: bookmark.save,
-    submit: submitAnswer,
-    saveDiagnosis: createQuestionDiagnosisAction({ attemptId, services }),
-  };
+  return createQuestionViewModelResult({ actions, bookmark, data, query });
 }

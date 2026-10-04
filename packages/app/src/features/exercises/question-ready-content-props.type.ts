@@ -14,6 +14,9 @@ export type QuestionReadyContentProps = {
   onAnswerChange: (answer: string | null) => void;
   onConfidenceChange: (confidence: AttemptConfidence) => void;
   onDiagnose: (code: DiagnosisCode) => Promise<void>;
+  onPriorKnowledge: (
+    status: import("@guesant/saberes-application").PriorKnowledgeStatus,
+  ) => Promise<void>;
   onBookmark: () => Promise<void>;
   onRetryBookmark: () => Promise<void>;
   onRetry: () => void;

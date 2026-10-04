@@ -27,6 +27,7 @@ export function QuestionStudySessionReadyView(props: QuestionStudySessionReadyVi
         onBookmark={question.saveBookmark}
         onContinue={advance}
         onDiagnose={question.saveDiagnosis}
+        onPriorKnowledge={question.savePriorKnowledge}
         onRetryBookmark={question.reload}
         onSubmit={question.submit}
       />

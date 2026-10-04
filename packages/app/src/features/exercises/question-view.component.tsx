@@ -31,6 +31,7 @@ export function QuestionView() {
       bookmarked={viewModel.bookmarked}
       data={viewModel.data}
       onDiagnose={viewModel.saveDiagnosis}
+      onPriorKnowledge={viewModel.savePriorKnowledge}
       onBookmark={viewModel.saveBookmark}
       onSubmit={viewModel.submit}
       onRetryBookmark={viewModel.reload}

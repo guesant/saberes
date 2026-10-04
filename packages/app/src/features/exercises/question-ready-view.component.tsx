@@ -4,6 +4,7 @@ import type { QuestionSubmissionResult } from "./question-submission-result.inte
 import type {
   AttemptConfidence,
   DiagnosisCode,
+  PriorKnowledgeStatus,
   QuestionReadModel,
 } from "@guesant/saberes-application";
 
@@ -12,6 +13,7 @@ export type QuestionReadyViewProps = {
   bookmarked: boolean;
   data: QuestionReadModel;
   onDiagnose: (code: DiagnosisCode) => Promise<void>;
+  onPriorKnowledge: (status: PriorKnowledgeStatus) => Promise<void>;
   onBookmark: () => Promise<void>;
   onRetryBookmark: () => Promise<void>;
   onContinue?: (result: QuestionSubmissionResult) => Promise<void>;
@@ -38,6 +40,7 @@ export function QuestionReadyView(props: QuestionReadyViewProps) {
       onConfidenceChange={interaction.changeConfidence}
       onContinue={props.onContinue}
       onDiagnose={props.onDiagnose}
+      onPriorKnowledge={props.onPriorKnowledge}
       onRetry={interaction.clear}
       onSubmit={interaction.submit}
       result={interaction.result}
