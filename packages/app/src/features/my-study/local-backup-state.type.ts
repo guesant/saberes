@@ -1,1 +1,1 @@
-export type LocalBackupState = "idle" | "busy" | "success" | "error";
+export type LocalBackupState = "idle" | "preview" | "busy" | "success" | "error";

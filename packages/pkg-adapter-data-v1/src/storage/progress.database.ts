@@ -33,7 +33,7 @@ import type { ProgressDatabaseContract } from "./progress-database.contract";
 import type { ReviewDatabaseEvent } from "./review-database-event.interface";
 import type { ReviewTarget } from "./review-target.type";
 import type { SessionRecord } from "./session-record.interface";
-import type { SavedCatalogFilter } from "@guesant/saberes-application";
+import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
 
 export type { DiagnosisCode, DiagnosisConfidence, DiagnosisSource, PedagogicalAction, ReviewState };
 
@@ -83,6 +83,7 @@ const ProgressBackupSchema = object({
   exportedAt: string(),
   schemaVersion: optional(literal(1)),
   contentVersion: optional(string()),
+  origin: optional(string()),
   checksum: optional(string()),
   stores: record(string(), array(looseObject({}))),
 });
@@ -389,13 +390,14 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
       exportedAt: this.nowIso(),
       schemaVersion: 1,
       contentVersion: "editorial-snapshot",
+      origin: "local-device",
       checksum,
       stores,
     });
   }
 
-  async importProgress(snapshot: string) {
-    const parsed = JSON.parse(snapshot);
+  async importProgress(input: ImportProgressInput) {
+    const parsed = JSON.parse(input.snapshot);
 
     const validation = safeParse(ProgressBackupSchema, parsed);
 
@@ -412,7 +414,9 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
     }
 
     await this.transaction("rw", progressStoreNames, async () => {
-      await Promise.all(progressStoreNames.map((storeName) => this.table(storeName).clear()));
+      if (input.strategy === "replace") {
+        await Promise.all(progressStoreNames.map((storeName) => this.table(storeName).clear()));
+      }
 
       await Promise.all(
         Object.entries(validation.output.stores)

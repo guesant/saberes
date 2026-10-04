@@ -7,6 +7,7 @@ import {
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { LocalBackupError } from "./local-backup-error.component";
+import { LocalBackupPreview } from "./local-backup-preview.component";
 import { LocalBackupSuccess } from "./local-backup-success.component";
 import type { LocalBackupPanelProps } from "./local-backup-panel-props.type";
 
@@ -34,6 +35,13 @@ export function LocalBackupPanel(props: LocalBackupPanelProps) {
           onFile={props.viewModel.importBackup}
         />
       </UIInlineActions>
+      {props.viewModel.state === "preview" && props.viewModel.pending ? (
+        <LocalBackupPreview
+          pending={props.viewModel.pending}
+          onCancel={props.viewModel.cancelImport}
+          onImport={props.viewModel.handleRestoreBackup}
+        />
+      ) : null}
       {props.viewModel.state === "success" ? <LocalBackupSuccess /> : null}
       {props.viewModel.error ? <LocalBackupError error={props.viewModel.error} /> : null}
     </UIContentGroup>

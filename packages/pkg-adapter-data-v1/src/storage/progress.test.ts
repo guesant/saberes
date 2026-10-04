@@ -113,7 +113,7 @@ describe("progresso local Dexie", () => {
 
     await progressDb.clearProgress();
 
-    await progressDb.importProgress(snapshot);
+    await progressDb.importProgress({ snapshot, strategy: "replace" });
 
     expect(await progressDb.listEnrollments()).toEqual([
       expect.objectContaining({ contentKey: "course:sample" }),
@@ -125,8 +125,29 @@ describe("progresso local Dexie", () => {
   it("rejeita um snapshot inválido antes de alterar o progresso", async () => {
     await progressDb.enrollCourse("course:sample");
 
-    await expect(progressDb.importProgress("{}")).rejects.toThrow("formato inválido");
+    await expect(
+      progressDb.importProgress({ snapshot: "{}", strategy: "replace" }),
+    ).rejects.toThrow("formato inválido");
 
     expect(await progressDb.listEnrollments()).toHaveLength(1);
+  });
+
+  it("mescla um backup sem apagar o progresso atual", async () => {
+    await progressDb.enrollCourse("course:backup");
+
+    const snapshot = await progressDb.exportProgress();
+
+    await progressDb.clearProgress();
+
+    await progressDb.enrollCourse("course:current");
+
+    await progressDb.importProgress({ snapshot, strategy: "merge" });
+
+    expect(await progressDb.listEnrollments()).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ contentKey: "course:backup" }),
+        expect.objectContaining({ contentKey: "course:current" }),
+      ]),
+    );
   });
 });

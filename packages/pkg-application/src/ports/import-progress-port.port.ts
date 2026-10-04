@@ -1,3 +1,5 @@
+import type { ImportProgressInput } from "../models/import-progress-input.interface";
+
 export interface ImportProgressPort {
-  execute(input: string): Promise<void>;
+  execute(input: ImportProgressInput): Promise<void>;
 }

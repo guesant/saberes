@@ -66,6 +66,15 @@ const ptBR = {
     description: "Exporte ou restaure seu progresso sem enviar dados para um servidor.",
     export: "Exportar progresso",
     import: "Importar progresso",
+    previewTitle: "Revisar restauração",
+    previewDescription:
+      "Arquivo {{fileName}} ({{fileSize}} bytes). Escolha como aplicar os dados locais.",
+    scope: "Escopo: progresso, sessões, favoritos, revisões, metas e preferências locais.",
+    merge: "Mesclar dados",
+    replace: "Substituir dados",
+    confirmReplace: "Confirmar substituição",
+    replaceWarning: "A substituição remove os dados locais atuais antes de aplicar o arquivo.",
+    cancel: "Cancelar",
     success: "Operação concluída no dispositivo.",
   },
   home: {

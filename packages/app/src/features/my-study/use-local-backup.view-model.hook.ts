@@ -1,8 +1,14 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { useAppServices } from "../../composition/use-app-services.hook";
+import { createCancelLocalBackupAction } from "./create-cancel-local-backup-action.function";
+import { createConfirmLocalBackupAction } from "./create-confirm-local-backup-action.function";
+import { createExportLocalBackupAction } from "./create-export-local-backup-action.function";
+import { createSelectLocalBackupAction } from "./create-select-local-backup-action.function";
+import type { LocalBackupPending } from "./local-backup-pending.interface";
 import type { LocalBackupState } from "./local-backup-state.type";
 import type { LocalBackupViewModel } from "./local-backup-view-model.interface";
+import type { ProgressImportStrategy } from "@guesant/saberes-application";
 
 export function useLocalBackupViewModel(): LocalBackupViewModel {
   const services = useAppServices();
@@ -13,47 +19,41 @@ export function useLocalBackupViewModel(): LocalBackupViewModel {
 
   const [error, setError] = useState<Error | null>(null);
 
+  const [pending, setPending] = useState<LocalBackupPending | null>(null);
+
   const handleError = (nextError: Error): void => {
     setError(nextError);
 
     setState("error");
   };
 
-  const exportBackup = async (): Promise<string> => {
-    setError(null);
+  const buildLocalBackupActionContext = (strategy: ProgressImportStrategy) => ({
+    pending,
+    queryClient,
+    services,
+    setError,
+    setPending,
+    setState,
+    strategy,
+  });
 
-    setState("busy");
+  const exportBackup = createExportLocalBackupAction(buildLocalBackupActionContext("replace"));
 
-    try {
-      const content = await services.progress.exportProgress.execute();
+  const importBackup = createSelectLocalBackupAction(buildLocalBackupActionContext("replace"));
 
-      setState("success");
+  const handleRestoreBackup = (strategy: ProgressImportStrategy): Promise<void> =>
+    createConfirmLocalBackupAction(buildLocalBackupActionContext(strategy))();
 
-      return content;
-    } catch {
-      const normalizedError = new Error("Falha ao exportar o progresso.");
+  const cancelImport = createCancelLocalBackupAction(buildLocalBackupActionContext("replace"));
 
-      handleError(normalizedError);
-
-      throw normalizedError;
-    }
+  return {
+    cancelImport,
+    error,
+    exportBackup,
+    handleError,
+    importBackup,
+    pending,
+    handleRestoreBackup,
+    state,
   };
-
-  const importBackup = async (file: File): Promise<void> => {
-    setError(null);
-
-    setState("busy");
-
-    try {
-      await services.progress.importProgress.execute(await file.text());
-
-      await queryClient.invalidateQueries({ queryKey: ["progress"] });
-
-      setState("success");
-    } catch {
-      handleError(new Error("Falha ao importar o progresso."));
-    }
-  };
-
-  return { exportBackup, handleError, importBackup, state, error };
 }

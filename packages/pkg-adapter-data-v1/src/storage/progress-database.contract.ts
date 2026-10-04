@@ -3,7 +3,7 @@ import type { Attempt } from "./attempt.type";
 import type { ReviewDatabaseEvent } from "./review-database-event.interface";
 import type { ReviewTarget } from "./review-target.type";
 import type { SessionRecord } from "./session-record.interface";
-import type { SavedCatalogFilter } from "@guesant/saberes-application";
+import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
 import type { AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
 
 export interface ProgressDatabaseContract {
@@ -22,7 +22,7 @@ export interface ProgressDatabaseContract {
 
   getStreak(): Promise<Record<string, unknown> | undefined>;
 
-  importProgress(snapshot: string): Promise<void>;
+  importProgress(input: ImportProgressInput): Promise<void>;
 
   listAchievements(): Promise<Array<Record<string, unknown>>>;
 
