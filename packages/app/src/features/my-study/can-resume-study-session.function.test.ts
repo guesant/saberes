@@ -21,6 +21,7 @@ describe("canResumeStudySession", () => {
       questionKeys: ["question:one"],
       status: "completed",
     };
+
     const empty: StudySession = {
       id: "session-2",
       activityType: "assessment",
@@ -28,6 +29,7 @@ describe("canResumeStudySession", () => {
     };
 
     expect(canResumeStudySession(completed)).toBe(false);
+
     expect(canResumeStudySession(empty)).toBe(false);
   });
 });
