@@ -26,6 +26,7 @@ import {
   string,
   union,
 } from "valibot";
+import { getProgressSnapshotChecksum } from "./get-progress-snapshot-checksum.function";
 import type { AttemptDiagnosis } from "./attempt-diagnosis.interface";
 import type { Attempt } from "./attempt.type";
 import type { ProgressDatabaseContract } from "./progress-database.contract";
@@ -80,6 +81,9 @@ const progressStoreNames = [...studyStores, "attempts", "sessions", "settings"];
 const ProgressBackupSchema = object({
   formatVersion: literal(1),
   exportedAt: string(),
+  schemaVersion: optional(literal(1)),
+  contentVersion: optional(string()),
+  checksum: optional(string()),
   stores: record(string(), array(looseObject({}))),
 });
 
@@ -376,10 +380,17 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
       ]),
     );
 
+    const stores = Object.fromEntries(entries);
+
+    const checksum = await getProgressSnapshotChecksum(stores);
+
     return JSON.stringify({
       formatVersion: 1,
       exportedAt: this.nowIso(),
-      stores: Object.fromEntries(entries),
+      schemaVersion: 1,
+      contentVersion: "editorial-snapshot",
+      checksum,
+      stores,
     });
   }
 
@@ -390,6 +401,14 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
 
     if (!validation.success) {
       throw new Error("O arquivo de progresso possui um formato inválido.");
+    }
+
+    if (validation.output.checksum) {
+      const checksum = await getProgressSnapshotChecksum(validation.output.stores);
+
+      if (checksum !== validation.output.checksum) {
+        throw new Error("O arquivo de progresso foi alterado ou está corrompido.");
+      }
     }
 
     await this.transaction("rw", progressStoreNames, async () => {
