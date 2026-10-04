@@ -1,4 +1,4 @@
-import { Button, RefreshIcon } from "@guesant/saberes-ui";
+import { UIRefreshIcon, UIStartAlignedButton } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
 export type RetryButtonProps = {
@@ -11,15 +11,14 @@ export function RetryButton(props: RetryButtonProps) {
   const { t } = useTranslation();
 
   return (
-    <Button
+    <UIStartAlignedButton
       onClick={onRetry}
       disabled={!onRetry}
-      startIcon={<RefreshIcon />}
+      startIcon={<UIRefreshIcon />}
       variant="outlined"
       color="inherit"
-      sx={{ alignSelf: "flex-start" }}
     >
       {t("common.retry")}
-    </Button>
+    </UIStartAlignedButton>
   );
 }

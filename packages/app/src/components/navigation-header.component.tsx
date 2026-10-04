@@ -1,15 +1,14 @@
 import {
-  AppBar,
-  Box,
-  Chip,
-  IconButton,
-  MenuIcon,
-  OfflineBoltIcon,
-  Toolbar,
-  Typography,
+  UIAppBar,
+  UIChip,
+  UIHeaderBrand,
+  UIHeaderNavigation,
+  UIIconButton,
+  UIMenuIcon,
+  UIOfflineBoltIcon,
+  UIToolbar,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { NavigationButton } from "./navigation-button.component";
 
 export type NavigationHeaderProps = {
@@ -21,29 +20,27 @@ export function NavigationHeader(props: NavigationHeaderProps) {
   const { t } = useTranslation();
 
   return (
-    <AppBar color="primary" position="sticky">
-      <Toolbar>
-        <IconButton
+    <UIAppBar color="primary" position="sticky">
+      <UIToolbar>
+        <UIIconButton
           aria-label={t("common.openMenu")}
           color="inherit"
           edge="start"
           onClick={props.onOpenMenu}
         >
-          <MenuIcon />
-        </IconButton>
+          <UIMenuIcon />
+        </UIIconButton>
 
-        <Typography component={Link} sx={{ flexGrow: 1, ml: 1 }} to="/" variant="h6">
-          {t("brand.name")}
-        </Typography>
+        <UIHeaderBrand href="/">{t("brand.name")}</UIHeaderBrand>
 
-        <Box sx={{ display: { md: "flex", xs: "none" }, gap: 1 }}>
+        <UIHeaderNavigation>
           {props.links.map((link) => (
             <NavigationButton key={link.to} label={link.label} to={link.to} />
           ))}
-        </Box>
+        </UIHeaderNavigation>
 
-        <Chip icon={<OfflineBoltIcon />} label={t("common.offline")} size="small" />
-      </Toolbar>
-    </AppBar>
+        <UIChip icon={<UIOfflineBoltIcon />} label={t("common.offline")} size="small" />
+      </UIToolbar>
+    </UIAppBar>
   );
 }

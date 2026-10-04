@@ -1,15 +1,26 @@
-import type { ApplicationServices, QuestionReadModel } from "@guesant/saberes-application";
+import { gradeQuestionAnswer } from "@guesant/saberes-application";
+import { syncStudyAchievements } from "../my-study/sync-study-achievements.function";
+import { saveQuestionReviewTarget } from "./save-question-review-target.function";
+import { syncQuestionMastery } from "./sync-question-mastery.function";
+import type { QuestionSubmissionResult } from "./question-submission-result.interface";
+import type {
+  ApplicationServices,
+  AttemptConfidence,
+  QuestionReadModel,
+} from "@guesant/saberes-application";
 
 export type SubmitQuestionAnswerInput = {
   services: ApplicationServices;
   data: QuestionReadModel;
   answer: string;
+  confidence: AttemptConfidence;
+  elapsedMs: number;
 };
 
 export async function submitQuestionAnswer(
   input: SubmitQuestionAnswerInput,
-): Promise<boolean | null> {
-  const { data, answer, services } = input;
+): Promise<QuestionSubmissionResult> {
+  const { confidence, data, answer, elapsedMs, services } = input;
 
   const { question } = data;
 
@@ -17,19 +28,36 @@ export async function submitQuestionAnswer(
 
   const isGradable = Boolean(question.is_automatically_gradable);
 
-  let correct: boolean | null = null;
+  const correct = gradeQuestionAnswer({
+    answer,
+    automaticallyGradable: isGradable,
+    expectedAnswer: expected,
+    questionType: String(question.type || "short_text"),
+  });
 
-  if (isGradable) {
-    correct = answer.toUpperCase() === expected;
-  }
+  const contentKey = String(question.occurrence_key || `question:${question.occurrence_id}`);
 
-  await services.exercises.recordAttempt.execute({
-    contentKey: String(question.occurrence_key || `question:${question.occurrence_id}`),
+  const attempt = await services.exercises.recordAttempt.execute({
+    contentKey,
     questionId: String(question.occurrence_id),
     answer,
+    confidence,
+    elapsedMs,
     isCorrect: correct,
     topicIds: data.topics.map((topic) => String(topic.topic_id)),
   });
 
-  return correct;
+  await syncQuestionMastery({ services });
+
+  await services.study.recordStudyActivity.execute({ type: "question" });
+
+  await saveQuestionReviewTarget({ services, contentKey, correct });
+
+  await syncStudyAchievements(services);
+
+  return {
+    attemptId: attempt.id || "",
+    correct,
+    confidence,
+  };
 }

@@ -1,39 +1,35 @@
 import {
-  GetSessionAdapter,
-  GetSettingAdapter,
-  GetStreakAdapter,
-  ListAchievementsAdapter,
-  ListAttemptsAdapter,
-  ListBookmarksAdapter,
-  ListDailyChallengesAdapter,
-  ListDiagnosesAdapter,
-  ListEnrollmentsAdapter,
-  ListLessonProgressAdapter,
-  ListPlanProgressAdapter,
-  ListReviewItemsAdapter,
-  ListReviewTargetsAdapter,
-  ListTopicMasteryAdapter,
+  DexieProgressStore,
+  ProgressDatabase,
+  type ProgressDatabaseContract,
 } from "@guesant/saberes-adapter-data-v1";
-import type { DexieProgressStore } from "@guesant/saberes-adapter-data-v1";
-import type { ApplicationPorts } from "@guesant/saberes-application";
+import { applicationDependencyTokens } from "./application-dependency-tokens.config";
+import { registerPort } from "./register-port.composition";
+import { createProgressReadAttemptPortBindings } from "./register-progress-read-attempt-ports.composition";
+import { createProgressReadReviewPortBindings } from "./register-progress-read-review-ports.composition";
+import { resolvePort } from "./resolve-port.composition";
+import type { Container } from "inversify";
 
-export function createProgressReadDependencies(
-  store: DexieProgressStore,
-): Partial<ApplicationPorts> {
-  return {
-    listAttempts: new ListAttemptsAdapter(store),
-    getSession: new GetSessionAdapter(store),
-    getSetting: new GetSettingAdapter(store),
-    listEnrollments: new ListEnrollmentsAdapter(store),
-    listLessonProgress: new ListLessonProgressAdapter(store),
-    listPlanProgress: new ListPlanProgressAdapter(store),
-    listBookmarks: new ListBookmarksAdapter(store),
-    listReviewItems: new ListReviewItemsAdapter(store),
-    listReviewTargets: new ListReviewTargetsAdapter(store),
-    listDiagnoses: new ListDiagnosesAdapter(store),
-    listDailyChallenges: new ListDailyChallengesAdapter(store),
-    getStreak: new GetStreakAdapter(store),
-    listAchievements: new ListAchievementsAdapter(store),
-    listTopicMastery: new ListTopicMasteryAdapter(store),
-  };
+export function createProgressReadDependencies(container: Container): void {
+  registerPort(
+    container,
+    applicationDependencyTokens.progressDatabase,
+    () => new ProgressDatabase(),
+  );
+
+  registerPort(
+    container,
+    applicationDependencyTokens.progressStore,
+    () =>
+      new DexieProgressStore(
+        resolvePort<ProgressDatabaseContract>(
+          container,
+          applicationDependencyTokens.progressDatabase,
+        ),
+      ),
+  );
+
+  createProgressReadAttemptPortBindings(container);
+
+  createProgressReadReviewPortBindings(container);
 }

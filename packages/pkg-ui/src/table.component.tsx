@@ -1,8 +1,8 @@
 import { Table as MuiTable, type TableProps as MuiTableProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type TableProps = MuiTableProps;
+export type UITableProps = MuiTableProps;
 
-export function Table(props: TableProps): ReactElement {
+export function UITable(props: UITableProps): ReactElement {
   return <MuiTable {...props} />;
 }

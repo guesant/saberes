@@ -1,4 +1,4 @@
-import { Grid } from "@guesant/saberes-ui";
+import { UICatalogCardGridItem } from "@guesant/saberes-ui";
 import { CatalogCardView } from "./catalog-card-view.component";
 import type { CatalogCard } from "@guesant/saberes-application";
 
@@ -8,8 +8,8 @@ type CatalogGridItemProps = {
 
 export function CatalogGridItem(props: CatalogGridItemProps) {
   return (
-    <Grid size={{ xs: 12, md: 6 }}>
+    <UICatalogCardGridItem>
       <CatalogCardView item={props.item} />
-    </Grid>
+    </UICatalogCardGridItem>
   );
 }

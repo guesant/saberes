@@ -1,9 +1,10 @@
-import { Box, ExploreIcon, InputAdornment, TextField } from "@guesant/saberes-ui";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { CatalogEmptyState } from "./catalog-empty-state.component";
+import { CatalogFilterBar } from "./catalog-filter-bar.component";
 import { CatalogGrid } from "./catalog-grid.component";
 import { CatalogHeader } from "./catalog-header.component";
+import { CatalogSearchField } from "./catalog-search-field.component";
 import { CatalogTabs } from "./catalog-tabs.component";
 import type { CatalogViewModel } from "./catalog-view-model.type";
 import type { CatalogReadModel } from "@guesant/saberes-application";
@@ -15,8 +16,6 @@ export type CatalogReadyViewProps = {
 
 export function CatalogReadyView(props: CatalogReadyViewProps) {
   const { data, viewModel } = props;
-
-  const { t } = useTranslation();
 
   const [tab, setTab] = useState(0);
 
@@ -32,26 +31,22 @@ export function CatalogReadyView(props: CatalogReadyViewProps) {
   const activeItems = sections[tab] || [];
 
   return (
-    <Box>
+    <UIContentGroup variant="section">
       <CatalogHeader />
 
-      <TextField
-        fullWidth
-        placeholder={t("catalog.searchPlaceholder")}
+      <CatalogSearchField
+        onChange={(search) => viewModel.setFilters((filters) => ({ ...filters, search }))}
         value={viewModel.filters.search || ""}
-        onChange={(event) => viewModel.setFilters({ search: event.target.value })}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <ExploreIcon />
-            </InputAdornment>
-          ),
-        }}
+      />
+
+      <CatalogFilterBar
+        filters={viewModel.filters}
+        onChange={(filters) => viewModel.setFilters(filters)}
       />
 
       <CatalogTabs catalog={catalog} tab={tab} onTabChange={setTab} />
 
       {activeItems.length ? <CatalogGrid items={activeItems} /> : <CatalogEmptyState />}
-    </Box>
+    </UIContentGroup>
   );
 }

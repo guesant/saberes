@@ -1,8 +1,8 @@
 import { Divider as MuiDivider, type DividerProps as MuiDividerProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type DividerProps = MuiDividerProps;
+export type UIDividerProps = MuiDividerProps;
 
-export function Divider(props: DividerProps): ReactElement {
+export function UIDivider(props: UIDividerProps): ReactElement {
   return <MuiDivider {...props} />;
 }

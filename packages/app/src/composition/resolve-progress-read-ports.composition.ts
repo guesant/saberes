@@ -1,0 +1,30 @@
+import { resolveProgressReadAttemptPorts } from "./resolve-progress-read-attempt-ports.composition";
+import { resolveProgressReadReviewPorts } from "./resolve-progress-read-review-ports.composition";
+import type { ApplicationPorts } from "@guesant/saberes-application";
+import type { Container } from "inversify";
+
+export function resolveProgressReadPorts(
+  container: Container,
+): Pick<
+  ApplicationPorts,
+  | "listAttempts"
+  | "getSession"
+  | "getSetting"
+  | "listEnrollments"
+  | "listLessonProgress"
+  | "listPlanProgress"
+  | "listBookmarks"
+  | "listReviewItems"
+  | "listReviewTargets"
+  | "listDiagnoses"
+  | "listDailyChallenges"
+  | "getStreak"
+  | "exportProgress"
+  | "listAchievements"
+  | "listTopicMastery"
+> {
+  return {
+    ...resolveProgressReadAttemptPorts(container),
+    ...resolveProgressReadReviewPorts(container),
+  };
+}

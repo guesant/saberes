@@ -7,21 +7,28 @@ import {
   type PedagogicalAction,
   type ReviewState,
 } from "@guesant/saberes-domain";
+import { AttemptConfidence as AttemptConfidenceEnum } from "@guesant/saberes-domain";
 import Dexie, { type Table } from "dexie";
 import {
   type BaseIssue,
   type BaseSchema,
   boolean,
+  array,
+  literal,
+  looseObject,
   nullable,
   object,
   optional,
   pipe,
+  record,
   regex,
   safeParse,
   string,
+  union,
 } from "valibot";
 import type { AttemptDiagnosis } from "./attempt-diagnosis.interface";
 import type { Attempt } from "./attempt.type";
+import type { ProgressDatabaseContract } from "./progress-database.contract";
 import type { ReviewDatabaseEvent } from "./review-database-event.interface";
 import type { ReviewTarget } from "./review-target.type";
 import type { SessionRecord } from "./session-record.interface";
@@ -33,11 +40,18 @@ const ContentKeySchema = pipe(
   regex(/^(course|lesson|topic|question|plan|assessment|achievement|daily):/),
 );
 
-const AttemptSchema = object({
+const AttemptSchema = looseObject({
   id: optional(string()),
   contentKey: optional(ContentKeySchema),
   isCorrect: optional(nullable(boolean())),
   answeredAt: optional(string()),
+  confidence: optional(
+    union([
+      literal(AttemptConfidenceEnum.Confident),
+      literal(AttemptConfidenceEnum.Doubt),
+      literal(AttemptConfidenceEnum.Guess),
+    ]),
+  ),
 });
 
 const studyStores = [
@@ -59,7 +73,15 @@ const studyStores = [
   "topicMastery",
 ];
 
-export class ProgressDatabase extends Dexie {
+const progressStoreNames = [...studyStores, "attempts", "sessions", "settings"];
+
+const ProgressBackupSchema = object({
+  formatVersion: literal(1),
+  exportedAt: string(),
+  stores: record(string(), array(looseObject({}))),
+});
+
+export class ProgressDatabase extends Dexie implements ProgressDatabaseContract {
   attempts!: Table<Attempt & { id: string }>;
 
   sessions!: Table<SessionRecord, string>;
@@ -162,16 +184,16 @@ export class ProgressDatabase extends Dexie {
     return this.table("attempts").toArray() as Promise<Array<Attempt & { id: string }>>;
   }
 
-  saveSession(session: SessionRecord) {
-    return this.table("sessions").put(session);
+  async saveSession(session: SessionRecord): Promise<void> {
+    await this.table("sessions").put(session);
   }
 
   getSession(id: string) {
     return this.table("sessions").get(id);
   }
 
-  saveSetting(key: string, value: unknown) {
-    return this.table("settings").put({ key, value });
+  async saveSetting(key: string, value: unknown): Promise<void> {
+    await this.table("settings").put({ key, value });
   }
 
   getSetting(key: string) {
@@ -247,8 +269,13 @@ export class ProgressDatabase extends Dexie {
     return value;
   }
 
-  saveReviewTarget(contentKey: string, data: Partial<ReviewTarget> = {}) {
-    return this.putStudy("reviewTargets", contentKey, data);
+  async saveReviewTarget(
+    contentKey: string,
+    data: Partial<ReviewTarget> = {},
+  ): Promise<ReviewTarget> {
+    const value = await this.putStudy("reviewTargets", contentKey, data);
+
+    return { ...value, contentKey };
   }
 
   listReviewItems() {
@@ -259,8 +286,8 @@ export class ProgressDatabase extends Dexie {
     return this.listStudy("reviewTargets");
   }
 
-  saveReviewEvent(event: Omit<ReviewDatabaseEvent, "id"> & { id?: string }) {
-    return this.table("reviewEvents").put({ ...event, id: event.id || this.generatedId() });
+  async saveReviewEvent(event: Omit<ReviewDatabaseEvent, "id"> & { id?: string }): Promise<void> {
+    await this.table("reviewEvents").put({ ...event, id: event.id || this.generatedId() });
   }
 
   listReviewEvents(contentKey?: string) {
@@ -269,8 +296,8 @@ export class ProgressDatabase extends Dexie {
       : this.table("reviewEvents").toArray();
   }
 
-  saveDiagnosis(diagnosis: AttemptDiagnosis) {
-    return this.table("diagnoses").put({
+  async saveDiagnosis(diagnosis: AttemptDiagnosis): Promise<void> {
+    await this.table("diagnoses").put({
       ...diagnosis,
       createdAt: diagnosis.createdAt || this.nowIso(),
     });
@@ -319,6 +346,41 @@ export class ProgressDatabase extends Dexie {
   listTopicMastery() {
     return this.listStudy("topicMastery");
   }
-}
 
-export const progressDb = new ProgressDatabase();
+  async exportProgress() {
+    const entries = await Promise.all(
+      progressStoreNames.map(async (storeName) => [
+        storeName,
+        await this.table(storeName).toArray(),
+      ]),
+    );
+
+    return JSON.stringify({
+      formatVersion: 1,
+      exportedAt: this.nowIso(),
+      stores: Object.fromEntries(entries),
+    });
+  }
+
+  async importProgress(snapshot: string) {
+    const parsed = JSON.parse(snapshot);
+
+    const validation = safeParse(ProgressBackupSchema, parsed);
+
+    if (!validation.success) {
+      throw new Error("O arquivo de progresso possui um formato inválido.");
+    }
+
+    await this.transaction("rw", progressStoreNames, async () => {
+      await Promise.all(progressStoreNames.map((storeName) => this.table(storeName).clear()));
+
+      await Promise.all(
+        Object.entries(validation.output.stores)
+          .filter(([storeName]) => progressStoreNames.includes(storeName))
+          .map(([storeName, rows]) =>
+            Array.isArray(rows) ? this.table(storeName).bulkPut(rows) : Promise.resolve(),
+          ),
+      );
+    });
+  }
+}

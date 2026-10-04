@@ -1,19 +1,19 @@
-import { Box, Typography } from "@guesant/saberes-ui";
+import { UIBox, UITypography } from "@guesant/saberes-ui";
 import type { EditorialBlock } from "@guesant/saberes-application";
 
-type ImageFigureProps = {
+type UIImageFigureProps = {
   block: Extract<EditorialBlock, { type: "image" }>;
   url: string;
 };
 
-export function ImageFigure(props: ImageFigureProps) {
+export function UIImageFigure(props: UIImageFigureProps) {
   const { block, url } = props;
 
   return (
-    <Box component="figure" sx={{ my: 3, mx: 0, textAlign: "center" }}>
-      <Box component="img" src={url} alt={block.alt} sx={{ maxWidth: "100%" }} />
+    <UIBox component="figure" sx={{ my: 3, mx: 0, textAlign: "center" }}>
+      <UIBox component="img" src={url} alt={block.alt} sx={{ maxWidth: "100%" }} />
 
-      <Typography variant="caption">{block.caption}</Typography>
-    </Box>
+      <UITypography variant="caption">{block.caption}</UITypography>
+    </UIBox>
   );
 }

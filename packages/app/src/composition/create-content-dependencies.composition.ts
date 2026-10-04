@@ -1,26 +1,32 @@
-import {
-  SqlJsGetAssessmentAdapter,
-  SqlJsGetCatalogAdapter,
-  SqlJsGetCourseAdapter,
-  SqlJsGetLessonAdapter,
-  SqlJsGetQuestionAdapter,
-  SqlJsGetStudyPlanAdapter,
-  SqlJsGetTopicMapAdapter,
-} from "@guesant/saberes-adapter-data-v1";
+import { SqlJsContentRepository } from "@guesant/saberes-adapter-data-v1";
 import { GraphologyBuildKnowledgeGraphAdapter } from "@guesant/saberes-adapter-graphology-v1";
 import { ValibotParseEditorialBlocksAdapter } from "@guesant/saberes-adapter-validation-v1";
-import type { ApplicationPorts } from "@guesant/saberes-application";
+import { applicationDependencyTokens } from "./application-dependency-tokens.config";
+import { registerContentCorePortBindings } from "./register-content-core-port-bindings.composition";
+import { registerContentGraphPortBindings } from "./register-content-graph-port-bindings.composition";
+import { registerPort } from "./register-port.composition";
+import type { Container } from "inversify";
 
-export function createContentDependencies(): Partial<ApplicationPorts> {
-  return {
-    getCatalog: new SqlJsGetCatalogAdapter(),
-    getCourse: new SqlJsGetCourseAdapter(),
-    getLesson: new SqlJsGetLessonAdapter(),
-    getQuestion: new SqlJsGetQuestionAdapter(),
-    getAssessment: new SqlJsGetAssessmentAdapter(),
-    getTopicMap: new SqlJsGetTopicMapAdapter(),
-    getStudyPlan: new SqlJsGetStudyPlanAdapter(),
-    parseEditorialBlocks: new ValibotParseEditorialBlocksAdapter(),
-    buildKnowledgeGraph: new GraphologyBuildKnowledgeGraphAdapter(),
-  };
+export function createContentDependencies(container: Container): void {
+  registerPort(
+    container,
+    applicationDependencyTokens.contentRepository,
+    () => new SqlJsContentRepository(),
+  );
+
+  registerContentCorePortBindings(container);
+
+  registerContentGraphPortBindings(container);
+
+  registerPort(
+    container,
+    applicationDependencyTokens.parseEditorialBlocks,
+    () => new ValibotParseEditorialBlocksAdapter(),
+  );
+
+  registerPort(
+    container,
+    applicationDependencyTokens.buildKnowledgeGraph,
+    () => new GraphologyBuildKnowledgeGraphAdapter(),
+  );
 }

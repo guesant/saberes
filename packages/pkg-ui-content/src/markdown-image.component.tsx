@@ -1,14 +1,14 @@
-import { Box } from "@guesant/saberes-ui";
+import { UIBox } from "@guesant/saberes-ui";
 import type { ComponentProps } from "react";
 
-export type MarkdownImageProps = ComponentProps<"img">;
+export type UIMarkdownImageProps = ComponentProps<"img">;
 
-export function MarkdownImage(props: MarkdownImageProps) {
+export function UIMarkdownImage(props: UIMarkdownImageProps) {
   const { src, alt } = props;
 
   const source = typeof src === "string" ? src : "";
 
   const url = /^https:\/\//i.test(source) || source.startsWith("/") ? source : undefined;
 
-  return <Box component="img" src={url} alt={alt || ""} />;
+  return <UIBox component="img" src={url} alt={alt || ""} />;
 }

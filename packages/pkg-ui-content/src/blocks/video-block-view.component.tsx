@@ -1,14 +1,14 @@
-import { VideoPanel } from "./video-panel.component";
+import { UIVideoPanel } from "./video-panel.component";
 import type { EditorialBlock } from "@guesant/saberes-application";
 
-type VideoBlockViewProps = {
+type UIVideoBlockViewProps = {
   block: Extract<EditorialBlock, { type: "video" }>;
 };
 
-export function VideoBlockView(props: VideoBlockViewProps) {
+export function UIVideoBlockView(props: UIVideoBlockViewProps) {
   const { block } = props;
 
   const url = /^https:\/\//i.test(block.url) ? block.url : undefined;
 
-  return url ? <VideoPanel block={block} url={url} /> : null;
+  return url ? <UIVideoPanel block={block} url={url} /> : null;
 }

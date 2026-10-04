@@ -527,6 +527,7 @@ export function startsWithPurposeVerb(name) {
     "filter",
     "find",
     "format",
+    "grade",
     "generate",
     "get",
     "handle",
@@ -566,6 +567,7 @@ export function startsWithPurposeVerb(name) {
     "should",
     "start",
     "starts",
+    "split",
     "stop",
     "submit",
     "suggest",
@@ -636,6 +638,7 @@ const fileKinds = new Set([
   "command-handler",
   "command-result",
   "component",
+  "contract",
   "composition",
   "config",
   "database",
@@ -761,6 +764,10 @@ export function isFileLocationAllowed(filename, kind) {
 
   if (kind === "component") {
     return /\/packages\/(?:pkg-ui|pkg-ui-content|app)\//.test(normalized);
+  }
+
+  if (kind === "contract") {
+    return /\/packages\/pkg-adapter-[^/]+\/(?:src|tests)\//.test(normalized);
   }
 
   if (kind === "styles") {
@@ -965,6 +972,9 @@ export function getFileContractExpectedNames(descriptor) {
 
     case "service":
       return [`${base}Service`];
+
+    case "contract":
+      return [`${base}Contract`];
 
     case "component":
       return [base];
@@ -1219,6 +1229,13 @@ const fileKindContract = {
 
       const expectedNames = getFileContractExpectedNames(descriptor);
 
+      const allowedNames = [
+        ...expectedNames,
+        ...(new Set(["ui", "ui-content"]).has(getSourceLayer(filename))
+          ? expectedNames.map((expectedName) => `UI${expectedName}`)
+          : []),
+      ];
+
       if (!isExportedTopLevelDeclaration(program, declaration)) {
         context.report({
           node: declaration,
@@ -1227,11 +1244,11 @@ const fileKindContract = {
         });
       }
 
-      if (!expectedNames.includes(name)) {
+      if (!allowedNames.includes(name)) {
         context.report({
           node: declaration,
           messageId: "expectedName",
-          data: { kind: descriptor.kind, names: expectedNames.join(", ") },
+          data: { kind: descriptor.kind, names: allowedNames.join(", ") },
         });
       }
     }
@@ -1390,8 +1407,16 @@ const fileKindContract = {
             enum: ["TSEnumDeclaration"],
           };
 
+          const expectedNames = getFileContractExpectedNames(descriptor);
+
+          const isUiPropsFile =
+            new Set(["ui", "ui-content"]).has(getSourceLayer(filename)) &&
+            expectedNames.some((expectedName) => expectedName.endsWith("Props"));
+
           validatePrincipal(program, declarationTypes[descriptor.kind], {
-            expectedNames: getFileContractExpectedNames(descriptor),
+            expectedNames: isUiPropsFile
+              ? [...expectedNames, ...expectedNames.map((expectedName) => `UI${expectedName}`)]
+              : expectedNames,
           });
 
           return;
@@ -3449,6 +3474,293 @@ const adapterContract = {
   },
 };
 
+const adapterDependencyInjection = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      constructor:
+        "Adapters must receive concrete dependencies from the composition root; do not instantiate dependencies in constructors.",
+    },
+  },
+  create(context) {
+    const filename = normalizeFilename(context.getFilename());
+
+    if (!/\/packages\/pkg-adapter-[^/]+\/src\/.*\.adapter\.ts$/.test(filename)) {
+      return {};
+    }
+
+    return {
+      NewExpression(node) {
+        const ancestors = context.sourceCode.getAncestors(node);
+
+        const hasConstructorAncestor = ancestors.some(
+          (ancestor) => ancestor.type === "MethodDefinition" && ancestor.kind === "constructor",
+        );
+
+        if (hasConstructorAncestor) {
+          context.report({ node, messageId: "constructor" });
+        }
+      },
+    };
+  },
+};
+
+const constructorDependencyInversion = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      constructor:
+        "Constructors may receive contracts only; provide concrete implementations from the composition root.",
+      implementation:
+        "A constructor parameter must use a contract instead of a concrete adapter, repository, store, database, client or service.",
+    },
+  },
+  create(context) {
+    const filename = normalizeFilename(context.getFilename());
+
+    if (!filename.includes("/packages/") || isTestFilename(filename)) {
+      return {};
+    }
+
+    const importedImplementations = new Set();
+
+    const importedImplementationNamespaces = new Set();
+
+    const isConcreteName = (name) =>
+      /(?:Adapter|Repository|Store|Database|Client|Service)$/.test(name) &&
+      !/(?:Contract|Port)$/.test(name);
+
+    const containsImportedImplementation = (node, sourceCode) => {
+      if (!node || typeof node !== "object") {
+        return false;
+      }
+
+      if (node.type === "TSTypeReference") {
+        const { typeName } = node;
+
+        if (
+          typeName.type === "Identifier" &&
+          (importedImplementations.has(typeName.name) || isConcreteName(typeName.name))
+        ) {
+          return true;
+        }
+
+        if (
+          typeName.type === "TSQualifiedName" &&
+          typeName.left.type === "Identifier" &&
+          typeName.right.type === "Identifier" &&
+          importedImplementationNamespaces.has(typeName.left.name) &&
+          isConcreteName(typeName.right.name)
+        ) {
+          return true;
+        }
+      }
+
+      return (sourceCode.visitorKeys[node.type] || []).some((key) => {
+        const value = node[key];
+
+        return Array.isArray(value)
+          ? value.some((child) => containsImportedImplementation(child, sourceCode))
+          : containsImportedImplementation(value, sourceCode);
+      });
+    };
+
+    return {
+      ImportDeclaration(node) {
+        if (getTargetLayer(filename, getStaticModuleSource(node.source)) !== "adapter") {
+          return;
+        }
+
+        for (const specifier of node.specifiers) {
+          if (specifier.type === "ImportNamespaceSpecifier") {
+            importedImplementationNamespaces.add(specifier.local.name);
+          }
+
+          const importedName = specifier.imported?.name || specifier.local.name;
+
+          if (isConcreteName(importedName)) {
+            importedImplementations.add(specifier.local.name);
+          }
+        }
+      },
+      NewExpression(node) {
+        const ancestors = context.sourceCode.getAncestors(node);
+
+        const hasConstructorAncestor = ancestors.some(
+          (ancestor) =>
+            ["ClassMethod", "MethodDefinition"].includes(ancestor.type) &&
+            ancestor.kind === "constructor",
+        );
+
+        if (hasConstructorAncestor) {
+          context.report({ node, messageId: "constructor" });
+        }
+      },
+      MethodDefinition(node) {
+        if (node.kind !== "constructor") {
+          return;
+        }
+
+        for (const parameter of node.value.params) {
+          if (containsImportedImplementation(parameter, context.sourceCode)) {
+            context.report({ node: parameter, messageId: "implementation" });
+          }
+        }
+      },
+      ClassMethod(node) {
+        if (node.kind !== "constructor") {
+          return;
+        }
+
+        for (const parameter of node.params) {
+          if (containsImportedImplementation(parameter, context.sourceCode)) {
+            context.report({ node: parameter, messageId: "implementation" });
+          }
+        }
+      },
+    };
+  },
+};
+
+const noLowLevelLayoutOutsideUi = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      component: "Low-level layout components are only allowed inside the UI package.",
+      prop: "Low-level layout props are only allowed inside the UI package.",
+    },
+  },
+  create(context) {
+    if (getSourceLayer(context.getFilename()) !== "app-presentation") {
+      return {};
+    }
+
+    const forbiddenComponents = new Set(["Box", "Container", "Grid", "Stack"]);
+
+    const forbiddenProps = new Set([
+      "alignContent",
+      "alignItems",
+      "alignSelf",
+      "columnGap",
+      "columnSpacing",
+      "direction",
+      "flexDirection",
+      "flexWrap",
+      "gap",
+      "gridTemplateColumns",
+      "gridTemplateRows",
+      "justifyContent",
+      "justifyItems",
+      "justifySelf",
+      "rowGap",
+      "rowSpacing",
+      "spacing",
+      "sx",
+      "style",
+    ]);
+
+    const importedComponents = new Set();
+
+    return {
+      ImportDeclaration(node) {
+        if (getStaticModuleSource(node.source) !== "@guesant/saberes-ui") {
+          return;
+        }
+
+        for (const specifier of node.specifiers) {
+          if (
+            specifier.type === "ImportSpecifier" &&
+            forbiddenComponents.has(specifier.imported.name)
+          ) {
+            importedComponents.add(specifier.local.name);
+          }
+        }
+      },
+      JSXOpeningElement(node) {
+        if (node.name.type === "JSXIdentifier" && importedComponents.has(node.name.name)) {
+          context.report({ node: node.name, messageId: "component" });
+        }
+
+        for (const attribute of node.attributes) {
+          if (
+            attribute.type === "JSXAttribute" &&
+            attribute.name.type === "JSXIdentifier" &&
+            forbiddenProps.has(attribute.name.name)
+          ) {
+            context.report({ node: attribute.name, messageId: "prop" });
+          }
+        }
+      },
+    };
+  },
+};
+
+const uiComponentPrefix = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      component:
+        "Public UI components must use the UI prefix (for example, UIButton or UIContentRenderer).",
+      props: "Public UI component props types must use the UI prefix.",
+    },
+  },
+  create(context) {
+    const layer = getSourceLayer(context.getFilename());
+
+    if (!new Set(["ui", "ui-content"]).has(layer)) {
+      return {};
+    }
+
+    const { kind } = getFileDescriptor(normalizeFilename(context.getFilename()));
+
+    const isUiComponentFile = kind === "component";
+
+    const isExported = (node) => node.parent?.type === "ExportNamedDeclaration";
+
+    const isComponentFunction = (node) =>
+      ["FunctionDeclaration", "FunctionExpression", "ArrowFunctionExpression"].includes(node.type);
+
+    return {
+      FunctionDeclaration(node) {
+        if (
+          isExported(node) &&
+          isUiComponentFile &&
+          isComponentFunction(node) &&
+          node.id?.name !== "createTheme" &&
+          !node.id.name.startsWith("UI")
+        ) {
+          context.report({ node: node.id, messageId: "component" });
+        }
+      },
+      VariableDeclarator(node) {
+        if (
+          node.id.type === "Identifier" &&
+          isExported(node.parent?.parent) &&
+          isUiComponentFile &&
+          isComponentFunction(node.init) &&
+          !node.id.name.startsWith("UI")
+        ) {
+          context.report({ node: node.id, messageId: "component" });
+        }
+      },
+      TSInterfaceDeclaration(node) {
+        if (isExported(node) && node.id.name.endsWith("Props") && !node.id.name.startsWith("UI")) {
+          context.report({ node: node.id, messageId: "props" });
+        }
+      },
+      TSTypeAliasDeclaration(node) {
+        if (isExported(node) && node.id.name.endsWith("Props") && !node.id.name.startsWith("UI")) {
+          context.report({ node: node.id, messageId: "props" });
+        }
+      },
+    };
+  },
+};
+
 export default {
   meta: { name: "portal-guesant-saberes-architecture", version: "1.0.0" },
   rules: {
@@ -3494,6 +3806,10 @@ export default {
     "mvvm-layer-boundaries": mvvmLayerBoundaries,
     "port-contract": portContract,
     "adapter-contract": adapterContract,
+    "adapter-dependency-injection": adapterDependencyInjection,
+    "constructor-dependency-inversion": constructorDependencyInversion,
+    "no-low-level-layout-outside-ui": noLowLevelLayoutOutsideUi,
+    "ui-component-prefix": uiComponentPrefix,
     "file-name-contract": fileNameContract,
     "file-kind-location": fileKindLocation,
     "file-kind-contract": fileKindContract,

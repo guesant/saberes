@@ -1,11 +1,12 @@
 import {
-  CheckCircleIcon,
-  EventNoteIcon,
-  IconButton,
-  Paper,
-  Stack,
-  Typography,
-  Chip,
+  UICheckCircleIcon,
+  UIEventNoteIcon,
+  UIIconButton,
+  UIPaper,
+  UIContentGroup,
+  UIStartAlignedRow,
+  UITypography,
+  UIChip,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
@@ -19,25 +20,25 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
   const { t } = useTranslation();
 
   return (
-    <Paper variant="outlined">
-      <Stack direction="row" spacing={2} alignItems="flex-start">
-        <IconButton
+    <UIPaper variant="outlined">
+      <UIStartAlignedRow>
+        <UIIconButton
           aria-label={props.completed ? t("lesson.completed") : t("lesson.complete")}
           onClick={() => props.onToggle(props.step, !props.completed)}
         >
-          {props.completed ? <CheckCircleIcon /> : <EventNoteIcon />}
-        </IconButton>
+          {props.completed ? <UICheckCircleIcon /> : <UIEventNoteIcon />}
+        </UIIconButton>
 
-        <Stack>
-          <Typography variant="h6">
+        <UIContentGroup variant="tight">
+          <UITypography variant="h6">
             {String(props.step.position)}.{String(props.step.title)}
-          </Typography>
+          </UITypography>
 
-          <Typography color="text.secondary">{String(props.step.description || "")}</Typography>
+          <UITypography color="text.secondary">{String(props.step.description || "")}</UITypography>
 
-          <Chip size="small" label={props.completed ? t("plan.completed") : t("plan.nextStep")} />
-        </Stack>
-      </Stack>
-    </Paper>
+          <UIChip size="small" label={props.completed ? t("plan.completed") : t("plan.nextStep")} />
+        </UIContentGroup>
+      </UIStartAlignedRow>
+    </UIPaper>
   );
 }

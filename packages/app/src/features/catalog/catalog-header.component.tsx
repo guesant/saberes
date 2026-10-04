@@ -1,4 +1,4 @@
-import { Typography } from "@guesant/saberes-ui";
+import { UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
 export function CatalogHeader() {
@@ -6,13 +6,13 @@ export function CatalogHeader() {
 
   return (
     <>
-      <Typography variant="overline" color="secondary.main">
+      <UITypography variant="overline" color="secondary.main">
         {t("catalog.eyebrow")}
-      </Typography>
+      </UITypography>
 
-      <Typography variant="h3">{t("catalog.title")}</Typography>
+      <UITypography variant="h3">{t("catalog.title")}</UITypography>
 
-      <Typography color="text.secondary">{t("catalog.description")}</Typography>
+      <UITypography color="text.secondary">{t("catalog.description")}</UITypography>
     </>
   );
 }

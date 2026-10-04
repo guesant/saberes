@@ -1,9 +1,9 @@
-import { HtmlTableHeaderCell } from "@guesant/saberes-ui";
+import { UIHtmlTableHeaderCell } from "@guesant/saberes-ui";
 
-type ComparisonHeaderCellProps = {
+type UIComparisonHeaderCellProps = {
   value: string;
 };
 
-export function ComparisonHeaderCell(props: ComparisonHeaderCellProps) {
-  return <HtmlTableHeaderCell>{props.value}</HtmlTableHeaderCell>;
+export function UIComparisonHeaderCell(props: UIComparisonHeaderCellProps) {
+  return <UIHtmlTableHeaderCell>{props.value}</UIHtmlTableHeaderCell>;
 }

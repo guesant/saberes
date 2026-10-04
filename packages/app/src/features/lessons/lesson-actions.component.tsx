@@ -1,4 +1,9 @@
-import { BookmarkBorderIcon, Button, CheckCircleIcon, Stack } from "@guesant/saberes-ui";
+import {
+  UIBookmarkBorderIcon,
+  UIButton,
+  UICheckCircleIcon,
+  UIInlineActions,
+} from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
 export type LessonActionsProps = {
@@ -12,18 +17,18 @@ export function LessonActions(props: LessonActionsProps) {
   const { t } = useTranslation();
 
   return (
-    <Stack direction="row" spacing={1}>
-      <Button variant="outlined" startIcon={<BookmarkBorderIcon />} onClick={props.onBookmark}>
+    <UIInlineActions>
+      <UIButton variant="outlined" startIcon={<UIBookmarkBorderIcon />} onClick={props.onBookmark}>
         {props.bookmarked ? t("lesson.saved") : t("lesson.save")}
-      </Button>
+      </UIButton>
 
-      <Button
+      <UIButton
         variant="contained"
-        startIcon={<CheckCircleIcon />}
+        startIcon={<UICheckCircleIcon />}
         onClick={() => props.onComplete(!props.completed)}
       >
         {props.completed ? t("lesson.completed") : t("lesson.complete")}
-      </Button>
-    </Stack>
+      </UIButton>
+    </UIInlineActions>
   );
 }

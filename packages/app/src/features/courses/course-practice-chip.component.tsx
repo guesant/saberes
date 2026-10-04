@@ -1,4 +1,4 @@
-import { Chip } from "@guesant/saberes-ui";
+import { UIChip } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
 type CoursePracticeChipProps = {
@@ -8,5 +8,5 @@ type CoursePracticeChipProps = {
 export function CoursePracticeChip(props: CoursePracticeChipProps) {
   const { t } = useTranslation();
 
-  return <Chip label={String(props.itemType || t("course.practice"))} size="small" />;
+  return <UIChip label={String(props.itemType || t("course.practice"))} size="small" />;
 }

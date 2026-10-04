@@ -4,10 +4,10 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type TypographyProps = MuiTypographyProps & {
+export type UITypographyProps = MuiTypographyProps & {
   to?: string;
 };
 
-export function Typography(props: TypographyProps): ReactElement {
+export function UITypography(props: UITypographyProps): ReactElement {
   return <MuiTypography {...(props as MuiTypographyProps)} />;
 }

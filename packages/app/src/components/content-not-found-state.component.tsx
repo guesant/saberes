@@ -1,9 +1,9 @@
-import { Alert } from "@guesant/saberes-ui";
+import { UIAlert } from "@guesant/saberes-ui";
 
 export type ContentNotFoundStateProps = {
   label: string;
 };
 
 export function ContentNotFoundState(props: ContentNotFoundStateProps) {
-  return <Alert severity="info">{props.label}</Alert>;
+  return <UIAlert severity="info">{props.label}</UIAlert>;
 }

@@ -1,14 +1,14 @@
-import { Alert, Box, Paper, Typography } from "@guesant/saberes-ui";
+import { UIAlert, UIBox, UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 
-type KnowledgeMapBlockProps = {
+type UIKnowledgeMapBlockProps = {
   block: Extract<EditorialBlock, { type: "knowledge_map" }>;
   graph?: KnowledgeGraph;
 };
 
-export function KnowledgeMapBlock(props: KnowledgeMapBlockProps) {
+export function UIKnowledgeMapBlock(props: UIKnowledgeMapBlockProps) {
   const { block, graph } = props;
 
   const { t } = useTranslation();
@@ -60,14 +60,14 @@ export function KnowledgeMapBlock(props: KnowledgeMapBlockProps) {
   }, [block, graph]);
 
   if (hasError) {
-    return <Alert severity="info">{t("content.mapFallback")}</Alert>;
+    return <UIAlert severity="info">{t("content.mapFallback")}</UIAlert>;
   }
 
   return (
-    <Paper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <Typography fontWeight={700}>{block.title || t("content.knowledgeMap")}</Typography>
+    <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
+      <UITypography fontWeight={700}>{block.title || t("content.knowledgeMap")}</UITypography>
 
-      <Box ref={containerRef} role="img" aria-label={block.title || t("content.knowledgeMap")} />
-    </Paper>
+      <UIBox ref={containerRef} role="img" aria-label={block.title || t("content.knowledgeMap")} />
+    </UIPaper>
   );
 }

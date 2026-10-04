@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
-export type HtmlTableRowProps = {
+export type UIHtmlTableRowProps = {
   children: ReactNode;
 };
 
-export function HtmlTableRow(props: HtmlTableRowProps) {
+export function UIHtmlTableRow(props: UIHtmlTableRowProps) {
   return <tr>{props.children}</tr>;
 }

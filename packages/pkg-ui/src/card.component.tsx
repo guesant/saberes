@@ -1,8 +1,8 @@
 import { Card as MuiCard, type CardProps as MuiCardProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type CardProps = MuiCardProps;
+export type UICardProps = MuiCardProps;
 
-export function Card(props: CardProps): ReactElement {
+export function UICard(props: UICardProps): ReactElement {
   return <MuiCard {...props} />;
 }

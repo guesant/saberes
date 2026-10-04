@@ -712,6 +712,26 @@ test("layer-boundaries accepts and rejects the declared package matrix", () => {
   }
 });
 
+test("no-low-level-layout-outside-ui rejects layout primitives and props in app", () => {
+  assert.equal(
+    verify(
+      'import { Box } from "@guesant/saberes-ui"; function View(props: ViewProps) { return <Box sx={{ gap: 1 }}>{props.children}</Box>; }',
+      "no-low-level-layout-outside-ui",
+      "packages/app/src/features/catalog/view.component.tsx",
+    ).length,
+    2,
+  );
+
+  assert.equal(
+    verify(
+      'import { Box } from "@guesant/saberes-ui"; function View(props: ViewProps) { return <Box sx={{ gap: 1 }}>{props.children}</Box>; }',
+      "no-low-level-layout-outside-ui",
+      "packages/pkg-ui/src/content-group.component.tsx",
+    ).length,
+    0,
+  );
+});
+
 test("purity rules reject technology imports in domain and application", () => {
   assert.equal(
     verify('import React from "react";', "domain-purity", "packages/pkg-domain/src/domain.ts")
@@ -762,6 +782,55 @@ test("composition and adapter rules isolate concrete implementations", () => {
       'import { GraphologyBuildKnowledgeGraphAdapter } from "@guesant/saberes-adapter-graphology-v1";',
       "no-adapter-cross-import",
       "packages/pkg-adapter-data-v1/src/adapters/content.adapter.ts",
+    ).length,
+    1,
+  );
+});
+
+test("adapter-dependency-injection rejects constructor instantiation", () => {
+  assert.equal(
+    verify(
+      "export class LoadCourseAdapter { constructor(private readonly store = new CourseStore()) {} }",
+      "adapter-dependency-injection",
+      "packages/pkg-adapter-data-v1/src/load-course.adapter.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      "export class LoadCourseAdapter { constructor(private readonly store: CourseStore) {} }",
+      "adapter-dependency-injection",
+      "packages/pkg-adapter-data-v1/src/load-course.adapter.ts",
+    ).length,
+    0,
+  );
+});
+
+test("constructor-dependency-inversion rejects concrete constructor dependencies", () => {
+  assert.equal(
+    verify(
+      'import { CourseRepository } from "@guesant/saberes-adapter-data-v1"; export class CourseService { constructor(private readonly repository: CourseRepository) {} }',
+      "constructor-dependency-inversion",
+      "packages/app/src/features/courses/course.service.ts",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verify(
+      'import type { CourseRepositoryContract } from "@guesant/saberes-adapter-data-v1"; export class CourseService { constructor(private readonly repository: CourseRepositoryContract) {} }',
+      "constructor-dependency-inversion",
+      "packages/app/src/features/courses/course.service.ts",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export class CourseService { constructor() { this.repository = new CourseRepository(); } }",
+      "constructor-dependency-inversion",
+      "packages/app/src/features/courses/course.service.ts",
     ).length,
     1,
   );
@@ -1008,6 +1077,35 @@ test("file-kind-contract leaves explicit configuration files to their config con
       "const base = '/'; export default { base };",
       "file-kind-contract",
       ".config/vite.config.ts",
+    ).length,
+    0,
+  );
+});
+
+test("ui-component-prefix requires the UI prefix for public components and props", () => {
+  assert.equal(
+    verify(
+      "export type UIButtonProps = { label: string }; export function UIButton(props: UIButtonProps) { return <button>{props.label}</button>; }",
+      "ui-component-prefix",
+      "packages/pkg-ui/src/button.component.tsx",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verify(
+      "export type ButtonProps = { label: string }; export function Button(props: ButtonProps) { return <button>{props.label}</button>; }",
+      "ui-component-prefix",
+      "packages/pkg-ui/src/button.component.tsx",
+    ).length,
+    2,
+  );
+
+  assert.equal(
+    verify(
+      "export function createTheme() { return {}; }",
+      "ui-component-prefix",
+      "packages/pkg-ui/src/create-theme.function.ts",
     ).length,
     0,
   );

@@ -73,9 +73,13 @@ const architectureRules = {
   "architecture/mvvm-layer-boundaries": "error",
   "architecture/port-contract": "error",
   "architecture/adapter-contract": "error",
+  "architecture/adapter-dependency-injection": "error",
+  "architecture/constructor-dependency-inversion": "error",
   "architecture/file-name-contract": "error",
   "architecture/file-kind-location": "error",
   "architecture/file-kind-contract": "error",
+  "architecture/no-low-level-layout-outside-ui": "error",
+  "architecture/ui-component-prefix": "error",
 };
 
 const safetyRules = {

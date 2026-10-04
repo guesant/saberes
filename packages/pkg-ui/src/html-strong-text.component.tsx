@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
-export type HtmlStrongTextProps = {
+export type UIHtmlStrongTextProps = {
   children: ReactNode;
 };
 
-export function HtmlStrongText(props: HtmlStrongTextProps) {
+export function UIHtmlStrongText(props: UIHtmlStrongTextProps) {
   return <strong>{props.children}</strong>;
 }

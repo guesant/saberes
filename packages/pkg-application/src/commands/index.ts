@@ -1,6 +1,7 @@
 export * from "./add-study-points.command-handler";
 export * from "./clear-progress.command-handler";
 export * from "./enroll-course.command-handler";
+export * from "./import-progress.command-handler";
 export * from "./record-attempt.command-handler";
 export * from "./record-study-activity.command-handler";
 export * from "./save-achievement.command-handler";
@@ -15,5 +16,6 @@ export * from "./save-review-target.command-handler";
 export * from "./save-session.command-handler";
 export * from "./save-setting.command-handler";
 export * from "./save-streak.command-handler";
+export * from "./save-topic-mastery.command-handler";
 export * from "./schedule-review.command-handler";
 export * from "./sync-achievements.command-handler";

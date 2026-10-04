@@ -1,9 +1,9 @@
-import { Typography } from "@guesant/saberes-ui";
+import { UITypography } from "@guesant/saberes-ui";
 
-type FormulaCaptionProps = {
+type UIFormulaCaptionProps = {
   caption?: string;
 };
 
-export function FormulaCaption(props: FormulaCaptionProps) {
-  return <Typography variant="caption">{props.caption}</Typography>;
+export function UIFormulaCaption(props: UIFormulaCaptionProps) {
+  return <UITypography variant="caption">{props.caption}</UITypography>;
 }

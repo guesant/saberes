@@ -6,6 +6,7 @@ import type { CalculateTopicMasteryPort } from "./ports/calculate-topic-mastery-
 import type { ClearProgressPort } from "./ports/clear-progress-port.port";
 import type { ClockPort } from "./ports/clock-port.port";
 import type { EnrollCoursePort } from "./ports/enroll-course-port.port";
+import type { ExportProgressPort } from "./ports/export-progress-port.port";
 import type { GetAssessmentPort } from "./ports/get-assessment-port.port";
 import type { GetCatalogPort } from "./ports/get-catalog-port.port";
 import type { GetCoursePort } from "./ports/get-course-port.port";
@@ -16,7 +17,9 @@ import type { GetSettingPort } from "./ports/get-setting-port.port";
 import type { GetStreakPort } from "./ports/get-streak-port.port";
 import type { GetStudyPlanPort } from "./ports/get-study-plan-port.port";
 import type { GetTopicMapPort } from "./ports/get-topic-map-port.port";
+import type { GetTopicPort } from "./ports/get-topic-port.port";
 import type { IdPort } from "./ports/id-port.port";
+import type { ImportProgressPort } from "./ports/import-progress-port.port";
 import type { ListAchievementsPort } from "./ports/list-achievements-port.port";
 import type { ListAttemptsPort } from "./ports/list-attempts-port.port";
 import type { ListBookmarksPort } from "./ports/list-bookmarks-port.port";
@@ -45,6 +48,7 @@ import type { SaveReviewTargetPort } from "./ports/save-review-target-port.port"
 import type { SaveSessionPort } from "./ports/save-session-port.port";
 import type { SaveSettingPort } from "./ports/save-setting-port.port";
 import type { SaveStreakPort } from "./ports/save-streak-port.port";
+import type { SaveTopicMasteryPort } from "./ports/save-topic-mastery-port.port";
 import type { ScheduleReviewPort } from "./ports/schedule-review-port.port";
 import type { SuggestDiagnosisPort } from "./ports/suggest-diagnosis-port.port";
 import type { SyncAchievementsPort } from "./ports/sync-achievements-port.port";
@@ -56,6 +60,7 @@ export interface ApplicationPorts {
   getQuestion: GetQuestionPort;
   getAssessment: GetAssessmentPort;
   getTopicMap: GetTopicMapPort;
+  getTopic: GetTopicPort;
   getStudyPlan: GetStudyPlanPort;
   listAttempts: ListAttemptsPort;
   recordAttempt: RecordAttemptPort;
@@ -66,6 +71,8 @@ export interface ApplicationPorts {
   getSetting: GetSettingPort;
   clearProgress: ClearProgressPort;
   enrollCourse: EnrollCoursePort;
+  exportProgress: ExportProgressPort;
+  importProgress: ImportProgressPort;
   listEnrollments: ListEnrollmentsPort;
   saveLessonProgress: SaveLessonProgressPort;
   listLessonProgress: ListLessonProgressPort;
@@ -82,6 +89,7 @@ export interface ApplicationPorts {
   saveDailyChallenge: SaveDailyChallengePort;
   listDailyChallenges: ListDailyChallengesPort;
   saveStreak: SaveStreakPort;
+  saveTopicMastery: SaveTopicMasteryPort;
   getStreak: GetStreakPort;
   saveAchievement: SaveAchievementPort;
   listAchievements: ListAchievementsPort;

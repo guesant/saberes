@@ -2,8 +2,8 @@ import MuiOfflineBoltIcon from "@mui/icons-material/OfflineBolt";
 import type { SvgIconProps } from "@mui/material/SvgIcon";
 import type { ReactElement } from "react";
 
-export type OfflineBoltIconProps = SvgIconProps;
+export type UIOfflineBoltIconProps = SvgIconProps;
 
-export function OfflineBoltIcon(props: OfflineBoltIconProps): ReactElement {
+export function UIOfflineBoltIcon(props: UIOfflineBoltIconProps): ReactElement {
   return <MuiOfflineBoltIcon {...props} />;
 }

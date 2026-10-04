@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { ContentRenderer } from "./content-renderer.component";
+import { UIContentRenderer } from "./content-renderer.component";
 
 describe("renderizador de conteúdo editorial", () => {
   it("renderiza Markdown, fórmula e bloco permitido", () => {
     render(
-      <ContentRenderer
+      <UIContentRenderer
         markdown={"## Conceito\n\nTexto **importante**."}
         blocks={[
           {
@@ -28,7 +28,9 @@ describe("renderizador de conteúdo editorial", () => {
   });
 
   it("não interpreta HTML arbitrário como conteúdo executável", () => {
-    render(<ContentRenderer markdown={"<script>alert(&quot;x&quot;)</script>\n\nTexto seguro"} />);
+    render(
+      <UIContentRenderer markdown={"<script>alert(&quot;x&quot;)</script>\n\nTexto seguro"} />,
+    );
 
     expect(screen.getByText("Texto seguro")).toBeInTheDocument();
 

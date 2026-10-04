@@ -1,4 +1,4 @@
-import { Alert, Stack, Typography } from "@guesant/saberes-ui";
+import { UIContentAlert, UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { ContentErrorDetails } from "./content-error-details.component";
 
@@ -16,14 +16,14 @@ export function ContentErrorState(props: ContentErrorStateProps) {
   const message = error instanceof Error ? error.message : String(error || "");
 
   return (
-    <Alert severity="error" role="alert" sx={{ my: 3 }}>
-      <Stack spacing={1}>
-        <Typography fontWeight={700}>{label || t("errors.contentLoad")}</Typography>
+    <UIContentAlert severity="error" role="alert">
+      <UIContentGroup variant="tight">
+        <UITypography fontWeight={700}>{label || t("errors.contentLoad")}</UITypography>
 
-        <Typography variant="body2">{t("errors.contentLoadDescription")}</Typography>
+        <UITypography variant="body2">{t("errors.contentLoadDescription")}</UITypography>
 
         <ContentErrorDetails message={message} onRetry={onRetry} />
-      </Stack>
-    </Alert>
+      </UIContentGroup>
+    </UIContentAlert>
   );
 }

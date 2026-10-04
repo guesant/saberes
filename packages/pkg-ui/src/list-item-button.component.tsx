@@ -4,11 +4,11 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type ListItemButtonProps = MuiListItemButtonProps & {
+export type UIListItemButtonProps = MuiListItemButtonProps & {
   href?: string;
   to?: string;
 };
 
-export function ListItemButton(props: ListItemButtonProps): ReactElement {
+export function UIListItemButton(props: UIListItemButtonProps): ReactElement {
   return <MuiListItemButton {...(props as MuiListItemButtonProps)} />;
 }

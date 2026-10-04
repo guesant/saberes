@@ -9,6 +9,7 @@ const typeSuffixes = new Set([
   "adapters",
   "command-handler",
   "component",
+  "contract",
   "composition",
   "config",
   "database",

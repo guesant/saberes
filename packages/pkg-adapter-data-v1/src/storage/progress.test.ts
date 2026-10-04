@@ -1,5 +1,6 @@
 import "fake-indexeddb/auto";
 import {
+  AttemptConfidence,
   DiagnosisCode,
   DiagnosisConfidence,
   DiagnosisSource,
@@ -7,7 +8,9 @@ import {
   ReviewTargetType,
 } from "@guesant/saberes-domain";
 import { beforeEach, describe, expect, it } from "vitest";
-import { progressDb } from "./progress.database";
+import { ProgressDatabase } from "./progress.database";
+
+const progressDb = new ProgressDatabase();
 
 describe("progresso local Dexie", () => {
   beforeEach(async () => {
@@ -17,6 +20,7 @@ describe("progresso local Dexie", () => {
   it("preserva tentativas, diagnóstico e agenda no mesmo banco local", async () => {
     const attempt = await progressDb.saveAttempt({
       contentKey: "question:sample-2026-1",
+      confidence: AttemptConfidence.Guess,
       topicIds: ["1"],
       isCorrect: false,
     });
@@ -37,6 +41,10 @@ describe("progresso local Dexie", () => {
 
     expect(await progressDb.listAttempts()).toHaveLength(1);
 
+    expect((await progressDb.listAttempts())[0]).toMatchObject({
+      confidence: AttemptConfidence.Guess,
+    });
+
     expect((await progressDb.listDiagnoses())[0]).toMatchObject({
       attemptId: attempt.id,
       code: "concept_gap",
@@ -52,5 +60,31 @@ describe("progresso local Dexie", () => {
     expect(progressDb.name).toBe("saberes-progress");
 
     expect(progressDb.verno).toBeGreaterThanOrEqual(4);
+  });
+
+  it("exporta e restaura o progresso sem tocar no conteúdo editorial", async () => {
+    await progressDb.enrollCourse("course:sample", { startedAt: "2026-10-03T00:00:00.000Z" });
+
+    await progressDb.saveSetting("theme", "light");
+
+    const snapshot = await progressDb.exportProgress();
+
+    await progressDb.clearProgress();
+
+    await progressDb.importProgress(snapshot);
+
+    expect(await progressDb.listEnrollments()).toEqual([
+      expect.objectContaining({ contentKey: "course:sample" }),
+    ]);
+
+    expect(await progressDb.getSetting("theme")).toEqual({ key: "theme", value: "light" });
+  });
+
+  it("rejeita um snapshot inválido antes de alterar o progresso", async () => {
+    await progressDb.enrollCourse("course:sample");
+
+    await expect(progressDb.importProgress("{}")).rejects.toThrow("formato inválido");
+
+    expect(await progressDb.listEnrollments()).toHaveLength(1);
   });
 });

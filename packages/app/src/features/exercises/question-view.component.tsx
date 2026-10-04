@@ -25,5 +25,15 @@ export function QuestionView() {
     return <ContentNotFoundState label={t("exercise.notFound")} />;
   }
 
-  return <QuestionReadyView data={viewModel.data} onSubmit={viewModel.submit} />;
+  return (
+    <QuestionReadyView
+      bookmarkError={viewModel.bookmarkError}
+      bookmarked={viewModel.bookmarked}
+      data={viewModel.data}
+      onDiagnose={viewModel.saveDiagnosis}
+      onBookmark={viewModel.saveBookmark}
+      onSubmit={viewModel.submit}
+      onRetryBookmark={viewModel.reload}
+    />
+  );
 }

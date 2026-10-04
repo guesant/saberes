@@ -1,26 +1,26 @@
-import { ArrowForwardIcon, Button, Paper, Typography } from "@guesant/saberes-ui";
+import { UIArrowForwardIcon, UIButton, UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { EditorialBlock } from "@guesant/saberes-application";
 
-type QuestionLinkBlockViewProps = {
+type UIQuestionLinkBlockViewProps = {
   block: Extract<EditorialBlock, { type: "question_link" }>;
   onQuestion?: (questionId: string | number) => void;
 };
 
-export function QuestionLinkBlockView(props: QuestionLinkBlockViewProps) {
+export function UIQuestionLinkBlockView(props: UIQuestionLinkBlockViewProps) {
   const { block, onQuestion } = props;
 
   const { t } = useTranslation();
 
   return (
-    <Paper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <Typography fontWeight={700}>{block.title || t("content.practiceConcept")}</Typography>
+    <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
+      <UITypography fontWeight={700}>{block.title || t("content.practiceConcept")}</UITypography>
 
-      <Typography variant="body2">{block.description}</Typography>
+      <UITypography variant="body2">{block.description}</UITypography>
 
-      <Button onClick={() => onQuestion?.(block.questionId)} endIcon={<ArrowForwardIcon />}>
+      <UIButton onClick={() => onQuestion?.(block.questionId)} endIcon={<UIArrowForwardIcon />}>
         {t("content.solveQuestion")}
-      </Button>
-    </Paper>
+      </UIButton>
+    </UIPaper>
   );
 }

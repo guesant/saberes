@@ -1,5 +1,5 @@
-import { Box, Typography } from "@guesant/saberes-ui";
-import { ContentRenderer } from "@guesant/saberes-ui-content";
+import { UISectionAnchor, UITypography } from "@guesant/saberes-ui";
+import { UIContentRenderer } from "@guesant/saberes-ui-content";
 import { ContentErrorState } from "../../components/content-error-state.component";
 import { ContentLoadingState } from "../../components/content-loading-state.component";
 import type { LessonSectionContentViewModel } from "./lesson-section-content-view-model.type";
@@ -25,15 +25,15 @@ export function LessonSectionContentView(props: LessonSectionContentViewProps) {
   }
 
   return (
-    <Box id={`section-${viewModel.sectionId}`}>
-      <Typography variant="h4">{viewModel.title}</Typography>
+    <UISectionAnchor id={`section-${viewModel.sectionId}`}>
+      <UITypography variant="h4">{viewModel.title}</UITypography>
 
-      <ContentRenderer
+      <UIContentRenderer
         markdown={viewModel.markdown}
         blocks={viewModel.blocks}
         knowledgeGraph={viewModel.knowledgeGraph}
         onQuestion={onQuestion}
       />
-    </Box>
+    </UISectionAnchor>
   );
 }

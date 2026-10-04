@@ -1,13 +1,13 @@
-import { Paper, Typography, Box } from "@guesant/saberes-ui";
+import { UIPaper, UITypography, UIBox } from "@guesant/saberes-ui";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import type { EditorialBlock } from "@guesant/saberes-application";
 
-type ChartBlockProps = {
+type UIChartBlockProps = {
   block: Extract<EditorialBlock, { type: "chart" }>;
 };
 
-export function ChartBlock(props: ChartBlockProps) {
+export function UIChartBlock(props: UIChartBlockProps) {
   const { block } = props;
 
   const { t } = useTranslation();
@@ -41,10 +41,14 @@ export function ChartBlock(props: ChartBlockProps) {
   }, [block.option]);
 
   return (
-    <Paper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <Typography fontWeight={700}>{block.title || t("content.visualization")}</Typography>
+    <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
+      <UITypography fontWeight={700}>{block.title || t("content.visualization")}</UITypography>
 
-      <Box ref={containerRef} role="img" aria-label={block.title || t("content.editorialChart")} />
-    </Paper>
+      <UIBox
+        ref={containerRef}
+        role="img"
+        aria-label={block.title || t("content.editorialChart")}
+      />
+    </UIPaper>
   );
 }

@@ -1,11 +1,11 @@
 import { Box as MuiBox, type BoxProps as MuiBoxProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type BoxProps = MuiBoxProps & {
+export type UIBoxProps = MuiBoxProps & {
   alt?: string;
   src?: string;
 };
 
-export function Box(props: BoxProps): ReactElement {
+export function UIBox(props: UIBoxProps): ReactElement {
   return <MuiBox {...(props as MuiBoxProps)} />;
 }

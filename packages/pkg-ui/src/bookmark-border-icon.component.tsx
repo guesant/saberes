@@ -2,8 +2,8 @@ import MuiBookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import type { SvgIconProps } from "@mui/material/SvgIcon";
 import type { ReactElement } from "react";
 
-export type BookmarkBorderIconProps = SvgIconProps;
+export type UIBookmarkBorderIconProps = SvgIconProps;
 
-export function BookmarkBorderIcon(props: BookmarkBorderIconProps): ReactElement {
+export function UIBookmarkBorderIcon(props: UIBookmarkBorderIconProps): ReactElement {
   return <MuiBookmarkBorderIcon {...props} />;
 }

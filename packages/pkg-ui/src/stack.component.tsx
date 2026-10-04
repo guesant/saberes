@@ -1,8 +1,8 @@
 import { Stack as MuiStack, type StackProps as MuiStackProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type StackProps = MuiStackProps;
+export type UIStackProps = MuiStackProps;
 
-export function Stack(props: StackProps): ReactElement {
+export function UIStack(props: UIStackProps): ReactElement {
   return <MuiStack {...props} />;
 }

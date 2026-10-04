@@ -1,14 +1,14 @@
-import { ImageFigure } from "./image-figure.component";
+import { UIImageFigure } from "./image-figure.component";
 import type { EditorialBlock } from "@guesant/saberes-application";
 
-type ImageBlockViewProps = {
+type UIImageBlockViewProps = {
   block: Extract<EditorialBlock, { type: "image" }>;
 };
 
-export function ImageBlockView(props: ImageBlockViewProps) {
+export function UIImageBlockView(props: UIImageBlockViewProps) {
   const { block } = props;
 
   const url = /^https:\/\//i.test(block.src) || block.src.startsWith("/") ? block.src : undefined;
 
-  return url ? <ImageFigure block={block} url={url} /> : null;
+  return url ? <UIImageFigure block={block} url={url} /> : null;
 }

@@ -1,8 +1,8 @@
-import { SqlJsContentRepository } from "./sql-js-content.repository";
+import type { ContentRepositoryContract } from "./content-repository.contract";
 import type { GetQuestionPort } from "@guesant/saberes-application";
 
 export class SqlJsGetQuestionAdapter implements GetQuestionPort {
-  public constructor(private readonly store = new SqlJsContentRepository()) {}
+  public constructor(private readonly store: ContentRepositoryContract) {}
 
   public execute(
     input: Parameters<GetQuestionPort["execute"]>[0],

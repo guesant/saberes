@@ -1,8 +1,8 @@
 import { List as MuiList, type ListProps as MuiListProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type ListProps = MuiListProps;
+export type UIListProps = MuiListProps;
 
-export function List(props: ListProps): ReactElement {
+export function UIList(props: UIListProps): ReactElement {
   return <MuiList {...props} />;
 }

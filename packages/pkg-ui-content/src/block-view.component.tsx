@@ -1,96 +1,96 @@
 import { lazy, Suspense } from "react";
-import { CalloutBlockView } from "./blocks/callout-block-view.component";
-import { ComparisonTableBlockView } from "./blocks/comparison-table-block-view.component";
-import { FormulaBlockView } from "./blocks/formula-block-view.component";
-import { ImageBlockView } from "./blocks/image-block-view.component";
-import { QuestionLinkBlockView } from "./blocks/question-link-block-view.component";
-import { SummaryBlockView } from "./blocks/summary-block-view.component";
-import { VideoBlockView } from "./blocks/video-block-view.component";
-import { ContentLoadingFallback } from "./content-loading-fallback.component";
+import { UICalloutBlockView } from "./blocks/callout-block-view.component";
+import { UIComparisonTableBlockView } from "./blocks/comparison-table-block-view.component";
+import { UIFormulaBlockView } from "./blocks/formula-block-view.component";
+import { UIImageBlockView } from "./blocks/image-block-view.component";
+import { UIQuestionLinkBlockView } from "./blocks/question-link-block-view.component";
+import { UISummaryBlockView } from "./blocks/summary-block-view.component";
+import { UIVideoBlockView } from "./blocks/video-block-view.component";
+import { UIContentLoadingFallback } from "./content-loading-fallback.component";
 import type { EditorialBlock, KnowledgeGraph } from "@guesant/saberes-application";
 import type { ReactNode } from "react";
 
-const ChartBlock = lazy(() =>
-  import("./visualization/chart-block.component").then(({ ChartBlock: Component }) => ({
+const UIChartBlock = lazy(() =>
+  import("./visualization/chart-block.component").then(({ UIChartBlock: Component }) => ({
     default: Component,
   })),
 );
 
-const KnowledgeMapBlock = lazy(() =>
+const UIKnowledgeMapBlock = lazy(() =>
   import("./visualization/knowledge-map-block.component").then(
-    ({ KnowledgeMapBlock: Component }) => ({
+    ({ UIKnowledgeMapBlock: Component }) => ({
       default: Component,
     }),
   ),
 );
 
-const ParametricSceneBlock = lazy(() =>
+const UIParametricSceneBlock = lazy(() =>
   import("./visualization/parametric-scene-block.component").then(
-    ({ ParametricSceneBlock: Component }) => ({
+    ({ UIParametricSceneBlock: Component }) => ({
       default: Component,
     }),
   ),
 );
 
-export type BlockViewProps = {
+export type UIBlockViewProps = {
   block: EditorialBlock;
   knowledgeGraph?: KnowledgeGraph;
   onQuestion?: (questionId: string | number) => void;
 };
 
-export function BlockView(props: BlockViewProps) {
+export function UIBlockView(props: UIBlockViewProps) {
   const { block, knowledgeGraph, onQuestion } = props;
 
   let content: ReactNode = null;
 
   switch (block.type) {
     case "callout":
-      content = <CalloutBlockView block={block} />;
+      content = <UICalloutBlockView block={block} />;
 
       break;
 
     case "comparison_table":
-      content = <ComparisonTableBlockView block={block} />;
+      content = <UIComparisonTableBlockView block={block} />;
 
       break;
 
     case "formula":
-      content = <FormulaBlockView block={block} />;
+      content = <UIFormulaBlockView block={block} />;
 
       break;
 
     case "image":
-      content = <ImageBlockView block={block} />;
+      content = <UIImageBlockView block={block} />;
 
       break;
 
     case "question_link":
-      content = <QuestionLinkBlockView block={block} onQuestion={onQuestion} />;
+      content = <UIQuestionLinkBlockView block={block} onQuestion={onQuestion} />;
 
       break;
 
     case "summary":
-      content = <SummaryBlockView block={block} />;
+      content = <UISummaryBlockView block={block} />;
 
       break;
 
     case "video":
-      content = <VideoBlockView block={block} />;
+      content = <UIVideoBlockView block={block} />;
 
       break;
 
     case "chart":
-      content = <ChartBlock block={block} />;
+      content = <UIChartBlock block={block} />;
 
       break;
 
     case "knowledge_map":
-      content = <KnowledgeMapBlock block={block} graph={knowledgeGraph} />;
+      content = <UIKnowledgeMapBlock block={block} graph={knowledgeGraph} />;
 
       break;
 
     case "parametric_scene":
-      content = <ParametricSceneBlock block={block} />;
+      content = <UIParametricSceneBlock block={block} />;
 
       break;
 
@@ -98,5 +98,5 @@ export function BlockView(props: BlockViewProps) {
       break;
   }
 
-  return <Suspense fallback={<ContentLoadingFallback />}>{content}</Suspense>;
+  return <Suspense fallback={<UIContentLoadingFallback />}>{content}</Suspense>;
 }

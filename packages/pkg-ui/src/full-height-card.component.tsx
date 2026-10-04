@@ -1,0 +1,9 @@
+import { Card as MuiCard } from "@mui/material";
+import type { CardProps as MuiCardProps } from "@mui/material";
+import type { ReactElement } from "react";
+
+export type UIFullHeightCardProps = MuiCardProps;
+
+export function UIFullHeightCard(props: UIFullHeightCardProps): ReactElement {
+  return <MuiCard {...props} sx={{ height: "100%", ...props.sx }} />;
+}

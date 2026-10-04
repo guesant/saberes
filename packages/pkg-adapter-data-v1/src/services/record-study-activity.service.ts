@@ -1,15 +1,18 @@
 import { format, isSameDay, parseISO, subDays } from "date-fns";
-import { progressDb } from "../storage/progress.database";
+import type { ProgressStorageContract } from "../storage/progress-storage.contract";
 
 export type StudyActivity = {
   at?: Date | string;
   type?: string;
 };
 
-export async function recordStudyActivity(activity: StudyActivity = {}) {
+export async function recordStudyActivity(
+  storage: ProgressStorageContract,
+  activity: StudyActivity = {},
+) {
   const today = format(activity.at || new Date(), "yyyy-MM-dd");
 
-  const previous = await progressDb.getStreak();
+  const previous = await storage.getStreak();
 
   const previousDate = previous?.lastDate ? parseISO(previous.lastDate as string) : null;
 
@@ -30,7 +33,7 @@ export async function recordStudyActivity(activity: StudyActivity = {}) {
     lastActivity: activity.type || "study",
   };
 
-  await progressDb.saveStreak(next);
+  await storage.saveStreak(next);
 
   return next;
 }

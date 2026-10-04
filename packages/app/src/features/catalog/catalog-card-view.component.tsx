@@ -1,12 +1,12 @@
 import {
-  AutoStoriesIcon,
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Chip,
-  QuizIcon,
-  Typography,
+  UIAutoStoriesIcon,
+  UIAccentIcon,
+  UIButton,
+  UIFullHeightCard,
+  UICardContent,
+  UIChip,
+  UIQuizIcon,
+  UITypography,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -34,25 +34,25 @@ export function CatalogCardView(props: CatalogCardViewProps) {
 
   const path = paths[item.type] || `/licoes/${item.id}`;
 
-  const icon = item.type === "lesson" ? <AutoStoriesIcon /> : <QuizIcon />;
+  const icon = item.type === "lesson" ? <UIAutoStoriesIcon /> : <UIQuizIcon />;
 
   return (
-    <Card sx={{ height: "100%" }}>
-      <CardContent>
-        <Box color="primary.main">{icon}</Box>
+    <UIFullHeightCard>
+      <UICardContent>
+        <UIAccentIcon>{icon}</UIAccentIcon>
 
-        <Chip label={typeLabel} size="small" variant="outlined" />
+        <UIChip label={typeLabel} size="small" variant="outlined" />
 
-        <Typography variant="h6">{String(item.title)}</Typography>
+        <UITypography variant="h6">{String(item.title)}</UITypography>
 
-        <Typography variant="body2" color="text.secondary">
+        <UITypography variant="body2" color="text.secondary">
           {String(item.description || "")}
-        </Typography>
+        </UITypography>
 
-        <Button component={Link} to={path} size="small">
+        <UIButton component={Link} to={path} size="small">
           {t("common.open")}
-        </Button>
-      </CardContent>
-    </Card>
+        </UIButton>
+      </UICardContent>
+    </UIFullHeightCard>
   );
 }

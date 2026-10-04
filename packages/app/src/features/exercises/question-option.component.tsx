@@ -1,4 +1,4 @@
-import { HtmlStrongText, Paper, Typography } from "@guesant/saberes-ui";
+import { UIHtmlStrongText, UISelectableSurface, UITypography } from "@guesant/saberes-ui";
 
 export type QuestionOptionProps = {
   option: Record<string, unknown>;
@@ -10,14 +10,14 @@ export function QuestionOption(props: QuestionOptionProps) {
   const { option, selected, onSelect } = props;
 
   return (
-    <Paper
+    <UISelectableSurface
+      selected={selected}
       variant="outlined"
       onClick={() => onSelect(String(option.code))}
-      sx={{ borderColor: selected ? "primary.main" : undefined }}
     >
-      <Typography>
-        <HtmlStrongText>{String(option.code)})</HtmlStrongText> {String(option.text)}
-      </Typography>
-    </Paper>
+      <UITypography>
+        <UIHtmlStrongText>{String(option.code)})</UIHtmlStrongText> {String(option.text)}
+      </UITypography>
+    </UISelectableSurface>
   );
 }

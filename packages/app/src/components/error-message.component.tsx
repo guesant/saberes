@@ -1,9 +1,9 @@
-import { Box } from "@guesant/saberes-ui";
+import { UICodeText } from "@guesant/saberes-ui";
 
 export type ErrorMessageProps = {
   message: string;
 };
 
 export function ErrorMessage(props: ErrorMessageProps) {
-  return <Box component="code">{props.message}</Box>;
+  return <UICodeText>{props.message}</UICodeText>;
 }

@@ -1,51 +1,76 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
+import { useState } from "react";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
-import { submitQuestionAnswer } from "./submit-question-answer.function";
-import type { QuestionReadModel } from "@guesant/saberes-application";
+import { createQuestionDiagnosisAction } from "./create-question-diagnosis-action.function";
+import { createQuestionSubmissionAction } from "./create-question-submission-action.function";
+import { useQuestionBookmark } from "./use-question-bookmark.hook";
+import { useQuestionContentQuery } from "./use-question-content-query.hook";
+import type { QuestionSubmissionResult } from "./question-submission-result.interface";
+import type {
+  AttemptConfidence,
+  DiagnosisCode,
+  QuestionReadModel,
+} from "@guesant/saberes-application";
 
 export type QuestionViewModelState = "loading" | "error" | "ready";
 
 export interface QuestionViewModel {
   state: QuestionViewModelState;
   data: QuestionReadModel | null;
+  bookmarked: boolean;
+  bookmarkError: Error | null;
   error: Error | null;
   reload: () => Promise<void>;
-  submit: (answer: string) => Promise<boolean | null>;
+  saveBookmark: () => Promise<void>;
+  submit: (
+    answer: string,
+    elapsedMs: number,
+    confidence: AttemptConfidence,
+  ) => Promise<QuestionSubmissionResult>;
+  saveDiagnosis: (code: DiagnosisCode) => Promise<void>;
 }
 
 export function useQuestionViewModel(key: string | undefined): QuestionViewModel {
   const services = useAppServices();
 
-  const query = useQuery({
-    queryKey: ["question", key],
-    enabled: Boolean(key),
-    queryFn: () => {
-      if (!key) {
-        return Promise.resolve(null);
-      }
+  const queryClient = useQueryClient();
 
-      return services.exercises.get.execute(key);
-    },
+  const [attemptId, setAttemptId] = useState<string | null>(null);
+
+  const query = useQuestionContentQuery({ key, services });
+
+  const data = query.data || null;
+
+  const bookmark = useQuestionBookmark({
+    data,
+    key,
+    queryClient,
+    services,
   });
 
-  const submitAnswer = (answer: string): Promise<boolean | null> => {
-    if (query.data) {
-      return submitQuestionAnswer({ services, data: query.data, answer });
-    }
+  const submitAnswer = createQuestionSubmissionAction({
+    data,
+    queryClient,
+    services,
+    setAttemptId,
+  });
 
-    return Promise.resolve(null);
-  };
+  const saveDiagnosis = createQuestionDiagnosisAction({ attemptId, services });
 
   const state: QuestionViewModelState = getQueryViewState(query);
 
   return {
     state,
-    data: query.data ?? null,
+    data,
+    bookmarked: bookmark.bookmarked,
+    bookmarkError: bookmark.error,
     error: query.error ?? null,
     reload: async (): Promise<void> => {
-      await query.refetch();
+      await Promise.all([query.refetch(), bookmark.reload()]);
     },
+    saveBookmark: bookmark.save,
     submit: submitAnswer,
+    saveDiagnosis,
   };
 }

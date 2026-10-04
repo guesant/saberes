@@ -1,18 +1,18 @@
-import { Paper, Typography } from "@guesant/saberes-ui";
+import { UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { EditorialBlock } from "@guesant/saberes-application";
 
-type SummaryBlockViewProps = {
+type UISummaryBlockViewProps = {
   block: Extract<EditorialBlock, { type: "summary" }>;
 };
 
-export function SummaryBlockView(props: SummaryBlockViewProps) {
+export function UISummaryBlockView(props: UISummaryBlockViewProps) {
   const { block } = props;
 
   const { t } = useTranslation();
 
   return (
-    <Paper
+    <UIPaper
       sx={{
         p: 2.5,
         my: 3,
@@ -20,9 +20,9 @@ export function SummaryBlockView(props: SummaryBlockViewProps) {
         color: "primary.contrastText",
       }}
     >
-      <Typography variant="h6">{block.title || t("content.summary")}</Typography>
+      <UITypography variant="h6">{block.title || t("content.summary")}</UITypography>
 
-      <Typography sx={{ mt: 1, whiteSpace: "pre-wrap" }}>{block.content}</Typography>
-    </Paper>
+      <UITypography sx={{ mt: 1, whiteSpace: "pre-wrap" }}>{block.content}</UITypography>
+    </UIPaper>
   );
 }

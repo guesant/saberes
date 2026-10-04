@@ -4,8 +4,8 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type InputAdornmentProps = MuiInputAdornmentProps;
+export type UIInputAdornmentProps = MuiInputAdornmentProps;
 
-export function InputAdornment(props: InputAdornmentProps): ReactElement {
+export function UIInputAdornment(props: UIInputAdornmentProps): ReactElement {
   return <MuiInputAdornment {...props} />;
 }

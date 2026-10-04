@@ -56,6 +56,10 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
+          src: "../../.local/content/content.sqlite",
+          dest: "data",
+        },
+        {
           src: "../pkg-adapter-data-v1/node_modules/sql.js/dist/sql-wasm.wasm",
           dest: ".",
         },
@@ -69,33 +73,68 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["icons/*.svg"],
       manifest: {
+        id: base,
         name: "Portal Guesant Saberes",
         short_name: "Saberes",
         description: "Estudos offline para processos seletivos e áreas de conhecimento.",
         lang: "pt-BR",
+        dir: "ltr",
         theme_color: "#152a4a",
         background_color: "#f7f8fb",
         display: "standalone",
+        display_override: ["window-controls-overlay", "standalone", "minimal-ui"],
+        orientation: "any",
+        scope: base,
         start_url: base,
+        categories: ["education", "productivity"],
+        prefer_related_applications: false,
+        launch_handler: { client_mode: "navigate-existing" },
+        shortcuts: [
+          {
+            name: "Catálogo",
+            short_name: "Catálogo",
+            description: "Explorar cursos, aulas e questões.",
+            url: `${base}catalogo`,
+            icons: [{ src: asset("icons/icon-192.svg"), sizes: "192x192", type: "image/svg+xml" }],
+          },
+          {
+            name: "Meu estudo",
+            short_name: "Meu estudo",
+            description: "Continuar a atividade atual.",
+            url: `${base}meu-estudo`,
+            icons: [{ src: asset("icons/icon-192.svg"), sizes: "192x192", type: "image/svg+xml" }],
+          },
+          {
+            name: "Revisões",
+            short_name: "Revisões",
+            description: "Revisar conteúdos pendentes.",
+            url: `${base}revisoes`,
+            icons: [{ src: asset("icons/icon-192.svg"), sizes: "192x192", type: "image/svg+xml" }],
+          },
+        ],
         icons: [
           {
             src: asset("icons/icon-192.svg"),
             sizes: "192x192",
             type: "image/svg+xml",
+            purpose: "any maskable",
           },
           {
             src: asset("icons/icon-512.svg"),
             sizes: "512x512",
             type: "image/svg+xml",
+            purpose: "any maskable",
           },
         ],
       },
       workbox: {
+        cacheId: "portal-guesant-saberes",
         cleanupOutdatedCaches: true,
         clientsClaim: true,
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallback: asset("index.html"),
         navigateFallbackDenylist: [/\/-\/backstage\/database\/schema(?:\/|$)/u],
-        globPatterns: ["**/*.{js,css,html,svg,wasm,json}"],
+        globPatterns: ["**/*.{js,css,html,svg,wasm,json,sqlite}"],
         skipWaiting: true,
         runtimeCaching: [
           {

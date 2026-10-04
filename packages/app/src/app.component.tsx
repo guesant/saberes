@@ -9,6 +9,24 @@ const CatalogView = lazy(() =>
   })),
 );
 
+const AssessmentView = lazy(() =>
+  import("./features/assessments/assessment-view.component").then(
+    ({ AssessmentView: Component }) => ({ default: Component }),
+  ),
+);
+
+const MyStudyView = lazy(() =>
+  import("./features/my-study/my-study-view.component").then(({ MyStudyView: Component }) => ({
+    default: Component,
+  })),
+);
+
+const ReviewView = lazy(() =>
+  import("./features/reviews/review-view.component").then(({ ReviewView: Component }) => ({
+    default: Component,
+  })),
+);
+
 const CourseView = lazy(() =>
   import("./features/courses/course-view.component").then(({ CourseView: Component }) => ({
     default: Component,
@@ -41,14 +59,24 @@ const TopicMapView = lazy(() =>
   })),
 );
 
+const TopicView = lazy(() =>
+  import("./features/topics/topic-view.component").then(({ TopicView: Component }) => ({
+    default: Component,
+  })),
+);
+
 export function App() {
   return (
     <Shell>
       <Suspense fallback={<ContentLoadingState />}>
         <Routes>
-          <Route element={<CatalogView />} path="/" />
+          <Route element={<MyStudyView />} path="/" />
 
           <Route element={<CatalogView />} path="/catalogo" />
+
+          <Route element={<MyStudyView />} path="/meu-estudo" />
+
+          <Route element={<ReviewView />} path="/revisoes" />
 
           <Route element={<CourseView />} path="/cursos/:slug" />
 
@@ -56,9 +84,13 @@ export function App() {
 
           <Route element={<TopicMapView />} path="/mapa/:slug" />
 
+          <Route element={<TopicView />} path="/topicos/:slug" />
+
           <Route element={<LessonView />} path="/licoes/:lessonId" />
 
           <Route element={<QuestionView />} path="/questoes/:questionId" />
+
+          <Route element={<AssessmentView />} path="/avaliacoes/:assessmentId" />
 
           <Route element={<Navigate replace to="/" />} path="*" />
         </Routes>

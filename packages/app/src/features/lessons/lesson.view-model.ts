@@ -1,57 +1,72 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
+import { createLessonProgressActions } from "./create-lesson-progress-actions.function";
 import { getLessonContentKey } from "./get-lesson-content-key.function";
-import { saveLessonBookmark } from "./save-lesson-bookmark.function";
-import { saveLessonProgress } from "./save-lesson-progress.function";
-import type { LessonReadModel, StudyRecord } from "@guesant/saberes-application";
+import { getLessonProgressState } from "./get-lesson-progress-state.function";
+import { getLessonViewData } from "./get-lesson-view-data.function";
+import { useLessonContentQuery } from "./use-lesson-content-query.hook";
+import { useLessonProgressQueries } from "./use-lesson-progress-queries.hook";
+import { useLessonStudySession } from "./use-lesson-study-session.hook";
+import type { LessonReadModel } from "@guesant/saberes-application";
 
 export type LessonViewModelState = "loading" | "error" | "ready";
 
 export interface LessonViewModel {
   state: LessonViewModelState;
   data: LessonReadModel | null;
+  completed: boolean;
+  bookmarked: boolean;
+  sectionIndex: number | undefined;
   error: Error | null;
+  progressError: Error | null;
   reload: () => Promise<void>;
-  saveProgress: (completed: boolean) => Promise<StudyRecord>;
-  saveBookmark: () => Promise<StudyRecord>;
+  saveProgress: (completed: boolean) => Promise<void>;
+  saveBookmark: () => Promise<void>;
+  saveSection: (sectionIndex: number) => Promise<void>;
 }
 
 export function useLessonViewModel(key: string | undefined): LessonViewModel {
   const services = useAppServices();
 
-  const query = useQuery({
-    queryKey: ["lesson", key],
-    enabled: Boolean(key),
-    queryFn: () => {
-      if (!key) {
-        return Promise.resolve(null);
-      }
+  const queryClient = useQueryClient();
 
-      return services.lessons.get.execute(key);
-    },
+  const query = useLessonContentQuery({ services, key });
+
+  const progressQueries = useLessonProgressQueries(services, key);
+
+  const lessonViewData = getLessonViewData(query.data);
+
+  const contentKey = getLessonContentKey({ lesson: lessonViewData.lesson, fallback: key });
+
+  useLessonStudySession({ services, contentKey, enabled: Boolean(lessonViewData.data) });
+
+  const progressState = getLessonProgressState({
+    progress: progressQueries.progress,
+    bookmarks: progressQueries.bookmarks,
+    contentKey,
   });
 
-  const lesson = query.data?.lesson;
-
-  const contentKey = getLessonContentKey({ lesson, fallback: key });
-
-  const saveProgress = (completed: boolean): Promise<StudyRecord> =>
-    saveLessonProgress({ services, contentKey, lesson, completed });
-
-  const saveBookmark = (): Promise<StudyRecord> =>
-    saveLessonBookmark({ services, contentKey, lesson });
-
-  const state: LessonViewModelState = getQueryViewState(query);
+  const progressActions = createLessonProgressActions({
+    services,
+    queryClient,
+    contentKey,
+    lesson: lessonViewData.lesson,
+    queryKey: key,
+    completed: progressState.completed,
+  });
 
   return {
-    state,
-    data: query.data ?? null,
+    state: getQueryViewState(query),
+    data: lessonViewData.data,
+    completed: progressState.completed,
+    bookmarked: progressState.bookmarked,
+    sectionIndex: progressState.sectionIndex,
     error: query.error ?? null,
-    reload: async (): Promise<void> => {
-      await query.refetch();
-    },
-    saveProgress,
-    saveBookmark,
+    progressError: progressQueries.progressError || progressQueries.bookmarksError || null,
+    reload: (): Promise<void> => query.refetch().then(() => undefined),
+    saveProgress: progressActions.saveProgress,
+    saveBookmark: progressActions.saveBookmark,
+    saveSection: progressActions.saveSection,
   };
 }

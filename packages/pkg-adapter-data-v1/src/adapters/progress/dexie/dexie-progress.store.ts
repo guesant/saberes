@@ -1,125 +1,140 @@
-import { progressDb } from "../../../storage/progress.database";
 import type { AttemptDiagnosis } from "../../../storage/attempt-diagnosis.interface";
 import type { Attempt } from "../../../storage/attempt.type";
+import type { ProgressDatabaseContract } from "../../../storage/progress-database.contract";
+import type { ProgressStorageContract } from "../../../storage/progress-storage.contract";
 import type { ReviewTarget } from "../../../storage/review-target.type";
 import type { DiagnosisRecord, AttemptRecord, ReviewTargetRecord } from "@guesant/saberes-domain";
 
 type SessionRecord = { id: string; [key: string]: unknown };
 
-export class DexieProgressStore {
+export class DexieProgressStore implements ProgressStorageContract {
+  public constructor(private readonly database: ProgressDatabaseContract) {}
+
   listAttempts() {
-    return progressDb.listAttempts() as Promise<AttemptRecord[]>;
+    return this.database.listAttempts() as Promise<AttemptRecord[]>;
   }
 
   saveAttempt(attempt: Attempt) {
-    return progressDb.saveAttempt(attempt);
+    return this.database.saveAttempt(attempt);
   }
 
   recordAttempt(attempt: Attempt) {
-    return progressDb.saveAttempt(attempt);
+    return this.database.saveAttempt(attempt);
   }
 
-  saveSession(session: SessionRecord) {
-    return progressDb.saveSession(session);
+  async saveSession(session: SessionRecord): Promise<void> {
+    await this.database.saveSession(session);
   }
 
   getSession(id: string) {
-    return progressDb.getSession(id);
+    return this.database.getSession(id);
   }
 
-  saveSetting(key: string, value: unknown) {
-    return progressDb.saveSetting(key, value);
+  async saveSetting(key: string, value: unknown): Promise<void> {
+    await this.database.saveSetting(key, value);
   }
 
   getSetting(key: string) {
-    return progressDb.getSetting(key);
+    return this.database.getSetting(key);
   }
 
   clear() {
-    return progressDb.clearProgress();
+    return this.database.clearProgress();
   }
 
   enrollCourse(contentKey: string, data: Record<string, unknown> = {}) {
-    return progressDb.enrollCourse(contentKey, data);
+    return this.database.enrollCourse(contentKey, data);
   }
 
   listEnrollments() {
-    return progressDb.listEnrollments();
+    return this.database.listEnrollments();
   }
 
   saveLessonProgress(contentKey: string, data: Record<string, unknown> = {}) {
-    return progressDb.saveLessonProgress(contentKey, data);
+    return this.database.saveLessonProgress(contentKey, data);
   }
 
   listLessonProgress() {
-    return progressDb.listLessonProgress();
+    return this.database.listLessonProgress();
   }
 
   savePlanProgress(contentKey: string, data: Record<string, unknown> = {}) {
-    return progressDb.savePlanProgress(contentKey, data);
+    return this.database.savePlanProgress(contentKey, data);
   }
 
   listPlanProgress() {
-    return progressDb.listPlanProgress();
+    return this.database.listPlanProgress();
   }
 
   saveBookmark(contentKey: string, data: Record<string, unknown> = {}) {
-    return progressDb.saveBookmark(contentKey, data);
+    return this.database.saveBookmark(contentKey, data);
   }
 
   listBookmarks() {
-    return progressDb.listBookmarks();
+    return this.database.listBookmarks();
   }
 
   saveReviewItem(contentKey: string, data: Record<string, unknown> = {}) {
-    return progressDb.saveReviewItem(contentKey, data);
+    return this.database.saveReviewItem(contentKey, data);
   }
 
   listReviewItems() {
-    return progressDb.listReviewItems();
+    return this.database.listReviewItems();
   }
 
   saveReviewTarget(contentKey: string, data: Partial<ReviewTarget> = {}) {
-    return progressDb.saveReviewTarget(contentKey, data);
+    return this.database.saveReviewTarget(contentKey, data);
   }
 
   listReviewTargets() {
-    return progressDb.listReviewTargets() as Promise<ReviewTargetRecord[]>;
+    return this.database.listReviewTargets() as Promise<ReviewTargetRecord[]>;
   }
 
-  saveDiagnosis(diagnosis: DiagnosisRecord) {
-    return progressDb.saveDiagnosis(diagnosis as AttemptDiagnosis);
+  async saveDiagnosis(diagnosis: DiagnosisRecord): Promise<void> {
+    await this.database.saveDiagnosis(diagnosis as AttemptDiagnosis);
   }
 
   listDiagnoses() {
-    return progressDb.listDiagnoses();
+    return this.database.listDiagnoses();
   }
 
   saveDailyChallenge(contentKey: string, data: Record<string, unknown> = {}) {
-    return progressDb.saveDailyChallenge(contentKey, data);
+    return this.database.saveDailyChallenge(contentKey, data);
   }
 
   listDailyChallenges() {
-    return progressDb.listDailyChallenges();
+    return this.database.listDailyChallenges();
   }
 
   saveStreak(data: Record<string, unknown> = {}) {
-    return progressDb.saveStreak(data);
+    return this.database.saveStreak(data);
   }
 
   getStreak() {
-    return progressDb.getStreak();
+    return this.database.getStreak();
   }
 
   saveAchievement(contentKey: string, data: Record<string, unknown> = {}) {
-    return progressDb.saveAchievement(contentKey, data);
+    return this.database.saveAchievement(contentKey, data);
   }
 
   listAchievements() {
-    return progressDb.listAchievements();
+    return this.database.listAchievements();
   }
 
   listTopicMastery() {
-    return progressDb.listTopicMastery();
+    return this.database.listTopicMastery();
+  }
+
+  exportProgress() {
+    return this.database.exportProgress();
+  }
+
+  importProgress(snapshot: string) {
+    return this.database.importProgress(snapshot);
+  }
+
+  saveTopicMastery(contentKey: string, data: Record<string, unknown> = {}) {
+    return this.database.saveTopicMastery(contentKey, data);
   }
 }

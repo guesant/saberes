@@ -1,7 +1,14 @@
-import { Card, CardContent, Stack, Typography } from "@guesant/saberes-ui";
+import {
+  UICard,
+  UICardContent,
+  UIContentGroup,
+  UILinearProgress,
+  UITypography,
+} from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { createCompletedStepSet } from "./create-completed-step-set.function";
 import { getStudyPlanDescription } from "./get-study-plan-description.function";
+import { getStudyPlanProgress } from "./get-study-plan-progress.function";
 import { StudyPlanSteps } from "./study-plan-steps.component";
 import type { StudyPlanReadModel } from "@guesant/saberes-application";
 
@@ -18,21 +25,35 @@ export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {
 
   const completed = createCompletedStepSet(progress);
 
+  const planProgress = getStudyPlanProgress({ steps: data.steps, completed });
+
   return (
     <>
-      <Typography variant="overline">{t("plan.eyebrow")}</Typography>
+      <UITypography variant="overline">{t("plan.eyebrow")}</UITypography>
 
-      <Typography variant="h3">{String(data.plan?.title)}</Typography>
+      <UITypography variant="h3">{String(data.plan?.title)}</UITypography>
 
-      <Typography color="text.secondary">{getStudyPlanDescription(data)}</Typography>
+      <UITypography color="text.secondary">{getStudyPlanDescription(data)}</UITypography>
 
-      <Stack spacing={2}>
+      <UIContentGroup variant="tight">
+        <UITypography variant="body2">
+          {t("plan.progress", {
+            completed: planProgress.completedSteps,
+            percentage: planProgress.percentage,
+            total: planProgress.totalSteps,
+          })}
+        </UITypography>
+
+        <UILinearProgress value={planProgress.percentage} variant="determinate" />
+      </UIContentGroup>
+
+      <UIContentGroup variant="content">
         <StudyPlanSteps steps={data.steps} completed={completed} onToggle={onToggle} />
-      </Stack>
+      </UIContentGroup>
 
-      <Card>
-        <CardContent>{t("plan.editorialNotice")}</CardContent>
-      </Card>
+      <UICard>
+        <UICardContent>{t("plan.editorialNotice")}</UICardContent>
+      </UICard>
     </>
   );
 }

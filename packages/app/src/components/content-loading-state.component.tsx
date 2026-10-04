@@ -1,4 +1,8 @@
-import { CircularProgress, Stack, Typography } from "@guesant/saberes-ui";
+import {
+  UICircularProgress,
+  UIContentLoadingLabel,
+  UIContentLoadingLayout,
+} from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
 export type ContentLoadingStateProps = {
@@ -11,12 +15,10 @@ export function ContentLoadingState(props: ContentLoadingStateProps) {
   const { t } = useTranslation();
 
   return (
-    <Stack alignItems="center" role="status" aria-live="polite" sx={{ py: 10 }}>
-      <CircularProgress aria-label={t("common.loadingContent")} />
+    <UIContentLoadingLayout>
+      <UICircularProgress aria-label={t("common.loadingContent")} />
 
-      <Typography sx={{ mt: 2 }} color="text.secondary">
-        {label || t("common.loadingContent")}
-      </Typography>
-    </Stack>
+      <UIContentLoadingLabel>{label || t("common.loadingContent")}</UIContentLoadingLabel>
+    </UIContentLoadingLayout>
   );
 }

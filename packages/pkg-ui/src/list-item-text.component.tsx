@@ -4,8 +4,8 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type ListItemTextProps = MuiListItemTextProps;
+export type UIListItemTextProps = MuiListItemTextProps;
 
-export function ListItemText(props: ListItemTextProps): ReactElement {
+export function UIListItemText(props: UIListItemTextProps): ReactElement {
   return <MuiListItemText {...props} />;
 }

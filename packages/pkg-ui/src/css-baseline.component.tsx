@@ -4,8 +4,8 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type CssBaselineProps = MuiCssBaselineProps;
+export type UICssBaselineProps = MuiCssBaselineProps;
 
-export function CssBaseline(props: CssBaselineProps): ReactElement {
+export function UICssBaseline(props: UICssBaselineProps): ReactElement {
   return <MuiCssBaseline {...props} />;
 }

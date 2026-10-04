@@ -1,4 +1,4 @@
-import { Button } from "@guesant/saberes-ui";
+import { UIButton } from "@guesant/saberes-ui";
 import { Link } from "react-router-dom";
 
 export type NavigationButtonProps = {
@@ -8,8 +8,8 @@ export type NavigationButtonProps = {
 
 export function NavigationButton(props: NavigationButtonProps) {
   return (
-    <Button component={Link} color="inherit" to={props.to}>
+    <UIButton component={Link} color="inherit" to={props.to}>
       {props.label}
-    </Button>
+    </UIButton>
   );
 }

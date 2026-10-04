@@ -4,8 +4,8 @@ import {
 } from "@mui/material/styles";
 import type { ReactElement } from "react";
 
-export type ThemeProviderProps = MuiThemeProviderProps;
+export type UIThemeProviderProps = MuiThemeProviderProps;
 
-export function ThemeProvider(props: ThemeProviderProps): ReactElement {
+export function UIThemeProvider(props: UIThemeProviderProps): ReactElement {
   return <MuiThemeProvider {...props} />;
 }

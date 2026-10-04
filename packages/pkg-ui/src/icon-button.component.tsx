@@ -4,8 +4,8 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type IconButtonProps = MuiIconButtonProps;
+export type UIIconButtonProps = MuiIconButtonProps;
 
-export function IconButton(props: IconButtonProps): ReactElement {
+export function UIIconButton(props: UIIconButtonProps): ReactElement {
   return <MuiIconButton {...props} />;
 }

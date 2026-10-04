@@ -1,4 +1,4 @@
-import { Stack } from "@guesant/saberes-ui";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { CourseModuleCard } from "./course-module-card.component";
 
 export type CourseModulesProps = {
@@ -8,10 +8,10 @@ export type CourseModulesProps = {
 
 export function CourseModules(props: CourseModulesProps) {
   return (
-    <Stack spacing={2}>
+    <UIContentGroup variant="content">
       {props.modules.map((module) => (
         <CourseModuleCard key={String(module.id)} module={module} items={props.items} />
       ))}
-    </Stack>
+    </UIContentGroup>
   );
 }

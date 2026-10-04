@@ -47,6 +47,7 @@
     "npm:fake-indexeddb@^6.2.1": "6.2.5",
     "npm:graphology@0.26": "0.26.0",
     "npm:i18next@^25.5.2": "25.10.10_typescript@5.9.3",
+    "npm:inversify@^8.2.0": "8.2.3_reflect-metadata@0.2.2",
     "npm:jscpd@^5.4.0": "5.4.0",
     "npm:jsdom@^26.1.0": "26.1.0",
     "npm:katex@~0.16.25": "0.16.47",
@@ -1982,6 +1983,42 @@
     },
     "@humanwhocodes/retry@0.4.3": {
       "integrity": "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="
+    },
+    "@inversifyjs/common@2.0.1": {
+      "integrity": "sha512-pJAR4IAcT2jkYfZ9bD9XhtUDBLJRr8QOiSjb+2XyaHru6DLvu0VD2Id2iP7+tVRKkEe3XFUwDUEdKxcYlF699Q=="
+    },
+    "@inversifyjs/container@3.1.3_reflect-metadata@0.2.2": {
+      "integrity": "sha512-+CZLXKzU5uwDbkY1WamY1Gnbtz0sNl62cqfd1vvI13Ei8Fe29sCwgfyEWMOzYcJhs2y2wBmYGANPDH5yq4VdTg==",
+      "dependencies": [
+        "@inversifyjs/common",
+        "@inversifyjs/core",
+        "@inversifyjs/plugin",
+        "@inversifyjs/reflect-metadata-utils",
+        "reflect-metadata"
+      ]
+    },
+    "@inversifyjs/core@15.0.1_reflect-metadata@0.2.2": {
+      "integrity": "sha512-4C/hLEdYo3xG0Ez61kTP3nikINmCQz1O3OHU7dfbi9UC6Of5Qly2CLd0OSoZd6M8fumk51A0tuBxPIqs28CpNg==",
+      "dependencies": [
+        "@inversifyjs/common",
+        "@inversifyjs/prototype-utils",
+        "@inversifyjs/reflect-metadata-utils"
+      ]
+    },
+    "@inversifyjs/plugin@0.3.1": {
+      "integrity": "sha512-ByklTw731fydBCTMwMpkmwm+lv0U+JWm9NEqRsz3n5KzAC5Om2XtLjqzEC2w+8Ote3gVC3Qxsx6YmG9XLIZpvg=="
+    },
+    "@inversifyjs/prototype-utils@0.2.1": {
+      "integrity": "sha512-53cVE3cw+RxnSkGlg+jOFNSox2owJF9Fv3HgFKe4f+4aPullscltIiio88QRkx2Sc5yo3VlqPsXQFGw2CVJZnw==",
+      "dependencies": [
+        "@inversifyjs/common"
+      ]
+    },
+    "@inversifyjs/reflect-metadata-utils@1.5.0_reflect-metadata@0.2.2": {
+      "integrity": "sha512-NpJVbRbuQ6Ao2vO+aw96un3oHDFCwXI0+pplsFt0Jh0gyR8DWk4m7ml/GBNMjdbeKVW/QgJ2S6NGXjk042uwqg==",
+      "dependencies": [
+        "reflect-metadata"
+      ]
     },
     "@isaacs/balanced-match@4.0.1": {
       "integrity": "sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ=="
@@ -6717,6 +6754,14 @@
         "tslib@2.8.1"
       ]
     },
+    "inversify@8.2.3_reflect-metadata@0.2.2": {
+      "integrity": "sha512-OmTj/HB/lEV6WFaeHXBDXdUYWwtadF8QTbyEKT7LUZMzOkw5xF+Nrm1GTjIhBOrAUN4K65vtqKgxRWlSHzQH7w==",
+      "dependencies": [
+        "@inversifyjs/common",
+        "@inversifyjs/container",
+        "@inversifyjs/core"
+      ]
+    },
     "ip-address@10.7.2": {
       "integrity": "sha512-7H/2gFSIitxc0hG3nOI1glS8QLo/EHBFFLk8vEUjXY/xu0AdL8jZ9U1IzO2PUm0d2D/ofQcAifb0g6OBkt8U7w=="
     },
@@ -9093,6 +9138,9 @@
         "@eslint-community/regexpp"
       ]
     },
+    "reflect-metadata@0.2.2": {
+      "integrity": "sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q=="
+    },
     "reflect.getprototypeof@1.0.10": {
       "integrity": "sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==",
       "dependencies": [
@@ -11283,7 +11331,9 @@
             "npm:@testing-library/react@^16.3.0",
             "npm:@types/react-dom@^19.1.9",
             "npm:@types/react@^19.1.13",
+            "npm:date-fns@^4.1.0",
             "npm:i18next@^25.5.2",
+            "npm:inversify@^8.2.0",
             "npm:react-dom@^19.1.1",
             "npm:react-i18next@^16.0.1",
             "npm:react-router-dom@^7.9.3",

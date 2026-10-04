@@ -1,4 +1,4 @@
-import { ListItem, ListItemText } from "@guesant/saberes-ui";
+import { UIListItem, UIListItemText } from "@guesant/saberes-ui";
 import { CourseItemAction } from "./course-item-action.component";
 
 export type CourseItemRowProps = {
@@ -9,8 +9,8 @@ export function CourseItemRow(props: CourseItemRowProps) {
   const { item } = props;
 
   return (
-    <ListItem divider secondaryAction={<CourseItemAction item={item} />}>
-      <ListItemText primary={String(item.title)} secondary={String(item.description || "")} />
-    </ListItem>
+    <UIListItem divider secondaryAction={<CourseItemAction item={item} />}>
+      <UIListItemText primary={String(item.title)} secondary={String(item.description || "")} />
+    </UIListItem>
   );
 }

@@ -1,4 +1,4 @@
-import { List } from "@guesant/saberes-ui";
+import { UIList } from "@guesant/saberes-ui";
 import { useLocation } from "react-router-dom";
 import { NavigationItem } from "./navigation-item.component";
 
@@ -11,7 +11,7 @@ export function NavigationDrawer(props: NavigationDrawerProps) {
   const location = useLocation();
 
   return (
-    <List>
+    <UIList>
       {props.links.map((link) => (
         <NavigationItem
           key={link.to}
@@ -21,6 +21,6 @@ export function NavigationDrawer(props: NavigationDrawerProps) {
           to={link.to}
         />
       ))}
-    </List>
+    </UIList>
   );
 }

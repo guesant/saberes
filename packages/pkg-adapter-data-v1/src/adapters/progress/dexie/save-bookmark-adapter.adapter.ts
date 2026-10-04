@@ -1,8 +1,8 @@
-import { DexieProgressStore } from "./dexie-progress.store";
+import type { ProgressStorageContract } from "../../../storage/progress-storage.contract";
 import type { SaveBookmarkPort } from "@guesant/saberes-application";
 
 export class SaveBookmarkAdapter implements SaveBookmarkPort {
-  public constructor(private readonly store: DexieProgressStore) {}
+  public constructor(private readonly store: ProgressStorageContract) {}
 
   public execute(
     input: Parameters<SaveBookmarkPort["execute"]>[0],

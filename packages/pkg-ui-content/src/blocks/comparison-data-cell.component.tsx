@@ -1,9 +1,9 @@
-import { HtmlTableCell } from "@guesant/saberes-ui";
+import { UIHtmlTableCell } from "@guesant/saberes-ui";
 
-type ComparisonDataCellProps = {
+type UIComparisonDataCellProps = {
   value: string;
 };
 
-export function ComparisonDataCell(props: ComparisonDataCellProps) {
-  return <HtmlTableCell>{props.value}</HtmlTableCell>;
+export function UIComparisonDataCell(props: UIComparisonDataCellProps) {
+  return <UIHtmlTableCell>{props.value}</UIHtmlTableCell>;
 }

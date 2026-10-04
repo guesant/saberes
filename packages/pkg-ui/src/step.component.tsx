@@ -1,8 +1,8 @@
 import { Step as MuiStep, type StepProps as MuiStepProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type StepProps = MuiStepProps;
+export type UIStepProps = MuiStepProps;
 
-export function Step(props: StepProps): ReactElement {
+export function UIStep(props: UIStepProps): ReactElement {
   return <MuiStep {...props} />;
 }

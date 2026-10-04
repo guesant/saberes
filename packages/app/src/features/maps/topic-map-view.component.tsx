@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ContentErrorState } from "../../components/content-error-state.component";
 import { ContentLoadingState } from "../../components/content-loading-state.component";
 import { ContentNotFoundState } from "../../components/content-not-found-state.component";
+import { TopicMapProgressError } from "./topic-map-progress-error.component";
 import { TopicMapReadyView } from "./topic-map-ready-view.component";
 import { useTopicMapViewModel } from "./topic-map.view-model";
 
@@ -25,5 +26,10 @@ export function TopicMapView() {
     return <ContentNotFoundState label={t("map.notFound")} />;
   }
 
-  return <TopicMapReadyView data={viewModel.data} />;
+  return (
+    <>
+      <TopicMapProgressError error={viewModel.progressError} />
+      <TopicMapReadyView data={viewModel.data} />
+    </>
+  );
 }

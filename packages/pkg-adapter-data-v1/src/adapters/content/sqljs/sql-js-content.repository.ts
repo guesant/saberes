@@ -1,6 +1,8 @@
 import { CatalogCardType } from "@guesant/saberes-domain";
 import { loadContentDatabase } from "./database/load-content-database.function";
+import { getCatalogFilters } from "./get-catalog-filters.function";
 import { getContentIdentifier } from "./get-content-identifier.function";
+import type { ContentRepositoryContract } from "./content-repository.contract";
 import type { ContentDatabase } from "./database/content-database.type";
 import type {
   AssessmentReadModel,
@@ -14,7 +16,7 @@ import type {
   TopicMapReadModel,
 } from "@guesant/saberes-application";
 
-export class SqlJsContentRepository {
+export class SqlJsContentRepository implements ContentRepositoryContract {
   private databasePromise?: Promise<ContentDatabase>;
 
   private database() {
@@ -26,6 +28,8 @@ export class SqlJsContentRepository {
   async getCatalog(filters: CatalogFilters = {}): Promise<CatalogReadModel> {
     const db = await this.database();
 
+    const normalizedFilters = getCatalogFilters(filters);
+
     const courses = db.query(
       "SELECT c.*, COUNT(DISTINCT m.id) module_count, COALESCE(SUM(i.duration_minutes), 0) total_minutes FROM learning_courses c LEFT JOIN learning_course_modules m ON m.learning_course_id = c.id LEFT JOIN learning_course_items i ON i.module_id = m.id WHERE c.is_published = 1 GROUP BY c.id ORDER BY c.course_type, c.title",
     );
@@ -35,7 +39,7 @@ export class SqlJsContentRepository {
     );
 
     const plans = db.query(
-      "SELECT p.*, e.year, COUNT(s.id) step_count FROM study_plans p LEFT JOIN editions e ON e.id = p.edition_id LEFT JOIN study_plan_steps s ON s.study_plan_id = p.id WHERE p.is_published = 1 GROUP BY p.id ORDER BY p.title",
+      "SELECT p.*, e.year, ap.name process_name, COUNT(s.id) step_count FROM study_plans p LEFT JOIN editions e ON e.id = p.edition_id LEFT JOIN admission_processes ap ON ap.id = e.admission_process_id LEFT JOIN study_plan_steps s ON s.study_plan_id = p.id WHERE p.is_published = 1 GROUP BY p.id ORDER BY p.title",
     );
 
     const lessons = db.query(
@@ -50,7 +54,21 @@ export class SqlJsContentRepository {
       "SELECT qo.id, qo.number, e.year, ap.name process_name FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN papers p ON p.id = qo.paper_id JOIN stages st ON st.id = p.stage_id JOIN editions e ON e.id = st.edition_id JOIN admission_processes ap ON ap.id = e.admission_process_id WHERE q.status = 'published' ORDER BY e.year DESC, qo.number LIMIT 40",
     );
 
-    const search = filters.search?.trim().toLocaleLowerCase();
+    const { search } = normalizedFilters;
+
+    const { processName } = normalizedFilters;
+
+    const hasYearMatch = (value: unknown) =>
+      !normalizedFilters.year || Number(value || 0) === normalizedFilters.year;
+
+    const hasProcessMatch = (value: unknown) =>
+      !processName ||
+      String(value || "")
+        .toLocaleLowerCase()
+        .includes(processName);
+
+    const hasCourseTypeMatch = (value: unknown) =>
+      !normalizedFilters.courseType || String(value || "") === normalizedFilters.courseType;
 
     const hasCatalogMatch = (value: unknown) =>
       !search ||
@@ -60,7 +78,11 @@ export class SqlJsContentRepository {
 
     return {
       courses: courses
-        .filter((item) => hasCatalogMatch(`${item.title} ${item.description || ""}`))
+        .filter(
+          (item) =>
+            hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
+            hasCourseTypeMatch(item.course_type),
+        )
         .map((item) => ({
           ...item,
           id: item.id as number,
@@ -73,7 +95,12 @@ export class SqlJsContentRepository {
           courseType: String(item.course_type || ""),
         })),
       maps: maps
-        .filter((item) => hasCatalogMatch(`${item.title} ${item.description || ""}`))
+        .filter(
+          (item) =>
+            hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
+            hasProcessMatch(item.process_name) &&
+            hasYearMatch(item.year),
+        )
         .map((item) => ({
           ...item,
           id: item.id as number,
@@ -86,7 +113,12 @@ export class SqlJsContentRepository {
           year: Number(item.year || 0),
         })),
       plans: plans
-        .filter((item) => hasCatalogMatch(`${item.title} ${item.description || ""}`))
+        .filter(
+          (item) =>
+            hasCatalogMatch(`${item.title} ${item.description || ""}`) &&
+            hasProcessMatch(item.process_name) &&
+            hasYearMatch(item.year),
+        )
         .map((item) => ({
           ...item,
           id: item.id as number,
@@ -95,6 +127,7 @@ export class SqlJsContentRepository {
           slug: String(item.slug),
           description: String(item.description || ""),
           stepCount: Number(item.step_count || 0),
+          processName: String(item.process_name || ""),
           year: Number(item.year || 0),
         })),
       content: [
@@ -129,7 +162,12 @@ export class SqlJsContentRepository {
             processName: String(item.process_name || ""),
             year: Number(item.year || 0),
           }))
-          .filter((item) => hasCatalogMatch(item.title)),
+          .filter(
+            (item) =>
+              hasCatalogMatch(item.title) &&
+              hasProcessMatch(item.processName) &&
+              hasYearMatch(item.year),
+          ),
       ],
     };
   }
@@ -216,11 +254,14 @@ export class SqlJsContentRepository {
   async getAssessment(key: ContentKey | string): Promise<AssessmentReadModel | null> {
     const db = await this.database();
 
-    const id = Number(getContentIdentifier(key));
+    const identifier = getContentIdentifier(key);
 
-    const assessment = db.query("SELECT * FROM assessment_sets WHERE id = ? AND is_published = 1", [
-      id,
-    ])[0];
+    const id = Number(identifier) || 0;
+
+    const assessment = db.query(
+      "SELECT * FROM assessment_sets WHERE is_published = 1 AND (id = ? OR slug = ?)",
+      [id, identifier],
+    )[0];
 
     if (!assessment) {
       return null;
@@ -230,7 +271,7 @@ export class SqlJsContentRepository {
       assessment,
       items: db.query(
         "SELECT * FROM assessment_set_items WHERE assessment_set_id = ? ORDER BY position",
-        [id],
+        [assessment.id],
       ),
     };
   }
@@ -254,6 +295,40 @@ export class SqlJsContentRepository {
         [map.id],
       ),
       edges: db.query("SELECT * FROM learning_map_edges WHERE map_id = ?", [map.id]),
+    };
+  }
+
+  async getTopic(slug: string) {
+    const db = await this.database();
+
+    const topic = db.query("SELECT * FROM topics WHERE slug = ?", [slug])[0];
+
+    if (!topic) {
+      return null;
+    }
+
+    return {
+      topic,
+      children: db.query(
+        "SELECT slug, name, description FROM topics WHERE parent_id = ? ORDER BY name",
+        [topic.id],
+      ),
+      lessons: db.query(
+        "SELECT DISTINCT l.id, l.slug, l.title, l.intro description FROM lessons l JOIN lesson_topics lt ON lt.lesson_id = l.id LEFT JOIN curriculum_topics ct ON ct.id = lt.curriculum_topic_id WHERE l.is_published = 1 AND (lt.topic_id = ? OR ct.topic_id = ?) ORDER BY l.title",
+        [topic.id, topic.id],
+      ),
+      questions: db.query(
+        "SELECT DISTINCT qo.id, qo.number, q.statement, q.difficulty FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN question_topics qt ON qt.question_occurrence_id = qo.id JOIN curriculum_topics ct ON ct.id = qt.curriculum_topic_id WHERE q.status = 'published' AND ct.topic_id = ? ORDER BY qo.number",
+        [topic.id],
+      ),
+      prerequisites: db.query(
+        "SELECT t.slug, t.name, t.description, tr.note FROM topic_relations tr JOIN topics t ON t.id = tr.related_topic_id WHERE tr.topic_id = ? AND tr.relation_type = 'prerequisite' ORDER BY t.name",
+        [topic.id],
+      ),
+      related: db.query(
+        "SELECT t.slug, t.name, t.description, tr.relation_type FROM topic_relations tr JOIN topics t ON t.id = tr.related_topic_id WHERE tr.topic_id = ? ORDER BY t.name",
+        [topic.id],
+      ),
     };
   }
 

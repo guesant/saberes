@@ -1,4 +1,4 @@
-import { Stack } from "@guesant/saberes-ui";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { ErrorMessage } from "./error-message.component";
 import { RetryButton } from "./retry-button.component";
 
@@ -9,10 +9,10 @@ type ContentErrorDetailsProps = {
 
 export function ContentErrorDetails(props: ContentErrorDetailsProps) {
   return (
-    <Stack spacing={1}>
+    <UIContentGroup variant="tight">
       <ErrorMessage message={props.message} />
 
       <RetryButton onRetry={props.onRetry} />
-    </Stack>
+    </UIContentGroup>
   );
 }

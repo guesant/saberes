@@ -1,8 +1,8 @@
 import { Alert as MuiAlert, type AlertProps as MuiAlertProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type AlertProps = MuiAlertProps;
+export type UIAlertProps = MuiAlertProps;
 
-export function Alert(props: AlertProps): ReactElement {
+export function UIAlert(props: UIAlertProps): ReactElement {
   return <MuiAlert {...props} />;
 }

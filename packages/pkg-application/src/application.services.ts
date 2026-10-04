@@ -1,6 +1,7 @@
 import { AddStudyPointsCommandHandler } from "./commands/add-study-points.command-handler";
 import { ClearProgressCommandHandler } from "./commands/clear-progress.command-handler";
 import { EnrollCourseCommandHandler } from "./commands/enroll-course.command-handler";
+import { ImportProgressCommandHandler } from "./commands/import-progress.command-handler";
 import { RecordAttemptCommandHandler } from "./commands/record-attempt.command-handler";
 import { RecordStudyActivityCommandHandler } from "./commands/record-study-activity.command-handler";
 import { SaveAchievementCommandHandler } from "./commands/save-achievement.command-handler";
@@ -15,12 +16,14 @@ import { SaveReviewTargetCommandHandler } from "./commands/save-review-target.co
 import { SaveSessionCommandHandler } from "./commands/save-session.command-handler";
 import { SaveSettingCommandHandler } from "./commands/save-setting.command-handler";
 import { SaveStreakCommandHandler } from "./commands/save-streak.command-handler";
+import { SaveTopicMasteryCommandHandler } from "./commands/save-topic-mastery.command-handler";
 import { ScheduleReviewCommandHandler } from "./commands/schedule-review.command-handler";
 import { SyncAchievementsCommandHandler } from "./commands/sync-achievements.command-handler";
 import { AchievementDefinitionsQueryHandler } from "./queries/achievement-definitions.query-handler";
 import { ActionForDiagnosisQueryHandler } from "./queries/action-for-diagnosis.query-handler";
 import { BuildKnowledgeGraphQueryHandler } from "./queries/build-knowledge-graph.query-handler";
 import { CalculateTopicMasteryQueryHandler } from "./queries/calculate-topic-mastery.query-handler";
+import { ExportProgressQueryHandler } from "./queries/export-progress.query-handler";
 import { GetAssessmentQueryHandler } from "./queries/get-assessment.query-handler";
 import { GetCatalogQueryHandler } from "./queries/get-catalog.query-handler";
 import { GetCourseQueryHandler } from "./queries/get-course.query-handler";
@@ -31,6 +34,7 @@ import { GetSettingQueryHandler } from "./queries/get-setting.query-handler";
 import { GetStreakQueryHandler } from "./queries/get-streak.query-handler";
 import { GetStudyPlanQueryHandler } from "./queries/get-study-plan.query-handler";
 import { GetTopicMapQueryHandler } from "./queries/get-topic-map.query-handler";
+import { GetTopicQueryHandler } from "./queries/get-topic.query-handler";
 import { ListAchievementsQueryHandler } from "./queries/list-achievements.query-handler";
 import { ListAttemptsQueryHandler } from "./queries/list-attempts.query-handler";
 import { ListBookmarksQueryHandler } from "./queries/list-bookmarks.query-handler";
@@ -47,8 +51,12 @@ import { PreviewReviewQueryHandler } from "./queries/preview-review.query-handle
 import { RecommendNextQueryHandler } from "./queries/recommend-next.query-handler";
 import { SuggestDiagnosisQueryHandler } from "./queries/suggest-diagnosis.query-handler";
 import type { ApplicationPorts } from "./application.ports";
+import type { IdPort } from "./ports/id-port.port";
 
 export interface ApplicationServices {
+  platform: {
+    ids: IdPort;
+  };
   catalog: {
     get: GetCatalogQueryHandler;
   };
@@ -72,6 +80,9 @@ export interface ApplicationServices {
     get: GetTopicMapQueryHandler;
     buildGraph: BuildKnowledgeGraphQueryHandler;
   };
+  topics: {
+    get: GetTopicQueryHandler;
+  };
   editorial: {
     parseBlocks: ParseEditorialBlocksQueryHandler;
   };
@@ -89,6 +100,8 @@ export interface ApplicationServices {
     getSetting: GetSettingQueryHandler;
     clearProgress: ClearProgressCommandHandler;
     enrollCourse: EnrollCourseCommandHandler;
+    exportProgress: ExportProgressQueryHandler;
+    importProgress: ImportProgressCommandHandler;
     listEnrollments: ListEnrollmentsQueryHandler;
     saveLessonProgress: SaveLessonProgressCommandHandler;
     listLessonProgress: ListLessonProgressQueryHandler;
@@ -105,6 +118,7 @@ export interface ApplicationServices {
     saveDailyChallenge: SaveDailyChallengeCommandHandler;
     listDailyChallenges: ListDailyChallengesQueryHandler;
     saveStreak: SaveStreakCommandHandler;
+    saveTopicMastery: SaveTopicMasteryCommandHandler;
     getStreak: GetStreakQueryHandler;
     saveAchievement: SaveAchievementCommandHandler;
     listAchievements: ListAchievementsQueryHandler;
@@ -139,6 +153,8 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
 
   const getTopicMap = new GetTopicMapQueryHandler(ports.getTopicMap);
 
+  const getTopic = new GetTopicQueryHandler(ports.getTopic);
+
   const getStudyPlan = new GetStudyPlanQueryHandler(ports.getStudyPlan);
 
   const listAttempts = new ListAttemptsQueryHandler(ports.listAttempts);
@@ -158,6 +174,10 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
   const clearProgress = new ClearProgressCommandHandler(ports.clearProgress);
 
   const enrollCourse = new EnrollCourseCommandHandler(ports.enrollCourse);
+
+  const exportProgress = new ExportProgressQueryHandler(ports.exportProgress);
+
+  const importProgress = new ImportProgressCommandHandler(ports.importProgress);
 
   const listEnrollments = new ListEnrollmentsQueryHandler(ports.listEnrollments);
 
@@ -190,6 +210,8 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
   const listDailyChallenges = new ListDailyChallengesQueryHandler(ports.listDailyChallenges);
 
   const saveStreak = new SaveStreakCommandHandler(ports.saveStreak);
+
+  const saveTopicMastery = new SaveTopicMasteryCommandHandler(ports.saveTopicMastery);
 
   const getStreak = new GetStreakQueryHandler(ports.getStreak);
 
@@ -226,12 +248,14 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
   const buildKnowledgeGraph = new BuildKnowledgeGraphQueryHandler(ports.buildKnowledgeGraph);
 
   return {
+    platform: { ids: ports.ids },
     catalog: { get: getCatalog },
     courses: { get: getCourse, enroll: enrollCourse },
     lessons: { get: getLesson, saveProgress: saveLessonProgress, bookmark: saveBookmark },
     exercises: { get: getQuestion, recordAttempt },
     assessments: { get: getAssessment },
     maps: { get: getTopicMap, buildGraph: buildKnowledgeGraph },
+    topics: { get: getTopic },
     editorial: { parseBlocks: parseEditorialBlocks },
     studyPlans: { get: getStudyPlan, saveProgress: savePlanProgress },
     progress: {
@@ -244,6 +268,8 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
       getSetting,
       clearProgress,
       enrollCourse,
+      exportProgress,
+      importProgress,
       listEnrollments,
       saveLessonProgress,
       listLessonProgress,
@@ -260,6 +286,7 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
       saveDailyChallenge,
       listDailyChallenges,
       saveStreak,
+      saveTopicMastery,
       getStreak,
       saveAchievement,
       listAchievements,

@@ -6,5 +6,9 @@ export interface GetLessonContentKeyInput {
 }
 
 export function getLessonContentKey(input: GetLessonContentKeyInput): string {
-  return `lesson:${String(input.lesson?.slug || input.fallback)}`;
+  const fallback = input.fallback?.startsWith("lesson:")
+    ? input.fallback.slice("lesson:".length)
+    : input.fallback;
+
+  return `lesson:${String(input.lesson?.slug || fallback)}`;
 }

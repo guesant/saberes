@@ -1,5 +1,5 @@
 import type { ContentKey } from "./content-key.type";
-import type { DiagnosisCode } from "./domain.enums";
+import type { AttemptConfidence, DiagnosisCode } from "./domain.enums";
 
 export interface AttemptRecord {
   id?: string;
@@ -14,5 +14,6 @@ export interface AttemptRecord {
   source?: string;
   answeredAt?: string;
   diagnosis?: DiagnosisCode;
+  confidence?: AttemptConfidence;
   [key: string]: unknown;
 }

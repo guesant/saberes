@@ -12,6 +12,8 @@ export * from "./get-setting.query-handler";
 export * from "./get-streak.query-handler";
 export * from "./get-study-plan.query-handler";
 export * from "./get-topic-map.query-handler";
+export * from "./get-topic.query-handler";
+export * from "./export-progress.query-handler";
 export * from "./list-achievements.query-handler";
 export * from "./list-attempts.query-handler";
 export * from "./list-bookmarks.query-handler";

@@ -1,4 +1,4 @@
-import { Stack } from "@guesant/saberes-ui";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { LessonSectionContent } from "./lesson-section-content.component";
 
 export type LessonSectionsProps = {
@@ -8,7 +8,7 @@ export type LessonSectionsProps = {
 
 export function LessonSections(props: LessonSectionsProps) {
   return (
-    <Stack>
+    <UIContentGroup variant="list">
       {props.sections.map((section) => (
         <LessonSectionContent
           key={String(section.id)}
@@ -16,6 +16,6 @@ export function LessonSections(props: LessonSectionsProps) {
           onQuestion={props.onQuestion}
         />
       ))}
-    </Stack>
+    </UIContentGroup>
   );
 }

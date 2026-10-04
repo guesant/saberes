@@ -1,8 +1,8 @@
 import { Container as MuiContainer, type ContainerProps as MuiContainerProps } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type ContainerProps = MuiContainerProps;
+export type UIContainerProps = MuiContainerProps;
 
-export function Container(props: ContainerProps): ReactElement {
+export function UIContainer(props: UIContainerProps): ReactElement {
   return <MuiContainer {...props} />;
 }

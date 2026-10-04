@@ -2,8 +2,8 @@ import MuiArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import type { SvgIconProps } from "@mui/material/SvgIcon";
 import type { ReactElement } from "react";
 
-export type ArrowForwardIconProps = SvgIconProps;
+export type UIArrowForwardIconProps = SvgIconProps;
 
-export function ArrowForwardIcon(props: ArrowForwardIconProps): ReactElement {
+export function UIArrowForwardIcon(props: UIArrowForwardIconProps): ReactElement {
   return <MuiArrowForwardIcon {...props} />;
 }

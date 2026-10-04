@@ -4,8 +4,8 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type CircularProgressProps = MuiCircularProgressProps;
+export type UICircularProgressProps = MuiCircularProgressProps;
 
-export function CircularProgress(props: CircularProgressProps): ReactElement {
+export function UICircularProgress(props: UICircularProgressProps): ReactElement {
   return <MuiCircularProgress {...props} />;
 }

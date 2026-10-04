@@ -1,14 +1,14 @@
-import { Alert, Box, Paper, Typography } from "@guesant/saberes-ui";
+import { UIAlert, UIBox, UIPaper, UITypography } from "@guesant/saberes-ui";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { EditorialBlock } from "@guesant/saberes-application";
 import type { WebGLRenderer } from "three";
 
-type ParametricSceneBlockProps = {
+type UIParametricSceneBlockProps = {
   block: Extract<EditorialBlock, { type: "parametric_scene" }>;
 };
 
-export function ParametricSceneBlock(props: ParametricSceneBlockProps) {
+export function UIParametricSceneBlock(props: UIParametricSceneBlockProps) {
   const { block } = props;
 
   const { t } = useTranslation();
@@ -85,19 +85,21 @@ export function ParametricSceneBlock(props: ParametricSceneBlockProps) {
   }, [block]);
 
   if (hasError) {
-    return <Alert severity="info">{t("content.sceneFallback")}</Alert>;
+    return <UIAlert severity="info">{t("content.sceneFallback")}</UIAlert>;
   }
 
   return (
-    <Paper variant="outlined" sx={{ p: 2, my: 3 }}>
-      <Typography fontWeight={700}>{block.title || t("content.interactiveExperience")}</Typography>
+    <UIPaper variant="outlined" sx={{ p: 2, my: 3 }}>
+      <UITypography fontWeight={700}>
+        {block.title || t("content.interactiveExperience")}
+      </UITypography>
 
-      <Box
+      <UIBox
         component="canvas"
         ref={canvasRef}
         role="img"
         aria-label={block.title || t("content.scene3d")}
       />
-    </Paper>
+    </UIPaper>
   );
 }

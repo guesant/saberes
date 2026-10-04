@@ -1,32 +1,38 @@
-import { Box, HtmlTableBody, HtmlTableHead, HtmlTableRow, Table } from "@guesant/saberes-ui";
-import { ComparisonHeaderCell } from "./comparison-header-cell.component";
-import { ComparisonRow } from "./comparison-row.component";
+import {
+  UIBox,
+  UIHtmlTableBody,
+  UIHtmlTableHead,
+  UIHtmlTableRow,
+  UITable,
+} from "@guesant/saberes-ui";
+import { UIComparisonHeaderCell } from "./comparison-header-cell.component";
+import { UIComparisonRow } from "./comparison-row.component";
 import type { EditorialBlock } from "@guesant/saberes-application";
 
-type ComparisonTableBlockViewProps = {
+type UIComparisonTableBlockViewProps = {
   block: Extract<EditorialBlock, { type: "comparison_table" }>;
 };
 
-export function ComparisonTableBlockView(props: ComparisonTableBlockViewProps) {
+export function UIComparisonTableBlockView(props: UIComparisonTableBlockViewProps) {
   const { block } = props;
 
   return (
-    <Box sx={{ overflowX: "auto", my: 3 }}>
-      <Table sx={{ width: "100%", borderCollapse: "collapse" }}>
-        <HtmlTableHead>
-          <HtmlTableRow>
+    <UIBox sx={{ overflowX: "auto", my: 3 }}>
+      <UITable sx={{ width: "100%", borderCollapse: "collapse" }}>
+        <UIHtmlTableHead>
+          <UIHtmlTableRow>
             {block.headers.map((header) => (
-              <ComparisonHeaderCell key={header} value={header} />
+              <UIComparisonHeaderCell key={header} value={header} />
             ))}
-          </HtmlTableRow>
-        </HtmlTableHead>
+          </UIHtmlTableRow>
+        </UIHtmlTableHead>
 
-        <HtmlTableBody>
+        <UIHtmlTableBody>
           {block.rows.map((row) => (
-            <ComparisonRow key={row.join("\u0000")} row={row} rowKey={row.join("\u0000")} />
+            <UIComparisonRow key={row.join("\u0000")} row={row} rowKey={row.join("\u0000")} />
           ))}
-        </HtmlTableBody>
-      </Table>
-    </Box>
+        </UIHtmlTableBody>
+      </UITable>
+    </UIBox>
   );
 }

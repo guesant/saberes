@@ -189,6 +189,12 @@ export enum DiagnosisConfidence {
   High = "high",
 }
 
+export enum AttemptConfidence {
+  Confident = "confident",
+  Doubt = "doubt",
+  Guess = "guess",
+}
+
 export enum DiagnosisSource {
   Heuristic = "heuristic",
   Student = "student",

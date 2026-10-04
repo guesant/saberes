@@ -1,23 +1,27 @@
 import {
-  Button,
-  Card,
-  CheckCircleIcon,
-  Chip,
-  PlayArrowIcon,
-  Typography,
+  UIButton,
+  UICourseHeroCard,
+  UICheckCircleIcon,
+  UIChip,
+  UILinearProgress,
+  UIPlayArrowIcon,
+  UIContentGroup,
+  UITypography,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { CourseModules } from "./course-modules.component";
+import type { CourseProgress } from "./course-progress.interface";
 import type { CourseReadModel } from "@guesant/saberes-application";
 
 export type CourseReadyViewProps = {
   data: CourseReadModel;
   started: boolean;
+  progress: CourseProgress;
   onStart: () => Promise<void>;
 };
 
 export function CourseReadyView(props: CourseReadyViewProps) {
-  const { data, started, onStart } = props;
+  const { data, progress, started, onStart } = props;
 
   const { t } = useTranslation();
 
@@ -27,23 +31,35 @@ export function CourseReadyView(props: CourseReadyViewProps) {
 
   return (
     <>
-      <Card sx={{ p: { xs: 2, md: 5 }, mb: 4 }}>
-        <Chip label={courseType} variant="outlined" />
+      <UICourseHeroCard>
+        <UIChip label={courseType} variant="outlined" />
 
-        <Typography variant="h2">{String(course.title)}</Typography>
+        <UITypography variant="h2">{String(course.title)}</UITypography>
 
-        <Typography>{String(course.description || "")}</Typography>
+        <UITypography>{String(course.description || "")}</UITypography>
 
-        <Button
+        <UIContentGroup variant="tight">
+          <UITypography variant="body2">
+            {t("course.progress", {
+              completed: progress.completedItems,
+              percentage: progress.percentage,
+              total: progress.totalItems,
+            })}
+          </UITypography>
+
+          <UILinearProgress value={progress.percentage} variant="determinate" />
+        </UIContentGroup>
+
+        <UIButton
           variant="contained"
-          startIcon={started ? <CheckCircleIcon /> : <PlayArrowIcon />}
+          startIcon={started ? <UICheckCircleIcon /> : <UIPlayArrowIcon />}
           onClick={onStart}
         >
           {started ? t("course.continue") : t("course.start")}
-        </Button>
-      </Card>
+        </UIButton>
+      </UICourseHeroCard>
 
-      <Typography variant="h5">{t("course.learnInSequence")}</Typography>
+      <UITypography variant="h5">{t("course.learnInSequence")}</UITypography>
 
       <CourseModules modules={data.modules} items={data.items} />
     </>

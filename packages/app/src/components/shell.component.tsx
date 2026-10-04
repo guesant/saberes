@@ -1,5 +1,6 @@
-import { Box, Container, Drawer } from "@guesant/saberes-ui";
+import { UIDrawer, UIPageContent, UIPageSurface } from "@guesant/saberes-ui";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Footer } from "./footer.component";
 import { NavigationDrawer } from "./navigation-drawer.component";
 import { NavigationHeader } from "./navigation-header.component";
@@ -12,26 +13,25 @@ export type ShellProps = {
 export function Shell(props: ShellProps) {
   const [open, setOpen] = useState(false);
 
+  const { t } = useTranslation();
+
   const links = [
-    { label: "Catálogo", to: "/catalogo" },
-    { label: "Plano", to: "/plano" },
-    { label: "Mapa", to: "/mapa" },
-    { label: "Meu estudo", to: "/meu-estudo" },
+    { label: t("common.catalog"), to: "/catalogo" },
+    { label: t("common.review"), to: "/revisoes" },
+    { label: t("common.myStudy"), to: "/meu-estudo" },
   ];
 
   return (
-    <Box sx={{ minHeight: "100vh" }}>
+    <UIPageSurface>
       <NavigationHeader links={links} onOpenMenu={() => setOpen(true)} />
 
-      <Drawer onClose={() => setOpen(false)} open={open}>
+      <UIDrawer onClose={() => setOpen(false)} open={open}>
         <NavigationDrawer links={links} onSelect={() => setOpen(false)} />
-      </Drawer>
+      </UIDrawer>
 
-      <Container maxWidth="lg" sx={{ py: { md: 5, xs: 3 } }}>
-        {props.children}
-      </Container>
+      <UIPageContent>{props.children}</UIPageContent>
 
       <Footer />
-    </Box>
+    </UIPageSurface>
   );
 }

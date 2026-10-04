@@ -4,8 +4,8 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type StepButtonProps = MuiStepButtonProps;
+export type UIStepButtonProps = MuiStepButtonProps;
 
-export function StepButton(props: StepButtonProps): ReactElement {
+export function UIStepButton(props: UIStepButtonProps): ReactElement {
   return <MuiStepButton {...props} />;
 }

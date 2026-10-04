@@ -1,11 +1,15 @@
-import { progressDb } from "../storage/progress.database";
+import type { ProgressStorageContract } from "../storage/progress-storage.contract";
 
-export async function addStudyPoints(amount: number, reason: string) {
-  const current = await progressDb.getSetting("studyPoints");
+export async function addStudyPoints(
+  storage: ProgressStorageContract,
+  amount: number,
+  reason: string,
+) {
+  const current = await storage.getSetting("studyPoints");
 
   const points = Number(current?.value || 0) + Number(amount || 0);
 
-  await progressDb.saveSetting("studyPoints", points);
+  await storage.saveSetting("studyPoints", points);
 
   return { points, reason };
 }

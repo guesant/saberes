@@ -1,4 +1,4 @@
-import { Card, CardContent, Chip, Stack, Typography } from "@guesant/saberes-ui";
+import { UICard, UICardContent, UIChip, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
 export type TopicMapSummaryProps = {
@@ -10,18 +10,18 @@ export function TopicMapSummary(props: TopicMapSummaryProps) {
   const { t } = useTranslation();
 
   return (
-    <Card>
-      <CardContent>
-        <Typography variant="h6">{t("map.structure")}</Typography>
+    <UICard>
+      <UICardContent>
+        <UITypography variant="h6">{t("map.structure")}</UITypography>
 
-        <Stack direction="row" spacing={1}>
-          <Chip label={t("map.topicsCount", { count: props.nodeCount })} />
+        <UIInlineActions>
+          <UIChip label={t("map.topicsCount", { count: props.nodeCount })} />
 
-          <Chip label={t("map.relationsCount", { count: props.edgeCount })} />
-        </Stack>
+          <UIChip label={t("map.relationsCount", { count: props.edgeCount })} />
+        </UIInlineActions>
 
-        <Typography color="text.secondary">{t("map.description")}</Typography>
-      </CardContent>
-    </Card>
+        <UITypography color="text.secondary">{t("map.description")}</UITypography>
+      </UICardContent>
+    </UICard>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography } from "@guesant/saberes-ui";
+import { UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { CourseItemRow } from "./course-item-row.component";
 
 export type CourseModuleCardProps = {
@@ -12,22 +12,22 @@ export function CourseModuleCard(props: CourseModuleCardProps) {
   const moduleItems = items.filter((item) => item.module_id === module.id);
 
   return (
-    <Card>
-      <CardContent>
-        <Box>
-          <Typography variant="h6">
+    <UICard>
+      <UICardContent>
+        <UIContentGroup variant="tight">
+          <UITypography variant="h6">
             {String(module.position)}.{String(module.title)}
-          </Typography>
+          </UITypography>
 
-          <Typography variant="body2" color="text.secondary">
+          <UITypography variant="body2" color="text.secondary">
             {String(module.description || "")}
-          </Typography>
-        </Box>
+          </UITypography>
+        </UIContentGroup>
 
         {moduleItems.map((item) => (
           <CourseItemRow key={String(item.id)} item={item} />
         ))}
-      </CardContent>
-    </Card>
+      </UICardContent>
+    </UICard>
   );
 }
