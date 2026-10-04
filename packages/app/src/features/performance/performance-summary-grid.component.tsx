@@ -1,6 +1,7 @@
 import { UIMetricGrid, UIMetricGridItem } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { StudyMetric } from "../my-study/study-metric.component";
+import { PerformanceSummaryMasteryMetrics } from "./performance-summary-mastery-metrics.component";
 import type { PerformanceSummary } from "./performance-summary.interface";
 
 export type PerformanceSummaryGridProps = {
@@ -36,6 +37,7 @@ export function PerformanceSummaryGrid(props: PerformanceSummaryGridProps) {
           value={props.summary.completedSessions}
         />
       </UIMetricGridItem>
+      <PerformanceSummaryMasteryMetrics summary={props.summary} />
     </UIMetricGrid>
   );
 }

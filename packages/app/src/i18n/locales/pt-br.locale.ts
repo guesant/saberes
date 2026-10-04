@@ -322,6 +322,8 @@ const ptBR = {
     studyMinutes: "minutos estudados",
     averageTimeSeconds: "segundos por questão",
     completedSessions: "sessões concluídas",
+    studiedTopics: "tópicos com evidência de estudo",
+    masteredTopics: "tópicos dominados",
     topicRow:
       "{{topic}}: {{attempts}} tentativa(s), {{accuracy}}% de acerto, {{incorrect}} erro(s)",
     diagnosisRow: "{{diagnosis}}: {{attempts}} ocorrência(s)",

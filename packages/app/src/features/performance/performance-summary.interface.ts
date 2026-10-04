@@ -8,4 +8,6 @@ export interface PerformanceSummary {
   sessions: number;
   completedSessions: number;
   studyMinutes: number;
+  studiedTopics: number;
+  masteredTopics: number;
 }

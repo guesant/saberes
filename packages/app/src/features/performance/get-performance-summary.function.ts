@@ -1,4 +1,5 @@
 import { differenceInCalendarDays, parseISO } from "date-fns";
+import { getPerformanceMasteredTopicCount } from "./get-performance-mastered-topic-count.function";
 import type { GetPerformanceSummaryInput } from "./get-performance-summary-input.interface";
 import type { PerformanceSummary } from "./performance-summary.interface";
 
@@ -25,6 +26,8 @@ export function getPerformanceSummary(input: GetPerformanceSummaryInput): Perfor
 
   const studyMs = input.sessions.reduce((total, session) => total + (session.durationMs || 0), 0);
 
+  const masteredTopics = getPerformanceMasteredTopicCount(input.topicMastery);
+
   return {
     answered: input.attempts.length,
     correct: correctAttempts.length,
@@ -39,5 +42,7 @@ export function getPerformanceSummary(input: GetPerformanceSummaryInput): Perfor
     sessions: input.sessions.length,
     completedSessions: completedSessions.length,
     studyMinutes: Math.round(studyMs / 60000),
+    studiedTopics: input.topicMastery.length,
+    masteredTopics,
   };
 }

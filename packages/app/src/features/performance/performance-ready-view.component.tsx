@@ -20,6 +20,7 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
     attempts: props.data.attempts,
     now: new Date(),
     sessions: props.data.sessions,
+    topicMastery: props.data.topicMastery,
   });
 
   const topicStats = getPerformanceTopicStats(props.data.attempts);

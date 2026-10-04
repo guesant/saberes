@@ -24,6 +24,10 @@ const summaryInput: GetPerformanceSummaryInput = {
     { durationMs: 120000, id: "session-1", status: "completed" },
     { durationMs: 60000, id: "session-2", status: "paused" },
   ],
+  topicMastery: [
+    { key: "topic:1", learningState: "mastered" },
+    { key: "topic:2", learningState: "practicing" },
+  ],
 };
 
 describe("getPerformanceSummary", () => {
@@ -40,6 +44,8 @@ describe("getPerformanceSummary", () => {
       recentCorrect: 1,
       sessions: 2,
       studyMinutes: 3,
+      studiedTopics: 2,
+      masteredTopics: 1,
     });
   });
 });
