@@ -5,6 +5,7 @@ import type { QuestionSessionProgress } from "./get-question-session-progress.fu
 export type QuestionStudySessionSummaryProps = {
   progress: QuestionSessionProgress;
   onBack: () => void;
+  onReview: () => void;
 };
 
 export function QuestionStudySessionSummary(props: QuestionStudySessionSummaryProps) {
@@ -22,6 +23,14 @@ export function QuestionStudySessionSummary(props: QuestionStudySessionSummaryPr
       <UITypography>
         {t("exercise.sessionCorrect", { correct: props.progress.correct })}
       </UITypography>
+      <UITypography>
+        {t("exercise.sessionNextAction", {
+          percentage: props.progress.percentage,
+        })}
+      </UITypography>
+      <UIButton variant="contained" onClick={props.onReview}>
+        {t("exercise.sessionReviewAction")}
+      </UIButton>
       <UIButton variant="outlined" onClick={props.onBack}>
         {t("common.backToMyStudy")}
       </UIButton>

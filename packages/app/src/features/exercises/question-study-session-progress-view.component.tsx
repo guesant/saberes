@@ -17,7 +17,11 @@ export function QuestionStudySessionProgressView(props: QuestionStudySessionProg
 
   if (props.screen === "completed") {
     return (
-      <QuestionStudySessionSummary onBack={() => navigate("/meu-estudo")} progress={progress} />
+      <QuestionStudySessionSummary
+        onBack={() => navigate("/meu-estudo")}
+        onReview={() => navigate("/revisoes")}
+        progress={progress}
+      />
     );
   }
 
