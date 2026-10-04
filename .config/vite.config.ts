@@ -29,7 +29,7 @@ const staticCopyTargets = [
   ...(fs.existsSync(schemaDocsPath)
     ? [
         {
-          src: schemaDocsPath,
+          src: `${schemaDocsPath}/**/*`,
           dest: "-/backstage/database/schema",
         },
       ]

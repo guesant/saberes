@@ -45,6 +45,7 @@ import { ListLessonProgressQueryHandler } from "./queries/list-lesson-progress.q
 import { ListPlanProgressQueryHandler } from "./queries/list-plan-progress.query-handler";
 import { ListReviewItemsQueryHandler } from "./queries/list-review-items.query-handler";
 import { ListReviewTargetsQueryHandler } from "./queries/list-review-targets.query-handler";
+import { ListStudySessionsQueryHandler } from "./queries/list-study-sessions.query-handler";
 import { ListTopicMasteryQueryHandler } from "./queries/list-topic-mastery.query-handler";
 import { ParseEditorialBlocksQueryHandler } from "./queries/parse-editorial-blocks.query-handler";
 import { PreviewReviewQueryHandler } from "./queries/preview-review.query-handler";
@@ -113,6 +114,7 @@ export interface ApplicationServices {
     listReviewItems: ListReviewItemsQueryHandler;
     saveReviewTarget: SaveReviewTargetCommandHandler;
     listReviewTargets: ListReviewTargetsQueryHandler;
+    listStudySessions: ListStudySessionsQueryHandler;
     saveDiagnosis: SaveDiagnosisCommandHandler;
     listDiagnoses: ListDiagnosesQueryHandler;
     saveDailyChallenge: SaveDailyChallengeCommandHandler;
@@ -201,6 +203,8 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
 
   const listReviewTargets = new ListReviewTargetsQueryHandler(ports.listReviewTargets);
 
+  const listStudySessions = new ListStudySessionsQueryHandler(ports.listStudySessions);
+
   const saveDiagnosis = new SaveDiagnosisCommandHandler(ports.saveDiagnosis);
 
   const listDiagnoses = new ListDiagnosesQueryHandler(ports.listDiagnoses);
@@ -281,6 +285,7 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
       listReviewItems,
       saveReviewTarget,
       listReviewTargets,
+      listStudySessions,
       saveDiagnosis,
       listDiagnoses,
       saveDailyChallenge,

@@ -32,6 +32,7 @@ export const applicationDependencyTokens = {
   listReviewItems: Symbol.for("saberes.list-review-items-port"),
   saveReviewTarget: Symbol.for("saberes.save-review-target-port"),
   listReviewTargets: Symbol.for("saberes.list-review-targets-port"),
+  listStudySessions: Symbol.for("saberes.list-study-sessions-port"),
   saveDiagnosis: Symbol.for("saberes.save-diagnosis-port"),
   listDiagnoses: Symbol.for("saberes.list-diagnoses-port"),
   saveDailyChallenge: Symbol.for("saberes.save-daily-challenge-port"),

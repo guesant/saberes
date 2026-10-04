@@ -8,6 +8,7 @@ import type {
   CatalogReadModel,
   ReviewTarget,
   StudyRecord,
+  StudySession,
 } from "@guesant/saberes-application";
 
 const emptyCatalog: CatalogReadModel = {
@@ -21,6 +22,7 @@ export type GetMyStudyDataInput = {
   attempts: Attempt[] | undefined;
   catalog: CatalogReadModel | undefined;
   reviews: ReviewTarget[] | undefined;
+  sessions: StudySession[];
   streak: StudyRecord | undefined;
   achievements: StudyRecord[] | undefined;
   topicMastery: StudyRecord[] | undefined;
@@ -33,6 +35,7 @@ export function getMyStudyData(input: GetMyStudyDataInput): MyStudyReadModel {
     attempts = [],
     catalog = emptyCatalog,
     reviews = [],
+    sessions,
     streak,
     achievements = [],
     topicMastery,
@@ -44,6 +47,7 @@ export function getMyStudyData(input: GetMyStudyDataInput): MyStudyReadModel {
     attempts,
     catalog,
     reviews,
+    sessions,
     streak,
     achievements,
     dailyQuestion: getMyStudyDailyQuestion(catalog, date),

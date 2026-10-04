@@ -192,6 +192,10 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
     return this.table("sessions").get(id);
   }
 
+  listSessions() {
+    return this.table("sessions").toArray();
+  }
+
   async saveSetting(key: string, value: unknown): Promise<void> {
     await this.table("settings").put({ key, value });
   }

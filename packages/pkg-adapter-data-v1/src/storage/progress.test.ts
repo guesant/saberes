@@ -62,6 +62,25 @@ describe("progresso local Dexie", () => {
     expect(progressDb.verno).toBeGreaterThanOrEqual(4);
   });
 
+  it("lista sessões de estudo persistidas localmente", async () => {
+    await progressDb.saveSession({
+      id: "session-1",
+      activityType: "lesson",
+      contentKey: "lesson:sample",
+      startedAt: "2026-10-04T10:00:00.000Z",
+      completedAt: "2026-10-04T10:20:00.000Z",
+      durationMs: 1200000,
+    });
+
+    expect(await progressDb.listSessions()).toEqual([
+      expect.objectContaining({
+        activityType: "lesson",
+        contentKey: "lesson:sample",
+        id: "session-1",
+      }),
+    ]);
+  });
+
   it("exporta e restaura o progresso sem tocar no conteúdo editorial", async () => {
     await progressDb.enrollCourse("course:sample", { startedAt: "2026-10-03T00:00:00.000Z" });
 

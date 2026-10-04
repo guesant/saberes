@@ -4,12 +4,14 @@ import type {
   CatalogReadModel,
   ReviewTarget,
   StudyRecord,
+  StudySession,
 } from "@guesant/saberes-application";
 
 export interface MyStudyReadModel {
   attempts: Attempt[];
   catalog: CatalogReadModel;
   reviews: ReviewTarget[];
+  sessions: StudySession[];
   streak: StudyRecord | undefined;
   achievements: StudyRecord[];
   dailyQuestion: CatalogCard | null;

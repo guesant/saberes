@@ -30,6 +30,10 @@ export class DexieProgressStore implements ProgressStorageContract {
     return this.database.getSession(id);
   }
 
+  listSessions() {
+    return this.database.listSessions();
+  }
+
   async saveSetting(key: string, value: unknown): Promise<void> {
     await this.database.saveSetting(key, value);
   }

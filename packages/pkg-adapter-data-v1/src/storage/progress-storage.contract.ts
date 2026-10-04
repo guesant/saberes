@@ -42,6 +42,8 @@ export interface ProgressStorageContract {
 
   listReviewTargets(): Promise<Array<ReviewTargetRecord>>;
 
+  listSessions(): Promise<Array<SessionRecord>>;
+
   listTopicMastery(): Promise<Array<Record<string, unknown>>>;
 
   recordAttempt(attempt: Attempt): Promise<AttemptRecord & { id: string }>;

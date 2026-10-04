@@ -8,6 +8,7 @@ import {
   ListLessonProgressAdapter,
   ListPlanProgressAdapter,
   ListReviewItemsAdapter,
+  ListStudySessionsAdapter,
 } from "@guesant/saberes-adapter-data-v1";
 import { applicationDependencyTokens } from "./application-dependency-tokens.config";
 import { registerPortFactories } from "./register-port-factories.composition";
@@ -38,6 +39,10 @@ export function createProgressReadAttemptPortBindings(container: Container): voi
     [
       applicationDependencyTokens.listReviewItems,
       () => new ListReviewItemsAdapter(getProgressStore()),
+    ],
+    [
+      applicationDependencyTokens.listStudySessions,
+      () => new ListStudySessionsAdapter(getProgressStore()),
     ],
   ];
 

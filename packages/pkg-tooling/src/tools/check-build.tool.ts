@@ -2,12 +2,26 @@ import { join, resolve } from "@std/path";
 
 const root = resolve(Deno.cwd(), "dist");
 
+const schemaDocsSource = join(Deno.cwd(), ".cache/schema-docs/site/index.html");
+
+let hasSchemaDocs = false;
+
+try {
+  await Deno.stat(schemaDocsSource);
+
+  hasSchemaDocs = true;
+} catch (error) {
+  if (!(error instanceof Deno.errors.NotFound)) {
+    throw error;
+  }
+}
+
 const requiredFiles = [
   "index.html",
   "manifest.webmanifest",
   "sw.js",
   "sql-wasm.wasm",
-  "-/backstage/database/schema/index.html",
+  ...(hasSchemaDocs ? ["-/backstage/database/schema/index.html"] : []),
 ];
 
 for (const relativePath of requiredFiles) {

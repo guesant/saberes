@@ -6,18 +6,21 @@ import type {
   ApplicationServices,
   Attempt,
   ReviewTarget,
+  StudySession,
   StudyRecord,
 } from "@guesant/saberes-application";
 
 export type MyStudyProgressQueries = {
   attempts: Attempt[] | undefined;
   reviews: ReviewTarget[] | undefined;
+  sessions: StudySession[] | undefined;
   streak: StudyRecord | undefined;
   achievements: StudyRecord[] | undefined;
   topicMastery: StudyRecord[] | undefined;
   bookmarks: StudyRecord[] | undefined;
   attemptsError: Error | null;
   reviewsError: Error | null;
+  sessionsError: Error | null;
   streakError: Error | null;
   achievementsError: Error | null;
   topicMasteryError: Error | null;
@@ -37,12 +40,14 @@ export function useMyStudyProgressQueries(services: ApplicationServices): MyStud
   return {
     attempts: activityQueries.attempts,
     reviews: activityQueries.reviews,
+    sessions: activityQueries.sessions,
     streak: achievementQueries.streak,
     achievements: achievementQueries.achievements,
     topicMastery: masteryQueries.topicMastery,
     bookmarks: bookmarkQueries.bookmarks,
     attemptsError: activityQueries.attemptsError,
     reviewsError: activityQueries.reviewsError,
+    sessionsError: activityQueries.sessionsError,
     streakError: achievementQueries.streakError,
     achievementsError: achievementQueries.achievementsError,
     topicMasteryError: masteryQueries.error,

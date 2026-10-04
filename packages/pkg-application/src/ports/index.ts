@@ -30,6 +30,7 @@ export * from "./list-lesson-progress-port.port";
 export * from "./list-plan-progress-port.port";
 export * from "./list-review-items-port.port";
 export * from "./list-review-targets-port.port";
+export * from "./list-study-sessions-port.port";
 export * from "./list-topic-mastery-port.port";
 export * from "./preview-review-port.port";
 export * from "./parse-editorial-blocks-port.port";

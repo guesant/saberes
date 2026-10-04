@@ -86,6 +86,14 @@ const ptBR = {
     startWithTopic: "Comece por um tópico",
     databaseEditions: "Edições na base",
     view: "Ver",
+    studySessions: "Sessões recentes",
+    noStudySessions: "Suas sessões aparecerão aqui depois do primeiro estudo.",
+    sessionType: {
+      lesson: "Lição",
+      question: "Questão",
+      assessment: "Conjunto de avaliação",
+      review: "Revisão",
+    },
   },
   topics: {
     eyebrow: "Programas de conteúdo",

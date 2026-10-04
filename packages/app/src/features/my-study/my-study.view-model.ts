@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
+import { createMyStudyDataInput } from "./create-my-study-data-input.function";
+import { createMyStudyProgressErrorInput } from "./create-my-study-progress-error-input.function";
 import { getMyStudyData } from "./get-my-study-data.function";
 import { getMyStudyProgressError } from "./get-my-study-progress-error.function";
 import { getMyStudyViewState } from "./get-my-study-view-state.function";
@@ -33,25 +35,15 @@ export function useMyStudyViewModel(): MyStudyViewModel {
 
   return {
     state,
-    data: getMyStudyData({
-      attempts: progressQueries.attempts,
-      catalog: catalogQuery.data,
-      reviews: progressQueries.reviews,
-      streak: progressQueries.streak,
-      achievements: progressQueries.achievements,
-      topicMastery: progressQueries.topicMastery,
-      bookmarks: progressQueries.bookmarks,
-      date: new Date(),
-    }),
+    data: getMyStudyData(
+      createMyStudyDataInput({
+        catalog: catalogQuery.data,
+        date: new Date(),
+        progress: progressQueries,
+      }),
+    ),
     error: catalogQuery.error || null,
-    progressError: getMyStudyProgressError({
-      attemptsError: progressQueries.attemptsError,
-      reviewsError: progressQueries.reviewsError,
-      streakError: progressQueries.streakError,
-      achievementsError: progressQueries.achievementsError,
-      topicMasteryError: progressQueries.topicMasteryError,
-      bookmarksError: progressQueries.bookmarksError,
-    }),
+    progressError: getMyStudyProgressError(createMyStudyProgressErrorInput(progressQueries)),
     reload: async (): Promise<void> => {
       await Promise.all([catalogQuery.refetch(), progressQueries.reload()]);
     },

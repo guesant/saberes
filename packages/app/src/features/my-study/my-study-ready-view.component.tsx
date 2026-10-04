@@ -6,6 +6,7 @@ import { MyStudyMetricsGrid } from "./my-study-metrics-grid.component";
 import { MyStudyNextContent } from "./my-study-next-content.component";
 import { MyStudyProgressError } from "./my-study-progress-error.component";
 import { MyStudySavedContent } from "./my-study-saved-content.component";
+import { MyStudySessionHistory } from "./my-study-session-history.component";
 import { useLocalBackupViewModel } from "./use-local-backup.view-model.hook";
 import type { MyStudyViewModel } from "./my-study.view-model";
 
@@ -44,6 +45,8 @@ export function MyStudyReadyView(props: MyStudyReadyViewProps) {
         lessons={viewModel.data.savedLessons}
         questions={viewModel.data.savedQuestions}
       />
+
+      <MyStudySessionHistory sessions={viewModel.data.sessions} />
 
       <MyStudyNextContent course={viewModel.data.catalog.courses[0] || null} />
 

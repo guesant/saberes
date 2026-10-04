@@ -19,6 +19,7 @@ export * from "./save-review-item-adapter.adapter";
 export * from "./list-review-items-adapter.adapter";
 export * from "./save-review-target-adapter.adapter";
 export * from "./list-review-targets-adapter.adapter";
+export * from "./list-study-sessions-adapter.adapter";
 export * from "./save-diagnosis-adapter.adapter";
 export * from "./list-diagnoses-adapter.adapter";
 export * from "./save-daily-challenge-adapter.adapter";

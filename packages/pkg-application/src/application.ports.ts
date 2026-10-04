@@ -30,6 +30,7 @@ import type { ListLessonProgressPort } from "./ports/list-lesson-progress-port.p
 import type { ListPlanProgressPort } from "./ports/list-plan-progress-port.port";
 import type { ListReviewItemsPort } from "./ports/list-review-items-port.port";
 import type { ListReviewTargetsPort } from "./ports/list-review-targets-port.port";
+import type { ListStudySessionsPort } from "./ports/list-study-sessions-port.port";
 import type { ListTopicMasteryPort } from "./ports/list-topic-mastery-port.port";
 import type { ParseEditorialBlocksPort } from "./ports/parse-editorial-blocks-port.port";
 import type { PreviewReviewPort } from "./ports/preview-review-port.port";
@@ -84,6 +85,7 @@ export interface ApplicationPorts {
   listReviewItems: ListReviewItemsPort;
   saveReviewTarget: SaveReviewTargetPort;
   listReviewTargets: ListReviewTargetsPort;
+  listStudySessions: ListStudySessionsPort;
   saveDiagnosis: SaveDiagnosisPort;
   listDiagnoses: ListDiagnosesPort;
   saveDailyChallenge: SaveDailyChallengePort;

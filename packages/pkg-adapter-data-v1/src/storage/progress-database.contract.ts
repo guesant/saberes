@@ -43,6 +43,8 @@ export interface ProgressDatabaseContract {
 
   listReviewTargets(): Promise<Array<ReviewTargetRecord>>;
 
+  listSessions(): Promise<Array<SessionRecord>>;
+
   listTopicMastery(): Promise<Array<Record<string, unknown>>>;
 
   saveAchievement(
