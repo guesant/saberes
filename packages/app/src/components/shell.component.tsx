@@ -19,6 +19,7 @@ export function Shell(props: ShellProps) {
     { label: t("common.catalog"), to: "/catalogo" },
     { label: t("common.review"), to: "/revisoes" },
     { label: t("common.myStudy"), to: "/meu-estudo" },
+    { label: t("nav.performance"), to: "/desempenho" },
   ];
 
   return (

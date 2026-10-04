@@ -21,6 +21,12 @@ const MyStudyView = lazy(() =>
   })),
 );
 
+const PerformanceView = lazy(() =>
+  import("./features/performance/performance-view.component").then(
+    ({ PerformanceView: Component }) => ({ default: Component }),
+  ),
+);
+
 const ReviewView = lazy(() =>
   import("./features/reviews/review-view.component").then(({ ReviewView: Component }) => ({
     default: Component,
@@ -81,6 +87,8 @@ export function App() {
           <Route element={<CatalogView />} path="/catalogo" />
 
           <Route element={<MyStudyView />} path="/meu-estudo" />
+
+          <Route element={<PerformanceView />} path="/desempenho" />
 
           <Route element={<ReviewView />} path="/revisoes" />
 

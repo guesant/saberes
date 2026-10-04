@@ -316,6 +316,18 @@ const ptBR = {
     byProcess: "Por processo e disciplina",
     byTopic: "Por tópico",
     empty: "Resolva algumas questões para gerar seu desempenho.",
+    recentAttempts: "questões nos últimos 7 dias",
+    studyMinutes: "minutos estudados",
+    averageTimeSeconds: "segundos por questão",
+    completedSessions: "sessões concluídas",
+    topicRow:
+      "{{topic}}: {{attempts}} tentativa(s), {{accuracy}}% de acerto, {{incorrect}} erro(s)",
+    nextAction: "Próxima ação",
+    nextActionErrors: "Você tem erros registrados que podem ser revisados agora.",
+    nextActionContinue: "Continue praticando para transformar atividade em domínio.",
+    nextActionEmpty: "Comece uma atividade para criar sua primeira evidência de estudo.",
+    reviewErrors: "Revisar erros",
+    startStudy: "Começar estudo",
   },
   review: {
     eyebrow: "Revisão inteligente",
