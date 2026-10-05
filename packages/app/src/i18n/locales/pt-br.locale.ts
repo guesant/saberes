@@ -181,6 +181,17 @@ const ptBR = {
       archived: "Arquivadas",
       all: "Todas",
     },
+    progress: {
+      title: "Progresso conectado",
+      description:
+        "Sessões, tópicos, exercícios, metas e atividades são relacionados pelas referências locais existentes.",
+      loading: "Carregando progresso conectado...",
+      loadError: "Não foi possível carregar o progresso conectado.",
+      links: "{{count}} vínculos de progresso",
+      unlinkedSessions: "{{count}} sessões sem referência",
+      unlinkedAttempts: "{{count}} tentativas sem referência",
+      unlinkedActivities: "{{count}} atividades sem referência",
+    },
   },
   calendar: {
     eyebrow: "Planejamento local",

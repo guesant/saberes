@@ -1,3 +1,4 @@
+import type { PersonalProgressViewModel } from "./personal-progress-view-model.interface";
 import type { SavePersonalLensInput } from "./save-personal-lens-input.interface";
 import type { StudyCaptureContentInput } from "./study-capture-content-input.interface";
 import type { StudyCaptureCreateInput } from "./study-capture-create-input.interface";
@@ -13,6 +14,7 @@ export interface PersonalWorkspaceViewModel {
   workspace: PersonalWorkspace;
   error: Error | null;
   saveError: Error | null;
+  progress: PersonalProgressViewModel;
   createNote(title: string, body: string, contentKey?: string): Promise<void>;
 
   createChecklist(title: string, items: string[], contentKey?: string): Promise<void>;

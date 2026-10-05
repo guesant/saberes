@@ -2,6 +2,7 @@ import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { PersonalBacklinksSection } from "./personal-backlinks-section.component";
 import { PersonalKnowledgeViewsSection } from "./personal-knowledge-views-section.component";
 import { PersonalNoteCreate } from "./personal-note-create.component";
+import { PersonalProgressSection } from "./personal-progress-section.component";
 import { PersonalReferenceCreate } from "./personal-reference-create.component";
 import { PersonalRelationsSection } from "./personal-relations-section.component";
 import { StudyCaptureCreate } from "./study-capture-create.component";
@@ -35,6 +36,7 @@ export function PersonalWorkspaceForm(props: PersonalWorkspaceFormProps) {
         onSaveLens={props.viewModel.saveLens}
         workspace={props.viewModel.workspace}
       />
+      <PersonalProgressSection progress={props.viewModel.progress} />
     </UIContentGroup>
   );
 }
