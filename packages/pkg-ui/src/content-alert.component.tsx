@@ -4,7 +4,14 @@ import type { ReactElement } from "react";
 
 export function UIContentAlert(props: UIContentAlertProps): ReactElement {
   return (
-    <MuiAlert data-ui-layout="stack" data-ui-outset="lg" role={props.role} severity={props.severity} sx={{ my: 3 }}>
+    <MuiAlert
+      data-ui-alert-severity={props.severity}
+      data-ui-layout="stack"
+      data-ui-outset="lg"
+      role={props.role}
+      severity={props.severity}
+      sx={{ my: 3 }}
+    >
       {props.children}
     </MuiAlert>
   );

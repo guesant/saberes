@@ -45,3 +45,11 @@ enforça
 Gamificação
 SARIF
 unskip
+backlinks
+booleana
+Cytoscape
+mutar
+reabrível
+retomável
+RRULE
+viewports

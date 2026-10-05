@@ -17,8 +17,6 @@ export function UIContentSurface(props: UIContentSurfaceProps): ReactElement {
       sx={{
         bgcolor: config.backgroundColor,
         color: props.mode === "summary" ? "primary.contrastText" : undefined,
-        mt: config.marginTop,
-        my: config.marginY,
         overflowX: config.overflowX,
         p: config.padding,
       }}

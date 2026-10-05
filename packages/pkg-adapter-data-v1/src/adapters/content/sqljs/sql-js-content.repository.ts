@@ -18,10 +18,26 @@ import type {
 } from "@guesant/saberes-application";
 
 export class SqlJsContentRepository implements ContentRepositoryContract {
+  private databaseValue?: ContentDatabase;
+
   private databasePromise?: Promise<ContentDatabase>;
 
-  private database() {
-    this.databasePromise ||= loadContentDatabase();
+  private database(): Promise<ContentDatabase> {
+    if (this.databaseValue) {
+      return Promise.resolve(this.databaseValue);
+    }
+
+    if (!this.databasePromise) {
+      this.databasePromise = loadContentDatabase()
+        .then((database) => {
+          this.databaseValue = database;
+
+          return database;
+        })
+        .finally(() => {
+          this.databasePromise = undefined;
+        });
+    }
 
     return this.databasePromise;
   }

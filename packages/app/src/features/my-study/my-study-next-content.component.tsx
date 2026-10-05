@@ -12,15 +12,17 @@ export function MyStudyNextContent(props: MyStudyNextContentProps) {
 
   const { course } = props;
 
+  if (!course) {
+    return null;
+  }
+
   return (
     <UICard>
       <UICardContent>
         <UIContentGroup variant="content">
           <UITypography variant="h5">{t("home.startWithTopic")}</UITypography>
-          <UITypography color="text.secondary">
-            {course?.description || t("catalog.description")}
-          </UITypography>
-          {course ? <MyStudyCourseLink course={course} /> : null}
+          <UITypography color="text.secondary">{course.description || t("catalog.description")}</UITypography>
+          <MyStudyCourseLink course={course} />
         </UIContentGroup>
       </UICardContent>
     </UICard>

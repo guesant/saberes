@@ -145,6 +145,24 @@ e2e: runtime-build playwright-build
     {{playwright_modules_init}}
     docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno task e2e'
 
+flow-check: runtime-build playwright-build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    docker volume create {{workspace_modules_volume}} >/dev/null
+    {{compose}} up -d web
+    trap '{{compose}} down' EXIT
+    {{playwright_modules_init}}
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno task flow:check'
+
+regression-check: runtime-build playwright-build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    docker volume create {{workspace_modules_volume}} >/dev/null
+    {{compose}} up -d web
+    trap '{{compose}} down' EXIT
+    {{playwright_modules_init}}
+    docker run --rm --network portal-guesant-saberes_default -v "$PWD:/workspace" -v {{workspace_modules_volume}}:/workspace/node_modules -v "$PWD/.cache/deno:/deno/cache" -w /workspace -e PLAYWRIGHT_BASE_URL=http://web -e PLAYWRIGHT_EXECUTABLE_PATH=/usr/bin/chromium {{playwright_image}} bash -c 'mise exec -- deno task regression:check'
+
 accessibility: runtime-build playwright-build
     #!/usr/bin/env bash
     set -euo pipefail

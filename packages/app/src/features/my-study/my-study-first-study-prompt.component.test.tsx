@@ -36,6 +36,9 @@ describe("MyStudyFirstStudyPrompt", () => {
         "/cursos/curso-sintetico-primeiro-estudo",
       );
 
+    screen.getByText("Outras opções")
+      .click();
+
     expect(screen.getByRole("link", { name: "Restaurar dados locais" }))
       .toHaveAttribute(
         "href",

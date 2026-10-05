@@ -10,7 +10,9 @@ import type { SessionRecord } from "./session-record.interface";
 import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
 import type {
   AcademicDiscipline,
+  BackupRetentionPolicy,
   FocusSession,
+  LocalRecordTombstone,
   PersonalWorkspace,
   ReviewTargetRecord,
   StudyGoal,
@@ -71,6 +73,12 @@ export interface ProgressDatabaseContract {
   getPersonalWorkspace(): Promise<PersonalWorkspace>;
 
   listPersonalSearchIndex(): Promise<PersonalSearchIndexEntry[]>;
+
+  rebuildPersonalSearchIndex(): Promise<PersonalSearchIndexEntry[]>;
+
+  listTombstones(): Promise<LocalRecordTombstone[]>;
+
+  applyBackupRetention(policy: BackupRetentionPolicy): Promise<void>;
 
   saveAchievement(
     contentKey: string,
@@ -134,4 +142,6 @@ export interface ProgressDatabaseContract {
   ): Promise<Record<string, unknown>>;
 
   savePersonalWorkspace(workspace: PersonalWorkspace): Promise<PersonalWorkspace>;
+
+  saveTombstone(tombstone: LocalRecordTombstone): Promise<void>;
 }

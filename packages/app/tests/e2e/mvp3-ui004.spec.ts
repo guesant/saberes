@@ -16,10 +16,10 @@ const prohibitedPersonalTerms = [
 test("M3-UI-004 representa o espaço como experiência pessoal", async ({ page }) => {
   await page.goto("/meu-espaco", { waitUntil: "networkidle" });
 
-  await expect(page.getByRole("heading", { name: "Meu espaço local" }))
+  await expect(page.getByRole("heading", { name: "Meu espaço" }))
     .toBeVisible();
 
-  await expect(page.getByRole("heading", { name: "Criar algo local" }))
+  await expect(page.getByRole("heading", { name: "Adicionar ao seu espaço" }))
     .toBeVisible();
 
   await expect(page.getByRole("heading", { name: "Seu espaço está pronto para receber algo." }))

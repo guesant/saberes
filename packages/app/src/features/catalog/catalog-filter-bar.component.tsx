@@ -8,7 +8,7 @@ export function CatalogFilterBar(props: CatalogFilterBarProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UIResponsiveFields>
+      <UIResponsiveFields distribution="equal">
         <UITextField
           label={t("catalog.filters.process")}
           onChange={(event) => { return props.onChange({ ...props.filters, processName: event.target.value }); }}

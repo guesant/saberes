@@ -6,5 +6,17 @@ export type UIPageSurfaceProps = {
 };
 
 export function UIPageSurface(props: UIPageSurfaceProps): ReactElement {
-  return <MuiBox data-ui-layout="stack" sx={{ minHeight: "100vh" }}>{props.children}</MuiBox>;
+  return (
+    <MuiBox
+      data-ui-layout="stack"
+      sx={{
+        display: { md: "grid", xs: "block" },
+        gridTemplateColumns: { md: "264px minmax(0, 1fr)", xs: "1fr" },
+        minHeight: "100vh",
+        "& > [data-ui-layout='toolbar']": { gridColumn: "1 / -1" },
+      }}
+    >
+      {props.children}
+    </MuiBox>
+  );
 }

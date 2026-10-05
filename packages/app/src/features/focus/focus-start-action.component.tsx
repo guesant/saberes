@@ -10,10 +10,12 @@ export interface FocusStartActionProps {
 export function FocusStartAction(props: FocusStartActionProps) {
   const { t } = useTranslation();
 
-  const visible = !props.active && !props.paused;
+  if (props.active || props.paused) {
+    return null;
+  }
 
   return (
-    <UIButton disabled={!visible} hidden={!visible} onClick={props.onStart} variant="contained">
+    <UIButton onClick={props.onStart} variant="contained">
       {t("focus.start")}
     </UIButton>
   );

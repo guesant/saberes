@@ -4,7 +4,7 @@ import type { LessonSectionContentViewModel } from "./lesson-section-content-vie
 export function getLessonSectionLoadingState(
   queries: LessonSectionContentQueries,
 ): LessonSectionContentViewModel | undefined {
-  if (queries.blocks.isPending || queries.graph.isPending) {
+  if (queries.blocks.isPending || (queries.graph.isEnabled && queries.graph.isPending)) {
     return { status: "loading" };
   }
 

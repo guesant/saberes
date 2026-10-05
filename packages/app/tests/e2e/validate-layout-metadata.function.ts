@@ -1,5 +1,6 @@
 import { collectLayoutRows } from "./collect-layout-rows.function";
 import { getLayoutBox } from "./get-layout-box.function";
+import { validateActionGroupAlignment } from "./validate-action-group-alignment.function";
 import { validateLayoutAlignment } from "./validate-layout-alignment.function";
 import { validateLayoutClose } from "./validate-layout-close.function";
 import { validateLayoutGap } from "./validate-layout-gap.function";
@@ -18,6 +19,7 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
           closure: element.getAttribute("data-ui-closure"),
           gap: element.getAttribute("data-ui-gap"),
           kind: element.getAttribute("data-ui-layout"),
+          actions: element.getAttribute("data-ui-actions") === "true",
         };
       });
 
@@ -51,6 +53,29 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
               return box.width > 0 && box.height > 0;
             });
         });
+
+      const actionChildren = metadata.actions
+        ? await layout.locator(":scope > button, :scope > a, :scope > label")
+          .evaluateAll((elements) => {
+            return elements
+              .map((element) => {
+                const rect = element.getBoundingClientRect();
+
+                return {
+                  bottom: rect.bottom,
+                  height: rect.height,
+                  left: rect.left,
+                  right: rect.right,
+                  textAlign: window.getComputedStyle(element).textAlign,
+                  top: rect.top,
+                  width: rect.width,
+                };
+              })
+              .filter((box) => {
+                return box.width > 0 && box.height > 0;
+              });
+          })
+        : [];
 
       const rows = collectLayoutRows(children);
 
@@ -108,6 +133,10 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
         rows.forEach((row) => {
           validateLayoutAlignment(row, metadata.align ?? "", `${metadata.kind} children`);
         });
+      }
+
+      if (metadata.actions && metadata.kind === "row") {
+        validateActionGroupAlignment(actionChildren, container);
       }
 
       if (metadata.kind === "bottom-tabs") {

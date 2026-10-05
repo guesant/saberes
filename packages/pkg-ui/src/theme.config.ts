@@ -33,7 +33,7 @@ export const theme = createTheme({
       letterSpacing: "-0.02em",
     },
     h3: { fontSize: "clamp(1.5rem, 3.5vw, 2.125rem)", fontWeight: 700 },
-    h4: { fontSize: "clamp(1.35rem, 3vw, 1.8rem)" },
+    h4: { fontSize: "clamp(1.35rem, 3vw, 1.8rem)", fontWeight: 700 },
     h5: { fontSize: "clamp(1.2rem, 2.5vw, 1.5rem)" },
     h6: { fontSize: "clamp(1.1rem, 2vw, 1.25rem)" },
     button: { textTransform: "none", fontWeight: 600 },
@@ -90,7 +90,7 @@ export const theme = createTheme({
     },
     MuiButton: {
       defaultProps: { disableElevation: true, disableRipple: true },
-      styleOverrides: { root: { borderRadius: "0.25rem", minHeight: 44 } },
+      styleOverrides: { root: { borderRadius: "0.25rem", minHeight: 44, textAlign: "center" } },
     },
     MuiButtonBase: { defaultProps: { disableRipple: true } },
     MuiIconButton: {

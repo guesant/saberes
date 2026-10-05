@@ -11,6 +11,8 @@ import {
   type PersonalReference,
   type StudyGoal,
   type PersonalWorkspace,
+  type BackupRetentionPolicy,
+  type LocalRecordTombstone,
 } from "@guesant/saberes-domain";
 import { AttemptConfidence as AttemptConfidenceEnum } from "@guesant/saberes-domain";
 import Dexie, { type Table } from "dexie";
@@ -31,6 +33,7 @@ import {
   string,
   union,
 } from "valibot";
+import { createPersonalSearchIndexEntries } from "./create-personal-search-index-entries.function";
 import { getProgressSnapshotChecksum } from "./get-progress-snapshot-checksum.function";
 import { isPersonalSearchIndexEntries } from "./is-personal-search-index-entries.function";
 import { isPersonalWorkspace } from "./is-personal-workspace.function";
@@ -91,7 +94,7 @@ const studyStores = [
   "savedCatalogFilters",
 ];
 
-const progressStoreNames = [...studyStores, "attempts", "sessions", "settings"];
+const progressStoreNames = [...studyStores, "attempts", "sessions", "settings", "tombstones"];
 
 const personalWorkspaceSettingKey = "personal-workspace";
 
@@ -121,6 +124,8 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   sessions!: Table<SessionRecord, string>;
 
   settings!: Table<ProgressSettingRecord, string>;
+
+  tombstones!: Table<LocalRecordTombstone, string>;
 
   diagnoses!: Table<AttemptDiagnosis, string>;
 
@@ -251,6 +256,11 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
           }),
         );
       });
+
+    this.version(8)
+      .stores({
+        tombstones: "id, recordType, recordId, deletedAt",
+      });
   }
 
   private nowIso() {
@@ -348,7 +358,7 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
 
   async clearProgress() {
     await Promise.all(
-      [...studyStores, "attempts", "sessions"].map((store) => {
+      [...studyStores, "attempts", "sessions", "tombstones"].map((store) => {
         return this.table(store)
           .clear();
       }),
@@ -528,6 +538,51 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
     const setting = await this.getSetting(personalWorkspaceIndexSettingKey);
 
     return isPersonalSearchIndexEntries(setting?.value) ? setting.value : [];
+  }
+
+  listTombstones(): Promise<LocalRecordTombstone[]> {
+    return this.tombstones.orderBy("deletedAt")
+      .reverse()
+      .toArray();
+  }
+
+  async saveTombstone(tombstone: LocalRecordTombstone): Promise<void> {
+    await this.tombstones.put(tombstone);
+  }
+
+  async applyBackupRetention(policy: BackupRetentionPolicy): Promise<void> {
+    const events = await this.listBackupEvents();
+
+    const cutoff = Date.parse(this.nowIso()) - Math.max(0, policy.maxAgeDays) * 24 * 60 * 60 * 1000;
+
+    const retainedIds = new Set(
+      events
+        .filter((event) => { return Date.parse(event.createdAt) >= cutoff; })
+        .slice(0, Math.max(0, policy.maxEvents))
+        .map((event) => { return event.id; }),
+    );
+
+    const expiredIds = events
+      .filter((event) => { return !retainedIds.has(event.id); })
+      .map((event) => { return event.id; });
+
+    if (expiredIds.length === 0) {
+      return;
+    }
+
+    await this.table("backupEvents")
+      .bulkDelete(expiredIds);
+  }
+
+  async rebuildPersonalSearchIndex(): Promise<PersonalSearchIndexEntry[]> {
+    const workspace = await this.getPersonalWorkspace();
+
+    const nextIndex = createPersonalSearchIndexEntries(workspace);
+
+    await this.table("settings")
+      .put({ key: personalWorkspaceIndexSettingKey, value: nextIndex });
+
+    return nextIndex;
   }
 
   async saveStudyGoal(goal: StudyGoal): Promise<StudyGoal> {
@@ -712,6 +767,8 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
             createdAt: this.nowIso(),
           });
       });
+
+      await this.rebuildPersonalSearchIndex();
     } catch (error) {
       await this.recordBackupEvent({
         operation: "import",

@@ -1,5 +1,5 @@
 import { StudyGoalMetric } from "@guesant/saberes-application";
-import { UIContentGroup, UIForm, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UIForm } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { GoalFormFields } from "./goal-form-fields.component";
 import { useGoalForm } from "./use-goal-form.hook";
@@ -29,7 +29,6 @@ export function GoalForm(props: GoalFormProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UITypography variant="h5">{t("goals.newGoal")}</UITypography>
       <UIForm onSubmit={submit}>
         <GoalFormFields
           createLabel={t("goals.create")}

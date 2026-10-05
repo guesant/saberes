@@ -1,38 +1,24 @@
-import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIDisclosure } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { CatalogSavedFilterEmptyState } from "./catalog-saved-filter-empty-state.component";
-import { CatalogSavedFilterForm } from "./catalog-saved-filter-form.component";
-import { CatalogSavedFilterList } from "./catalog-saved-filter-list.component";
-import { CatalogSavedFilterSaveError } from "./catalog-saved-filter-save-error.component";
-import { CatalogSavedFiltersFeedback } from "./catalog-saved-filters-feedback.component";
+import { CatalogSavedFiltersContent } from "./catalog-saved-filters-content.component";
 import type { CatalogSavedFiltersProps } from "./catalog-saved-filters-props.type";
 
 export function CatalogSavedFilters(props: CatalogSavedFiltersProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="content">
-      <UITypography variant="h5">{t("catalog.savedFilters")}</UITypography>
-
-      <CatalogSavedFilterForm onSave={props.onSave} saving={props.saving} />
-
-      <CatalogSavedFilterSaveError error={props.saveError} />
-
-      <CatalogSavedFiltersFeedback
+    <UIDisclosure summary={t("catalog.savedFilters")}>
+      <CatalogSavedFiltersContent
         error={props.error}
+        filters={props.filters}
+        onDelete={props.onDelete}
         onRetry={props.onRetry}
+        onSave={props.onSave}
+        onSelect={props.onSelect}
+        saveError={props.saveError}
+        saving={props.saving}
         state={props.state}
       />
-
-      {props.filters.length ? (
-        <CatalogSavedFilterList
-          filters={props.filters}
-          onDelete={props.onDelete}
-          onSelect={props.onSelect}
-        />
-      ) : null}
-
-      <CatalogSavedFilterEmptyState visible={!props.filters.length} />
-    </UIContentGroup>
+    </UIDisclosure>
   );
 }

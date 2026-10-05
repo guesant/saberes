@@ -905,6 +905,30 @@ const contentGroupContract = {
   },
 };
 
+const surfaceInsetContract = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      surface:
+        "Presentation surfaces must expose an explicit inset. Use UIContentSurface instead of raw UIPaper so mobile padding is guaranteed.",
+    },
+  },
+  create(context) {
+    if (!isProtectedFilename(context.getFilename())) {
+      return {};
+    }
+
+    return {
+      JSXOpeningElement(node) {
+        if (getOpeningElementName(node) === "UIPaper") {
+          context.report({ node, messageId: "surface" });
+        }
+      },
+    };
+  },
+};
+
 const noFullWidthControlOutsideUi = {
   meta: {
     type: "problem",
@@ -1229,6 +1253,7 @@ export default {
     "action-group-contract": actionGroupContract,
     "bottom-navigation-contract": bottomNavigationContract,
     "content-group-contract": contentGroupContract,
+    "surface-inset-contract": surfaceInsetContract,
     "no-full-width-control-outside-ui": noFullWidthControlOutsideUi,
     "form-control-label-contract": formControlLabelContract,
     "no-technical-form-copy": noTechnicalFormCopy,

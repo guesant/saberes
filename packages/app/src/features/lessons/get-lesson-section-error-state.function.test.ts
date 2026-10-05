@@ -14,6 +14,7 @@ const failedBlocks = {
 const failedGraph = {
   data: undefined,
   error: new Error("graph unavailable"),
+  isEnabled: true,
   isError: true,
   isPending: false,
 };
@@ -28,6 +29,7 @@ const validBlocks: LessonSectionContentQueryState = {
 const validGraph = {
   data: undefined,
   error: null,
+  isEnabled: false,
   isError: false,
   isPending: false,
 };

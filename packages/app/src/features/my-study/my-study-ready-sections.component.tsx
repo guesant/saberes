@@ -1,4 +1,5 @@
-import { UIContentGroup, UISectionAnchor } from "@guesant/saberes-ui";
+import { UIContentGroup, UIDisclosure, UISectionAnchor } from "@guesant/saberes-ui";
+import { useTranslation } from "react-i18next";
 import { ContentReleaseSummary } from "./content-release-summary.component";
 import { LocalBackupPanel } from "./local-backup-panel.component";
 import { MyStudyFirstStudyPrompt } from "./my-study-first-study-prompt.component";
@@ -17,19 +18,19 @@ export interface MyStudyReadySectionsProps {
 }
 
 export function MyStudyReadySections(props: MyStudyReadySectionsProps) {
+  const { t } = useTranslation();
+
   return (
     <UIContentGroup variant="section">
-      <ContentReleaseSummary
-        error={props.viewModel.contentReleaseError}
-        release={props.viewModel.contentRelease}
-      />
       <MyStudyFirstStudyPrompt
         course={props.viewModel.data.catalog.courses[0] || null}
         release={props.viewModel.contentRelease}
       />
       <MyStudyQuickAccessGrid />
       <UISectionAnchor id="dados-locais">
-        <LocalBackupPanel viewModel={props.backupViewModel} />
+        <UIDisclosure summary={t("backup.title")}>
+          <LocalBackupPanel viewModel={props.backupViewModel} />
+        </UIDisclosure>
       </UISectionAnchor>
       <MyStudySavedContent
         lessons={props.viewModel.data.savedLessons}
@@ -42,6 +43,10 @@ export function MyStudyReadySections(props: MyStudyReadySectionsProps) {
         reviewCount={props.viewModel.data.reviews.length}
         showRecommendations={props.visibility.showRecommendations}
         showReminders={props.visibility.showReminders}
+      />
+      <ContentReleaseSummary
+        error={props.viewModel.contentReleaseError}
+        release={props.viewModel.contentRelease}
       />
     </UIContentGroup>
   );

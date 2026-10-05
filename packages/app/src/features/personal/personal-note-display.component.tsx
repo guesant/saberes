@@ -1,5 +1,7 @@
 import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
+import { useTranslation } from "react-i18next";
 import { PersonalEntitySelectionSurface } from "./personal-entity-selection-surface.component";
+import { PersonalRelatedContent } from "./personal-related-content.component";
 import type { PersonalNote, PersonalRelationEndpoint } from "@guesant/saberes-application";
 
 export interface PersonalNoteDisplayProps {
@@ -15,6 +17,8 @@ export interface PersonalNoteDisplayProps {
 }
 
 export function PersonalNoteDisplay(props: PersonalNoteDisplayProps) {
+  const { t } = useTranslation();
+
   return (
     <PersonalEntitySelectionSurface
       ariaLabel={`Selecionar ${props.note.title}`}
@@ -26,16 +30,18 @@ export function PersonalNoteDisplay(props: PersonalNoteDisplayProps) {
       <UIContentGroup variant="content">
         <UITypography variant="h6">{props.note.title}</UITypography>
         <UITypography color="text.secondary">{props.note.body}</UITypography>
-        <UITypography>{props.note.contentKey ?? "Sem ContentKey"}</UITypography>
+        {props.note.contentKey ? (
+          <PersonalRelatedContent value={props.note.contentKey} />
+        ) : null}
         <UIInlineActions>
           <UIButton onClick={props.onArchive} variant="text">
-            Arquivar
+            {t("personal.capture.archive")}
           </UIButton>
           <UIButton onClick={props.onEdit} variant="text">
-            Editar
+            {t("personal.capture.edit")}
           </UIButton>
           <UIButton onClick={props.onDelete} variant="text">
-            Excluir
+            {t("personal.capture.delete")}
           </UIButton>
         </UIInlineActions>
       </UIContentGroup>

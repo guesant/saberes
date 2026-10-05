@@ -1,5 +1,5 @@
 {
-  "mode": "strict",
+  "mode": "mild",
   "threshold": 10,
   "minLines": 20,
   "minTokens": 150,

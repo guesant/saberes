@@ -10,10 +10,12 @@ export interface FocusStopActionProps {
 export function FocusStopAction(props: FocusStopActionProps) {
   const { t } = useTranslation();
 
-  const visible = props.active || props.paused;
+  if (!props.active && !props.paused) {
+    return null;
+  }
 
   return (
-    <UIButton disabled={!visible} hidden={!visible} onClick={props.onStop} variant="outlined">
+    <UIButton onClick={props.onStop} variant="outlined">
       {t("focus.stop")}
     </UIButton>
   );

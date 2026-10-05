@@ -1,9 +1,8 @@
-import { UIPaper } from "@guesant/saberes-ui";
+import { UIContentSurface } from "@guesant/saberes-ui";
 import { LessonActionFeedback } from "./lesson-action-feedback.component";
-import { LessonEditorialMetadataPanel } from "./lesson-editorial-metadata-panel.component";
 import { LessonReadyFooter } from "./lesson-ready-footer.component";
 import { LessonReadyHeader } from "./lesson-ready-header.component";
-import { LessonSectionNavigation } from "./lesson-section-navigation.component";
+import { LessonReadySecondaryContent } from "./lesson-ready-secondary-content.component";
 import { LessonSections } from "./lesson-sections.component";
 import { useLessonResume } from "./use-lesson-resume.hook";
 import type { ActionState } from "../../types/action-state.type";
@@ -51,19 +50,15 @@ export function LessonReadyView(props: LessonReadyViewProps) {
         progressState={props.progressActionState}
       />
 
-      <LessonEditorialMetadataPanel data={data} />
+      <LessonReadySecondaryContent
+        data={data}
+        sectionIndex={props.sectionIndex}
+        onSectionChange={props.onSectionChange}
+      />
 
-      <UIPaper variant="outlined">
-        <LessonSectionNavigation
-          sections={data.sections}
-          selectedIndex={props.sectionIndex}
-          onSectionSelect={props.onSectionChange}
-        />
-      </UIPaper>
-
-      <UIPaper>
+      <UIContentSurface mode="outlined">
         <LessonSections sections={data.sections} onQuestion={onQuestion} />
-      </UIPaper>
+      </UIContentSurface>
 
       <LessonReadyFooter />
     </>

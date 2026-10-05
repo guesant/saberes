@@ -11,6 +11,7 @@ export function UIInlineActions(props: UIInlineActionsProps): ReactElement {
     <MuiBox
       alignItems="center"
       data-ui-align="center"
+      data-ui-actions="true"
       data-ui-gap="sm"
       data-ui-layout={props.wrap ? "cluster" : "row"}
       display="flex"

@@ -57,4 +57,44 @@ describe("personal search index", () => {
 
     await expect(progressDb.listPersonalSearchIndex()).resolves.toEqual([]);
   });
+
+  it("rebuilds the index after the stored read model is lost", async () => {
+    await progressDb.savePersonalWorkspace(workspace);
+
+    await progressDb.saveSetting("personal-workspace-index", []);
+
+    await expect(progressDb.rebuildPersonalSearchIndex()).resolves.toEqual([
+      {
+        id: "note:note-1",
+        recordId: "note-1",
+        recordType: "note",
+        searchText: "Revisão local Revisar a definição ",
+        updatedAt: "2026-10-01T10:00:00.000Z",
+      },
+    ]);
+
+    await expect(progressDb.listPersonalSearchIndex()).resolves.toHaveLength(1);
+  });
+
+  it("rebuilds the index during progress restoration", async () => {
+    await progressDb.savePersonalWorkspace(workspace);
+
+    await progressDb.saveSetting("personal-workspace-index", []);
+
+    const snapshot = await progressDb.exportProgress();
+
+    await progressDb.savePersonalWorkspace(emptyWorkspace);
+
+    await progressDb.importProgress({ snapshot, strategy: "replace" });
+
+    await expect(progressDb.listPersonalSearchIndex()).resolves.toEqual([
+      {
+        id: "note:note-1",
+        recordId: "note-1",
+        recordType: "note",
+        searchText: "Revisão local Revisar a definição ",
+        updatedAt: "2026-10-01T10:00:00.000Z",
+      },
+    ]);
+  });
 });

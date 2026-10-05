@@ -9,8 +9,10 @@ import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-a
 import type {
   AcademicDiscipline,
   AttemptRecord,
+  BackupRetentionPolicy,
   DiagnosisRecord,
   FocusSession,
+  LocalRecordTombstone,
   ReviewTargetRecord,
   PersonalWorkspace,
   StudyGoal,
@@ -69,8 +71,20 @@ export class DexieProgressStore implements ProgressStorageContract {
     return this.database.listPersonalSearchIndex();
   }
 
+  listTombstones(): Promise<LocalRecordTombstone[]> {
+    return this.database.listTombstones();
+  }
+
+  applyBackupRetention(policy: BackupRetentionPolicy): Promise<void> {
+    return this.database.applyBackupRetention(policy);
+  }
+
   savePersonalWorkspace(workspace: PersonalWorkspace): Promise<PersonalWorkspace> {
     return this.database.savePersonalWorkspace(workspace);
+  }
+
+  saveTombstone(tombstone: LocalRecordTombstone): Promise<void> {
+    return this.database.saveTombstone(tombstone);
   }
 
   listSavedCatalogFilters(): Promise<SavedCatalogFilter[]> {

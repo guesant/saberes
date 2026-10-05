@@ -12,6 +12,8 @@ const roots = {
 
 const sourceExtensions = new Set([".ts", ".tsx"]);
 
+const domainPureDependencies = new Set(["date-fns"]);
+
 const violations: string[] = [];
 
 export async function filesIn(directory: string): Promise<string[]> {
@@ -63,7 +65,7 @@ for (const [layer, root] of Object.entries(roots)) {
       layer === "domain" &&
       !isTest &&
       imports.some((value) => {
-        return !value.startsWith(".");
+        return !value.startsWith(".") && !domainPureDependencies.has(value);
       })
     ) {
       violations.push(`${relativePath}: domain importa dependência externa`);

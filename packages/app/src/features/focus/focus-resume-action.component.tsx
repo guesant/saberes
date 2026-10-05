@@ -10,10 +10,12 @@ export interface FocusResumeActionProps {
 export function FocusResumeAction(props: FocusResumeActionProps) {
   const { t } = useTranslation();
 
-  const visible = !props.active && props.paused;
+  if (props.active || !props.paused) {
+    return null;
+  }
 
   return (
-    <UIButton disabled={!visible} hidden={!visible} onClick={props.onResume} variant="contained">
+    <UIButton onClick={props.onResume} variant="contained">
       {t("focus.resume")}
     </UIButton>
   );

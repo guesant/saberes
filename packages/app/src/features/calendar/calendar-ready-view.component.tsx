@@ -1,4 +1,4 @@
-import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UIDisclosure, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { CalendarEntriesContent } from "./calendar-entries-content.component";
 import { CalendarEntryForm } from "./calendar-entry-form.component";
@@ -21,7 +21,9 @@ export function CalendarReadyView(props: CalendarReadyViewProps) {
         onViewChange={props.viewModel.setView}
         view={props.viewModel.view}
       />
-      <CalendarEntryForm onCreate={props.viewModel.createEntry} />
+      <UIDisclosure summary={t("calendar.newEntry")}>
+        <CalendarEntryForm onCreate={props.viewModel.createEntry} />
+      </UIDisclosure>
       <CalendarEntriesContent entries={props.viewModel.entries} />
     </UIContentGroup>
   );

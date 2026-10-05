@@ -15,20 +15,16 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
       data-ui-outset="none"
       id="main-content"
       maxWidth="lg"
-      sx={
-        props.sidebarAware
-          ? {
-            boxSizing: "border-box",
-            marginLeft: { md: "264px", xs: "auto" },
-            marginRight: { md: "auto", xs: "auto" },
-            maxWidth: { md: "1200px", xs: "100%" },
-            minWidth: 0,
-            pb: { md: 5, xs: 11 },
-            pt: { md: 5, xs: 3 },
-            width: { md: "calc(100% - 264px)", xs: "100%" },
-          }
-          : { minWidth: 0, pb: { md: 5, xs: 11 }, pt: { md: 5, xs: 3 }, width: "100%" }
-      }
+      sx={{
+        boxSizing: "border-box",
+        gridColumn: props.sidebarAware ? { md: "2", xs: "1" } : "1 / -1",
+        justifySelf: { md: "center", xs: "stretch" },
+        maxWidth: { md: "60rem", xs: "100%" },
+        minWidth: 0,
+        pb: { md: 5, xs: 11 },
+        pt: { md: 5, xs: 3 },
+        width: "100%",
+      }}
     >
       {props.children}
     </MuiContainer>

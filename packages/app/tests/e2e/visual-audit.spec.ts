@@ -3,11 +3,16 @@ import { validateVisualComposition } from "./validate-visual-composition.functio
 import type { VisualAuditScenario } from "./visual-audit-scenario.type";
 
 const scenarios: VisualAuditScenario[] = [
-  { landmark: "Filtros salvos", name: "saved-filters", route: "/catalogo" },
+  {
+    landmark: "Filtros salvos",
+    landmarkRole: "text",
+    name: "saved-filters",
+    route: "/catalogo",
+  },
   { landmark: "Metas de estudo", name: "study-goals", route: "/metas" },
   { landmark: "Foco e pausas", name: "focus-session", route: "/foco" },
   { landmark: "Preferências de estudo", name: "preferences", route: "/preferencias" },
-  { landmark: "Meu espaço local", name: "personal-space", route: "/meu-espaco" },
+  { landmark: "Meu espaço", name: "personal-space", route: "/meu-espaco" },
 ];
 
 const viewports = [
@@ -23,8 +28,22 @@ viewports.forEach((viewport) => {
       test(`@visual-audit ${scenario.name} identifies the attached screen`, async ({ page }) => {
         await page.goto(scenario.route, { waitUntil: "networkidle" });
 
-        await expect(page.getByText(scenario.landmark, { exact: true })
-          .first())
+        if (scenario.name === "saved-filters") {
+          await page.getByText("Filtrar catálogo", { exact: true })
+            .click();
+
+          await page.locator("summary")
+            .filter({ hasText: "Filtros salvos" })
+            .click();
+        }
+
+        let landmark = page.getByRole("heading", { name: scenario.landmark, exact: true });
+
+        if (scenario.landmarkRole === "text") {
+          landmark = page.getByText(scenario.landmark, { exact: true });
+        }
+
+        await expect(landmark.first())
           .toBeVisible();
 
         await validateVisualComposition(page, scenario);

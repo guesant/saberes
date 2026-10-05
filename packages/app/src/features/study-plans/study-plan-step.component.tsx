@@ -2,7 +2,7 @@ import {
   UICheckCircleIcon,
   UIEventNoteIcon,
   UIIconButton,
-  UIPaper,
+  UIContentSurface,
   UIContentGroup,
   UIStartAlignedRow,
   UITypography,
@@ -27,7 +27,7 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
   const { t } = useTranslation();
 
   return (
-    <UIPaper variant="outlined">
+    <UIContentSurface mode="outlined">
       <UIStartAlignedRow>
         <UIIconButton
           aria-label={props.completed ? t("lesson.completed") : t("lesson.complete")}
@@ -55,6 +55,6 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
           <StudyPlanStepMoveActions stepId={String(props.step.id)} onMove={props.onMove} />
         </UIContentGroup>
       </UIStartAlignedRow>
-    </UIPaper>
+    </UIContentSurface>
   );
 }

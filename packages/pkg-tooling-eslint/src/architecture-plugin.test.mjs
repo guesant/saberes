@@ -1045,6 +1045,35 @@ test("content-group-contract rejects dense groups with multiple content blocks",
   );
 });
 
+test("surface-inset-contract rejects raw presentation papers", () => {
+  assert.equal(
+    verifyLayout(
+      'function Release() { return <UIPaper variant="outlined" />; }',
+      "surface-inset-contract",
+      "packages/app/src/features/my-study/content-release-summary.component.tsx",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function Release() { return <UIContentSurface mode="outlined" />; }',
+      "surface-inset-contract",
+      "packages/app/src/features/my-study/content-release-summary.component.tsx",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function Surface() { return <UIPaper variant="outlined" />; }',
+      "surface-inset-contract",
+      "packages/pkg-ui/src/paper.component.tsx",
+    ).length,
+    0,
+  );
+});
+
 test("no-mui-stack rejects MUI Stack imports and access paths", () => {
   for (const code of [
     'import { Stack as MuiStack } from "@mui/material";',

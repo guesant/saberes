@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIDisclosure } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { ReviewSessionReadyDetails } from "./review-session-ready-details.component";
@@ -22,7 +22,9 @@ export function ReviewSessionReadyContent(props: ReviewSessionReadyContentProps)
       <UIButton variant="contained" onClick={handleStartSession}>
         {t("review.startSession")}
       </UIButton>
-      <ReviewSessionReadyDetails viewModel={props.viewModel} />
+      <UIDisclosure summary={t("review.viewQueue")}>
+        <ReviewSessionReadyDetails viewModel={props.viewModel} />
+      </UIDisclosure>
     </UIContentGroup>
   );
 }

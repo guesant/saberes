@@ -9,13 +9,12 @@ export interface FocusPauseActionProps {
 export function FocusPauseAction(props: FocusPauseActionProps) {
   const { t } = useTranslation();
 
+  if (!props.active) {
+    return null;
+  }
+
   return (
-    <UIButton
-      disabled={!props.active}
-      hidden={!props.active}
-      onClick={props.onPause}
-      variant="outlined"
-    >
+    <UIButton onClick={props.onPause} variant="outlined">
       {t("focus.pause")}
     </UIButton>
   );

@@ -14,7 +14,7 @@ export interface GoalFormTextFieldsProps {
 
 export function GoalFormTextFields(props: GoalFormTextFieldsProps) {
   return (
-    <UIResponsiveFields>
+    <UIResponsiveFields distribution="equal">
       <GoalFormTitleField
         existingTitles={props.existingTitles}
         form={props.form}

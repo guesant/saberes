@@ -1,7 +1,7 @@
-import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { getPersonalCaptureContentPath } from "./get-personal-capture-content-path.function";
 import { PersonalEntitySelectionSurface } from "./personal-entity-selection-surface.component";
 import { StudyCaptureActions } from "./study-capture-actions.component";
+import { StudyCaptureSummary } from "./study-capture-summary.component";
 import type { PersonalRelationEndpoint, StudyCapture } from "@guesant/saberes-application";
 
 export interface StudyCaptureDisplayProps {
@@ -22,7 +22,7 @@ export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
   const contentPath = getPersonalCaptureContentPath(props.capture.contentKey);
 
   return (
-    <UIContentGroup variant="content">
+    <>
       <PersonalEntitySelectionSurface
         ariaLabel={`Selecionar ${props.capture.title}`}
         endpoint={{ id: props.capture.id, recordType: "capture" }}
@@ -30,14 +30,7 @@ export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
         onSelect={props.onSelect}
         selected={props.selected}
       >
-        <UIContentGroup variant="content">
-          <UITypography variant="h6">{props.capture.title}</UITypography>
-          <UITypography color="text.secondary">{props.capture.description}</UITypography>
-          <UITypography>{props.capture.contentKey ?? "Sem ContentKey"}</UITypography>
-          <UITypography color="text.secondary">
-            {props.capture.dueDate ? `Prazo: ${props.capture.dueDate}` : "Sem prazo"}
-          </UITypography>
-        </UIContentGroup>
+        <StudyCaptureSummary capture={props.capture} />
       </PersonalEntitySelectionSurface>
       <StudyCaptureActions
         contentPath={contentPath}
@@ -47,6 +40,6 @@ export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
         onUpdateCompletion={props.onUpdateCompletion}
         reviewPath={props.capture.contentKey ? "/revisoes" : null}
       />
-    </UIContentGroup>
+    </>
   );
 }

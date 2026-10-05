@@ -10,8 +10,10 @@ import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-a
 import type {
   AcademicDiscipline,
   AttemptRecord,
+  BackupRetentionPolicy,
   DiagnosisRecord,
   FocusSession,
+  LocalRecordTombstone,
   ReviewTargetRecord,
   PersonalWorkspace,
   StudyGoal,
@@ -73,7 +75,13 @@ export interface ProgressStorageContract {
 
   listPersonalSearchIndex(): Promise<PersonalSearchIndexEntry[]>;
 
+  listTombstones(): Promise<LocalRecordTombstone[]>;
+
+  applyBackupRetention(policy: BackupRetentionPolicy): Promise<void>;
+
   savePersonalWorkspace(workspace: PersonalWorkspace): Promise<PersonalWorkspace>;
+
+  saveTombstone(tombstone: LocalRecordTombstone): Promise<void>;
 
   recordAttempt(attempt: Attempt): Promise<AttemptWithId>;
 

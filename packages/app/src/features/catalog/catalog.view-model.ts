@@ -42,6 +42,7 @@ export function useCatalogViewModel(): CatalogViewModel {
 
   const query = useQuery({
     queryKey: ["catalog", filters],
+    placeholderData: (previousData) => { return previousData; },
     queryFn: () => { return services.catalog.get.execute(filters); },
   });
 

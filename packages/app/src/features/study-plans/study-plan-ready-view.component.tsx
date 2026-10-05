@@ -1,7 +1,7 @@
 import { UIContentGroup } from "@guesant/saberes-ui";
 import { createCompletedStepSet } from "./create-completed-step-set.function";
 import { getStudyPlanProgress } from "./get-study-plan-progress.function";
-import { StudyPlanControls } from "./study-plan-controls.component";
+import { StudyPlanCustomizationDisclosure } from "./study-plan-customization-disclosure.component";
 import { StudyPlanEditorialNotice } from "./study-plan-editorial-notice.component";
 import { StudyPlanProgressSummary } from "./study-plan-progress-summary.component";
 import { StudyPlanReadyHeader } from "./study-plan-ready-header.component";
@@ -40,19 +40,19 @@ export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {
     <>
       <StudyPlanReadyHeader data={props.data} />
 
-      <StudyPlanControls
-        state={props.localState}
-        onTogglePause={props.onTogglePause}
-        onStartDateChange={props.onStartDateChange}
-        onTargetDateChange={props.onTargetDateChange}
-        onDailyMinutesChange={props.onDailyMinutesChange}
-      />
-
       <StudyPlanProgressSummary
         completedSteps={planProgress.completedSteps}
         percentage={planProgress.percentage}
         totalSteps={planProgress.totalSteps}
         nextStep={props.nextStep}
+      />
+
+      <StudyPlanCustomizationDisclosure
+        state={props.localState}
+        onTogglePause={props.onTogglePause}
+        onStartDateChange={props.onStartDateChange}
+        onTargetDateChange={props.onTargetDateChange}
+        onDailyMinutesChange={props.onDailyMinutesChange}
       />
 
       <UIContentGroup variant="content">

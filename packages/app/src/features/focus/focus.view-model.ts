@@ -2,6 +2,7 @@ import { FocusSessionStatus, type FocusSession } from "@guesant/saberes-applicat
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
 import { createFocusViewModelActions } from "./create-focus-view-model-actions.function";
+import { findFocusSessionByStatus } from "./find-focus-session-by-status.function";
 import { useFocusSessionsQuery } from "./use-focus-sessions-query.hook";
 
 export interface FocusViewModel {
@@ -28,15 +29,9 @@ export function useFocusViewModel(): FocusViewModel {
 
   const sessions = query.data || [];
 
-  const active =
-    sessions.find((session) => {
-      return session.status === FocusSessionStatus.Active;
-    }) || null;
+  const active = findFocusSessionByStatus(sessions, FocusSessionStatus.Active);
 
-  const paused =
-    sessions.find((session) => {
-      return session.status === FocusSessionStatus.Paused;
-    }) || null;
+  const paused = findFocusSessionByStatus(sessions, FocusSessionStatus.Paused);
 
   const state = getQueryViewState(query);
 
@@ -50,7 +45,8 @@ export function useFocusViewModel(): FocusViewModel {
       await query.refetch();
     },
     save: async (session): Promise<void> => {
-      await services.focus.save.execute(session);
+      await services.focus.save.execute(session)
+        .then(() => {return query.refetch();});
     },
   });
 

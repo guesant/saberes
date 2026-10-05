@@ -11,9 +11,15 @@ const fallbackUrl = `${import.meta.env.BASE_URL}data/content.sqlite`;
 
 let databasePromise: Promise<ContentDatabase> | undefined;
 
+let databaseValue: ContentDatabase | undefined;
+
 export async function loadContentDatabase(): Promise<ContentDatabase> {
+  if (databaseValue) {
+    return databaseValue;
+  }
+
   if (!databasePromise) {
-    const pendingDatabase = (async () => {
+    databasePromise = (async () => {
       let bytes: Uint8Array;
 
       let source = primaryUrl;
@@ -51,17 +57,15 @@ export async function loadContentDatabase(): Promise<ContentDatabase> {
           return mapSqlResults(db.exec(sql, params))[0] ?? null;
         },
       };
-    })();
+    })()
+      .then((database) => {
+        databaseValue = database;
 
-    const recoverableDatabase = pendingDatabase.catch((error) => {
-      if (databasePromise === recoverableDatabase) {
+        return database;
+      })
+      .finally(() => {
         databasePromise = undefined;
-      }
-
-      throw error;
-    });
-
-    databasePromise = recoverableDatabase;
+      });
   }
 
   return databasePromise;

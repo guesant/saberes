@@ -1,11 +1,11 @@
-import { UIPaper } from "@guesant/saberes-ui";
+import { UIContentSurface } from "@guesant/saberes-ui";
 import { LessonEditorialMetadata } from "./lesson-editorial-metadata.component";
 import type { LessonEditorialMetadataPanelProps } from "./lesson-editorial-metadata-panel-props.type";
 
 export function LessonEditorialMetadataPanel(props: LessonEditorialMetadataPanelProps) {
   return (
-    <UIPaper variant="outlined">
+    <UIContentSurface mode="outlined">
       <LessonEditorialMetadata data={props.data} />
-    </UIPaper>
+    </UIContentSurface>
   );
 }

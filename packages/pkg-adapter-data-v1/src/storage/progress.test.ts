@@ -14,6 +14,7 @@ import {
 } from "@guesant/saberes-domain";
 import { beforeEach, describe, expect, it } from "vitest";
 import { ProgressDatabase } from "./progress.database";
+import type { PersonalWorkspace } from "@guesant/saberes-domain";
 
 const progressDb = new ProgressDatabase();
 
@@ -21,6 +22,14 @@ interface ProgressSnapshot {
   schemaVersion: number;
   stores: Record<string, unknown[]>;
 }
+
+const emptyPersonalWorkspace: PersonalWorkspace = {
+  activities: [],
+  captures: [],
+  checklists: [],
+  notes: [],
+  references: [],
+};
 
 describe("progresso local Dexie", () => {
   beforeEach(async () => {
@@ -208,6 +217,88 @@ describe("progresso local Dexie", () => {
 
     expect(await progressDb.listAcademicDisciplines())
       .toHaveLength(0);
+  });
+
+  it("restaura estudo, situação acadêmica, workspace pessoal e preferências", async () => {
+    const now = "2026-10-04T10:00:00.000Z";
+
+    await progressDb.enrollCourse("course:carro", { startedAt: now });
+
+    await progressDb.saveAcademicDiscipline({
+      id: "discipline-carro",
+      name: "Disciplina local",
+      modality: AcademicModality.InPerson,
+      totalClasses: 20,
+      attendedClasses: 18,
+      minimumAttendancePercentage: 75,
+      minimumGrade: 5,
+      grades: [],
+      updatedAt: now,
+    });
+
+    const workspace: PersonalWorkspace = {
+      ...emptyPersonalWorkspace,
+      notes: [
+        {
+          archived: false,
+          body: "Nota preservada na restauração",
+          createdAt: now,
+          id: "note-carro",
+          title: "Nota local",
+          updatedAt: now,
+        },
+      ],
+      references: [
+        {
+          archived: false,
+          available: true,
+          contentKey: "lesson:carro",
+          createdAt: now,
+          favorite: true,
+          id: "reference-carro",
+          location: "local://material",
+          privateNote: "Fonte local",
+          rights: "CC0",
+          source: "Material local",
+          tags: ["estudo"],
+          title: "Referência local",
+          type: "local",
+          updatedAt: now,
+        },
+      ],
+    };
+
+    await progressDb.savePersonalWorkspace(workspace);
+
+    await progressDb.saveSetting("theme", "dark");
+
+    const snapshot = await progressDb.exportProgress();
+
+    await progressDb.savePersonalWorkspace(emptyPersonalWorkspace);
+
+    await progressDb.saveSetting("theme", "light");
+
+    await progressDb.deleteAcademicDiscipline("discipline-carro");
+
+    await progressDb.importProgress({ snapshot, strategy: "replace" });
+
+    await expect(progressDb.listEnrollments()).resolves.toEqual([
+      expect.objectContaining({ contentKey: "course:carro" }),
+    ]);
+
+    await expect(progressDb.listAcademicDisciplines()).resolves.toEqual([
+      expect.objectContaining({ id: "discipline-carro" }),
+    ]);
+
+    await expect(progressDb.getPersonalWorkspace()).resolves.toMatchObject({
+      notes: [expect.objectContaining({ id: "note-carro" })],
+      references: [expect.objectContaining({ id: "reference-carro" })],
+    });
+
+    await expect(progressDb.getSetting("theme")).resolves.toEqual({
+      key: "theme",
+      value: "dark",
+    });
   });
 
   it("persiste, lista e remove filtros do catálogo localmente", async () => {

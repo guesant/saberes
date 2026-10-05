@@ -1,12 +1,14 @@
 import {
   UIButton,
   UIContentGroup,
+  UIContentSurface,
+  UIDisclosure,
   UIInlineActions,
-  UIPaper,
   UITypography,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { getFirstStudyCoursePath } from "./get-first-study-course-path.function";
+import { MyStudyFirstStudyAlternativeActions } from "./my-study-first-study-alternative-actions.component";
 import type { CatalogCard, ContentReleaseReadModel } from "@guesant/saberes-application";
 
 export interface MyStudyFirstStudyPromptProps {
@@ -24,7 +26,7 @@ export function MyStudyFirstStudyPrompt(props: MyStudyFirstStudyPromptProps) {
   const coursePath = getFirstStudyCoursePath(props.course);
 
   return (
-    <UIPaper variant="outlined">
+    <UIContentSurface mode="outlined">
       <UIContentGroup variant="content">
         <UITypography variant="overline">{t("home.firstStudyEyebrow")}</UITypography>
         <UITypography variant="h3">{t("home.firstStudyTitle")}</UITypography>
@@ -36,14 +38,11 @@ export function MyStudyFirstStudyPrompt(props: MyStudyFirstStudyPromptProps) {
           <UIButton href="/catalogo" variant="outlined">
             {t("home.firstStudyBack")}
           </UIButton>
-          <UIButton href="/catalogo" variant="text">
-            {t("home.firstStudySkip")}
-          </UIButton>
-          <UIButton href="/meu-estudo#dados-locais" variant="text">
-            {t("home.firstStudyRestore")}
-          </UIButton>
         </UIInlineActions>
+        <UIDisclosure summary={t("home.firstStudyAlternatives")}>
+          <MyStudyFirstStudyAlternativeActions />
+        </UIDisclosure>
       </UIContentGroup>
-    </UIPaper>
+    </UIContentSurface>
   );
 }

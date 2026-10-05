@@ -1,4 +1,4 @@
-import { UIContentGroup, UIPaper, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UIContentSurface, UIDisclosure, UITypography } from "@guesant/saberes-ui";
 import { format, isValid, parseISO } from "date-fns";
 import { useTranslation } from "react-i18next";
 import { ContentErrorState } from "../../components/content-error-state.component";
@@ -24,27 +24,28 @@ export function ContentReleaseSummary(props: ContentReleaseSummaryProps) {
   const generatedAt = parseISO(props.release.generatedAt);
 
   return (
-    <UIPaper variant="outlined">
-      <UIContentGroup variant="content">
-        <UITypography variant="overline">{t("home.contentRelease")}</UITypography>
-        <UITypography>
-          {t("home.contentReleaseVersion", {
-            schemaVersion: props.release.schemaVersion,
-            version: props.release.version,
-          })}
-        </UITypography>
-        <UITypography color="text.secondary" variant="body2">
-          {t("home.contentReleaseGeneratedAt", {
-            date: isValid(generatedAt)
-              ? format(generatedAt, "dd/MM/yyyy HH:mm")
-              : t("home.contentReleaseDateUnavailable"),
-          })}
-        </UITypography>
-        <UITypography color="text.secondary" variant="body2">
-          {t("home.contentReleaseSource", { source: props.release.source })}
-        </UITypography>
-        {props.release.notes ? <ContentReleaseNotes notes={props.release.notes} /> : null}
-      </UIContentGroup>
-    </UIPaper>
+    <UIContentSurface mode="outlined">
+      <UIDisclosure summary={t("home.contentRelease")}>
+        <UIContentGroup variant="content">
+          <UITypography>
+            {t("home.contentReleaseVersion", {
+              schemaVersion: props.release.schemaVersion,
+              version: props.release.version,
+            })}
+          </UITypography>
+          <UITypography color="text.secondary" variant="body2">
+            {t("home.contentReleaseGeneratedAt", {
+              date: isValid(generatedAt)
+                ? format(generatedAt, "dd/MM/yyyy HH:mm")
+                : t("home.contentReleaseDateUnavailable"),
+            })}
+          </UITypography>
+          <UITypography color="text.secondary" variant="body2">
+            {t("home.contentReleaseSource", { source: props.release.source })}
+          </UITypography>
+          {props.release.notes ? <ContentReleaseNotes notes={props.release.notes} /> : null}
+        </UIContentGroup>
+      </UIDisclosure>
+    </UIContentSurface>
   );
 }

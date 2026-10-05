@@ -1,12 +1,14 @@
+import { calculateAcademicFrequency } from "./calculate-academic-frequency.function";
 import type { CalculateAcademicMetricsInput } from "./calculate-academic-metrics-input.interface";
 import type { AcademicMetrics } from "../models/academic-metrics.interface";
 
 export function calculateAcademicMetrics(input: CalculateAcademicMetricsInput): AcademicMetrics {
   const { discipline } = input;
 
-  const attendancePercentage = discipline.totalClasses
-    ? Math.round((discipline.attendedClasses / discipline.totalClasses) * 10000) / 100
-    : 100;
+  const attendancePercentage = calculateAcademicFrequency(
+    discipline.totalClasses,
+    discipline.attendedClasses,
+  );
 
   const weightedTotal = discipline.grades.reduce((total, grade) => {
     return total + grade.weight;

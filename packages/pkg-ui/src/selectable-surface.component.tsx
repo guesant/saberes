@@ -13,8 +13,11 @@ export function UISelectableSurface(props: UISelectableSurfaceProps): ReactEleme
     <MuiPaper
       {...paperProps}
       component={interactive ? "button" : "div"}
+      data-ui-inset="md"
+      data-ui-layout="stack"
       sx={{
         borderColor: selected ? "primary.main" : undefined,
+        p: { md: 2, xs: 1.5 },
         ...(interactive ? { textAlign: "left", width: "100%" } : {}),
         ...sx,
       }}

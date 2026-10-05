@@ -1,54 +1,11 @@
-import { UICard, UICardContent, UITypography } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
-import { ActionFeedback } from "../../components/action-feedback.component";
-import { QuestionBookmarkAction } from "./question-bookmark-action.component";
-import { QuestionBookmarkError } from "./question-bookmark-error.component";
-import { QuestionHeader } from "./question-header.component";
-import { QuestionPriorKnowledge } from "./question-prior-knowledge.component";
-import { QuestionReadyAnswerForm } from "./question-ready-answer-form.component";
-import { QuestionReadyResult } from "./question-ready-result.component";
+import { UICard } from "@guesant/saberes-ui";
+import { QuestionReadyContentBody } from "./question-ready-content-body.component";
 import type { QuestionReadyContentProps } from "./question-ready-content-props.type";
 
 export function QuestionReadyContent(props: QuestionReadyContentProps) {
-  const { data, onDiagnose, onRetry, result } = props;
-
-  const { t } = useTranslation();
-
   return (
     <UICard>
-      <UICardContent>
-        <UITypography variant="overline">{t("common.selectionProcess")}</UITypography>
-
-        <QuestionHeader data={data} />
-
-        <QuestionPriorKnowledge onSelect={props.onPriorKnowledge} />
-
-        <QuestionBookmarkAction bookmarked={props.bookmarked} onBookmark={props.onBookmark} />
-
-        {props.bookmarkError ? (
-          <QuestionBookmarkError error={props.bookmarkError} onRetry={props.onRetryBookmark} />
-        ) : null}
-
-        <QuestionReadyAnswerForm
-          answer={props.answer}
-          confidence={props.confidence}
-          data={data}
-          onAnswerChange={props.onAnswerChange}
-          onConfidenceChange={props.onConfidenceChange}
-          onSubmit={props.onSubmit}
-          submitting={props.submissionState === "saving"}
-        />
-
-        <ActionFeedback error={props.submissionError} state={props.submissionState} />
-
-        <QuestionReadyResult
-          data={data}
-          onDiagnose={onDiagnose}
-          onContinue={props.onContinue}
-          onRetry={onRetry}
-          result={result}
-        />
-      </UICardContent>
+      <QuestionReadyContentBody content={props} />
     </UICard>
   );
 }

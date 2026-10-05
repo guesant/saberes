@@ -86,6 +86,8 @@ export * from "./css-baseline.component";
 
 export * from "./divider.component";
 
+export * from "./disclosure.component";
+
 export * from "./download-file-button.component";
 
 export * from "./download-file-button-props.type";

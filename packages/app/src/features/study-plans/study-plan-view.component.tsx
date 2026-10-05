@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { ContentErrorState } from "../../components/content-error-state.component";
 import { ContentLoadingState } from "../../components/content-loading-state.component";
-import { ContentNotFoundState } from "../../components/content-not-found-state.component";
+import { StudyPlanEmptyState } from "./study-plan-empty-state.component";
 import { StudyPlanReadyView } from "./study-plan-ready-view.component";
 import { useStudyPlanViewModel } from "./study-plan.view-model";
 
@@ -22,7 +22,7 @@ export function StudyPlanView() {
   }
 
   if (!viewModel.data?.plan) {
-    return <ContentNotFoundState label={t("plan.notFound")} />;
+    return <StudyPlanEmptyState />;
   }
 
   return (

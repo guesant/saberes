@@ -21,7 +21,11 @@ export function CourseReadyHero(props: CourseReadyHeroProps) {
 
   const { course } = props.data;
 
-  const courseType = course.course_type === "specific" ? t("course.specific") : t("course.general");
+  let courseType = t("course.general");
+
+  if (course.course_type === "specific") {
+    courseType = t("course.specific");
+  }
 
   return (
     <UICourseHeroCard>

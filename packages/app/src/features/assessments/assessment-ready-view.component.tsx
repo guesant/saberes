@@ -1,4 +1,4 @@
-import { UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UIDisclosure, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { AssessmentItemsView } from "./assessment-items-view.component";
 import { AssessmentProgressError } from "./assessment-progress-error.component";
@@ -29,12 +29,12 @@ export function AssessmentReadyView(props: AssessmentReadyViewProps) {
 
       <AssessmentSessionLauncher assessmentKey={props.assessmentKey} items={props.data.items} />
 
-      <UICard>
-        <UICardContent>
+      <UIDisclosure summary={t("assessment.viewQuestions")}>
+        <UIContentGroup variant="content">
           <UITypography variant="h5">{t("assessment.questions")}</UITypography>
           <AssessmentItemsView items={props.data.items} />
-        </UICardContent>
-      </UICard>
+        </UIContentGroup>
+      </UIDisclosure>
     </UIContentGroup>
   );
 }
