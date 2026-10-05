@@ -4,7 +4,9 @@ const recordTypes: Record<string, PersonalRelationRecordType> = {
   activity: "activity",
   capture: "capture",
   checklist: "checklist",
+  goal: "goal",
   note: "note",
+  question: "question",
   reference: "reference",
   topic: "topic",
 };

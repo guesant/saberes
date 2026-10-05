@@ -6,7 +6,7 @@ import type { PersonalRelationItemProps } from "./personal-relation-item-props.i
 export function PersonalRelationItem(props: PersonalRelationItemProps) {
   const navigate = useNavigate();
 
-  const actionLabel = props.relation.archived ? "Restaurar relação" : "Arquivar relação";
+  const actionLabel = props.relation.archived ? "Restaurar vínculo" : "Desvincular";
 
   const handleAction = props.relation.archived
     ? () => {return props.onRestore(props.relation.id);}

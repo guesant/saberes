@@ -1,4 +1,5 @@
 import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { PersonalBacklinksSection } from "./personal-backlinks-section.component";
 import { PersonalNoteCreate } from "./personal-note-create.component";
 import { PersonalReferenceCreate } from "./personal-reference-create.component";
 import { PersonalRelationsSection } from "./personal-relations-section.component";
@@ -21,6 +22,11 @@ export function PersonalWorkspaceForm(props: PersonalWorkspaceFormProps) {
       <PersonalRelationsSection
         onArchive={props.viewModel.archiveRelation}
         onCreate={props.viewModel.createRelation}
+        onRestore={props.viewModel.restoreRelation}
+        relations={props.viewModel.workspace.relations ?? []}
+      />
+      <PersonalBacklinksSection
+        onArchive={props.viewModel.archiveRelation}
         onRestore={props.viewModel.restoreRelation}
         relations={props.viewModel.workspace.relations ?? []}
       />

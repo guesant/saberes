@@ -9,7 +9,11 @@ export function resolvePersonalRelationEndpoint(
     return { endpoint: input.endpoint, status: "invalid" };
   }
 
-  if (input.endpoint.recordType === "topic") {
+  if (
+    input.endpoint.recordType === "goal" ||
+    input.endpoint.recordType === "question" ||
+    input.endpoint.recordType === "topic"
+  ) {
     if (input.availableRecordIds.includes(input.endpoint.id)) {
       return { endpoint: input.endpoint, status: "available" };
     }

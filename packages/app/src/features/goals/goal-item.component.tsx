@@ -15,7 +15,7 @@ export function GoalItem(props: GoalItemProps) {
   };
 
   return (
-    <UISelectableSurface selected={false}>
+    <UISelectableSurface id={`goal-${encodeURIComponent(props.goal.contentKey)}`} selected={false}>
       <GoalItemContent
         current={current}
         goal={props.goal}

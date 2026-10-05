@@ -32,4 +32,20 @@ describe("createPersonalRelationEndpoints", () => {
     }))
       .toBeNull();
   });
+
+});
+
+describe("createPersonalRelationEndpoints external study records", () => {
+  it("accepts canonical goal and question endpoints", () => {
+    expect(createPersonalRelationEndpoints({
+      sourceId: "goal-1",
+      sourceType: "goal",
+      targetId: "question-1",
+      targetType: "question",
+    }))
+      .toEqual({
+        source: { id: "goal-1", recordType: "goal" },
+        target: { id: "question-1", recordType: "question" },
+      });
+  });
 });

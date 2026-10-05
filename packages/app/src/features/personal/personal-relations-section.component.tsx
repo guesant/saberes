@@ -11,14 +11,15 @@ export function PersonalRelationsSection(props: PersonalRelationsSectionProps) {
         Ligue registros existentes sem copiar o conteúdo de origem.
       </UITypography>
       <PersonalRelationComposer onCreate={props.onCreate} />
-      {props.relations.map((relation) => { return (
-        <PersonalRelationItem
-          key={relation.id}
-          onArchive={props.onArchive}
-          onRestore={props.onRestore}
-          relation={relation}
-        />
-      ); })}
+      {props.relations.filter((relation) => { return relation.kind !== "backlink"; })
+        .map((relation) => { return (
+          <PersonalRelationItem
+            key={relation.id}
+            onArchive={props.onArchive}
+            onRestore={props.onRestore}
+            relation={relation}
+          />
+        ); })}
     </UIContentGroup>
   );
 }

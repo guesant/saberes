@@ -13,6 +13,8 @@ export * from "./personal/archive-personal-relation.function";
 export * from "./personal/create-personal-relation.function";
 export * from "./personal/get-personal-relation-endpoint-record-status.function";
 export * from "./personal/list-personal-relations.function";
+export * from "./personal/list-personal-backlinks-input.interface";
+export * from "./personal/list-personal-backlinks.function";
 export * from "./personal/resolve-personal-relation-endpoint-input.interface";
 export * from "./personal/resolve-personal-relation-endpoint.function";
 export * from "./personal/resolve-personal-relation-input.interface";

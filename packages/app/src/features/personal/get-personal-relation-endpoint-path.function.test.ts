@@ -12,6 +12,14 @@ describe("getPersonalRelationEndpointPath", () => {
       .toBe("/meu-espaco#personal-note-note-1");
   });
 
+  it("opens goals and questions in their owner contexts", () => {
+    expect(getPersonalRelationEndpointPath({ id: "goal-1", recordType: "goal" }))
+      .toBe("/metas#goal-goal-1");
+
+    expect(getPersonalRelationEndpointPath({ id: "question-1", recordType: "question" }))
+      .toBe("/questoes/question-1");
+  });
+
   it("encodes endpoint identifiers", () => {
     expect(getPersonalRelationEndpointPath({ id: "note/one", recordType: "note" }))
       .toBe("/meu-espaco#personal-note-note%2Fone");

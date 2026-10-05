@@ -27,6 +27,8 @@ Os nomes existentes no domínio prevalecem: `PersonalNote`, `PersonalReference`,
 | ------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------ |
 | `note`, `checklist`, `capture`, `reference` | Conhecimento/Organização Pessoal | apontar, ancorar, listar, arquivar e restaurar o vínculo                 |
 | `activity`                                  | Organização Pessoal              | ser apontada como destino ou origem, sem copiar a atividade              |
+| `goal`                                      | Organização/Estudo               | ser associado por `StudyGoal.contentKey`, sem duplicar a meta            |
+| `question`                                  | Estudo                           | ser associado por identificador local, sem editar a questão              |
 | `topic`                                     | Estudo/Conhecimento              | ser referenciado por identificador estável, sem ser editado pela relação |
 
 `PersonalWorkspace` armazena as relações locais porque é o agregado de persistência que já contém os registros pessoais. A propriedade `relations` é opcional para preservar workspaces anteriores. O adapter Dexie lê e grava o workspace; o domínio não conhece IndexedDB, Dexie ou SQL.
@@ -46,7 +48,7 @@ PersonalRelation
 └── updatedAt
 ```
 
-Os endpoints aceitam somente os tipos pessoais e de estudo explicitamente conhecidos: `activity`, `capture`, `checklist`, `note`, `reference` e `topic`. A direção é preservada em `source` e `target`; relações inversas devem ser criadas explicitamente, nunca inferidas silenciosamente.
+Os endpoints aceitam somente os tipos pessoais e de estudo explicitamente conhecidos: `activity`, `capture`, `checklist`, `goal`, `note`, `question`, `reference` e `topic`. A direção é preservada em `source` e `target`; relações inversas devem ser criadas explicitamente, nunca inferidas silenciosamente.
 
 ### Invariantes implementadas
 
@@ -72,7 +74,7 @@ Cada caso de uso depende de uma porta da aplicação. A composição do app forn
 
 ## UI local do slice
 
-`PersonalRelationsSection` oferece a primeira superfície de uso: seleciona o tipo da relação, recebe endpoints tipados, lista os vínculos do workspace, abre a origem no contexto proprietário e permite arquivar ou restaurar. Para registros pessoais, a abertura usa um hash estável no espaço pessoal; para tópicos, usa a rota de tópico. O composer usa somente componentes do pacote de UI e não abre diretamente IndexedDB, SQL ou adapters.
+`PersonalRelationsSection` oferece a primeira superfície de uso: seleciona o tipo da relação, recebe endpoints tipados, lista os vínculos do workspace, abre a origem no contexto proprietário e permite desvincular ou restaurar. O tipo `backlink` é apresentado separadamente como `Mencionado em`, preservando a direção `source → target`; a consulta de domínio retorna somente backlinks ativos quando um endpoint-alvo é informado. Para registros pessoais, a abertura usa um hash estável no espaço pessoal; para tópicos, usa a rota de tópico. O composer usa somente componentes do pacote de UI e não abre diretamente IndexedDB, SQL ou adapters.
 
 Essa superfície ainda não oferece breadcrumb, filtro de contexto ou representação visual detalhada do estado resolvido. Um endpoint ausente continua abrindo o contexto previsto, onde a aplicação poderá exibir o estado ausente sem apagar a relação.
 
@@ -89,11 +91,15 @@ Essa superfície ainda não oferece breadcrumb, filtro de contexto ou representa
 - `packages/pkg-adapter-data-v1/src/adapters/progress/dexie/personal-relations-adapter.test.ts`
 - `packages/pkg-domain/src/personal/resolve-personal-relation.function.ts`
 - `packages/pkg-domain/src/personal/resolve-personal-relation.function.test.ts`
+- `packages/pkg-domain/src/personal/list-personal-backlinks.function.ts`
+- `packages/pkg-domain/src/personal/list-personal-backlinks.function.test.ts`
 - `packages/app/src/features/personal/personal-relations-section.component.tsx`
+- `packages/app/src/features/personal/personal-backlinks-section.component.tsx`
 - `packages/app/src/features/personal/personal-relation-composer.component.tsx`
 - `packages/app/src/features/personal/get-personal-relation-endpoint-path.function.ts`
 - `packages/app/src/features/personal/get-personal-relation-endpoint-path.function.test.ts`
+- `packages/app/src/features/goals/goal-item.component.tsx`
 
 ## Limites deste slice
 
-Ainda não estão implementados: backlinks navegáveis na UI, abertura de origem, criação por seleção de texto, árvore, board, lentes persistidas, reindexação de relações, progresso conectado, exercícios associados e visualizações gráficas. A resolução de origem já existe no domínio, mas ainda não foi conectada a uma representação visual ou navegação. Essas capacidades permanecem próximas na fila do MVP4; colaboração, sincronização, plugins, IA, OCR e integrações continuam em `FUTURE`.
+Ainda não estão implementados: criação por seleção de texto, árvore, board, lentes persistidas, reindexação de relações, progresso conectado e visualizações gráficas. Materiais (`PersonalReference`), metas (`StudyGoal`) e exercícios (`Question`) podem ser ligados pelo contrato tipado e abertos no contexto proprietário; a edição dessas fontes continua nos seus próprios contextos. A resolução de origem já existe no domínio e a UI mantém o vínculo quando um endpoint está ausente, arquivado ou importado; breadcrumb, filtro de contexto e uma representação visual detalhada do estado resolvido permanecem em `M4-UI-002`. Colaboração, sincronização, plugins, IA, OCR e integrações continuam em `FUTURE`.
