@@ -8,6 +8,7 @@ export const applicationDependencyTokens = {
   undoStudyCapture: Symbol.for("saberes.undo-study-capture-port"),
   createCalendarEntry: Symbol.for("saberes.create-calendar-entry-port"),
   listCalendarEntries: Symbol.for("saberes.list-calendar-entries-port"),
+  listPersonalReminderCandidates: Symbol.for("saberes.list-personal-reminder-candidates-port"),
   contentRepository: Symbol.for("saberes.content-repository"),
   progressDatabase: Symbol.for("saberes.progress-database"),
   progressStore: Symbol.for("saberes.progress-store"),

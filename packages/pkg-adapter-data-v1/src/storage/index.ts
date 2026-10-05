@@ -4,4 +4,6 @@ export * from "./progress.database";
 export * from "./progress-database.contract";
 export * from "./progress-backup-event.interface";
 export * from "./progress-storage.contract";
+export * from "./personal-search-index-entry.interface";
+export * from "./personal-search-index-record.type";
 export * from "./review-target.interface";

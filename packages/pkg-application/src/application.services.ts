@@ -62,6 +62,7 @@ import { ListDiagnosesQueryHandler } from "./queries/list-diagnoses.query-handle
 import { ListEnrollmentsQueryHandler } from "./queries/list-enrollments.query-handler";
 import { ListFocusSessionsQueryHandler } from "./queries/list-focus-sessions.query-handler";
 import { ListLessonProgressQueryHandler } from "./queries/list-lesson-progress.query-handler";
+import { ListPersonalReminderCandidatesQueryHandler } from "./queries/list-personal-reminder-candidates.query-handler";
 import { ListPlanProgressQueryHandler } from "./queries/list-plan-progress.query-handler";
 import { ListReviewItemsQueryHandler } from "./queries/list-review-items.query-handler";
 import { ListReviewTargetsQueryHandler } from "./queries/list-review-targets.query-handler";
@@ -206,6 +207,10 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
     ports.listCalendarEntries,
   );
 
+  const listPersonalReminderCandidates = new ListPersonalReminderCandidatesQueryHandler(
+    ports.listPersonalReminderCandidates,
+  );
+
   const completeStudyCapture = new CompleteStudyCaptureCommandHandler(
     ports.completeStudyCapture,
   );
@@ -326,6 +331,7 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
       undoCapture: undoStudyCapture,
       get: getPersonalWorkspace,
       save: savePersonalWorkspace,
+      listReminderCandidates: listPersonalReminderCandidates,
     },
     exercises: { get: getQuestion, recordAttempt },
     assessments: { get: getAssessment },

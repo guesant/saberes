@@ -39,6 +39,7 @@ import type { ListDiagnosesPort } from "./ports/list-diagnoses-port.port";
 import type { ListEnrollmentsPort } from "./ports/list-enrollments-port.port";
 import type { ListFocusSessionsPort } from "./ports/list-focus-sessions-port.port";
 import type { ListLessonProgressPort } from "./ports/list-lesson-progress-port.port";
+import type { ListPersonalReminderCandidatesPort } from "./ports/list-personal-reminder-candidates-port.port";
 import type { ListPlanProgressPort } from "./ports/list-plan-progress-port.port";
 import type { ListReviewItemsPort } from "./ports/list-review-items-port.port";
 import type { ListReviewTargetsPort } from "./ports/list-review-targets-port.port";
@@ -81,6 +82,7 @@ export interface ApplicationPorts {
   classifyStudyCapture: ClassifyStudyCapturePort;
   createCalendarEntry: CreateCalendarEntryPort;
   listCalendarEntries: ListCalendarEntriesPort;
+  listPersonalReminderCandidates: ListPersonalReminderCandidatesPort;
   completeStudyCapture: CompleteStudyCapturePort;
   postponeStudyCapture: PostponeStudyCapturePort;
   archiveStudyCapture: ArchiveStudyCapturePort;

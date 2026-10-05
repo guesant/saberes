@@ -1,6 +1,7 @@
 import type { AttemptDiagnosis } from "./attempt-diagnosis.interface";
 import type { AttemptWithId } from "./attempt-with-id.interface";
 import type { Attempt } from "./attempt.type";
+import type { PersonalSearchIndexEntry } from "./personal-search-index-entry.interface";
 import type { ProgressBackupEvent } from "./progress-backup-event.interface";
 import type { ProgressSettingRecord } from "./progress-setting-record.interface";
 import type { ReviewEventInput } from "./review-event-input.interface";
@@ -68,6 +69,8 @@ export interface ProgressDatabaseContract {
   listTopicMastery(): Promise<Array<Record<string, unknown>>>;
 
   getPersonalWorkspace(): Promise<PersonalWorkspace>;
+
+  listPersonalSearchIndex(): Promise<PersonalSearchIndexEntry[]>;
 
   saveAchievement(
     contentKey: string,

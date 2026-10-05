@@ -1,4 +1,5 @@
 import {
+  ListPersonalReminderCandidatesAdapter,
   ListCalendarEntriesAdapter,
   GetPersonalWorkspaceAdapter,
 } from "@guesant/saberes-adapter-data-v1";
@@ -16,6 +17,10 @@ export function registerProgressReadPersonalWorkspacePorts(container: Container)
     [
       applicationDependencyTokens.listCalendarEntries,
       createProgressStorageAdapterFactory(container, ListCalendarEntriesAdapter),
+    ],
+    [
+      applicationDependencyTokens.listPersonalReminderCandidates,
+      createProgressStorageAdapterFactory(container, ListPersonalReminderCandidatesAdapter),
     ],
   ]);
 }

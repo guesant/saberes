@@ -51,3 +51,4 @@ export * from "./postpone-study-capture-adapter.adapter";
 export * from "./archive-study-capture-adapter.adapter";
 export * from "./restore-study-capture-adapter.adapter";
 export * from "./undo-study-capture-adapter.adapter";
+export * from "./list-personal-reminder-candidates-adapter.adapter";

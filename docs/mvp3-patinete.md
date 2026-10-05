@@ -524,6 +524,121 @@ Os formulários de captura, nota, checklist, referência e agenda mantêm os val
 
 Validação de formato rico, debounce assíncrono, upload, autocomplete e sincronização ficam fora do Patinete. A validação continua local e não depende de rede.
 
+## M3-UI-003 — densidade, filtros e estados vazios
+
+O espaço pessoal agora explicita a retomada local sem transformar a tela em um feed social. As Capturas podem ser filtradas por estado com controles curtos e estáveis, enquanto o estado vazio informa o próximo passo sem inventar conteúdo.
+
+### Comportamento
+
+1. O filtro padrão mostra Capturas ativas, mantendo o caminho de retomada curto.
+2. `Arquivadas` mostra somente registros arquivados, sem apagar ou duplicar dados.
+3. `Todas` reúne os dois estados no mesmo read model local.
+4. Os chips deixam o estado selecionado visível e permitem trocar o recorte sem navegação adicional.
+5. Quando não há registros no espaço pessoal, uma mensagem local explica que a Pessoa pode começar por uma Captura, Nota, Checklist, Pendência ou Referência.
+6. A composição mantém as ações e listas em blocos separados, com espaçamento consistente e sem depender de rede ou notificações externas.
+
+### Evidência
+
+- `packages/app/src/features/personal/personal-capture-filter.type.ts` define os três recortes locais.
+- `packages/app/src/features/personal/personal-capture-filter-controls.component.tsx` e `personal-capture-filter-chip.component.tsx` renderizam o filtro como chips acessíveis.
+- `packages/app/src/features/personal/get-personal-captures-for-filter.function.ts` deriva o recorte sem copiar a fonte de dados.
+- `packages/app/src/features/personal/personal-captures-content.component.tsx` preserva estados preenchido e vazio por recorte.
+- `packages/app/src/features/personal/personal-workspace-empty-state.component.tsx` apresenta a mensagem de primeiro uso e retomada local.
+- `packages/app/src/i18n/locales/pt-br.locale.ts` mantém os termos de UI fora dos componentes React.
+
+### Limites
+
+Este recorte não introduz busca textual, ordenação configurável, notificações, feed, colaboração ou sincronização. Ajustes visuais mais amplos permanecem sujeitos à revisão do shell existente.
+
+## M3-UI-004 — representação pessoal
+
+O espaço pessoal foi validado como uma área de estudo individual. Sua composição apresenta registros que pertencem à Pessoa e ações locais sobre esses registros; não há linguagem ou affordance de conversa, grupo, convite, participante, membro ou RSVP.
+
+### Evidência
+
+- `packages/app/tests/e2e/mvp3-ui004.spec.ts` abre `/meu-espaco`, verifica os títulos de Nota, Checklist, Pendência e Referência e audita o texto visível contra vocabulário colaborativo.
+- `packages/app/src/features/personal/` mantém criação, edição, arquivamento e restauração como operações sobre o workspace local da Pessoa.
+- `packages/app/src/i18n/locales/pt-br.locale.ts` usa `Meu espaço`, `seu espaço local` e `compromissos pessoais`, sem introduzir participantes ou estados de presença.
+
+### Limites
+
+O teste não declara que toda a aplicação deve rejeitar esses termos: eles podem ser necessários em áreas futuras explicitamente colaborativas. A restrição vale para a superfície pessoal do Patinete, que continua sem colaboração, chat, RSVP ou sincronização.
+
+## M3-INFRA-001 — índice local incremental e scheduler determinístico
+
+Depois dos casos de uso do Patinete, o armazenamento local ganhou duas projeções pequenas e derivadas. O índice de busca pessoal acompanha o workspace na mesma transação lógica de persistência; o scheduler de lembretes calcula candidatos vencidos sob demanda, sem fila opaca, notificação externa ou cópia concorrente do workspace.
+
+### Contratos e invariantes
+
+1. Cada Nota, Checklist, Captura, Atividade e Referência indexável possui uma entrada com `recordType`, `recordId`, texto de busca e `updatedAt`.
+2. Ao salvar o workspace, entradas cujo texto e timestamp não mudaram são reutilizadas; registros removidos deixam de aparecer no índice.
+3. O índice é armazenado na configuração local e acompanha a exportação/importação existente como dado derivado recuperável.
+4. O scheduler considera Capturas não concluídas e não arquivadas e Atividades não concluídas/arquivadas com data vencida.
+5. O scheduler recebe `now` explicitamente, ordena por vencimento e não chama APIs de relógio, rede, notificação ou calendário externo.
+
+### Evidência
+
+- `packages/pkg-adapter-data-v1/src/storage/create-personal-search-index-entries.function.ts` cria a projeção por tipo de registro.
+- `packages/pkg-adapter-data-v1/src/storage/update-personal-search-index-entries.function.ts` reaproveita entradas inalteradas e remove órfãos.
+- `packages/pkg-adapter-data-v1/src/storage/progress.database.ts` grava workspace e índice juntos e expõe a leitura local do índice.
+- `packages/pkg-domain/src/personal/list-personal-reminder-candidates.function.ts` implementa o scheduler determinístico.
+- `packages/pkg-application/src/queries/list-personal-reminder-candidates.query-handler.ts` e `packages/pkg-application/src/ports/list-personal-reminder-candidates-port.port.ts` mantêm a fronteira CQRS/Ports & Adapters.
+- `packages/pkg-adapter-data-v1/src/adapters/progress/dexie/list-personal-reminder-candidates-adapter.adapter.ts` conecta o scheduler ao workspace Dexie.
+- `packages/pkg-domain/src/personal/list-personal-reminder-candidates.function.test.ts` e `packages/pkg-adapter-data-v1/src/storage/personal-search-index.test.ts` cobrem vencimento, exclusão e persistência do índice.
+
+### Limites
+
+Este índice ainda não expõe busca global na UI e o scheduler ainda não dispara notificação. Busca de conteúdo editorial, indexação pesada, Worker, sincronização e integrações permanecem fora do MVP3.
+
+## M3-TEST-001 — persistência e retomada sem rede
+
+O fluxo mínimo de Captura, transições de ciclo de vida, promoção para os read models locais, adiamento, arquivamento, restauração, scheduler vencido, índice derivado e reabertura do banco possui cobertura automatizada proporcional. A agenda do Patinete também verifica que uma entrada pontual não adquire recorrência ou exceção implicitamente.
+
+### Evidência
+
+- `packages/pkg-domain/src/personal/capture-lifecycle.function.test.ts` cobre conclusão, adiamento, arquivamento, restauração, idempotência e desfazer.
+- `packages/pkg-domain/src/personal/list-personal-reminder-candidates.function.test.ts` cobre a seleção do scheduler e ignora futuro, concluído e arquivado.
+- `packages/pkg-domain/src/planning/calendar-entries.function.test.ts` cobre posição selecionada, idempotência, lista/mês/semana e ausência explícita de recorrência/exceção.
+- `packages/pkg-adapter-data-v1/src/storage/personal-workspace-reopen.test.ts` fecha e reabre Dexie e recupera a Captura salva.
+- `packages/pkg-adapter-data-v1/src/storage/personal-search-index.test.ts` cobre a projeção e a remoção de registros indexados.
+- `packages/app/tests/e2e/mvp3-test001.spec.ts` verifica a reabertura do espaço pessoal sem rede no navegador.
+
+### Limites
+
+O teste de navegador comprova a retomada do shell local e o banco cobre a persistência da Captura; notificações, sincronização, recorrência real, exceções de calendário e conteúdo editorial continuam fora deste MVP.
+
+## M3-TEST-002 — agenda em casos extremos e viewport estreito
+
+A agenda foi verificada em condições que costumam expor perda de legibilidade ou inconsistência de composição: nenhum compromisso no período, texto longo, muitos itens no mesmo mês, conflito simples de identidade e largura móvel de 320 pixels.
+
+### Evidência
+
+- `packages/pkg-domain/src/planning/calendar-entries.function.test.ts` verifica texto longo sem truncamento no modelo, 30 compromissos no mês, ordenação estável e preservação do primeiro registro quando uma criação reutiliza um identificador com conteúdo conflitante.
+- `packages/app/tests/e2e/mvp3-test002.spec.ts` verifica os modos Dia, Semana e Mês em viewport estreito, ausência de overflow horizontal e estado vazio local.
+
+### Resultado
+
+O contrato de domínio mantém a lista determinística e idempotente. A tela mantém os controles acessíveis em largura estreita e apresenta o estado vazio no período selecionado sem lançar a agenda inteira em erro.
+
+## M3-REVIEW-001 — reencontro de uma Captura
+
+A revisão do Patinete foi conduzida como uma inspeção local reproduzível: criar uma Captura, fechar o contexto, reabrir no dia seguinte simulado e verificar o mesmo identificador, texto e estado ativo. O objetivo foi medir o atrito de reencontro, não produzir uma métrica artificial de satisfação.
+
+### Roteiro observado
+
+1. A Pessoa cria uma Captura curta com uma ação clara.
+2. O armazenamento local é fechado e reaberto em `personal-workspace-reopen.test.ts`.
+3. O scheduler é consultado com um `now` posterior, sem depender do relógio do navegador.
+4. A Captura reaparece como registro ativo e pode continuar para conclusão, adiamento ou arquivamento.
+
+### Evidência e decisão
+
+- `packages/pkg-adapter-data-v1/src/storage/personal-workspace-reopen.test.ts` comprova a persistência após reabertura.
+- `packages/pkg-domain/src/personal/list-personal-reminder-candidates.function.test.ts` comprova o reencontro temporal determinístico no dia seguinte simulado.
+- `packages/app/tests/e2e/mvp3-test001.spec.ts` verifica a retomada do shell local sem rede.
+
+O atrito observado caiu quando a retomada foi tratada como uma consulta direta ao estado local: não há login, rede, busca externa ou cadastro duplicado. A limitação é importante: esta é uma revisão interna reproduzível, não uma pesquisa com participantes externos; uma observação de uso real continua sendo recomendada antes de fechar o próximo MVP.
+
 ## Próximas tarefas desbloqueadas
 
 - Adicionar a UI dessas transições somente em `M3-UI-001`, depois de validar os estados locais.

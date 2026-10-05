@@ -14,6 +14,7 @@ export function resolveProgressReadPorts(
   | "listStudyGoals"
   | "getPersonalWorkspace"
   | "listCalendarEntries"
+  | "listPersonalReminderCandidates"
   | "getSession"
   | "getSetting"
   | "listEnrollments"

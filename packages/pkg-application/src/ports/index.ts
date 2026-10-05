@@ -4,6 +4,7 @@ export * from "./calculate-academic-metrics-port.port";
 export * from "./classify-study-capture-port.port";
 export * from "./create-calendar-entry-port.port";
 export * from "./list-calendar-entries-port.port";
+export * from "./list-personal-reminder-candidates-port.port";
 export * from "./complete-study-capture-port.port";
 export * from "./postpone-study-capture-port.port";
 export * from "./archive-study-capture-port.port";

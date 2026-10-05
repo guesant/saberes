@@ -32,10 +32,13 @@ import {
   union,
 } from "valibot";
 import { getProgressSnapshotChecksum } from "./get-progress-snapshot-checksum.function";
+import { isPersonalSearchIndexEntries } from "./is-personal-search-index-entries.function";
 import { isPersonalWorkspace } from "./is-personal-workspace.function";
+import { updatePersonalSearchIndexEntries } from "./update-personal-search-index-entries.function";
 import type { AttemptDiagnosis } from "./attempt-diagnosis.interface";
 import type { AttemptWithId } from "./attempt-with-id.interface";
 import type { Attempt } from "./attempt.type";
+import type { PersonalSearchIndexEntry } from "./personal-search-index-entry.interface";
 import type { ProgressBackupEvent } from "./progress-backup-event.interface";
 import type { ProgressDatabaseContract } from "./progress-database.contract";
 import type { ProgressSettingRecord } from "./progress-setting-record.interface";
@@ -91,6 +94,8 @@ const studyStores = [
 const progressStoreNames = [...studyStores, "attempts", "sessions", "settings"];
 
 const personalWorkspaceSettingKey = "personal-workspace";
+
+const personalWorkspaceIndexSettingKey = "personal-workspace-index";
 
 const emptyPersonalWorkspace: PersonalWorkspace = {
   activities: [],
@@ -500,9 +505,29 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   }
 
   async savePersonalWorkspace(workspace: PersonalWorkspace): Promise<PersonalWorkspace> {
-    await this.saveSetting(personalWorkspaceSettingKey, workspace);
+    const previousIndexSetting = await this.getSetting(personalWorkspaceIndexSettingKey);
+
+    const previousIndex = isPersonalSearchIndexEntries(previousIndexSetting?.value)
+      ? previousIndexSetting.value
+      : [];
+
+    const nextIndex = updatePersonalSearchIndexEntries(previousIndex, workspace);
+
+    await this.transaction("rw", "settings", async () => {
+      await this.table("settings")
+        .bulkPut([
+          { key: personalWorkspaceSettingKey, value: workspace },
+          { key: personalWorkspaceIndexSettingKey, value: nextIndex },
+        ]);
+    });
 
     return workspace;
+  }
+
+  async listPersonalSearchIndex(): Promise<PersonalSearchIndexEntry[]> {
+    const setting = await this.getSetting(personalWorkspaceIndexSettingKey);
+
+    return isPersonalSearchIndexEntries(setting?.value) ? setting.value : [];
   }
 
   async saveStudyGoal(goal: StudyGoal): Promise<StudyGoal> {

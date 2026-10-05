@@ -1,5 +1,6 @@
 import type { AttemptDiagnosis } from "../../../storage/attempt-diagnosis.interface";
 import type { Attempt } from "../../../storage/attempt.type";
+import type { PersonalSearchIndexEntry } from "../../../storage/personal-search-index-entry.interface";
 import type { ProgressBackupEvent } from "../../../storage/progress-backup-event.interface";
 import type { ProgressDatabaseContract } from "../../../storage/progress-database.contract";
 import type { ProgressStorageContract } from "../../../storage/progress-storage.contract";
@@ -62,6 +63,10 @@ export class DexieProgressStore implements ProgressStorageContract {
 
   getPersonalWorkspace(): Promise<PersonalWorkspace> {
     return this.database.getPersonalWorkspace();
+  }
+
+  listPersonalSearchIndex(): Promise<PersonalSearchIndexEntry[]> {
+    return this.database.listPersonalSearchIndex();
   }
 
   savePersonalWorkspace(workspace: PersonalWorkspace): Promise<PersonalWorkspace> {
