@@ -13,7 +13,7 @@ export interface PersonalReferenceDisplayProps {
 
 export function PersonalReferenceDisplay(props: PersonalReferenceDisplayProps) {
   return (
-    <UIContentGroup variant="content">
+    <UIContentGroup id={`personal-reference-${props.reference.id}`} variant="content">
       <UITypography variant="h6">{props.reference.title}</UITypography>
       <PersonalReferenceSource reference={props.reference} />
       <UIInlineActions>

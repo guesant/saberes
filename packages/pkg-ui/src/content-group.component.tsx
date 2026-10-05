@@ -3,6 +3,7 @@ import type { ReactElement, ReactNode } from "react";
 
 export type UIContentGroupProps = {
   children: ReactNode;
+  id?: string;
   variant?: "tight" | "content" | "section" | "list" | "inline";
 };
 
@@ -39,6 +40,7 @@ export function UIContentGroup(props: UIContentGroupProps): ReactElement {
       flexDirection={layout.direction}
       flexWrap={layout.flexWrap}
       gap={layout.gap}
+      id={props.id}
       minWidth={0}
       sx={{
         "& > *": { maxWidth: "100%", minWidth: 0 },

@@ -1,9 +1,11 @@
 import { AddStudyPointsCommandHandler } from "./commands/add-study-points.command-handler";
+import { ArchivePersonalRelationCommandHandler } from "./commands/archive-personal-relation.command-handler";
 import { ArchiveStudyCaptureCommandHandler } from "./commands/archive-study-capture.command-handler";
 import { ClassifyStudyCaptureCommandHandler } from "./commands/classify-study-capture.command-handler";
 import { ClearProgressCommandHandler } from "./commands/clear-progress.command-handler";
 import { CompleteStudyCaptureCommandHandler } from "./commands/complete-study-capture.command-handler";
 import { CreateCalendarEntryCommandHandler } from "./commands/create-calendar-entry.command-handler";
+import { CreatePersonalRelationCommandHandler } from "./commands/create-personal-relation.command-handler";
 import { DeleteAcademicDisciplineCommandHandler } from "./commands/delete-academic-discipline.command-handler";
 import { DeleteSavedCatalogFilterCommandHandler } from "./commands/delete-saved-catalog-filter.command-handler";
 import { EnrollCourseCommandHandler } from "./commands/enroll-course.command-handler";
@@ -11,6 +13,7 @@ import { ImportProgressCommandHandler } from "./commands/import-progress.command
 import { PostponeStudyCaptureCommandHandler } from "./commands/postpone-study-capture.command-handler";
 import { RecordAttemptCommandHandler } from "./commands/record-attempt.command-handler";
 import { RecordStudyActivityCommandHandler } from "./commands/record-study-activity.command-handler";
+import { RestorePersonalRelationCommandHandler } from "./commands/restore-personal-relation.command-handler";
 import { RestoreStudyCaptureCommandHandler } from "./commands/restore-study-capture.command-handler";
 import { SaveAcademicDisciplineCommandHandler } from "./commands/save-academic-discipline.command-handler";
 import { SaveAchievementCommandHandler } from "./commands/save-achievement.command-handler";
@@ -62,6 +65,7 @@ import { ListDiagnosesQueryHandler } from "./queries/list-diagnoses.query-handle
 import { ListEnrollmentsQueryHandler } from "./queries/list-enrollments.query-handler";
 import { ListFocusSessionsQueryHandler } from "./queries/list-focus-sessions.query-handler";
 import { ListLessonProgressQueryHandler } from "./queries/list-lesson-progress.query-handler";
+import { ListPersonalRelationsQueryHandler } from "./queries/list-personal-relations.query-handler";
 import { ListPersonalReminderCandidatesQueryHandler } from "./queries/list-personal-reminder-candidates.query-handler";
 import { ListPlanProgressQueryHandler } from "./queries/list-plan-progress.query-handler";
 import { ListReviewItemsQueryHandler } from "./queries/list-review-items.query-handler";
@@ -117,6 +121,22 @@ export interface ApplicationServices {
 }
 
 export function createApplication(ports: ApplicationPorts): ApplicationServices {
+  const createPersonalRelation = new CreatePersonalRelationCommandHandler(
+    ports.createPersonalRelation,
+  );
+
+  const archivePersonalRelation = new ArchivePersonalRelationCommandHandler(
+    ports.archivePersonalRelation,
+  );
+
+  const restorePersonalRelation = new RestorePersonalRelationCommandHandler(
+    ports.restorePersonalRelation,
+  );
+
+  const listPersonalRelations = new ListPersonalRelationsQueryHandler(
+    ports.listPersonalRelations,
+  );
+
   const listStudyGoals = new ListStudyGoalsQueryHandler(ports.listStudyGoals);
 
   const saveStudyGoal = new SaveStudyGoalCommandHandler(ports.saveStudyGoal);
@@ -323,6 +343,10 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
     courses: { get: getCourse, enroll: enrollCourse },
     lessons: { get: getLesson, saveProgress: saveLessonProgress, bookmark: saveBookmark },
     personal: {
+      createRelation: createPersonalRelation,
+      archiveRelation: archivePersonalRelation,
+      restoreRelation: restorePersonalRelation,
+      listRelations: listPersonalRelations,
       classifyCapture: classifyStudyCapture,
       completeCapture: completeStudyCapture,
       postponeCapture: postponeStudyCapture,

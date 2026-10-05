@@ -14,7 +14,7 @@ export interface StudyCaptureDisplayProps {
 
 export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
   return (
-    <UIContentGroup variant="content">
+    <UIContentGroup id={`personal-capture-${props.capture.id}`} variant="content">
       <UITypography variant="h6">{props.capture.title}</UITypography>
       <UITypography color="text.secondary">{props.capture.description}</UITypography>
       <UITypography>{props.capture.contentKey ?? "Sem ContentKey"}</UITypography>

@@ -10,6 +10,10 @@ export * from "./content-snapshot-validation-input.interface";
 export * from "./content-snapshot-validation-issue.interface";
 export * from "./content-snapshot-validation-result.type";
 export * from "./content-snapshot-validation-summary.interface";
+export * from "./archive-personal-relation-command-input.interface";
+export * from "./create-personal-relation-command-input.interface";
+export * from "./list-personal-relations-query-input.interface";
+export * from "./restore-personal-relation-command-input.interface";
 
 export * from "./content-release-read-model.model";
 export * from "./course-read-model.model";

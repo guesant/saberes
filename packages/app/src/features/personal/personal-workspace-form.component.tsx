@@ -1,6 +1,7 @@
 import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { PersonalNoteCreate } from "./personal-note-create.component";
 import { PersonalReferenceCreate } from "./personal-reference-create.component";
+import { PersonalRelationsSection } from "./personal-relations-section.component";
 import { StudyCaptureCreate } from "./study-capture-create.component";
 import { StudyChecklistCreate } from "./study-checklist-create.component";
 import type { PersonalWorkspaceViewModel } from "./personal-workspace-view-model.interface";
@@ -17,6 +18,12 @@ export function PersonalWorkspaceForm(props: PersonalWorkspaceFormProps) {
       <StudyChecklistCreate onCreate={props.viewModel.createChecklist} />
       <StudyCaptureCreate onCreate={props.viewModel.createCapture} />
       <PersonalReferenceCreate onCreate={props.viewModel.createReference} />
+      <PersonalRelationsSection
+        onArchive={props.viewModel.archiveRelation}
+        onCreate={props.viewModel.createRelation}
+        onRestore={props.viewModel.restoreRelation}
+        relations={props.viewModel.workspace.relations ?? []}
+      />
     </UIContentGroup>
   );
 }

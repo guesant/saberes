@@ -22,6 +22,7 @@ export * from "./list-attempts.query-handler";
 export * from "./list-academic-disciplines.query-handler";
 export * from "./list-calendar-entries.query-handler";
 export * from "./list-personal-reminder-candidates.query-handler";
+export * from "./list-personal-relations.query-handler";
 export * from "./list-focus-sessions.query-handler";
 export * from "./list-study-goals.query-handler";
 export * from "./list-bookmarks.query-handler";

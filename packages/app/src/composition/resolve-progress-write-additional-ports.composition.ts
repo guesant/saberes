@@ -20,10 +20,16 @@ export function resolveProgressWriteAdditionalPorts(
   | "saveFocusSession"
   | "saveStudyGoal"
   | "savePersonalWorkspace"
+  | "createPersonalRelation"
+  | "archivePersonalRelation"
+  | "restorePersonalRelation"
 > {
   return {
     ...resolveProgressWritePersonalCapturePorts(container),
     createCalendarEntry: resolveApplicationPort(container, "createCalendarEntry"),
+    createPersonalRelation: resolveApplicationPort(container, "createPersonalRelation"),
+    archivePersonalRelation: resolveApplicationPort(container, "archivePersonalRelation"),
+    restorePersonalRelation: resolveApplicationPort(container, "restorePersonalRelation"),
     ...resolveProgressWriteSecondaryPorts(container),
   };
 }

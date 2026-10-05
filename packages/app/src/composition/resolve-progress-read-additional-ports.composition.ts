@@ -12,6 +12,7 @@ export function resolveProgressReadAdditionalPorts(
   | "getPersonalWorkspace"
   | "listCalendarEntries"
   | "listPersonalReminderCandidates"
+  | "listPersonalRelations"
 > {
   return {
     listAcademicDisciplines: resolveApplicationPort(container, "listAcademicDisciplines"),
@@ -23,5 +24,6 @@ export function resolveProgressReadAdditionalPorts(
       container,
       "listPersonalReminderCandidates",
     ),
+    listPersonalRelations: resolveApplicationPort(container, "listPersonalRelations"),
   };
 }

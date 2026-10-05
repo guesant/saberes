@@ -15,6 +15,7 @@ export function resolveProgressReadPorts(
   | "getPersonalWorkspace"
   | "listCalendarEntries"
   | "listPersonalReminderCandidates"
+  | "listPersonalRelations"
   | "getSession"
   | "getSetting"
   | "listEnrollments"

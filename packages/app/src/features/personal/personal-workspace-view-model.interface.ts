@@ -2,7 +2,10 @@ import type { StudyCaptureContentInput } from "./study-capture-content-input.int
 import type { StudyCaptureCreateInput } from "./study-capture-create-input.interface";
 import type { UpdatePersonalNoteContentActionInput } from "./update-personal-note-content-action-input.interface";
 import type { UpdateStudyChecklistContentActionInput } from "./update-study-checklist-content-action-input.interface";
-import type { PersonalWorkspace } from "@guesant/saberes-application";
+import type { PersonalWorkspace ,
+  PersonalRelationEndpoint,
+  PersonalRelationKind,
+} from "@guesant/saberes-application";
 
 export interface PersonalWorkspaceViewModel {
   state: "loading" | "error" | "ready";
@@ -52,6 +55,16 @@ export interface PersonalWorkspaceViewModel {
   updateCaptureContent(input: StudyCaptureContentInput): Promise<void>;
 
   updateReferenceContent(id: string, title: string, source: string): Promise<void>;
+
+  createRelation(
+    kind: PersonalRelationKind,
+    source: PersonalRelationEndpoint,
+    target: PersonalRelationEndpoint,
+  ): Promise<void>;
+
+  archiveRelation(id: string): Promise<void>;
+
+  restoreRelation(id: string): Promise<void>;
 
   reload(): Promise<void>;
 }

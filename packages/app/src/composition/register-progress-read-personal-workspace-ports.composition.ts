@@ -1,4 +1,5 @@
 import {
+  ListPersonalRelationsAdapter,
   ListPersonalReminderCandidatesAdapter,
   ListCalendarEntriesAdapter,
   GetPersonalWorkspaceAdapter,
@@ -21,6 +22,10 @@ export function registerProgressReadPersonalWorkspacePorts(container: Container)
     [
       applicationDependencyTokens.listPersonalReminderCandidates,
       createProgressStorageAdapterFactory(container, ListPersonalReminderCandidatesAdapter),
+    ],
+    [
+      applicationDependencyTokens.listPersonalRelations,
+      createProgressStorageAdapterFactory(container, ListPersonalRelationsAdapter),
     ],
   ]);
 }

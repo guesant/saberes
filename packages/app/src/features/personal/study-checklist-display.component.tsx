@@ -15,7 +15,7 @@ export interface StudyChecklistDisplayProps {
 
 export function StudyChecklistDisplay(props: StudyChecklistDisplayProps) {
   return (
-    <UIContentGroup variant="content">
+    <UIContentGroup id={`personal-checklist-${props.checklist.id}`} variant="content">
       <UITypography variant="h6">{props.checklist.title}</UITypography>
       <UITypography color="text.secondary">
         {props.checklist.items.length} itens locais para acompanhar

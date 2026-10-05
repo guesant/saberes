@@ -1,4 +1,5 @@
 import { UIContentGroup } from "@guesant/saberes-ui";
+import { hasPersonalWorkspaceRecords } from "./has-personal-workspace-records.function";
 import { PersonalWorkspaceEmptyState } from "./personal-workspace-empty-state.component";
 import { PersonalWorkspaceHeaderSection } from "./personal-workspace-header-section.component";
 import { PersonalWorkspaceRecordSections } from "./personal-workspace-record-sections.component";
@@ -12,14 +13,11 @@ export function PersonalWorkspaceReadyView(props: PersonalWorkspaceReadyViewProp
   return (
     <UIContentGroup variant="section">
       <PersonalWorkspaceHeaderSection viewModel={props.viewModel} />
-      {props.viewModel.workspace.notes.length > 0 ||
-      props.viewModel.workspace.checklists.length > 0 ||
-      props.viewModel.workspace.captures.length > 0 ||
-      props.viewModel.workspace.references.length > 0 ? (
-          <PersonalWorkspaceRecordSections viewModel={props.viewModel} />
-        ) : (
-          <PersonalWorkspaceEmptyState />
-        )}
+      {hasPersonalWorkspaceRecords(props.viewModel.workspace) ? (
+        <PersonalWorkspaceRecordSections viewModel={props.viewModel} />
+      ) : (
+        <PersonalWorkspaceEmptyState />
+      )}
     </UIContentGroup>
   );
 }

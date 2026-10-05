@@ -12,7 +12,7 @@ export interface PersonalNoteDisplayProps {
 
 export function PersonalNoteDisplay(props: PersonalNoteDisplayProps) {
   return (
-    <UIContentGroup variant="content">
+    <UIContentGroup id={`personal-note-${props.note.id}`} variant="content">
       <UITypography variant="h6">{props.note.title}</UITypography>
       <UITypography color="text.secondary">{props.note.body}</UITypography>
       <UITypography>{props.note.contentKey ?? "Sem ContentKey"}</UITypography>

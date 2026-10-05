@@ -52,3 +52,7 @@ export * from "./archive-study-capture-adapter.adapter";
 export * from "./restore-study-capture-adapter.adapter";
 export * from "./undo-study-capture-adapter.adapter";
 export * from "./list-personal-reminder-candidates-adapter.adapter";
+export * from "./archive-personal-relation-adapter.adapter";
+export * from "./create-personal-relation-adapter.adapter";
+export * from "./list-personal-relations-adapter.adapter";
+export * from "./restore-personal-relation-adapter.adapter";
