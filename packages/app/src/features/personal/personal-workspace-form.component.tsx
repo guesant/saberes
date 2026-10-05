@@ -7,9 +7,11 @@ import { PersonalReferenceCreate } from "./personal-reference-create.component";
 import { PersonalRelationsSection } from "./personal-relations-section.component";
 import { StudyCaptureCreate } from "./study-capture-create.component";
 import { StudyChecklistCreate } from "./study-checklist-create.component";
+import type { PersonalEntitySelection } from "./personal-entity-selection.interface";
 import type { PersonalWorkspaceViewModel } from "./personal-workspace-view-model.interface";
 
 export interface PersonalWorkspaceFormProps {
+  selection: PersonalEntitySelection;
   viewModel: PersonalWorkspaceViewModel;
 }
 
@@ -26,14 +28,19 @@ export function PersonalWorkspaceForm(props: PersonalWorkspaceFormProps) {
         onCreate={props.viewModel.createRelation}
         onRestore={props.viewModel.restoreRelation}
         relations={props.viewModel.workspace.relations ?? []}
+        selection={props.selection}
+        workspace={props.viewModel.workspace}
       />
       <PersonalBacklinksSection
         onArchive={props.viewModel.archiveRelation}
         onRestore={props.viewModel.restoreRelation}
         relations={props.viewModel.workspace.relations ?? []}
+        selection={props.selection}
+        workspace={props.viewModel.workspace}
       />
       <PersonalKnowledgeViewsSection
         onSaveLens={props.viewModel.saveLens}
+        selection={props.selection}
         workspace={props.viewModel.workspace}
       />
       <PersonalProgressSection progress={props.viewModel.progress} />

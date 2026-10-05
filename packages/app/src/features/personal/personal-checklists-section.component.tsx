@@ -1,10 +1,12 @@
 import { UIContentGroup, UIList, UITypography } from "@guesant/saberes-ui";
 import { PersonalArchivedList } from "./personal-archived-list.component";
 import { StudyChecklistViewItem } from "./study-checklist-view-item.component";
+import type { PersonalEntitySelection } from "./personal-entity-selection.interface";
 import type { UpdateStudyChecklistContentActionInput } from "./update-study-checklist-content-action-input.interface";
 import type { PersonalWorkspace } from "@guesant/saberes-application";
 
 export interface PersonalChecklistsSectionProps {
+  selection: PersonalEntitySelection;
   workspace: PersonalWorkspace;
   onUpdateItem(checklistId: string, itemId: string): Promise<void>;
 
@@ -33,6 +35,7 @@ export function PersonalChecklistsSection(props: PersonalChecklistsSectionProps)
                 onMoveItem={props.onMoveItem}
                 onUpdateContent={props.onUpdateContent}
                 onUpdateItem={props.onUpdateItem}
+                selection={props.selection}
               />
             );
           })}

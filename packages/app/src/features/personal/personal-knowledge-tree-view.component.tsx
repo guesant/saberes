@@ -12,10 +12,17 @@ export function PersonalKnowledgeTreeView(props: PersonalKnowledgeTreeViewProps)
         Os registros aparecem em uma única fonte local; as relações indicam como cada item se conecta.
       </UITypography>
       {props.projection.nodes.map((node) => {
-        return <PersonalKnowledgeNodeCard key={`${node.recordType}:${node.id}`} node={node} />;
+        return (
+          <PersonalKnowledgeNodeCard
+            key={`${node.recordType}:${node.id}`}
+            node={node}
+            onSelect={props.selection.select}
+            selected={props.selection.isSelected(node)}
+          />
+        );
       })}
       {props.projection.relations.map((relation) => {
-        return <PersonalKnowledgeRelationRow key={relation.id} relation={relation} />;
+        return <PersonalKnowledgeRelationRow key={relation.id} relation={relation} selection={props.selection} />;
       })}
     </UIContentGroup>
   );

@@ -22,6 +22,7 @@ export function PersonalCapturesSection(props: PersonalCapturesSectionProps) {
         onUpdateArchive={props.onUpdateArchive}
         onUpdateCompletion={props.onUpdateCompletion}
         onUpdateContent={props.onUpdateContent}
+        selection={props.selection}
         workspace={props.workspace}
       />
     </UIContentGroup>

@@ -28,9 +28,9 @@ export function PersonalKnowledgeViewsSection(props: PersonalKnowledgeViewsSecti
         view={viewState.view}
       />
       {viewState.view === "tree" ? (
-        <PersonalKnowledgeTreeView projection={viewState.projection} />
+        <PersonalKnowledgeTreeView projection={viewState.projection} selection={props.selection} />
       ) : (
-        <PersonalKnowledgeBoardView projection={viewState.projection} />
+        <PersonalKnowledgeBoardView projection={viewState.projection} selection={props.selection} />
       )}
     </UIContentGroup>
   );

@@ -1,7 +1,13 @@
-import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
-import type { StudyCapture } from "@guesant/saberes-application";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { getPersonalCaptureContentPath } from "./get-personal-capture-content-path.function";
+import { PersonalEntitySelectionSurface } from "./personal-entity-selection-surface.component";
+import { StudyCaptureActions } from "./study-capture-actions.component";
+import type { PersonalRelationEndpoint, StudyCapture } from "@guesant/saberes-application";
 
 export interface StudyCaptureDisplayProps {
+  onSelect(endpoint: PersonalRelationEndpoint): void;
+
+  selected: boolean;
   capture: StudyCapture;
   onUpdateCompletion(): Promise<void>;
 
@@ -13,28 +19,34 @@ export interface StudyCaptureDisplayProps {
 }
 
 export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
+  const contentPath = getPersonalCaptureContentPath(props.capture.contentKey);
+
   return (
-    <UIContentGroup id={`personal-capture-${props.capture.id}`} variant="content">
-      <UITypography variant="h6">{props.capture.title}</UITypography>
-      <UITypography color="text.secondary">{props.capture.description}</UITypography>
-      <UITypography>{props.capture.contentKey ?? "Sem ContentKey"}</UITypography>
-      <UITypography color="text.secondary">
-        {props.capture.dueDate ? `Prazo: ${props.capture.dueDate}` : "Sem prazo"}
-      </UITypography>
-      <UIInlineActions wrap>
-        <UIButton onClick={props.onUpdateCompletion} variant="text">
-          Atualizar conclusão
-        </UIButton>
-        <UIButton onClick={props.onArchive} variant="text">
-          Arquivar
-        </UIButton>
-        <UIButton onClick={props.onEdit} variant="text">
-          Editar
-        </UIButton>
-        <UIButton onClick={props.onDelete} variant="text">
-          Excluir
-        </UIButton>
-      </UIInlineActions>
+    <UIContentGroup variant="content">
+      <PersonalEntitySelectionSurface
+        ariaLabel={`Selecionar ${props.capture.title}`}
+        endpoint={{ id: props.capture.id, recordType: "capture" }}
+        id={`personal-capture-${props.capture.id}`}
+        onSelect={props.onSelect}
+        selected={props.selected}
+      >
+        <UIContentGroup variant="content">
+          <UITypography variant="h6">{props.capture.title}</UITypography>
+          <UITypography color="text.secondary">{props.capture.description}</UITypography>
+          <UITypography>{props.capture.contentKey ?? "Sem ContentKey"}</UITypography>
+          <UITypography color="text.secondary">
+            {props.capture.dueDate ? `Prazo: ${props.capture.dueDate}` : "Sem prazo"}
+          </UITypography>
+        </UIContentGroup>
+      </PersonalEntitySelectionSurface>
+      <StudyCaptureActions
+        contentPath={contentPath}
+        onArchive={props.onArchive}
+        onDelete={props.onDelete}
+        onEdit={props.onEdit}
+        onUpdateCompletion={props.onUpdateCompletion}
+        reviewPath={props.capture.contentKey ? "/revisoes" : null}
+      />
     </UIContentGroup>
   );
 }

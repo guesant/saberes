@@ -22,7 +22,9 @@ export function PersonalBacklinksSection(props: PersonalBacklinksSectionProps) {
           key={relation.id}
           onArchive={props.onArchive}
           onRestore={props.onRestore}
+          selection={props.selection}
           relation={relation}
+          workspace={props.workspace}
         />
       ); })}
     </UIContentGroup>

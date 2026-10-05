@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { PersonalReferenceDisplay } from "./personal-reference-display.component";
 import { PersonalReferenceEditor } from "./personal-reference-editor.component";
+import type { PersonalEntitySelection } from "./personal-entity-selection.interface";
 import type { PersonalReference } from "@guesant/saberes-application";
 
 export interface PersonalReferenceItemProps {
+  selection: PersonalEntitySelection;
   reference: PersonalReference;
   onUpdateFavorite(id: string): Promise<void>;
 
@@ -44,6 +46,8 @@ export function PersonalReferenceItem(props: PersonalReferenceItemProps) {
       onDelete={() => { return props.onDelete(props.reference.id); }}
       onEdit={() => { return setEditing(true); }}
       onFavorite={() => { return props.onUpdateFavorite(props.reference.id); }}
+      onSelect={props.selection.select}
+      selected={props.selection.isSelected({ id: props.reference.id, recordType: "reference" })}
     />
   );
 }

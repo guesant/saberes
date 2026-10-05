@@ -1,6 +1,8 @@
-import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useNavigate } from "react-router-dom";
+import { getPersonalRelationEndpointAvailability } from "./get-personal-relation-endpoint-availability.function";
 import { getPersonalRelationEndpointPath } from "./get-personal-relation-endpoint-path.function";
+import { PersonalEntitySelectionSurface } from "./personal-entity-selection-surface.component";
+import { PersonalRelationContent } from "./personal-relation-content.component";
 import type { PersonalRelationItemProps } from "./personal-relation-item-props.interface";
 
 export function PersonalRelationItem(props: PersonalRelationItemProps) {
@@ -12,24 +14,37 @@ export function PersonalRelationItem(props: PersonalRelationItemProps) {
     ? () => {return props.onRestore(props.relation.id);}
     : () => {return props.onArchive(props.relation.id);};
 
+  const openOrigin = () => {
+    props.selection.select(props.relation.source);
+
+    return navigate(getPersonalRelationEndpointPath(props.relation.source));
+  };
+
+  const openTarget = () => {
+    props.selection.select(props.relation.target);
+
+    return navigate(getPersonalRelationEndpointPath(props.relation.target));
+  };
+
+  const selected = props.selection.isSelected(props.relation.source) ||
+    props.selection.isSelected(props.relation.target);
+
   return (
-    <UIContentGroup variant="content">
-      <UITypography variant="subtitle1">{props.relation.kind}</UITypography>
-      <UITypography color="text.secondary" variant="body2">
-        {props.relation.source.recordType}:{props.relation.source.id} → {props.relation.target.recordType}:
-        {props.relation.target.id}
-      </UITypography>
-      <UIInlineActions>
-        <UIButton
-          onClick={() => { return navigate(getPersonalRelationEndpointPath(props.relation.source)); }}
-          variant="text"
-        >
-          Abrir origem
-        </UIButton>
-        <UIButton onClick={handleAction} variant="text">
-          {actionLabel}
-        </UIButton>
-      </UIInlineActions>
-    </UIContentGroup>
+    <PersonalEntitySelectionSurface
+      ariaLabel={`Selecionar relação ${props.relation.kind}`}
+      endpoint={props.relation.source}
+      onSelect={props.selection.select}
+      selected={selected}
+    >
+      <PersonalRelationContent
+        actionLabel={actionLabel}
+        handleAction={handleAction}
+        onOpenOrigin={openOrigin}
+        onOpenTarget={openTarget}
+        relation={props.relation}
+        sourceAvailability={getPersonalRelationEndpointAvailability(props.workspace, props.relation.source)}
+        targetAvailability={getPersonalRelationEndpointAvailability(props.workspace, props.relation.target)}
+      />
+    </PersonalEntitySelectionSurface>
   );
 }

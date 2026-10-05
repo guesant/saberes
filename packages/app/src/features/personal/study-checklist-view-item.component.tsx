@@ -3,11 +3,13 @@ import { saveStudyChecklistEditorValues } from "./save-study-checklist-editor-va
 import { StudyChecklistDisplay } from "./study-checklist-display.component";
 import { StudyChecklistEditor } from "./study-checklist-editor.component";
 import { useStudyChecklistEditingState } from "./use-study-checklist-editing-state.hook";
+import type { PersonalEntitySelection } from "./personal-entity-selection.interface";
 import type { StudyChecklistEditorValues } from "./study-checklist-editor-values.interface";
 import type { UpdateStudyChecklistContentActionInput } from "./update-study-checklist-content-action-input.interface";
 import type { StudyChecklist } from "@guesant/saberes-application";
 
 export interface StudyChecklistViewItemProps {
+  selection: PersonalEntitySelection;
   checklist: StudyChecklist;
   onUpdateItem(checklistId: string, itemId: string): Promise<void>;
 
@@ -43,6 +45,8 @@ export function StudyChecklistViewItem(props: StudyChecklistViewItemProps) {
   return (
     <StudyChecklistDisplay
       checklist={props.checklist}
+      onSelect={props.selection.select}
+      selected={props.selection.isSelected({ id: props.checklist.id, recordType: "checklist" })}
       onDelete={() => { return props.onDelete(props.checklist.id); }}
       onEdit={() => { return editor.setEditing(true); }}
       onMoveItem={props.onMoveItem}

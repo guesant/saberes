@@ -3,6 +3,7 @@ import { hasPersonalWorkspaceRecords } from "./has-personal-workspace-records.fu
 import { PersonalWorkspaceEmptyState } from "./personal-workspace-empty-state.component";
 import { PersonalWorkspaceHeaderSection } from "./personal-workspace-header-section.component";
 import { PersonalWorkspaceRecordSections } from "./personal-workspace-record-sections.component";
+import { usePersonalEntitySelection } from "./use-personal-entity-selection.hook";
 import type { PersonalWorkspaceViewModel } from "./personal-workspace-view-model.interface";
 
 export interface PersonalWorkspaceReadyViewProps {
@@ -10,11 +11,13 @@ export interface PersonalWorkspaceReadyViewProps {
 }
 
 export function PersonalWorkspaceReadyView(props: PersonalWorkspaceReadyViewProps) {
+  const selection = usePersonalEntitySelection();
+
   return (
     <UIContentGroup variant="section">
-      <PersonalWorkspaceHeaderSection viewModel={props.viewModel} />
+      <PersonalWorkspaceHeaderSection selection={selection} viewModel={props.viewModel} />
       {hasPersonalWorkspaceRecords(props.viewModel.workspace) ? (
-        <PersonalWorkspaceRecordSections viewModel={props.viewModel} />
+        <PersonalWorkspaceRecordSections selection={selection} viewModel={props.viewModel} />
       ) : (
         <PersonalWorkspaceEmptyState />
       )}

@@ -181,6 +181,14 @@ const ptBR = {
       archived: "Arquivadas",
       all: "Todas",
     },
+    capture: {
+      openContent: "Praticar conteúdo",
+      openReviews: "Abrir revisões",
+      updateCompletion: "Atualizar conclusão",
+      archive: "Arquivar",
+      edit: "Editar",
+      delete: "Excluir",
+    },
     progress: {
       title: "Progresso conectado",
       description:

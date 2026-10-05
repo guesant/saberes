@@ -13,6 +13,7 @@ export function PersonalCaptureListItem(props: PersonalCaptureListItemProps) {
       onUpdateArchive={props.onUpdateArchive}
       onUpdateCompletion={props.onUpdateCompletion}
       onUpdateContent={props.onUpdateContent}
+      selection={props.selection}
     />
   );
 }

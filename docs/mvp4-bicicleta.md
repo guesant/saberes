@@ -4,7 +4,7 @@
 
 O primeiro slice do Bicicleta estabelece uma relação local entre registros já existentes sem copiar o conteúdo de nenhum contexto. A relação pertence ao contexto de Conhecimento Pessoal; os registros apontados continuam pertencendo aos seus contextos proprietários.
 
-O slice é deliberadamente pequeno: ele define o contrato, persiste a relação, permite arquivá-la/restaurá-la, consulta por tipo ou endpoint e oferece um composer local genérico. A mesma fonte agora também alimenta árvore, board e lentes persistidas; reindexação, progresso conectado e visualizações gráficas continuam em fatias posteriores.
+O slice é deliberadamente pequeno: ele define o contrato, persiste a relação, permite arquivá-la/restaurá-la, consulta por tipo ou endpoint e oferece um composer local genérico. A mesma fonte agora também alimenta árvore, board e lentes persistidas; reindexação e visualizações gráficas continuam em fatias posteriores.
 
 ## Linguagem ubíqua
 
@@ -80,7 +80,17 @@ Cada caso de uso depende de uma porta da aplicação. A composição do app forn
 
 `PersonalKnowledgeViewsSection` apresenta a mesma coleção local em árvore e board. A árvore mantém a lista de nós e as relações direcionais; o board agrupa os mesmos nós por tipo de registro. `PersonalLens` salva a escolha da visão para reabertura posterior, sem duplicar ou renomear as entidades canônicas.
 
-Essa superfície ainda não oferece breadcrumb, filtro de contexto ou representação visual detalhada do estado resolvido. Um endpoint ausente continua abrindo o contexto previsto, onde a aplicação poderá exibir o estado ausente sem apagar a relação.
+### Progresso conectado
+
+`PersonalProgressReadModel` projeta evidências locais de sessões, tentativas, metas e atividades usando os identificadores canônicos de conteúdo, tópico e questão. Um vínculo representa a conexão entre a prática e o contexto que a originou; ele não copia nem altera as entidades proprietárias. Sessões, tentativas e atividades sem referência resolvida permanecem nos conjuntos de evidências não vinculadas, para que uma falha parcial não esconda progresso.
+
+`PersonalProgressSection` consulta sessões, tentativas e metas separadamente e renderiza seus estados de carregamento, erro e pronto como uma ilha. A projeção é recalculada no navegador e permanece independente da árvore, dos backlinks e dos registros pessoais; uma consulta indisponível não impede o restante do espaço local de renderizar.
+
+### Seleção persistida entre visões
+
+`usePersonalEntitySelection` mantém uma única seleção por endpoint (`recordType` + `id`) no espaço pessoal. Notas, checklists, pendências, referências, relações, backlinks, árvore e board usam `PersonalEntitySelectionSurface`, permitindo que a mesma entidade permaneça destacada ao alternar a visão ou abrir sua origem. A seleção é uma preocupação de apresentação: não duplica o registro, não altera o domínio e desaparece somente quando o espaço pessoal é desmontado.
+
+As relações agora mostram um breadcrumb local (`Meu espaço / Relações / tipo`), permitem filtrar por contexto (`Todas`, `Notas`, `Tópicos` e `Materiais`) e oferecem navegação para origem e destino. A disponibilidade de cada endpoint é projetada localmente como disponível, arquivado, externo ou ausente; quando ausente, a UI preserva o vínculo e informa que o registro não está neste dispositivo.
 
 ## Evidência
 
@@ -110,7 +120,63 @@ Essa superfície ainda não oferece breadcrumb, filtro de contexto ou representa
 - `packages/app/src/features/personal/personal-knowledge-views-section.component.tsx`
 - `packages/app/src/features/personal/personal-knowledge-tree-view.component.tsx`
 - `packages/app/src/features/personal/personal-knowledge-board-view.component.tsx`
+- `packages/app/src/features/personal/personal-progress-read-model.interface.ts`
+- `packages/app/src/features/personal/create-personal-progress-read-model.function.ts`
+- `packages/app/src/features/personal/create-personal-progress-read-model.function.test.ts`
+- `packages/app/src/features/personal/personal-progress-section.component.tsx`
+- `packages/app/src/features/personal/use-personal-progress-queries.hook.ts`
+- `packages/app/src/features/personal/use-personal-entity-selection.hook.ts`
+- `packages/app/src/features/personal/personal-entity-selection-surface.component.tsx`
+- `packages/app/src/features/personal/personal-relation-context-filter-controls.component.tsx`
+- `packages/app/src/features/personal/get-personal-relations-for-context.function.ts`
+- `packages/app/src/features/personal/get-personal-relation-endpoint-availability.function.ts`
+- `packages/app/src/features/personal/personal-relation-endpoint-status.component.tsx`
+- `packages/app/src/features/personal/personal-notes-section.component.tsx`
+- `packages/app/src/features/personal/personal-checklists-section.component.tsx`
+- `packages/app/src/features/personal/personal-captures-content.component.tsx`
+- `packages/app/src/features/personal/personal-references-section.component.tsx`
+- `packages/app/src/features/personal/personal-backlinks-section.component.tsx`
+
+## Legibilidade de relações densas
+
+O board usa `UIResponsiveGrid` para distribuir colunas em tracks responsivos e manter fechamento de linhas sem scroll horizontal acidental. Identificadores e endpoints são renderizados com `UIWrappedTypography`, que limita a largura e quebra tokens longos antes que sobreponham outras informações.
+
+Evidências:
+
+- `packages/pkg-ui/src/responsive-grid.component.tsx`
+- `packages/pkg-ui/src/wrapped-typography.component.tsx`
+- `packages/app/src/features/personal/personal-knowledge-board-view.component.tsx`
+- `packages/app/src/features/personal/personal-knowledge-relation-row.component.tsx`
+
+## Conexão por portas
+
+O fluxo editorial e visual permanece separado por portas: `ParseEditorialBlocksPort` valida os blocos, `BuildKnowledgeGraphPort` produz o grafo e `GetTopicMapPort` consulta mapas editoriais. A composição registra os adapters concretos; a aplicação expõe handlers CQRS; a apresentação apenas consulta esses handlers e entrega read models ao renderizador.
+
+Evidências:
+
+- `packages/pkg-application/src/ports/parse-editorial-blocks-port.port.ts`
+- `packages/pkg-application/src/ports/build-knowledge-graph-port.port.ts`
+- `packages/pkg-application/src/ports/get-topic-map-port.port.ts`
+- `packages/app/src/composition/create-content-dependencies.composition.ts`
+- `packages/app/src/features/lessons/use-lesson-section-content-queries.hook.ts`
+- `packages/pkg-ui-content/src/content-renderer.component.tsx`
+
+## Contratos de acessibilidade das visões locais
+
+As superfícies selecionáveis são botões reais, com nome acessível e operação por teclado. A árvore mantém os endpoints em texto e o board publica metadados de grid para auditoria, sem exigir suporte gráfico. O teste de apresentação verifica Enter, fallback textual, fechamento do grid e ausência de `canvas`/`svg` nas visões locais.
+
+Evidência: `packages/app/src/features/personal/personal-knowledge-views.component.test.tsx`.
+
+## Da captura à prática e à revisão
+
+Uma captura com `contentKey` não exige recadastro para continuar o estudo. A superfície da captura resolve somente chaves editoriais suportadas para suas rotas canônicas de questão, aula ou tópico e oferece acesso à fila local de revisão. As ações ficam fora da superfície selecionável, evitando controles interativos aninhados e preservando a seleção pessoal como uma preocupação independente.
+
+Evidências:
+
+- `packages/app/src/features/personal/get-personal-capture-content-path.function.ts`
+- `packages/app/src/features/personal/get-personal-capture-content-path.function.test.ts`
+- `packages/app/src/features/personal/study-capture-display.component.tsx`
 
 ## Limites deste slice
 
-Ainda não estão implementados: criação por seleção de texto, reindexação de relações, progresso conectado e visualizações gráficas. Materiais (`PersonalReference`), metas (`StudyGoal`) e exercícios (`Question`) podem ser ligados pelo contrato tipado e abertos no contexto proprietário; a edição dessas fontes continua nos seus próprios contextos. A resolução de origem já existe no domínio e a UI mantém o vínculo quando um endpoint está ausente, arquivado ou importado; breadcrumb, filtro de contexto e uma representação visual detalhada do estado resolvido permanecem em `M4-UI-002`. Colaboração, sincronização, plugins, IA, OCR e integrações continuam em `FUTURE`.
+Ainda não estão implementados: criação por seleção de texto, reindexação de relações e visualizações gráficas. Materiais (`PersonalReference`), metas (`StudyGoal`) e exercícios (`Question`) podem ser ligados pelo contrato tipado e abertos no contexto proprietário; a edição dessas fontes continua nos seus próprios contextos. A representação visual usa o estado local disponível e preserva vínculos ausentes sem inventar conteúdo. Colaboração, sincronização, plugins, IA, OCR e integrações continuam em `FUTURE`.

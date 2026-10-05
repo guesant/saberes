@@ -1,8 +1,10 @@
 import { UITypography } from "@guesant/saberes-ui";
 import { PersonalWorkspaceForm } from "./personal-workspace-form.component";
+import type { PersonalEntitySelection } from "./personal-entity-selection.interface";
 import type { PersonalWorkspaceViewModel } from "./personal-workspace-view-model.interface";
 
 export interface PersonalWorkspaceHeaderSectionProps {
+  selection: PersonalEntitySelection;
   viewModel: PersonalWorkspaceViewModel;
 }
 
@@ -14,7 +16,7 @@ export function PersonalWorkspaceHeaderSection(props: PersonalWorkspaceHeaderSec
       <UITypography color="text.secondary">
         Notas, checklists, pendências e referências ficam no dispositivo e podem ser exportados.
       </UITypography>
-      <PersonalWorkspaceForm viewModel={props.viewModel} />
+      <PersonalWorkspaceForm selection={props.selection} viewModel={props.viewModel} />
     </>
   );
 }

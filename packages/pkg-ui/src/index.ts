@@ -193,6 +193,10 @@ export * from "./quick-access-grid.component";
 
 export * from "./responsive-fields.component";
 
+export * from "./responsive-grid.component";
+
+export * from "./responsive-grid-props.interface";
+
 export * from "./responsive-tabs.component";
 
 export * from "./stack.component";
@@ -228,3 +232,7 @@ export * from "./toolbar.component";
 export * from "./two-column-layout.component";
 
 export * from "./typography.component";
+
+export * from "./wrapped-typography.component";
+
+export * from "./wrapped-typography-props.interface";

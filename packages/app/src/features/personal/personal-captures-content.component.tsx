@@ -21,6 +21,7 @@ export function PersonalCapturesContent(props: PersonalCapturesContentProps) {
                 onUpdateArchive={props.onUpdateArchive}
                 onUpdateCompletion={props.onUpdateCompletion}
                 onUpdateContent={props.onUpdateContent}
+                selection={props.selection}
               />
             );
           })}
