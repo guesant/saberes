@@ -3,12 +3,13 @@ import { useTranslation } from "react-i18next";
 import { createPreferenceOptionData } from "./create-preference-option-data.function";
 import { PreferenceOption } from "./preference-option.component";
 import type { PreferenceKey } from "./preference-key.type";
+import type { ReminderPreference } from "@guesant/saberes-application";
 
 export interface PreferenceOptionListProps {
   recommendations: boolean;
   gamification: boolean;
   richContent: boolean;
-  reminders: boolean;
+  reminders: ReminderPreference;
   onToggle(key: PreferenceKey): Promise<void>;
 }
 

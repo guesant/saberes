@@ -1,11 +1,17 @@
 import { AddStudyPointsCommandHandler } from "./commands/add-study-points.command-handler";
+import { ArchiveStudyCaptureCommandHandler } from "./commands/archive-study-capture.command-handler";
+import { ClassifyStudyCaptureCommandHandler } from "./commands/classify-study-capture.command-handler";
 import { ClearProgressCommandHandler } from "./commands/clear-progress.command-handler";
+import { CompleteStudyCaptureCommandHandler } from "./commands/complete-study-capture.command-handler";
+import { CreateCalendarEntryCommandHandler } from "./commands/create-calendar-entry.command-handler";
 import { DeleteAcademicDisciplineCommandHandler } from "./commands/delete-academic-discipline.command-handler";
 import { DeleteSavedCatalogFilterCommandHandler } from "./commands/delete-saved-catalog-filter.command-handler";
 import { EnrollCourseCommandHandler } from "./commands/enroll-course.command-handler";
 import { ImportProgressCommandHandler } from "./commands/import-progress.command-handler";
+import { PostponeStudyCaptureCommandHandler } from "./commands/postpone-study-capture.command-handler";
 import { RecordAttemptCommandHandler } from "./commands/record-attempt.command-handler";
 import { RecordStudyActivityCommandHandler } from "./commands/record-study-activity.command-handler";
+import { RestoreStudyCaptureCommandHandler } from "./commands/restore-study-capture.command-handler";
 import { SaveAcademicDisciplineCommandHandler } from "./commands/save-academic-discipline.command-handler";
 import { SaveAchievementCommandHandler } from "./commands/save-achievement.command-handler";
 import { SaveAttemptCommandHandler } from "./commands/save-attempt.command-handler";
@@ -26,6 +32,7 @@ import { SaveStudyGoalCommandHandler } from "./commands/save-study-goal.command-
 import { SaveTopicMasteryCommandHandler } from "./commands/save-topic-mastery.command-handler";
 import { ScheduleReviewCommandHandler } from "./commands/schedule-review.command-handler";
 import { SyncAchievementsCommandHandler } from "./commands/sync-achievements.command-handler";
+import { UndoStudyCaptureCommandHandler } from "./commands/undo-study-capture.command-handler";
 import { AchievementDefinitionsQueryHandler } from "./queries/achievement-definitions.query-handler";
 import { ActionForDiagnosisQueryHandler } from "./queries/action-for-diagnosis.query-handler";
 import { BuildKnowledgeGraphQueryHandler } from "./queries/build-knowledge-graph.query-handler";
@@ -49,6 +56,7 @@ import { ListAcademicDisciplinesQueryHandler } from "./queries/list-academic-dis
 import { ListAchievementsQueryHandler } from "./queries/list-achievements.query-handler";
 import { ListAttemptsQueryHandler } from "./queries/list-attempts.query-handler";
 import { ListBookmarksQueryHandler } from "./queries/list-bookmarks.query-handler";
+import { ListCalendarEntriesQueryHandler } from "./queries/list-calendar-entries.query-handler";
 import { ListDailyChallengesQueryHandler } from "./queries/list-daily-challenges.query-handler";
 import { ListDiagnosesQueryHandler } from "./queries/list-diagnoses.query-handler";
 import { ListEnrollmentsQueryHandler } from "./queries/list-enrollments.query-handler";
@@ -77,6 +85,7 @@ import type { GoalsServices } from "./application-services/goals-services.type";
 import type { LessonServices } from "./application-services/lesson-services.type";
 import type { MapServices } from "./application-services/map-services.type";
 import type { PersonalServices } from "./application-services/personal-services.type";
+import type { PlanningServices } from "./application-services/planning-services.interface";
 import type { PlatformServices } from "./application-services/platform-services.type";
 import type { ProgressServices } from "./application-services/progress-services.type";
 import type { SchedulerServices } from "./application-services/scheduler-services.type";
@@ -103,6 +112,7 @@ export interface ApplicationServices {
   progress: ProgressServices;
   study: StudyServices;
   scheduler: SchedulerServices;
+  planning: PlanningServices;
 }
 
 export function createApplication(ports: ApplicationPorts): ApplicationServices {
@@ -182,6 +192,38 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
 
   const savePersonalWorkspace = new SavePersonalWorkspaceCommandHandler(
     ports.savePersonalWorkspace,
+  );
+
+  const classifyStudyCapture = new ClassifyStudyCaptureCommandHandler(
+    ports.classifyStudyCapture,
+  );
+
+  const createCalendarEntry = new CreateCalendarEntryCommandHandler(
+    ports.createCalendarEntry,
+  );
+
+  const listCalendarEntries = new ListCalendarEntriesQueryHandler(
+    ports.listCalendarEntries,
+  );
+
+  const completeStudyCapture = new CompleteStudyCaptureCommandHandler(
+    ports.completeStudyCapture,
+  );
+
+  const postponeStudyCapture = new PostponeStudyCaptureCommandHandler(
+    ports.postponeStudyCapture,
+  );
+
+  const archiveStudyCapture = new ArchiveStudyCaptureCommandHandler(
+    ports.archiveStudyCapture,
+  );
+
+  const restoreStudyCapture = new RestoreStudyCaptureCommandHandler(
+    ports.restoreStudyCapture,
+  );
+
+  const undoStudyCapture = new UndoStudyCaptureCommandHandler(
+    ports.undoStudyCapture,
   );
 
   const listPlanProgress = new ListPlanProgressQueryHandler(ports.listPlanProgress);
@@ -275,7 +317,16 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
     catalog: { get: getCatalog },
     courses: { get: getCourse, enroll: enrollCourse },
     lessons: { get: getLesson, saveProgress: saveLessonProgress, bookmark: saveBookmark },
-    personal: { get: getPersonalWorkspace, save: savePersonalWorkspace },
+    personal: {
+      classifyCapture: classifyStudyCapture,
+      completeCapture: completeStudyCapture,
+      postponeCapture: postponeStudyCapture,
+      archiveCapture: archiveStudyCapture,
+      restoreCapture: restoreStudyCapture,
+      undoCapture: undoStudyCapture,
+      get: getPersonalWorkspace,
+      save: savePersonalWorkspace,
+    },
     exercises: { get: getQuestion, recordAttempt },
     assessments: { get: getAssessment },
     maps: { get: getTopicMap, buildGraph: buildKnowledgeGraph },
@@ -335,5 +386,6 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
       addStudyPoints,
     },
     scheduler: { schedule: scheduleReview, preview: previewReview },
+    planning: { createCalendarEntry, listCalendarEntries },
   };
 }

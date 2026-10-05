@@ -49,6 +49,8 @@ export function QuestionReadyView(props: QuestionReadyViewProps) {
       onRetry={interaction.clear}
       onSubmit={interaction.submit}
       result={interaction.result}
+      submissionError={interaction.submissionError}
+      submissionState={interaction.submissionState}
     />
   );
 }

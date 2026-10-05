@@ -143,3 +143,9 @@ export const PersonalWorkspaceView = lazy(() => {
     },
   );
 });
+
+export const CalendarView = lazy(() => {
+  return import("./features/calendar/calendar-view.component").then(({ CalendarView: Component }) => {
+    return { default: Component };
+  });
+});

@@ -7,7 +7,7 @@ describe("getMyStudyFeatureVisibility", () => {
       getMyStudyFeatureVisibility({
         gamification: false,
         recommendations: false,
-        reminders: false,
+        reminders: "not-now",
         richContent: false,
       }),
     )

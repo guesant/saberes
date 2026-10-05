@@ -1,11 +1,15 @@
 import type { AchievementDefinitionsPort } from "./ports/achievement-definitions-port.port";
 import type { ActionForDiagnosisPort } from "./ports/action-for-diagnosis-port.port";
 import type { AddStudyPointsPort } from "./ports/add-study-points-port.port";
+import type { ArchiveStudyCapturePort } from "./ports/archive-study-capture-port.port";
 import type { BuildKnowledgeGraphPort } from "./ports/build-knowledge-graph-port.port";
 import type { CalculateAcademicMetricsPort } from "./ports/calculate-academic-metrics-port.port";
 import type { CalculateTopicMasteryPort } from "./ports/calculate-topic-mastery-port.port";
+import type { ClassifyStudyCapturePort } from "./ports/classify-study-capture-port.port";
 import type { ClearProgressPort } from "./ports/clear-progress-port.port";
 import type { ClockPort } from "./ports/clock-port.port";
+import type { CompleteStudyCapturePort } from "./ports/complete-study-capture-port.port";
+import type { CreateCalendarEntryPort } from "./ports/create-calendar-entry-port.port";
 import type { DeleteAcademicDisciplinePort } from "./ports/delete-academic-discipline-port.port";
 import type { DeleteSavedCatalogFilterPort } from "./ports/delete-saved-catalog-filter-port.port";
 import type { EnrollCoursePort } from "./ports/enroll-course-port.port";
@@ -29,6 +33,7 @@ import type { ListAcademicDisciplinesPort } from "./ports/list-academic-discipli
 import type { ListAchievementsPort } from "./ports/list-achievements-port.port";
 import type { ListAttemptsPort } from "./ports/list-attempts-port.port";
 import type { ListBookmarksPort } from "./ports/list-bookmarks-port.port";
+import type { ListCalendarEntriesPort } from "./ports/list-calendar-entries-port.port";
 import type { ListDailyChallengesPort } from "./ports/list-daily-challenges-port.port";
 import type { ListDiagnosesPort } from "./ports/list-diagnoses-port.port";
 import type { ListEnrollmentsPort } from "./ports/list-enrollments-port.port";
@@ -42,10 +47,12 @@ import type { ListStudyGoalsPort } from "./ports/list-study-goals-port.port";
 import type { ListStudySessionsPort } from "./ports/list-study-sessions-port.port";
 import type { ListTopicMasteryPort } from "./ports/list-topic-mastery-port.port";
 import type { ParseEditorialBlocksPort } from "./ports/parse-editorial-blocks-port.port";
+import type { PostponeStudyCapturePort } from "./ports/postpone-study-capture-port.port";
 import type { PreviewReviewPort } from "./ports/preview-review-port.port";
 import type { RecommendNextPort } from "./ports/recommend-next-port.port";
 import type { RecordAttemptPort } from "./ports/record-attempt-port.port";
 import type { RecordStudyActivityPort } from "./ports/record-study-activity-port.port";
+import type { RestoreStudyCapturePort } from "./ports/restore-study-capture-port.port";
 import type { SaveAcademicDisciplinePort } from "./ports/save-academic-discipline-port.port";
 import type { SaveAchievementPort } from "./ports/save-achievement-port.port";
 import type { SaveAttemptPort } from "./ports/save-attempt-port.port";
@@ -67,9 +74,18 @@ import type { SaveTopicMasteryPort } from "./ports/save-topic-mastery-port.port"
 import type { ScheduleReviewPort } from "./ports/schedule-review-port.port";
 import type { SuggestDiagnosisPort } from "./ports/suggest-diagnosis-port.port";
 import type { SyncAchievementsPort } from "./ports/sync-achievements-port.port";
+import type { UndoStudyCapturePort } from "./ports/undo-study-capture-port.port";
 import type { ValidateContentSnapshotPort } from "./ports/validate-content-snapshot-port.port";
 
 export interface ApplicationPorts {
+  classifyStudyCapture: ClassifyStudyCapturePort;
+  createCalendarEntry: CreateCalendarEntryPort;
+  listCalendarEntries: ListCalendarEntriesPort;
+  completeStudyCapture: CompleteStudyCapturePort;
+  postponeStudyCapture: PostponeStudyCapturePort;
+  archiveStudyCapture: ArchiveStudyCapturePort;
+  restoreStudyCapture: RestoreStudyCapturePort;
+  undoStudyCapture: UndoStudyCapturePort;
   calculateAcademicMetrics: CalculateAcademicMetricsPort;
   getCatalog: GetCatalogPort;
   getCourse: GetCoursePort;

@@ -1,11 +1,24 @@
 import { createTheme } from "./create-theme.function";
 
 export const theme = createTheme({
-  palette: {
-    primary: { main: "#152a4a", contrastText: "#fff" },
-    secondary: { main: "#e59b2f" },
-    background: { default: "#f7f8fb", paper: "#fff" },
-    success: { main: "#2e7d5b" },
+  cssVariables: true,
+  colorSchemes: {
+    light: {
+      palette: {
+        primary: { main: "#152a4a", contrastText: "#fff" },
+        secondary: { main: "#e59b2f" },
+        background: { default: "#f7f8fb", paper: "#fff" },
+        success: { main: "#2e7d5b" },
+      },
+    },
+    dark: {
+      palette: {
+        primary: { main: "#90b4e8", contrastText: "#0b1426" },
+        secondary: { main: "#f2b84b" },
+        background: { default: "#0b1426", paper: "#152a4a" },
+        success: { main: "#72c49a" },
+      },
+    },
   },
   typography: {
     fontFamily: "Roboto Slab, Georgia, serif",
@@ -77,11 +90,17 @@ export const theme = createTheme({
     },
     MuiButton: {
       defaultProps: { disableElevation: true, disableRipple: true },
-      styleOverrides: { root: { borderRadius: "0.25rem" } },
+      styleOverrides: { root: { borderRadius: "0.25rem", minHeight: 44 } },
     },
     MuiButtonBase: { defaultProps: { disableRipple: true } },
-    MuiIconButton: { defaultProps: { disableRipple: true } },
-    MuiListItemButton: { defaultProps: { disableRipple: true } },
+    MuiIconButton: {
+      defaultProps: { disableRipple: true },
+      styleOverrides: { root: { minHeight: 44, minWidth: 44 } },
+    },
+    MuiListItemButton: {
+      defaultProps: { disableRipple: true },
+      styleOverrides: { root: { minHeight: 44 } },
+    },
     MuiStepButton: { defaultProps: { disableRipple: true } },
     MuiTab: { defaultProps: { disableRipple: true } },
     MuiAlert: {

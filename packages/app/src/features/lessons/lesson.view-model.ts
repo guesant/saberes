@@ -1,13 +1,15 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
-import { createLessonProgressActions } from "./create-lesson-progress-actions.function";
+import { createLessonProgressViewModel } from "./create-lesson-progress-view-model.function";
 import { getLessonContentKey } from "./get-lesson-content-key.function";
 import { getLessonProgressState } from "./get-lesson-progress-state.function";
 import { getLessonViewData } from "./get-lesson-view-data.function";
+import { useLessonActions } from "./use-lesson-actions.hook";
 import { useLessonContentQuery } from "./use-lesson-content-query.hook";
 import { useLessonProgressQueries } from "./use-lesson-progress-queries.hook";
 import { useLessonStudySession } from "./use-lesson-study-session.hook";
+import type { ActionState } from "../../types/action-state.type";
 import type { LessonReadModel } from "@guesant/saberes-application";
 
 export type LessonViewModelState = "loading" | "error" | "ready";
@@ -20,6 +22,10 @@ export interface LessonViewModel {
   sectionIndex: number | undefined;
   error: Error | null;
   progressError: Error | null;
+  progressActionError: Error | null;
+  progressActionState: ActionState;
+  bookmarkActionError: Error | null;
+  bookmarkActionState: ActionState;
   reload(): Promise<void>;
 
   saveProgress(completed: boolean): Promise<void>;
@@ -50,7 +56,7 @@ export function useLessonViewModel(key: string | undefined): LessonViewModel {
     contentKey,
   });
 
-  const progressActions = createLessonProgressActions({
+  const lessonActions = useLessonActions({
     services,
     queryClient,
     contentKey,
@@ -62,14 +68,11 @@ export function useLessonViewModel(key: string | undefined): LessonViewModel {
   return {
     state: getQueryViewState(query),
     data: lessonViewData.data,
-    completed: progressState.completed,
-    bookmarked: progressState.bookmarked,
-    sectionIndex: progressState.sectionIndex,
+    ...createLessonProgressViewModel({ actions: lessonActions, progress: progressQueries, state: progressState }),
     error: query.error ?? null,
-    progressError: progressQueries.progressError || progressQueries.bookmarksError || null,
     reload: async (): Promise<void> => { await query.refetch(); },
-    saveProgress: progressActions.saveProgress,
-    saveBookmark: progressActions.saveBookmark,
-    saveSection: progressActions.saveSection,
+    saveProgress: lessonActions.progress.save,
+    saveBookmark: lessonActions.bookmark.save,
+    saveSection: lessonActions.saveSection,
   };
 }

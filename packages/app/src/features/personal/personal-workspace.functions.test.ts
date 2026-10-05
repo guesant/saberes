@@ -14,6 +14,7 @@ import { updatePersonalWorkspaceTestFixture } from "./update-personal-workspace-
 import type { PersonalWorkspace } from "@guesant/saberes-application";
 
 const emptyWorkspace: PersonalWorkspace = {
+  activities: [],
   notes: [],
   checklists: [],
   captures: [],

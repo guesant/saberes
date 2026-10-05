@@ -564,3 +564,99 @@ O lint atual confirma que as features alvo não importam componentes MUI ou prim
 - `packages/app/src/features/personal/personal-workspace-ready-view.component.tsx` e `personal-captures-section.component.tsx` compõem Atividade pessoal e registros.
 - `packages/app/src/features/lessons`, `features/exercises` e `features/topics` fornecem as telas de detalhe.
 - `packages/pkg-ui/src/content-group.component.tsx`, `responsive-fields.component.tsx`, `catalog-card-grid.component.tsx`, `metric-grid.component.tsx` e `quick-access-grid.component.tsx` concentram gap, grid e limites de overflow.
+
+## M2-UI-003 — estados do primeiro fluxo
+
+O primeiro fluxo não trata carregamento ou persistência como um estado global da aplicação. Cada tela mantém o estado no nível da informação que depende dele, preservando as demais áreas disponíveis.
+
+| Estado     | Comportamento observável                                                                                         | Evidência                                                                                                             |
+| ---------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| vazio      | conteúdo ausente, lista sem registros ou tópico sem material aparece com mensagem contextual, sem quebrar a tela | componentes `*EmptyState`, `ContentNotFoundState` e estados de listas das features                                    |
+| carregando | consultas de conteúdo e progresso exibem `ContentLoadingState`/`UIContentLoadingLayout` no painel afetado        | `ContentLoadingState`, `getQueryViewState` e views de Home, Curso, Lição e Questão                                    |
+| erro       | falha de conteúdo ou progresso é apresentada com retry local; consultas independentes continuam renderizando     | `ContentErrorState`, `CourseProgressError`, `LessonProgressError` e `ContentErrorDetails`                             |
+| offline    | o shell mantém o chip `Offline`; o estudo continua usando o snapshot local e o IndexedDB quando disponíveis      | `UIOfflineStatusChip`, `NavigationHeader` e adapters locais                                                           |
+| salvando   | iniciar Curso, salvar progresso/marcador de Lição e registrar resposta desabilitam a ação e anunciam progresso   | `ActionState`, `useCourseStartAction`, `useLessonProgressAction`, `useLessonBookmarkAction` e `useQuestionSubmission` |
+| salvo      | a escrita local confirmada apresenta feedback de sucesso e o resultado da questão permanece disponível           | `ActionFeedback`, `QuestionSubmissionFeedback` e invalidação das queries locais                                       |
+| cancelado  | cancelar a restauração volta a um estado explícito sem apagar os dados atuais                                    | `LocalBackupState`, `createCancelLocalBackupAction` e `LocalBackupPanel`                                              |
+
+### Regras de isolamento
+
+- Falha ao carregar o snapshot não remove progresso local nem impede a renderização do shell e das consultas independentes.
+- Falha ao salvar Curso, Lição ou Questão não apresenta sucesso falso; o erro permanece junto da ação que falhou e permite nova tentativa.
+- Enquanto uma escrita está em andamento, somente a ação correspondente é desabilitada; navegação e leitura continuam disponíveis.
+- Cancelar uma restauração limpa a prévia pendente, preserva os stores atuais e informa a decisão no próprio painel.
+- O estado salvo representa confirmação local, não sincronização remota nem publicação.
+- Toda mensagem de estado possui saída textual e `role="status"`/`role="alert"` quando aplicável.
+
+### Evidência no código
+
+- `packages/app/src/components/action-feedback.component.tsx` centraliza feedback de salvamento, sucesso, cancelamento e erro com i18n.
+- `packages/app/src/features/courses/use-course-start-action.hook.ts` expõe o estado da matrícula local do Curso.
+- `packages/app/src/features/lessons/use-lesson-progress-action.hook.ts` e `use-lesson-bookmark-action.hook.ts` expõem os estados das escritas da Lição.
+- `packages/app/src/features/exercises/use-question-submission.hook.ts` mantém resposta, erro e estado de registro sem apagar a tentativa digitada.
+- `packages/app/src/features/my-study/local-backup-state.type.ts` e `create-cancel-local-backup-action.function.ts` tornam o cancelamento explícito.
+- `packages/app/src/features/my-study/my-study-view.component.tsx`, `course-view.component.tsx`, `lesson-view.component.tsx` e `question-view.component.tsx` preservam estados de consulta localizados.
+
+### Verificação
+
+- `just format` passou com ESLint e Prettier dentro do container.
+- `just typecheck` passou com TypeScript estrito.
+- `just test` passou com 67 arquivos e 134 testes.
+
+O teste visual por viewport e a matriz de persistência/retomada continuam nos itens `M2-TEST-001` e `M2-TEST-002`; esta tarefa entrega a modelagem e a renderização dos estados, sem antecipar esses gates.
+
+## M2-UI-004 — acesso responsivo e preferências do sistema
+
+O shell do primeiro fluxo foi validado em larguras estreitas, largas, tablet e desktop. A navegação muda de drawer para bottom navigation sem criar overflow horizontal, e o conteúdo principal mantém um landmark `main` estável.
+
+### Contratos entregues
+
+| Capacidade     | Regra                                                                                                           | Evidência                                                                          |
+| -------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| responsividade | abaixo de `md`, o drawer fica oculto e a navegação inferior fica disponível; a partir de `md`, ocorre o inverso | `UIResponsiveNavigationDrawer`, `UIBottomNavigation` e `mvp2-ui004.spec.ts`        |
+| toque          | botões, ícones e itens de navegação recebem área mínima de 44 CSS px quando o componente UI controla o alvo     | `theme.config.ts`, overrides de `MuiButton`, `MuiIconButton` e `MuiListItemButton` |
+| teclado        | o primeiro foco navegável permanece visível e preserva indicador de foco                                        | `mvp2-ui004.spec.ts`                                                               |
+| leitor de tela | o fluxo continua sem violações axe e mantém `main`, navegação e estados anunciáveis                             | `accessibility.spec.ts`, `accessibility-routes.spec.ts` e `mvp2-ui004.spec.ts`     |
+| modo escuro    | o tema respeita `prefers-color-scheme` por meio do `ThemeProvider` e de `colorSchemes` claro/escuro             | `theme.config.ts`, `AppThemeProvider` e teste de tema                              |
+| fonte ampliada | aumento de 125% no tamanho base não cria overflow horizontal no fluxo inicial                                   | `mvp2-ui004.spec.ts`                                                               |
+
+### Limites
+
+- Não há seletor persistente de tema; a preferência usada nesta fatia é a do sistema.
+- Não há auditoria visual de todos os roteiros e breakpoints; isso permanece em `M2-TEST-002`.
+- Não há validação de leitor de tela específico ou teste com hardware assistivo; axe e landmarks cobrem o gate automatizado inicial.
+- Não há alteração de conteúdo editorial, sincronização, calendário, plugin ou recurso de `FUTURE`.
+
+### Verificação
+
+- `just check` passou com formatação, lint, typecheck, 67 arquivos de teste, 134 testes, 55 testes arquiteturais e convenções de arquivo.
+- O teste dedicado cobre 320 px, 430 px, 768 px e 1280 px, além de teclado, axe em modo escuro e fonte ampliada.
+
+## M2-TEST-001 — evidência do ciclo local mínimo
+
+O ciclo mínimo possui cobertura em três níveis, sem alterar o comportamento de produção:
+
+- a regra de domínio de correção de resposta é coberta por `grade-question-answer.function.test.ts`;
+- o caso de uso de início de Curso é coberto por `enroll-course.command-handler.test.ts`, verificando que a intenção chega à port sem acoplar o handler ao adapter;
+- o armazenamento Dexie é coberto por `progress.test.ts`, incluindo escrita/listagem, reabertura do banco, restauração de sessão interrompida, exportação/importação e preservação de referências a conteúdo indisponível;
+- a compatibilidade entre versões é coberta por `progress-migration.test.ts`, que abre um banco legado e verifica a preservação dos registros pessoais.
+
+### Verificação
+
+O conjunto de testes unitários passou com 67 arquivos e 134 testes. O cenário de recuperação da sessão interrompida cria uma nova instância de `ProgressDatabase` sobre o mesmo nome, consulta o registro persistido e confirma a manutenção de `currentQuestionIndex`, conteúdo e estado retomável.
+
+## M2-TEST-002 — roteiro visual responsivo
+
+O roteiro visual automatizado percorre todas as rotas do primeiro fluxo em cinco contextos de viewport:
+
+- mobile estreito: `320 × 812`;
+- mobile largo: `430 × 812`;
+- tablet: `768 × 900`;
+- desktop: `1440 × 900`;
+- janela dividida: `640 × 900`.
+
+Cada combinação verifica renderização do root, metadados dos primitives de layout, gaps realizados no DOM, fechamento de grids, alinhamento, uniformidade, overflow horizontal, rótulos sobrepostos e ações estruturais excessivamente largas. O roteiro não altera snapshots nem conteúdo editorial; ele valida as invariantes visuais do Skate diretamente no DOM.
+
+### Verificação
+
+O comando `mvp2:visual:check` executa `mvp2-test002.spec.ts` dentro da imagem Playwright. A suíte percorre as 17 rotas do primeiro fluxo nos cinco viewports, totalizando 85 cenários de composição visual. A execução atual passou em 85/85 cenários após tornar as ações de curso responsivas em larguras estreitas.

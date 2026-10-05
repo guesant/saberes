@@ -1,22 +1,19 @@
 import {
-  UIButton,
-  UICheckCircleIcon,
   UICourseHeroCard,
   UIChip,
   UIContentGroup,
   UILinearProgress,
-  UIPlayArrowIcon,
   UITypography,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import { CourseStartAction } from "./course-start-action.component";
 import type { CourseProgress } from "./course-progress.interface";
+import type { CourseStartActionProps } from "./course-start-action-props.interface";
 import type { CourseReadModel } from "@guesant/saberes-application";
 
-export interface CourseReadyHeroProps {
+export interface CourseReadyHeroProps extends CourseStartActionProps {
   data: CourseReadModel;
-  onStart(): Promise<void>;
   progress: CourseProgress;
-  started: boolean;
 }
 
 export function CourseReadyHero(props: CourseReadyHeroProps) {
@@ -45,13 +42,12 @@ export function CourseReadyHero(props: CourseReadyHeroProps) {
           variant="determinate"
         />
       </UIContentGroup>
-      <UIButton
-        onClick={props.onStart}
-        startIcon={props.started ? <UICheckCircleIcon /> : <UIPlayArrowIcon />}
-        variant="contained"
-      >
-        {props.started ? t("course.continue") : t("course.start")}
-      </UIButton>
+      <CourseStartAction
+        onStart={props.onStart}
+        startError={props.startError}
+        startState={props.startState}
+        started={props.started}
+      />
     </UICourseHeroCard>
   );
 }

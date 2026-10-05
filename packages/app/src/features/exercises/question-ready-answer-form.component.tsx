@@ -1,13 +1,10 @@
-import { UIButton } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
 import { QuestionAnswerInput } from "./question-answer-input.component";
 import { QuestionConfidenceInput } from "./question-confidence-input.component";
-import type { QuestionReadyAnswerFormProps } from "./question-ready-answer-form-props.type";
+import { QuestionSubmitAction } from "./question-submit-action.component";
+import type { QuestionReadyAnswerFormProps } from "./question-ready-answer-form-props.interface";
 
 export function QuestionReadyAnswerForm(props: QuestionReadyAnswerFormProps) {
   const { answer, confidence, data, onAnswerChange, onConfidenceChange, onSubmit } = props;
-
-  const { t } = useTranslation();
 
   return (
     <>
@@ -20,13 +17,12 @@ export function QuestionReadyAnswerForm(props: QuestionReadyAnswerFormProps) {
 
       <QuestionConfidenceInput onChange={onConfidenceChange} value={confidence} />
 
-      <UIButton
-        variant="contained"
-        disabled={!answer?.trim() || confidence === null}
-        onClick={onSubmit}
-      >
-        {t("exercise.respond")}
-      </UIButton>
+      <QuestionSubmitAction
+        answer={answer}
+        confidence={confidence !== null}
+        onSubmit={onSubmit}
+        submitting={props.submitting}
+      />
     </>
   );
 }

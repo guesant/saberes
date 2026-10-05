@@ -1,7 +1,7 @@
-import { UIButton, UIContentGroup, UITextField } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { getStudyChecklistValues } from "./get-study-checklist-values.function";
-import { PersonalContentKeyField } from "./personal-content-key-field.component";
+import { StudyChecklistCreateFields } from "./study-checklist-create-fields.component";
 
 export interface StudyChecklistCreateProps {
   onCreate(title: string, items: string[], contentKey?: string): Promise<void>;
@@ -30,19 +30,19 @@ export function StudyChecklistCreate(props: StudyChecklistCreateProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UITextField
-        label="Título do checklist"
-        onChange={(event) => { return setTitle(event.target.value); }}
-        value={title}
+      <StudyChecklistCreateFields
+        contentKey={contentKey}
+        items={items}
+        onContentKeyChange={setContentKey}
+        onItemsChange={setItems}
+        onTitleChange={setTitle}
+        title={title}
       />
-      <UITextField
-        label="Itens, um por linha"
-        multiline
-        onChange={(event) => { return setItems(event.target.value); }}
-        value={items}
-      />
-      <PersonalContentKeyField onChange={setContentKey} value={contentKey} />
-      <UIButton onClick={create} variant="outlined">
+      <UIButton
+        disabled={!title.trim() || getStudyChecklistValues(items).length === 0}
+        onClick={create}
+        variant="outlined"
+      >
         Salvar checklist
       </UIButton>
     </UIContentGroup>

@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { useQuestionSubmission } from "./use-question-submission.hook";
 import type { QuestionReadyInteraction } from "./question-ready-interaction.interface";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
 import type { AttemptConfidence } from "@guesant/saberes-application";
@@ -18,22 +19,21 @@ export function useQuestionReadyInteraction(
 
   const [confidence, setConfidence] = useState<AttemptConfidence | null>(null);
 
-  const [result, setResult] = useState<QuestionSubmissionResult | null>(null);
-
   const startedAt = useRef(Date.now());
 
-  const submit = async (): Promise<void> => {
-    if (answer?.trim() && confidence) {
-      setResult(await input.onSubmit(answer.trim(), Date.now() - startedAt.current, confidence));
-    }
-  };
+  const submission = useQuestionSubmission({
+    answer,
+    confidence,
+    onSubmit: input.onSubmit,
+    startedAt,
+  });
 
   const clearQuestionReadyInteraction = (): void => {
     setAnswer(null);
 
     setConfidence(null);
 
-    setResult(null);
+    submission.clearQuestionSubmission();
 
     startedAt.current = Date.now();
   };
@@ -43,8 +43,10 @@ export function useQuestionReadyInteraction(
     changeAnswer: setAnswer,
     changeConfidence: setConfidence,
     confidence,
-    result,
+    result: submission.result,
+    submissionError: submission.error,
+    submissionState: submission.state,
     clear: clearQuestionReadyInteraction,
-    submit,
+    submit: submission.submit,
   };
 }

@@ -19,6 +19,7 @@ const ptBR = {
     academic: "Acadêmico",
     preferences: "Preferências",
     personal: "Meu espaço",
+    calendar: "Agenda",
   },
   common: {
     offline: "Offline",
@@ -64,6 +65,10 @@ const ptBR = {
     topics: "tópicos",
     relations: "relações",
     days: "dias",
+    saving: "Salvando no dispositivo...",
+    saved: "Salvo neste dispositivo.",
+    cancelled: "Operação cancelada.",
+    saveError: "Não foi possível salvar esta alteração localmente.",
   },
   errors: {
     contentLoad:
@@ -163,12 +168,31 @@ const ptBR = {
     richContentDescription: "Mostrar gráficos, mapas, vídeos e cenas quando publicados.",
     reminders: "Lembretes locais",
     remindersDescription:
-      "Permitir lembretes internos para retomar o estudo, sem notificações externas.",
+      "Escolha sim, agora não ou nunca para lembretes internos; sem notificações externas.",
     restoreDefaults: "Restaurar padrões",
   },
   personal: {
     loading: "Carregando seu espaço local...",
     loadError: "Não foi possível carregar seu espaço local.",
+    emptyTitle: "Seu espaço está pronto para receber algo.",
+    emptyDescription: "Crie uma nota, checklist, pendência ou referência para começar.",
+    filters: {
+      active: "Ativas",
+      archived: "Arquivadas",
+      all: "Todas",
+    },
+  },
+  calendar: {
+    eyebrow: "Planejamento local",
+    title: "Agenda",
+    description: "Organize compromissos pessoais no dispositivo, sem integração externa.",
+    loading: "Carregando agenda...",
+    loadError: "Não foi possível carregar sua agenda local.",
+    anchorDate: "Data de referência",
+    list: "Dia",
+    week: "Semana",
+    month: "Mês",
+    empty: "Nenhum compromisso local neste período.",
   },
   backup: {
     title: "Dados locais",
@@ -192,6 +216,7 @@ const ptBR = {
       busy: "Operação em andamento no dispositivo.",
       success: "Dados persistidos no dispositivo.",
       error: "A operação foi descartada e os dados atuais foram preservados.",
+      cancelled: "A restauração foi cancelada; os dados atuais foram preservados.",
     },
   },
   home: {

@@ -1,5 +1,13 @@
 export const applicationDependencyTokens = {
   calculateAcademicMetrics: Symbol.for("saberes.calculate-academic-metrics-port"),
+  classifyStudyCapture: Symbol.for("saberes.classify-study-capture-port"),
+  completeStudyCapture: Symbol.for("saberes.complete-study-capture-port"),
+  postponeStudyCapture: Symbol.for("saberes.postpone-study-capture-port"),
+  archiveStudyCapture: Symbol.for("saberes.archive-study-capture-port"),
+  restoreStudyCapture: Symbol.for("saberes.restore-study-capture-port"),
+  undoStudyCapture: Symbol.for("saberes.undo-study-capture-port"),
+  createCalendarEntry: Symbol.for("saberes.create-calendar-entry-port"),
+  listCalendarEntries: Symbol.for("saberes.list-calendar-entries-port"),
   contentRepository: Symbol.for("saberes.content-repository"),
   progressDatabase: Symbol.for("saberes.progress-database"),
   progressStore: Symbol.for("saberes.progress-store"),

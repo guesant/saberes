@@ -1,4 +1,5 @@
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
+import type { ActionState } from "../../types/action-state.type";
 import type {
   AttemptConfidence,
   DiagnosisCode,
@@ -31,4 +32,6 @@ export type QuestionReadyContentProps = {
 
   onSubmit(): Promise<void>;
   result: QuestionSubmissionResult | null;
+  submissionError: Error | null;
+  submissionState: ActionState;
 };

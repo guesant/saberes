@@ -12,7 +12,7 @@ export function MyStudyCourseLink(props: MyStudyCourseLinkProps) {
   const { course } = props;
 
   return (
-    <UIInlineActions>
+    <UIInlineActions wrap>
       <UIChip label={course.title} />
       <UIButton href={course.href || `/cursos/${course.slug || course.id}`}>
         {t("home.view")}

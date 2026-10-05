@@ -5,6 +5,7 @@ import { Shell } from "./components/shell.component";
 import {
   AcademicView,
   AssessmentView,
+  CalendarView,
   CatalogView,
   CourseView,
   FocusView,
@@ -54,6 +55,8 @@ export function App() {
           <Route element={<PreferencesView />} path="/preferencias" />
 
           <Route element={<PersonalWorkspaceView />} path="/meu-espaco" />
+
+          <Route element={<CalendarView />} path="/agenda" />
 
           <Route element={<LessonView />} path="/licoes/:lessonId" />
 

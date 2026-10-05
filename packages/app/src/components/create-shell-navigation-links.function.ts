@@ -16,6 +16,7 @@ import type { ShellTranslator } from "./shell-translator.type";
 export function createShellNavigationLinks(translate: ShellTranslator): NavigationLink[] {
   return [
     { icon: createIconElement(UIExploreIcon), label: translate("common.catalog"), to: "/catalogo" },
+    { icon: createIconElement(UIEventNoteIcon), label: translate("nav.calendar"), to: "/agenda" },
     { icon: createIconElement(UIRefreshIcon), label: translate("common.review"), to: "/revisoes" },
     {
       icon: createIconElement(UIAutoStoriesIcon),

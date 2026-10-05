@@ -7,7 +7,7 @@ describe("getDefaultPreferences", () => {
       .toEqual({
         gamification: true,
         recommendations: true,
-        reminders: false,
+        reminders: "not-now",
         richContent: true,
       });
   });

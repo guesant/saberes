@@ -1,13 +1,15 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
 import { createStartCourseAction } from "./create-start-course-action.function";
 import { getCourseItems } from "./get-course-items.function";
 import { getCourseProgress } from "./get-course-progress.function";
 import { getCourseStarted } from "./get-course-started.function";
-import { loadCourse } from "./load-course.function";
+import { useCourseContentQuery } from "./use-course-content-query.hook";
 import { useCourseProgressQueries } from "./use-course-progress-queries.hook";
+import { useCourseStartAction } from "./use-course-start-action.hook";
 import type { CourseProgress } from "./course-progress.interface";
+import type { ActionState } from "../../types/action-state.type";
 import type { CourseReadModel } from "@guesant/saberes-application";
 
 export type CourseViewModelState = "loading" | "error" | "ready";
@@ -19,6 +21,8 @@ export interface CourseViewModel {
   progress: CourseProgress;
   error: Error | null;
   progressError: Error | null;
+  startError: Error | null;
+  startState: ActionState;
   reload(): Promise<void>;
 
   startCourse(): Promise<void>;
@@ -29,13 +33,7 @@ export function useCourseViewModel(slug: string | undefined): CourseViewModel {
 
   const queryClient = useQueryClient();
 
-  const query = useQuery({
-    queryKey: ["course", slug],
-    enabled: Boolean(slug),
-    queryFn: () => {
-      return loadCourse({ services, slug });
-    },
-  });
+  const query = useCourseContentQuery({ services, slug });
 
   const progressQueries = useCourseProgressQueries(services);
 
@@ -45,10 +43,10 @@ export function useCourseViewModel(slug: string | undefined): CourseViewModel {
     course: query.data?.course,
   });
 
-  const state: CourseViewModelState = getQueryViewState(query);
+  const startAction = useCourseStartAction({ action: enrollInCourse });
 
   return {
-    state,
+    state: getQueryViewState(query),
     data: query.data,
     started: getCourseStarted({ records: progressQueries.enrollments, slug }),
     progress: getCourseProgress({
@@ -58,9 +56,11 @@ export function useCourseViewModel(slug: string | undefined): CourseViewModel {
     }),
     error: query.error,
     progressError: progressQueries.error,
+    startError: startAction.error,
+    startState: startAction.state,
     reload: async (): Promise<void> => {
       await query.refetch();
     },
-    startCourse: enrollInCourse,
+    startCourse: startAction.start,
   };
 }

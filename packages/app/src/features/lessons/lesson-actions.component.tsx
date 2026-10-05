@@ -5,11 +5,14 @@ import {
   UIInlineActions,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import type { ActionState } from "../../types/action-state.type";
 
 export type LessonActionsProps = {
   completed: boolean;
   bookmarked: boolean;
+  bookmarkActionState: ActionState;
   onComplete(value: boolean): Promise<void>;
+  progressActionState: ActionState;
 
   onBookmark(): Promise<void>;
 };
@@ -17,20 +20,38 @@ export type LessonActionsProps = {
 export function LessonActions(props: LessonActionsProps) {
   const { t } = useTranslation();
 
+  let bookmarkLabel = props.bookmarked ? t("lesson.saved") : t("lesson.save");
+
+  if (props.bookmarkActionState === "saving") {
+    bookmarkLabel = t("common.saving");
+  }
+
+  let progressLabel = props.completed ? t("lesson.completed") : t("lesson.complete");
+
+  if (props.progressActionState === "saving") {
+    progressLabel = t("common.saving");
+  }
+
   return (
     <UIInlineActions>
-      <UIButton variant="outlined" startIcon={<UIBookmarkBorderIcon />} onClick={props.onBookmark}>
-        {props.bookmarked ? t("lesson.saved") : t("lesson.save")}
+      <UIButton
+        disabled={props.bookmarkActionState === "saving"}
+        variant="outlined"
+        startIcon={<UIBookmarkBorderIcon />}
+        onClick={props.onBookmark}
+      >
+        {bookmarkLabel}
       </UIButton>
 
       <UIButton
         variant="contained"
+        disabled={props.progressActionState === "saving"}
         startIcon={<UICheckCircleIcon />}
         onClick={() => {
           return props.onComplete(!props.completed);
         }}
       >
-        {props.completed ? t("lesson.completed") : t("lesson.complete")}
+        {progressLabel}
       </UIButton>
     </UIInlineActions>
   );

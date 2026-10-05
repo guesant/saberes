@@ -1,23 +1,24 @@
 import { UIContentGroup, UISelectableSurface, UITypography } from "@guesant/saberes-ui";
 import type { PreferenceKey } from "./preference-key.type";
+import type { ReminderPreference } from "@guesant/saberes-application";
 
 export interface PreferenceOptionProps {
   preferenceKey: PreferenceKey;
   title: string;
   description: string;
-  value: boolean;
+  value: boolean | ReminderPreference;
   onToggle(key: PreferenceKey): Promise<void>;
 }
 
 export function PreferenceOption(props: PreferenceOptionProps) {
   return (
     <UISelectableSurface
-      aria-pressed={props.value}
+      aria-pressed={props.value === true || props.value === "yes"}
       interactive
       onClick={() => {
         return props.onToggle(props.preferenceKey);
       }}
-      selected={props.value}
+      selected={props.value === true || props.value === "yes"}
     >
       <UIContentGroup variant="content">
         <UITypography variant="h6">{props.title}</UITypography>

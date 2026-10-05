@@ -3,7 +3,7 @@ import { App } from "../app.component";
 
 export function AppThemeProvider() {
   return (
-    <UIThemeProvider theme={theme}>
+    <UIThemeProvider defaultMode="system" disableTransitionOnChange theme={theme}>
       <UICssBaseline />
 
       <App />

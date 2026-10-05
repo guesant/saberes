@@ -2,6 +2,13 @@ import type { ApplicationPorts } from "@guesant/saberes-application";
 
 export type ProgressWritePorts = Pick<
   ApplicationPorts,
+  | "classifyStudyCapture"
+  | "completeStudyCapture"
+  | "postponeStudyCapture"
+  | "archiveStudyCapture"
+  | "restoreStudyCapture"
+  | "undoStudyCapture"
+  | "createCalendarEntry"
   | "recordAttempt"
   | "saveAttempt"
   | "saveSession"

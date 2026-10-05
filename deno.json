@@ -62,6 +62,8 @@
     "e2e": "playwright test --config .config/playwright.config.ts",
     "layout:check": "playwright test --config .config/playwright.config.ts packages/app/tests/e2e/layout-integrity.spec.ts --grep @layout",
     "visual:check": "playwright test --config .config/playwright.config.ts packages/app/tests/e2e --grep @visual",
+    "mvp2:visual:check": "playwright test --config .config/playwright.config.ts packages/app/tests/e2e/mvp2-test002.spec.ts --grep @mvp2-test002",
+    "mvp2:review:check": "playwright test --config .config/playwright.config.ts packages/app/tests/e2e/mvp2-review-001.spec.ts --grep @mvp2-review-001",
     "visual:audit": "playwright test --config .config/playwright.config.ts packages/app/tests/e2e/visual-audit.spec.ts --grep @visual-audit",
     "visual:update": "playwright test --config .config/playwright.config.ts packages/app/tests/e2e/layout-integrity.spec.ts --grep @visual --update-snapshots",
     "lighthouse": "lhci autorun --config .config/lighthouserc.json",

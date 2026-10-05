@@ -3,6 +3,8 @@ export * from "./add-study-points-input.interface";
 export * from "./add-study-points-result.interface";
 export * from "./attempt.type";
 export * from "./catalog-read-model.model";
+export * from "./create-calendar-entry-command-input.interface";
+export * from "./list-calendar-entries-query-input.interface";
 export * from "./content-snapshot-validation-input.interface";
 export * from "./content-snapshot-validation-issue.interface";
 export * from "./content-snapshot-validation-result.type";

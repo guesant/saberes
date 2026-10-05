@@ -4,7 +4,7 @@ export function getDefaultPreferences(): PreferencesQueryData {
   return {
     gamification: true,
     recommendations: true,
-    reminders: false,
+    reminders: "not-now",
     richContent: true,
   };
 }

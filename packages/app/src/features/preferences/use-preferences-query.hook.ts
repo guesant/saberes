@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { normalizeReminderSetting } from "./normalize-reminder-setting.function";
 import type { PreferencesQueryData } from "./preferences-query-data.interface";
 import type { ApplicationServices } from "@guesant/saberes-application";
 
@@ -17,7 +18,7 @@ export function usePreferencesQuery(services: ApplicationServices) {
         recommendations: settings[0]?.value !== false,
         gamification: settings[1]?.value !== false,
         richContent: settings[2]?.value !== false,
-        reminders: settings[3]?.value === true,
+        reminders: normalizeReminderSetting(settings[3]),
       };
     },
   });

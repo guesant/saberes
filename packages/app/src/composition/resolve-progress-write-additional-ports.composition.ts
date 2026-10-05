@@ -1,5 +1,6 @@
-import { applicationDependencyTokens } from "./application-dependency-tokens.config";
-import { resolvePort } from "./resolve-port.composition";
+import { resolveApplicationPort } from "./resolve-application-port.composition";
+import { resolveProgressWritePersonalCapturePorts } from "./resolve-progress-write-personal-capture-ports.composition";
+import { resolveProgressWriteSecondaryPorts } from "./resolve-progress-write-secondary-ports.composition";
 import type { ApplicationPorts } from "@guesant/saberes-application";
 import type { Container } from "inversify";
 
@@ -7,6 +8,13 @@ export function resolveProgressWriteAdditionalPorts(
   container: Container,
 ): Pick<
   ApplicationPorts,
+  | "classifyStudyCapture"
+  | "completeStudyCapture"
+  | "postponeStudyCapture"
+  | "archiveStudyCapture"
+  | "restoreStudyCapture"
+  | "undoStudyCapture"
+  | "createCalendarEntry"
   | "saveAcademicDiscipline"
   | "deleteAcademicDiscipline"
   | "saveFocusSession"
@@ -14,25 +22,8 @@ export function resolveProgressWriteAdditionalPorts(
   | "savePersonalWorkspace"
 > {
   return {
-    saveAcademicDiscipline: resolvePort<ApplicationPorts["saveAcademicDiscipline"]>(
-      container,
-      applicationDependencyTokens.saveAcademicDiscipline,
-    ),
-    deleteAcademicDiscipline: resolvePort<ApplicationPorts["deleteAcademicDiscipline"]>(
-      container,
-      applicationDependencyTokens.deleteAcademicDiscipline,
-    ),
-    saveFocusSession: resolvePort<ApplicationPorts["saveFocusSession"]>(
-      container,
-      applicationDependencyTokens.saveFocusSession,
-    ),
-    saveStudyGoal: resolvePort<ApplicationPorts["saveStudyGoal"]>(
-      container,
-      applicationDependencyTokens.saveStudyGoal,
-    ),
-    savePersonalWorkspace: resolvePort<ApplicationPorts["savePersonalWorkspace"]>(
-      container,
-      applicationDependencyTokens.savePersonalWorkspace,
-    ),
+    ...resolveProgressWritePersonalCapturePorts(container),
+    createCalendarEntry: resolveApplicationPort(container, "createCalendarEntry"),
+    ...resolveProgressWriteSecondaryPorts(container),
   };
 }

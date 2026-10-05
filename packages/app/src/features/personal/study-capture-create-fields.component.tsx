@@ -1,35 +1,25 @@
-import { UIButton, UIContentGroup, UITextField } from "@guesant/saberes-ui";
-import { PersonalContentKeyField } from "./personal-content-key-field.component";
+import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { StudyCaptureCreateInputs } from "./study-capture-create-inputs.component";
 import type { StudyCaptureCreateFieldsProps } from "./study-capture-create-fields-props.interface";
 
 export function StudyCaptureCreateFields(props: StudyCaptureCreateFieldsProps) {
   return (
     <UIContentGroup variant="content">
-      <UITextField
-        label="Título da pendência"
-        onChange={(event) => {
-          return props.onTitleChange(event.target.value);
-        }}
-        value={props.title}
+      <StudyCaptureCreateInputs
+        contentKey={props.contentKey}
+        description={props.description}
+        dueDate={props.dueDate}
+        onContentKeyChange={props.onContentKeyChange}
+        onDescriptionChange={props.onDescriptionChange}
+        onDueDateChange={props.onDueDateChange}
+        onTitleChange={props.onTitleChange}
+        title={props.title}
       />
-      <UITextField
-        label="Descrição"
-        multiline
-        onChange={(event) => {
-          return props.onDescriptionChange(event.target.value);
-        }}
-        value={props.description}
-      />
-      <PersonalContentKeyField onChange={props.onContentKeyChange} value={props.contentKey} />
-      <UITextField
-        label="Prazo (opcional)"
-        onChange={(event) => {
-          return props.onDueDateChange(event.target.value);
-        }}
-        type="date"
-        value={props.dueDate}
-      />
-      <UIButton onClick={props.onCreate} variant="outlined">
+      <UIButton
+        disabled={!props.title.trim() || !props.description.trim()}
+        onClick={props.onCreate}
+        variant="outlined"
+      >
         Salvar pendência
       </UIButton>
     </UIContentGroup>

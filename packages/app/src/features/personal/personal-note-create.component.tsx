@@ -30,16 +30,18 @@ export function PersonalNoteCreate(props: PersonalNoteCreateProps) {
       <UITextField
         label="Título da nota"
         onChange={(event) => { return setTitle(event.target.value); }}
+        required
         value={title}
       />
       <UITextField
         label="Texto da nota"
         multiline
         onChange={(event) => { return setBody(event.target.value); }}
+        required
         value={body}
       />
       <PersonalContentKeyField onChange={setContentKey} value={contentKey} />
-      <UIButton onClick={create} variant="outlined">
+      <UIButton disabled={!title.trim() || !body.trim()} onClick={create} variant="outlined">
         Salvar nota
       </UIButton>
     </UIContentGroup>

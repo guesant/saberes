@@ -93,6 +93,7 @@ const progressStoreNames = [...studyStores, "attempts", "sessions", "settings"];
 const personalWorkspaceSettingKey = "personal-workspace";
 
 const emptyPersonalWorkspace: PersonalWorkspace = {
+  activities: [],
   notes: [],
   checklists: [],
   captures: [],
@@ -485,6 +486,10 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
 
     return {
       ...setting.value,
+      activities: Array.isArray(setting.value.activities) ? setting.value.activities : [],
+      calendarEntries: Array.isArray(setting.value.calendarEntries)
+        ? setting.value.calendarEntries
+        : [],
       references: setting.value.references.map((reference: PersonalReference) => {
         return {
           ...reference,

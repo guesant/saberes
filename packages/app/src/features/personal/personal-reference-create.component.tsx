@@ -1,6 +1,6 @@
-import { UIButton, UIContentGroup, UITextField } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
 import { useState } from "react";
-import { PersonalContentKeyField } from "./personal-content-key-field.component";
+import { PersonalReferenceCreateFields } from "./personal-reference-create-fields.component";
 
 export interface PersonalReferenceCreateProps {
   onCreate(title: string, source: string, contentKey?: string): Promise<void>;
@@ -27,22 +27,15 @@ export function PersonalReferenceCreate(props: PersonalReferenceCreateProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UITextField
-        label="Título da referência"
-        onChange={(event) => {
-          return setTitle(event.target.value);
-        }}
-        value={title}
+      <PersonalReferenceCreateFields
+        contentKey={contentKey}
+        onContentKeyChange={setContentKey}
+        onSourceChange={setSource}
+        onTitleChange={setTitle}
+        source={source}
+        title={title}
       />
-      <UITextField
-        label="Fonte ou endereço"
-        onChange={(event) => {
-          return setSource(event.target.value);
-        }}
-        value={source}
-      />
-      <PersonalContentKeyField onChange={setContentKey} value={contentKey} />
-      <UIButton onClick={create} variant="outlined">
+      <UIButton disabled={!title.trim() || !source.trim()} onClick={create} variant="outlined">
         Salvar referência
       </UIButton>
     </UIContentGroup>

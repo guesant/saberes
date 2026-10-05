@@ -7,6 +7,7 @@ import { useSavePersonalWorkspaceMutation } from "./use-save-personal-workspace-
 import type { PersonalWorkspaceViewModel } from "./personal-workspace-view-model.interface";
 
 const emptyWorkspace: PersonalWorkspace = {
+  activities: [],
   notes: [],
   checklists: [],
   captures: [],

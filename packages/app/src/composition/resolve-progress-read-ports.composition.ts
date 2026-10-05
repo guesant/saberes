@@ -13,6 +13,7 @@ export function resolveProgressReadPorts(
   | "listFocusSessions"
   | "listStudyGoals"
   | "getPersonalWorkspace"
+  | "listCalendarEntries"
   | "getSession"
   | "getSetting"
   | "listEnrollments"

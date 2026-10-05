@@ -1,50 +1,29 @@
-import { UIContentGroup, UIList, UITypography } from "@guesant/saberes-ui";
-import { getOrderedStudyCaptures } from "./get-ordered-study-captures.function";
-import { PersonalArchivedList } from "./personal-archived-list.component";
-import { StudyCaptureItem } from "./study-capture-item.component";
-import type { StudyCaptureContentInput } from "./study-capture-content-input.interface";
-import type { PersonalWorkspace } from "@guesant/saberes-application";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { useState } from "react";
+import { PersonalCaptureFilterControls } from "./personal-capture-filter-controls.component";
+import { PersonalCapturesContent } from "./personal-captures-content.component";
+import type { PersonalCaptureFilter } from "./personal-capture-filter.type";
+import type { PersonalCapturesContentProps } from "./personal-captures-content-props.interface";
 
-export interface PersonalCapturesSectionProps {
-  workspace: PersonalWorkspace;
-  onUpdateCompletion(id: string): Promise<void>;
-
-  onUpdateArchive(id: string): Promise<void>;
-
-  onDelete(id: string): Promise<void>;
-
-  onUpdateContent(input: StudyCaptureContentInput): Promise<void>;
-
-  onRestore(id: string): Promise<void>;
-}
+export interface PersonalCapturesSectionProps
+  extends Omit<PersonalCapturesContentProps, "filter"> {}
 
 export function PersonalCapturesSection(props: PersonalCapturesSectionProps) {
+  const [filter, setFilter] = useState<PersonalCaptureFilter>("active");
+
   return (
     <UIContentGroup variant="section">
       <UITypography variant="h5">Pendências</UITypography>
-      <UIList>
-        {getOrderedStudyCaptures(props.workspace.captures)
-          .filter((capture) => { return !capture.archived; })
-          .map((capture) => {
-            return (
-              <StudyCaptureItem
-                capture={capture}
-                key={capture.id}
-                onDelete={props.onDelete}
-                onUpdateContent={props.onUpdateContent}
-                onUpdateArchive={props.onUpdateArchive}
-                onUpdateCompletion={props.onUpdateCompletion}
-              />
-            );
-          })}
-      </UIList>
-      {props.workspace.captures.some((capture) => { return capture.archived; }) ? (
-        <PersonalArchivedList
-          items={props.workspace.captures.filter((capture) => { return capture.archived; })}
-          onRestore={props.onRestore}
-          title="Arquivadas"
-        />
-      ) : null}
+      <PersonalCaptureFilterControls onChange={setFilter} value={filter} />
+      <PersonalCapturesContent
+        filter={filter}
+        onDelete={props.onDelete}
+        onRestore={props.onRestore}
+        onUpdateArchive={props.onUpdateArchive}
+        onUpdateCompletion={props.onUpdateCompletion}
+        onUpdateContent={props.onUpdateContent}
+        workspace={props.workspace}
+      />
     </UIContentGroup>
   );
 }

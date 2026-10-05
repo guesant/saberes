@@ -1,24 +1,49 @@
 import {
+  ArchiveStudyCaptureAdapter,
+  ClassifyStudyCaptureAdapter,
+  CompleteStudyCaptureAdapter,
+  PostponeStudyCaptureAdapter,
   SavePersonalWorkspaceAdapter,
-  type ProgressStorageContract,
+  RestoreStudyCaptureAdapter,
+  UndoStudyCaptureAdapter,
 } from "@guesant/saberes-adapter-data-v1";
 import { applicationDependencyTokens } from "./application-dependency-tokens.config";
+import { createProgressStorageAdapterFactory } from "./create-progress-storage-adapter-factory.composition";
 import { registerPortFactories } from "./register-port-factories.composition";
-import { resolvePort } from "./resolve-port.composition";
+import { registerProgressWriteCalendarEntryPort } from "./register-progress-write-calendar-entry-port.composition";
 import type { Container } from "inversify";
 
 export function registerProgressWritePersonalWorkspacePorts(container: Container): void {
   registerPortFactories(container, [
     [
+      applicationDependencyTokens.classifyStudyCapture,
+      createProgressStorageAdapterFactory(container, ClassifyStudyCaptureAdapter),
+    ],
+    [
       applicationDependencyTokens.savePersonalWorkspace,
-      () => {
-        return new SavePersonalWorkspaceAdapter(
-          resolvePort<ProgressStorageContract>(
-            container,
-            applicationDependencyTokens.progressStore,
-          ),
-        );
-      },
+      createProgressStorageAdapterFactory(container, SavePersonalWorkspaceAdapter),
+    ],
+    [
+      applicationDependencyTokens.completeStudyCapture,
+      createProgressStorageAdapterFactory(container, CompleteStudyCaptureAdapter),
+    ],
+    [
+      applicationDependencyTokens.postponeStudyCapture,
+      createProgressStorageAdapterFactory(container, PostponeStudyCaptureAdapter),
+    ],
+    [
+      applicationDependencyTokens.archiveStudyCapture,
+      createProgressStorageAdapterFactory(container, ArchiveStudyCaptureAdapter),
+    ],
+    [
+      applicationDependencyTokens.restoreStudyCapture,
+      createProgressStorageAdapterFactory(container, RestoreStudyCaptureAdapter),
+    ],
+    [
+      applicationDependencyTokens.undoStudyCapture,
+      createProgressStorageAdapterFactory(container, UndoStudyCaptureAdapter),
     ],
   ]);
+
+  registerProgressWriteCalendarEntryPort(container);
 }

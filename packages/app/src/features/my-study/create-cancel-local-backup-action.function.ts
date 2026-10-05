@@ -7,6 +7,6 @@ export function createCancelLocalBackupAction(context: LocalBackupActionContext)
 
     context.setError(null);
 
-    context.setState("idle");
+    context.setState("cancelled");
   };
 }

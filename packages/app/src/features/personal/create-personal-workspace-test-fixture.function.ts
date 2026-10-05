@@ -5,6 +5,7 @@ import { addStudyChecklist } from "./add-study-checklist.function";
 import type { PersonalWorkspace } from "@guesant/saberes-application";
 
 const emptyWorkspace: PersonalWorkspace = {
+  activities: [],
   notes: [],
   checklists: [],
   captures: [],

@@ -9,4 +9,9 @@ describe("tema da plataforma", () => {
     expect(theme.palette.secondary.main)
       .toBe("#e59b2f");
   });
+
+  it("declara esquema escuro para respeitar a preferência do sistema", () => {
+    expect(Object.hasOwn(theme, "colorSchemes"))
+      .toBe(true);
+  });
 });

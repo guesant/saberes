@@ -104,6 +104,24 @@ describe("progresso local Dexie", () => {
       .resolves.toEqual({});
   });
 
+  it("normaliza um workspace legado sem atividades classificadas", async () => {
+    await progressDb.saveSetting("personal-workspace", {
+      notes: [],
+      checklists: [],
+      captures: [],
+      references: [],
+    });
+
+    await expect(progressDb.getPersonalWorkspace())
+      .resolves.toMatchObject({
+        activities: [],
+        notes: [],
+        checklists: [],
+        captures: [],
+        references: [],
+      });
+  });
+
   it("recupera uma sessão interrompida após reabrir o banco local", async () => {
     await progressDb.saveSession({
       id: "session-interrupted",

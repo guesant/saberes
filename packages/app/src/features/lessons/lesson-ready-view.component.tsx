@@ -1,23 +1,22 @@
-import {
-  UIButton,
-  UIContentGroup,
-  UIDivider,
-  UIPaper,
-  UISplitContentRow,
-  UITypography,
-} from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
-import { LessonActions } from "./lesson-actions.component";
+import { UIPaper } from "@guesant/saberes-ui";
+import { LessonActionFeedback } from "./lesson-action-feedback.component";
 import { LessonEditorialMetadataPanel } from "./lesson-editorial-metadata-panel.component";
+import { LessonReadyFooter } from "./lesson-ready-footer.component";
+import { LessonReadyHeader } from "./lesson-ready-header.component";
 import { LessonSectionNavigation } from "./lesson-section-navigation.component";
 import { LessonSections } from "./lesson-sections.component";
 import { useLessonResume } from "./use-lesson-resume.hook";
+import type { ActionState } from "../../types/action-state.type";
 import type { LessonReadModel } from "@guesant/saberes-application";
 
 export type LessonReadyViewProps = {
   data: LessonReadModel;
   completed: boolean;
   bookmarked: boolean;
+  bookmarkActionError: Error | null;
+  bookmarkActionState: ActionState;
+  progressActionError: Error | null;
+  progressActionState: ActionState;
   sectionIndex: number | undefined;
   onComplete(value: boolean): Promise<void>;
 
@@ -33,26 +32,24 @@ export function LessonReadyView(props: LessonReadyViewProps) {
 
   useLessonResume({ sections: data.sections, sectionIndex: props.sectionIndex });
 
-  const { t } = useTranslation();
-
   return (
     <>
-      <UISplitContentRow>
-        <UIContentGroup variant="content">
-          <UITypography variant="overline">{t("lesson.label")}</UITypography>
+      <LessonReadyHeader
+        data={data}
+        completed={completed}
+        bookmarked={bookmarked}
+        bookmarkActionState={props.bookmarkActionState}
+        onComplete={onComplete}
+        onBookmark={onBookmark}
+        progressActionState={props.progressActionState}
+      />
 
-          <UITypography variant="h3">{String(data.lesson.title)}</UITypography>
-
-          <UITypography color="text.secondary">{String(data.lesson.intro || "")}</UITypography>
-        </UIContentGroup>
-
-        <LessonActions
-          completed={completed}
-          bookmarked={bookmarked}
-          onComplete={onComplete}
-          onBookmark={onBookmark}
-        />
-      </UISplitContentRow>
+      <LessonActionFeedback
+        bookmarkError={props.bookmarkActionError}
+        bookmarkState={props.bookmarkActionState}
+        progressError={props.progressActionError}
+        progressState={props.progressActionState}
+      />
 
       <LessonEditorialMetadataPanel data={data} />
 
@@ -68,9 +65,7 @@ export function LessonReadyView(props: LessonReadyViewProps) {
         <LessonSections sections={data.sections} onQuestion={onQuestion} />
       </UIPaper>
 
-      <UIDivider />
-
-      <UIButton variant="contained">{t("lesson.practice")}</UIButton>
+      <LessonReadyFooter />
     </>
   );
 }

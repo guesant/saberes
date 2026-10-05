@@ -33,6 +33,8 @@ export function CourseView() {
       <CourseReadyView
         data={viewModel.data}
         progress={viewModel.progress}
+        startError={viewModel.startError}
+        startState={viewModel.startState}
         started={viewModel.started}
         onStart={viewModel.startCourse}
       />

@@ -1,11 +1,12 @@
 import { UICard, UICardContent, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import { ActionFeedback } from "../../components/action-feedback.component";
 import { QuestionBookmarkAction } from "./question-bookmark-action.component";
 import { QuestionBookmarkError } from "./question-bookmark-error.component";
 import { QuestionHeader } from "./question-header.component";
 import { QuestionPriorKnowledge } from "./question-prior-knowledge.component";
 import { QuestionReadyAnswerForm } from "./question-ready-answer-form.component";
-import { QuestionSubmissionFeedback } from "./question-submission-feedback.component";
+import { QuestionReadyResult } from "./question-ready-result.component";
 import type { QuestionReadyContentProps } from "./question-ready-content-props.type";
 
 export function QuestionReadyContent(props: QuestionReadyContentProps) {
@@ -35,17 +36,18 @@ export function QuestionReadyContent(props: QuestionReadyContentProps) {
           onAnswerChange={props.onAnswerChange}
           onConfidenceChange={props.onConfidenceChange}
           onSubmit={props.onSubmit}
+          submitting={props.submissionState === "saving"}
         />
 
-        {result !== null ? (
-          <QuestionSubmissionFeedback
-            data={data}
-            onDiagnose={onDiagnose}
-            onContinue={props.onContinue}
-            onRetry={onRetry}
-            result={result}
-          />
-        ) : null}
+        <ActionFeedback error={props.submissionError} state={props.submissionState} />
+
+        <QuestionReadyResult
+          data={data}
+          onDiagnose={onDiagnose}
+          onContinue={props.onContinue}
+          onRetry={onRetry}
+          result={result}
+        />
       </UICardContent>
     </UICard>
   );

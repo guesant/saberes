@@ -3,6 +3,7 @@ import { updateStudyChecklistContent } from "./update-study-checklist-content.fu
 import type { PersonalWorkspace } from "@guesant/saberes-application";
 
 const workspace: PersonalWorkspace = {
+  activities: [],
   captures: [],
   checklists: [
     {
