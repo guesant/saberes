@@ -1,3 +1,4 @@
+import type { SavePersonalLensInput } from "./save-personal-lens-input.interface";
 import type { StudyCaptureContentInput } from "./study-capture-content-input.interface";
 import type { StudyCaptureCreateInput } from "./study-capture-create-input.interface";
 import type { UpdatePersonalNoteContentActionInput } from "./update-personal-note-content-action-input.interface";
@@ -55,6 +56,8 @@ export interface PersonalWorkspaceViewModel {
   updateCaptureContent(input: StudyCaptureContentInput): Promise<void>;
 
   updateReferenceContent(id: string, title: string, source: string): Promise<void>;
+
+  saveLens(input: SavePersonalLensInput): Promise<void>;
 
   createRelation(
     kind: PersonalRelationKind,
