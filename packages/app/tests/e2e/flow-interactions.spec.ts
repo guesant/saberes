@@ -9,10 +9,6 @@ test("o catálogo permite buscar, filtrar e salvar um filtro local", async ({ pa
   await page.getByText("Filtrar catálogo", { exact: true })
     .click();
 
-  await page.locator("summary")
-    .filter({ hasText: "Filtros salvos" })
-    .click();
-
   await page.getByPlaceholder("Encontrar curso, mapa, plano ou conteúdo")
     .fill("conceito");
 
@@ -22,6 +18,11 @@ test("o catálogo permite buscar, filtrar e salvar um filtro local", async ({ pa
   await page.locator('input[type="number"]')
     .first()
     .fill("2027");
+
+  await page.keyboard.press("Escape");
+
+  await page.getByRole("button", { name: "Filtros salvos" })
+    .click();
 
   await page.getByRole("textbox", { name: "Nome do filtro" })
     .fill("Filtro de fluxo");
@@ -35,10 +36,23 @@ test("o catálogo permite buscar, filtrar e salvar um filtro local", async ({ pa
   await expect(page.getByRole("button", { name: "Excluir" }))
     .toBeVisible();
 
+  await page.getByRole("button", { name: "Editar" })
+    .click();
+
+  await page.getByRole("textbox", { name: "Nome do filtro" })
+    .last()
+    .fill("Filtro de fluxo atualizado");
+
+  await page.getByRole("button", { name: "Atualizar filtro" })
+    .click();
+
+  await expect(page.getByRole("button", { name: "Filtro de fluxo atualizado" }))
+    .toBeVisible();
+
   await page.getByRole("button", { name: "Excluir" })
     .click();
 
-  await expect(page.getByRole("button", { name: "Filtro de fluxo" }))
+  await expect(page.getByRole("button", { name: "Filtro de fluxo atualizado" }))
     .toHaveCount(0);
 });
 
@@ -261,8 +275,11 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
 
   await validateRouteSettled(page);
 
+  await page.getByRole("button", { name: "Nova disciplina" })
+    .click();
+
   await page.locator("summary")
-    .filter({ hasText: "Nova disciplina" })
+    .filter({ hasText: "Adicionar uma avaliação (opcional)" })
     .click();
 
   await page.getByRole("textbox", { name: "Nome", exact: true })
@@ -278,6 +295,18 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
     .click();
 
   await expect(page.getByText("Disciplina de fluxo"))
+    .toBeVisible();
+
+  await page.getByRole("button", { name: "Editar" })
+    .click();
+
+  await page.getByRole("textbox", { name: "Nome", exact: true })
+    .fill("Disciplina editada");
+
+  await page.getByRole("button", { name: "Salvar disciplina" })
+    .click();
+
+  await expect(page.getByText("Disciplina editada"))
     .toBeVisible();
 
   await page.goto("/preferencias", { waitUntil: "networkidle" });
@@ -308,6 +337,26 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
 
   await expect(page.getByText("Compromisso de fluxo"))
     .toBeVisible();
+
+  await page.getByRole("button", { name: "Editar" })
+    .click();
+
+  const calendarDialog = page.getByRole("dialog");
+
+  await calendarDialog.getByRole("textbox", { name: "Título", exact: true })
+    .fill("Compromisso editado");
+
+  await calendarDialog.getByRole("button", { name: "Editar" })
+    .click();
+
+  await expect(page.getByText("Compromisso editado"))
+    .toBeVisible();
+
+  await page.getByRole("button", { name: "Excluir" })
+    .click();
+
+  await expect(page.getByText("Compromisso editado"))
+    .toHaveCount(0);
 
   await page.getByRole("button", { name: "Semana" })
     .click();

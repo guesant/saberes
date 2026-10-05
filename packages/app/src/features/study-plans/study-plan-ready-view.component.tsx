@@ -1,7 +1,7 @@
 import { UIContentGroup } from "@guesant/saberes-ui";
 import { createCompletedStepSet } from "./create-completed-step-set.function";
 import { getStudyPlanProgress } from "./get-study-plan-progress.function";
-import { StudyPlanCustomizationDisclosure } from "./study-plan-customization-disclosure.component";
+import { StudyPlanCustomizationDialog } from "./study-plan-customization-dialog.component";
 import { StudyPlanEditorialNotice } from "./study-plan-editorial-notice.component";
 import { StudyPlanProgressSummary } from "./study-plan-progress-summary.component";
 import { StudyPlanReadyHeader } from "./study-plan-ready-header.component";
@@ -47,12 +47,14 @@ export function StudyPlanReadyView(props: StudyPlanReadyViewProps) {
         nextStep={props.nextStep}
       />
 
-      <StudyPlanCustomizationDisclosure
+      <StudyPlanCustomizationDialog
         state={props.localState}
         onTogglePause={props.onTogglePause}
         onStartDateChange={props.onStartDateChange}
         onTargetDateChange={props.onTargetDateChange}
         onDailyMinutesChange={props.onDailyMinutesChange}
+        title="Personalizar plano de estudo"
+        triggerLabel="Personalizar plano"
       />
 
       <UIContentGroup variant="content">

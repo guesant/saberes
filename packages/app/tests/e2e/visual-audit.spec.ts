@@ -29,11 +29,7 @@ viewports.forEach((viewport) => {
         await page.goto(scenario.route, { waitUntil: "networkidle" });
 
         if (scenario.name === "saved-filters") {
-          await page.getByText("Filtrar catálogo", { exact: true })
-            .click();
-
-          await page.locator("summary")
-            .filter({ hasText: "Filtros salvos" })
+          await page.getByRole("button", { name: "Filtros salvos" })
             .click();
         }
 

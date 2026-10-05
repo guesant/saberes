@@ -5,4 +5,6 @@ export type CatalogSavedFilterListProps = {
   onDelete(id: string): Promise<void>;
 
   onSelect(filter: SavedCatalogFilter): void;
+
+  onUpdate(filter: SavedCatalogFilter, name: string): Promise<void>;
 };

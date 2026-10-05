@@ -88,6 +88,10 @@ export * from "./divider.component";
 
 export * from "./disclosure.component";
 
+export * from "./dialog-props.interface";
+
+export * from "./dialog.component";
+
 export * from "./download-file-button.component";
 
 export * from "./download-file-button-props.type";

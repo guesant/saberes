@@ -10,6 +10,9 @@ export type CatalogSavedFiltersProps = {
   onSave(name: string): Promise<void>;
 
   onSelect(filter: SavedCatalogFilter): void;
+
+  onUpdate(filter: SavedCatalogFilter, name: string): Promise<void>;
+
   saveError: Error | null;
   saving: boolean;
   state: "loading" | "error" | "ready";

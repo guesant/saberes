@@ -12,6 +12,7 @@ export function CatalogSavedFilterList(props: CatalogSavedFilterListProps) {
             key={filter.id}
             onDelete={props.onDelete}
             onSelect={props.onSelect}
+            onUpdate={props.onUpdate}
           />
         );
       })}

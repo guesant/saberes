@@ -1,6 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { createSavedCatalogFilter } from "./create-saved-catalog-filter.function";
+import { useCatalogSavedFilterDeleteAction } from "./use-catalog-saved-filter-delete-action.hook";
+import { useCatalogSavedFilterUpdateAction } from "./use-catalog-saved-filter-update-action.hook";
 import type { CatalogSavedFilterActions } from "./catalog-saved-filter-actions.interface";
 import type { CatalogFilters } from "@guesant/saberes-application";
 
@@ -8,6 +10,10 @@ export function useCatalogSavedFilterActions(filters: CatalogFilters): CatalogSa
   const services = useAppServices();
 
   const queryClient = useQueryClient();
+
+  const updateAction = useCatalogSavedFilterUpdateAction();
+
+  const deleteAction = useCatalogSavedFilterDeleteAction();
 
   const saveMutation = useMutation({
     mutationFn: async (name: string): Promise<void> => {
@@ -26,19 +32,11 @@ export function useCatalogSavedFilterActions(filters: CatalogFilters): CatalogSa
     },
   });
 
-  const deleteMutation = useMutation({
-    mutationFn: (id: string): Promise<void> => {
-      return services.progress.deleteSavedCatalogFilter.execute(id);
-    },
-    onSuccess: async (): Promise<void> => {
-      await queryClient.invalidateQueries({ queryKey: ["catalog", "saved-filters"] });
-    },
-  });
-
   return {
-    deleteFilter: (id: string): Promise<void> => { return deleteMutation.mutateAsync(id); },
-    saveError: saveMutation.error ?? null,
+    deleteFilter: deleteAction.delete,
+    saveError: saveMutation.error ?? updateAction.error ?? deleteAction.error,
     saveFilter: (name: string): Promise<void> => { return saveMutation.mutateAsync(name); },
-    saving: saveMutation.isPending,
+    saving: saveMutation.isPending || updateAction.pending || deleteAction.pending,
+    updateFilter: updateAction.update,
   };
 }

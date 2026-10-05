@@ -29,6 +29,7 @@ export function CatalogSavedFiltersContent(props: CatalogSavedFiltersContentProp
           filters={props.filters}
           onDelete={props.onDelete}
           onSelect={props.onSelect}
+          onUpdate={props.onUpdate}
         />
       ) : null}
 

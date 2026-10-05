@@ -31,6 +31,7 @@ export function createPersonalWorkspaceActions(
   | "updateCaptureContent"
   | "updateReferenceContent"
   | "saveLens"
+  | "deleteLens"
 > {
   return {
     ...createPersonalWorkspaceCreationActions(input),

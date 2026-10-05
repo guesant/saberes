@@ -17,13 +17,9 @@ export function PersonalKnowledgeViewsSection(props: PersonalKnowledgeViewsSecti
       </UITypography>
       <PersonalKnowledgeViewControls
         lenses={props.workspace.lenses ?? []}
+        onDeleteLens={props.onDeleteLens}
         onLensSelect={viewState.selectLens}
-        onSaveLens={async (): Promise<void> => {
-          await props.onSaveLens({
-            name: viewState.view === "tree" ? "Minha árvore" : "Meu board",
-            view: viewState.view,
-          });
-        }}
+        onSaveLens={props.onSaveLens}
         onViewChange={viewState.selectView}
         view={viewState.view}
       />

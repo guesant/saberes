@@ -13,5 +13,9 @@ export interface CalendarViewModel {
 
   createEntry(input: CalendarEntryFormInput): Promise<void>;
 
+  deleteEntry(id: string): Promise<void>;
+
+  updateEntry(id: string, input: CalendarEntryFormInput): Promise<void>;
+
   reload(): Promise<void>;
 }

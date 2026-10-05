@@ -1,6 +1,6 @@
-import { UIContentGroup, UIDisclosure, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { GoalForm } from "./goal-form.component";
+import { GoalCreateDialog } from "./goal-create-dialog.component";
 import { GoalList } from "./goal-list.component";
 import { GoalSaveError } from "./goal-save-error.component";
 import type { UseStudyGoalsViewModel } from "./study-goals.view-model";
@@ -19,14 +19,14 @@ export function GoalsReadyView(props: GoalsReadyViewProps) {
         <UITypography variant="h2">{t("goals.title")}</UITypography>
         <UITypography color="text.secondary">{t("goals.description")}</UITypography>
       </UIContentGroup>
-      <UIDisclosure summary={t("goals.newGoal")}>
-        <GoalForm
-          existingTitles={props.viewModel.goals.map((goal) => {
-            return goal.title;
-          })}
-          onCreate={props.viewModel.create}
-        />
-      </UIDisclosure>
+      <GoalCreateDialog
+        existingTitles={props.viewModel.goals.map((goal) => {
+          return goal.title;
+        })}
+        onCreate={props.viewModel.create}
+        title={t("goals.newGoal")}
+        triggerLabel={t("goals.newGoal")}
+      />
       <GoalSaveError error={props.viewModel.saveError} />
       <GoalList
         goals={props.viewModel.goals}

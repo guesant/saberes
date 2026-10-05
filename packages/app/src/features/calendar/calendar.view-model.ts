@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { useState } from "react";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
+import { createCalendarEntryCrudActions } from "./create-calendar-entry-crud-actions.function";
 import { useCalendarEntriesQuery } from "./use-calendar-entries-query.hook";
 import { useCreateCalendarEntryMutation } from "./use-create-calendar-entry-mutation.hook";
 import type { CalendarViewModel } from "./calendar-view-model.interface";
@@ -18,6 +19,11 @@ export function useCalendarViewModel(): CalendarViewModel {
 
   const mutation = useCreateCalendarEntryMutation(services);
 
+  const crudActions = createCalendarEntryCrudActions({
+    refetch: query.refetch,
+    services,
+  });
+
   return {
     anchorDate,
     createEntry: async (input): Promise<void> => {
@@ -31,6 +37,7 @@ export function useCalendarViewModel(): CalendarViewModel {
     setAnchorDate,
     setView,
     state: getQueryViewState(query),
+    ...crudActions,
     view,
   };
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createAcademicDisciplineSaveInput } from "./create-academic-discipline-save-input.function";
+import { getAcademicDisciplineFormInitialValues } from "./get-academic-discipline-form-initial-values.function";
 import type { AcademicDisciplineFormSave } from "./academic-discipline-form-save.interface";
 import type { AcademicDisciplineFormState } from "./academic-discipline-form-state.interface";
 import type { AcademicDisciplineFormValues } from "./academic-discipline-form-values.interface";
@@ -17,7 +18,11 @@ const initialValues: AcademicDisciplineFormValues = {
 export function useAcademicDisciplineForm(
   props: AcademicDisciplineFormSave,
 ): AcademicDisciplineFormState {
-  const [values, setValues] = useState(initialValues);
+  const [values, setValues] = useState(() => {
+    return props.initialDiscipline
+      ? getAcademicDisciplineFormInitialValues(props.initialDiscipline)
+      : initialValues;
+  });
 
   const createAcademicFieldUpdater = (field: keyof AcademicDisciplineFormValues) => {
     return (value: string): void => {

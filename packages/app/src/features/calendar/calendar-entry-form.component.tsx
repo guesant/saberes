@@ -8,7 +8,7 @@ export function CalendarEntryForm(props: CalendarEntryFormProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UITypography variant="h5">Novo compromisso local</UITypography>
+      <UITypography variant="h5">{props.title}</UITypography>
       <CalendarEntryFormFields
         description={state.description}
         endsAt={state.endsAt}
@@ -20,7 +20,7 @@ export function CalendarEntryForm(props: CalendarEntryFormProps) {
         title={state.title}
       />
       <UIButton disabled={!state.title.trim() || !state.startsAt} onClick={state.create} variant="outlined">
-        Adicionar à agenda
+        {props.submitLabel}
       </UIButton>
     </UIContentGroup>
   );

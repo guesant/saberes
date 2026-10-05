@@ -61,6 +61,8 @@ export interface PersonalWorkspaceViewModel {
 
   saveLens(input: SavePersonalLensInput): Promise<void>;
 
+  deleteLens(id: string): Promise<void>;
+
   createRelation(
     kind: PersonalRelationKind,
     source: PersonalRelationEndpoint,

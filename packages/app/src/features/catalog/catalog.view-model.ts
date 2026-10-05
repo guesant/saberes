@@ -30,6 +30,8 @@ export interface CatalogViewModel {
 
   deleteFilter(id: string): Promise<void>;
 
+  updateFilter(filter: SavedCatalogFilter, name: string): Promise<void>;
+
   reloadSavedFilters(): Promise<void>;
 
   reload(): Promise<void>;
@@ -67,6 +69,7 @@ export function useCatalogViewModel(): CatalogViewModel {
       saveFilter: savedFilterActions.saveFilter,
       selectFilter: (filter: SavedCatalogFilter): void => { return setFilters(filter.filters); },
       deleteFilter: savedFilterActions.deleteFilter,
+      updateFilter: savedFilterActions.updateFilter,
       reloadSavedFilters: savedFiltersQuery.reload,
       reload: async (): Promise<void> => {
         await Promise.all([query.refetch(), savedFiltersQuery.reload()]);

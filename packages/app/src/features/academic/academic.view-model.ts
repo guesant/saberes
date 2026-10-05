@@ -35,7 +35,7 @@ export function useAcademicViewModel(): AcademicViewModel {
   const save = async (input: SaveAcademicDisciplineInput): Promise<void> => {
     const discipline = createAcademicDisciplineFromForm(
       input,
-      services.platform.ids.execute(),
+      input.id ?? services.platform.ids.execute(),
       new Date()
         .toISOString(),
     );

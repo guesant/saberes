@@ -11,7 +11,7 @@ export function CalendarEntriesContent(props: CalendarEntriesContentProps) {
   return (
     <UIList>
       {props.entries.map((entry) => {
-        return <CalendarEntryItem entry={entry} key={entry.id} />;
+        return <CalendarEntryItem entry={entry} key={entry.id} onDelete={props.onDelete} onSave={props.onSave} />;
       })}
     </UIList>
   );

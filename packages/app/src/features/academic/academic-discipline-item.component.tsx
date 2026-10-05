@@ -1,12 +1,18 @@
-import { UIButton, UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { AcademicDisciplineCalculationDetails } from "./academic-discipline-calculation-details.component";
+import { AcademicDisciplineItemActions } from "./academic-discipline-item-actions.component";
+import type { SaveAcademicDisciplineInput } from "./save-academic-discipline-input.interface";
 import type { AcademicDiscipline, AcademicMetrics } from "@guesant/saberes-application";
 
 export interface AcademicDisciplineItemProps {
   discipline: AcademicDiscipline;
+
   metrics: AcademicMetrics | undefined;
+
   onRemove(id: string): Promise<void>;
+
+  onSave(input: SaveAcademicDisciplineInput): Promise<void>;
 }
 
 export function AcademicDisciplineItem(props: AcademicDisciplineItemProps) {
@@ -32,14 +38,11 @@ export function AcademicDisciplineItem(props: AcademicDisciplineItemProps) {
             discipline={props.discipline}
             metrics={props.metrics}
           />
-          <UIButton
-            onClick={() => {
-              return props.onRemove(props.discipline.id);
-            }}
-            variant="text"
-          >
-            {t("academic.remove")}
-          </UIButton>
+          <AcademicDisciplineItemActions
+            discipline={props.discipline}
+            onRemove={props.onRemove}
+            onSave={props.onSave}
+          />
         </UIContentGroup>
       </UICardContent>
     </UICard>

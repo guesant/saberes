@@ -1,4 +1,6 @@
-import { UIButton, UIContentGroup, UIInlineActions } from "@guesant/saberes-ui";
+import { UIContentGroup, UIInlineActions } from "@guesant/saberes-ui";
+import { PersonalKnowledgeViewModeControls } from "./personal-knowledge-view-mode-controls.component";
+import { PersonalLensDialog } from "./personal-lens-dialog.component";
 import { PersonalLensViewButton } from "./personal-lens-view-button.component";
 import type { PersonalKnowledgeViewControlsProps } from "./personal-knowledge-view-controls-props.interface";
 import type { ReactElement } from "react";
@@ -7,24 +9,23 @@ export function PersonalKnowledgeViewControls(props: PersonalKnowledgeViewContro
   return (
     <UIContentGroup variant="content">
       <UIInlineActions wrap>
-        <UIButton
-          onClick={() => { props.onViewChange("tree"); }}
-          variant={props.view === "tree" ? "contained" : "outlined"}
-        >
-          Árvore
-        </UIButton>
-        <UIButton
-          onClick={() => { props.onViewChange("board"); }}
-          variant={props.view === "board" ? "contained" : "outlined"}
-        >
-          Board
-        </UIButton>
-        <UIButton onClick={props.onSaveLens} variant="text">
-          Salvar lente
-        </UIButton>
+        <PersonalKnowledgeViewModeControls onChange={props.onViewChange} view={props.view} />
+        <PersonalLensDialog
+          onSave={props.onSaveLens}
+          title="Nova lente"
+          triggerLabel="Nova lente"
+        />
       </UIInlineActions>
       {props.lenses.map((lens) => {
-        return <PersonalLensViewButton key={lens.id} lens={lens} onSelect={props.onLensSelect} />;
+        return (
+          <PersonalLensViewButton
+            key={lens.id}
+            lens={lens}
+            onDelete={props.onDeleteLens}
+            onSave={props.onSaveLens}
+            onSelect={props.onLensSelect}
+          />
+        );
       })}
     </UIContentGroup>
   );
