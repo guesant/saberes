@@ -10,6 +10,10 @@ export function UIContentSurface(props: UIContentSurfaceProps): ReactElement {
     <MuiPaper
       aria-label={props.ariaLabel}
       component={props.component ?? "div"}
+      data-ui-inset="md"
+      data-ui-layout="stack"
+      data-ui-outset="lg"
+      data-ui-overflow="scroll-x"
       sx={{
         bgcolor: config.backgroundColor,
         color: props.mode === "summary" ? "primary.contrastText" : undefined,

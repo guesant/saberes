@@ -19,7 +19,7 @@ export function PreferenceOption(props: PreferenceOptionProps) {
       }}
       selected={props.value}
     >
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="h6">{props.title}</UITypography>
         <UITypography color="text.secondary">{props.description}</UITypography>
       </UIContentGroup>

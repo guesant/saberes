@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UITextField } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITextField } from "@guesant/saberes-ui";
 
 export interface StudyCaptureEditorProps {
   title: string;
@@ -18,7 +18,7 @@ export interface StudyCaptureEditorProps {
 
 export function StudyCaptureEditor(props: StudyCaptureEditorProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITextField
         label="Título"
         onChange={(event) => { return props.onTitleChange(event.target.value); }}
@@ -36,16 +36,18 @@ export function StudyCaptureEditor(props: StudyCaptureEditorProps) {
         type="date"
         value={props.dueDate}
       />
-      <UIButton
-        disabled={!props.title.trim() || !props.description.trim()}
-        onClick={props.onSave}
-        variant="contained"
-      >
-        Salvar edição
-      </UIButton>
-      <UIButton onClick={props.onCancel} variant="text">
-        Cancelar
-      </UIButton>
+      <UIInlineActions>
+        <UIButton
+          disabled={!props.title.trim() || !props.description.trim()}
+          onClick={props.onSave}
+          variant="contained"
+        >
+          Salvar edição
+        </UIButton>
+        <UIButton onClick={props.onCancel} variant="text">
+          Cancelar
+        </UIButton>
+      </UIInlineActions>
     </UIContentGroup>
   );
 }

@@ -23,7 +23,6 @@ export function CatalogSavedFilterForm(props: CatalogSavedFilterFormProps) {
   return (
     <UIInlineActions wrap>
       <UITextField
-        fullWidth
         label={t("catalog.savedFilterName")}
         onChange={(event) => {
           return setName(event.target.value);

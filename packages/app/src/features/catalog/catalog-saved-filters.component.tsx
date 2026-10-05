@@ -11,7 +11,7 @@ export function CatalogSavedFilters(props: CatalogSavedFiltersProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h5">{t("catalog.savedFilters")}</UITypography>
 
       <CatalogSavedFilterForm onSave={props.onSave} saving={props.saving} />
@@ -24,11 +24,13 @@ export function CatalogSavedFilters(props: CatalogSavedFiltersProps) {
         state={props.state}
       />
 
-      <CatalogSavedFilterList
-        filters={props.filters}
-        onDelete={props.onDelete}
-        onSelect={props.onSelect}
-      />
+      {props.filters.length ? (
+        <CatalogSavedFilterList
+          filters={props.filters}
+          onDelete={props.onDelete}
+          onSelect={props.onSelect}
+        />
+      ) : null}
 
       <CatalogSavedFilterEmptyState visible={!props.filters.length} />
     </UIContentGroup>

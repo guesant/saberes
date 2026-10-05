@@ -6,7 +6,7 @@ import type { CatalogFilterControlsProps } from "./catalog-filter-controls-props
 
 export function CatalogFilterControls(props: CatalogFilterControlsProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <CatalogSearchField
         onChange={(search) => {
           return props.viewModel.setFilters((filters) => {

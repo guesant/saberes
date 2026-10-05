@@ -21,7 +21,6 @@ export function StudyChecklistEditorTitleField(props: StudyChecklistEditorTitleF
         return (
           <UITextField
             error={!field.state.meta.isValid}
-            fullWidth
             helperText={field.state.meta.errors.join(", ")}
             label="Título"
             onBlur={field.handleBlur}

@@ -6,5 +6,5 @@ export type UIPageSurfaceProps = {
 };
 
 export function UIPageSurface(props: UIPageSurfaceProps): ReactElement {
-  return <MuiBox sx={{ minHeight: "100vh" }}>{props.children}</MuiBox>;
+  return <MuiBox data-ui-layout="stack" sx={{ minHeight: "100vh" }}>{props.children}</MuiBox>;
 }

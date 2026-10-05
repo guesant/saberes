@@ -12,7 +12,7 @@ export function GoalFormMetrics(props: GoalFormMetricsProps) {
   const { form } = props;
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="inline">
       <form.Field name="metric">
         {(field) => {
           return Object.values(StudyGoalMetric)

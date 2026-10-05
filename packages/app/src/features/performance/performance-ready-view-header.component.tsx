@@ -5,7 +5,7 @@ export function PerformanceReadyViewHeader() {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="overline">{t("performance.eyebrow")}</UITypography>
       <UITypography variant="h2">{t("performance.title")}</UITypography>
       <UITypography color="text.secondary">{t("performance.description")}</UITypography>

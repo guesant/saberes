@@ -11,7 +11,7 @@ export function TopicReadyView(props: TopicReadyViewProps) {
 
   return (
     <UIContentGroup variant="section">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("topics.eyebrow")}</UITypography>
         <UITypography variant="h2">{String(props.data.topic.name)}</UITypography>
         <UITypography color="text.secondary">

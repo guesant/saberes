@@ -17,7 +17,7 @@ export function ContentErrorState(props: ContentErrorStateProps) {
 
   return (
     <UIContentAlert severity="error" role="alert">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography fontWeight={700}>{label || t("errors.contentLoad")}</UITypography>
 
         <UITypography variant="body2">{t("errors.contentLoadDescription")}</UITypography>

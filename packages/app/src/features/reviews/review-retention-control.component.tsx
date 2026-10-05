@@ -6,7 +6,7 @@ export function ReviewRetentionControl(props: ReviewRetentionControlProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h6">{t("review.retentionTitle")}</UITypography>
       <UITypography color="text.secondary">{t("review.retentionDescription")}</UITypography>
       <UITextField

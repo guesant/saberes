@@ -17,7 +17,7 @@ export function MyStudySessionDetails(props: MyStudySessionDetailsProps) {
   const status = props.session.status || "completed";
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="body2">{t(`home.sessionType.${activityType}`)}</UITypography>
       <UITypography color="text.secondary" variant="caption">
         {formatStudySessionStartedAt(props.session.startedAt, t("common.now"))} ·{" "}

@@ -10,6 +10,8 @@ export function UIBottomNavigation(props: UIBottomNavigationProps): ReactElement
   return (
     <MuiBottomNavigation
       {...props}
+      data-ui-layout="bottom-tabs"
+      data-ui-safe-area="bottom"
       sx={{
         borderTop: "1px solid",
         borderColor: "divider",

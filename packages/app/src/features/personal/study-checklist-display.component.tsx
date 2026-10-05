@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { StudyChecklistEntry } from "./study-checklist-entry.component";
 import type { StudyChecklist } from "@guesant/saberes-application";
 
@@ -15,7 +15,7 @@ export interface StudyChecklistDisplayProps {
 
 export function StudyChecklistDisplay(props: StudyChecklistDisplayProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h6">{props.checklist.title}</UITypography>
       <UITypography color="text.secondary">
         {props.checklist.items.length} itens locais para acompanhar
@@ -27,24 +27,20 @@ export function StudyChecklistDisplay(props: StudyChecklistDisplayProps) {
             canMoveUp={index > 0}
             key={item.id}
             label={item.label}
-            onMoveDown={() => {
-              return props.onMoveItem(props.checklist.id, item.id, "down");
-            }}
-            onMoveUp={() => {
-              return props.onMoveItem(props.checklist.id, item.id, "up");
-            }}
-            onUpdate={() => {
-              return props.onUpdateItem(props.checklist.id, item.id);
-            }}
+            onMoveDown={() => { return props.onMoveItem(props.checklist.id, item.id, "down"); }}
+            onMoveUp={() => { return props.onMoveItem(props.checklist.id, item.id, "up"); }}
+            onUpdate={() => { return props.onUpdateItem(props.checklist.id, item.id); }}
           />
         );
       })}
-      <UIButton onClick={props.onDelete} variant="text">
-        Excluir checklist
-      </UIButton>
-      <UIButton onClick={props.onEdit} variant="text">
-        Editar checklist
-      </UIButton>
+      <UIInlineActions>
+        <UIButton onClick={props.onDelete} variant="text">
+          Excluir checklist
+        </UIButton>
+        <UIButton onClick={props.onEdit} variant="text">
+          Editar checklist
+        </UIButton>
+      </UIInlineActions>
     </UIContentGroup>
   );
 }

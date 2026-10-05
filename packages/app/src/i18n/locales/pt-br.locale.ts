@@ -2,7 +2,6 @@ const ptBR = {
   brand: {
     name: "Saberes",
     headerName: "Saberes",
-    footer: "conteúdo previamente revisado",
   },
   nav: {
     home: "Início",
@@ -286,6 +285,7 @@ const ptBR = {
     description:
       "Escolha uma trilha, consulte o mapa de tópicos ou comece um plano. Todo o conteúdo já está disponível offline.",
     searchPlaceholder: "Encontrar curso, mapa, plano ou conteúdo",
+    searchLabel: "Buscar conteúdo",
     courses: "Cursos",
     maps: "Mapas",
     plans: "Planos",

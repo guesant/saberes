@@ -14,7 +14,7 @@ export function GoalsReadyView(props: GoalsReadyViewProps) {
 
   return (
     <UIContentGroup variant="section">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("goals.eyebrow")}</UITypography>
         <UITypography variant="h2">{t("goals.title")}</UITypography>
         <UITypography color="text.secondary">{t("goals.description")}</UITypography>

@@ -5,5 +5,5 @@ import type { ReactElement } from "react";
 export type UIFullHeightCardProps = MuiCardProps;
 
 export function UIFullHeightCard(props: UIFullHeightCardProps): ReactElement {
-  return <MuiCard {...props} sx={{ height: "100%", ...props.sx }} />;
+  return <MuiCard {...props} data-ui-layout="stack" sx={{ height: "100%", ...props.sx }} />;
 }

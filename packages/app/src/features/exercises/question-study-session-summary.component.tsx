@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { QuestionSessionProgress } from "./get-question-session-progress.function";
 
@@ -29,12 +29,14 @@ export function QuestionStudySessionSummary(props: QuestionStudySessionSummaryPr
           percentage: props.progress.percentage,
         })}
       </UITypography>
-      <UIButton variant="contained" onClick={props.onReview}>
-        {t("exercise.sessionReviewAction")}
-      </UIButton>
-      <UIButton variant="outlined" onClick={props.onBack}>
-        {t("common.backToMyStudy")}
-      </UIButton>
+      <UIInlineActions>
+        <UIButton variant="contained" onClick={props.onReview}>
+          {t("exercise.sessionReviewAction")}
+        </UIButton>
+        <UIButton variant="outlined" onClick={props.onBack}>
+          {t("common.backToMyStudy")}
+        </UIButton>
+      </UIInlineActions>
     </UIContentGroup>
   );
 }

@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import type { StudyCapture } from "@guesant/saberes-application";
 
 export interface StudyCaptureDisplayProps {
@@ -14,25 +14,27 @@ export interface StudyCaptureDisplayProps {
 
 export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h6">{props.capture.title}</UITypography>
       <UITypography color="text.secondary">{props.capture.description}</UITypography>
       <UITypography>{props.capture.contentKey ?? "Sem ContentKey"}</UITypography>
       <UITypography color="text.secondary">
         {props.capture.dueDate ? `Prazo: ${props.capture.dueDate}` : "Sem prazo"}
       </UITypography>
-      <UIButton onClick={props.onUpdateCompletion} variant="text">
-        Atualizar conclusão
-      </UIButton>
-      <UIButton onClick={props.onArchive} variant="text">
-        Arquivar
-      </UIButton>
-      <UIButton onClick={props.onEdit} variant="text">
-        Editar
-      </UIButton>
-      <UIButton onClick={props.onDelete} variant="text">
-        Excluir
-      </UIButton>
+      <UIInlineActions wrap>
+        <UIButton onClick={props.onUpdateCompletion} variant="text">
+          Atualizar conclusão
+        </UIButton>
+        <UIButton onClick={props.onArchive} variant="text">
+          Arquivar
+        </UIButton>
+        <UIButton onClick={props.onEdit} variant="text">
+          Editar
+        </UIButton>
+        <UIButton onClick={props.onDelete} variant="text">
+          Excluir
+        </UIButton>
+      </UIInlineActions>
     </UIContentGroup>
   );
 }

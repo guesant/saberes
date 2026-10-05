@@ -7,10 +7,9 @@ export function CatalogFilterBar(props: CatalogFilterBarProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UIResponsiveFields>
         <UITextField
-          fullWidth
           label={t("catalog.filters.process")}
           onChange={(event) => { return props.onChange({ ...props.filters, processName: event.target.value }); }}
           placeholder={t("catalog.processPlaceholder")}

@@ -99,6 +99,11 @@ describe("progresso local Dexie", () => {
       ]);
   });
 
+  it("retorna uma sequência vazia antes da primeira atividade", async () => {
+    await expect(progressDb.getStreak())
+      .resolves.toEqual({});
+  });
+
   it("recupera uma sessão interrompida após reabrir o banco local", async () => {
     await progressDb.saveSession({
       id: "session-interrupted",

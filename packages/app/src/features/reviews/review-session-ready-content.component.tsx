@@ -18,7 +18,7 @@ export function ReviewSessionReadyContent(props: ReviewSessionReadyContentProps)
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UIButton variant="contained" onClick={handleStartSession}>
         {t("review.startSession")}
       </UIButton>

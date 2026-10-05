@@ -16,7 +16,7 @@ export function ReviewReadyView(props: ReviewReadyViewProps) {
 
   return (
     <UIContentGroup variant="section">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("review.eyebrow")}</UITypography>
         <UITypography variant="h2">{t("review.title")}</UITypography>
         <UITypography color="text.secondary">{t("review.description")}</UITypography>

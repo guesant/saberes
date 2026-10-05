@@ -9,7 +9,7 @@ export function QuestionConfidenceInput(props: QuestionConfidenceInputProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="subtitle2">{t("exercise.confidenceLabel")}</UITypography>
       <UIInlineActions>
         <UIButton

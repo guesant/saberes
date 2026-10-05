@@ -10,7 +10,7 @@ export interface PersonalArchivedListProps {
 
 export function PersonalArchivedList(props: PersonalArchivedListProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h6">{props.title}</UITypography>
       {props.items.map((item) => {
         return (

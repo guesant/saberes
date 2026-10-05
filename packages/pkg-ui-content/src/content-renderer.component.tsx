@@ -29,7 +29,7 @@ export function UIContentRenderer(props: UIContentRendererProps) {
   const hasHiddenRichContent = visibleBlocks.length !== blocks.length;
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UIBox>
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}

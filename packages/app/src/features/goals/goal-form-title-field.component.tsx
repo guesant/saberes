@@ -33,7 +33,6 @@ export function GoalFormTitleField(props: GoalFormTitleFieldProps) {
         return (
           <UITextField
             error={!field.state.meta.isValid}
-            fullWidth
             helperText={field.state.meta.errors.join(", ")}
             label={props.label}
             onBlur={field.handleBlur}

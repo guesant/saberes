@@ -15,7 +15,7 @@ export function AcademicDisciplineItem(props: AcademicDisciplineItemProps) {
   return (
     <UICard variant="outlined">
       <UICardContent>
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="h6">{props.discipline.name}</UITypography>
           <UITypography>
             {t("academic.attendance", {

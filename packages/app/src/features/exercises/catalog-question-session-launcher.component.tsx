@@ -38,7 +38,7 @@ export function CatalogQuestionSessionLauncher(props: CatalogQuestionSessionLaun
   }
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h5">{t("exercise.sessionTitle")}</UITypography>
       <UITypography>{t("exercise.sessionObjective", { count: questions.length })}</UITypography>
       <QuestionSessionOptions

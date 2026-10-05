@@ -5,7 +5,6 @@ import {
   type CommandPaletteEntry,
 } from "@guesant/saberes-ui";
 import { useNavigate } from "react-router-dom";
-import { Footer } from "./footer.component";
 import { MobileBottomNavigation } from "./mobile-bottom-navigation.component";
 import { NavigationDrawer } from "./navigation-drawer.component";
 import { NavigationHeader } from "./navigation-header.component";
@@ -52,7 +51,6 @@ export function Shell(props: ShellProps) {
 
       <MobileBottomNavigation links={links} />
 
-      <Footer />
     </UIPageSurface>
   );
 }

@@ -38,7 +38,7 @@ export function LessonReadyView(props: LessonReadyViewProps) {
   return (
     <>
       <UISplitContentRow>
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="overline">{t("lesson.label")}</UITypography>
 
           <UITypography variant="h3">{String(data.lesson.title)}</UITypography>

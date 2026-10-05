@@ -9,7 +9,7 @@ type ContentErrorDetailsProps = {
 
 export function ContentErrorDetails(props: ContentErrorDetailsProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <ErrorMessage message={props.message} />
 
       <RetryButton onRetry={props.onRetry} />

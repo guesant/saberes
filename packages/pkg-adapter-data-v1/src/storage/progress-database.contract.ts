@@ -29,7 +29,7 @@ export interface ProgressDatabaseContract {
 
   getSetting(key: string): Promise<ProgressSettingRecord | undefined>;
 
-  getStreak(): Promise<Record<string, unknown> | undefined>;
+  getStreak(): Promise<Record<string, unknown>>;
 
   importProgress(input: ImportProgressInput): Promise<void>;
 

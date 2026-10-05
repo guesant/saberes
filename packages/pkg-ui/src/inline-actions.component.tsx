@@ -1,4 +1,4 @@
-import { Stack as MuiStack } from "@mui/material";
+import { Box as MuiBox } from "@mui/material";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIInlineActionsProps = {
@@ -8,17 +8,19 @@ export type UIInlineActionsProps = {
 
 export function UIInlineActions(props: UIInlineActionsProps): ReactElement {
   return (
-    <MuiStack
+    <MuiBox
       alignItems="center"
+      data-ui-align="center"
       data-ui-gap="sm"
       data-ui-layout={props.wrap ? "cluster" : "row"}
-      direction="row"
+      display="flex"
       flexWrap={props.wrap ? "wrap" : "nowrap"}
+      gap={1}
+      flexDirection="row"
       minWidth={0}
-      spacing={1}
       sx={{ maxWidth: "100%" }}
     >
       {props.children}
-    </MuiStack>
+    </MuiBox>
   );
 }

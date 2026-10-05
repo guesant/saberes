@@ -7,7 +7,7 @@ export function AssessmentProgressError(props: AssessmentProgressErrorProps) {
 
   return (
     <UIAlert severity="warning">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         {t("assessment.progressError", { message: props.error.message })}
         <UIButton
           onClick={() => {

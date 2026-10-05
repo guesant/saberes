@@ -15,7 +15,7 @@ export function AssessmentReadyView(props: AssessmentReadyViewProps) {
 
   return (
     <UIContentGroup variant="section">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("assessment.practice")}</UITypography>
         <UITypography variant="h2">{title}</UITypography>
         <UITypography color="text.secondary">{description}</UITypography>

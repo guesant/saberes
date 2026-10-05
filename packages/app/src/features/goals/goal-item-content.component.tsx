@@ -9,7 +9,7 @@ export function GoalItemContent(props: GoalItemContentProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <GoalItemSummary
         details={`${t(`goals.metrics.${props.goal.metric}`)}${props.goal.dueAt ? ` · ${props.goal.dueAt}` : ""} · ${t(`goals.timing.${props.timing}`)}`}
         progress={t("goals.progress", { current: props.goal.current, target: props.goal.target })}

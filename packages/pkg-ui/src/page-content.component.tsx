@@ -10,6 +10,9 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
   return (
     <MuiContainer
       component="main"
+      data-ui-inset="xl"
+      data-ui-layout="stack"
+      data-ui-outset="none"
       id="main-content"
       maxWidth="lg"
       sx={
@@ -17,8 +20,8 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
           ? {
             boxSizing: "border-box",
             marginLeft: { md: "264px", xs: "auto" },
-            marginRight: { md: 0, xs: "auto" },
-            maxWidth: { md: "calc(100% - 264px)", xs: "100%" },
+            marginRight: { md: "auto", xs: "auto" },
+            maxWidth: { md: "1200px", xs: "100%" },
             minWidth: 0,
             pb: { md: 5, xs: 11 },
             pt: { md: 5, xs: 3 },

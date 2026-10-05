@@ -7,7 +7,7 @@ export function QuestionBookmarkError(props: QuestionBookmarkErrorProps) {
 
   return (
     <UIAlert severity="warning">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         {t("exercise.bookmarkError", { message: props.error.message })}
         <UIButton
           onClick={() => {

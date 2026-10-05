@@ -32,7 +32,7 @@ export function StudyChecklistEditor(props: StudyChecklistEditorProps) {
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UIForm onSubmit={submit}>
         <StudyChecklistEditorTitleField form={form} />
         <StudyChecklistEditorContentKeyField form={form} />

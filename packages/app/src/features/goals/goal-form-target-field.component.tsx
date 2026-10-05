@@ -22,7 +22,6 @@ export function GoalFormTargetField(props: GoalFormTargetFieldProps) {
         return (
           <UITextField
             error={!field.state.meta.isValid}
-            fullWidth
             helperText={field.state.meta.errors.join(", ")}
             inputProps={{ min: 1, step: 1 }}
             label={props.label}

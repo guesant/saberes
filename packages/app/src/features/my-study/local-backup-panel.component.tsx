@@ -15,7 +15,7 @@ export function LocalBackupPanel(props: LocalBackupPanelProps) {
   const isBusy = props.viewModel.state === "busy";
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h3">{t("backup.title")}</UITypography>
       <UITypography color="text.secondary">{t("backup.description")}</UITypography>
       <UITypography color="text.secondary" role="status">

@@ -30,7 +30,7 @@ export function TopicMapNode(props: TopicMapNodeProps) {
         icon={node.is_milestone ? <UICheckCircleIcon color="success" /> : undefined}
         onClick={openTopic}
       >
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography fontWeight={700}>{String(node.label)}</UITypography>
 
           <UITypography variant="body2">{String(node.description || "")}</UITypography>

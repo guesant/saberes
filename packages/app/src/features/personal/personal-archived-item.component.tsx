@@ -7,7 +7,7 @@ export interface PersonalArchivedItemProps {
 
 export function PersonalArchivedItem(props: PersonalArchivedItemProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography color="text.secondary">{props.title}</UITypography>
       <UIButton onClick={props.onRestore} variant="text">
         Restaurar

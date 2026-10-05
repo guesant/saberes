@@ -13,7 +13,7 @@ export function StudyChecklistEditorItemsField(props: StudyChecklistEditorItemsF
     <form.Field mode="array" name="items">
       {(field) => {
         return (
-          <UIContentGroup variant="tight">
+          <UIContentGroup variant="content">
             {field.state.value.map((_, index) => {
               return (
                 <StudyChecklistEditorItemField

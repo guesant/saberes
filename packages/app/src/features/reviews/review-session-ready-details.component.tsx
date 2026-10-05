@@ -7,7 +7,7 @@ export function ReviewSessionReadyDetails(props: ReviewSessionReadyDetailsProps)
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="body2">
         {t("review.loadSummary", {
           due: props.viewModel.load.due,

@@ -15,7 +15,7 @@ export function AcademicDisciplineCalculationDetails(
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography color="text.secondary">
         {t("academic.minimumGrade", { value: props.discipline.minimumGrade })}
       </UITypography>

@@ -10,7 +10,7 @@ export function LessonEditorialMetadata(props: LessonEditorialMetadataProps) {
   const { lesson } = props.data;
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h5">{t("lesson.editorialMetadata")}</UITypography>
 
       <UITypography>{String(lesson.objective || "")}</UITypography>

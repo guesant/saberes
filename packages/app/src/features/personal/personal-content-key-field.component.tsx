@@ -8,7 +8,7 @@ export interface PersonalContentKeyFieldProps {
 export function PersonalContentKeyField(props: PersonalContentKeyFieldProps) {
   return (
     <UITextField
-      label="ContentKey opcional"
+      label="Referência relacionada (opcional)"
       onChange={(event) => {
         return props.onChange(event.target.value);
       }}

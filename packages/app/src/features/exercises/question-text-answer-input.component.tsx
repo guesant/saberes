@@ -9,7 +9,6 @@ export function QuestionTextAnswerInput(props: QuestionTextAnswerInputProps) {
 
   return (
     <UITextField
-      fullWidth
       multiline={isLongText}
       minRows={isLongText ? 5 : 1}
       label={t("exercise.answerLabel")}

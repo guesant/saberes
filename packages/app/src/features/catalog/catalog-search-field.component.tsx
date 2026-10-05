@@ -7,7 +7,7 @@ export function CatalogSearchField(props: CatalogSearchFieldProps) {
 
   return (
     <UITextField
-      fullWidth
+      aria-label={t("catalog.searchLabel")}
       placeholder={t("catalog.searchPlaceholder")}
       value={props.value}
       onChange={(event) => {

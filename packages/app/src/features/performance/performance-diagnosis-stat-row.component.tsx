@@ -25,7 +25,7 @@ export function PerformanceDiagnosisStatRow(props: PerformanceDiagnosisStatRowPr
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <PerformanceDiagnosisStatContent stat={props.stat} />
       <PerformanceDiagnosisStatActions onSelect={savePerformanceDecision} />
       {decision ? <PerformanceDecisionSaved decision={decision} /> : null}

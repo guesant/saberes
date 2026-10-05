@@ -29,7 +29,7 @@ export function StudyChecklistCreate(props: StudyChecklistCreateProps) {
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITextField
         label="Título do checklist"
         onChange={(event) => { return setTitle(event.target.value); }}

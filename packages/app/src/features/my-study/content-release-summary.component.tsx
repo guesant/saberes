@@ -25,7 +25,7 @@ export function ContentReleaseSummary(props: ContentReleaseSummaryProps) {
 
   return (
     <UIPaper variant="outlined">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("home.contentRelease")}</UITypography>
         <UITypography>
           {t("home.contentReleaseVersion", {

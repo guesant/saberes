@@ -8,7 +8,7 @@ export function PerformanceFilters(props: PerformanceFiltersProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h5">{t("performance.filtersTitle")}</UITypography>
       <PerformancePeriodFilters
         label={(period) => {

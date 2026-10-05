@@ -25,7 +25,7 @@ export function MyStudyFirstStudyPrompt(props: MyStudyFirstStudyPromptProps) {
 
   return (
     <UIPaper variant="outlined">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("home.firstStudyEyebrow")}</UITypography>
         <UITypography variant="h3">{t("home.firstStudyTitle")}</UITypography>
         <UITypography color="text.secondary">{t("home.firstStudyDescription")}</UITypography>

@@ -20,7 +20,7 @@ export function LocalBackupReplaceControl(props: LocalBackupReplaceControlProps)
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       {replaceConfirmation ? <LocalBackupReplaceWarning /> : null}
       <UIButton color="warning" variant="outlined" onClick={handleReplace}>
         {replaceConfirmation ? t("backup.confirmReplace") : t("backup.replace")}

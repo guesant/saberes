@@ -1,6 +1,8 @@
 import { collectLayoutRows } from "./collect-layout-rows.function";
 import { getLayoutBox } from "./get-layout-box.function";
+import { validateLayoutAlignment } from "./validate-layout-alignment.function";
 import { validateLayoutClose } from "./validate-layout-close.function";
+import { validateLayoutGap } from "./validate-layout-gap.function";
 import { validateLayoutUniform } from "./validate-layout-uniform.function";
 import type { Page } from "@playwright/test";
 
@@ -14,7 +16,17 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
         return {
           align: element.getAttribute("data-ui-align"),
           closure: element.getAttribute("data-ui-closure"),
+          gap: element.getAttribute("data-ui-gap"),
           kind: element.getAttribute("data-ui-layout"),
+        };
+      });
+
+      const gapMeasurement = await layout.evaluate((element) => {
+        const style = window.getComputedStyle(element);
+
+        return {
+          columnGap: Number.parseFloat(style.columnGap) || 0,
+          rowGap: Number.parseFloat(style.rowGap) || 0,
         };
       });
 
@@ -41,6 +53,10 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
         });
 
       const rows = collectLayoutRows(children);
+
+      if (metadata.gap && metadata.kind) {
+        validateLayoutGap(gapMeasurement, metadata.gap, metadata.kind);
+      }
 
       rows.forEach((row) => {
         if (metadata.kind === "equal-grid") {
@@ -88,12 +104,39 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
           });
       }
 
-      if (metadata.kind === "split" || metadata.align === "start") {
+      if (metadata.align) {
+        rows.forEach((row) => {
+          validateLayoutAlignment(row, metadata.align ?? "", `${metadata.kind} children`);
+        });
+      }
+
+      if (metadata.kind === "bottom-tabs") {
+        const bottomTabsChildren = rows.flat();
+
         validateLayoutUniform(
-          rows[0]?.map((box) => {
-            return box.top;
-          }) ?? [],
-          `${metadata.kind} children must align at the top`,
+          bottomTabsChildren.map((box) => {
+            return box.width;
+          }),
+          "bottom tabs must use uniform action widths",
+        );
+
+        validateLayoutUniform(
+          bottomTabsChildren.map((box) => {
+            return box.height;
+          }),
+          "bottom tabs must use uniform action heights",
+        );
+
+        validateLayoutClose(
+          bottomTabsChildren[0]?.left ?? container.left,
+          container.left,
+          "bottom tabs must start at the container edge",
+        );
+
+        validateLayoutClose(
+          bottomTabsChildren.at(-1)?.right ?? container.right,
+          container.right,
+          "bottom tabs must finish at the container edge",
         );
       }
     }),

@@ -13,7 +13,7 @@ export function FocusReadyView(props: FocusReadyViewProps) {
 
   return (
     <UIContentGroup variant="section">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("focus.eyebrow")}</UITypography>
         <UITypography variant="h2">{t("focus.title")}</UITypography>
         <UITypography color="text.secondary">{t("focus.description")}</UITypography>

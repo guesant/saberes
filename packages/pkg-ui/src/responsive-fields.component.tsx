@@ -1,4 +1,4 @@
-import { Stack as MuiStack } from "@mui/material";
+import { Box as MuiBox } from "@mui/material";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIResponsiveFieldsProps = {
@@ -7,13 +7,16 @@ export type UIResponsiveFieldsProps = {
 
 export function UIResponsiveFields(props: UIResponsiveFieldsProps): ReactElement {
   return (
-    <MuiStack
-      direction={{ md: "row", xs: "column" }}
+    <MuiBox
+      data-ui-gap="sm"
+      data-ui-layout="stack"
+      display="flex"
+      flexDirection={{ md: "row", xs: "column" }}
+      gap={1}
       minWidth={0}
-      spacing={1}
       sx={{ maxWidth: "100%", width: "100%" }}
     >
       {props.children}
-    </MuiStack>
+    </MuiBox>
   );
 }

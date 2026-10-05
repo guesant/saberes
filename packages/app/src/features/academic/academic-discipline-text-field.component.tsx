@@ -12,7 +12,6 @@ export interface AcademicDisciplineTextFieldProps {
 export function AcademicDisciplineTextField(props: AcademicDisciplineTextFieldProps) {
   return (
     <UITextField
-      fullWidth
       inputProps={{ min: props.inputMin, step: props.inputStep }}
       label={props.label}
       onChange={(event) => {

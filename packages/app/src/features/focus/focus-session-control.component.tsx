@@ -31,7 +31,7 @@ export function FocusSessionControl(props: FocusSessionControlProps) {
   return (
     <UICard>
       <UICardContent>
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="h5">
             {props.active ? t("focus.active") : t("focus.ready")}
           </UITypography>

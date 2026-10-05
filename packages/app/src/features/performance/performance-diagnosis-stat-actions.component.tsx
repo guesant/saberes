@@ -1,5 +1,5 @@
 import { PedagogicalAction } from "@guesant/saberes-application";
-import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { UIButton, UIInlineActions } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { PerformanceActionDecision } from "./performance-action-decision.interface";
 
@@ -11,7 +11,7 @@ export function PerformanceDiagnosisStatActions(props: PerformanceDiagnosisStatA
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="inline">
+    <UIInlineActions wrap>
       <UIButton
         onClick={() => { return props.onSelect(PedagogicalAction.Theory); }}
         size="small"
@@ -40,6 +40,6 @@ export function PerformanceDiagnosisStatActions(props: PerformanceDiagnosisStatA
       >
         {t("performance.ignoreAction")}
       </UIButton>
-    </UIContentGroup>
+    </UIInlineActions>
   );
 }

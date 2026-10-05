@@ -26,7 +26,7 @@ export function PersonalNoteCreate(props: PersonalNoteCreateProps) {
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITextField
         label="Título da nota"
         onChange={(event) => { return setTitle(event.target.value); }}

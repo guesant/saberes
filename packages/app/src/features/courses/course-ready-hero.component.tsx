@@ -31,7 +31,7 @@ export function CourseReadyHero(props: CourseReadyHeroProps) {
       <UIChip label={courseType} variant="outlined" />
       <UITypography variant="h2">{String(course.title)}</UITypography>
       <UITypography>{String(course.description || "")}</UITypography>
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="body2">
           {t("course.progress", {
             completed: props.progress.completedItems,

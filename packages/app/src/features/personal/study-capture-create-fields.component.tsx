@@ -4,7 +4,7 @@ import type { StudyCaptureCreateFieldsProps } from "./study-capture-create-field
 
 export function StudyCaptureCreateFields(props: StudyCaptureCreateFieldsProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITextField
         label="Título da pendência"
         onChange={(event) => {

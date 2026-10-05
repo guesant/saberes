@@ -7,7 +7,7 @@ export type UIQuickAccessGridItemProps = {
 
 export function UIQuickAccessGridItem(props: UIQuickAccessGridItemProps): ReactElement {
   return (
-    <MuiGrid data-ui-grid-item="equal" size={{ md: 3, xs: 6 }} sx={{ minWidth: 0 }}>
+    <MuiGrid data-ui-grid-item="equal" data-ui-layout="equal-grid" size={{ md: 3, xs: 6 }} sx={{ minWidth: 0 }}>
       {props.children}
     </MuiGrid>
   );

@@ -16,7 +16,7 @@ export function MyStudyReviewReminder(props: MyStudyReviewReminderProps) {
   return (
     <UICard>
       <UICardContent>
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="h5">{t("home.reviewReminderTitle")}</UITypography>
           <UITypography color="text.secondary">
             {t("home.reviewReminderDescription", { count: props.reviewCount })}

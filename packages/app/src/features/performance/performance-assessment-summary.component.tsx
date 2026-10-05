@@ -8,7 +8,7 @@ export function PerformanceAssessmentSummary(props: PerformanceAssessmentSummary
   return (
     <UICard>
       <UICardContent>
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="h5">{t("performance.assessmentTitle")}</UITypography>
           <UITypography color="text.secondary">
             {t("performance.assessmentSummary", {

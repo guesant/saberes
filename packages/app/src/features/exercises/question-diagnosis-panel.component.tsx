@@ -38,7 +38,7 @@ export function QuestionDiagnosisPanel(props: QuestionDiagnosisPanelProps) {
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h6">{t("exercise.diagnosisLabel")}</UITypography>
       <UITypography>{t("exercise.diagnosisHint")}</UITypography>
       {diagnosisOptions.map((option) => {

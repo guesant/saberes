@@ -7,7 +7,7 @@ export type UIFooterSurfaceProps = {
 
 export function UIFooterSurface(props: UIFooterSurfaceProps): ReactElement {
   return (
-    <MuiBox component="footer" sx={{ color: "text.secondary", py: 4, textAlign: "center" }}>
+    <MuiBox component="footer" data-ui-inset="xl" data-ui-layout="stack" sx={{ color: "text.secondary", py: 4, textAlign: "center" }}>
       {props.children}
     </MuiBox>
   );

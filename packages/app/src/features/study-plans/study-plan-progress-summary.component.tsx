@@ -6,7 +6,7 @@ export function StudyPlanProgressSummary(props: StudyPlanProgressSummaryProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography color="text.secondary">
         {props.nextStep
           ? `${t("plan.nextStep")}: ${String(props.nextStep.title)}`

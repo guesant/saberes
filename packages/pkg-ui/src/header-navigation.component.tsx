@@ -6,5 +6,5 @@ export type UIHeaderNavigationProps = {
 };
 
 export function UIHeaderNavigation(props: UIHeaderNavigationProps): ReactElement {
-  return <MuiBox sx={{ display: { md: "flex", xs: "none" }, gap: 1 }}>{props.children}</MuiBox>;
+  return <MuiBox data-ui-gap="sm" data-ui-layout="row" sx={{ display: { md: "flex", xs: "none" }, gap: 1 }}>{props.children}</MuiBox>;
 }

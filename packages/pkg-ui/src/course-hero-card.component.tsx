@@ -5,5 +5,13 @@ import type { ReactElement } from "react";
 export type UICourseHeroCardProps = MuiCardProps;
 
 export function UICourseHeroCard(props: UICourseHeroCardProps): ReactElement {
-  return <MuiCard {...props} sx={{ mb: 4, p: { md: 5, xs: 2 }, ...props.sx }} />;
+  return (
+    <MuiCard
+      {...props}
+      data-ui-inset="md"
+      data-ui-layout="stack"
+      data-ui-outset="xl"
+      sx={{ mb: 4, p: { md: 4, xs: 2 }, ...props.sx }}
+    />
+  );
 }

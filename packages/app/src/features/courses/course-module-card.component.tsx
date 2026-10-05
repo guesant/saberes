@@ -16,7 +16,7 @@ export function CourseModuleCard(props: CourseModuleCardProps) {
   return (
     <UICard>
       <UICardContent>
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="h6">
             {String(module.position)}.{String(module.title)}
           </UITypography>

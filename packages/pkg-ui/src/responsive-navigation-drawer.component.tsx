@@ -11,6 +11,7 @@ export function UIResponsiveNavigationDrawer(
   return (
     <UIDrawer
       anchor="left"
+      data-ui-layout="stack"
       open
       sx={{
         display: { md: "block", xs: "none" },

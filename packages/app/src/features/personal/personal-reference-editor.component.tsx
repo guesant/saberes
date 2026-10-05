@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UITextField } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITextField } from "@guesant/saberes-ui";
 
 export interface PersonalReferenceEditorProps {
   title: string;
@@ -14,7 +14,7 @@ export interface PersonalReferenceEditorProps {
 
 export function PersonalReferenceEditor(props: PersonalReferenceEditorProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITextField
         label="Título"
         onChange={(event) => {
@@ -29,16 +29,18 @@ export function PersonalReferenceEditor(props: PersonalReferenceEditorProps) {
         }}
         value={props.source}
       />
-      <UIButton
-        disabled={!props.title.trim() || !props.source.trim()}
-        onClick={props.onSave}
-        variant="contained"
-      >
-        Salvar edição
-      </UIButton>
-      <UIButton onClick={props.onCancel} variant="text">
-        Cancelar
-      </UIButton>
+      <UIInlineActions>
+        <UIButton
+          disabled={!props.title.trim() || !props.source.trim()}
+          onClick={props.onSave}
+          variant="contained"
+        >
+          Salvar edição
+        </UIButton>
+        <UIButton onClick={props.onCancel} variant="text">
+          Cancelar
+        </UIButton>
+      </UIInlineActions>
     </UIContentGroup>
   );
 }

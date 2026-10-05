@@ -18,7 +18,7 @@ export function QuestionStudySessionHeader(props: QuestionStudySessionHeaderProp
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h4">{t("exercise.sessionTitle")}</UITypography>
       <UITypography>
         {t("exercise.sessionProgress", {

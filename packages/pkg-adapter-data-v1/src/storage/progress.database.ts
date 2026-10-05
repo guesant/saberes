@@ -537,9 +537,11 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
     return this.putStudy("streaks", "current", data);
   }
 
-  getStreak() {
-    return this.table("streaks")
+  async getStreak(): Promise<Record<string, unknown>> {
+    const streak = await this.table("streaks")
       .get("current");
+
+    return streak ?? {};
   }
 
   saveAchievement(contentKey: string, data: Record<string, unknown> = {}) {

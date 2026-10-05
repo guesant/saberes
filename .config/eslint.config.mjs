@@ -45,6 +45,17 @@ const layoutProtectedFiles = [
   "packages/pkg-ui-content/src/**/*.{js,jsx,ts,tsx}",
 ];
 
+const layoutImplementationFiles = [
+  "packages/app/src/**/*.{js,jsx,ts,tsx}",
+  "packages/pkg-ui/src/**/*.{js,jsx,ts,tsx}",
+  "packages/pkg-ui-content/src/**/*.{js,jsx,ts,tsx}",
+];
+
+const uiImplementationFiles = [
+  "packages/pkg-ui/src/**/*.{js,jsx,ts,tsx}",
+  "packages/pkg-ui-content/src/**/*.{js,jsx,ts,tsx}",
+];
+
 const operatorFiles = [".local/operator/**/*.{js,jsx,mjs,ts,tsx}"];
 
 const generatedFiles = [
@@ -616,6 +627,13 @@ export default [
     },
   },
   {
+    files: sourceFiles,
+    ignores: generatedFiles,
+    rules: {
+      "layout/no-mui-stack": "error",
+    },
+  },
+  {
     files: layoutProtectedFiles,
     ignores: ["**/*.test.ts", "**/*.test.tsx"],
     rules: {
@@ -623,6 +641,25 @@ export default [
       "layout/no-spacing-definition-outside-ui": "error",
       "layout/no-layout-definition-outside-ui": "error",
       "layout/no-negative-spacing-outside-ui": "error",
+    },
+  },
+  {
+    files: uiImplementationFiles,
+    ignores: ["**/*.test.ts", "**/*.test.tsx"],
+    rules: {
+      "layout/spacing-contract": "error",
+    },
+  },
+  {
+    files: layoutImplementationFiles,
+    ignores: ["**/*.test.ts", "**/*.test.tsx"],
+    rules: {
+      "layout/action-group-contract": "error",
+      "layout/bottom-navigation-contract": "error",
+      "layout/content-group-contract": "error",
+      "layout/no-full-width-control-outside-ui": "error",
+      "layout/form-control-label-contract": "error",
+      "layout/no-technical-form-copy": "error",
     },
   },
 ];

@@ -14,7 +14,7 @@ export function AcademicReadyView(props: AcademicReadyViewProps) {
 
   return (
     <UIContentGroup variant="section">
-      <UIContentGroup variant="tight">
+      <UIContentGroup variant="content">
         <UITypography variant="overline">{t("academic.eyebrow")}</UITypography>
         <UITypography variant="h2">{t("academic.title")}</UITypography>
         <UITypography color="text.secondary">{t("academic.description")}</UITypography>

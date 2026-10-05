@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UITextField } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITextField } from "@guesant/saberes-ui";
 import { PersonalContentKeyField } from "./personal-content-key-field.component";
 
 export interface PersonalNoteEditorProps {
@@ -18,7 +18,7 @@ export interface PersonalNoteEditorProps {
 
 export function PersonalNoteEditor(props: PersonalNoteEditorProps) {
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITextField
         label="Título"
         onChange={(event) => {
@@ -35,16 +35,18 @@ export function PersonalNoteEditor(props: PersonalNoteEditorProps) {
         value={props.body}
       />
       <PersonalContentKeyField onChange={props.onContentKeyChange} value={props.contentKey} />
-      <UIButton
-        disabled={!props.title.trim() || !props.body.trim()}
-        onClick={props.onSave}
-        variant="contained"
-      >
-        Salvar edição
-      </UIButton>
-      <UIButton onClick={props.onCancel} variant="text">
-        Cancelar
-      </UIButton>
+      <UIInlineActions>
+        <UIButton
+          disabled={!props.title.trim() || !props.body.trim()}
+          onClick={props.onSave}
+          variant="contained"
+        >
+          Salvar edição
+        </UIButton>
+        <UIButton onClick={props.onCancel} variant="text">
+          Cancelar
+        </UIButton>
+      </UIInlineActions>
     </UIContentGroup>
   );
 }

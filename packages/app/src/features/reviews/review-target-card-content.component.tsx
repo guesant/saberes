@@ -26,7 +26,7 @@ export function ReviewTargetCardContent(props: ReviewTargetCardContentProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UIChip
         label={props.target.state ? t(`review.states.${props.target.state}`) : t("review.availableNow")}
         size="small"

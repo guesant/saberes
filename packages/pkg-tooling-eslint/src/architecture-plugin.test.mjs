@@ -866,6 +866,208 @@ test("no-negative-spacing-outside-ui rejects negative spacing and offsets", () =
   }
 });
 
+test("no-full-width-control-outside-ui rejects full-width controls in presentation", () => {
+  for (const code of [
+    'function View() { return <UITextField fullWidth label="Título" />; }',
+    "function View() { return <UIButton fullWidth>Salvar</UIButton>; }",
+  ]) {
+    assert.equal(verifyLayout(code, "no-full-width-control-outside-ui").length, 1);
+  }
+
+  assert.equal(
+    verifyLayout(
+      'function UITextFieldWrapper() { return <UITextField fullWidth label="Título" />; }',
+      "no-full-width-control-outside-ui",
+      "packages/pkg-ui/src/text-field.component.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("form-control-label-contract rejects controls without persistent labels", () => {
+  assert.equal(
+    verifyLayout(
+      'function View() { return <UITextField placeholder="Título" />; }',
+      "form-control-label-contract",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function View() { return <UITextField aria-label="Título" placeholder="Título" />; }',
+      "form-control-label-contract",
+    ).length,
+    0,
+  );
+});
+
+test("no-technical-form-copy rejects ContentKey exposed in controls", () => {
+  assert.equal(
+    verifyLayout(
+      'function View() { return <UITextField label="ContentKey opcional" />; }',
+      "no-technical-form-copy",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function View() { return <UITextField label="Referência opcional" />; }',
+      "no-technical-form-copy",
+    ).length,
+    0,
+  );
+});
+
+test("spacing-contract requires semantic metadata and approved spacing tokens", () => {
+  assert.ok(
+    verifyLayout(
+      "function UIStack() { return <MuiStack spacing={2} />; }",
+      "spacing-contract",
+      "packages/pkg-ui/src/stack.component.tsx",
+    ).length > 0,
+  );
+
+  assert.ok(
+    verifyLayout(
+      'function UIStack() { return <MuiStack data-ui-gap="sm" data-ui-layout="stack" spacing={2} />; }',
+      "spacing-contract",
+      "packages/pkg-ui/src/stack.component.tsx",
+    ).length > 0,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function UIStack() { return <MuiStack data-ui-gap="md" data-ui-layout="stack" spacing={2} />; }',
+      "spacing-contract",
+      "packages/pkg-ui/src/stack.component.tsx",
+    ).length,
+    0,
+  );
+
+  assert.ok(
+    verifyLayout(
+      "function UISurface() { return <MuiPaper sx={{ p: 2 }} />; }",
+      "spacing-contract",
+      "packages/pkg-ui/src/surface.component.tsx",
+    ).length > 0,
+  );
+
+  assert.ok(
+    verifyLayout(
+      'function UIInlineActions() { return <MuiBox alignItems="center" data-ui-gap="sm" data-ui-layout="row" spacing={1} />; }',
+      "spacing-contract",
+      "packages/pkg-ui/src/inline-actions.component.tsx",
+    ).length > 0,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function UIInlineActions() { return <MuiBox alignItems="center" data-ui-align="center" data-ui-gap="sm" data-ui-layout="row" spacing={1} />; }',
+      "spacing-contract",
+      "packages/pkg-ui/src/inline-actions.component.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("action-group-contract requires semantic wrappers for sibling actions", () => {
+  assert.equal(
+    verifyLayout(
+      "function Actions() { return <div><UIButton /><UIButton /></div>; }",
+      "action-group-contract",
+      "packages/app/src/features/actions/actions.component.tsx",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verifyLayout(
+      "function Actions() { return <UIInlineActions><UIButton /><UIButton /></UIInlineActions>; }",
+      "action-group-contract",
+      "packages/app/src/features/actions/actions.component.tsx",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verifyLayout(
+      "function BackupActions() { return <div><UIDownloadFileButton /><UIFileInput /></div>; }",
+      "action-group-contract",
+      "packages/app/src/features/my-study/local-backup-panel.component.tsx",
+    ).length,
+    1,
+  );
+});
+
+test("bottom-navigation-contract requires safe-area metadata and complete actions", () => {
+  assert.equal(
+    verifyLayout(
+      "function Navigation() { return <UIBottomNavigation />; }",
+      "bottom-navigation-contract",
+      "packages/app/src/components/mobile-bottom-navigation.component.tsx",
+    ).length,
+    2,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function Navigation() { return <UIBottomNavigation data-ui-layout="bottom-tabs" data-ui-safe-area="bottom"><UIBottomNavigationAction icon={<Icon />} label="Início" value="/" /></UIBottomNavigation>; }',
+      "bottom-navigation-contract",
+      "packages/app/src/components/mobile-bottom-navigation.component.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("content-group-contract rejects dense groups with multiple content blocks", () => {
+  assert.equal(
+    verifyLayout(
+      'function Release() { return <UIContentGroup variant="tight"><UITypography /><UITypography /><UITypography /></UIContentGroup>; }',
+      "content-group-contract",
+      "packages/app/src/features/my-study/content-release-summary.component.tsx",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function Release() { return <UIContentGroup variant="content"><UITypography /><UITypography /><UITypography /></UIContentGroup>; }',
+      "content-group-contract",
+      "packages/app/src/features/my-study/content-release-summary.component.tsx",
+    ).length,
+    0,
+  );
+});
+
+test("no-mui-stack rejects MUI Stack imports and access paths", () => {
+  for (const code of [
+    'import { Stack as MuiStack } from "@mui/material";',
+    'import { StackProps as MuiStackProps } from "@mui/material";',
+    'import Stack from "@mui/material/Stack";',
+    'import * as MuiMaterial from "@mui/material"; MuiMaterial.Stack;',
+    'import * as MuiMaterial from "@mui/material"; MuiMaterial["Stack"];',
+    'import * as MuiMaterial from "@mui/material"; const { Stack } = MuiMaterial;',
+    'const { Stack } = require("@mui/material");',
+    'require("@mui/material/Stack");',
+    'require("@mui/material").Stack;',
+    'import("@mui/material/Stack");',
+    'export { Stack } from "@mui/material";',
+    'export * from "@mui/material/Stack";',
+  ]) {
+    assert.ok(verifyLayout(code, "no-mui-stack").length > 0, code);
+  }
+
+  for (const code of [
+    'import { UIStack } from "@guesant/saberes-ui";',
+    "function Stack() { return null; }",
+    'const value = { Stack: "custom" };',
+  ]) {
+    assert.equal(verifyLayout(code, "no-mui-stack").length, 0, code);
+  }
+});
+
 test("purity rules reject technology imports in domain and application", () => {
   assert.equal(
     verify('import React from "react";', "domain-purity", "packages/pkg-domain/src/domain.ts")

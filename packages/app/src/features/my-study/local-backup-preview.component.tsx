@@ -7,7 +7,7 @@ export function LocalBackupPreview(props: LocalBackupPreviewProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h4">{t("backup.previewTitle")}</UITypography>
       <UITypography color="text.secondary">
         {t("backup.previewDescription", {

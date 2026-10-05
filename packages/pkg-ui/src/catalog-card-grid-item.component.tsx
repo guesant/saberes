@@ -7,7 +7,7 @@ export type UICatalogCardGridItemProps = {
 
 export function UICatalogCardGridItem(props: UICatalogCardGridItemProps): ReactElement {
   return (
-    <MuiGrid minWidth={0} size={{ md: 6, xs: 12 }} sx={{ maxWidth: "100%" }}>
+    <MuiGrid data-ui-layout="equal-grid" minWidth={0} size={{ md: 6, xs: 12 }} sx={{ maxWidth: "100%" }}>
       {props.children}
     </MuiGrid>
   );

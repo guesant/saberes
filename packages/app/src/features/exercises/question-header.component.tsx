@@ -9,7 +9,7 @@ export function QuestionHeader(props: QuestionHeaderProps) {
   const { question } = props.data;
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h4">{String(question.number || "")}</UITypography>
       <UIQuestionStatement>{String(question.statement || "")}</UIQuestionStatement>
     </UIContentGroup>

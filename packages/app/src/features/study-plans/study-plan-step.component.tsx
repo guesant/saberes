@@ -38,7 +38,7 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
           {props.completed ? <UICheckCircleIcon /> : <UIEventNoteIcon />}
         </UIIconButton>
 
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="h6">
             {String(props.step.position)}.{String(props.step.title)}
           </UITypography>

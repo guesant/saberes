@@ -14,8 +14,8 @@ export function GoalFormDueDateField(props: GoalFormDueDateFieldProps) {
       {(field) => {
         return (
           <UITextField
-            fullWidth
             label={props.label}
+            InputLabelProps={{ shrink: true }}
             onBlur={field.handleBlur}
             onChange={(event) => {
               return field.handleChange(event.target.value);

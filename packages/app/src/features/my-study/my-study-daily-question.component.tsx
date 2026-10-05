@@ -12,7 +12,7 @@ export function MyStudyDailyQuestion(props: MyStudyDailyQuestionProps) {
   return (
     <UICard>
       <UICardContent>
-        <UIContentGroup variant="tight">
+        <UIContentGroup variant="content">
           <UITypography variant="overline">{t("home.dailyQuestion")}</UITypography>
           <UITypography variant="h5">{props.question.title}</UITypography>
           <UITypography color="text.secondary">{t("home.dailyQuestionDescription")}</UITypography>

@@ -12,7 +12,7 @@ export function StudyPlanControls(props: StudyPlanControlsProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h6">{t("plan.localCopyTitle")}</UITypography>
       <UITypography color="text.secondary">{t(`plan.status.${props.state.status}`)}</UITypography>
       <UIInlineActions wrap>

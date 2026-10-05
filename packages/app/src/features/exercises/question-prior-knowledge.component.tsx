@@ -17,7 +17,7 @@ export function QuestionPriorKnowledge(props: QuestionPriorKnowledgeProps) {
   });
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITypography variant="h6">{t("exercise.priorKnowledgeLabel")}</UITypography>
       <UITypography>{t("exercise.priorKnowledgeHint")}</UITypography>
       <QuestionPriorKnowledgeActions

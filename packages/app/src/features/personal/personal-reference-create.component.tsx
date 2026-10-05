@@ -26,7 +26,7 @@ export function PersonalReferenceCreate(props: PersonalReferenceCreateProps) {
   };
 
   return (
-    <UIContentGroup variant="tight">
+    <UIContentGroup variant="content">
       <UITextField
         label="Título da referência"
         onChange={(event) => {

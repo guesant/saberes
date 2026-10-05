@@ -8,10 +8,9 @@ export function StudyChecklistEditorItemField(props: StudyChecklistEditorItemFie
     <form.Field name={`items[${props.index}].label`}>
       {(field) => {
         return (
-          <UIContentGroup variant="tight">
+          <UIContentGroup variant="content">
             <UITextField
               error={!field.state.meta.isValid}
-              fullWidth
               helperText={field.state.meta.errors.join(", ")}
               label={`Item ${props.index + 1}`}
               onBlur={field.handleBlur}
