@@ -111,6 +111,15 @@ export const theme = createTheme({
       defaultProps: { disableRipple: true },
       styleOverrides: { root: { minHeight: 44 } },
     },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          paddingBlock: 0,
+          borderBlock: "1px solid var(--mui-palette-divider)",
+          "& > * + *": { borderBlockStart: "1px solid var(--mui-palette-divider)" },
+        },
+      },
+    },
     MuiStepButton: { defaultProps: { disableRipple: true } },
     MuiAlert: {
       styleOverrides: {
