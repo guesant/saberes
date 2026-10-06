@@ -1,4 +1,4 @@
-import { UIButton } from "@guesant/saberes-ui";
+import { UIChoiceButton } from "@guesant/saberes-ui";
 import type { PerformanceScope } from "./performance-scope.type";
 
 export interface PerformanceScopeButtonProps {
@@ -10,7 +10,7 @@ export interface PerformanceScopeButtonProps {
 
 export function PerformanceScopeButton(props: PerformanceScopeButtonProps) {
   return (
-    <UIButton
+    <UIChoiceButton
       aria-pressed={props.selected}
       onClick={() => {
         return props.onSelect(props.scope);
@@ -19,6 +19,6 @@ export function PerformanceScopeButton(props: PerformanceScopeButtonProps) {
       variant={props.selected ? "contained" : "outlined"}
     >
       {props.label}
-    </UIButton>
+    </UIChoiceButton>
   );
 }

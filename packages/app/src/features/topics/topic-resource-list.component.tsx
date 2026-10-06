@@ -9,7 +9,7 @@ export function TopicResourceList(props: TopicResourceListProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup id="materiais" variant="list">
+    <UIContentGroup id="materiais" variant="section">
       <UITypography variant="h5">{t("discovery.materials")}</UITypography>
       <TopicResourcePreview resources={props.resources} />
     </UIContentGroup>

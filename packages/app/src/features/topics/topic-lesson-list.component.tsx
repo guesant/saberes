@@ -7,7 +7,7 @@ export function TopicLessonList(props: TopicLessonListProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup id="teoria" variant="list">
+    <UIContentGroup id="teoria" variant="section">
       <UITypography variant="h5">{t("discovery.theory")}</UITypography>
       <TopicLessonPreview lessons={props.lessons} />
     </UIContentGroup>

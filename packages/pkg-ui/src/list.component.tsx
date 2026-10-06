@@ -10,5 +10,17 @@ export interface UIListProps extends Omit<MuiListProps, "sx"> {
 export function UIList(props: UIListProps): ReactElement {
   const { inset = "none", ...listProps } = props;
 
-  return <UIBox {...listProps} component={MuiList} gap="none" inset={inset} layout="column" />;
+  return (
+    <UIBox
+      {...listProps}
+      component={MuiList}
+      gap="none"
+      inset={inset}
+      layout="column"
+      sx={{
+        borderBlock: "1px solid var(--mui-palette-divider)",
+        "& > * + *": { borderBlockStart: "1px solid var(--mui-palette-divider)" },
+      }}
+    />
+  );
 }

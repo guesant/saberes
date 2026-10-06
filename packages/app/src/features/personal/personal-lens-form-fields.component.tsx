@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UIInlineActions, UITextField } from "@guesant/saberes-ui";
+import { UIButton, UIChoiceButton, UIContentGroup, UIInlineActions, UITextField } from "@guesant/saberes-ui";
 import { PersonalLensDeleteButton } from "./personal-lens-delete-button.component";
 import type { PersonalLens, PersonalLensView } from "@guesant/saberes-application";
 
@@ -27,18 +27,18 @@ export function PersonalLensFormFields(props: PersonalLensFormFieldsProps) {
         value={props.name}
       />
       <UIInlineActions wrap>
-        <UIButton
+        <UIChoiceButton
           onClick={() => { props.onViewChange("tree"); }}
           variant={props.view === "tree" ? "contained" : "outlined"}
         >
           Árvore
-        </UIButton>
-        <UIButton
+        </UIChoiceButton>
+        <UIChoiceButton
           onClick={() => { props.onViewChange("board"); }}
           variant={props.view === "board" ? "contained" : "outlined"}
         >
           Board
-        </UIButton>
+        </UIChoiceButton>
       </UIInlineActions>
       <UIButton disabled={!props.name.trim()} onClick={props.onSave} variant="contained">
         Salvar lente

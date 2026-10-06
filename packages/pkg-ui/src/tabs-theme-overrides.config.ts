@@ -11,6 +11,11 @@ export const tabsThemeOverrides = {
       },
       flexContainer: { flexWrap: "nowrap" },
       scroller: { scrollbarWidth: "none", "&::-webkit-scrollbar": { display: "none" } },
+      scrollButtons: {
+        flex: "0 0 40px",
+        color: "var(--mui-palette-text-primary)",
+        borderInline: "1px solid var(--mui-palette-divider)",
+      },
     },
   },
   MuiTab: {
@@ -23,6 +28,7 @@ export const tabsThemeOverrides = {
         whiteSpace: "nowrap",
         borderInlineEnd: "1px solid var(--mui-palette-divider)",
         "&:first-of-type": { borderInlineStart: "1px solid var(--mui-palette-divider)" },
+        "&:last-of-type": { borderInlineEnd: "1px solid var(--mui-palette-divider)" },
       },
     },
   },

@@ -21,7 +21,7 @@ export function TopicMapNode(props: TopicMapNodeProps) {
   };
 
   return (
-    <UIListItemButton aria-label={`Abrir tópico ${String(node.label)}`} divider onClick={openTopic}>
+    <UIListItemButton aria-label={`Abrir tópico ${String(node.label)}`} onClick={openTopic}>
       <TopicMapNodeMilestoneIcon milestone={Boolean(node.is_milestone)} />
       <UIContentGroup variant="content">
         <UITypography fontWeight={700}>{String(node.label)}</UITypography>

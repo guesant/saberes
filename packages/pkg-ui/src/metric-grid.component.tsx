@@ -7,7 +7,13 @@ export type UIMetricGridProps = {
 
 export function UIMetricGrid(props: UIMetricGridProps): ReactElement {
   return (
-    <UIBox gap="md" inset="none" layout="grid" columns={2}>
+    <UIBox
+      gap="md"
+      inset="none"
+      layout="grid"
+      columns={2}
+      sx={{ alignItems: "stretch", gridAutoRows: "1fr" }}
+    >
       {props.children}
     </UIBox>
   );

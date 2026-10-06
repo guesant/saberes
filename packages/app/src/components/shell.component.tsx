@@ -1,15 +1,15 @@
 import {
-  UIResponsiveNavigationDrawer,
+  UINavigationDrawer,
   UIPageContent,
   UIPageSurface,
   type CommandPaletteEntry,
 } from "@guesant/saberes-ui";
 import { useNavigate } from "react-router-dom";
-import { MobileBottomNavigation } from "./mobile-bottom-navigation.component";
 import { NavigationDrawer } from "./navigation-drawer.component";
 import { NavigationHeader } from "./navigation-header.component";
 import { ShellCommandPalette } from "./shell-command-palette.component";
 import { useCommandPalette } from "./use-command-palette.hook";
+import { useNavigationDrawer } from "./use-navigation-drawer.hook";
 import { useShellNavigation } from "./use-shell-navigation.hook";
 import type { ReactNode } from "react";
 
@@ -24,6 +24,8 @@ export function Shell(props: ShellProps) {
 
   const { commandPaletteItems, links } = useShellNavigation();
 
+  const navigationDrawer = useNavigationDrawer();
+
   const handleCommandPaletteSelect = (item: CommandPaletteEntry): void => {
     commandPalette.close();
 
@@ -32,7 +34,10 @@ export function Shell(props: ShellProps) {
 
   return (
     <UIPageSurface>
-      <NavigationHeader onOpenCommandPalette={commandPalette.openPalette} />
+      <NavigationHeader
+        onOpenCommandPalette={commandPalette.openPalette}
+        onOpenNavigation={navigationDrawer.open}
+      />
 
       <ShellCommandPalette
         items={commandPaletteItems}
@@ -43,13 +48,11 @@ export function Shell(props: ShellProps) {
         query={commandPalette.query}
       />
 
-      <UIResponsiveNavigationDrawer>
-        <NavigationDrawer links={links} />
-      </UIResponsiveNavigationDrawer>
+      <UINavigationDrawer onClose={navigationDrawer.close} open={navigationDrawer.isOpen}>
+        <NavigationDrawer links={links} onNavigate={navigationDrawer.close} />
+      </UINavigationDrawer>
 
-      <UIPageContent sidebarAware>{props.children}</UIPageContent>
-
-      <MobileBottomNavigation links={links} />
+      <UIPageContent>{props.children}</UIPageContent>
 
     </UIPageSurface>
   );

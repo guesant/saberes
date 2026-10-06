@@ -12,7 +12,7 @@ export interface GoalItemProgressProps {
 
 export function GoalItemProgress(props: GoalItemProgressProps) {
   return (
-    <UIResponsiveFields>
+      <UIResponsiveFields distribution="equal">
       <UITextField
         inputProps={{ max: props.target, min: 0, step: 1 }}
         label={props.label}

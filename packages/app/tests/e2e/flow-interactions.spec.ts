@@ -149,13 +149,16 @@ test("as ações do tópico levam à teoria, à prática e aos materiais", async
 
     await expect(target)
       .toBeInViewport();
+
+    await expect(action)
+      .toHaveAttribute("aria-current", "location");
   };
 
   await assertTopicAnchor("Teoria", "teoria");
 
   await assertTopicAnchor("Prática", "pratica");
 
-  await assertTopicAnchor("Materiais de apoio", "materiais");
+  await assertTopicAnchor("Materiais", "materiais");
 });
 
 test("ações rápidas só revelam a busca após solicitação e levam à tela escolhida", async ({ page }) => {

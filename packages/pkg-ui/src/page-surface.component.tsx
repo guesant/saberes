@@ -8,17 +8,16 @@ export type UIPageSurfaceProps = {
 export function UIPageSurface(props: UIPageSurfaceProps): ReactElement {
   return (
     <UIBox
+      gap="none"
       inset="none"
-      layout="grid"
+      layout="native"
       sx={{
+        display: "grid",
         height: "100vh",
         inset: 0,
         overflow: "hidden",
         position: "fixed",
-        gridTemplateColumns: {
-          md: "264px minmax(0, 1fr) 264px",
-          xs: "minmax(0, 1fr)",
-        },
+        gridTemplateColumns: "minmax(0, 1fr) minmax(0, 500px) minmax(0, 1fr)",
         gridTemplateRows: "auto minmax(0, 1fr)",
         minHeight: 0,
         minWidth: 0,

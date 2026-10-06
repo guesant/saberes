@@ -12,7 +12,7 @@ const spacingByToken = {
   lg: 3,
   md: 2,
   none: 0,
-  section: { md: 4, xs: 3 },
+  section: { md: 6, xs: 6 },
   sm: 1,
   xl: 4,
   xs: 0.5,

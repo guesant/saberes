@@ -1,4 +1,4 @@
-import { UIButton } from "@guesant/saberes-ui";
+import { UIChoiceButton } from "@guesant/saberes-ui";
 import type { PerformancePeriod } from "./performance-period.type";
 
 export interface PerformancePeriodButtonProps {
@@ -10,7 +10,7 @@ export interface PerformancePeriodButtonProps {
 
 export function PerformancePeriodButton(props: PerformancePeriodButtonProps) {
   return (
-    <UIButton
+    <UIChoiceButton
       aria-pressed={props.selected}
       onClick={() => {
         return props.onSelect(props.period);
@@ -19,6 +19,6 @@ export function PerformancePeriodButton(props: PerformancePeriodButtonProps) {
       variant={props.selected ? "contained" : "outlined"}
     >
       {props.label}
-    </UIButton>
+    </UIChoiceButton>
   );
 }

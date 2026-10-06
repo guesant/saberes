@@ -9,7 +9,7 @@ import type { TopicReadyViewProps } from "./topic-ready-view-props.type";
 
 export function TopicReadyView(props: TopicReadyViewProps) {
   return (
-    <UIFocusedContent><UIContentGroup variant="content">
+    <UIFocusedContent><UIContentGroup variant="section">
       <TopicHeader topic={props.data.topic} />
       <TopicLessonList lessons={props.data.lessons} />
       <TopicQuestionList questions={props.data.questions} />

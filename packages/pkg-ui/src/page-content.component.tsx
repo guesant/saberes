@@ -4,7 +4,6 @@ import type { ReactElement, ReactNode } from "react";
 
 export type UIPageContentProps = {
   children: ReactNode;
-  sidebarAware?: boolean;
 };
 
 export function UIPageContent(props: UIPageContentProps): ReactElement {
@@ -18,7 +17,7 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
         boxSizing: "border-box",
         bgcolor: "background.default",
         display: "grid",
-        gridColumn: props.sidebarAware ? { md: "2", xs: "1 / -1" } : "1 / -1",
+        gridColumn: "2",
         gridRow: 2,
         gridTemplateColumns: "minmax(0, 1fr)",
         gridTemplateRows: "minmax(0, 1fr)",

@@ -1,4 +1,4 @@
-import { UIButton } from "@guesant/saberes-ui";
+import { UIChoiceButton } from "@guesant/saberes-ui";
 import type { StudyGoalMetric } from "@guesant/saberes-application";
 
 export interface GoalMetricButtonProps {
@@ -10,13 +10,13 @@ export interface GoalMetricButtonProps {
 
 export function GoalMetricButton(props: GoalMetricButtonProps) {
   return (
-    <UIButton
+    <UIChoiceButton
       onClick={() => {
         return props.onSelect(props.metric);
       }}
       variant={props.selected ? "contained" : "outlined"}
     >
       {props.label}
-    </UIButton>
+    </UIChoiceButton>
   );
 }

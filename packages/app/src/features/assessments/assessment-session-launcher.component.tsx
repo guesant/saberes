@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
+import { UIChoiceButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { AssessmentSessionLauncherFeedback } from "./assessment-session-launcher-feedback.component";
 import { useAssessmentSessionLauncher } from "./use-assessment-session-launcher.hook";
@@ -16,12 +16,12 @@ export function AssessmentSessionLauncher(props: AssessmentSessionLauncherProps)
   return (
     <UIContentGroup variant="content">
       <UIInlineActions wrap>
-        <UIButton disabled={viewModel.pending} variant="contained" onClick={() => { return viewModel.startSession("practice"); }}>
+        <UIChoiceButton disabled={viewModel.pending} variant="contained" onClick={() => { return viewModel.startSession("practice"); }}>
           {t("assessment.practiceQuestions")}
-        </UIButton>
-        <UIButton disabled={viewModel.pending || !props.assessment.canSimulate} variant="outlined" onClick={() => { return viewModel.startSession("simulation"); }}>
+        </UIChoiceButton>
+        <UIChoiceButton disabled={viewModel.pending || !props.assessment.canSimulate} variant="outlined" onClick={() => { return viewModel.startSession("simulation"); }}>
           {t("simulator.start")}
-        </UIButton>
+        </UIChoiceButton>
       </UIInlineActions>
       <UITypography color="text.secondary">
         {props.assessment.canSimulate

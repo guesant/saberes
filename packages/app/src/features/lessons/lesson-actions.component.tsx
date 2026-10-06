@@ -1,4 +1,5 @@
 import {
+  UIBookmarkIcon,
   UIBookmarkBorderIcon,
   UIButton,
   UICheckCircleIcon,
@@ -35,17 +36,23 @@ export function LessonActions(props: LessonActionsProps) {
   return (
     <UIInlineActions>
       <UIButton
+        aria-pressed={props.bookmarked}
         disabled={props.bookmarkActionState === "saving"}
+        iconOnly
+        iconShape="square"
         variant="outlined"
-        startIcon={<UIBookmarkBorderIcon />}
+        startIcon={props.bookmarked ? <UIBookmarkIcon /> : <UIBookmarkBorderIcon />}
         onClick={props.onBookmark}
       >
         {bookmarkLabel}
       </UIButton>
 
       <UIButton
+        aria-pressed={props.completed}
         variant="contained"
         disabled={props.progressActionState === "saving"}
+        iconOnly
+        iconShape="square"
         startIcon={<UICheckCircleIcon />}
         onClick={() => {
           return props.onComplete(!props.completed);

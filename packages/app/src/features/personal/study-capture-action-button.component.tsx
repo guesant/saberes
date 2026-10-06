@@ -3,7 +3,7 @@ import type { StudyCaptureActionButtonProps } from "./study-capture-action-butto
 
 export function StudyCaptureActionButton(props: StudyCaptureActionButtonProps) {
   return (
-    <UIButton href={props.href} variant={props.variant}>
+    <UIButton href={props.href} iconOnly={false} variant={props.variant}>
       {props.label}
     </UIButton>
   );

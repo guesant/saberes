@@ -7,11 +7,12 @@ export type NavigationItemProps = {
   label: string;
   selected: boolean;
   to: string;
+  onNavigate(): void;
 };
 
 export function NavigationItem(props: NavigationItemProps) {
   return (
-    <UIListItemButton component={Link} selected={props.selected} to={props.to}>
+    <UIListItemButton component={Link} onClick={props.onNavigate} selected={props.selected} to={props.to}>
       <UIListItemIcon>{props.icon}</UIListItemIcon>
       <UIListItemText primary={props.label} />
     </UIListItemButton>

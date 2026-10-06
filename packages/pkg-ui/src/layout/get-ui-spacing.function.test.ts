@@ -22,8 +22,8 @@ describe("tokens de espaçamento de UI", () => {
       .toBe(4);
   });
 
-  it("expande espaçamento de seção de forma responsiva", () => {
+  it("usa 3rem de espaçamento entre seções em todos os tamanhos", () => {
     expect(getUiSpacing("section"))
-      .toEqual({ xs: 3, md: 4 });
+      .toEqual({ xs: 6, md: 6 });
   });
 });

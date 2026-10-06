@@ -13,7 +13,13 @@ export function CatalogFilterDialog(props: CatalogFilterDialogProps) {
 
   return (
     <>
-      <UIButton onClick={() => { return setOpen(true); }} variant="outlined">
+      <UIButton
+        aria-label={props.triggerLabel}
+        iconOnly
+        iconShape="square"
+        onClick={() => { return setOpen(true); }}
+        variant="outlined"
+      >
         {props.triggerLabel}
       </UIButton>
       <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>

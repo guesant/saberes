@@ -1,3 +1,4 @@
+import { buttonBaseThemeOverrides } from "./button-base-theme-overrides.config";
 import { buttonThemeOverrides } from "./button-theme-overrides.config";
 import { cardThemeOverrides } from "./card-theme-overrides.config";
 import { createTheme } from "./create-theme.function";
@@ -85,10 +86,15 @@ export const theme = createTheme({
     ...buttonThemeOverrides,
     MuiAppBar: {
       styleOverrides: {
-        root: { backgroundColor: "#1b1e23", color: "#fff", boxShadow: "none" },
+        root: {
+          backgroundColor: "#1b1e23",
+          color: "#fff",
+          boxShadow: "none",
+          borderBlockEnd: "1px solid var(--mui-palette-divider)",
+        },
       },
     },
-    MuiButtonBase: { defaultProps: { disableRipple: true } },
+    ...buttonBaseThemeOverrides,
     MuiIconButton: {
       defaultProps: { disableRipple: true },
       styleOverrides: {
@@ -110,15 +116,6 @@ export const theme = createTheme({
     MuiListItemButton: {
       defaultProps: { disableRipple: true },
       styleOverrides: { root: { minHeight: 44 } },
-    },
-    MuiList: {
-      styleOverrides: {
-        root: {
-          paddingBlock: 0,
-          borderBlock: "1px solid var(--mui-palette-divider)",
-          "& > * + *": { borderBlockStart: "1px solid var(--mui-palette-divider)" },
-        },
-      },
     },
     MuiStepButton: { defaultProps: { disableRipple: true } },
     MuiAlert: {

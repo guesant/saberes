@@ -7,7 +7,16 @@ export type UICatalogCardGridProps = {
 
 export function UICatalogCardGrid(props: UICatalogCardGridProps): ReactElement {
   return (
-    <UIBox gap="md" inset="none" layout="grid" sx={{ gridTemplateColumns: { md: "repeat(2, minmax(0, 1fr))", xs: "minmax(0, 1fr)" } }}>
+    <UIBox
+      gap="md"
+      inset="none"
+      layout="grid"
+      sx={{
+        alignItems: "stretch",
+        gridAutoRows: "1fr",
+        gridTemplateColumns: { md: "repeat(2, minmax(0, 1fr))", xs: "minmax(0, 1fr)" },
+      }}
+    >
       {props.children}
     </UIBox>
   );

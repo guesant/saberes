@@ -1,4 +1,4 @@
-import { UIButton, UIInlineActions } from "@guesant/saberes-ui";
+import { UIChoiceButton, UIInlineActions } from "@guesant/saberes-ui";
 import type { PersonalLensView } from "@guesant/saberes-application";
 
 export interface PersonalKnowledgeViewModeControlsProps {
@@ -10,18 +10,18 @@ export interface PersonalKnowledgeViewModeControlsProps {
 export function PersonalKnowledgeViewModeControls(props: PersonalKnowledgeViewModeControlsProps) {
   return (
     <UIInlineActions wrap>
-      <UIButton
+      <UIChoiceButton
         onClick={() => { props.onChange("tree"); }}
         variant={props.view === "tree" ? "contained" : "outlined"}
       >
         Árvore
-      </UIButton>
-      <UIButton
+      </UIChoiceButton>
+      <UIChoiceButton
         onClick={() => { props.onChange("board"); }}
         variant={props.view === "board" ? "contained" : "outlined"}
       >
         Board
-      </UIButton>
+      </UIChoiceButton>
     </UIInlineActions>
   );
 }

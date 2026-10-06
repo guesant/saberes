@@ -5,6 +5,7 @@ import type { NavigationLink } from "./navigation-link.interface";
 
 export type NavigationDrawerProps = {
   links: NavigationLink[];
+  onNavigate(): void;
 };
 
 export function NavigationDrawer(props: NavigationDrawerProps) {
@@ -18,6 +19,7 @@ export function NavigationDrawer(props: NavigationDrawerProps) {
             icon={link.icon}
             key={link.to}
             label={link.label}
+            onNavigate={props.onNavigate}
             selected={link.to !== "/" && location.pathname.startsWith(link.to)}
             to={link.to}
           />

@@ -1,5 +1,5 @@
 import { LearningCourseType } from "@guesant/saberes-application";
-import { UIButton, UIInlineActions } from "@guesant/saberes-ui";
+import { UIChoiceButton, UIInlineActions } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { CatalogCourseTypeFilterProps } from "./catalog-course-type-filter-props.type";
 
@@ -8,7 +8,7 @@ export function CatalogCourseTypeFilter(props: CatalogCourseTypeFilterProps) {
 
   return (
     <UIInlineActions>
-      <UIButton
+      <UIChoiceButton
         onClick={() => {
           return props.onChange(undefined);
         }}
@@ -16,8 +16,8 @@ export function CatalogCourseTypeFilter(props: CatalogCourseTypeFilterProps) {
         variant={!props.value ? "contained" : "outlined"}
       >
         {t("catalog.courseType.all")}
-      </UIButton>
-      <UIButton
+      </UIChoiceButton>
+      <UIChoiceButton
         onClick={() => {
           return props.onChange(LearningCourseType.General);
         }}
@@ -25,8 +25,8 @@ export function CatalogCourseTypeFilter(props: CatalogCourseTypeFilterProps) {
         variant={props.value === LearningCourseType.General ? "contained" : "outlined"}
       >
         {t("catalog.courseType.general")}
-      </UIButton>
-      <UIButton
+      </UIChoiceButton>
+      <UIChoiceButton
         onClick={() => {
           return props.onChange(LearningCourseType.Specific);
         }}
@@ -34,7 +34,7 @@ export function CatalogCourseTypeFilter(props: CatalogCourseTypeFilterProps) {
         variant={props.value === LearningCourseType.Specific ? "contained" : "outlined"}
       >
         {t("catalog.courseType.specific")}
-      </UIButton>
+      </UIChoiceButton>
     </UIInlineActions>
   );
 }

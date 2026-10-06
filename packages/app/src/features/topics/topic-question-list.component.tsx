@@ -7,7 +7,7 @@ export function TopicQuestionList(props: TopicQuestionListProps) {
   const { t } = useTranslation();
 
   return (
-    <UIContentGroup id="pratica" variant="list">
+    <UIContentGroup id="pratica" variant="section">
       <UITypography variant="h5">{t("discovery.practice")}</UITypography>
       <TopicQuestionPreview questions={props.questions} />
     </UIContentGroup>

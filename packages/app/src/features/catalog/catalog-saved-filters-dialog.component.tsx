@@ -1,4 +1,4 @@
-import { UIButton, UIDialog } from "@guesant/saberes-ui";
+import { UIButton, UIBookmarkBorderIcon, UIDialog } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { CatalogSavedFiltersContent } from "./catalog-saved-filters-content.component";
 import type { CatalogSavedFiltersProps } from "./catalog-saved-filters-props.type";
@@ -13,7 +13,14 @@ export function CatalogSavedFiltersDialog(props: CatalogSavedFiltersDialogProps)
 
   return (
     <>
-      <UIButton onClick={() => { return setOpen(true); }} variant="outlined">
+      <UIButton
+        aria-label={props.triggerLabel}
+        iconOnly
+        iconShape="square"
+        onClick={() => { return setOpen(true); }}
+        startIcon={<UIBookmarkBorderIcon fontSize="small" />}
+        variant="outlined"
+      >
         {props.triggerLabel}
       </UIButton>
       <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>

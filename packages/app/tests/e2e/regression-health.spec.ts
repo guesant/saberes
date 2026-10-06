@@ -31,6 +31,12 @@ test("@regression o foco sincroniza cada transição com o estado local", async 
   await page.getByRole("button", { name: "Iniciar foco" })
     .click();
 
+  await expect(page.getByRole("timer", { name: "Tempo de foco" }))
+    .toBeVisible();
+
+  await expect(page.getByRole("timer", { name: "Tempo de foco" }))
+    .toContainText(/00:00:0\d/);
+
   await expect(page.getByRole("button", { name: "Pausar foco" }))
     .toBeEnabled();
 
@@ -51,4 +57,10 @@ test("@regression o foco sincroniza cada transição com o estado local", async 
 
   await expect(page.getByRole("button", { name: "Iniciar foco" }))
     .toBeEnabled();
+
+  await page.getByRole("button", { name: "Ver histórico de foco" })
+    .click();
+
+  await expect(page.getByRole("dialog", { name: "Ver histórico de foco" }))
+    .toContainText("Concluída");
 });

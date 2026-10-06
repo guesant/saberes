@@ -1,5 +1,5 @@
 import { FsrsRating, type ReviewTarget } from "@guesant/saberes-application";
-import { UIButton, UIInlineActions } from "@guesant/saberes-ui";
+import { UIChoiceButton, UIInlineActions } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { formatReviewDate } from "./format-review-date.function";
 import type { ReviewPreview } from "./review-preview.type";
@@ -21,30 +21,30 @@ export function ReviewRatingControls(props: ReviewRatingControlsProps) {
 
   return (
     <UIInlineActions wrap>
-      <UIButton
+      <UIChoiceButton
         variant="outlined"
         onClick={() => { return props.onRate(props.target, FsrsRating.Again); }}
       >
         {t("review.again")} · {getDueLabel(FsrsRating.Again)}
-      </UIButton>
-      <UIButton
+      </UIChoiceButton>
+      <UIChoiceButton
         variant="outlined"
         onClick={() => { return props.onRate(props.target, FsrsRating.Hard); }}
       >
         {t("review.hard")} · {getDueLabel(FsrsRating.Hard)}
-      </UIButton>
-      <UIButton
+      </UIChoiceButton>
+      <UIChoiceButton
         variant="outlined"
         onClick={() => { return props.onRate(props.target, FsrsRating.Good); }}
       >
         {t("review.good")} · {getDueLabel(FsrsRating.Good)}
-      </UIButton>
-      <UIButton
+      </UIChoiceButton>
+      <UIChoiceButton
         variant="outlined"
         onClick={() => { return props.onRate(props.target, FsrsRating.Easy); }}
       >
         {t("review.easy")} · {getDueLabel(FsrsRating.Easy)}
-      </UIButton>
+      </UIChoiceButton>
     </UIInlineActions>
   );
 }

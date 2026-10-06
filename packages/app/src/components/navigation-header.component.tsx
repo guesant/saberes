@@ -2,6 +2,7 @@ import {
   UIAppBar,
   UIHeaderBrand,
   UIIconButton,
+  UIMenuIcon,
   UIOfflineStatusChip,
   UISearchIcon,
   UIToolbar,
@@ -10,6 +11,8 @@ import { useTranslation } from "react-i18next";
 
 export type NavigationHeaderProps = {
   onOpenCommandPalette(): void;
+
+  onOpenNavigation(): void;
 };
 
 export function NavigationHeader(props: NavigationHeaderProps) {
@@ -18,6 +21,14 @@ export function NavigationHeader(props: NavigationHeaderProps) {
   return (
     <UIAppBar color="primary">
       <UIToolbar>
+        <UIIconButton
+          aria-label={t("common.openMenu")}
+          color="inherit"
+          onClick={props.onOpenNavigation}
+        >
+          <UIMenuIcon />
+        </UIIconButton>
+
         <UIHeaderBrand href="/">{t("brand.headerName")}</UIHeaderBrand>
 
         <UIIconButton

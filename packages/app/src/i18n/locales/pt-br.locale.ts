@@ -9,6 +9,7 @@ const ptBR = {
     theory: "Teoria",
     practice: "Prática",
     materials: "Materiais de apoio",
+    materialsShort: "Materiais",
     moreLessons: "Ver mais aulas ({{count}})",
     moreQuestions: "Ver mais exercícios ({{count}})",
     moreMaterials: "Ver mais materiais ({{count}})",
@@ -145,7 +146,9 @@ const ptBR = {
     loading: "Carregando sessões de foco...",
     loadError: "Não foi possível carregar suas sessões de foco.",
     active: "Sessão em andamento",
+    paused: "Sessão pausada",
     ready: "Pronto para começar",
+    elapsedTime: "Tempo de foco",
     start: "Iniciar foco",
     contentKey: "Conteúdo associado (opcional)",
     pause: "Pausar foco",
@@ -153,7 +156,15 @@ const ptBR = {
     stop: "Encerrar foco",
     history: "Ver histórico de foco",
     empty: "Suas sessões concluídas aparecerão aqui.",
-    session: "{{status}} · {{elapsed}} min",
+    status: {
+      active: "Em andamento",
+      paused: "Pausada",
+      completed: "Concluída",
+    },
+    duration: {
+      hoursAndMinutes: "{{hours}} h {{minutes}} min",
+      minutes: "{{minutes}} min",
+    },
   },
   academic: {
     eyebrow: "Situação local",
@@ -359,6 +370,7 @@ const ptBR = {
   },
   topics: {
     eyebrow: "Programas de conteúdo",
+    sectionNavigation: "Navegação pelas seções do tópico",
     title: "Tópicos de estudo",
     description: "O catálogo global de tópicos pode aparecer em diferentes programas e edições.",
     lessons: "Lições relacionadas",

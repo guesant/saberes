@@ -80,9 +80,7 @@ viewports.forEach((viewport) => {
 
         const toolbar = document.querySelector<HTMLElement>("header.MuiAppBar-root");
 
-        const bottomTabs = document.querySelector<HTMLElement>("nav[aria-label='Navegação principal']");
-
-        if (!mainElement || !toolbar || !bottomTabs) {
+        if (!mainElement || !toolbar) {
           throw new Error("Shell scroll containers are missing");
         }
 
@@ -95,7 +93,6 @@ viewports.forEach((viewport) => {
         mainElement.append(longContent);
 
         return {
-          bottomTabsTop: bottomTabs.getBoundingClientRect().top,
           documentHeight: document.documentElement.scrollHeight,
           documentTop: document.documentElement.scrollTop,
           mainClientHeight: mainElement.clientHeight,
@@ -128,14 +125,11 @@ viewports.forEach((viewport) => {
       const scrolledGeometry = await page.evaluate(() => {
         const toolbar = document.querySelector<HTMLElement>("header.MuiAppBar-root");
 
-        const bottomTabs = document.querySelector<HTMLElement>("nav[aria-label='Navegação principal']");
-
-        if (!toolbar || !bottomTabs) {
+        if (!toolbar) {
           throw new Error("Shell navigation is missing");
         }
 
         return {
-          bottomTabsTop: bottomTabs.getBoundingClientRect().top,
           documentTop: document.documentElement.scrollTop,
           toolbarTop: toolbar.getBoundingClientRect().top,
         };
@@ -147,10 +141,6 @@ viewports.forEach((viewport) => {
       expect(scrolledGeometry.toolbarTop)
         .toBeCloseTo(initialGeometry.toolbarTop, 0);
 
-      if (viewport.width < 900) {
-        expect(scrolledGeometry.bottomTabsTop)
-          .toBeCloseTo(initialGeometry.bottomTabsTop, 0);
-      }
     });
   });
 });

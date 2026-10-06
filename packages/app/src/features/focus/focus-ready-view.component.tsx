@@ -19,12 +19,12 @@ export function FocusReadyView(props: FocusReadyViewProps) {
         <UITypography color="text.secondary">{t("focus.description")}</UITypography>
       </UIContentGroup>
       <FocusSessionControl
-        active={props.viewModel.active !== null}
+        activeSession={props.viewModel.active}
         onPause={props.viewModel.pause}
         onResume={props.viewModel.resume}
         onStart={props.viewModel.start}
         onStop={props.viewModel.stop}
-        paused={props.viewModel.paused !== null}
+        pausedSession={props.viewModel.paused}
       />
       <UIDialogAction label={t("focus.history")} title={t("focus.history")}>
         <FocusSessionList sessions={props.viewModel.sessions} />

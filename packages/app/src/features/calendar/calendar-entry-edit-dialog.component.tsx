@@ -1,4 +1,4 @@
-import { UIButton, UIDialog } from "@guesant/saberes-ui";
+import { UIButton } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { CalendarEntryForm } from "./calendar-entry-form.component";
 import type { CalendarEntryFormInput } from "./calendar-entry-form-input.interface";
@@ -25,19 +25,20 @@ export function CalendarEntryEditDialog(props: CalendarEntryEditDialogProps) {
       <UIButton onClick={() => { return setOpen(true); }} variant="text">
         {props.triggerLabel}
       </UIButton>
-      <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>
-        <CalendarEntryForm
-          initialValue={{
-            description: props.entry.description,
-            endsAt: props.entry.endsAt ?? "",
-            startsAt: props.entry.startsAt,
-            title: props.entry.title,
-          }}
-          onSave={save}
-          submitLabel={props.triggerLabel}
-          title={props.title}
-        />
-      </UIDialog>
+      <CalendarEntryForm
+        dialogTitle={props.title}
+        initialValue={{
+          description: props.entry.description,
+          endsAt: props.entry.endsAt ?? "",
+          startsAt: props.entry.startsAt,
+          title: props.entry.title,
+        }}
+        onClose={() => { return setOpen(false); }}
+        onSave={save}
+        open={open}
+        submitLabel={props.triggerLabel}
+        title={props.title}
+      />
     </>
   );
 }

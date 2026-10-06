@@ -25,7 +25,7 @@ export function UIPageContentMain(props: UIPageContentMainProps): ReactElement {
         overflowY: "auto",
         overscrollBehaviorY: "contain",
         px: { md: 3, xs: 2 },
-        pb: { md: 5, xs: 11 },
+        pb: 5,
         pt: { md: 4, xs: 3 },
         scrollbarGutter: "stable",
         width: "100%",

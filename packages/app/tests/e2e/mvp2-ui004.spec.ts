@@ -11,7 +11,7 @@ const viewports = [
 ];
 
 viewports.forEach((viewport) => {
-  test(`M2-UI-004 ${viewport.name} preserves navigation and overflow`, async ({ page }) => {
+  test(`M2-UI-004 ${viewport.name} opens overlay navigation and preserves layout`, async ({ page }) => {
     await page.setViewportSize({ height: viewport.height, width: viewport.width });
 
     await page.goto(homeRoute, { waitUntil: "networkidle" });
@@ -20,7 +20,11 @@ viewports.forEach((viewport) => {
       .toBeVisible();
 
     const geometry = await page.evaluate(() => {
+      const appBar = document.querySelector<HTMLElement>("header.MuiAppBar-root");
+
       return {
+        appBarLeft: appBar?.getBoundingClientRect().left ?? 0,
+        appBarWidth: appBar?.getBoundingClientRect().width ?? 0,
         documentWidth: document.documentElement.scrollWidth,
         viewportWidth: window.innerWidth,
       };
@@ -29,26 +33,31 @@ viewports.forEach((viewport) => {
     expect(geometry.documentWidth)
       .toBeLessThanOrEqual(geometry.viewportWidth + 1);
 
-    const bottomNavigation = page.getByRole("navigation", { name: "Navegação principal" });
+    expect(geometry.appBarWidth)
+      .toBeLessThanOrEqual(500);
 
-    const drawer = page.getByTestId("desktop-navigation-drawer")
+    expect(geometry.appBarLeft + geometry.appBarWidth / 2)
+      .toBeCloseTo(geometry.viewportWidth / 2, 0);
+
+    await expect(page.getByRole("navigation", { name: "Navegação principal" }))
+      .toHaveCount(0);
+
+    const drawer = page.getByTestId("navigation-drawer")
       .locator(".MuiDrawer-paper");
 
-    if (viewport.width < 900) {
-      await expect(bottomNavigation)
-        .toBeVisible();
+    await expect(drawer)
+      .toBeHidden();
 
-      await expect(drawer)
-        .toBeHidden();
-    }
+    await page.getByRole("button", { name: "Abrir menu de navegação" })
+      .click();
 
-    if (viewport.width >= 900) {
-      await expect(bottomNavigation)
-        .toBeHidden();
+    await expect(drawer)
+      .toBeVisible();
 
-      await expect(drawer)
-        .toBeVisible();
-    }
+    await page.keyboard.press("Escape");
+
+    await expect(drawer)
+      .toBeHidden();
   });
 });
 

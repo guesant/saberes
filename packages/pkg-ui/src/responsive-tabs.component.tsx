@@ -28,7 +28,7 @@ export function UIResponsiveTabs(props: UIResponsiveTabsProps): ReactElement {
     <MuiTabs
       {...props}
       allowScrollButtonsMobile
-      scrollButtons="auto"
+      scrollButtons
       sx={responsiveTabsSx}
       variant="scrollable"
     />

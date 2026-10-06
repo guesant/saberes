@@ -47,25 +47,29 @@ describe("tema da plataforma", () => {
     });
   });
 
-  it("delimita listas no início, entre itens e no fim", () => {
-    const listRoot = theme.components?.MuiList?.styleOverrides?.root;
-
-    expect(listRoot).toMatchObject({
-      borderBlock: "1px solid var(--mui-palette-divider)",
-      "& > * + *": { borderBlockStart: "1px solid var(--mui-palette-divider)" },
-      paddingBlock: 0,
-    });
-  });
-
   it("delimita tabs antes, entre e depois sem desativar rolagem", () => {
     const tabsRoot = theme.components?.MuiTabs?.styleOverrides?.root;
+    const scrollButtons = theme.components?.MuiTabs?.styleOverrides?.scrollButtons;
     const tabRoot = theme.components?.MuiTab?.styleOverrides?.root;
 
     expect(tabsRoot).toMatchObject({ borderBlock: "1px solid var(--mui-palette-divider)" });
     expect(tabRoot).toMatchObject({
       borderInlineEnd: "1px solid var(--mui-palette-divider)",
       "&:first-of-type": { borderInlineStart: "1px solid var(--mui-palette-divider)" },
+      "&:last-of-type": { borderInlineEnd: "1px solid var(--mui-palette-divider)" },
       whiteSpace: "nowrap",
+    });
+    expect(scrollButtons).toMatchObject({
+      flex: "0 0 40px",
+      borderInline: "1px solid var(--mui-palette-divider)",
+    });
+  });
+
+  it("separa o header global do conteúdo com a borda do tema", () => {
+    const appBarRoot = theme.components?.MuiAppBar?.styleOverrides?.root;
+
+    expect(appBarRoot).toMatchObject({
+      borderBlockEnd: "1px solid var(--mui-palette-divider)",
     });
   });
 });

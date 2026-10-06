@@ -8,6 +8,7 @@ export function UIFormAction(props: UIFormActionProps): ReactElement {
   return (
     <UIButton
       {...props}
+      iconOnly={props.iconOnly ?? false}
       sx={{ alignSelf: "flex-start", width: { sm: "auto", xs: "100%" }, ...props.sx }}
     />
   );

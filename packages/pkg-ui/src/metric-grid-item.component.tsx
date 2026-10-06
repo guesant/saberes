@@ -12,7 +12,7 @@ export function UIMetricGridItem(props: UIMetricGridItemProps): ReactElement {
       gap="none"
       inset="none"
       layout="column"
-      sx={{ height: "100%", "& > *": { flex: 1 } }}
+      sx={{ height: "100%", "& > *": { height: "100%" } }}
     >
       {props.children}
     </UIBox>

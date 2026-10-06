@@ -1,4 +1,4 @@
-import { UIButton } from "@guesant/saberes-ui";
+import { UIChoiceButton } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { DiagnosisOption } from "./diagnosis-option.type";
 
@@ -14,7 +14,7 @@ export function DiagnosisOption(props: DiagnosisOptionProps) {
   const { t } = useTranslation();
 
   return (
-    <UIButton
+    <UIChoiceButton
       aria-pressed={props.selected}
       variant={props.selected ? "contained" : "outlined"}
       onClick={() => {
@@ -22,6 +22,6 @@ export function DiagnosisOption(props: DiagnosisOptionProps) {
       }}
     >
       {t(option.labelKey)}
-    </UIButton>
+    </UIChoiceButton>
   );
 }

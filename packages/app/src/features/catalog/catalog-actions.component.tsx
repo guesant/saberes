@@ -1,3 +1,4 @@
+import { UIBox } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { CatalogFilterDialog } from "./catalog-filter-dialog.component";
 import { CatalogSavedFiltersDialog } from "./catalog-saved-filters-dialog.component";
@@ -11,7 +12,7 @@ export function CatalogActions(props: CatalogActionsProps) {
   const { t } = useTranslation();
 
   return (
-    <>
+    <UIBox gap="sm" inset="none" layout="row" sx={{ alignItems: "center" }}>
       <CatalogFilterDialog
         title={t("catalog.filterDetails")}
         triggerLabel={t("catalog.filterDetails")}
@@ -32,6 +33,6 @@ export function CatalogActions(props: CatalogActionsProps) {
         title={t("catalog.savedFilters")}
         triggerLabel={t("catalog.savedFilters")}
       />
-    </>
+    </UIBox>
   );
 }

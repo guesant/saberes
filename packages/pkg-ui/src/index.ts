@@ -1,6 +1,5 @@
 export * from "./alert.component";
-export * from "./autocomplete-option.interface";
-export * from "./autocomplete-props.interface";
+export * from "./autocomplete-option.interface"; export * from "./autocomplete-props.interface";
 export * from "./autocomplete.component";
 export * from "./focused-content.component";
 export * from "./discovery-grid.component";
@@ -85,6 +84,7 @@ export * from "./check-circle-icon.component";
 
 export * from "./chip.component";
 export * from "./choice-option-content.component";
+export * from "./choice-button.component";
 
 export * from "./circular-progress.component";
 
@@ -107,7 +107,7 @@ export * from "./download-file-button.component";
 export * from "./download-file-button-props.type";
 
 export * from "./drawer.component";
-export * from "./responsive-navigation-drawer.component";
+export * from "./navigation-drawer.component";
 
 export * from "./footer-surface.component";
 
@@ -217,8 +217,7 @@ export * from "./responsive-grid.component";
 
 export * from "./responsive-grid-props.interface";
 
-export * from "./responsive-tabs.component";
-
+export * from "./responsive-tabs.component"; export * from "./section-navigation.component";
 export * from "./stack.component";
 
 export * from "./start-aligned-button.component";
@@ -272,7 +271,6 @@ export * from "./toolbar.component";
 export * from "./two-column-layout.component";
 
 export * from "./typography.component";
-
 export * from "./wrapped-typography.component";
 
 export * from "./wrapped-typography-props.interface";
