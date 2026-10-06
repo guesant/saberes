@@ -1,7 +1,6 @@
 import { gradeQuestionAnswer } from "@guesant/saberes-application";
-import { syncStudyAchievements } from "../my-study/sync-study-achievements.function";
-import { saveQuestionReviewTarget } from "./save-question-review-target.function";
-import { syncQuestionMastery } from "./sync-question-mastery.function";
+import { getQuestionAttemptContentKey } from "./get-question-attempt-content-key.function";
+import { syncQuestionSubmission } from "./sync-question-submission.function";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
 import type {
   ApplicationServices,
@@ -25,23 +24,23 @@ export async function submitQuestionAnswer(
 
   const { question } = data;
 
-  const expected = String(question.correct_answer || "")
+  const expected = String(question.correct_answer ?? "")
     .toUpperCase();
-
-  const isGradable = Boolean(question.is_automatically_gradable);
 
   const correct = gradeQuestionAnswer({
     answer,
-    automaticallyGradable: isGradable,
+    automaticallyGradable: Boolean(question.is_automatically_gradable),
     expectedAnswer: expected,
-    questionType: String(question.type || "short_text"),
+    questionType: String(question.type ?? "short_text"),
   });
 
-  const contentKey = String(question.occurrence_key || `question:${question.occurrence_id}`);
+  const contentKey = getQuestionAttemptContentKey(question);
 
   const attempt = await services.exercises.recordAttempt.execute({
     contentKey,
-    questionId: String(question.occurrence_id),
+    questionId: question.occurrence_id ?? contentKey,
+    canonicalQuestionKey: question.canonical_key,
+    occurrenceKey: question.occurrence_key,
     answer,
     confidence,
     elapsedMs,
@@ -50,13 +49,7 @@ export async function submitQuestionAnswer(
     topicIds: data.topics.map((topic) => { return String(topic.topic_id); }),
   });
 
-  await syncQuestionMastery({ services });
-
-  await services.study.recordStudyActivity.execute({ type: "question" });
-
-  await saveQuestionReviewTarget({ services, contentKey, correct });
-
-  await syncStudyAchievements(services);
+  await syncQuestionSubmission({ services, contentKey, correct });
 
   return {
     attemptId: attempt.id || "",

@@ -19,3 +19,4 @@ export * from "./content-renderer.component";
 export * from "./markdown-image.component";
 export * from "./markdown-link.component";
 export * from "./visualization/visualization-text-summary.component";
+export * from "./question-rich-text.component";

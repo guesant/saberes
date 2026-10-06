@@ -81,3 +81,5 @@ export * from "./schedule-review-port.port";
 export * from "./suggest-diagnosis-port.port";
 export * from "./sync-achievements-port.port";
 export * from "./validate-content-snapshot-port.port";
+export * from "./complete-simulation-session-port.port";
+export * from "./update-simulation-session-port.port";

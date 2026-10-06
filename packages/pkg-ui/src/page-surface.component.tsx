@@ -12,6 +12,7 @@ export function UIPageSurface(props: UIPageSurfaceProps): ReactElement {
       sx={{
         display: { md: "grid", xs: "block" },
         gridTemplateColumns: { md: "264px minmax(0, 1fr)", xs: "1fr" },
+        gridTemplateRows: { md: "auto 1fr", xs: "auto" },
         minHeight: "100vh",
         "& > [data-ui-layout='toolbar']": { gridColumn: "1 / -1" },
       }}

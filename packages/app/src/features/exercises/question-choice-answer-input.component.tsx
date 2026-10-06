@@ -29,7 +29,7 @@ export function QuestionChoiceAnswerInput(props: QuestionChoiceAnswerInputProps)
           <QuestionOption
             key={String(option.id)}
             option={option}
-            selected={selectedValues.includes(String(option.code))}
+            selected={selectedValues.includes(option.canonicalCode)}
             onSelect={handleSelect}
           />
         );

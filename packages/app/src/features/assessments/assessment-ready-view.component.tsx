@@ -27,7 +27,7 @@ export function AssessmentReadyView(props: AssessmentReadyViewProps) {
         <AssessmentProgressError error={props.progressError} onRetry={props.onReloadProgress} />
       ) : null}
 
-      <AssessmentSessionLauncher assessmentKey={props.assessmentKey} items={props.data.items} />
+      <AssessmentSessionLauncher assessmentKey={props.assessmentKey} assessment={props.data.assessment} items={props.data.items} />
 
       <UIDisclosure summary={t("assessment.viewQuestions")}>
         <UIContentGroup variant="content">

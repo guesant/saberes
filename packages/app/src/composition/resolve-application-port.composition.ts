@@ -4,7 +4,7 @@ import type { ApplicationPortKey } from "./application-port-key.type";
 import type { ApplicationPorts } from "@guesant/saberes-application";
 import type { Container } from "inversify";
 
-export function resolveApplicationPort<TKey extends ApplicationPortKey>(
+export function resolveApplicationPort<TKey extends ApplicationPortKey & keyof typeof applicationDependencyTokens>(
   container: Container,
   key: TKey,
 ): ApplicationPorts[TKey] {

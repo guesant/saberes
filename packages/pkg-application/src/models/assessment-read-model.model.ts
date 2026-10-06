@@ -1,4 +1,7 @@
+import type { AssessmentDetailsReadModel } from "./assessment-details-read-model.interface";
+import type { AssessmentItemReadModel } from "./assessment-item-read-model.interface";
+
 export interface AssessmentReadModel {
-  assessment: Record<string, unknown>;
-  items: Array<Record<string, unknown>>;
+  assessment: AssessmentDetailsReadModel;
+  items: AssessmentItemReadModel[];
 }

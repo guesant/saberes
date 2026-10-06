@@ -1,6 +1,6 @@
-import type { Attempt } from "@guesant/saberes-application";
+import type { Attempt, AssessmentItemReadModel } from "@guesant/saberes-application";
 
 export type GetAssessmentProgressInput = {
   attempts: Attempt[];
-  items: Array<Record<string, unknown>>;
+  items: AssessmentItemReadModel[];
 };

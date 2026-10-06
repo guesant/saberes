@@ -1,3 +1,5 @@
+import type { TopicLessonReadModel } from "@guesant/saberes-application";
+
 export type TopicLessonListProps = {
-  lessons: Array<Record<string, unknown>>;
+  lessons: TopicLessonReadModel[];
 };

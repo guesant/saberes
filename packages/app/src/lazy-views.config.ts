@@ -16,6 +16,14 @@ export const AssessmentView = lazy(() => {
   );
 });
 
+export const AssessmentDiscoveryView = lazy(() => {
+  return import("./features/assessments-discovery/assessment-discovery-view.component").then(
+    ({ AssessmentDiscoveryView: Component }) => {
+      return { default: Component };
+    },
+  );
+});
+
 export const MyStudyView = lazy(() => {
   return import("./features/my-study/my-study-view.component").then(
     ({ MyStudyView: Component }) => {

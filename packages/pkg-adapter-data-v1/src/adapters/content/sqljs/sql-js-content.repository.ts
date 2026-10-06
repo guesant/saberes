@@ -1,8 +1,12 @@
 import { CatalogCardType } from "@guesant/saberes-domain";
-import { loadContentDatabase } from "./database/load-content-database.function";
 import { getCatalogFilters } from "./get-catalog-filters.function";
 import { getContentIdentifier } from "./get-content-identifier.function";
+import { mapAssessmentCatalogCard } from "./map-assessment-catalog-card.function";
+import { readContentAssessment } from "./read-content-assessment.function";
+import { readContentQuestion } from "./read-content-question.function";
+import { readContentTopic } from "./read-content-topic.function";
 import type { ContentRepositoryContract } from "./content-repository.contract";
+import type { ContentDatabaseProviderContract } from "./database/content-database-provider.contract";
 import type { ContentDatabase } from "./database/content-database.type";
 import type {
   AssessmentReadModel,
@@ -14,10 +18,13 @@ import type {
   LessonReadModel,
   QuestionReadModel,
   StudyPlanReadModel,
+  TopicReadModel,
   TopicMapReadModel,
 } from "@guesant/saberes-application";
 
 export class SqlJsContentRepository implements ContentRepositoryContract {
+  public constructor(private readonly provider: ContentDatabaseProviderContract) {}
+
   private databaseValue?: ContentDatabase;
 
   private databasePromise?: Promise<ContentDatabase>;
@@ -28,7 +35,7 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
     }
 
     if (!this.databasePromise) {
-      this.databasePromise = loadContentDatabase()
+      this.databasePromise = this.provider.execute()
         .then((database) => {
           this.databaseValue = database;
 
@@ -68,7 +75,11 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
     );
 
     const questions = db.query(
-      "SELECT qo.id, qo.number, e.year, ap.name process_name FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN papers p ON p.id = qo.paper_id JOIN stages st ON st.id = p.stage_id JOIN editions e ON e.id = st.edition_id JOIN admission_processes ap ON ap.id = e.admission_process_id WHERE q.status = 'published' ORDER BY e.year DESC, qo.number LIMIT 40",
+      "SELECT qo.id, qo.number, e.year, ap.name process_name FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN papers p ON p.id = qo.paper_id JOIN stages st ON st.id = p.stage_id JOIN editions e ON e.id = st.edition_id JOIN admission_processes ap ON ap.id = e.admission_process_id WHERE q.status = 'published' ORDER BY e.year DESC, qo.number",
+    );
+
+    const assessments = db.query(
+      "SELECT a.id, a.slug, a.title, a.description, a.duration_minutes, e.year, ap.name process_name, COUNT(asi.position) question_count FROM assessment_sets a LEFT JOIN editions e ON e.id = a.edition_id LEFT JOIN admission_processes ap ON ap.id = COALESCE(a.admission_process_id, e.admission_process_id) LEFT JOIN assessment_set_items asi ON asi.assessment_set_id = a.id AND asi.item_type = 'question' WHERE a.is_published = 1 GROUP BY a.id ORDER BY e.year DESC, a.title",
     );
 
     const { search } = normalizedFilters;
@@ -213,6 +224,15 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
               hasYearMatch(item.year)
             );
           }),
+        ...assessments
+          .map(mapAssessmentCatalogCard)
+          .filter((item) => {
+            return (
+              hasCatalogMatch(`${item.title} ${item.description || ""} ${item.meta || ""}`) &&
+              hasProcessMatch(item.processName) &&
+              hasYearMatch(item.year)
+            );
+          }),
       ],
     };
   }
@@ -270,59 +290,13 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
   async getQuestion(key: ContentKey | string): Promise<QuestionReadModel | null> {
     const db = await this.database();
 
-    const id = Number(getContentIdentifier(key));
-
-    const question = db.query(
-      "SELECT qo.id occurrence_id, qo.occurrence_key, q.id question_id, q.type, q.statement, q.explanation, q.difficulty, qo.number, e.year, ap.name process_name, s.name subject, ak.answer_value correct_answer, ak.is_automatically_gradable FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN papers p ON p.id = qo.paper_id JOIN stages st ON st.id = p.stage_id JOIN editions e ON e.id = st.edition_id JOIN admission_processes ap ON ap.id = e.admission_process_id LEFT JOIN subjects s ON s.id = qo.subject_id LEFT JOIN answer_keys ak ON ak.question_occurrence_id = qo.id AND ak.question_part_id IS NULL WHERE qo.id = ? AND q.status = 'published'",
-      [id],
-    )[0];
-
-    if (!question) {
-      return null;
-    }
-
-    return {
-      question,
-      options: db.query("SELECT * FROM question_options WHERE question_id = ? ORDER BY position", [
-        question.question_id,
-      ]),
-      parts: db.query("SELECT * FROM question_parts WHERE question_id = ? ORDER BY position", [
-        question.question_id,
-      ]),
-      topics: db.query(
-        "SELECT curriculum_topic_id topic_id FROM question_topics WHERE question_occurrence_id = ?",
-        [id],
-      ),
-      related: db.query(
-        "SELECT DISTINCT qo2.id, qo2.number FROM question_topics qt1 JOIN question_topics qt2 ON qt2.curriculum_topic_id = qt1.curriculum_topic_id JOIN question_occurrences qo2 ON qo2.id = qt2.question_occurrence_id WHERE qt1.question_occurrence_id = ? AND qo2.id <> ? LIMIT 4",
-        [id, id],
-      ),
-    };
+    return readContentQuestion(db, key);
   }
 
   async getAssessment(key: ContentKey | string): Promise<AssessmentReadModel | null> {
     const db = await this.database();
 
-    const identifier = getContentIdentifier(key);
-
-    const id = Number(identifier) || 0;
-
-    const assessment = db.query(
-      "SELECT * FROM assessment_sets WHERE is_published = 1 AND (id = ? OR slug = ?)",
-      [id, identifier],
-    )[0];
-
-    if (!assessment) {
-      return null;
-    }
-
-    return {
-      assessment,
-      items: db.query(
-        "SELECT * FROM assessment_set_items WHERE assessment_set_id = ? ORDER BY position",
-        [assessment.id],
-      ),
-    };
+    return readContentAssessment(db, key);
   }
 
   async getContentRelease(): Promise<ContentReleaseReadModel | null> {
@@ -367,38 +341,10 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
     };
   }
 
-  async getTopic(slug: string) {
+  async getTopic(slug: string): Promise<TopicReadModel | null> {
     const db = await this.database();
 
-    const topic = db.query("SELECT * FROM topics WHERE slug = ?", [slug])[0];
-
-    if (!topic) {
-      return null;
-    }
-
-    return {
-      topic,
-      children: db.query(
-        "SELECT slug, name, description FROM topics WHERE parent_id = ? ORDER BY name",
-        [topic.id],
-      ),
-      lessons: db.query(
-        "SELECT DISTINCT l.id, l.slug, l.title, l.intro description FROM lessons l JOIN lesson_topics lt ON lt.lesson_id = l.id LEFT JOIN curriculum_topics ct ON ct.id = lt.curriculum_topic_id WHERE l.is_published = 1 AND (lt.topic_id = ? OR ct.topic_id = ?) ORDER BY l.title",
-        [topic.id, topic.id],
-      ),
-      questions: db.query(
-        "SELECT DISTINCT qo.id, qo.number, q.statement, q.difficulty FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN question_topics qt ON qt.question_occurrence_id = qo.id JOIN curriculum_topics ct ON ct.id = qt.curriculum_topic_id WHERE q.status = 'published' AND ct.topic_id = ? ORDER BY qo.number",
-        [topic.id],
-      ),
-      prerequisites: db.query(
-        "SELECT t.slug, t.name, t.description, tr.note FROM topic_relations tr JOIN topics t ON t.id = tr.related_topic_id WHERE tr.topic_id = ? AND tr.relation_type = 'prerequisite' ORDER BY t.name",
-        [topic.id],
-      ),
-      related: db.query(
-        "SELECT t.slug, t.name, t.description, tr.relation_type FROM topic_relations tr JOIN topics t ON t.id = tr.related_topic_id WHERE tr.topic_id = ? ORDER BY t.name",
-        [topic.id],
-      ),
-    };
+    return readContentTopic(db, slug);
   }
 
   async getStudyPlan(slug = ""): Promise<StudyPlanReadModel> {

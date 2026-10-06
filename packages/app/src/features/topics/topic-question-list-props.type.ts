@@ -1,3 +1,5 @@
+import type { TopicQuestionReadModel } from "@guesant/saberes-application";
+
 export type TopicQuestionListProps = {
-  questions: Array<Record<string, unknown>>;
+  questions: TopicQuestionReadModel[];
 };

@@ -1,5 +1,6 @@
 import { applicationDependencyTokens } from "./application-dependency-tokens.config";
 import { resolvePort } from "./resolve-port.composition";
+import { resolveSimulationPorts } from "./resolve-simulation-ports.composition";
 import { resolveStudyActivityPorts } from "./resolve-study-activity-ports.composition";
 import { resolveStudySchedulerPorts } from "./resolve-study-scheduler-ports.composition";
 import type { ApplicationPorts } from "@guesant/saberes-application";
@@ -22,6 +23,7 @@ export function resolveStudyPorts(
   | "addStudyPoints"
   | "clock"
   | "ids"
+  | "simulation"
 > {
   return {
     calculateAcademicMetrics: resolvePort<ApplicationPorts["calculateAcademicMetrics"]>(
@@ -30,5 +32,6 @@ export function resolveStudyPorts(
     ),
     ...resolveStudySchedulerPorts(container),
     ...resolveStudyActivityPorts(container),
+    simulation: resolveSimulationPorts(container),
   };
 }

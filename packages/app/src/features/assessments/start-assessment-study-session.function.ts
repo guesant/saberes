@@ -1,12 +1,6 @@
 import { createQuestionStudySession } from "../exercises/create-question-study-session.function";
-import type { ApplicationServices, StudySession } from "@guesant/saberes-application";
-
-export interface StartAssessmentStudySessionInput {
-  assessmentKey: string;
-  navigate(path: string): void;
-  questionKeys: string[];
-  services: ApplicationServices;
-}
+import type { StartAssessmentStudySessionInput } from "./start-assessment-study-session-input.interface";
+import type { StudySession } from "@guesant/saberes-application";
 
 export async function startAssessmentStudySession(
   input: StartAssessmentStudySessionInput,
@@ -19,6 +13,7 @@ export async function startAssessmentStudySession(
         .toISOString(),
     }),
     activityType: "assessment",
+    mode: "practice",
     contentKey: input.assessmentKey,
   };
 

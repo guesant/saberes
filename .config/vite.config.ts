@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { createRequire } from "node:module";
 import path from "node:path";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
@@ -6,6 +7,10 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 import { defineConfig } from "vitest/config";
 
 const base = process.env.VITE_BASE_PATH || "/";
+
+const appRequire = createRequire(path.resolve(process.cwd(), "packages/app/package.json"));
+
+const testingLibraryReactPath = appRequire.resolve("@testing-library/react");
 
 export const asset = (name: string) => {
   return `${base}${name}`.replace("//", "/");
@@ -178,6 +183,9 @@ export default defineConfig({
     }),
   ],
   base,
+  resolve: {
+    alias: [{ find: "@testing-library/react", replacement: testingLibraryReactPath }],
+  },
   build: { outDir: "../../dist", emptyOutDir: true },
   server: { host: "0.0.0.0", port: 5173 },
   test: {

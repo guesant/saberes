@@ -1,41 +1,33 @@
-import { UIButton } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-import { useAppServices } from "../../composition/use-app-services.hook";
-import { getAssessmentQuestionKeys } from "./get-assessment-question-keys.function";
-import { startAssessmentStudySession } from "./start-assessment-study-session.function";
-
-export interface AssessmentSessionLauncherProps {
-  assessmentKey: string;
-  items: Array<Record<string, unknown>>;
-}
+import { AssessmentSessionLauncherFeedback } from "./assessment-session-launcher-feedback.component";
+import { useAssessmentSessionLauncher } from "./use-assessment-session-launcher.hook";
+import type { AssessmentSessionLauncherProps } from "./assessment-session-launcher-props.interface";
 
 export function AssessmentSessionLauncher(props: AssessmentSessionLauncherProps) {
   const { t } = useTranslation();
 
-  const navigate = useNavigate();
+  const viewModel = useAssessmentSessionLauncher(props);
 
-  const services = useAppServices();
-
-  const questionKeys = getAssessmentQuestionKeys(props.items);
-
-  if (!questionKeys.length) {
+  if (!viewModel.questionKeys.length) {
     return null;
   }
 
   return (
-    <UIButton
-      variant="contained"
-      onClick={() => {
-        return startAssessmentStudySession({
-          assessmentKey: props.assessmentKey,
-          navigate,
-          questionKeys,
-          services,
-        });
-      }}
-    >
-      {t("assessment.start")}
-    </UIButton>
+    <UIContentGroup variant="content">
+      <UIInlineActions wrap>
+        <UIButton disabled={viewModel.pending} variant="contained" onClick={() => { return viewModel.startSession("practice"); }}>
+          {t("assessment.start")}
+        </UIButton>
+        <UIButton disabled={viewModel.pending || !props.assessment.canSimulate} variant="outlined" onClick={() => { return viewModel.startSession("simulation"); }}>
+          Começar simulado
+        </UIButton>
+      </UIInlineActions>
+      <UITypography color="text.secondary">
+        Prática: correção a cada resposta. Simulado: respostas revisáveis e resultado ao finalizar.
+        {props.assessment.canSimulate ? ` Tempo contínuo de ${props.assessment.duration_minutes} minutos, inclusive ao sair da página.` : ` ${props.assessment.readinessReason}`}
+      </UITypography>
+      <AssessmentSessionLauncherFeedback error={viewModel.error} />
+    </UIContentGroup>
   );
 }

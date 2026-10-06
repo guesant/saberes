@@ -1,4 +1,7 @@
 export * from "./alert.component";
+export * from "./focused-content.component";
+export * from "./discovery-grid.component";
+export * from "./discovery-link.component";
 
 export * from "./app-bar.component";
 
@@ -214,6 +217,26 @@ export * from "./step.component";
 export * from "./step-button.component";
 
 export * from "./stepper.component";
+
+export * from "./simulation-answer-input.component";
+
+export * from "./simulation-answer-choice.interface";
+
+export * from "./simulation-answer-input-props.interface";
+
+export * from "./simulation-answer-option.component";
+
+export * from "./simulation-answer-choice.interface";
+
+export * from "./simulation-answer-option-props.interface";
+
+export * from "./simulation-choice-input.component";
+
+export * from "./simulation-choice-input-props.interface";
+
+export * from "./simulation-text-answer-input.component";
+
+export * from "./simulation-text-answer-input-props.interface";
 
 export * from "./section-anchor.component";
 

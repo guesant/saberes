@@ -4,14 +4,17 @@ import {
   AddStudyPointsAdapter,
   CalculateTopicMasteryAdapter,
   CalculateAcademicMetricsAdapter,
+  CompleteSimulationSessionAdapter,
   CryptoIdAdapter,
   DateFnsClockAdapter,
+  type ProgressDatabaseContract,
   RecommendNextAdapter,
   RecordStudyActivityAdapter,
   SuggestDiagnosisAdapter,
   SyncAchievementsAdapter,
   TsFsrsPreviewReviewAdapter,
   TsFsrsScheduleReviewAdapter,
+  UpdateSimulationSessionAdapter,
   type ProgressStorageContract,
 } from "@guesant/saberes-adapter-data-v1";
 import { applicationDependencyTokens } from "./application-dependency-tokens.config";
@@ -22,6 +25,8 @@ import type { Container } from "inversify";
 
 export function createStudyDependencies(container: Container): void {
   const getProgressStore = (): ProgressStorageContract => { return resolvePort<ProgressStorageContract>(container, applicationDependencyTokens.progressStore); };
+
+  const getProgressDatabase = (): ProgressDatabaseContract => { return resolvePort<ProgressDatabaseContract>(container, applicationDependencyTokens.progressDatabase); };
 
   const bindings: PortFactoryBinding[] = [
     [applicationDependencyTokens.scheduleReview, () => { return new TsFsrsScheduleReviewAdapter(); }],
@@ -37,6 +42,8 @@ export function createStudyDependencies(container: Container): void {
     [applicationDependencyTokens.addStudyPoints, () => { return new AddStudyPointsAdapter(getProgressStore()); }],
     [applicationDependencyTokens.clock, () => { return new DateFnsClockAdapter(); }],
     [applicationDependencyTokens.ids, () => { return new CryptoIdAdapter(); }],
+    [applicationDependencyTokens.updateSimulationSession, () => { return new UpdateSimulationSessionAdapter(getProgressDatabase()); }],
+    [applicationDependencyTokens.completeSimulationSession, () => { return new CompleteSimulationSessionAdapter(getProgressDatabase()); }],
   ];
 
   registerPortFactories(container, bindings);

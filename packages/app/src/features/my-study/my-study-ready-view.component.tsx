@@ -1,8 +1,9 @@
-import { UIContentGroup } from "@guesant/saberes-ui";
+import { UIContentGroup, UIFocusedContent } from "@guesant/saberes-ui";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getDefaultPreferences } from "../preferences/get-default-preferences.function";
 import { usePreferencesQuery } from "../preferences/use-preferences-query.hook";
 import { getMyStudyFeatureVisibility } from "./get-my-study-feature-visibility.function";
+import { MyStudyDiscovery } from "./my-study-discovery.component";
 import { MyStudyHeader } from "./my-study-header.component";
 import { MyStudyMetricsGrid } from "./my-study-metrics-grid.component";
 import { MyStudyReadyFeedback } from "./my-study-ready-feedback.component";
@@ -28,8 +29,9 @@ export function MyStudyReadyView(props: MyStudyReadyViewProps) {
   const backupViewModel = useLocalBackupViewModel();
 
   return (
-    <UIContentGroup variant="section">
+    <UIFocusedContent><UIContentGroup variant="section">
       <MyStudyHeader />
+      <MyStudyDiscovery />
       <MyStudyReadyFeedback
         catalogError={viewModel.catalogError}
         onRetry={viewModel.reload}
@@ -41,6 +43,6 @@ export function MyStudyReadyView(props: MyStudyReadyViewProps) {
         viewModel={viewModel}
         visibility={visibility}
       />
-    </UIContentGroup>
+    </UIContentGroup></UIFocusedContent>
   );
 }

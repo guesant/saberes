@@ -1,13 +1,7 @@
-import initSqlJs from "sql.js";
+import { createSqlContentDatabase } from "./create-sql-content-database.function";
 import { createSyntheticContentDatabase } from "./create-synthetic-content-database.function";
 import { fetchContentDatabase } from "./fetch-content-database.function";
-import { mapSqlResults } from "./map-sql-results.function";
 import type { ContentDatabase } from "./content-database.type";
-
-const primaryUrl =
-  import.meta.env.VITE_CONTENT_DB_URL || `${import.meta.env.BASE_URL}data/content.sqlite`;
-
-const fallbackUrl = `${import.meta.env.BASE_URL}data/content.sqlite`;
 
 let databasePromise: Promise<ContentDatabase> | undefined;
 
@@ -20,43 +14,19 @@ export async function loadContentDatabase(): Promise<ContentDatabase> {
 
   if (!databasePromise) {
     databasePromise = (async () => {
-      let bytes: Uint8Array;
-
-      let source = primaryUrl;
-
-      try {
-        bytes = await fetchContentDatabase(primaryUrl);
-      } catch {
-        if (primaryUrl === fallbackUrl) {
-          return createSyntheticContentDatabase();
+      if (import.meta.env.VITE_CONTENT_MODE === "synthetic") {
+        if (import.meta.env.PROD) {
+          throw new Error("O conteúdo sintético está disponível apenas em desenvolvimento e testes.");
         }
 
-        try {
-          bytes = await fetchContentDatabase(fallbackUrl);
-        } catch {
-          return createSyntheticContentDatabase();
-        }
-
-        source = fallbackUrl;
+        return createSyntheticContentDatabase();
       }
 
-      const SQL = await initSqlJs({
-        locateFile: () => {
-          return `${import.meta.env.BASE_URL}sql-wasm.wasm`;
-        },
-      });
+      const source = import.meta.env.VITE_CONTENT_DB_URL || `${import.meta.env.BASE_URL}data/content.sqlite`;
 
-      const db = new SQL.Database(bytes);
+      const bytes = await fetchContentDatabase(source);
 
-      return {
-        source,
-        query(sql: string, params: unknown[] = []) {
-          return mapSqlResults(db.exec(sql, params));
-        },
-        get(sql: string, params: unknown[] = []) {
-          return mapSqlResults(db.exec(sql, params))[0] ?? null;
-        },
-      };
+      return createSqlContentDatabase(bytes, source);
     })()
       .then((database) => {
         databaseValue = database;

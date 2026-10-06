@@ -23,7 +23,7 @@ export async function saveQuestionPriorKnowledge(
 
   await Promise.all(
     input.data.topics
-      .map(getQuestionTopicContentKey)
+      .map((topic) => { return getQuestionTopicContentKey(topic); })
       .filter((contentKey): contentKey is string => {
         return contentKey !== null;
       })

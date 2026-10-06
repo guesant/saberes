@@ -6,7 +6,7 @@ import type { AssessmentItemLinkProps } from "./assessment-item-link-props.type"
 export function AssessmentItemLink(props: AssessmentItemLinkProps) {
   const { item } = props;
 
-  if (item.question_occurrence_id) {
+  if (item.questionKey || item.question_slug || item.question_occurrence_id) {
     return <AssessmentQuestionItemLink item={item} />;
   }
 

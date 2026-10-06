@@ -1,15 +1,34 @@
+import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-import { createQuestionStudySessionScreenInput } from "./create-question-study-session-screen-input.function";
-import { getQuestionStudySessionScreen } from "./get-question-study-session-screen.function";
-import { QuestionStudySessionScreenView } from "./question-study-session-screen-view.component";
-import { useQuestionStudySessionViewModel } from "./use-question-study-session-view-model.hook";
+import { useAppServices } from "../../composition/use-app-services.hook";
+import { QuestionStudySessionContent } from "./question-study-session-content.component";
+import { QuestionStudySessionState } from "./question-study-session-state.component";
 
 export function QuestionStudySessionView() {
+  const { t } = useTranslation();
+
   const { sessionId } = useParams();
 
-  const viewModel = useQuestionStudySessionViewModel(sessionId);
+  const services = useAppServices();
 
-  const screen = getQuestionStudySessionScreen(createQuestionStudySessionScreenInput(viewModel));
+  const session = useQuery({
+    queryKey: ["study-session", sessionId],
+    enabled: Boolean(sessionId),
+    queryFn: () => { return services.progress.getSession.execute(sessionId || ""); },
+  });
 
-  return <QuestionStudySessionScreenView screen={screen} viewModel={viewModel} />;
+  if (!session.data) {
+    return (
+      <QuestionStudySessionState
+        loading={session.isLoading}
+        error={session.error}
+        label={t("common.loadingQuestionSession")}
+        notFoundLabel={t("exercise.sessionNotFound")}
+        onRetry={async () => { await session.refetch(); }}
+      />
+    );
+  }
+
+  return <QuestionStudySessionContent mode={session.data.mode} sessionId={sessionId ?? ""} />;
 }

@@ -1,3 +1,5 @@
+import type { AssessmentItemReadModel } from "@guesant/saberes-application";
+
 export type AssessmentItemLinkProps = {
-  item: Record<string, unknown>;
+  item: AssessmentItemReadModel;
 };

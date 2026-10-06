@@ -1,3 +1,5 @@
+import type { TopicQuestionReadModel } from "@guesant/saberes-application";
+
 export type TopicQuestionLinkProps = {
-  question: Record<string, unknown>;
+  question: TopicQuestionReadModel;
 };

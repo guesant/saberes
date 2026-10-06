@@ -4,7 +4,14 @@ export function getQuestionContentKey(
   data: QuestionReadModel | null,
   fallback: string | undefined,
 ): string {
-  const occurrenceId = data?.question.occurrence_id;
+  const selectedKey = [data?.question.occurrence_id, data?.question.canonical_key, fallback]
+    .find((key) => {
+      return key !== undefined && key !== null && key !== "";
+    });
 
-  return occurrenceId ? `question:${String(occurrenceId)}` : String(fallback || "");
+  if (typeof selectedKey === "number") {
+    return `question:${String(selectedKey)}`;
+  }
+
+  return String(selectedKey || "");
 }

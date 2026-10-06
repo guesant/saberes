@@ -1,6 +1,7 @@
 import { CatalogCardType, type CatalogCard } from "@guesant/saberes-application";
 
 const catalogPathSegments = {
+  [CatalogCardType.Assessment]: "avaliacoes",
   [CatalogCardType.Course]: "cursos",
   [CatalogCardType.Map]: "mapa",
   [CatalogCardType.Plan]: "plano",

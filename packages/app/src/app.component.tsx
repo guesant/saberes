@@ -4,6 +4,7 @@ import { ContentLoadingState } from "./components/content-loading-state.componen
 import { Shell } from "./components/shell.component";
 import {
   AcademicView,
+  AssessmentDiscoveryView,
   AssessmentView,
   CalendarView,
   CatalogView,
@@ -31,6 +32,8 @@ export function App() {
           <Route element={<MyStudyView />} path="/" />
 
           <Route element={<CatalogView />} path="/catalogo" />
+
+          <Route element={<AssessmentDiscoveryView />} path="/provas" />
 
           <Route element={<MyStudyView />} path="/meu-estudo" />
 
@@ -61,6 +64,8 @@ export function App() {
           <Route element={<LessonView />} path="/licoes/:lessonId" />
 
           <Route element={<QuestionView />} path="/questoes/:questionId" />
+
+          <Route element={<QuestionView />} path="/exercicios/:exerciseSlug" />
 
           <Route element={<QuestionStudySessionView />} path="/sessoes/questoes/:sessionId" />
 

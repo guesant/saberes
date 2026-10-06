@@ -9,9 +9,9 @@ import { useQuestionViewModel } from "./question.view-model";
 export function QuestionView() {
   const { t } = useTranslation();
 
-  const { questionId } = useParams();
+  const { questionId, exerciseSlug } = useParams();
 
-  const viewModel = useQuestionViewModel(`question:${questionId}`);
+  const viewModel = useQuestionViewModel(exerciseSlug ? `exercise:${exerciseSlug}` : `question:${questionId}`);
 
   if (viewModel.state === "loading") {
     return <ContentLoadingState label={t("common.loadingQuestion")} />;

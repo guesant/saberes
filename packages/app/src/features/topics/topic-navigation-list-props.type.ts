@@ -1,4 +1,6 @@
+import type { TopicNavigationReadModel } from "@guesant/saberes-application";
+
 export type TopicNavigationListProps = {
-  topics: Array<Record<string, unknown>>;
+  topics: TopicNavigationReadModel[];
   title: string;
 };

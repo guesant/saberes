@@ -65,6 +65,7 @@ export enum Difficulty {
 }
 
 export enum CatalogCardType {
+  Assessment = "assessment",
   Course = "course",
   Map = "map",
   Plan = "plan",

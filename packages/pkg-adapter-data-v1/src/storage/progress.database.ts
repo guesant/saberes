@@ -49,7 +49,7 @@ import type { ReviewDatabaseEvent } from "./review-database-event.interface";
 import type { ReviewEventInput } from "./review-event-input.interface";
 import type { ReviewTarget } from "./review-target.interface";
 import type { SessionRecord } from "./session-record.interface";
-import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
+import type { CompleteSimulationSessionInput, UpdateSimulationSessionInput, StudySession , ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
 
 export type { DiagnosisCode, DiagnosisConfidence, DiagnosisSource, PedagogicalAction, ReviewState };
 
@@ -320,6 +320,108 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
   async saveSession(session: SessionRecord): Promise<void> {
     await this.table("sessions")
       .put(session);
+  }
+
+  async updateSimulationSession(input: UpdateSimulationSessionInput): Promise<StudySession> {
+    return this.transaction("rw", this.sessions, async () => {
+      const session = await this.sessions.get(input.sessionId);
+
+      if (!session || session.mode !== "simulation") {
+        throw new Error("Simulado não encontrado.");
+      }
+
+      if (session.status === "completed") {
+        return session;
+      }
+
+      const deadline = Date.parse(session.expiresAt || "");
+
+      const updatedAt = Date.parse(input.updatedAt);
+
+      if (!Number.isFinite(deadline) || !Number.isFinite(updatedAt) || updatedAt >= deadline) {
+        throw new Error("O tempo do simulado terminou.");
+      }
+
+      const keys = session.questionKeys || [];
+
+      if (input.questionKey && !keys.includes(input.questionKey)) {
+        throw new Error("Questão não pertence ao simulado.");
+      }
+
+      if (input.answer !== undefined && !input.questionKey) {
+        throw new Error("Escolha uma questão para salvar a resposta.");
+      }
+
+      if (input.currentIndex !== undefined && (!Number.isInteger(input.currentIndex) || input.currentIndex < 0 || input.currentIndex >= keys.length)) {
+        throw new Error("Posição inválida no simulado.");
+      }
+
+      const answers = [...(session.simulationAnswers || [])];
+
+      if (input.questionKey && input.answer !== undefined) {
+        const index = answers.findIndex((answer) => { return answer.questionKey === input.questionKey; });
+
+        const draft = { questionKey: input.questionKey, value: input.answer, answeredAt: input.updatedAt };
+
+        if (index < 0) {
+          answers.push(draft);
+        } else {
+          answers[index] = draft;
+        }
+      }
+
+      let flags = session.flaggedQuestionKeys || [];
+
+      if (input.toggleFlag && input.questionKey) {
+        flags = flags.includes(input.questionKey)
+          ? flags.filter((key) => { return key !== input.questionKey; })
+          : [...flags, input.questionKey];
+      }
+
+      const next: StudySession = {
+        ...session,
+        revision: (session.revision || 0) + 1,
+        simulationAnswers: answers,
+        flaggedQuestionKeys: flags,
+        currentIndex: input.currentIndex ?? session.currentIndex,
+      };
+
+      await this.sessions.put(next);
+
+      return next;
+    });
+  }
+
+  async completeSimulationSession(input: CompleteSimulationSessionInput): Promise<StudySession> {
+    return this.transaction("rw", this.sessions, this.attempts, async () => {
+      const current = await this.sessions.get(input.session.id);
+
+      if (!current || current.mode !== "simulation") {
+        throw new Error("Simulado não encontrado.");
+      }
+
+      if (current.status === "completed") {
+        return current;
+      }
+
+      if ((current.revision || 0) !== input.expectedRevision) {
+        throw new Error("As respostas foram atualizadas. Tente concluir novamente.");
+      }
+
+      const attempts = input.attempts.map((attempt) => {
+        if (!attempt.id || attempt.sessionId !== current.id) {
+          throw new Error("Tentativa inválida para este simulado.");
+        }
+
+        return { ...attempt, id: attempt.id };
+      });
+
+      await this.attempts.bulkPut(attempts);
+
+      await this.sessions.put(input.session);
+
+      return input.session;
+    });
   }
 
   getSession(id: string) {

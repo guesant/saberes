@@ -173,6 +173,21 @@ export function createSyntheticContentDatabase(): ContentDatabase {
     }
 
     if (sql.includes("FROM assessment_sets")) {
+      if (sql.includes("FROM assessment_sets a")) {
+        return [
+          {
+            id: 1,
+            slug: "assessment-primeiro-estudo",
+            title: "Prática do primeiro estudo",
+            description: "Uma avaliação sintética.",
+            duration_minutes: 5,
+            year: 2026,
+            process_name: "Fixture local",
+            question_count: 1,
+          },
+        ];
+      }
+
       return firstParameter === "1" || firstParameter === "assessment-primeiro-estudo"
         ? [
           {
@@ -181,13 +196,16 @@ export function createSyntheticContentDatabase(): ContentDatabase {
             title: "Prática do primeiro estudo",
             description: "Uma avaliação sintética.",
             is_published: 1,
+            kind: "question_set",
+            duration_minutes: 5,
+            expected_question_count: 1,
           },
         ]
         : [];
     }
 
     if (sql.includes("FROM assessment_set_items")) {
-      return [{ id: 1, assessment_set_id: 1, item_type: "question", item_id: 1, position: 1 }];
+      return [{ id: 1, assessment_set_id: 1, item_type: "question", question_id: 1, question_occurrence_id: 1, question_slug: "primeiro-estudo", title: question.statement, points: 1, position: 1 }];
     }
 
     if (sql.includes("FROM content_releases")) {

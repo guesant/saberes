@@ -7,7 +7,7 @@ import type { ProgressSettingRecord } from "./progress-setting-record.interface"
 import type { ReviewEventInput } from "./review-event-input.interface";
 import type { ReviewTarget } from "./review-target.interface";
 import type { SessionRecord } from "./session-record.interface";
-import type { ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
+import type { CompleteSimulationSessionInput, UpdateSimulationSessionInput, StudySession , ImportProgressInput, SavedCatalogFilter } from "@guesant/saberes-application";
 import type {
   AcademicDiscipline,
   BackupRetentionPolicy,
@@ -19,6 +19,10 @@ import type {
 } from "@guesant/saberes-domain";
 
 export interface ProgressDatabaseContract {
+  updateSimulationSession(input: UpdateSimulationSessionInput): Promise<StudySession>;
+
+  completeSimulationSession(input: CompleteSimulationSessionInput): Promise<StudySession>;
+
   clearProgress(): Promise<void>;
 
   enrollCourse(

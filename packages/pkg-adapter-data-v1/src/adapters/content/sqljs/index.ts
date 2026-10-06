@@ -11,3 +11,6 @@ export * from "./get-study-plan.adapter";
 export * from "./get-topic-map.adapter";
 export * from "./get-topic.adapter";
 export * from "./sql-js-content.repository";
+export * from "./database/content-database-provider.contract";
+export * from "./database/content-database.type";
+export * from "./database/load-content-database.function";

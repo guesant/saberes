@@ -10,6 +10,7 @@ import {
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { getCatalogCardPath } from "../../components/get-catalog-card-path.function";
 import type { CatalogCard } from "@guesant/saberes-application";
 
 export type CatalogCardViewProps = {
@@ -23,16 +24,7 @@ export function CatalogCardView(props: CatalogCardViewProps) {
 
   const typeLabel = t(`catalog.type.${item.type}`, { defaultValue: item.type });
 
-  const paths = {
-    course: `/cursos/${item.slug}`,
-    map: `/mapa/${item.slug}`,
-    plan: `/plano/${item.slug}`,
-    lesson: `/licoes/${item.id}`,
-    resource: `/licoes/${item.id}`,
-    question: `/questoes/${item.id}`,
-  };
-
-  const path = paths[item.type] || `/licoes/${item.id}`;
+  const path = getCatalogCardPath(item);
 
   const icon = item.type === "lesson" ? <UIAutoStoriesIcon /> : <UIQuizIcon />;
 

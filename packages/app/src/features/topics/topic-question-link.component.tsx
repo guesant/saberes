@@ -7,7 +7,7 @@ export function TopicQuestionLink(props: TopicQuestionLinkProps) {
   const { t } = useTranslation();
 
   return (
-    <UIListItemButton component={Link} to={`/questoes/${String(props.question.id)}`}>
+    <UIListItemButton component={Link} to={props.question.href}>
       <UIListItemText
         primary={t("topics.questionLabel", {
           number: String(props.question.number || props.question.id),

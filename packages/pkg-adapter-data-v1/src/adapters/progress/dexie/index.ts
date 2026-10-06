@@ -56,3 +56,5 @@ export * from "./archive-personal-relation-adapter.adapter";
 export * from "./create-personal-relation-adapter.adapter";
 export * from "./list-personal-relations-adapter.adapter";
 export * from "./restore-personal-relation-adapter.adapter";
+export * from "./complete-simulation-session.adapter";
+export * from "./update-simulation-session.adapter";

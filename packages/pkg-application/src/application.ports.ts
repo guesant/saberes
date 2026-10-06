@@ -1,3 +1,4 @@
+import type { SimulationPorts } from "./models/simulation-ports.interface";
 import type { AchievementDefinitionsPort } from "./ports/achievement-definitions-port.port";
 import type { ActionForDiagnosisPort } from "./ports/action-for-diagnosis-port.port";
 import type { AddStudyPointsPort } from "./ports/add-study-points-port.port";
@@ -83,6 +84,7 @@ import type { UndoStudyCapturePort } from "./ports/undo-study-capture-port.port"
 import type { ValidateContentSnapshotPort } from "./ports/validate-content-snapshot-port.port";
 
 export interface ApplicationPorts {
+  simulation: SimulationPorts;
   archivePersonalRelation: ArchivePersonalRelationPort;
   classifyStudyCapture: ClassifyStudyCapturePort;
   createCalendarEntry: CreateCalendarEntryPort;

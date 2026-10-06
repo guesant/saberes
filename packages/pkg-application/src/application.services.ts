@@ -36,6 +36,7 @@ import { SaveTopicMasteryCommandHandler } from "./commands/save-topic-mastery.co
 import { ScheduleReviewCommandHandler } from "./commands/schedule-review.command-handler";
 import { SyncAchievementsCommandHandler } from "./commands/sync-achievements.command-handler";
 import { UndoStudyCaptureCommandHandler } from "./commands/undo-study-capture.command-handler";
+import { createSimulationServices } from "./create-simulation-services.function";
 import { AchievementDefinitionsQueryHandler } from "./queries/achievement-definitions.query-handler";
 import { ActionForDiagnosisQueryHandler } from "./queries/action-for-diagnosis.query-handler";
 import { BuildKnowledgeGraphQueryHandler } from "./queries/build-knowledge-graph.query-handler";
@@ -94,6 +95,7 @@ import type { PlanningServices } from "./application-services/planning-services.
 import type { PlatformServices } from "./application-services/platform-services.type";
 import type { ProgressServices } from "./application-services/progress-services.type";
 import type { SchedulerServices } from "./application-services/scheduler-services.type";
+import type { SimulationServices } from "./application-services/simulation-services.interface";
 import type { StudyPlanServices } from "./application-services/study-plan-services.type";
 import type { StudyServices } from "./application-services/study-services.type";
 import type { TopicServices } from "./application-services/topic-services.type";
@@ -118,6 +120,7 @@ export interface ApplicationServices {
   study: StudyServices;
   scheduler: SchedulerServices;
   planning: PlanningServices;
+  simulation: SimulationServices;
 }
 
 export function createApplication(ports: ApplicationPorts): ApplicationServices {
@@ -417,5 +420,11 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
     },
     scheduler: { schedule: scheduleReview, preview: previewReview },
     planning: { createCalendarEntry, listCalendarEntries },
+    simulation: createSimulationServices({
+      ...ports.simulation,
+      clock: ports.clock,
+      getQuestion: ports.getQuestion,
+      getSession: ports.getSession,
+    }),
   };
 }
