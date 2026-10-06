@@ -1,6 +1,7 @@
 import { UIAlert, UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { ActionFeedbackErrorDetails } from "./action-feedback-error-details.component";
+import { useTransientSuccessFeedback } from "./use-transient-success-feedback.hook";
 import type { ActionFeedbackDescriptor } from "./action-feedback-descriptor.interface";
 import type { ActionFeedbackProps } from "./action-feedback-props.interface";
 
@@ -20,7 +21,9 @@ export function ActionFeedback(props: ActionFeedbackProps) {
 
   const descriptor = actionFeedbackDescriptors[props.state];
 
-  if (descriptor.state === "idle") {
+  const savedVisible = useTransientSuccessFeedback(props.state === "saved");
+
+  if (descriptor.state === "idle" || (descriptor.state === "saved" && !savedVisible)) {
     return null;
   }
 
@@ -28,9 +31,7 @@ export function ActionFeedback(props: ActionFeedbackProps) {
     <UIAlert severity={descriptor.severity} role={descriptor.state === "error" ? "alert" : "status"}>
       <UIContentGroup variant="content">
         <UITypography>{t(descriptor.messageKey)}</UITypography>
-        {props.error ? (
-          <ActionFeedbackErrorDetails error={props.error} />
-        ) : null}
+        <ActionFeedbackErrorDetails error={props.error} />
       </UIContentGroup>
     </UIAlert>
   );

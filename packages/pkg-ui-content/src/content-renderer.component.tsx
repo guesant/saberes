@@ -55,7 +55,6 @@ export function UIContentRenderer(props: UIContentRendererProps) {
         );
       })}
 
-      <UIChip size="small" label={t("content.reviewed")} variant="outlined" />
     </UIContentGroup>
   );
 }

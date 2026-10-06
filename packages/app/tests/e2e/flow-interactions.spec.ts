@@ -85,10 +85,45 @@ test("o estudante inicia um curso e consegue concluir uma lição", async ({ pag
   await expect(page.getByRole("button", { name: "Salva" }))
     .toBeVisible();
 
+  const savedNotice = page.getByRole("status")
+    .filter({ hasText: "Salvo neste dispositivo." });
+
+  await expect(savedNotice)
+    .toBeVisible();
+
+  await expect(savedNotice)
+    .toBeHidden({ timeout: 5000 });
+
   await page.getByRole("button", { name: "Marcar como concluída" })
     .click();
 
   await expect(page.getByRole("button", { name: "Concluída" }))
+    .toBeVisible();
+});
+
+test("a ação de prática da lição abre uma sessão de questões", async ({ page }) => {
+  await page.goto("/licoes/1", { waitUntil: "networkidle" });
+
+  await validateRouteSettled(page);
+
+  await page.getByRole("link", { name: "Ir para a prática" })
+    .click();
+
+  await expect(page)
+    .toHaveURL(/\/catalogo\?modo=praticar/);
+
+  await expect(page.getByRole("heading", { name: "Praticar exercícios e questões" }))
+    .toBeVisible();
+
+  await page.getByRole("button", { name: "Começar sessão" })
+    .click();
+
+  await expect(page)
+    .toHaveURL(/\/sessoes\/questoes\//);
+
+  await validateRouteSettled(page);
+
+  await expect(page.getByRole("button", { name: "Responder" }))
     .toBeVisible();
 });
 
@@ -323,6 +358,9 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
 
   await validateRouteSettled(page);
 
+  const calendarReferenceDate = await page.getByRole("textbox", { name: "Data de referência" })
+    .inputValue();
+
   await page.getByText("Adicionar compromisso", { exact: true })
     .click();
 
@@ -330,7 +368,7 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
     .fill("Compromisso de fluxo");
 
   await page.getByRole("textbox", { name: "Início" })
-    .fill("2026-10-05");
+    .fill(calendarReferenceDate);
 
   await page.getByRole("button", { name: "Adicionar à agenda" })
     .click();

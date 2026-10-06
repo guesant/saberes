@@ -7,7 +7,7 @@ export function LessonReadyFooter() {
   return (
     <>
       <UIDivider />
-      <UIButton variant="contained">{t("lesson.practice")}</UIButton>
+      <UIButton href="/catalogo?modo=praticar" variant="contained">{t("lesson.practice")}</UIButton>
     </>
   );
 }

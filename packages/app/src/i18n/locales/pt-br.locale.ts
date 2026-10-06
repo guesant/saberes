@@ -766,7 +766,6 @@ const ptBR = {
     progress: "{{completed}} de {{total}} etapas concluídas ({{percentage}}%)",
   },
   content: {
-    reviewed: "Conteúdo editorial revisado",
     recommendedVideo: "Vídeo recomendado",
     openVideo: "Abrir vídeo",
     practiceConcept: "Pratique este conceito",

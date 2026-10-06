@@ -27,8 +27,8 @@ describe("renderizador de conteúdo editorial", () => {
     expect(screen.getByText("Revise antes de praticar."))
       .toBeTruthy();
 
-    expect(screen.getByText("Conteúdo editorial revisado"))
-      .toBeTruthy();
+    expect(screen.queryByText("Conteúdo editorial revisado"))
+      .toBeNull();
   });
 
   it("não interpreta HTML arbitrário como conteúdo executável", () => {
