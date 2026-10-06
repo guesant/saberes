@@ -17,4 +17,4 @@ applicationRoot.render(
   React.createElement(React.StrictMode, null, React.createElement(Main, {})),
 );
 
-void checkServiceWorkerUpdate(registerSW);
+checkServiceWorkerUpdate(registerSW);
