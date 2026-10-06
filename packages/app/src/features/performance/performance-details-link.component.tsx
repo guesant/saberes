@@ -6,7 +6,7 @@ export function PerformanceDetailsLink() {
   const { t } = useTranslation();
 
   return (
-    <UIButton component={Link} to="/desempenho/detalhes" variant="outlined">
+    <UIButton component={Link} iconOnly={false} to="/desempenho/detalhes" variant="outlined">
       {t("performance.moreDetails")}
     </UIButton>
   );

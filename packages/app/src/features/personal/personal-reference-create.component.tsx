@@ -1,8 +1,10 @@
-import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { UIForm } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { PersonalReferenceCreateFields } from "./personal-reference-create-fields.component";
+import type { FormEvent } from "react";
 
 export interface PersonalReferenceCreateProps {
+  formId: string;
   onCreate(title: string, source: string, contentKey?: string): Promise<void>;
 }
 
@@ -25,8 +27,14 @@ export function PersonalReferenceCreate(props: PersonalReferenceCreateProps) {
     }
   };
 
+  const submit = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
+    event.preventDefault();
+
+    await create();
+  };
+
   return (
-    <UIContentGroup variant="content">
+    <UIForm id={props.formId} onSubmit={submit}>
       <PersonalReferenceCreateFields
         contentKey={contentKey}
         onContentKeyChange={setContentKey}
@@ -35,9 +43,6 @@ export function PersonalReferenceCreate(props: PersonalReferenceCreateProps) {
         source={source}
         title={title}
       />
-      <UIButton disabled={!title.trim() || !source.trim()} onClick={create} variant="outlined">
-        Salvar referência
-      </UIButton>
-    </UIContentGroup>
+    </UIForm>
   );
 }

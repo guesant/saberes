@@ -5,6 +5,7 @@ export interface AcademicDisciplineTextFieldProps {
   inputStep?: number;
   label: string;
   onChange(value: string): void;
+  required?: boolean;
   type?: "number";
   value: string;
 }
@@ -18,6 +19,7 @@ export function AcademicDisciplineTextField(props: AcademicDisciplineTextFieldPr
         return props.onChange(event.target.value);
       }}
       type={props.type}
+      required={props.required}
       value={props.value}
     />
   );

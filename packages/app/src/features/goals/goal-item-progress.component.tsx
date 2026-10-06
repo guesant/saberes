@@ -1,4 +1,4 @@
-import { UIButton, UIResponsiveFields, UITextField } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UITextField } from "@guesant/saberes-ui";
 
 export interface GoalItemProgressProps {
   current: string;
@@ -12,7 +12,7 @@ export interface GoalItemProgressProps {
 
 export function GoalItemProgress(props: GoalItemProgressProps) {
   return (
-      <UIResponsiveFields distribution="equal">
+    <UIContentGroup variant="content">
       <UITextField
         inputProps={{ max: props.target, min: 0, step: 1 }}
         label={props.label}
@@ -22,9 +22,9 @@ export function GoalItemProgress(props: GoalItemProgressProps) {
         type="number"
         value={props.current}
       />
-      <UIButton onClick={props.onSave} variant="outlined">
+      <UIButton iconOnly={false} onClick={props.onSave} variant="outlined">
         {props.updateLabel}
       </UIButton>
-    </UIResponsiveFields>
+    </UIContentGroup>
   );
 }

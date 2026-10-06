@@ -1,4 +1,5 @@
 import {
+  UIContentGroup,
   UINavigationDrawer,
   UIPageContent,
   UIPageSurface,
@@ -7,6 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { NavigationDrawer } from "./navigation-drawer.component";
 import { NavigationHeader } from "./navigation-header.component";
+import { ShellBreadcrumbs } from "./shell-breadcrumbs.component";
 import { ShellCommandPalette } from "./shell-command-palette.component";
 import { useCommandPalette } from "./use-command-palette.hook";
 import { useNavigationDrawer } from "./use-navigation-drawer.hook";
@@ -52,8 +54,12 @@ export function Shell(props: ShellProps) {
         <NavigationDrawer links={links} onNavigate={navigationDrawer.close} />
       </UINavigationDrawer>
 
-      <UIPageContent>{props.children}</UIPageContent>
-
+      <UIPageContent>
+        <UIContentGroup variant="content">
+          <ShellBreadcrumbs />
+          {props.children}
+        </UIContentGroup>
+      </UIPageContent>
     </UIPageSurface>
   );
 }

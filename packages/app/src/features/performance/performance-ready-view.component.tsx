@@ -36,8 +36,16 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
       <PerformanceDetailsPage
         filter={filter}
         viewData={viewData}
-        onChangePeriod={(period) => { return setFilter((current) => { return { ...current, period }; }); }}
-        onChangeScope={(scope) => { return setFilter((current) => { return { ...current, scope }; }); }}
+        onChangePeriod={(period) => {
+          return setFilter((current) => {
+            return { ...current, period };
+          });
+        }}
+        onChangeScope={(scope) => {
+          return setFilter((current) => {
+            return { ...current, scope };
+          });
+        }}
         onDecision={props.saveActionDecision}
       />
     );
@@ -46,12 +54,12 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
   return (
     <UIContentGroup variant="section">
       <PerformanceReadyViewHeader />
+      <PerformanceDetailsLink />
       <PerformanceSummaryGrid summary={viewData.summary} />
       <PerformanceNextAction
         hasAttempts={viewData.filteredData.attempts.length > 0}
         hasErrors={viewData.hasErrors}
       />
-      <PerformanceDetailsLink />
     </UIContentGroup>
   );
 }

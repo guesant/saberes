@@ -11,7 +11,7 @@ export function QuestionConfidenceInput(props: QuestionConfidenceInputProps) {
   return (
     <UIContentGroup variant="content">
       <UITypography variant="subtitle2">{t("exercise.confidenceLabel")}</UITypography>
-      <UIInlineActions>
+      <UIInlineActions equal>
         <UIChoiceButton
           variant={value === AttemptConfidence.Confident ? "contained" : "outlined"}
           onClick={() => {

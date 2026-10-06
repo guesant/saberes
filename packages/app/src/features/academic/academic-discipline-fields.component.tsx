@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { AcademicDisciplineFieldsList } from "./academic-discipline-fields-list.component";
 import { createAcademicDisciplineCoreTextFields } from "./create-academic-discipline-core-text-fields.function";
@@ -24,9 +24,6 @@ export function AcademicDisciplineFields(props: AcademicDisciplineFieldsProps) {
         <UITypography variant="h5">{t("academic.gradeDetails")}</UITypography>
         <AcademicDisciplineFieldsList fields={gradeFields} />
       </UIContentGroup>
-      <UIButton disabled={!props.form.name.trim()} onClick={props.form.onSave} variant="contained">
-        {t("academic.save")}
-      </UIButton>
     </UIContentGroup>
   );
 }

@@ -8,6 +8,7 @@ export function UIForm(props: UIFormProps): ReactElement {
       align="start"
       component="form"
       gap="md"
+      id={props.id}
       inset="none"
       layout="column"
       onSubmit={props.onSubmit}

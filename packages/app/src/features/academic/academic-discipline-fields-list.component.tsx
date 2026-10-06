@@ -1,10 +1,10 @@
-import { UIResponsiveFields } from "@guesant/saberes-ui";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { AcademicDisciplineTextField } from "./academic-discipline-text-field.component";
 import type { AcademicDisciplineFieldsListProps } from "./academic-discipline-fields-list-props.interface";
 
 export function AcademicDisciplineFieldsList(props: AcademicDisciplineFieldsListProps) {
   return (
-    <UIResponsiveFields distribution="equal">
+    <UIContentGroup variant="form">
       {props.fields.map((field) => {
         return (
           <AcademicDisciplineTextField
@@ -18,6 +18,6 @@ export function AcademicDisciplineFieldsList(props: AcademicDisciplineFieldsList
           />
         );
       })}
-    </UIResponsiveFields>
+    </UIContentGroup>
   );
 }

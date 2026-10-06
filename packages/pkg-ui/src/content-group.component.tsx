@@ -5,11 +5,12 @@ import type { ReactElement, ReactNode } from "react";
 export type UIContentGroupProps = {
   children: ReactNode;
   id?: string;
-  variant?: "tight" | "content" | "section" | "list" | "inline";
+  variant?: "tight" | "content" | "form" | "section" | "list" | "inline";
 };
 
 const groupGap = {
   content: "md",
+  form: "lg",
   inline: "sm",
   list: "sm",
   section: "section",

@@ -1,5 +1,6 @@
 export * from "./alert.component";
-export * from "./autocomplete-option.interface"; export * from "./autocomplete-props.interface";
+export * from "./autocomplete-option.interface";
+export * from "./autocomplete-props.interface";
 export * from "./autocomplete.component";
 export * from "./focused-content.component";
 export * from "./discovery-grid.component";
@@ -16,6 +17,9 @@ export * from "./bookmark-icon.component";
 
 export * from "./box.component";
 export * from "./layout/index";
+
+export * from "./breadcrumbs/index";
+export * from "./action-icons/index";
 
 export * from "./bottom-navigation-action.component";
 
@@ -96,7 +100,6 @@ export * from "./create-theme.function";
 export * from "./css-baseline.component";
 
 export * from "./divider.component";
-
 
 export * from "./dialog-props.interface";
 
@@ -218,7 +221,8 @@ export * from "./responsive-grid.component";
 
 export * from "./responsive-grid-props.interface";
 
-export * from "./responsive-tabs.component"; export * from "./section-navigation.component";
+export * from "./responsive-tabs.component";
+export * from "./section-navigation.component";
 export * from "./stack.component";
 
 export * from "./start-aligned-button.component";

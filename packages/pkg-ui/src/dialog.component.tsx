@@ -1,36 +1,31 @@
-import { Close as CloseIcon } from "@mui/icons-material";
-import { Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from "@mui/material";
-import { UIButton } from "./button.component";
+import { Dialog, DialogContent } from "@mui/material";
+import { UIDialogFooter } from "./dialog-footer.component";
+import { UIDialogHeader } from "./dialog-header.component";
 import type { UIDialogProps } from "./dialog-props.interface";
 import type { ReactElement } from "react";
 
 export function UIDialog(props: UIDialogProps): ReactElement {
+  const handleClose = (_event: object, reason: string): void => {
+    if (reason !== "backdropClick") {
+      props.onClose();
+    }
+  };
+
   return (
     <Dialog
       fullWidth
       maxWidth="sm"
-      onClose={(_, reason) => {
-        if (reason !== "backdropClick") {
-          props.onClose();
-        }
-      }}
+      onClose={handleClose}
       open={props.open}
-      PaperProps={{ sx: { border: "1px solid var(--mui-palette-divider)" } }}
+      PaperProps={{
+        sx: { border: "1px solid var(--mui-palette-divider)" },
+      }}
     >
-      <DialogTitle
-        sx={{
-          alignItems: "center",
-          borderBlockEnd: "1px solid var(--mui-palette-divider)",
-          display: "flex",
-          justifyContent: "space-between",
-          gap: 2,
-        }}
-      >
-        {props.title}
-        <IconButton aria-label={props.closeLabel ?? "Fechar"} onClick={props.onClose} size="small">
-          <CloseIcon />
-        </IconButton>
-      </DialogTitle>
+      <UIDialogHeader
+        closeLabel={props.closeLabel ?? "Fechar"}
+        onClose={props.onClose}
+        title={props.title}
+      />
       <DialogContent
         sx={{
           "&.MuiDialogContent-root": { paddingTop: 3 },
@@ -40,22 +35,14 @@ export function UIDialog(props: UIDialogProps): ReactElement {
       >
         {props.children}
       </DialogContent>
-      <DialogActions
-        sx={{
-          borderBlockStart: "1px solid var(--mui-palette-divider)",
-          gap: 1,
-          padding: 2,
-        }}
-      >
-        <UIButton iconOnly={false} onClick={props.onClose} variant="outlined">
-          {props.cancelLabel ?? "Cancelar"}
-        </UIButton>
-        {props.actions ?? (
-          <UIButton iconOnly={false} onClick={props.onConfirm ?? props.onClose} variant="contained">
-            {props.confirmLabel ?? "Confirmar"}
-          </UIButton>
-        )}
-      </DialogActions>
+      <UIDialogFooter
+        actions={props.actions}
+        cancelLabel={props.cancelLabel ?? "Cancelar"}
+        confirmForm={props.confirmForm}
+        confirmLabel={props.confirmLabel ?? "Confirmar"}
+        onCancel={props.onClose}
+        onConfirm={props.onConfirm ?? props.onClose}
+      />
     </Dialog>
   );
 }

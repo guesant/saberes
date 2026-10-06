@@ -5,8 +5,10 @@ export interface UIDialogProps {
   actions?: ReactNode;
   cancelLabel?: string;
   confirmLabel?: string;
+  confirmForm?: string;
   closeLabel?: string;
   onConfirm?(): void;
+
   onClose(): void;
   open: boolean;
   title: string;

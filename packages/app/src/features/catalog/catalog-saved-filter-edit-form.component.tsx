@@ -1,7 +1,8 @@
-import { UIButton, UIInlineActions, UITextField } from "@guesant/saberes-ui";
+import { UIForm, UITextField } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { CatalogSavedFilterEditFormProps } from "./catalog-saved-filter-edit-form-props.interface";
+import type { FormEvent } from "react";
 
 export function CatalogSavedFilterEditForm(props: CatalogSavedFilterEditFormProps) {
   const { t } = useTranslation();
@@ -18,16 +19,22 @@ export function CatalogSavedFilterEditForm(props: CatalogSavedFilterEditFormProp
     await props.onSave(trimmedName);
   };
 
+  const submit = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
+    event.preventDefault();
+
+    await save();
+  };
+
   return (
-    <UIInlineActions wrap>
+    <UIForm id={props.formId} onSubmit={submit}>
       <UITextField
         label={t("catalog.savedFilterName")}
-        onChange={(event) => { return setName(event.target.value); }}
+        onChange={(event) => {
+          return setName(event.target.value);
+        }}
+        required
         value={name}
       />
-      <UIButton disabled={!trimmedName} onClick={save} variant="contained">
-        {t("catalog.updateFilter")}
-      </UIButton>
-    </UIInlineActions>
+    </UIForm>
   );
 }

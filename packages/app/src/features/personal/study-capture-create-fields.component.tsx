@@ -1,4 +1,4 @@
-import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { StudyCaptureCreateInputs } from "./study-capture-create-inputs.component";
 import type { StudyCaptureCreateFieldsProps } from "./study-capture-create-fields-props.interface";
 
@@ -15,13 +15,6 @@ export function StudyCaptureCreateFields(props: StudyCaptureCreateFieldsProps) {
         onTitleChange={props.onTitleChange}
         title={props.title}
       />
-      <UIButton
-        disabled={!props.title.trim() || !props.description.trim()}
-        onClick={props.onCreate}
-        variant="outlined"
-      >
-        Salvar pendência
-      </UIButton>
     </UIContentGroup>
   );
 }

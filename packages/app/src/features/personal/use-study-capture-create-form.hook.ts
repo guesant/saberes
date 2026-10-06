@@ -3,9 +3,13 @@ import type { StudyCaptureCreateFieldsProps } from "./study-capture-create-field
 import type { StudyCaptureCreateHandler } from "./study-capture-create-handler.type";
 import type { StudyCaptureCreateInput } from "./study-capture-create-input.interface";
 
+export type StudyCaptureCreateFormState = StudyCaptureCreateFieldsProps & {
+  onCreate(): Promise<void>;
+};
+
 export function useStudyCaptureCreateForm(
   onCreate: StudyCaptureCreateHandler,
-): StudyCaptureCreateFieldsProps {
+): StudyCaptureCreateFormState {
   const [title, setTitle] = useState("");
 
   const [description, setDescription] = useState("");

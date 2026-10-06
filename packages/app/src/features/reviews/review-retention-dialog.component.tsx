@@ -13,10 +13,22 @@ export function ReviewRetentionDialog(props: ReviewRetentionDialogProps) {
 
   return (
     <>
-      <UIButton onClick={() => { return setOpen(true); }} variant="outlined">
+      <UIButton
+        iconOnly={false}
+        onClick={() => {
+          return setOpen(true);
+        }}
+        variant="outlined"
+      >
         {props.triggerLabel}
       </UIButton>
-      <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>
+      <UIDialog
+        onClose={() => {
+          return setOpen(false);
+        }}
+        open={open}
+        title={props.title}
+      >
         <ReviewRetentionControl onChange={props.onChange} retention={props.retention} />
       </UIDialog>
     </>

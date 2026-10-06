@@ -8,7 +8,12 @@ export function createAcademicDisciplineCoreTextFields(
   translate: TFunction,
 ): AcademicDisciplineTextFieldProps[] {
   return [
-    { label: translate("academic.name"), onChange: form.onNameChange, value: form.name },
+    {
+      label: translate("academic.name"),
+      onChange: form.onNameChange,
+      required: true,
+      value: form.name,
+    },
     createAcademicDisciplineNumberTextField({
       inputStep: 1,
       label: translate("academic.totalClasses"),

@@ -19,7 +19,7 @@ export function ReviewSessionReadyContent(props: ReviewSessionReadyContentProps)
 
   return (
     <UIContentGroup variant="content">
-      <UIButton variant="contained" onClick={handleStartSession}>
+      <UIButton iconOnly={false} variant="contained" onClick={handleStartSession}>
         {t("review.startSession")}
       </UIButton>
       <UIDialogAction label={t("review.viewQueue")} title={t("review.viewQueue")}>

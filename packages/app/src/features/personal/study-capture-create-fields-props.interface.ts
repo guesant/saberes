@@ -11,6 +11,4 @@ export interface StudyCaptureCreateFieldsProps {
   onContentKeyChange(value: string): void;
 
   onDueDateChange(value: string): void;
-
-  onCreate(): Promise<void>;
 }

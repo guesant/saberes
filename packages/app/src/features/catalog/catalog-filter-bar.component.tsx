@@ -1,4 +1,4 @@
-import { UIContentGroup, UIResponsiveFields, UITextField } from "@guesant/saberes-ui";
+import { UIContentGroup, UITextField } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { CatalogCourseTypeFilter } from "./catalog-course-type-filter.component";
 import type { CatalogFilterBarProps } from "./catalog-filter-bar-props.type";
@@ -8,10 +8,15 @@ export function CatalogFilterBar(props: CatalogFilterBarProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UIResponsiveFields distribution="equal">
+      <UIContentGroup variant="content">
         <UITextField
           label={t("catalog.filters.process")}
-          onChange={(event) => { return props.onChange({ ...props.filters, processName: event.target.value }); }}
+          onChange={(event) => {
+            return props.onChange({
+              ...props.filters,
+              processName: event.target.value,
+            });
+          }}
           placeholder={t("catalog.processPlaceholder")}
           value={props.filters.processName || ""}
         />
@@ -27,9 +32,11 @@ export function CatalogFilterBar(props: CatalogFilterBarProps) {
           type="number"
           value={props.filters.year || ""}
         />
-      </UIResponsiveFields>
+      </UIContentGroup>
       <CatalogCourseTypeFilter
-        onChange={(courseType) => { return props.onChange({ ...props.filters, courseType }); }}
+        onChange={(courseType) => {
+          return props.onChange({ ...props.filters, courseType });
+        }}
         value={props.filters.courseType}
       />
     </UIContentGroup>

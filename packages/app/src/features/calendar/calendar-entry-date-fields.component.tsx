@@ -3,7 +3,7 @@ import type { CalendarEntryDateFieldsProps } from "./calendar-entry-date-fields-
 
 export function CalendarEntryDateFields(props: CalendarEntryDateFieldsProps) {
   return (
-    <UIContentGroup variant="inline">
+    <UIContentGroup variant="content">
       <UITextField
         label="Início"
         onChange={(event) => {

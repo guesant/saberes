@@ -1,25 +1,34 @@
 import { UIContentGroup, UIFocusedContent } from "@guesant/saberes-ui";
 import { TopicHeader } from "./topic-header.component";
-import { TopicLessonList } from "./topic-lesson-list.component";
 import { TopicNavigationDisclosure } from "./topic-navigation-disclosure.component";
-import { TopicQuestionList } from "./topic-question-list.component";
 import { TopicRelatedDisclosure } from "./topic-related-disclosure.component";
-import { TopicResourceList } from "./topic-resource-list.component";
+import { TopicSectionPanels } from "./topic-section-panels.component";
+import { useTopicSectionNavigation } from "./use-topic-section-navigation.hook";
 import type { TopicReadyViewProps } from "./topic-ready-view-props.type";
 
 export function TopicReadyView(props: TopicReadyViewProps) {
-  return (
-    <UIFocusedContent><UIContentGroup variant="section">
-      <TopicHeader topic={props.data.topic} />
-      <TopicLessonList lessons={props.data.lessons} />
-      <TopicQuestionList questions={props.data.questions} />
-      <TopicResourceList resources={props.data.resources} />
-      <TopicNavigationDisclosure
-        childrenTopics={props.data.children}
-        prerequisites={props.data.prerequisites}
-      />
+  const { activeSection, navigateToSection } = useTopicSectionNavigation();
 
-      <TopicRelatedDisclosure topics={props.data.related} />
-    </UIContentGroup></UIFocusedContent>
+  return (
+    <UIFocusedContent>
+      <UIContentGroup variant="section">
+        <TopicHeader
+          activeSection={activeSection}
+          navigateToSection={navigateToSection}
+          topic={props.data.topic}
+        />
+        <TopicSectionPanels
+          activeSection={activeSection}
+          lessons={props.data.lessons}
+          questions={props.data.questions}
+          resources={props.data.resources}
+        />
+        <TopicNavigationDisclosure
+          childrenTopics={props.data.children}
+          prerequisites={props.data.prerequisites}
+        />
+        <TopicRelatedDisclosure topics={props.data.related} />
+      </UIContentGroup>
+    </UIFocusedContent>
   );
 }

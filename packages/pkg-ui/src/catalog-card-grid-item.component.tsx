@@ -7,7 +7,12 @@ export type UICatalogCardGridItemProps = {
 
 export function UICatalogCardGridItem(props: UICatalogCardGridItemProps): ReactElement {
   return (
-    <UIBox gap="none" inset="none" layout="column">
+    <UIBox
+      gap="none"
+      inset="none"
+      layout="column"
+      sx={{ alignSelf: "stretch", height: "100%", minWidth: 0 }}
+    >
       {props.children}
     </UIBox>
   );

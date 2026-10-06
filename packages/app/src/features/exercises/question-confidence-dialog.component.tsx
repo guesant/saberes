@@ -8,10 +8,14 @@ export function QuestionConfidenceDialog(props: QuestionConfidenceDialogProps) {
   const { t } = useTranslation();
 
   return (
-    <UIDialog onClose={props.onClose} open={props.open} title={t("exercise.confirmAnswer")}>
+    <UIDialog
+      actions={<QuestionConfidenceActions dialog={props} />}
+      onClose={props.onClose}
+      open={props.open}
+      title={t("exercise.confirmAnswer")}
+    >
       <UIContentGroup variant="content">
         <QuestionConfidenceInput onChange={props.onChange} value={props.confidence} />
-        <QuestionConfidenceActions dialog={props} />
       </UIContentGroup>
     </UIDialog>
   );

@@ -6,7 +6,7 @@ export interface PersonalLensDeleteButtonProps {
 
 export function PersonalLensDeleteButton(props: PersonalLensDeleteButtonProps) {
   return (
-    <UIButton onClick={props.onDelete} variant="text">
+    <UIButton onClick={props.onDelete} type="button" variant="text">
       Excluir lente
     </UIButton>
   );

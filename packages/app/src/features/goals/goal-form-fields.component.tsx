@@ -1,5 +1,4 @@
 import { StudyGoalMetric } from "@guesant/saberes-application";
-import { UIButton } from "@guesant/saberes-ui";
 import { GoalFormMetrics } from "./goal-form-metrics.component";
 import { GoalFormTextFields } from "./goal-form-text-fields.component";
 import type { GoalFormApi } from "./goal-form-api.type";
@@ -7,7 +6,6 @@ import type { GoalFormApi } from "./goal-form-api.type";
 export interface GoalFormFieldsProps {
   titleLabel: string;
   targetLabel: string;
-  createLabel: string;
   dueAtLabel: string;
   metricLabels: Record<StudyGoalMetric, string>;
   form: GoalFormApi;
@@ -25,19 +23,6 @@ export function GoalFormFields(props: GoalFormFieldsProps) {
         titleLabel={props.titleLabel}
       />
       <GoalFormMetrics labels={props.metricLabels} form={props.form} />
-      <props.form.Subscribe
-        selector={(state) => {
-          return [state.canSubmit, state.isSubmitting];
-        }}
-      >
-        {([canSubmit, isSubmitting]) => {
-          return (
-            <UIButton disabled={!canSubmit || isSubmitting} type="submit" variant="contained">
-              {isSubmitting ? "..." : props.createLabel}
-            </UIButton>
-          );
-        }}
-      </props.form.Subscribe>
     </>
   );
 }

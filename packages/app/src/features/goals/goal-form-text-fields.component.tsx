@@ -1,4 +1,4 @@
-import { UIResponsiveFields } from "@guesant/saberes-ui";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { GoalFormDueDateField } from "./goal-form-due-date-field.component";
 import { GoalFormTargetField } from "./goal-form-target-field.component";
 import { GoalFormTitleField } from "./goal-form-title-field.component";
@@ -14,7 +14,7 @@ export interface GoalFormTextFieldsProps {
 
 export function GoalFormTextFields(props: GoalFormTextFieldsProps) {
   return (
-    <UIResponsiveFields distribution="equal">
+    <UIContentGroup variant="content">
       <GoalFormTitleField
         existingTitles={props.existingTitles}
         form={props.form}
@@ -22,6 +22,6 @@ export function GoalFormTextFields(props: GoalFormTextFieldsProps) {
       />
       <GoalFormTargetField form={props.form} label={props.targetLabel} />
       <GoalFormDueDateField form={props.form} label={props.dueAtLabel} />
-    </UIResponsiveFields>
+    </UIContentGroup>
   );
 }

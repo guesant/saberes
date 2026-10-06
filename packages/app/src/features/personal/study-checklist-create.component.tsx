@@ -1,9 +1,11 @@
-import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { UIForm } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { getStudyChecklistValues } from "./get-study-checklist-values.function";
 import { StudyChecklistCreateFields } from "./study-checklist-create-fields.component";
+import type { FormEvent } from "react";
 
 export interface StudyChecklistCreateProps {
+  formId: string;
   onCreate(title: string, items: string[], contentKey?: string): Promise<void>;
 }
 
@@ -28,8 +30,14 @@ export function StudyChecklistCreate(props: StudyChecklistCreateProps) {
     }
   };
 
+  const submit = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
+    event.preventDefault();
+
+    await create();
+  };
+
   return (
-    <UIContentGroup variant="content">
+    <UIForm id={props.formId} onSubmit={submit}>
       <StudyChecklistCreateFields
         contentKey={contentKey}
         items={items}
@@ -38,13 +46,6 @@ export function StudyChecklistCreate(props: StudyChecklistCreateProps) {
         onTitleChange={setTitle}
         title={title}
       />
-      <UIButton
-        disabled={!title.trim() || getStudyChecklistValues(items).length === 0}
-        onClick={create}
-        variant="outlined"
-      >
-        Salvar checklist
-      </UIButton>
-    </UIContentGroup>
+    </UIForm>
   );
 }

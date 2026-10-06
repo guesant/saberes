@@ -7,6 +7,7 @@ import type { CreateStudyGoalInput } from "./create-study-goal-input.interface";
 import type { FormEvent } from "react";
 
 export interface GoalFormProps {
+  formId: string;
   onCreate(input: CreateStudyGoalInput): Promise<void>;
   existingTitles: string[];
 }
@@ -14,7 +15,10 @@ export interface GoalFormProps {
 export function GoalForm(props: GoalFormProps) {
   const { t } = useTranslation();
 
-  const form = useGoalForm({ existingTitles: props.existingTitles, onCreate: props.onCreate });
+  const form = useGoalForm({
+    existingTitles: props.existingTitles,
+    onCreate: props.onCreate,
+  });
 
   const submit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -29,9 +33,8 @@ export function GoalForm(props: GoalFormProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UIForm onSubmit={submit}>
+      <UIForm id={props.formId} onSubmit={submit}>
         <GoalFormFields
-          createLabel={t("goals.create")}
           dueAtLabel={t("goals.dueAtLabel")}
           existingTitles={props.existingTitles}
           form={form}

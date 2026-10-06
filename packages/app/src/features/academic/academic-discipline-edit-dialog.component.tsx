@@ -1,5 +1,6 @@
 import { UIButton, UIDialog } from "@guesant/saberes-ui";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AcademicDisciplineForm } from "./academic-discipline-form.component";
 import type { SaveAcademicDisciplineInput } from "./save-academic-discipline-input.interface";
 import type { AcademicDiscipline } from "@guesant/saberes-application";
@@ -12,7 +13,11 @@ export interface AcademicDisciplineEditDialogProps {
 }
 
 export function AcademicDisciplineEditDialog(props: AcademicDisciplineEditDialogProps) {
+  const { t } = useTranslation();
+
   const [open, setOpen] = useState(false);
+
+  const formId = `academic-discipline-edit-form-${props.discipline.id}`;
 
   const save = async (input: SaveAcademicDisciplineInput): Promise<void> => {
     await props.onSave({ ...input, id: props.discipline.id });
@@ -22,11 +27,28 @@ export function AcademicDisciplineEditDialog(props: AcademicDisciplineEditDialog
 
   return (
     <>
-      <UIButton onClick={() => { return setOpen(true); }} variant="text">
+      <UIButton
+        onClick={() => {
+          return setOpen(true);
+        }}
+        variant="text"
+      >
         {props.triggerLabel}
       </UIButton>
-      <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>
-        <AcademicDisciplineForm initialDiscipline={props.discipline} onSave={save} />
+      <UIDialog
+        confirmForm={formId}
+        confirmLabel={t("academic.save")}
+        onClose={() => {
+          return setOpen(false);
+        }}
+        open={open}
+        title={props.title}
+      >
+        <AcademicDisciplineForm
+          formId={formId}
+          initialDiscipline={props.discipline}
+          onSave={save}
+        />
       </UIDialog>
     </>
   );

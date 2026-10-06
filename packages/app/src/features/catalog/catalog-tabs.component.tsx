@@ -1,4 +1,8 @@
-import { UIBox, UITab, UITypography, UIResponsiveTabs } from "@guesant/saberes-ui";
+import {
+  UIButtonActionIcon,
+  UIResponsiveTabs,
+  UITab,
+} from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { CatalogReadModel } from "@guesant/saberes-application";
 
@@ -13,45 +17,34 @@ export function CatalogTabs(props: CatalogTabsProps) {
 
   return (
     <UIResponsiveTabs
-      value={props.tab}
       onChange={(_, value) => {
         return props.onTabChange(value);
       }}
+      value={props.tab}
     >
       <UITab
-        label={(
-          <UIBox gap="xs" inset="none" layout="column" sx={{ alignItems: "center" }}>
-            <UITypography variant="caption">{t("catalog.courses")}</UITypography>
-            <UITypography variant="caption">{props.catalog.courses.length}</UITypography>
-          </UIBox>
-        )}
+        icon={<UIButtonActionIcon name="unknown" />}
+        iconPosition="start"
+        label={`${t("catalog.courses")} · ${props.catalog.courses.length}`}
+        value={0}
       />
-
       <UITab
-        label={(
-          <UIBox gap="xs" inset="none" layout="column" sx={{ alignItems: "center" }}>
-            <UITypography variant="caption">{t("catalog.maps")}</UITypography>
-            <UITypography variant="caption">{props.catalog.maps.length}</UITypography>
-          </UIBox>
-        )}
+        icon={<UIButtonActionIcon name="dependsOn" />}
+        iconPosition="start"
+        label={`${t("catalog.maps")} · ${props.catalog.maps.length}`}
+        value={1}
       />
-
       <UITab
-        label={(
-          <UIBox gap="xs" inset="none" layout="column" sx={{ alignItems: "center" }}>
-            <UITypography variant="caption">{t("catalog.plans")}</UITypography>
-            <UITypography variant="caption">{props.catalog.plans.length}</UITypography>
-          </UIBox>
-        )}
+        icon={<UIButtonActionIcon name="checklist" />}
+        iconPosition="start"
+        label={`${t("catalog.plans")} · ${props.catalog.plans.length}`}
+        value={2}
       />
-
       <UITab
-        label={(
-          <UIBox gap="xs" inset="none" layout="column" sx={{ alignItems: "center" }}>
-            <UITypography variant="caption">{t("catalog.contents")}</UITypography>
-            <UITypography variant="caption">{props.catalog.content.length}</UITypography>
-          </UIBox>
-        )}
+        icon={<UIButtonActionIcon name="topic" />}
+        iconPosition="start"
+        label={`${t("catalog.contents")} · ${props.catalog.content.length}`}
+        value={3}
       />
     </UIResponsiveTabs>
   );
