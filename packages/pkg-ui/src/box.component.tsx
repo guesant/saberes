@@ -19,6 +19,7 @@ export function UIBox<Component extends ElementType = "div">(props: UIBoxProps<C
       data-ui-gap={geometry.dataGap}
       data-ui-inset={geometry.inset}
       data-ui-layout={geometry.layoutName}
+      data-ui-layout-engine={geometry.display}
       display={geometry.display}
       flexDirection={geometry.flexDirection}
       flexWrap={geometry.flexWrap}

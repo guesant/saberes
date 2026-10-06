@@ -18,6 +18,7 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
           align: element.getAttribute("data-ui-align"),
           closure: element.getAttribute("data-ui-closure"),
           display: window.getComputedStyle(element).display,
+          engine: element.getAttribute("data-ui-layout-engine"),
           gap: element.getAttribute("data-ui-gap"),
           kind: element.getAttribute("data-ui-layout"),
           actions: element.getAttribute("data-ui-actions") === "true",
@@ -38,6 +39,19 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
           rowGap: Number.parseFloat(style.rowGap) || 0,
         };
       });
+
+      const stackGeometry = metadata.kind === "stack" && metadata.engine === "grid"
+        ? await layout.evaluate((element) => {
+          const style = window.getComputedStyle(element);
+
+          return {
+            alignContent: style.alignContent,
+            autoRows: style.gridAutoRows,
+            columns: style.gridTemplateColumns.trim()
+              .split(/\s+/u).length,
+          };
+        })
+        : undefined;
 
       const container = await layout.evaluate(getLayoutBox);
 
@@ -89,6 +103,10 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
       const gapRequiredLayouts = ["cluster", "equal-grid", "row", "split", "stack"];
 
       const hasLayoutChildren = children.length > 1;
+
+      if (stackGeometry && (stackGeometry.alignContent !== "start" || stackGeometry.autoRows !== "max-content" || stackGeometry.columns !== 1)) {
+        throw new Error(`UIBox stack (${metadata.debugName}) must use one max-content grid column aligned to start`);
+      }
 
       if (metadata.kind && gapRequiredLayouts.includes(metadata.kind) && hasLayoutChildren && !metadata.gap) {
         throw new Error(`${metadata.kind} layout (${metadata.debugName}) must declare a gap token`);

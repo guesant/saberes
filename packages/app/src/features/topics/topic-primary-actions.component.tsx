@@ -7,7 +7,7 @@ export function TopicPrimaryActions() {
   return (
     <UIInlineActions wrap>
       <UIButton href="#teoria" variant="contained">{t("discovery.theory")}</UIButton>
-      <UIButton href="#pratica" variant="outlined">{t("common.practice")}</UIButton>
+      <UIButton href="#pratica" variant="outlined">{t("discovery.practice")}</UIButton>
       <UIButton href="#materiais" variant="outlined">{t("discovery.materials")}</UIButton>
     </UIInlineActions>
   );

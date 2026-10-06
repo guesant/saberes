@@ -1,4 +1,4 @@
-import { getResponsiveGridTracks } from "./get-responsive-grid-tracks.function";
+import { getUiBoxGridTracks } from "./get-ui-box-grid-tracks.function";
 import { getUiSpacing } from "./get-ui-spacing.function";
 import type { UiBoxLayoutConfig } from "./ui-box-layout-config.interface";
 import type { UIBoxProps } from "./ui-box-props.type";
@@ -6,20 +6,20 @@ import type { ElementType } from "react";
 
 const layoutConfigurations = {
   column: {
-    false: { childStyle: undefined, closure: undefined, display: "flex", direction: "column", gap: "md", inset: "sm", layout: "stack", wrap: "nowrap" },
-    true: { childStyle: undefined, closure: undefined, display: "flex", direction: "column", gap: "md", inset: "sm", layout: "stack", wrap: "nowrap" },
+    false: { alignContent: "start", childStyle: undefined, closure: undefined, display: "grid", direction: undefined, gap: "md", gridAutoRows: "max-content", inset: "sm", layout: "stack", wrap: "nowrap" },
+    true: { alignContent: "start", childStyle: undefined, closure: undefined, display: "grid", direction: undefined, gap: "md", gridAutoRows: "max-content", inset: "sm", layout: "stack", wrap: "nowrap" },
   },
   flow: {
-    false: { childStyle: undefined, closure: undefined, display: "block", direction: undefined, gap: "none", inset: "none", layout: "flow", wrap: "nowrap" },
-    true: { childStyle: undefined, closure: undefined, display: "block", direction: undefined, gap: "none", inset: "none", layout: "flow", wrap: "nowrap" },
+    false: { alignContent: undefined, childStyle: undefined, closure: undefined, display: "block", direction: undefined, gap: "none", gridAutoRows: undefined, inset: "none", layout: "flow", wrap: "nowrap" },
+    true: { alignContent: undefined, childStyle: undefined, closure: undefined, display: "block", direction: undefined, gap: "none", gridAutoRows: undefined, inset: "none", layout: "flow", wrap: "nowrap" },
   },
   grid: {
-    false: { childStyle: { "& > *": { maxWidth: "100%", minWidth: 0, overflowWrap: "anywhere" } }, closure: "closed", display: "grid", direction: undefined, gap: "md", inset: "sm", layout: "equal-grid", wrap: "nowrap" },
-    true: { childStyle: { "& > *": { maxWidth: "100%", minWidth: 0, overflowWrap: "anywhere" } }, closure: "closed", display: "grid", direction: undefined, gap: "md", inset: "sm", layout: "equal-grid", wrap: "nowrap" },
+    false: { alignContent: undefined, childStyle: { "& > *": { maxWidth: "100%", minWidth: 0, overflowWrap: "anywhere" } }, closure: "closed", display: "grid", direction: undefined, gap: "md", gridAutoRows: undefined, inset: "sm", layout: "equal-grid", wrap: "nowrap" },
+    true: { alignContent: undefined, childStyle: { "& > *": { maxWidth: "100%", minWidth: 0, overflowWrap: "anywhere" } }, closure: "closed", display: "grid", direction: undefined, gap: "md", gridAutoRows: undefined, inset: "sm", layout: "equal-grid", wrap: "nowrap" },
   },
   row: {
-    false: { childStyle: undefined, closure: undefined, display: "flex", direction: "row", gap: "md", inset: "sm", layout: "row", wrap: "nowrap" },
-    true: { childStyle: undefined, closure: undefined, display: "flex", direction: "row", gap: "sm", inset: "none", layout: "cluster", wrap: "wrap" },
+    false: { alignContent: undefined, childStyle: undefined, closure: undefined, display: "flex", direction: "row", gap: "md", gridAutoRows: undefined, inset: "sm", layout: "row", wrap: "nowrap" },
+    true: { alignContent: undefined, childStyle: undefined, closure: undefined, display: "flex", direction: "row", gap: "sm", gridAutoRows: undefined, inset: "none", layout: "cluster", wrap: "wrap" },
   },
 } as const;
 
@@ -36,7 +36,7 @@ export function createUiBoxLayout<Component extends ElementType>(props: UIBoxPro
 
   const { gap: gapToken, inset: insetToken } = { gap: configuration.gap, inset: configuration.inset, ...props };
 
-  const tracks = getResponsiveGridTracks(props.columns, props.minItemWidth);
+  const tracks = getUiBoxGridTracks(layout, props.columns, props.minItemWidth);
 
   return {
     alignItems: alignmentValues[alignment],
@@ -53,7 +53,9 @@ export function createUiBoxLayout<Component extends ElementType>(props: UIBoxPro
     layoutName: configuration.layout,
     sx: {
       ...configuration.childStyle,
+      alignContent: configuration.alignContent,
       boxSizing: "border-box",
+      gridAutoRows: configuration.gridAutoRows,
       gridTemplateColumns: tracks,
       maxWidth: "100%",
       padding: getUiSpacing(insetToken),

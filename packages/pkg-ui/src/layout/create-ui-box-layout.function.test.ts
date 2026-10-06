@@ -1,20 +1,32 @@
 import { expect, it } from "vitest";
 import { createUiBoxLayout } from "./create-ui-box-layout.function";
 
-it("createUiBoxLayout defaults to a padded vertical flex layout with a spacing token", () => {
+it("createUiBoxLayout defaults to a padded one-column grid stack with a spacing token", () => {
   const layout = createUiBoxLayout({});
 
   expect(layout)
     .toMatchObject({
       dataAlign: "stretch",
       dataGap: "md",
-      display: "flex",
-      flexDirection: "column",
+      display: "grid",
+      gridTracks: "minmax(0, 1fr)",
       flexWrap: "nowrap",
       gap: 16,
       inset: "sm",
       layoutName: "stack",
+      sx: {
+        alignContent: "start",
+        gridAutoRows: "max-content",
+        gridTemplateColumns: "minmax(0, 1fr)",
+      },
     });
+});
+
+it("createUiBoxLayout keeps the vertical grid single-column despite grid options", () => {
+  const layout = createUiBoxLayout({ columns: 3, layout: "column", minItemWidth: "compact" });
+
+  expect(layout)
+    .toMatchObject({ display: "grid", gridTracks: "minmax(0, 1fr)" });
 });
 
 it("createUiBoxLayout supports horizontal rows and wrapping clusters", () => {

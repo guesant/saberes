@@ -1,13 +1,12 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
-import { createStartCourseAction } from "./create-start-course-action.function";
 import { getCourseItems } from "./get-course-items.function";
 import { getCourseProgress } from "./get-course-progress.function";
 import { getCourseStarted } from "./get-course-started.function";
 import { useCourseContentQuery } from "./use-course-content-query.hook";
+import { useCourseEnrollmentAction } from "./use-course-enrollment-action.hook";
 import { useCourseProgressQueries } from "./use-course-progress-queries.hook";
-import { useCourseStartAction } from "./use-course-start-action.hook";
 import type { CourseProgress } from "./course-progress.interface";
 import type { ActionState } from "../../types/action-state.type";
 import type { CourseReadModel } from "@guesant/saberes-application";
@@ -37,13 +36,13 @@ export function useCourseViewModel(slug: string | undefined): CourseViewModel {
 
   const progressQueries = useCourseProgressQueries(services);
 
-  const enrollInCourse = createStartCourseAction({
-    services,
+  const startAction = useCourseEnrollmentAction({
+    attempts: progressQueries.attempts,
+    course: query.data,
+    lessonProgress: progressQueries.lessonProgress,
     queryClient,
-    course: query.data?.course,
+    services,
   });
-
-  const startAction = useCourseStartAction({ action: enrollInCourse });
 
   return {
     state: getQueryViewState(query),

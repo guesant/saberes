@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { validateProgressiveDisclosure } from "./validate-progressive-disclosure.function";
 import { validateRouteSettled } from "./validate-route-settled.function";
 import { validateVisibleControlsNamed } from "./validate-visible-controls-named.function";
 
@@ -58,6 +59,8 @@ flowRoutes.forEach(([name, path]) => {
     await page.goto(path, { waitUntil: "networkidle" });
 
     await validateRouteSettled(page);
+
+    await validateProgressiveDisclosure(page);
 
     await expect(page.locator("#main-content"))
       .toBeVisible();

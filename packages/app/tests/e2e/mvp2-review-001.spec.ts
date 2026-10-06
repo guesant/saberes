@@ -53,8 +53,19 @@ test("@mvp2-review-001 demonstra o primeiro estudo sem rede", async ({ browser }
   await page.getByRole("button", { name: "Começar curso" })
     .click();
 
+  await expect(page)
+    .toHaveURL(/\/licoes\/[^/]+$/);
+
+  await page.goBack();
+
   await expect(page.getByRole("button", { name: "Continuar curso" }))
     .toBeVisible();
+
+  await page.getByRole("button", { name: "Continuar curso" })
+    .click();
+
+  await expect(page)
+    .toHaveURL(/\/licoes\/[^/]+$/);
 
   await context.setOffline(true);
 

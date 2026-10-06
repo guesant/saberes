@@ -64,15 +64,19 @@ test("o estudante inicia um curso e consegue concluir uma lição", async ({ pag
   await page.getByRole("button", { name: "Começar curso" })
     .click();
 
+  await expect(page)
+    .toHaveURL(/\/licoes\/[^/]+$/);
+
+  await page.goBack();
+
   await expect(page.getByRole("button", { name: "Continuar curso" }))
     .toBeVisible();
 
-  await page.getByText("Aprenda em sequência", { exact: true })
+  await page.getByRole("button", { name: "Continuar curso" })
     .click();
 
-  await page.locator('a[href^="/licoes/"]')
-    .first()
-    .click();
+  await expect(page)
+    .toHaveURL(/\/licoes\/[^/]+$/);
 
   await validateRouteSettled(page);
 
@@ -123,6 +127,182 @@ test("a ação de prática da lição leva às questões do tópico estudado", a
 
   await validateRouteSettled(page);
 
+});
+
+test("as ações do tópico levam à teoria, à prática e aos materiais", async ({ page }) => {
+  await page.goto("/topicos/matematica.funcoes-graficos", { waitUntil: "networkidle" });
+
+  await validateRouteSettled(page);
+
+  const assertTopicAnchor = async (label: string, id: string): Promise<void> => {
+    const action = page.getByRole("link", { name: label, exact: true });
+
+    const target = page.locator(`#${id}`);
+
+    await expect(action)
+      .toHaveAttribute("href", `#${id}`);
+
+    await action.click();
+
+    await expect(page)
+      .toHaveURL(new RegExp(`#${id}$`));
+
+    await expect(target)
+      .toBeInViewport();
+  };
+
+  await assertTopicAnchor("Teoria", "teoria");
+
+  await assertTopicAnchor("Prática", "pratica");
+
+  await assertTopicAnchor("Materiais de apoio", "materiais");
+});
+
+test("ações rápidas só revelam a busca após solicitação e levam à tela escolhida", async ({ page }) => {
+  await page.goto("/", { waitUntil: "networkidle" });
+
+  await validateRouteSettled(page);
+
+  await expect(page.getByRole("dialog"))
+    .toHaveCount(0);
+
+  await page.getByRole("button", { name: "Abrir ações rápidas" })
+    .click();
+
+  const palette = page.getByRole("dialog", { name: "Ações rápidas" });
+
+  await expect(palette)
+    .toBeVisible();
+
+  await palette.getByRole("textbox", { name: "Buscar uma tela" })
+    .fill("Desempenho");
+
+  await palette.getByRole("button", { name: "Desempenho" })
+    .click();
+
+  await expect(page)
+    .toHaveURL(/\/desempenho$/);
+
+  await expect(page.getByRole("heading", { name: "Desempenho" }))
+    .toBeVisible();
+
+  await expect(page.getByRole("dialog"))
+    .toHaveCount(0);
+});
+
+test("as ações de um plano alteram progresso, ordem, etapa e estado", async ({ page }) => {
+  await page.goto("/plano/trilha-30-dias-unicamp-2027", { waitUntil: "networkidle" });
+
+  await validateRouteSettled(page);
+
+  const firstStep = page.getByRole("heading", { level: 6 })
+    .first();
+
+  const initialStep = await firstStep.textContent();
+
+  await page.getByRole("button", { name: "Marcar como concluída" })
+    .first()
+    .click();
+
+  await expect(page.getByRole("button", { name: "Concluída" })
+    .first())
+    .toBeVisible();
+
+  await page.getByRole("button", { name: "Concluída" })
+    .first()
+    .click();
+
+  await expect(page.getByRole("button", { name: "Marcar como concluída" })
+    .first())
+    .toBeVisible();
+
+  await page.getByRole("button", { name: "Pular etapa" })
+    .first()
+    .click();
+
+  await expect(page.getByRole("button", { name: "Retomar etapa" })
+    .first())
+    .toBeVisible();
+
+  await page.getByRole("button", { name: "Retomar etapa" })
+    .first()
+    .click();
+
+  await expect(page.getByRole("button", { name: "Pular etapa" })
+    .first())
+    .toBeVisible();
+
+  await page.getByRole("button", { name: "Mover etapa para baixo" })
+    .first()
+    .click();
+
+  await expect(firstStep).not.toHaveText(initialStep || "");
+
+  await page.getByRole("button", { name: "Personalizar plano" })
+    .click();
+
+  const customization = page.getByRole("dialog", { name: "Personalizar plano de estudo" });
+
+  await expect(customization)
+    .toBeVisible();
+
+  await expect(customization.getByText("Plano ativo"))
+    .toBeVisible();
+
+  await customization.getByRole("button", { name: "Pausar plano" })
+    .click();
+
+  await expect(customization.getByText("Plano pausado"))
+    .toBeVisible();
+
+  await customization.getByRole("button", { name: "Retomar plano" })
+    .click();
+
+  await expect(customization.getByText("Plano ativo"))
+    .toBeVisible();
+
+  await page.keyboard.press("Escape");
+
+  await expect(customization)
+    .toHaveCount(0);
+});
+
+test("a preferência de retenção permanece fechada até abrir e persiste a alteração", async ({ page }) => {
+  await page.goto("/revisoes", { waitUntil: "networkidle" });
+
+  await validateRouteSettled(page);
+
+  await expect(page.getByRole("dialog"))
+    .toHaveCount(0);
+
+  await page.getByRole("button", { name: "Ajustar meta de retenção" })
+    .click();
+
+  const retentionDialog = page.getByRole("dialog");
+
+  const retention = retentionDialog.getByRole("spinbutton", { name: "Retenção desejada (%)" });
+
+  await expect(retentionDialog)
+    .toBeVisible();
+
+  await retention.fill("90");
+
+  await expect(retention)
+    .toHaveValue("90");
+
+  await page.keyboard.press("Escape");
+
+  await expect(retentionDialog)
+    .toHaveCount(0);
+
+  await page.reload({ waitUntil: "networkidle" });
+
+  await page.getByRole("button", { name: "Ajustar meta de retenção" })
+    .click();
+
+  await expect(page.getByRole("dialog")
+    .getByRole("spinbutton"))
+    .toHaveValue("90");
 });
 
 test("o estudante responde uma questão, salva e remove dos salvos e registra diagnóstico", async ({ page }) => {
@@ -454,9 +634,18 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
   await page.getByRole("button", { name: "Semana" })
     .click();
 
+  await expect(page.getByRole("button", { name: "Semana" }))
+    .toHaveClass(/MuiButton-contained/u);
+
   await page.getByRole("button", { name: "Mês" })
     .click();
 
+  await expect(page.getByRole("button", { name: "Mês" }))
+    .toHaveClass(/MuiButton-contained/u);
+
   await page.getByRole("button", { name: "Dia" })
     .click();
+
+  await expect(page.getByRole("button", { name: "Dia" }))
+    .toHaveClass(/MuiButton-contained/u);
 });
