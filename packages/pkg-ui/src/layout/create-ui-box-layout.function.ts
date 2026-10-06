@@ -54,16 +54,12 @@ export function createUiBoxLayout<Component extends ElementType>(props: UIBoxPro
   return {
     alignItems: alignmentValues[alignment],
     component: props.component,
-    dataAlign: alignment,
-    dataClosure: configuration.closure,
-    dataGap: gapToken,
     display: configuration.display,
     flexDirection: configuration.direction,
     flexWrap: configuration.wrap,
     gap: getUiSpacing(gapToken),
     gridTracks: tracks,
     inset: insetToken,
-    layoutName: configuration.layout,
     sx: {
       ...configuration.childStyle,
       ...structuralStyles,

@@ -67,7 +67,7 @@ flowRoutes.forEach(([name, path]) => {
 
     await validateVisibleControlsNamed(page);
 
-    await expect(page.locator('[role="alert"][data-ui-alert-severity="error"]'))
+    await expect(page.locator('[role="alert"].MuiAlert-standardError'))
       .toHaveCount(0);
 
     expect(pageErrors, "a rota saudável não deve lançar erros JavaScript")
@@ -112,7 +112,7 @@ test("uma rota com recurso ausente apresenta erro tratado sem erro técnico", as
   await expect(page.locator("#main-content"))
     .toBeVisible();
 
-  await expect(page.locator('[role="alert"][data-ui-alert-severity="error"]'))
+  await expect(page.locator('[role="alert"].MuiAlert-standardError'))
     .toBeVisible();
 
   await validateVisibleControlsNamed(page);

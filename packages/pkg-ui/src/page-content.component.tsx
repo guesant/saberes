@@ -19,11 +19,15 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
         bgcolor: "background.default",
         display: "grid",
         gridColumn: props.sidebarAware ? { md: "2", xs: "1 / -1" } : "1 / -1",
+        gridRow: 2,
         gridTemplateColumns: "minmax(0, 1fr)",
+        gridTemplateRows: "minmax(0, 1fr)",
+        height: "100%",
         justifySelf: "stretch",
-        minHeight: { md: "calc(100vh - 64px)", xs: "auto" },
+        minHeight: 0,
         minWidth: 0,
         justifyItems: "center",
+        overflow: "hidden",
         width: "100%",
       }}
     >

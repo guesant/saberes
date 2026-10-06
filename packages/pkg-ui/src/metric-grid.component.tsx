@@ -1,4 +1,4 @@
-import { Grid as MuiGrid } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIMetricGridProps = {
@@ -7,14 +7,8 @@ export type UIMetricGridProps = {
 
 export function UIMetricGrid(props: UIMetricGridProps): ReactElement {
   return (
-    <MuiGrid
-      container
-      data-ui-closure="closed"
-      data-ui-gap="md"
-      data-ui-layout="equal-grid"
-      spacing={2}
-    >
+    <UIBox gap="md" inset="none" layout="grid" columns={3}>
       {props.children}
-    </MuiGrid>
+    </UIBox>
   );
 }

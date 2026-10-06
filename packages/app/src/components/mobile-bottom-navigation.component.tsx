@@ -22,8 +22,6 @@ export function MobileBottomNavigation(props: MobileBottomNavigationProps) {
 
   return (
     <UIBottomNavigation
-      data-ui-layout="bottom-tabs"
-      data-ui-safe-area="bottom"
       onChange={(_, value) => {
         return navigate(value);
       }}

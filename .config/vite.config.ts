@@ -101,7 +101,7 @@ export default defineConfig({
       targets: staticCopyTargets,
     }),
     VitePWA({
-      registerType: "autoUpdate",
+      registerType: "prompt",
       includeAssets: ["icons/*.svg"],
       manifest: {
         id: base,
@@ -166,7 +166,7 @@ export default defineConfig({
         navigateFallback: asset("index.html"),
         navigateFallbackDenylist: [/\/-\/backstage\/database\/schema(?:\/|$)/u],
         globPatterns: ["**/*.{js,css,html,svg,wasm,json,sqlite}"],
-        skipWaiting: true,
+        skipWaiting: false,
         runtimeCaching: [
           {
             urlPattern: ({ url }) => {

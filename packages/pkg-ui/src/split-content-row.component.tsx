@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UISplitContentRowProps = {
@@ -7,19 +7,14 @@ export type UISplitContentRowProps = {
 
 export function UISplitContentRow(props: UISplitContentRowProps): ReactElement {
   return (
-    <MuiBox
-      alignItems="flex-start"
-      data-ui-align="start"
-      data-ui-gap="md"
-      data-ui-layout="split"
-      display="flex"
-      flexDirection={{ sm: "row", xs: "column" }}
-      gap={2}
-      justifyContent="space-between"
-      minWidth={0}
-      sx={{ maxWidth: "100%", width: "100%" }}
+    <UIBox
+      align="start"
+      gap="md"
+      inset="none"
+      layout="row"
+      sx={{ flexDirection: { sm: "row", xs: "column" }, justifyContent: "space-between", maxWidth: "100%" }}
     >
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

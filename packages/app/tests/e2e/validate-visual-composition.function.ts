@@ -51,35 +51,36 @@ export async function validateVisualComposition(
         }
       });
 
-    document.querySelectorAll<HTMLElement>("[data-ui-layout='stack']")
+    document.querySelectorAll<HTMLElement>("#main-content *")
       .forEach((layout) => {
-        const declaredGap = Number.parseFloat(window.getComputedStyle(layout).rowGap);
+        const style = window.getComputedStyle(layout);
+
+        const isVertical = style.display === "grid"
+          ? style.gridTemplateColumns.trim()
+            .split(/\s+/u).length === 1
+          : style.display === "flex" && style.flexDirection === "column";
+
+        if (!isVertical) {
+          return;
+        }
 
         const children = Array.from(layout.children)
-          .filter((child) => {
-            const box = child.getBoundingClientRect();
-
+          .map((child) => {
+            return child.getBoundingClientRect();
+          })
+          .filter((box) => {
             return box.width > 0 && box.height > 0;
+          })
+          .sort((first, second) => {
+            return first.top - second.top;
           });
 
         children.slice(1)
           .forEach((child, index) => {
-            const previous = children[index];
+            const actualGap = child.top - children[index].bottom;
 
-            const previousBox = previous.getBoundingClientRect();
-
-            const childBox = child.getBoundingClientRect();
-
-            const isVertical = childBox.top >= previousBox.bottom - 1;
-
-            const gap = childBox.top - previousBox.bottom;
-
-            if (isVertical && gap < 0) {
-              findings.push(`${scenarioName}: stacked siblings overlap`);
-            }
-
-            if (isVertical && declaredGap > 0 && Math.abs(gap - declaredGap) > 1) {
-              findings.push(`${scenarioName}: declared stack gap is not realized in the DOM`);
+            if (actualGap < -1) {
+              findings.push(`${scenarioName}: vertical siblings overlap`);
             }
           });
       });

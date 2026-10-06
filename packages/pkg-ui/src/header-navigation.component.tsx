@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIHeaderNavigationProps = {
@@ -6,5 +6,5 @@ export type UIHeaderNavigationProps = {
 };
 
 export function UIHeaderNavigation(props: UIHeaderNavigationProps): ReactElement {
-  return <MuiBox data-ui-gap="sm" data-ui-layout="row" sx={{ display: { md: "flex", xs: "none" }, gap: 1 }}>{props.children}</MuiBox>;
+  return <UIBox gap="sm" inset="none" layout="row" sx={{ display: { md: "flex", xs: "none" } }}>{props.children}</UIBox>;
 }

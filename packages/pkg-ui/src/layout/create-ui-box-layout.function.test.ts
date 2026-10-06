@@ -6,14 +6,11 @@ it("createUiBoxLayout defaults to a padded one-column grid stack with a spacing 
 
   expect(layout)
     .toMatchObject({
-      dataAlign: "stretch",
-      dataGap: "md",
       display: "grid",
       gridTracks: "minmax(0, 1fr)",
       flexWrap: "nowrap",
       gap: 16,
       inset: "sm",
-      layoutName: "stack",
       sx: {
         alignContent: "start",
         gridAutoRows: "max-content",
@@ -35,10 +32,10 @@ it("createUiBoxLayout supports horizontal rows and wrapping clusters", () => {
   const cluster = createUiBoxLayout({ layout: "row", wrap: true });
 
   expect(row)
-    .toMatchObject({ dataGap: "md", flexDirection: "row", flexWrap: "nowrap", layoutName: "row" });
+    .toMatchObject({ flexDirection: "row", flexWrap: "nowrap" });
 
   expect(cluster)
-    .toMatchObject({ dataGap: "sm", flexDirection: "row", flexWrap: "wrap", layoutName: "cluster" });
+    .toMatchObject({ flexDirection: "row", flexWrap: "wrap" });
 });
 
 it("createUiBoxLayout uses a closed grid and responsive equal tracks", () => {
@@ -46,10 +43,7 @@ it("createUiBoxLayout uses a closed grid and responsive equal tracks", () => {
 
   expect(layout)
     .toMatchObject({
-      dataClosure: "closed",
-      dataGap: "md",
       display: "grid",
-      layoutName: "equal-grid",
       gridTracks: {
         md: "repeat(2, minmax(0, 1fr))",
         sm: "repeat(2, minmax(0, 1fr))",
@@ -62,14 +56,14 @@ it("createUiBoxLayout uses normal document flow without adding spacing or inset"
   const layout = createUiBoxLayout({ layout: "flow" });
 
   expect(layout)
-    .toMatchObject({ dataGap: "none", display: "block", gap: 0, inset: "none", layoutName: "flow" });
+    .toMatchObject({ display: "block", gap: 0, inset: "none" });
 });
 
 it("createUiBoxLayout preserves native display semantics for structural table elements", () => {
   const layout = createUiBoxLayout({ component: "table", layout: "native" });
 
   expect(layout)
-    .toMatchObject({ dataGap: "none", display: undefined, gap: 0, inset: "none", layoutName: "native" });
+    .toMatchObject({ display: undefined, gap: 0, inset: "none" });
 
   expect(layout.sx)
     .not.toHaveProperty("width");

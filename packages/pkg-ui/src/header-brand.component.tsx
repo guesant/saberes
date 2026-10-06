@@ -10,9 +10,6 @@ export function UIHeaderBrand(props: UIHeaderBrandProps): ReactElement {
   return (
     <MuiTypography
       component="a"
-      data-ui-layout="toolbar"
-      data-ui-outset="sm"
-      data-ui-overflow="hidden"
       href={props.href}
       sx={{
         "&:hover": { color: "common.white", textDecoration: "none" },

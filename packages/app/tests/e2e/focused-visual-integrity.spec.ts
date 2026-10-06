@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { validateDocumentOverflow } from "./validate-document-overflow.function";
-import { validateLayoutMetadata } from "./validate-layout-metadata.function";
+import { validateRenderedLayout } from "./validate-rendered-layout.function";
 import { validateRouteSettled } from "./validate-route-settled.function";
 
 const auditedRoutes = [
@@ -43,7 +43,7 @@ visualCases.forEach(({ colorScheme, route, width }) => {
         .toBeVisible();
     }
 
-    await validateLayoutMetadata(page);
+    await validateRenderedLayout(page);
 
     await validateDocumentOverflow(page);
 

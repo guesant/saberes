@@ -29,9 +29,10 @@ viewports.forEach((viewport) => {
     expect(geometry.documentWidth)
       .toBeLessThanOrEqual(geometry.viewportWidth + 1);
 
-    const bottomNavigation = page.locator('[data-ui-layout="bottom-tabs"]');
+    const bottomNavigation = page.getByRole("navigation", { name: "Navegação principal" });
 
-    const drawer = page.locator('[data-ui-navigation="drawer"] .MuiDrawer-paper');
+    const drawer = page.getByTestId("desktop-navigation-drawer")
+      .locator(".MuiDrawer-paper");
 
     if (viewport.width < 900) {
       await expect(bottomNavigation)

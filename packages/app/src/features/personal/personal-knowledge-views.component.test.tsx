@@ -1,5 +1,6 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
+import { findRenderedUiGrid } from "./find-rendered-ui-grid.function";
 import { PersonalKnowledgeBoardView } from "./personal-knowledge-board-view.component";
 import { PersonalKnowledgeTreeView } from "./personal-knowledge-tree-view.component";
 import type { PersonalKnowledgeSelectionTestState } from "./personal-knowledge-selection-test-state.interface";
@@ -72,13 +73,13 @@ describe("visões do conhecimento pessoal", () => {
 
     render(<PersonalKnowledgeBoardView projection={projection} selection={state.selection} />);
 
-    const grid = document.querySelector('[data-ui-layout="equal-grid"]');
+    const grid = findRenderedUiGrid();
 
     expect(grid)
       .toBeTruthy();
 
-    expect(grid)
-      .toHaveAttribute("data-ui-closure", "closed");
+    expect(grid && Number.parseFloat(window.getComputedStyle(grid).gap))
+      .toBeGreaterThan(0);
 
     expect(screen.getByRole("heading", { name: "note" }))
       .toBeTruthy();

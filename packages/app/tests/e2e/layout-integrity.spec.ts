@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import { createLayoutSnapshotName } from "./create-layout-snapshot-name.function";
 import { validateControlGeometry } from "./validate-control-geometry.function";
 import { validateDocumentOverflow } from "./validate-document-overflow.function";
-import { validateLayoutMetadata } from "./validate-layout-metadata.function";
+import { validateRenderedLayout } from "./validate-rendered-layout.function";
 
 const studyRoutes = [
   "/",
@@ -39,7 +39,10 @@ viewports.forEach((viewport) => {
 
         await expect(page.locator("#root")).not.toBeEmpty();
 
-        await validateLayoutMetadata(page);
+        await expect(page.locator("#main-content"))
+          .toBeVisible({ timeout: 15_000 });
+
+        await validateRenderedLayout(page);
 
         await validateControlGeometry(page);
 
@@ -51,6 +54,9 @@ viewports.forEach((viewport) => {
 
         await expect(page.locator("#root")).not.toBeEmpty();
 
+        await expect(page.locator("#main-content"))
+          .toBeVisible({ timeout: 15_000 });
+
         await expect(page)
           .toHaveScreenshot(createLayoutSnapshotName(route, viewport.name), {
             animations: "disabled",
@@ -58,6 +64,93 @@ viewports.forEach((viewport) => {
             fullPage: true,
           });
       });
+    });
+
+    test("@layout vertical scrolling stays inside main", async ({ page }) => {
+      await page.goto("/mapa/mapa-primeiro-estudo", { waitUntil: "networkidle" });
+
+
+      const main = page.locator("#main-content");
+
+      await expect(main)
+        .toBeVisible({ timeout: 15_000 });
+
+      const initialGeometry = await page.evaluate(() => {
+        const mainElement = document.querySelector<HTMLElement>("#main-content");
+
+        const toolbar = document.querySelector<HTMLElement>("header.MuiAppBar-root");
+
+        const bottomTabs = document.querySelector<HTMLElement>("nav[aria-label='Navegação principal']");
+
+        if (!mainElement || !toolbar || !bottomTabs) {
+          throw new Error("Shell scroll containers are missing");
+        }
+
+        const longContent = document.createElement("div");
+
+        longContent.setAttribute("aria-hidden", "true");
+
+        longContent.style.height = "2000px";
+
+        mainElement.append(longContent);
+
+        return {
+          bottomTabsTop: bottomTabs.getBoundingClientRect().top,
+          documentHeight: document.documentElement.scrollHeight,
+          documentTop: document.documentElement.scrollTop,
+          mainClientHeight: mainElement.clientHeight,
+          mainScrollHeight: mainElement.scrollHeight,
+          toolbarTop: toolbar.getBoundingClientRect().top,
+          viewportHeight: window.innerHeight,
+        };
+      });
+
+      expect(initialGeometry.documentHeight)
+        .toBeLessThanOrEqual(
+          initialGeometry.viewportHeight + 1,
+        );
+
+      expect(initialGeometry.mainScrollHeight)
+        .toBeGreaterThan(initialGeometry.mainClientHeight);
+
+      await main.evaluate((element) => {
+        element.scrollTo({ top: 300 });
+      });
+
+      await expect
+        .poll(() => {
+          return main.evaluate((element) => {
+            return element.scrollTop;
+          });
+        })
+        .toBeGreaterThan(0);
+
+      const scrolledGeometry = await page.evaluate(() => {
+        const toolbar = document.querySelector<HTMLElement>("header.MuiAppBar-root");
+
+        const bottomTabs = document.querySelector<HTMLElement>("nav[aria-label='Navegação principal']");
+
+        if (!toolbar || !bottomTabs) {
+          throw new Error("Shell navigation is missing");
+        }
+
+        return {
+          bottomTabsTop: bottomTabs.getBoundingClientRect().top,
+          documentTop: document.documentElement.scrollTop,
+          toolbarTop: toolbar.getBoundingClientRect().top,
+        };
+      });
+
+      expect(scrolledGeometry.documentTop)
+        .toBe(0);
+
+      expect(scrolledGeometry.toolbarTop)
+        .toBeCloseTo(initialGeometry.toolbarTop, 0);
+
+      if (viewport.width < 900) {
+        expect(scrolledGeometry.bottomTabsTop)
+          .toBeCloseTo(initialGeometry.bottomTabsTop, 0);
+      }
     });
   });
 });

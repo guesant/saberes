@@ -7,7 +7,7 @@ export type UIContentLoadingLabelProps = {
 
 export function UIContentLoadingLabel(props: UIContentLoadingLabelProps): ReactElement {
   return (
-    <MuiTypography color="text.secondary" data-ui-layout="stack" data-ui-outset="md" sx={{ mt: 2 }}>
+    <MuiTypography color="text.secondary" sx={{ mt: 2 }}>
       {props.children}
     </MuiTypography>
   );

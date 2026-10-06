@@ -14,12 +14,6 @@ export function UIBox<Component extends ElementType = "div">(props: UIBoxProps<C
       {...elementProps}
       alignItems={geometry.alignItems}
       component={geometry.component ?? "div"}
-      data-ui-align={geometry.dataAlign}
-      data-ui-closure={geometry.dataClosure}
-      data-ui-gap={geometry.dataGap}
-      data-ui-inset={geometry.inset}
-      data-ui-layout={geometry.layoutName}
-      data-ui-layout-engine={geometry.display}
       display={geometry.display}
       flexDirection={geometry.flexDirection}
       flexWrap={geometry.flexWrap}

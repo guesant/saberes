@@ -945,53 +945,41 @@ test("no-technical-form-copy rejects ContentKey exposed in controls", () => {
   );
 });
 
-test("spacing-contract requires semantic metadata and approved spacing tokens", () => {
-  assert.ok(
+test("no-ui-data-attributes rejects visual metadata and accepts semantic attributes", () => {
+  assert.equal(
     verifyLayout(
-      "function UIStack() { return <MuiStack spacing={2} />; }",
-      "spacing-contract",
-      "packages/pkg-ui/src/stack.component.tsx",
-    ).length > 0,
-  );
-
-  assert.ok(
-    verifyLayout(
-      'function UIStack() { return <MuiStack data-ui-gap="sm" data-ui-layout="stack" spacing={2} />; }',
-      "spacing-contract",
-      "packages/pkg-ui/src/stack.component.tsx",
-    ).length > 0,
+      'function Layout() { return <div data-ui-gap="md" data-ui-layout="stack" />; }',
+      "no-ui-data-attributes",
+      "packages/app/src/features/layout/example.component.tsx",
+    ).length,
+    2,
   );
 
   assert.equal(
     verifyLayout(
-      'function UIStack() { return <MuiStack data-ui-gap="md" data-ui-layout="stack" spacing={2} />; }',
-      "spacing-contract",
-      "packages/pkg-ui/src/stack.component.tsx",
+      'function Layout() { return <button aria-pressed="true" data-testid="save-question" />; }',
+      "no-ui-data-attributes",
+      "packages/app/src/features/layout/example.component.tsx",
     ).length,
     0,
   );
+});
 
-  assert.ok(
+test("ui-box-only-layout-definition blocks structural styling outside UIBox", () => {
+  assert.equal(
     verifyLayout(
-      "function UISurface() { return <MuiPaper sx={{ p: 2 }} />; }",
-      "spacing-contract",
-      "packages/pkg-ui/src/surface.component.tsx",
-    ).length > 0,
-  );
-
-  assert.ok(
-    verifyLayout(
-      'function UIInlineActions() { return <MuiBox alignItems="center" data-ui-gap="sm" data-ui-layout="row" spacing={1} />; }',
-      "spacing-contract",
-      "packages/pkg-ui/src/inline-actions.component.tsx",
-    ).length > 0,
+      'function Stack() { return <MuiBox display="grid" gap={2} />; }',
+      "ui-box-only-layout-definition",
+      "packages/pkg-ui/src/example.component.tsx",
+    ).length,
+    3,
   );
 
   assert.equal(
     verifyLayout(
-      'function UIInlineActions() { return <MuiBox alignItems="center" data-ui-align="center" data-ui-gap="sm" data-ui-layout="row" spacing={1} />; }',
-      "spacing-contract",
-      "packages/pkg-ui/src/inline-actions.component.tsx",
+      'function Stack() { return <UIBox layout="column" gap="md" />; }',
+      "ui-box-only-layout-definition",
+      "packages/pkg-ui/src/example.component.tsx",
     ).length,
     0,
   );
@@ -1026,19 +1014,19 @@ test("action-group-contract requires semantic wrappers for sibling actions", () 
   );
 });
 
-test("bottom-navigation-contract requires safe-area metadata and complete actions", () => {
+test("bottom-navigation-contract requires complete accessible actions without layout metadata", () => {
   assert.equal(
     verifyLayout(
       "function Navigation() { return <UIBottomNavigation />; }",
       "bottom-navigation-contract",
       "packages/app/src/components/mobile-bottom-navigation.component.tsx",
     ).length,
-    2,
+    0,
   );
 
   assert.equal(
     verifyLayout(
-      'function Navigation() { return <UIBottomNavigation data-ui-layout="bottom-tabs" data-ui-safe-area="bottom"><UIBottomNavigationAction icon={<Icon />} label="Início" value="/" /></UIBottomNavigation>; }',
+      'function Navigation() { return <UIBottomNavigation aria-label="Navegação principal"><UIBottomNavigationAction icon={<Icon />} label="Início" value="/" /></UIBottomNavigation>; }',
       "bottom-navigation-contract",
       "packages/app/src/components/mobile-bottom-navigation.component.tsx",
     ).length,

@@ -1,4 +1,4 @@
-import { Grid as MuiGrid } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UICatalogCardGridProps = {
@@ -7,16 +7,8 @@ export type UICatalogCardGridProps = {
 
 export function UICatalogCardGrid(props: UICatalogCardGridProps): ReactElement {
   return (
-    <MuiGrid
-      container
-      data-ui-closure="closed"
-      data-ui-gap="md"
-      data-ui-layout="equal-grid"
-      minWidth={0}
-      spacing={2}
-      sx={{ maxWidth: "100%", width: "100%" }}
-    >
+    <UIBox gap="md" inset="none" layout="grid" sx={{ gridTemplateColumns: { md: "repeat(2, minmax(0, 1fr))", xs: "minmax(0, 1fr)" } }}>
       {props.children}
-    </MuiGrid>
+    </UIBox>
   );
 }

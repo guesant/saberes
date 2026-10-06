@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { UIOverflowBoundaryProps } from "./overflow-boundary-props.type";
 import type { ReactElement } from "react";
 
@@ -10,11 +10,12 @@ export function UIOverflowBoundary(props: UIOverflowBoundaryProps): ReactElement
   const clipOverflow = props.mode === "clip" ? { overflow: "hidden" } : undefined;
 
   return (
-    <MuiBox
-      data-ui-overflow={props.mode}
+    <UIBox
+      inset="none"
+      layout="flow"
       sx={{ ...overflow, ...verticalOverflow, ...clipOverflow }}
     >
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

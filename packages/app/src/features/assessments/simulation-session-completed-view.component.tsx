@@ -19,7 +19,7 @@ export function SimulationSessionCompletedView(props: SimulationSessionCompleted
         <UITypography variant="h1">{t("simulator.completed")}</UITypography>
         <UITypography>{t("simulator.score", { earned, maximum })}</UITypography>
       </UIContentGroup>
-      <UIList data-ui-gap="md" data-ui-inset="none" data-ui-layout="list" data-ui-outset="none" disablePadding>
+      <UIList disablePadding>
         {results.map((result, index) => {
           return <SimulationResultItem key={result.questionKey} result={result} ordinal={index + 1} total={results.length} />;
         })}

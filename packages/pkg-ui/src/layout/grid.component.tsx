@@ -9,11 +9,6 @@ export function UIGrid(props: UIGridProps): ReactElement {
     <UIBox
       align="stretch"
       columns={columns}
-      data-ui-align="stretch"
-      data-ui-closure="closed"
-      data-ui-gap={gap}
-      data-ui-inset={inset}
-      data-ui-layout="equal-grid"
       gap={gap}
       inset={inset}
       layout="grid"

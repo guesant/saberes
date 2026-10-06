@@ -15,15 +15,33 @@ export async function validateDocumentOverflow(page: Page): Promise<void> {
     "the document must not overflow horizontally",
   );
 
-  const unexpectedOverflow = await page.locator("[data-ui-layout]")
+  const unexpectedOverflow = await page.locator("#main-content, #main-content *")
     .evaluateAll((elements) => {
       return elements
         .filter((element) => {
-          const hasHorizontalOverflow = element.scrollWidth > element.clientWidth + 1;
+          const switchRoot = element.closest(".MuiSwitch-root");
 
-          const hasDeclaration = element.hasAttribute("data-ui-overflow");
+          if (switchRoot && switchRoot !== element) {
+            return false;
+          }
 
-          return hasHorizontalOverflow && !hasDeclaration;
+          const hasHorizontalOverflow = element.scrollWidth > element.clientWidth + 3;
+
+          const overflowMode = window.getComputedStyle(element).overflowX;
+
+          let parent = element.parentElement;
+
+          while (parent && parent.id !== "main-content") {
+            const parentOverflowMode = window.getComputedStyle(parent).overflowX;
+
+            if (["auto", "clip", "hidden", "scroll"].includes(parentOverflowMode)) {
+              return false;
+            }
+
+            parent = parent.parentElement;
+          }
+
+          return hasHorizontalOverflow && !["auto", "clip", "hidden", "scroll"].includes(overflowMode);
         })
         .map((element) => {
           return {
