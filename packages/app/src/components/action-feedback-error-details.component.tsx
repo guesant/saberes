@@ -1,4 +1,5 @@
-import { UIDisclosure, UITypography } from "@guesant/saberes-ui";
+import { UIButton, UIDialog, UITypography } from "@guesant/saberes-ui";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export interface ActionFeedbackErrorDetailsProps {
@@ -8,13 +9,18 @@ export interface ActionFeedbackErrorDetailsProps {
 export function ActionFeedbackErrorDetails(props: ActionFeedbackErrorDetailsProps) {
   const { t } = useTranslation();
 
+  const [open, setOpen] = useState(false);
+
   if (!props.error) {
     return null;
   }
 
   return (
-    <UIDisclosure summary={t("errors.showDetails")}>
-      <UITypography variant="body2">{props.error.message}</UITypography>
-    </UIDisclosure>
+    <>
+      <UIButton iconOnly={false} onClick={() => { return setOpen(true); }} variant="text">{t("errors.showDetails")}</UIButton>
+      <UIDialog onClose={() => { return setOpen(false); }} open={open} title={t("errors.showDetails")}>
+        <UITypography variant="body2">{props.error.message}</UITypography>
+      </UIDialog>
+    </>
   );
 }

@@ -200,6 +200,7 @@ export default defineConfig({
       "../pkg-adapter-data-v1/src/**/*.test.{ts,tsx}",
       "../pkg-adapter-validation-v1/src/**/*.test.{ts,tsx}",
       "../pkg-adapter-graphology-v1/src/**/*.test.{ts,tsx}",
+      "../pkg-ui/src/**/*.test.{ts,tsx}",
       "../pkg-ui-content/src/**/*.test.{ts,tsx}",
     ],
     exclude: ["packages/app/tests/e2e/**", "**/node_modules/**"],

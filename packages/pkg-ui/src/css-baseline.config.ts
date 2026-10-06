@@ -29,6 +29,28 @@ export const cssBaselineConfig = {
   h6: { fontSize: "1rem" },
   "a, button, input, select, textarea": { color: "inherit", font: "inherit", lineHeight: "inherit" },
   "a, button": { textDecoration: "none" },
+  "a.ui-card-action": {
+    color: "inherit",
+    cursor: "pointer",
+    display: "block",
+    height: "100%",
+    minWidth: 0,
+    textDecoration: "none",
+  },
+  ".ui-card-action--button": { cursor: "pointer", height: "100%" },
+  "a.ui-card-action:hover > .MuiCard-root": {
+    backgroundColor: "var(--mui-palette-action-selected)",
+    borderColor: "var(--mui-palette-primary-main)",
+  },
+  ".ui-card-action--button:hover > .MuiCard-root": {
+    backgroundColor: "var(--mui-palette-action-selected)",
+    borderColor: "var(--mui-palette-primary-main)",
+  },
+  "a.ui-card-action:focus-visible": {
+    borderRadius: "0.25rem",
+    outline: "3px solid var(--mui-palette-primary-main)",
+    outlineOffset: "3px",
+  },
   button: { appearance: "none", background: "transparent", border: 0, cursor: "pointer", letterSpacing: "inherit" },
   "input, select, textarea": { letterSpacing: "inherit" },
   "img, picture, video, canvas, svg": { display: "block", maxWidth: "100%" },

@@ -1,4 +1,4 @@
-import { UIContentGroup, UIDisclosure, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UIDialogAction, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { FocusSessionControl } from "./focus-session-control.component";
 import { FocusSessionList } from "./focus-session-list.component";
@@ -26,9 +26,9 @@ export function FocusReadyView(props: FocusReadyViewProps) {
         onStop={props.viewModel.stop}
         paused={props.viewModel.paused !== null}
       />
-      <UIDisclosure summary={t("focus.history")}>
+      <UIDialogAction label={t("focus.history")} title={t("focus.history")}>
         <FocusSessionList sessions={props.viewModel.sessions} />
-      </UIDisclosure>
+      </UIDialogAction>
     </UIContentGroup>
   );
 }

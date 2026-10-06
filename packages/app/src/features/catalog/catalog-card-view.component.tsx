@@ -1,7 +1,6 @@
 import {
   UIAutoStoriesIcon,
   UIAccentIcon,
-  UIButton,
   UIFullHeightCard,
   UICardContent,
   UIChip,
@@ -29,7 +28,7 @@ export function CatalogCardView(props: CatalogCardViewProps) {
   const icon = item.type === "lesson" ? <UIAutoStoriesIcon /> : <UIQuizIcon />;
 
   return (
-    <UIFullHeightCard>
+    <UIFullHeightCard action={<Link aria-label={`${t("common.open")}: ${String(item.title)}`} to={path} />}>
       <UICardContent>
         <UIAccentIcon>{icon}</UIAccentIcon>
 
@@ -40,10 +39,10 @@ export function CatalogCardView(props: CatalogCardViewProps) {
         <UITypography variant="body2" color="text.secondary">
           {String(item.description || "")}
         </UITypography>
+        <UITypography color="primary" variant="button">
+          {t("common.open")} →
+        </UITypography>
 
-        <UIButton component={Link} to={path} size="small">
-          {t("common.open")}
-        </UIButton>
       </UICardContent>
     </UIFullHeightCard>
   );

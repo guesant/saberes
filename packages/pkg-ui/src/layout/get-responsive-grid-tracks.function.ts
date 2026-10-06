@@ -7,17 +7,19 @@ export interface ResponsiveGridTracks {
   xs: string;
 }
 
-const minimumWidths = { compact: "12rem", comfortable: "18rem" } as const;
+const mediumMinimumColumns = { compact: 2, comfortable: 1 } as const;
 
 export function getResponsiveGridTracks(
   columns: UIGridProps["columns"],
   minItemWidth: UIGridProps["minItemWidth"],
 ): string | ResponsiveGridTracks {
-  const minWidth = minItemWidth ? minimumWidths[minItemWidth] : minimumWidths.comfortable;
+  const maxColumns = Math.min(columns ?? 2, 2);
 
-  if (columns === undefined) {
-    return `repeat(auto-fit, minmax(min(100%, ${minWidth}), 1fr))`;
-  }
+  const mediumColumns = Math.min(maxColumns, mediumMinimumColumns[minItemWidth ?? "comfortable"]);
 
-  return { md: `repeat(${columns}, minmax(0, 1fr))`, sm: "repeat(2, minmax(0, 1fr))", xs: "minmax(0, 1fr)" };
+  return {
+    md: `repeat(${maxColumns}, minmax(0, 1fr))`,
+    sm: `repeat(${mediumColumns}, minmax(0, 1fr))`,
+    xs: "minmax(0, 1fr)",
+  };
 }

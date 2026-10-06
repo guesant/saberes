@@ -1,4 +1,4 @@
-import { UIButton, UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -14,16 +14,16 @@ export function MyStudyReviewReminder(props: MyStudyReviewReminderProps) {
   }
 
   return (
-    <UICard>
+    <UICard action={<Link aria-label={t("home.openReviews")} to="/revisoes" />}>
       <UICardContent>
         <UIContentGroup variant="content">
           <UITypography variant="h5">{t("home.reviewReminderTitle")}</UITypography>
           <UITypography color="text.secondary">
             {t("home.reviewReminderDescription", { count: props.reviewCount })}
           </UITypography>
-          <UIButton component={Link} to="/revisoes" variant="outlined">
-            {t("home.openReviews")}
-          </UIButton>
+          <UITypography color="primary" variant="button">
+            {t("home.openReviews")} →
+          </UITypography>
         </UIContentGroup>
       </UICardContent>
     </UICard>

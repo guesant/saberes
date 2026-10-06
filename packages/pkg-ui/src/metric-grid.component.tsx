@@ -7,7 +7,7 @@ export type UIMetricGridProps = {
 
 export function UIMetricGrid(props: UIMetricGridProps): ReactElement {
   return (
-    <UIBox gap="md" inset="none" layout="grid" columns={3}>
+    <UIBox gap="md" inset="none" layout="grid" columns={2}>
       {props.children}
     </UIBox>
   );

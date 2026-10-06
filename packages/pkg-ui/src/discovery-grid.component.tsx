@@ -11,7 +11,7 @@ export function UIDiscoveryGrid(props: UIDiscoveryGridProps): ReactElement {
     <UIBox
       aria-label={props.label}
       component="nav"
-      columns={3}
+      columns={2}
       gap="md"
       inset="none"
       layout="grid"

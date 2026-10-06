@@ -1,4 +1,4 @@
-import { UIDisclosure } from "@guesant/saberes-ui";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { PersonalKnowledgeViewsSection } from "./personal-knowledge-views-section.component";
 import { PersonalProgressSection } from "./personal-progress-section.component";
@@ -17,19 +17,22 @@ export function PersonalWorkspaceAdvancedDisclosures(
   const { t } = useTranslation();
 
   return (
-    <UIDisclosure summary={t("personal.moreTools")}>
+    <UIContentGroup variant="section">
+      <UITypography variant="h5">{t("personal.moreTools")}</UITypography>
       <PersonalWorkspaceRelationActions selection={props.selection} viewModel={props.viewModel} />
-      <UIDisclosure summary={t("personal.knowledgeViews")}>
+      <UIContentGroup variant="content">
+        <UITypography variant="h5">{t("personal.knowledgeViews")}</UITypography>
         <PersonalKnowledgeViewsSection
           onDeleteLens={props.viewModel.deleteLens}
           onSaveLens={props.viewModel.saveLens}
           selection={props.selection}
           workspace={props.viewModel.workspace}
         />
-      </UIDisclosure>
-      <UIDisclosure summary={t("personal.progress.title")}>
+      </UIContentGroup>
+      <UIContentGroup variant="content">
+        <UITypography variant="h5">{t("personal.progress.title")}</UITypography>
         <PersonalProgressSection progress={props.viewModel.progress} />
-      </UIDisclosure>
-    </UIDisclosure>
+      </UIContentGroup>
+    </UIContentGroup>
   );
 }

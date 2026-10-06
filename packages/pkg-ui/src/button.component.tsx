@@ -16,13 +16,19 @@ export interface UIButtonProps extends MuiButtonProps {
 export function UIButton(props: UIButtonProps): ReactElement {
   const presentation = getButtonPresentation(props);
 
+  const muiProps = { ...props };
+
+  delete muiProps.iconOnly;
+
+  delete muiProps.iconShape;
+
   const toggleClass = props["aria-pressed"] !== undefined ? " UIButton-toggle" : "";
 
   const iconOnlyClass = presentation.iconShape ? ` UIButton-iconOnly UIButton-iconOnly-${presentation.iconShape}` : "";
 
   return (
     <MuiButton
-      {...(props as MuiButtonProps)}
+      {...(muiProps as MuiButtonProps)}
       aria-label={presentation.ariaLabel}
       className={`${props.className ?? ""}${toggleClass}${iconOnlyClass}`.trim()}
       startIcon={props.startIcon ?? (

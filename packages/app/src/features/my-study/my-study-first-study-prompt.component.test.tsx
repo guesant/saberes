@@ -24,7 +24,7 @@ const release: ContentReleaseReadModel = {
 };
 
 describe("MyStudyFirstStudyPrompt", () => {
-  it("exibe o ciclo local e as ações de retomada", () => {
+  it("exibe o ciclo local e abre as ações secundárias em um modal", async () => {
     render(<MyStudyFirstStudyPrompt course={course} release={release} />);
 
     expect(screen.getByText("Primeiro estudo local"))
@@ -36,10 +36,13 @@ describe("MyStudyFirstStudyPrompt", () => {
         "/cursos/curso-sintetico-primeiro-estudo",
       );
 
-    screen.getByText("Outras opções")
+    expect(screen.queryByRole("link", { name: "Restaurar dados locais" }))
+      .not.toBeInTheDocument();
+
+    screen.getByRole("button", { name: "Outras opções" })
       .click();
 
-    expect(screen.getByRole("link", { name: "Restaurar dados locais" }))
+    expect(await screen.findByRole("link", { name: "Restaurar dados locais" }))
       .toHaveAttribute(
         "href",
         "/meu-estudo#dados-locais",

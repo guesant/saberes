@@ -15,7 +15,7 @@ export function UIResponsiveGrid(props: UIResponsiveGridProps): ReactElement {
           minWidth: 0,
           overflowWrap: "anywhere",
         },
-        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 18rem), 1fr))",
+        gridTemplateColumns: { md: "repeat(2, minmax(0, 1fr))", xs: "minmax(0, 1fr)" },
         maxWidth: "100%",
         width: "100%",
       }}

@@ -1,4 +1,4 @@
-import { UIDisclosure, UIMetricGrid, UIMetricGridItem } from "@guesant/saberes-ui";
+import { UIContentGroup, UIMetricGrid, UIMetricGridItem, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { getMyStudyMetrics } from "./get-my-study-metrics.function";
 import { MyStudyGamificationMetrics } from "./my-study-gamification-metrics.component";
@@ -16,7 +16,8 @@ export function MyStudyMetricsGrid(props: MyStudyMetricsGridProps) {
   const metrics = getMyStudyMetrics(props.data);
 
   return (
-    <UIDisclosure summary={t("home.progressSummary")}>
+    <UIContentGroup variant="section">
+      <UITypography variant="h5">{t("home.progressSummary")}</UITypography>
       <UIMetricGrid>
         <UIMetricGridItem>
           <StudyMetric label={t("home.answeredQuestions")} value={metrics.answered} />
@@ -38,6 +39,6 @@ export function MyStudyMetricsGrid(props: MyStudyMetricsGridProps) {
           <StudyMetric label={t("home.masteredTopics")} value={metrics.masteredTopics} />
         </UIMetricGridItem>
       </UIMetricGrid>
-    </UIDisclosure>
+    </UIContentGroup>
   );
 }

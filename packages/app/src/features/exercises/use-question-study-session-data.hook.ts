@@ -8,7 +8,7 @@ export interface QuestionStudySessionData {
   question: ReturnType<typeof useQuestionViewModel>;
   questionKey: string | undefined;
   session: StudySession | null;
-  sessionQuery: UseQueryResult<StudySession | undefined, Error>;
+  sessionQuery: UseQueryResult<StudySession | null, Error>;
 }
 
 export function useQuestionStudySessionData(
@@ -19,8 +19,8 @@ export function useQuestionStudySessionData(
   const sessionQuery = useQuery({
     queryKey: ["study-session", sessionId],
     enabled: Boolean(sessionId),
-    queryFn: () => {
-      return services.progress.getSession.execute(sessionId || "");
+    queryFn: async () => {
+      return await services.progress.getSession.execute(sessionId || "") ?? null;
     },
   });
 

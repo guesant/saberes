@@ -1,5 +1,4 @@
-import { UIContentGroup, UIDisclosure, UISectionAnchor } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
+import { UIContentGroup, UISectionAnchor } from "@guesant/saberes-ui";
 import { ContentReleaseSummary } from "./content-release-summary.component";
 import { LocalBackupPanel } from "./local-backup-panel.component";
 import { MyStudyFirstStudyPrompt } from "./my-study-first-study-prompt.component";
@@ -18,8 +17,6 @@ export interface MyStudyReadySectionsProps {
 }
 
 export function MyStudyReadySections(props: MyStudyReadySectionsProps) {
-  const { t } = useTranslation();
-
   return (
     <UIContentGroup variant="section">
       <MyStudyFirstStudyPrompt
@@ -28,9 +25,7 @@ export function MyStudyReadySections(props: MyStudyReadySectionsProps) {
       />
       <MyStudyQuickAccessGrid />
       <UISectionAnchor id="dados-locais">
-        <UIDisclosure summary={t("backup.title")}>
-          <LocalBackupPanel viewModel={props.backupViewModel} />
-        </UIDisclosure>
+        <LocalBackupPanel viewModel={props.backupViewModel} />
       </UISectionAnchor>
       <MyStudySavedContent
         lessons={props.viewModel.data.savedLessons}

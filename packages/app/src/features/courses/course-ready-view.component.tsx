@@ -1,5 +1,4 @@
-import { UIDisclosure, UIContentGroup } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { CourseModules } from "./course-modules.component";
 import { CourseReadyHero } from "./course-ready-hero.component";
 import type { CourseProgress } from "./course-progress.interface";
@@ -18,8 +17,6 @@ export type CourseReadyViewProps = {
 export function CourseReadyView(props: CourseReadyViewProps) {
   const { data, progress, started, onStart, startError, startState } = props;
 
-  const { t } = useTranslation();
-
   return (
     <UIContentGroup variant="section">
       <CourseReadyHero
@@ -31,9 +28,7 @@ export function CourseReadyView(props: CourseReadyViewProps) {
         started={started}
       />
 
-      <UIDisclosure summary={t("course.learnInSequence")}>
-        <CourseModules modules={data.modules} items={data.items} />
-      </UIDisclosure>
+      <CourseModules modules={data.modules} items={data.items} />
     </UIContentGroup>
   );
 }

@@ -4,17 +4,20 @@ import {
   Typography as MuiTypography,
 } from "@mui/material";
 import { UIBox } from "./box.component";
+import { renderCardAction } from "./render-card-action.function";
+import type { CardActionElement } from "./card-action-element.type";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIQuickAccessCardProps = {
-  children: ReactNode;
+  actionLabel: string;
+  action: CardActionElement;
   description: string;
   icon: ReactNode;
   title: string;
 };
 
 export function UIQuickAccessCard(props: UIQuickAccessCardProps): ReactElement {
-  return (
+  const card = (
     <MuiCard
       sx={{
         height: "100%",
@@ -36,8 +39,12 @@ export function UIQuickAccessCard(props: UIQuickAccessCardProps): ReactElement {
         <MuiTypography color="text.secondary" variant="body2">
           {props.description}
         </MuiTypography>
-        {props.children}
+        <MuiTypography color="primary" variant="button">
+          {props.actionLabel} →
+        </MuiTypography>
       </UIBox>
     </MuiCard>
   );
+
+  return renderCardAction(props.action, card);
 }

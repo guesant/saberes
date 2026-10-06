@@ -1014,6 +1014,40 @@ test("action-group-contract requires semantic wrappers for sibling actions", () 
   );
 });
 
+test("card-action-contract promotes one inner action to the card surface", () => {
+  assert.equal(
+    verifyLayout(
+      "function Card() { return <UICard><UICardContent><UIButton>Open</UIButton></UICardContent></UICard>; }",
+      "card-action-contract",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verifyLayout(
+      'function Card() { return <UICard action={<Link aria-label="Abrir item" to="/item" />}><UICardContent>Título</UICardContent></UICard>; }',
+      "card-action-contract",
+    ).length,
+    0,
+  );
+
+  assert.equal(
+    verifyLayout(
+      "function Card() { return <UICard action={link}><UICardContent><UIButton>Open</UIButton></UICardContent></UICard>; }",
+      "card-action-contract",
+    ).length,
+    1,
+  );
+
+  assert.equal(
+    verifyLayout(
+      "function Card() { return <UICard><UICardContent><UIButton>One</UIButton><UIButton>Two</UIButton></UICardContent></UICard>; }",
+      "card-action-contract",
+    ).length,
+    0,
+  );
+});
+
 test("bottom-navigation-contract requires complete accessible actions without layout metadata", () => {
   assert.equal(
     verifyLayout(

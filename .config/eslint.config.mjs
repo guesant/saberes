@@ -665,6 +665,7 @@ export default [
     ignores: ["**/*.test.ts", "**/*.test.tsx"],
     rules: {
       "layout/action-group-contract": "error",
+      "layout/card-action-contract": "error",
       "layout/bottom-navigation-contract": "error",
       "layout/content-group-contract": "error",
       "layout/surface-inset-contract": "error",

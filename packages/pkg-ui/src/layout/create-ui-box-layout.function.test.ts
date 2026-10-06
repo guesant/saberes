@@ -9,7 +9,7 @@ it("createUiBoxLayout defaults to a padded one-column grid stack with a spacing 
       display: "grid",
       gridTracks: "minmax(0, 1fr)",
       flexWrap: "nowrap",
-      gap: 16,
+      gap: 2,
       inset: "sm",
       sx: {
         alignContent: "start",
@@ -46,7 +46,7 @@ it("createUiBoxLayout uses a closed grid and responsive equal tracks", () => {
       display: "grid",
       gridTracks: {
         md: "repeat(2, minmax(0, 1fr))",
-        sm: "repeat(2, minmax(0, 1fr))",
+        sm: "repeat(1, minmax(0, 1fr))",
         xs: "minmax(0, 1fr)",
       },
     });

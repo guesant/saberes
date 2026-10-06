@@ -3,6 +3,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { registerSW } from "virtual:pwa-register";
 import { checkServiceWorkerUpdate } from "./check-service-worker-update.function";
+import "./i18n";
 import { Main } from "./main.component";
 
 const root = document.getElementById("root");

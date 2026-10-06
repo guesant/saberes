@@ -141,6 +141,10 @@ const actionGroupNames = new Set([
   "UIToolbar",
 ]);
 
+const cardActionNames = new Set(["UICard", "UICourseHeroCard", "UIFullHeightCard", "UIQuickAccessCard"]);
+
+const cardInteractiveNames = new Set([...structuralActionNames, "Link", "a"]);
+
 const structuralHtmlElements = new Set([
   "address",
   "article",
@@ -741,6 +745,102 @@ const actionGroupContract = {
   },
 };
 
+const cardActionContract = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      move: "A card with one action must receive it through its action prop; remove the inner button or link.",
+      nested: "A card-level action cannot contain another interactive control.",
+    },
+  },
+  create(context) {
+    if (!isLayoutFilename(context.getFilename())) {
+      return {};
+    }
+
+    const countInteractiveChildren = (node) => {
+      let count = 0;
+
+      const visitChild = (child) => {
+        if (child.type === "JSXElement") {
+          if (cardInteractiveNames.has(getOpeningElementName(child.openingElement))) {
+            count += 1;
+          }
+
+          child.children.forEach(visitChild);
+
+          return;
+        }
+
+        if (child.type === "JSXFragment") {
+          child.children.forEach(visitChild);
+
+          return;
+        }
+
+        if (child.type === "JSXExpressionContainer") {
+          const visitExpression = (expression) => {
+            if (!expression || typeof expression !== "object") {
+              return;
+            }
+
+            if (expression.type === "JSXElement" || expression.type === "JSXFragment") {
+              visitChild(expression);
+
+              return;
+            }
+
+            Object.entries(expression)
+              .forEach(([key, value]) => {
+                if (key === "parent" || key === "loc" || key === "range") {
+                  return;
+                }
+
+                if (Array.isArray(value)) {
+                  value.forEach(visitExpression);
+                } else {
+                  visitExpression(value);
+                }
+              });
+          };
+
+          visitExpression(child.expression);
+        }
+      };
+
+      node.children
+        .forEach(visitChild);
+
+      return count;
+    };
+
+    return {
+      JSXElement(node) {
+        const name = getOpeningElementName(node.openingElement);
+
+        if (!name || !cardActionNames.has(name)) {
+          return;
+        }
+
+        const hasCardAction = getJsxAttribute(node.openingElement, "action") !== undefined;
+
+        const interactiveChildren = countInteractiveChildren(node);
+
+        if (hasCardAction && interactiveChildren > 0) {
+          context.report({ node: node.openingElement, messageId: "nested" });
+
+          return;
+        }
+
+        if (!hasCardAction && interactiveChildren === 1) {
+          context.report({ node: node.openingElement, messageId: "move" });
+        }
+      },
+    };
+  },
+};
+
 const bottomNavigationContract = {
   meta: {
     type: "problem",
@@ -1223,6 +1323,7 @@ export default {
     "no-ui-data-attributes": noUiDataAttributes,
     "ui-box-only-layout-definition": uiBoxOnlyLayoutDefinition,
     "action-group-contract": actionGroupContract,
+    "card-action-contract": cardActionContract,
     "bottom-navigation-contract": bottomNavigationContract,
     "content-group-contract": contentGroupContract,
     "surface-inset-contract": surfaceInsetContract,

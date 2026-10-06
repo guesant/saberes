@@ -1,6 +1,5 @@
 import {
   UIContentGroup,
-  UIDisclosure,
   UITypography,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
@@ -13,14 +12,12 @@ export function MyStudyQuickAccessGrid() {
   const items = createMyStudyQuickAccessItems(t);
 
   return (
-    <UIDisclosure summary={t("home.quickAccess.more")}>
-      <UIContentGroup variant="section">
-        <UITypography variant="h5">{t("home.quickAccess.title")}</UITypography>
+    <UIContentGroup variant="section">
+      <UITypography variant="h5">{t("home.quickAccess.title")}</UITypography>
 
-        <UITypography color="text.secondary">{t("home.quickAccess.description")}</UITypography>
+      <UITypography color="text.secondary">{t("home.quickAccess.description")}</UITypography>
 
-        <MyStudyQuickAccessItems items={items} />
-      </UIContentGroup>
-    </UIDisclosure>
+      <MyStudyQuickAccessItems items={items} />
+    </UIContentGroup>
   );
 }

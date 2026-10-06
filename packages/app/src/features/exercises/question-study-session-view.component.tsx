@@ -15,7 +15,7 @@ export function QuestionStudySessionView() {
   const session = useQuery({
     queryKey: ["study-session", sessionId],
     enabled: Boolean(sessionId),
-    queryFn: () => { return services.progress.getSession.execute(sessionId || ""); },
+    queryFn: async () => { return await services.progress.getSession.execute(sessionId || "") ?? null; },
   });
 
   if (!session.data) {

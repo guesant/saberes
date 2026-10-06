@@ -96,11 +96,11 @@ export * from "./css-baseline.component";
 
 export * from "./divider.component";
 
-export * from "./disclosure.component";
 
 export * from "./dialog-props.interface";
 
 export * from "./dialog.component";
+export * from "./dialog-action.component";
 
 export * from "./download-file-button.component";
 

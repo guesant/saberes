@@ -1,6 +1,6 @@
-import { UICard, UICardContent, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UICard, UICardContent, UIChip, UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { MyStudyCourseLink } from "./my-study-course-link.component";
+import { Link } from "react-router-dom";
 import type { CatalogCard } from "@guesant/saberes-application";
 
 export type MyStudyNextContentProps = {
@@ -17,12 +17,22 @@ export function MyStudyNextContent(props: MyStudyNextContentProps) {
   }
 
   return (
-    <UICard>
+    <UICard
+      action={
+        <Link
+          aria-label={`${t("home.view")}: ${String(course.title)}`}
+          to={course.href || `/cursos/${course.slug || course.id}`}
+        />
+      }
+    >
       <UICardContent>
         <UIContentGroup variant="content">
           <UITypography variant="h5">{t("home.startWithTopic")}</UITypography>
           <UITypography color="text.secondary">{course.description || t("catalog.description")}</UITypography>
-          <MyStudyCourseLink course={course} />
+          <UIChip label={course.title} />
+          <UITypography color="primary" variant="button">
+            {t("home.view")} →
+          </UITypography>
         </UIContentGroup>
       </UICardContent>
     </UICard>

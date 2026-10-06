@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { validateProgressiveDisclosure } from "./validate-progressive-disclosure.function";
+import { validateNoDetails } from "./validate-no-details.function";
 import { validateRouteSettled } from "./validate-route-settled.function";
 import { validateVisibleControlsNamed } from "./validate-visible-controls-named.function";
 
@@ -60,7 +60,7 @@ flowRoutes.forEach(([name, path]) => {
 
     await validateRouteSettled(page);
 
-    await validateProgressiveDisclosure(page);
+    await validateNoDetails(page);
 
     await expect(page.locator("#main-content"))
       .toBeVisible();
@@ -84,7 +84,7 @@ flowRoutes.forEach(([name, path]) => {
   });
 });
 
-test("uma rota com recurso ausente apresenta erro tratado sem erro técnico", async ({ page }) => {
+test("uma rota com recurso ausente apresenta estado de não encontrado sem erro técnico", async ({ page }) => {
   const pageErrors: string[] = [];
 
   const consoleErrors: string[] = [];
@@ -112,7 +112,7 @@ test("uma rota com recurso ausente apresenta erro tratado sem erro técnico", as
   await expect(page.locator("#main-content"))
     .toBeVisible();
 
-  await expect(page.locator('[role="alert"].MuiAlert-standardError'))
+  await expect(page.locator('[role="alert"].MuiAlert-standardInfo'))
     .toBeVisible();
 
   await validateVisibleControlsNamed(page);

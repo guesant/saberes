@@ -2,7 +2,7 @@ import {
   UIButton,
   UIContentGroup,
   UIContentSurface,
-  UIDisclosure,
+  UIDialogAction,
   UIInlineActions,
   UITypography,
 } from "@guesant/saberes-ui";
@@ -39,9 +39,9 @@ export function MyStudyFirstStudyPrompt(props: MyStudyFirstStudyPromptProps) {
             {t("home.firstStudyBack")}
           </UIButton>
         </UIInlineActions>
-        <UIDisclosure summary={t("home.firstStudyAlternatives")}>
+        <UIDialogAction label={t("home.firstStudyAlternatives")} title={t("home.firstStudyAlternatives")}>
           <MyStudyFirstStudyAlternativeActions />
-        </UIDisclosure>
+        </UIDialogAction>
       </UIContentGroup>
     </UIContentSurface>
   );

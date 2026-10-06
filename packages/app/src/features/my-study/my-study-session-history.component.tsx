@@ -1,4 +1,4 @@
-import { UIContentGroup, UIDisclosure, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UIDialogAction, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { MyStudySessionList } from "./my-study-session-list.component";
 import type { StudySession } from "@guesant/saberes-application";
@@ -15,11 +15,11 @@ export function MyStudySessionHistory(props: MyStudySessionHistoryProps) {
   }
 
   return (
-    <UIDisclosure summary={t("home.studySessions")}>
+    <UIDialogAction label={t("home.studySessions")} title={t("home.studySessions")}>
       <UIContentGroup variant="content">
         <UITypography variant="h5">{t("home.studySessions")}</UITypography>
         <MyStudySessionList sessions={props.sessions} />
       </UIContentGroup>
-    </UIDisclosure>
+    </UIDialogAction>
   );
 }

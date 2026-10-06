@@ -502,10 +502,6 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
 
   await validateRouteSettled(page);
 
-  await page.getByRole("textbox", { name: "Conteúdo associado (opcional)" })
-    .last()
-    .fill("lesson:primeiro-conceito");
-
   await page.getByRole("button", { name: "Iniciar foco" })
     .click();
 
@@ -526,10 +522,6 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
   await validateRouteSettled(page);
 
   await page.getByRole("button", { name: "Nova disciplina" })
-    .click();
-
-  await page.locator("summary")
-    .filter({ hasText: "Adicionar uma avaliação (opcional)" })
     .click();
 
   await page.getByRole("textbox", { name: "Nome", exact: true })

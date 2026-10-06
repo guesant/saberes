@@ -11,7 +11,7 @@ export function useSimulationSessionQueries(sessionId: string): SimulationSessio
 
   const sessionQuery = useQuery({
     queryKey: ["study-session", sessionId],
-    queryFn: () => { return services.progress.getSession.execute(sessionId); },
+    queryFn: async () => { return await services.progress.getSession.execute(sessionId) ?? null; },
   });
 
   const session = sessionQuery.data ?? null;

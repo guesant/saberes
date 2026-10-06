@@ -1,12 +1,12 @@
 import {
   UICourseHeroCard,
+  UIButton,
   UIChip,
-  UIContentGroup,
-  UILinearProgress,
   UITypography,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { CourseStartAction } from "./course-start-action.component";
+import { ActionFeedback } from "../../components/action-feedback.component";
+import { CourseReadyHeroProgress } from "./course-ready-hero-progress.component";
 import type { CourseProgress } from "./course-progress.interface";
 import type { CourseStartActionProps } from "./course-start-action-props.interface";
 import type { CourseReadModel } from "@guesant/saberes-application";
@@ -21,37 +21,26 @@ export function CourseReadyHero(props: CourseReadyHeroProps) {
 
   const { course } = props.data;
 
-  let courseType = t("course.general");
-
-  if (course.course_type === "specific") {
-    courseType = t("course.specific");
-  }
+  const courseType = t(`course.${course.course_type === "specific" ? "specific" : "general"}`);
 
   return (
-    <UICourseHeroCard>
+    <UICourseHeroCard
+      action={
+        <UIButton
+          aria-label={t(props.started ? "course.continue" : "course.start")}
+          disabled={props.startState === "saving"}
+          onClick={props.onStart}
+        />
+      }
+    >
       <UIChip label={courseType} variant="outlined" />
       <UITypography variant="h2">{String(course.title)}</UITypography>
       <UITypography>{String(course.description || "")}</UITypography>
-      <UIContentGroup variant="content">
-        <UITypography variant="body2">
-          {t("course.progress", {
-            completed: props.progress.completedItems,
-            percentage: props.progress.percentage,
-            total: props.progress.totalItems,
-          })}
-        </UITypography>
-        <UILinearProgress
-          aria-label={t("course.progressLabel")}
-          value={props.progress.percentage}
-          variant="determinate"
-        />
-      </UIContentGroup>
-      <CourseStartAction
-        onStart={props.onStart}
-        startError={props.startError}
-        startState={props.startState}
-        started={props.started}
-      />
+      <CourseReadyHeroProgress progress={props.progress} />
+      <UITypography color="primary" variant="button">
+        {t(props.started ? "course.continue" : "course.start")} →
+      </UITypography>
+      <ActionFeedback error={props.startError} state={props.startState} />
     </UICourseHeroCard>
   );
 }
