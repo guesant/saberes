@@ -61,6 +61,7 @@ export * from "./save-achievement-port.port";
 export * from "./save-academic-discipline-port.port";
 export * from "./save-attempt-port.port";
 export * from "./save-bookmark-port.port";
+export * from "./remove-bookmark-port.port";
 export * from "./save-daily-challenge-port.port";
 export * from "./save-focus-session-port.port";
 export * from "./save-diagnosis-port.port";

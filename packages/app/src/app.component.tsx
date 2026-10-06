@@ -39,6 +39,8 @@ export function App() {
 
           <Route element={<PerformanceView />} path="/desempenho" />
 
+          <Route element={<PerformanceView />} path="/desempenho/detalhes" />
+
           <Route element={<ReviewView />} path="/revisoes" />
 
           <Route element={<CourseView />} path="/cursos/:slug" />

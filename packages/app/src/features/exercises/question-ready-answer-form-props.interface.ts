@@ -3,7 +3,8 @@ import type { QuestionReadyContentProps } from "./question-ready-content-props.t
 export interface QuestionReadyAnswerFormProps
   extends Pick<
     QuestionReadyContentProps,
-    "answer" | "confidence" | "data" | "onAnswerChange" | "onConfidenceChange" | "onSubmit"
+  "answer" | "confidence" | "data" | "onAnswerChange" | "onConfidenceChange" | "onSubmit"
   > {
+  readOnly: boolean;
   submitting: boolean;
 }

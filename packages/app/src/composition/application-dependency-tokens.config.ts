@@ -50,6 +50,7 @@ export const applicationDependencyTokens = {
   savePersonalWorkspace: Symbol.for("saberes.save-personal-workspace-port"),
   listPlanProgress: Symbol.for("saberes.list-plan-progress-port"),
   saveBookmark: Symbol.for("saberes.save-bookmark-port"),
+  removeBookmark: Symbol.for("saberes.remove-bookmark-port"),
   listBookmarks: Symbol.for("saberes.list-bookmarks-port"),
   saveReviewItem: Symbol.for("saberes.save-review-item-port"),
   listReviewItems: Symbol.for("saberes.list-review-items-port"),

@@ -57,6 +57,7 @@ import type { PreviewReviewPort } from "./ports/preview-review-port.port";
 import type { RecommendNextPort } from "./ports/recommend-next-port.port";
 import type { RecordAttemptPort } from "./ports/record-attempt-port.port";
 import type { RecordStudyActivityPort } from "./ports/record-study-activity-port.port";
+import type { RemoveBookmarkPort } from "./ports/remove-bookmark-port.port";
 import type { RestorePersonalRelationPort } from "./ports/restore-personal-relation-port.port";
 import type { RestoreStudyCapturePort } from "./ports/restore-study-capture-port.port";
 import type { SaveAcademicDisciplinePort } from "./ports/save-academic-discipline-port.port";
@@ -130,6 +131,7 @@ export interface ApplicationPorts {
   savePersonalWorkspace: SavePersonalWorkspacePort;
   listPlanProgress: ListPlanProgressPort;
   saveBookmark: SaveBookmarkPort;
+  removeBookmark: RemoveBookmarkPort;
   listBookmarks: ListBookmarksPort;
   saveReviewItem: SaveReviewItemPort;
   listReviewItems: ListReviewItemsPort;

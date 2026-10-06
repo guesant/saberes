@@ -20,6 +20,7 @@ export * from "./record-study-activity.command-handler";
 export * from "./save-achievement.command-handler";
 export * from "./save-attempt.command-handler";
 export * from "./save-bookmark.command-handler";
+export * from "./remove-bookmark.command-handler";
 export * from "./save-daily-challenge.command-handler";
 export * from "./save-diagnosis.command-handler";
 export * from "./save-lesson-progress.command-handler";

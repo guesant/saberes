@@ -14,6 +14,7 @@ export * from "./list-lesson-progress-adapter.adapter";
 export * from "./save-plan-progress-adapter.adapter";
 export * from "./list-plan-progress-adapter.adapter";
 export * from "./save-bookmark-adapter.adapter";
+export * from "./remove-bookmark-adapter.adapter";
 export * from "./list-bookmarks-adapter.adapter";
 export * from "./save-review-item-adapter.adapter";
 export * from "./list-review-items-adapter.adapter";

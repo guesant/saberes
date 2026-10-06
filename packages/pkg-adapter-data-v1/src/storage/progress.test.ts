@@ -438,4 +438,17 @@ describe("progresso local Dexie", () => {
         expect.objectContaining({ contentKey: "lesson:content-not-yet-published" }),
       ]);
   });
+
+  it("remove um conteúdo salvo e mantém os demais", async () => {
+    await progressDb.saveBookmark("question:kept");
+
+    await progressDb.saveBookmark("question:removed");
+
+    await progressDb.removeBookmark("question:removed");
+
+    expect(await progressDb.listBookmarks())
+      .toEqual([
+        expect.objectContaining({ contentKey: "question:kept" }),
+      ]);
+  });
 });

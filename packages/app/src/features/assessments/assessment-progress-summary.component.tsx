@@ -9,8 +9,8 @@ export function AssessmentProgressSummary(props: AssessmentProgressSummaryProps)
     <UIContentGroup variant="content">
       <UITypography variant="body2">
         {t("assessment.progress", {
-          answered: props.progress.answeredItems,
-          correct: props.progress.correctItems,
+          answered: t("assessment.answers", { count: props.progress.answeredItems }),
+          correct: t("assessment.correctAnswers", { count: props.progress.correctItems }),
           total: props.progress.totalItems,
         })}
       </UITypography>

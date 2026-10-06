@@ -5,37 +5,43 @@ export const theme = createTheme({
   colorSchemes: {
     light: {
       palette: {
-        primary: { main: "#152a4a", contrastText: "#fff" },
-        secondary: { main: "#e59b2f" },
-        background: { default: "#f7f8fb", paper: "#fff" },
+        primary: { main: "#566170", contrastText: "#fff" },
+        secondary: { main: "#68717d", contrastText: "#fff" },
+        background: { default: "#f5f6f8", paper: "#fff" },
+        text: { primary: "#202329", secondary: "#5f6671" },
         success: { main: "#2e7d5b" },
+        divider: "#d3d8e0",
       },
     },
     dark: {
       palette: {
-        primary: { main: "#90b4e8", contrastText: "#0b1426" },
-        secondary: { main: "#f2b84b" },
-        background: { default: "#0b1426", paper: "#152a4a" },
+        primary: { main: "#b9c2cf", contrastText: "#121417" },
+        secondary: { main: "#aeb6c1", contrastText: "#121417" },
+        background: { default: "#121417", paper: "#1b1e23" },
+        text: { primary: "#f3f4f6", secondary: "#b9c0ca" },
         success: { main: "#72c49a" },
+        divider: "#515b68",
       },
     },
   },
   typography: {
     fontFamily: "Roboto Slab, Georgia, serif",
     h1: {
-      fontSize: "clamp(2rem, 5vw, 3.5rem)",
+      fontSize: "2rem",
       fontWeight: 700,
       letterSpacing: "-0.03em",
     },
     h2: {
-      fontSize: "clamp(1.75rem, 4vw, 3rem)",
+      fontSize: "1.5rem",
       fontWeight: 700,
       letterSpacing: "-0.02em",
     },
-    h3: { fontSize: "clamp(1.5rem, 3.5vw, 2.125rem)", fontWeight: 700 },
-    h4: { fontSize: "clamp(1.35rem, 3vw, 1.8rem)", fontWeight: 700 },
-    h5: { fontSize: "clamp(1.2rem, 2.5vw, 1.5rem)" },
-    h6: { fontSize: "clamp(1.1rem, 2vw, 1.25rem)" },
+    h3: { fontSize: "1.25rem", fontWeight: 700 },
+    h4: { fontSize: "1.125rem", fontWeight: 700 },
+    h5: { fontSize: "1.125rem", fontWeight: 700 },
+    h6: { fontSize: "1rem", fontWeight: 700 },
+    body1: { fontSize: "1rem", lineHeight: 1.5 },
+    body2: { fontSize: "0.875rem", lineHeight: 1.5 },
     button: { textTransform: "none", fontWeight: 600 },
   },
   shape: { borderRadius: 4 },
@@ -43,9 +49,9 @@ export const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          border: "1px solid #e5e8ef",
+          border: "1px solid var(--mui-palette-divider)",
           borderRadius: "0.25rem",
-          boxShadow: "0 8px 28px rgba(21,42,74,.06)",
+          boxShadow: "none",
           boxSizing: "border-box",
           maxWidth: "100%",
           minWidth: 0,
@@ -54,7 +60,8 @@ export const theme = createTheme({
     },
     MuiPaper: {
       styleOverrides: {
-        root: { borderRadius: "0.25rem" },
+        root: { borderRadius: "0.25rem", backgroundImage: "none" },
+        outlined: { borderColor: "var(--mui-palette-divider)", borderWidth: 1 },
       },
     },
     MuiFormControl: {
@@ -81,6 +88,7 @@ export const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: { maxWidth: "100%", minWidth: 0, overflowWrap: "anywhere" },
+        h1: { fontSize: "1.75rem", "@media (min-width: 900px)": { fontSize: "2rem" } },
       },
     },
     MuiTabs: {
@@ -91,6 +99,11 @@ export const theme = createTheme({
     MuiButton: {
       defaultProps: { disableElevation: true, disableRipple: true },
       styleOverrides: { root: { borderRadius: "0.25rem", minHeight: 44, textAlign: "center" } },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: { backgroundColor: "#1b1e23", color: "#fff", boxShadow: "none" },
+      },
     },
     MuiButtonBase: { defaultProps: { disableRipple: true } },
     MuiIconButton: {
@@ -115,7 +128,10 @@ export const theme = createTheme({
     },
     MuiDialog: {
       styleOverrides: {
-        paper: { borderRadius: "0.25rem" },
+        paper: {
+          border: "1px solid var(--mui-palette-divider)",
+          borderRadius: "0.25rem",
+        },
       },
     },
     MuiTooltip: {

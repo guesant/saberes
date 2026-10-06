@@ -5,5 +5,5 @@ import type { ReactElement } from "react";
 export type UIGrowingTextProps = MuiTypographyProps;
 
 export function UIGrowingText(props: UIGrowingTextProps): ReactElement {
-  return <MuiTypography {...props} data-ui-layout="row" sx={{ flex: 1, ...props.sx }} />;
+  return <MuiTypography {...props} data-ui-layout="layout-item" sx={{ flex: 1, ...props.sx }} />;
 }

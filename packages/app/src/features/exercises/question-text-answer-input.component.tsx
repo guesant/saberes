@@ -13,6 +13,7 @@ export function QuestionTextAnswerInput(props: QuestionTextAnswerInputProps) {
       minRows={isLongText ? 5 : 1}
       label={t("exercise.answerLabel")}
       value={props.value}
+      disabled={props.disabled}
       onChange={(event) => {
         return props.onChange(event.target.value);
       }}

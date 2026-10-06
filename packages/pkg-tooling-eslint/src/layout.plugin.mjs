@@ -115,7 +115,7 @@ const styleFactoryNames = new Set(["createTheme", "makeStyles", "styled", "withS
 
 const semanticLayoutAttributes = new Map([["UIInputAdornment", new Set(["position"])]]);
 
-const spacingTokens = new Set(["none", "xs", "sm", "md", "lg", "xl"]);
+const spacingTokens = new Set(["none", "section", "xs", "sm", "md", "lg", "xl"]);
 
 const spacingTokenByMuiValue = new Map([
   [0, "none"],
@@ -156,6 +156,8 @@ const layoutTokens = new Set([
   "bottom-tabs",
   "cluster",
   "equal-grid",
+  "layout-item",
+  "page-shell",
   "row",
   "split",
   "stack",

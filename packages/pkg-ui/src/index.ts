@@ -10,6 +10,7 @@ export * from "./arrow-forward-icon.component";
 export * from "./auto-stories-icon.component";
 
 export * from "./bookmark-border-icon.component";
+export * from "./bookmark-icon.component";
 
 export * from "./box.component";
 
@@ -50,6 +51,7 @@ export * from "./content-loading-label.component";
 export * from "./content-loading-layout.component";
 
 export * from "./content-group.component";
+export * from "./content-group-gap.type";
 
 export * from "./content-figure-props.interface";
 
@@ -78,6 +80,7 @@ export * from "./course-hero-card.component";
 export * from "./check-circle-icon.component";
 
 export * from "./chip.component";
+export * from "./choice-option-content.component";
 
 export * from "./circular-progress.component";
 
@@ -105,6 +108,7 @@ export * from "./responsive-navigation-drawer.component";
 export * from "./footer-surface.component";
 
 export * from "./form.component";
+export * from "./form-action.component";
 
 export * from "./form-props.interface";
 
@@ -179,6 +183,8 @@ export * from "./overflow-boundary-props.type";
 export * from "./paper.component";
 
 export * from "./page-content.component";
+export * from "./preference-row.component";
+export * from "./responsive-group-gap.interface";
 
 export * from "./page-surface.component";
 
@@ -189,6 +195,7 @@ export * from "./quiz-icon.component";
 export * from "./refresh-icon.component";
 
 export * from "./selectable-surface.component";
+export * from "./switch.component";
 
 export * from "./search-icon.component";
 

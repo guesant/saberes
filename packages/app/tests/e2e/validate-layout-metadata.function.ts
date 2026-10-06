@@ -17,9 +17,16 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
         return {
           align: element.getAttribute("data-ui-align"),
           closure: element.getAttribute("data-ui-closure"),
+          display: window.getComputedStyle(element).display,
           gap: element.getAttribute("data-ui-gap"),
           kind: element.getAttribute("data-ui-layout"),
           actions: element.getAttribute("data-ui-actions") === "true",
+          debugName: `${element.tagName.toLowerCase()}.${String(element.className)
+            .split(" ")
+            .filter(Boolean)
+            .slice(0, 2)
+            .join(".")}`,
+          viewportWidth: window.innerWidth,
         };
       });
 
@@ -79,8 +86,24 @@ export async function validateLayoutMetadata(page: Page): Promise<void> {
 
       const rows = collectLayoutRows(children);
 
-      if (metadata.gap && metadata.kind) {
-        validateLayoutGap(gapMeasurement, metadata.gap, metadata.kind);
+      const gapRequiredLayouts = ["cluster", "equal-grid", "row", "split", "stack"];
+
+      const hasLayoutChildren = children.length > 1;
+
+      if (metadata.kind && gapRequiredLayouts.includes(metadata.kind) && hasLayoutChildren && !metadata.gap) {
+        throw new Error(`${metadata.kind} layout (${metadata.debugName}) must declare a gap token`);
+      }
+
+      if (metadata.kind && gapRequiredLayouts.includes(metadata.kind) && hasLayoutChildren && !["flex", "grid", "inline-flex", "inline-grid"].includes(metadata.display)) {
+        throw new Error(`${metadata.kind} layout (${metadata.debugName}) with multiple children must use flex or grid`);
+      }
+
+      if (metadata.gap && metadata.kind && hasLayoutChildren) {
+        validateLayoutGap(gapMeasurement, {
+          layout: metadata.kind,
+          token: metadata.gap,
+          viewportWidth: metadata.viewportWidth,
+        });
       }
 
       rows.forEach((row) => {

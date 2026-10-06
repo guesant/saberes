@@ -11,6 +11,7 @@ import type {
 export type QuestionReadyViewProps = {
   bookmarkError: Error | null;
   bookmarked: boolean;
+  bookmarkPending: boolean;
   data: QuestionReadModel;
   onDiagnose(code: DiagnosisCode): Promise<void>;
 
@@ -37,6 +38,7 @@ export function QuestionReadyView(props: QuestionReadyViewProps) {
       answer={interaction.answer}
       bookmarkError={props.bookmarkError}
       bookmarked={props.bookmarked}
+      bookmarkPending={props.bookmarkPending}
       confidence={interaction.confidence}
       data={props.data}
       onAnswerChange={interaction.changeAnswer}

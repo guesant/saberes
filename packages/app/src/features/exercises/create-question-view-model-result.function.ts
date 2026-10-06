@@ -9,12 +9,13 @@ export function createQuestionViewModelResult(
     state: getQueryViewState(input.query),
     data: input.data,
     bookmarked: input.bookmark.bookmarked,
+    bookmarkPending: input.bookmark.pending,
     bookmarkError: input.bookmark.error,
     error: input.query.error ?? null,
     reload: async (): Promise<void> => {
       await Promise.all([input.query.refetch(), input.bookmark.reload()]);
     },
-    saveBookmark: input.bookmark.save,
+    toggleBookmark: input.bookmark.toggle,
     saveDiagnosis: input.actions.saveDiagnosis,
     savePriorKnowledge: input.actions.savePriorKnowledge,
     submit: input.actions.submit,

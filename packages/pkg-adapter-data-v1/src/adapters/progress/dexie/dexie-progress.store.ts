@@ -139,6 +139,10 @@ export class DexieProgressStore implements ProgressStorageContract {
     return this.database.saveBookmark(contentKey, data);
   }
 
+  removeBookmark(contentKey: string): Promise<void> {
+    return this.database.removeBookmark(contentKey);
+  }
+
   listBookmarks() {
     return this.database.listBookmarks();
   }

@@ -4,6 +4,7 @@ export interface QuestionContextDisclosureProps {
   bookmarkError: Error | null;
 
   bookmarked: boolean;
+  bookmarkPending: boolean;
 
   onBookmark(): Promise<void>;
 

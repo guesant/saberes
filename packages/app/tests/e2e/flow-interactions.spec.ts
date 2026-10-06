@@ -127,43 +127,80 @@ test("a ação de prática da lição abre uma sessão de questões", async ({ p
     .toBeVisible();
 });
 
-test("o estudante responde uma questão, registra confiança e diagnóstico", async ({ page }) => {
+test("o estudante responde uma questão, salva e remove dos salvos e registra diagnóstico", async ({ page }) => {
   await page.goto("/questoes/1", { waitUntil: "networkidle" });
 
   await validateRouteSettled(page);
 
-  await page.getByText("Mais opções", { exact: true })
-    .click();
-
-  await expect(page.getByRole("button", { name: "Salvar questão" }))
-    .toBeVisible();
-
-  await page.getByRole("button", { name: "Já conheço" })
-    .click();
-
   await page.getByRole("button", { name: "Salvar questão" })
     .click();
 
-  await page.locator("#main-content button")
-    .filter({ hasText: /^[a-z]\)/i })
-    .first()
+  await expect(page.getByRole("button", { name: "Remover dos salvos" }))
+    .toHaveAttribute("aria-pressed", "true");
+
+  await page.getByRole("button", { name: "Remover dos salvos" })
     .click();
 
-  await page.getByRole("button", { name: "Seguro" })
+  await expect(page.getByRole("button", { name: "Salvar questão" }))
+    .toHaveAttribute("aria-pressed", "false");
+
+  await page.getByRole("button", { name: /^C\) 11$/ })
     .click();
 
   await page.getByRole("button", { name: "Responder" })
     .click();
 
-  await expect(page.getByText(/Resposta (correta|incorreta)/)
-    .first())
-    .toBeVisible();
+  const responseDialog = page.getByRole("dialog");
 
-  await page.getByRole("button", { name: "Acertei com segurança" })
+  await responseDialog.getByRole("button", { name: "Seguro" })
     .click();
 
-  await expect(page.getByText("Diagnóstico salvo localmente."))
+  await responseDialog.getByRole("button", { name: "Enviar resposta" })
+    .click();
+
+  await expect(page.getByText("Resposta correta", { exact: true }))
     .toBeVisible();
+
+  await expect(page.getByText("Resposta incorreta", { exact: true }))
+    .toHaveCount(0);
+
+  await page.getByRole("button", { name: "Avaliar tentativa" })
+    .click();
+
+  const diagnosisDialog = page.getByRole("dialog");
+
+  await diagnosisDialog.getByRole("button", { name: "Acertei com segurança" })
+    .click();
+
+  await diagnosisDialog.getByRole("button", { name: "Salvar avaliação" })
+    .click();
+
+  await expect(page.getByRole("button", { name: "Alterar avaliação" }))
+    .toBeVisible();
+});
+
+test("o desempenho mantém resumo e detalhes em páginas claras", async ({ page }) => {
+  await page.goto("/desempenho", { waitUntil: "networkidle" });
+
+  await validateRouteSettled(page);
+
+  await page.getByRole("link", { name: "Ver filtros e detalhes" })
+    .click();
+
+  await expect(page)
+    .toHaveURL(/\/desempenho\/detalhes$/);
+
+  await expect(page.getByRole("heading", { name: "Detalhes do desempenho" }))
+    .toBeVisible();
+
+  await expect(page.getByText("Recorte das evidências", { exact: true }))
+    .toBeVisible();
+
+  await page.getByRole("link", { name: "Voltar ao resumo" })
+    .click();
+
+  await expect(page)
+    .toHaveURL(/\/desempenho$/);
 });
 
 test("o catálogo inicia uma sessão de questões e a sessão chega a um estado terminal", async ({
@@ -348,8 +385,28 @@ test("metas, foco, situação acadêmica, preferências e agenda executam seus f
 
   await validateRouteSettled(page);
 
-  await page.getByRole("button", { name: "Recomendações" })
+  const recommendations = page.getByRole("switch", { name: "Recomendações" });
+
+  const initialRecommendations = await recommendations.isChecked();
+
+  await recommendations.click();
+
+  await expect(recommendations)
+    .toBeChecked({ checked: !initialRecommendations });
+
+  await page.getByRole("button", { name: "Nunca" })
     .click();
+
+  await expect(page.getByRole("button", { name: "Nunca" }))
+    .toHaveAttribute("aria-pressed", "true");
+
+  await page.reload({ waitUntil: "networkidle" });
+
+  await expect(page.getByRole("switch", { name: "Recomendações" }))
+    .toBeChecked({ checked: !initialRecommendations });
+
+  await expect(page.getByRole("button", { name: "Nunca" }))
+    .toHaveAttribute("aria-pressed", "true");
 
   await page.getByRole("button", { name: "Restaurar padrões" })
     .click();

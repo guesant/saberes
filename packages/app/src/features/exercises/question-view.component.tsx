@@ -29,10 +29,11 @@ export function QuestionView() {
     <QuestionReadyView
       bookmarkError={viewModel.bookmarkError}
       bookmarked={viewModel.bookmarked}
+      bookmarkPending={viewModel.bookmarkPending}
       data={viewModel.data}
       onDiagnose={viewModel.saveDiagnosis}
       onPriorKnowledge={viewModel.savePriorKnowledge}
-      onBookmark={viewModel.saveBookmark}
+      onBookmark={viewModel.toggleBookmark}
       onSubmit={viewModel.submit}
       onRetryBookmark={viewModel.reload}
     />

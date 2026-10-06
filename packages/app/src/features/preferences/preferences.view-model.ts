@@ -1,10 +1,12 @@
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
 import { getDefaultPreferences } from "./get-default-preferences.function";
-import { getNextReminderPreference } from "./get-next-reminder-preference.function";
+import { usePreferenceSaveController } from "./use-preference-save-controller.hook";
 import { usePreferencesQuery } from "./use-preferences-query.hook";
 import { useSavePreferenceMutation } from "./use-save-preference-mutation.hook";
 import type { PreferenceKey } from "./preference-key.type";
+import type { PreferenceSaveState } from "./preference-save-state.type";
+import type { PreferenceSelection } from "./preference-selection.type";
 import type { ReminderPreference } from "@guesant/saberes-application";
 
 const preferenceKeys: PreferenceKey[] = [
@@ -21,7 +23,8 @@ export interface PreferencesViewModel {
   richContent: boolean;
   reminders: ReminderPreference;
   error: Error | null;
-  togglePreference(key: PreferenceKey): Promise<void>;
+  saveState: PreferenceSaveState;
+  setPreference(input: PreferenceSelection): Promise<void>;
 
   restoreDefaults(): Promise<void>;
 
@@ -35,15 +38,9 @@ export function usePreferencesViewModel(): PreferencesViewModel {
 
   const mutation = useSavePreferenceMutation(services);
 
+  const { saveState, updatePreference } = usePreferenceSaveController(mutation);
+
   const preferenceValues = query.data || getDefaultPreferences();
-
-  const updatePreference = async (key: PreferenceKey): Promise<void> => {
-    const value = key === "reminders"
-      ? getNextReminderPreference(preferenceValues.reminders)
-      : !preferenceValues[key];
-
-    await mutation.mutateAsync({ key, value });
-  };
 
   const restoreDefaults = async (): Promise<void> => {
     const defaults = getDefaultPreferences();
@@ -61,7 +58,8 @@ export function usePreferencesViewModel(): PreferencesViewModel {
     state,
     ...preferenceValues,
     error: query.error ?? null,
-    togglePreference: updatePreference,
+    saveState,
+    setPreference: updatePreference,
     restoreDefaults,
     reload: async (): Promise<void> => {
       await query.refetch();

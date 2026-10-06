@@ -14,6 +14,7 @@ export function QuestionAnswerInput(props: QuestionAnswerInputProps) {
         questionType={props.questionType}
         options={props.options}
         value={props.value}
+        disabled={props.disabled}
         onChange={props.onChange}
       />
     );
@@ -24,6 +25,7 @@ export function QuestionAnswerInput(props: QuestionAnswerInputProps) {
       questionType={props.questionType}
       options={props.options}
       value={props.value}
+      disabled={props.disabled}
       onChange={props.onChange}
     />
   );

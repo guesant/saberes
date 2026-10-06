@@ -16,10 +16,11 @@ export function PreferencesReadyView(props: PreferencesReadyViewProps) {
       <PreferencesHeader />
       <PreferenceOptionList
         gamification={props.viewModel.gamification}
-        onToggle={props.viewModel.togglePreference}
+        onChange={props.viewModel.setPreference}
         recommendations={props.viewModel.recommendations}
         reminders={props.viewModel.reminders}
         richContent={props.viewModel.richContent}
+        saveState={props.viewModel.saveState}
       />
       <UIButton onClick={props.viewModel.restoreDefaults} variant="outlined">
         {t("preferences.restoreDefaults")}

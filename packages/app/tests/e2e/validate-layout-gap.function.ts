@@ -1,4 +1,5 @@
 import { validateLayoutClose } from "./validate-layout-close.function";
+import type { LayoutGapContext } from "./layout-gap-context.interface";
 import type { LayoutGapMeasurement } from "./layout-gap-measurement.type";
 
 const gapPixelsByToken: Record<string, number> = {
@@ -12,26 +13,29 @@ const gapPixelsByToken: Record<string, number> = {
 
 export function validateLayoutGap(
   measurement: LayoutGapMeasurement,
-  token: string,
-  layout: string,
+  context: LayoutGapContext,
 ): void {
-  const expected = gapPixelsByToken[token];
+  let expected = gapPixelsByToken[context.token];
 
-  if (expected === undefined || layout === "bottom-tabs") {
+  if (context.token === "section") {
+    expected = context.viewportWidth >= 900 ? 32 : 24;
+  }
+
+  if (expected === undefined || context.layout === "bottom-tabs") {
     return;
   }
 
   let values = [measurement.columnGap, measurement.rowGap];
 
-  if (layout === "stack") {
+  if (context.layout === "stack") {
     values = [measurement.rowGap];
   }
 
-  if (layout === "row" || layout === "cluster") {
+  if (context.layout === "row" || context.layout === "cluster") {
     values = [measurement.columnGap];
   }
 
   values.forEach((value) => {
-    validateLayoutClose(value, expected, `${layout} must use the ${token} gap token`);
+    validateLayoutClose(value, expected, `${context.layout} must use the ${context.token} gap token`);
   });
 }

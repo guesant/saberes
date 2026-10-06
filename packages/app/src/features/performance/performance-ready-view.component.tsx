@@ -1,7 +1,9 @@
 import { UIContentGroup } from "@guesant/saberes-ui";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { getPerformanceReadyViewData } from "./get-performance-ready-view-data.function";
-import { PerformanceDetailsDisclosure } from "./performance-details-disclosure.component";
+import { PerformanceDetailsLink } from "./performance-details-link.component";
+import { PerformanceDetailsPage } from "./performance-details-page.component";
 import { PerformanceNextAction } from "./performance-next-action.component";
 import { PerformanceReadyViewHeader } from "./performance-ready-view-header.component";
 import { PerformanceSummaryGrid } from "./performance-summary-grid.component";
@@ -18,6 +20,8 @@ export type PerformanceReadyViewProps = {
 };
 
 export function PerformanceReadyView(props: PerformanceReadyViewProps) {
+  const location = useLocation();
+
   const [filter, setFilter] = useState<PerformanceFilter>({ period: "all", scope: "all" });
 
   const viewData = getPerformanceReadyViewData({
@@ -27,6 +31,18 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
     now: new Date(),
   });
 
+  if (location.pathname.endsWith("/detalhes")) {
+    return (
+      <PerformanceDetailsPage
+        filter={filter}
+        viewData={viewData}
+        onChangePeriod={(period) => { return setFilter((current) => { return { ...current, period }; }); }}
+        onChangeScope={(scope) => { return setFilter((current) => { return { ...current, scope }; }); }}
+        onDecision={props.saveActionDecision}
+      />
+    );
+  }
+
   return (
     <UIContentGroup variant="section">
       <PerformanceReadyViewHeader />
@@ -35,13 +51,7 @@ export function PerformanceReadyView(props: PerformanceReadyViewProps) {
         hasAttempts={viewData.filteredData.attempts.length > 0}
         hasErrors={viewData.hasErrors}
       />
-      <PerformanceDetailsDisclosure
-        filter={filter}
-        viewData={viewData}
-        onChangePeriod={(period) => { return setFilter((current) => { return { ...current, period }; }); }}
-        onChangeScope={(scope) => { return setFilter((current) => { return { ...current, scope }; }); }}
-        onDecision={props.saveActionDecision}
-      />
+      <PerformanceDetailsLink />
     </UIContentGroup>
   );
 }

@@ -1,12 +1,9 @@
-import {
-  UICheckCircleIcon,
-  UIContentGroup,
-  UIStep,
-  UIStepButton,
-  UITypography,
-} from "@guesant/saberes-ui";
+import { UIContentGroup, UIListItemButton, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { getTopicLearningStateKey } from "./get-topic-learning-state-key.function";
+import { TopicMapNodeDescription } from "./topic-map-node-description.component";
+import { TopicMapNodeMilestoneIcon } from "./topic-map-node-milestone-icon.component";
 
 export type TopicMapNodeProps = {
   node: Record<string, unknown>;
@@ -24,25 +21,20 @@ export function TopicMapNode(props: TopicMapNodeProps) {
   };
 
   return (
-    <UIStep>
-      <UIStepButton
-        aria-label={`Abrir tópico ${String(node.label)}`}
-        icon={node.is_milestone ? <UICheckCircleIcon color="success" /> : undefined}
-        onClick={openTopic}
-      >
-        <UIContentGroup variant="content">
-          <UITypography fontWeight={700}>{String(node.label)}</UITypography>
-
-          <UITypography variant="body2">{String(node.description || "")}</UITypography>
-
+    <UIListItemButton aria-label={`Abrir tópico ${String(node.label)}`} divider onClick={openTopic}>
+      <TopicMapNodeMilestoneIcon milestone={Boolean(node.is_milestone)} />
+      <UIContentGroup variant="content">
+        <UITypography fontWeight={700}>{String(node.label)}</UITypography>
+        <UIContentGroup variant="tight">
+          <TopicMapNodeDescription description={String(node.description || "")} />
           <UITypography variant="caption">
             {t("map.mastery", {
               percentage: String(node.mastery_percentage || 0),
-              state: String(node.learning_state),
+              state: t(getTopicLearningStateKey(node.learning_state)),
             })}
           </UITypography>
         </UIContentGroup>
-      </UIStepButton>
-    </UIStep>
+      </UIContentGroup>
+    </UIListItemButton>
   );
 }

@@ -99,6 +99,8 @@ export interface ProgressStorageContract {
     data?: Record<string, unknown>,
   ): Promise<Record<string, unknown>>;
 
+  removeBookmark(contentKey: string): Promise<void>;
+
   saveDailyChallenge(
     contentKey: string,
     data?: Record<string, unknown>,

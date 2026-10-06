@@ -19,11 +19,12 @@ export interface QuestionViewModel {
   state: QuestionViewModelState;
   data: QuestionReadModel | null;
   bookmarked: boolean;
+  bookmarkPending: boolean;
   bookmarkError: Error | null;
   error: Error | null;
   reload(): Promise<void>;
 
-  saveBookmark(): Promise<void>;
+  toggleBookmark(): Promise<void>;
 
   submit(
     answer: string,

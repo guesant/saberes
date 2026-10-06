@@ -12,9 +12,9 @@ const surfaceConfigs: Record<UIContentSurfaceProps["mode"], ContentSurfaceConfig
     variant: "outlined",
   },
   summary: {
-    backgroundColor: "primary.main",
+    backgroundColor: "background.paper",
     padding: 2.5,
-    variant: "elevation",
+    variant: "outlined",
   },
   "text-summary": {
     padding: 2,

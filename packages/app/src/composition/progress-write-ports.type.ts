@@ -24,6 +24,7 @@ export type ProgressWritePorts = Pick<
   | "saveSavedCatalogFilter"
   | "deleteSavedCatalogFilter"
   | "saveBookmark"
+  | "removeBookmark"
   | "saveReviewItem"
   | "saveReviewTarget"
   | "saveDiagnosis"

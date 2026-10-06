@@ -8,7 +8,7 @@ export type UIPageSurfaceProps = {
 export function UIPageSurface(props: UIPageSurfaceProps): ReactElement {
   return (
     <MuiBox
-      data-ui-layout="stack"
+      data-ui-layout="page-shell"
       sx={{
         display: { md: "grid", xs: "block" },
         gridTemplateColumns: { md: "264px minmax(0, 1fr)", xs: "1fr" },

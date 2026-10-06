@@ -1,6 +1,5 @@
 export interface QuestionSubmitActionProps {
   answer: string | null;
-  confidence: boolean;
-  onSubmit(): Promise<void>;
+  onSubmit(): void;
   submitting: boolean;
 }

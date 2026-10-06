@@ -514,6 +514,11 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
     return this.putStudy("bookmarks", contentKey, data);
   }
 
+  async removeBookmark(contentKey: string): Promise<void> {
+    await this.table("bookmarks")
+      .delete(contentKey);
+  }
+
   listBookmarks() {
     return this.listStudy("bookmarks");
   }

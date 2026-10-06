@@ -23,8 +23,9 @@ export function QuestionStudySessionReadyView(props: QuestionStudySessionReadyVi
       <QuestionReadyView
         bookmarkError={question.bookmarkError}
         bookmarked={question.bookmarked}
+        bookmarkPending={question.bookmarkPending}
         data={question.data}
-        onBookmark={question.saveBookmark}
+        onBookmark={question.toggleBookmark}
         onContinue={advance}
         onDiagnose={question.saveDiagnosis}
         onPriorKnowledge={question.savePriorKnowledge}

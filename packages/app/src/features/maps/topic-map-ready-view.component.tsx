@@ -1,4 +1,4 @@
-import { UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { TopicMapColumns } from "./topic-map-columns.component";
 import type { TopicMapReadModel } from "@guesant/saberes-application";
@@ -13,7 +13,7 @@ export function TopicMapReadyView(props: TopicMapReadyViewProps) {
   const { t } = useTranslation();
 
   return (
-    <>
+    <UIContentGroup variant="section">
       <UITypography variant="overline">{t("map.eyebrow")}</UITypography>
 
       <UITypography variant="h3">{String(data.map.title)}</UITypography>
@@ -21,6 +21,6 @@ export function TopicMapReadyView(props: TopicMapReadyViewProps) {
       <UITypography color="text.secondary">{String(data.map.description || "")}</UITypography>
 
       <TopicMapColumns data={data} />
-    </>
+    </UIContentGroup>
   );
 }

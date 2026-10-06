@@ -8,6 +8,7 @@ export function resolveProgressWriteReviewPorts(
 ): Pick<
   ApplicationPorts,
   | "saveBookmark"
+  | "removeBookmark"
   | "saveReviewItem"
   | "saveReviewTarget"
   | "saveDiagnosis"
@@ -18,6 +19,7 @@ export function resolveProgressWriteReviewPorts(
 > {
   return {
     saveBookmark: resolvePort(container, applicationDependencyTokens.saveBookmark),
+    removeBookmark: resolvePort(container, applicationDependencyTokens.removeBookmark),
     saveReviewItem: resolvePort(container, applicationDependencyTokens.saveReviewItem),
     saveReviewTarget: resolvePort(container, applicationDependencyTokens.saveReviewTarget),
     saveDiagnosis: resolvePort(container, applicationDependencyTokens.saveDiagnosis),

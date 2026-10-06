@@ -2,6 +2,7 @@ import {
   type ProgressStorageContract,
   SaveAchievementAdapter,
   SaveBookmarkAdapter,
+  RemoveBookmarkAdapter,
   SaveDailyChallengeAdapter,
   SaveDiagnosisAdapter,
   SaveReviewItemAdapter,
@@ -20,6 +21,7 @@ export function createProgressWriteReviewPortBindings(container: Container): voi
 
   const bindings: PortFactoryBinding[] = [
     [applicationDependencyTokens.saveBookmark, () => { return new SaveBookmarkAdapter(getProgressStore()); }],
+    [applicationDependencyTokens.removeBookmark, () => { return new RemoveBookmarkAdapter(getProgressStore()); }],
     [applicationDependencyTokens.saveReviewItem, () => { return new SaveReviewItemAdapter(getProgressStore()); }],
     [applicationDependencyTokens.saveReviewTarget, () => { return new SaveReviewTargetAdapter(getProgressStore()); }],
     [applicationDependencyTokens.saveDiagnosis, () => { return new SaveDiagnosisAdapter(getProgressStore()); }],

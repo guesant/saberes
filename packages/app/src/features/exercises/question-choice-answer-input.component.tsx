@@ -30,6 +30,7 @@ export function QuestionChoiceAnswerInput(props: QuestionChoiceAnswerInputProps)
             key={String(option.id)}
             option={option}
             selected={selectedValues.includes(option.canonicalCode)}
+            disabled={props.disabled}
             onSelect={handleSelect}
           />
         );

@@ -10,6 +10,7 @@ export type QuestionReadyContentProps = {
   answer: string | null;
   bookmarkError: Error | null;
   bookmarked: boolean;
+  bookmarkPending: boolean;
   confidence: AttemptConfidence | null;
   data: QuestionReadModel;
   onAnswerChange(answer: string | null): void;

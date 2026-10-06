@@ -2,7 +2,7 @@ import type { PerformanceActionDecision } from "./performance-action-decision.in
 import type { PerformanceFilter } from "./performance-filter.interface";
 import type { PerformanceReadyViewData } from "./performance-ready-view-data.interface";
 
-export interface PerformanceDetailsDisclosureProps {
+export interface PerformanceDetailsPageProps {
   filter: PerformanceFilter;
   viewData: PerformanceReadyViewData;
   onChangePeriod(period: PerformanceFilter["period"]): void;

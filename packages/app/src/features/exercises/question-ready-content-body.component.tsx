@@ -1,5 +1,4 @@
-import { UICardContent, UITypography } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
+import { UIContentGroup } from "@guesant/saberes-ui";
 import { ActionFeedback } from "../../components/action-feedback.component";
 import { QuestionContextDisclosure } from "./question-context-disclosure.component";
 import { QuestionHeader } from "./question-header.component";
@@ -10,17 +9,14 @@ import type { QuestionReadyContentBodyProps } from "./question-ready-content-bod
 export function QuestionReadyContentBody(props: QuestionReadyContentBodyProps) {
   const { content } = props;
 
-  const { t } = useTranslation();
-
   return (
-    <UICardContent>
-      <UITypography variant="overline">{t("common.selectionProcess")}</UITypography>
-
+    <UIContentGroup variant="section">
       <QuestionHeader data={content.data} />
 
       <QuestionContextDisclosure
         bookmarkError={content.bookmarkError}
         bookmarked={content.bookmarked}
+        bookmarkPending={content.bookmarkPending}
         onBookmark={content.onBookmark}
         onPriorKnowledge={content.onPriorKnowledge}
         onRetryBookmark={content.onRetryBookmark}
@@ -33,6 +29,7 @@ export function QuestionReadyContentBody(props: QuestionReadyContentBodyProps) {
         onAnswerChange={content.onAnswerChange}
         onConfidenceChange={content.onConfidenceChange}
         onSubmit={content.onSubmit}
+        readOnly={content.result !== null}
         submitting={content.submissionState === "saving"}
       />
 
@@ -45,6 +42,6 @@ export function QuestionReadyContentBody(props: QuestionReadyContentBodyProps) {
         onRetry={content.onRetry}
         result={content.result}
       />
-    </UICardContent>
+    </UIContentGroup>
   );
 }

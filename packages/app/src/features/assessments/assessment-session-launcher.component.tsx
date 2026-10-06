@@ -17,15 +17,16 @@ export function AssessmentSessionLauncher(props: AssessmentSessionLauncherProps)
     <UIContentGroup variant="content">
       <UIInlineActions wrap>
         <UIButton disabled={viewModel.pending} variant="contained" onClick={() => { return viewModel.startSession("practice"); }}>
-          {t("assessment.start")}
+          {t("assessment.practiceQuestions")}
         </UIButton>
         <UIButton disabled={viewModel.pending || !props.assessment.canSimulate} variant="outlined" onClick={() => { return viewModel.startSession("simulation"); }}>
-          Começar simulado
+          {t("simulator.start")}
         </UIButton>
       </UIInlineActions>
       <UITypography color="text.secondary">
-        Prática: correção a cada resposta. Simulado: respostas revisáveis e resultado ao finalizar.
-        {props.assessment.canSimulate ? ` Tempo contínuo de ${props.assessment.duration_minutes} minutos, inclusive ao sair da página.` : ` ${props.assessment.readinessReason}`}
+        {props.assessment.canSimulate
+          ? t("assessment.simulationAvailable", { minutes: props.assessment.duration_minutes })
+          : t("assessment.simulationUnavailable")}
       </UITypography>
       <AssessmentSessionLauncherFeedback error={viewModel.error} />
     </UIContentGroup>

@@ -5,8 +5,8 @@ import type { ReactElement } from "react";
 
 export function UIContentFigure(props: UIContentFigureProps): ReactElement {
   return (
-    <MuiBox component="figure" data-ui-layout="stack" data-ui-outset="lg" sx={{ my: 3, textAlign: "center" }}>
-      <MuiBox component="img" data-ui-layout="row" src={props.src} alt={props.alt} sx={{ maxWidth: "100%" }} />
+    <MuiBox component="figure" data-ui-gap="md" data-ui-layout="stack" data-ui-outset="lg" sx={{ display: "flex", flexDirection: "column", gap: 2, my: 3, textAlign: "center" }}>
+      <MuiBox component="img" data-ui-layout="layout-item" src={props.src} alt={props.alt} sx={{ maxWidth: "100%" }} />
 
       <UIContentText variant="caption">{props.caption}</UIContentText>
     </MuiBox>

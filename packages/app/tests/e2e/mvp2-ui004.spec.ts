@@ -87,10 +87,10 @@ test("M2-UI-004 supports dark mode without accessibility regressions", async ({ 
   });
 
   expect(colors.background)
-    .toBe("rgb(11, 20, 38)");
+    .toBe("rgb(18, 20, 23)");
 
   expect(colors.color)
-    .toBe("rgb(255, 255, 255)");
+    .toBe("rgb(243, 244, 246)");
 
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa"])

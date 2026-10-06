@@ -1,10 +1,11 @@
-import { UIContentGroup, UIHtmlStrongText, UISelectableSurface } from "@guesant/saberes-ui";
+import { UIChoiceOptionContent, UIHtmlStrongText, UISelectableSurface } from "@guesant/saberes-ui";
 import { UIQuestionRichText } from "@guesant/saberes-ui-content";
 import type { QuestionOptionReadModel } from "@guesant/saberes-application";
 
 export type QuestionOptionProps = {
   option: QuestionOptionReadModel;
   selected: boolean;
+  disabled?: boolean;
   onSelect(value: string): void;
 };
 
@@ -14,6 +15,7 @@ export function QuestionOption(props: QuestionOptionProps) {
   return (
     <UISelectableSurface
       interactive
+      disabled={props.disabled}
       aria-pressed={selected}
       selected={selected}
       variant="outlined"
@@ -21,10 +23,9 @@ export function QuestionOption(props: QuestionOptionProps) {
         return onSelect(option.canonicalCode);
       }}
     >
-      <UIContentGroup variant="tight">
-        <UIHtmlStrongText>{option.code})</UIHtmlStrongText>
+      <UIChoiceOptionContent marker={<UIHtmlStrongText>{option.code})</UIHtmlStrongText>}>
         <UIQuestionRichText text={option.text} />
-      </UIContentGroup>
+      </UIChoiceOptionContent>
     </UISelectableSurface>
   );
 }

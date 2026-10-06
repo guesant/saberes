@@ -11,7 +11,7 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
     <MuiContainer
       component="main"
       data-ui-inset="xl"
-      data-ui-layout="stack"
+      data-ui-layout="page-shell"
       data-ui-outset="none"
       id="main-content"
       maxWidth="lg"
@@ -21,8 +21,9 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
         justifySelf: { md: "center", xs: "stretch" },
         maxWidth: { md: "60rem", xs: "100%" },
         minWidth: 0,
+        px: { md: 3, xs: 2 },
         pb: { md: 5, xs: 11 },
-        pt: { md: 5, xs: 3 },
+        pt: { md: 4, xs: 3 },
         width: "100%",
       }}
     >

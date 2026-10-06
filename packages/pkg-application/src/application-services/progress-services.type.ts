@@ -3,6 +3,7 @@ import type { DeleteSavedCatalogFilterCommandHandler } from "../commands/delete-
 import type { EnrollCourseCommandHandler } from "../commands/enroll-course.command-handler";
 import type { ImportProgressCommandHandler } from "../commands/import-progress.command-handler";
 import type { RecordAttemptCommandHandler } from "../commands/record-attempt.command-handler";
+import type { RemoveBookmarkCommandHandler } from "../commands/remove-bookmark.command-handler";
 import type { SaveAchievementCommandHandler } from "../commands/save-achievement.command-handler";
 import type { SaveAttemptCommandHandler } from "../commands/save-attempt.command-handler";
 import type { SaveBookmarkCommandHandler } from "../commands/save-bookmark.command-handler";
@@ -53,6 +54,7 @@ export type ProgressServices = {
   savePlanProgress: SavePlanProgressCommandHandler;
   listPlanProgress: ListPlanProgressQueryHandler;
   saveBookmark: SaveBookmarkCommandHandler;
+  removeBookmark: RemoveBookmarkCommandHandler;
   listBookmarks: ListBookmarksQueryHandler;
   saveReviewItem: SaveReviewItemCommandHandler;
   listReviewItems: ListReviewItemsQueryHandler;

@@ -2,7 +2,8 @@ import { UIContentGroup } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { createPreferenceOptionData } from "./create-preference-option-data.function";
 import { PreferenceOption } from "./preference-option.component";
-import type { PreferenceKey } from "./preference-key.type";
+import type { PreferenceSaveState } from "./preference-save-state.type";
+import type { PreferenceSelection } from "./preference-selection.type";
 import type { ReminderPreference } from "@guesant/saberes-application";
 
 export interface PreferenceOptionListProps {
@@ -10,7 +11,8 @@ export interface PreferenceOptionListProps {
   gamification: boolean;
   richContent: boolean;
   reminders: ReminderPreference;
-  onToggle(key: PreferenceKey): Promise<void>;
+  saveState: PreferenceSaveState;
+  onChange(input: PreferenceSelection): Promise<void>;
 }
 
 export function PreferenceOptionList(props: PreferenceOptionListProps) {
@@ -29,12 +31,10 @@ export function PreferenceOptionList(props: PreferenceOptionListProps) {
       {options.map((option) => {
         return (
           <PreferenceOption
-            description={option.description}
             key={option.key}
-            onToggle={props.onToggle}
-            preferenceKey={option.key}
-            title={option.title}
-            value={option.value}
+            onChange={props.onChange}
+            option={option}
+            saveState={props.saveState[option.key]}
           />
         );
       })}

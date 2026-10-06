@@ -1,17 +1,22 @@
-import { UIDisclosure } from "@guesant/saberes-ui";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { PerformanceAssessmentSummary } from "./performance-assessment-summary.component";
+import { PerformanceBackToSummaryAction } from "./performance-back-to-summary-action.component";
 import { PerformanceDiagnosisList } from "./performance-diagnosis-list.component";
 import { PerformanceFilters } from "./performance-filters.component";
 import { PerformanceSummaryDetails } from "./performance-summary-details.component";
 import { PerformanceTopicList } from "./performance-topic-list.component";
-import type { PerformanceDetailsDisclosureProps } from "./performance-details-disclosure-props.interface";
+import type { PerformanceDetailsPageProps } from "./performance-details-page-props.interface";
 
-export function PerformanceDetailsDisclosure(props: PerformanceDetailsDisclosureProps) {
+export function PerformanceDetailsPage(props: PerformanceDetailsPageProps) {
   const { t } = useTranslation();
 
   return (
-    <UIDisclosure summary={t("performance.moreDetails")}>
+    <UIContentGroup variant="section">
+      <UIContentGroup variant="content">
+        <PerformanceBackToSummaryAction />
+        <UITypography variant="h2">{t("performance.detailsTitle")}</UITypography>
+      </UIContentGroup>
       <PerformanceSummaryDetails summary={props.viewData.summary} />
       <PerformanceFilters
         courseLabel={props.viewData.course?.title}
@@ -26,6 +31,6 @@ export function PerformanceDetailsDisclosure(props: PerformanceDetailsDisclosure
         onDecision={props.onDecision}
         stats={props.viewData.diagnosisStats}
       />
-    </UIDisclosure>
+    </UIContentGroup>
   );
 }

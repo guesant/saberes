@@ -28,8 +28,12 @@ export async function validateDocumentOverflow(page: Page): Promise<void> {
         .map((element) => {
           return {
             className: element.className,
+            clientWidth: element.clientWidth,
             id: element.id,
+            scrollWidth: element.scrollWidth,
             tagName: element.tagName,
+            text: element.textContent?.trim()
+              .slice(0, 80),
           };
         });
     });

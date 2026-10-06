@@ -1,4 +1,5 @@
 import { Box as MuiBox } from "@mui/material";
+import type { ContentGroupGap } from "./content-group-gap.type";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIContentGroupProps = {
@@ -10,17 +11,17 @@ export type UIContentGroupProps = {
 const groupLayout = {
   content: { alignItems: undefined, dataGap: "md", direction: "column", flexWrap: undefined, gap: 2, layout: "stack" },
   inline: { alignItems: "center", dataGap: "sm", direction: "row", flexWrap: "wrap", gap: 1, layout: "cluster" },
-  list: { alignItems: undefined, dataGap: "md", direction: "column", flexWrap: undefined, gap: 2, layout: "stack" },
-  section: { alignItems: undefined, dataGap: "md", direction: "column", flexWrap: undefined, gap: 2, layout: "stack" },
+  list: { alignItems: undefined, dataGap: "sm", direction: "column", flexWrap: undefined, gap: 1, layout: "stack" },
+  section: { alignItems: undefined, dataGap: "section", direction: "column", flexWrap: undefined, gap: { md: 4, xs: 3 }, layout: "stack" },
   tight: { alignItems: undefined, dataGap: "xs", direction: "column", flexWrap: undefined, gap: 0.5, layout: "stack" },
 } satisfies Record<
   NonNullable<UIContentGroupProps["variant"]>,
   {
     alignItems: "center" | undefined;
-    dataGap: "xs" | "sm" | "md";
+    dataGap: "section" | "xs" | "sm" | "md";
     direction: "column" | "row";
     flexWrap: "wrap" | undefined;
-    gap: number;
+    gap: ContentGroupGap;
     layout: "cluster" | "stack";
   }
 >;
@@ -39,11 +40,11 @@ export function UIContentGroup(props: UIContentGroupProps): ReactElement {
       display="flex"
       flexDirection={layout.direction}
       flexWrap={layout.flexWrap}
-      gap={layout.gap}
       id={props.id}
       minWidth={0}
       sx={{
         "& > *": { maxWidth: "100%", minWidth: 0 },
+        gap: layout.gap,
         maxWidth: "100%",
         width: "100%",
       }}

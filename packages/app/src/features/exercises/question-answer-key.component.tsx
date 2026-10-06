@@ -14,7 +14,7 @@ export function QuestionAnswerKey(props: QuestionAnswerKeyProps): ReactNode {
   }
 
   return (
-    <UITypography color="error.main">
+    <UITypography color="text.secondary">
       {t("exercise.answerKey", { answer: props.answer })}
     </UITypography>
   );

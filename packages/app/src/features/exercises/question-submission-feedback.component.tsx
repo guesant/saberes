@@ -1,6 +1,7 @@
-import { UIButton, UIContentGroup } from "@guesant/saberes-ui";
+import { UIButton, UIContentGroup, UIInlineActions } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { QuestionAnswerKey } from "./question-answer-key.component";
+import { QuestionBackToPracticeAction } from "./question-back-to-practice-action.component";
 import { QuestionDiagnosisPanel } from "./question-diagnosis-panel.component";
 import { QuestionExplanation } from "./question-explanation.component";
 import { QuestionResult } from "./question-result.component";
@@ -32,17 +33,21 @@ export function QuestionSubmissionFeedback(props: QuestionSubmissionFeedbackProp
       <QuestionResult result={result.correct} />
       <QuestionAnswerKey answer={answer} />
       <QuestionExplanation explanation={explanation} />
-      <QuestionDiagnosisPanel onDiagnose={onDiagnose} />
-      <UIButton variant="outlined" onClick={onRetry}>
-        {t("exercise.retry")}
-      </UIButton>
-      {props.onContinue ? (
-        <QuestionSessionContinueAction
-          label={t("exercise.continueSession")}
-          onContinue={props.onContinue}
-          result={result}
-        />
-      ) : null}
+      <QuestionDiagnosisPanel onDiagnose={onDiagnose} result={result.correct} />
+      <UIInlineActions>
+        {props.onContinue ? (
+          <QuestionSessionContinueAction
+            label={t("exercise.continueSession")}
+            onContinue={props.onContinue}
+            result={result}
+          />
+        ) : (
+          <QuestionBackToPracticeAction />
+        )}
+        <UIButton variant="outlined" onClick={onRetry}>
+          {t("exercise.retry")}
+        </UIButton>
+      </UIInlineActions>
     </UIContentGroup>
   );
 }

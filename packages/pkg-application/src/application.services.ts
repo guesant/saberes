@@ -13,6 +13,7 @@ import { ImportProgressCommandHandler } from "./commands/import-progress.command
 import { PostponeStudyCaptureCommandHandler } from "./commands/postpone-study-capture.command-handler";
 import { RecordAttemptCommandHandler } from "./commands/record-attempt.command-handler";
 import { RecordStudyActivityCommandHandler } from "./commands/record-study-activity.command-handler";
+import { RemoveBookmarkCommandHandler } from "./commands/remove-bookmark.command-handler";
 import { RestorePersonalRelationCommandHandler } from "./commands/restore-personal-relation.command-handler";
 import { RestoreStudyCaptureCommandHandler } from "./commands/restore-study-capture.command-handler";
 import { SaveAcademicDisciplineCommandHandler } from "./commands/save-academic-discipline.command-handler";
@@ -258,6 +259,8 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
 
   const saveBookmark = new SaveBookmarkCommandHandler(ports.saveBookmark);
 
+  const removeBookmark = new RemoveBookmarkCommandHandler(ports.removeBookmark);
+
   const listBookmarks = new ListBookmarksQueryHandler(ports.listBookmarks);
 
   const saveReviewItem = new SaveReviewItemCommandHandler(ports.saveReviewItem);
@@ -388,6 +391,7 @@ export function createApplication(ports: ApplicationPorts): ApplicationServices 
       savePlanProgress,
       listPlanProgress,
       saveBookmark,
+      removeBookmark,
       listBookmarks,
       saveReviewItem,
       listReviewItems,
