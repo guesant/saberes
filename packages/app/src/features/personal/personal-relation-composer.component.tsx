@@ -9,9 +9,25 @@ export function PersonalRelationComposer(props: PersonalRelationComposerProps) {
   return (
     <UIContentGroup variant="content">
       <PersonalRelationKindSelector onChange={state.setKind} value={state.kind} />
-      <UIAutocomplete label="Origem" options={props.options} onChange={state.setSource} value={state.source} />
-      <UIAutocomplete label="Destino" options={props.options} onChange={state.setTarget} value={state.target} />
-      <UIButton disabled={!state.canCreate} onClick={state.create} variant="outlined">
+      <UIAutocomplete
+        label="Origem"
+        options={props.options}
+        onChange={state.setSource}
+        value={state.source}
+      />
+      <UIAutocomplete
+        label="Destino"
+        options={props.options}
+        onChange={state.setTarget}
+        value={state.target}
+      />
+      <UIButton
+        disabled={!state.canCreate}
+        fullWidth
+        iconOnly={false}
+        onClick={state.create}
+        variant="outlined"
+      >
         Criar relação
       </UIButton>
     </UIContentGroup>

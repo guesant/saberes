@@ -63,14 +63,21 @@ export function useLessonViewModel(key: string | undefined): LessonViewModel {
     lesson: lessonViewData.lesson,
     queryKey: key,
     completed: progressState.completed,
+    bookmarked: progressState.bookmarked,
   });
 
   return {
     state: getQueryViewState(query),
     data: lessonViewData.data,
-    ...createLessonProgressViewModel({ actions: lessonActions, progress: progressQueries, state: progressState }),
+    ...createLessonProgressViewModel({
+      actions: lessonActions,
+      progress: progressQueries,
+      state: progressState,
+    }),
     error: query.error ?? null,
-    reload: async (): Promise<void> => { await query.refetch(); },
+    reload: async (): Promise<void> => {
+      await query.refetch();
+    },
     saveProgress: lessonActions.progress.save,
     saveBookmark: lessonActions.bookmark.save,
     saveSection: lessonActions.saveSection,

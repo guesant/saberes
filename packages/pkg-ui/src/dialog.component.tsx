@@ -31,7 +31,15 @@ export function UIDialog(props: UIDialogProps): ReactElement {
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent sx={{ border: 0, padding: 3 }}>{props.children}</DialogContent>
+      <DialogContent
+        sx={{
+          "&.MuiDialogContent-root": { paddingTop: 3 },
+          border: 0,
+          padding: 3,
+        }}
+      >
+        {props.children}
+      </DialogContent>
       <DialogActions
         sx={{
           borderBlockStart: "1px solid var(--mui-palette-divider)",

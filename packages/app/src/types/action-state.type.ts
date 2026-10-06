@@ -1,1 +1,1 @@
-export type ActionState = "idle" | "saving" | "saved" | "error" | "cancelled";
+export type ActionState = "idle" | "saving" | "saved" | "removed" | "error" | "cancelled";

@@ -1,4 +1,4 @@
-import { UIInlineActions } from "@guesant/saberes-ui";
+import { UIGrid } from "@guesant/saberes-ui";
 import { PersonalRelationContextFilterButton } from "./personal-relation-context-filter-button.component";
 import type { PersonalRelationContextFilterControlsProps } from "./personal-relation-context-filter-controls-props.interface";
 import type { PersonalRelationContextFilterOption } from "./personal-relation-context-filter-option.interface";
@@ -14,7 +14,7 @@ export function PersonalRelationContextFilterControls(
   props: PersonalRelationContextFilterControlsProps,
 ) {
   return (
-    <UIInlineActions aria-label="Filtrar relações por contexto">
+    <UIGrid aria-label="Filtrar relações por contexto" columns={2} role="group">
       {filters.map((filter) => {
         return (
           <PersonalRelationContextFilterButton
@@ -25,6 +25,6 @@ export function PersonalRelationContextFilterControls(
           />
         );
       })}
-    </UIInlineActions>
+    </UIGrid>
   );
 }

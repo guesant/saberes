@@ -11,6 +11,7 @@ export type CreateLessonProgressActionsInput = {
   lesson: LessonReadModel["lesson"] | undefined;
   queryKey: string | undefined;
   completed: boolean;
+  bookmarked: boolean;
 };
 
 export function createLessonProgressActions(input: CreateLessonProgressActionsInput) {

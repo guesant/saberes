@@ -19,10 +19,23 @@ export function StudyCaptureCreateDialog(props: StudyCaptureCreateDialogProps) {
 
   return (
     <>
-      <UIButton onClick={() => { return setOpen(true); }} variant="contained">
+      <UIButton
+        fullWidth
+        iconOnly={false}
+        onClick={() => {
+          return setOpen(true);
+        }}
+        variant="contained"
+      >
         {props.triggerLabel}
       </UIButton>
-      <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>
+      <UIDialog
+        onClose={() => {
+          return setOpen(false);
+        }}
+        open={open}
+        title={props.title}
+      >
         <StudyCaptureCreate onCreate={create} />
       </UIDialog>
     </>

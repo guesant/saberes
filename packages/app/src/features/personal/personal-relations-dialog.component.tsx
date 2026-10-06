@@ -13,10 +13,22 @@ export function PersonalRelationsDialog(props: PersonalRelationsDialogProps) {
 
   return (
     <>
-      <UIButton onClick={() => { return setOpen(true); }} variant="outlined">
+      <UIButton
+        iconOnly={false}
+        onClick={() => {
+          return setOpen(true);
+        }}
+        variant="outlined"
+      >
         {props.triggerLabel}
       </UIButton>
-      <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>
+      <UIDialog
+        onClose={() => {
+          return setOpen(false);
+        }}
+        open={open}
+        title={props.title}
+      >
         <PersonalRelationsSection
           onArchive={props.onArchive}
           onCreate={props.onCreate}

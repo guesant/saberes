@@ -13,6 +13,7 @@ const actionFeedbackDescriptors: Record<
   cancelled: { messageKey: "common.cancelled", severity: "info", state: "cancelled" },
   error: { messageKey: "common.saveError", severity: "error", state: "error" },
   idle: { messageKey: "common.cancelled", severity: "info", state: "idle" },
+  removed: { messageKey: "common.removed", severity: "success", state: "removed" },
   saved: { messageKey: "common.saved", severity: "success", state: "saved" },
   saving: { messageKey: "common.saving", severity: "info", state: "saving" },
 };

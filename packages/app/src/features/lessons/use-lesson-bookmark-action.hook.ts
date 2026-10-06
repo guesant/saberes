@@ -18,7 +18,7 @@ export function useLessonBookmarkAction(
     try {
       await input.action();
 
-      setState("saved");
+      setState(input.isRemoval ? "removed" : "saved");
     } catch {
       const nextError = new Error("Não foi possível salvar o marcador da lição.");
 

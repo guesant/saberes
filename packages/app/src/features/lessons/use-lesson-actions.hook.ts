@@ -9,7 +9,10 @@ export function useLessonActions(input: UseLessonActionsInput): LessonActionsSta
 
   const progress = useLessonProgressAction({ action: actions.saveProgress });
 
-  const bookmark = useLessonBookmarkAction({ action: actions.saveBookmark });
+  const bookmark = useLessonBookmarkAction({
+    action: actions.saveBookmark,
+    isRemoval: input.bookmarked,
+  });
 
   return { bookmark, progress, saveSection: actions.saveSection };
 }

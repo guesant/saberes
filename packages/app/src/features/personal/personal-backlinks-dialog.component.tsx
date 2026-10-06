@@ -13,10 +13,22 @@ export function PersonalBacklinksDialog(props: PersonalBacklinksDialogProps) {
 
   return (
     <>
-      <UIButton onClick={() => { return setOpen(true); }} variant="outlined">
+      <UIButton
+        iconOnly={false}
+        onClick={() => {
+          return setOpen(true);
+        }}
+        variant="outlined"
+      >
         {props.triggerLabel}
       </UIButton>
-      <UIDialog onClose={() => { return setOpen(false); }} open={open} title={props.title}>
+      <UIDialog
+        onClose={() => {
+          return setOpen(false);
+        }}
+        open={open}
+        title={props.title}
+      >
         <PersonalBacklinksSection
           onArchive={props.onArchive}
           onRestore={props.onRestore}

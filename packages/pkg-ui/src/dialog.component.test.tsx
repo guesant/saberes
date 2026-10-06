@@ -34,6 +34,16 @@ describe("UIDialog", () => {
     expect(screen.getByRole("button", { name: "Confirmar" })).not.toHaveClass("UIButton-iconOnly");
   });
 
+  it("keeps the standard top padding after the header divider", () => {
+    render(
+      <UIDialog onClose={vi.fn()} open title="Opções">
+        <p>Conteúdo do modal</p>
+      </UIDialog>,
+    );
+
+    expect(document.querySelector(".MuiDialogContent-root")).toHaveStyle({ paddingTop: "24px" });
+  });
+
   it("does not close when the backdrop is clicked", () => {
     render(
       <UIDialog onClose={vi.fn()} open title="Modal de teste">
