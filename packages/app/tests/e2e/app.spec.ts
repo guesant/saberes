@@ -1,5 +1,12 @@
 import { expect, test } from "@playwright/test";
 
+test("mostra a aplicação sem esperar a verificação de atualização", async ({ page }) => {
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+
+  await expect(page.locator("#main-content"))
+    .toBeVisible({ timeout: 2_500 });
+});
+
 test("carrega a aplicação e registra o service worker", async ({ page }) => {
   await page.goto("/", { waitUntil: "networkidle" });
 
