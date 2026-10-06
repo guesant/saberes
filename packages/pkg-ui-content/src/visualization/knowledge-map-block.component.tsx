@@ -103,7 +103,7 @@ export function UIKnowledgeMapBlock(props: UIKnowledgeMapBlockProps) {
 
       {hasError ? <UIAlert severity="info">{t("content.mapFallback")}</UIAlert> : null}
 
-      <UIBox ref={containerRef} role="img" aria-label={title} />
+      <UIBox ref={containerRef} layout="flow" role="img" aria-label={title} />
 
       <UIVisualizationTextSummary summary={textSummary} title={t("content.textualAlternative")} />
     </UIContentSurface>

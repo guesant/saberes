@@ -101,7 +101,7 @@ test("o estudante inicia um curso e consegue concluir uma lição", async ({ pag
     .toBeVisible();
 });
 
-test("a ação de prática da lição abre uma sessão de questões", async ({ page }) => {
+test("a ação de prática da lição leva às questões do tópico estudado", async ({ page }) => {
   await page.goto("/licoes/1", { waitUntil: "networkidle" });
 
   await validateRouteSettled(page);
@@ -110,21 +110,19 @@ test("a ação de prática da lição abre uma sessão de questões", async ({ p
     .click();
 
   await expect(page)
-    .toHaveURL(/\/catalogo\?modo=praticar/);
+    .toHaveURL(/\/topicos\/[^#]+#pratica/);
 
-  await expect(page.getByRole("heading", { name: "Praticar exercícios e questões" }))
+  await expect(page.getByRole("heading", { name: "Prática" }))
     .toBeVisible();
 
-  await page.getByRole("button", { name: "Começar sessão" })
+  await page.getByRole("link", { name: "Questão 1" })
     .click();
 
   await expect(page)
-    .toHaveURL(/\/sessoes\/questoes\//);
+    .toHaveURL(/\/questoes\/1/);
 
   await validateRouteSettled(page);
 
-  await expect(page.getByRole("button", { name: "Responder" }))
-    .toBeVisible();
 });
 
 test("o estudante responde uma questão, salva e remove dos salvos e registra diagnóstico", async ({ page }) => {

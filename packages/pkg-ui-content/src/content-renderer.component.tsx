@@ -1,4 +1,4 @@
-import { UIBox, UIChip, UIContentGroup } from "@guesant/saberes-ui";
+import { UIChip, UIContentGroup, UIStack } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
@@ -30,15 +30,15 @@ export function UIContentRenderer(props: UIContentRendererProps) {
 
   return (
     <UIContentGroup variant="content">
-      <UIBox>
+      <UIStack>
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath]}
-          rehypePlugins={[rehypeKatex, rehypeSanitize]}
+          rehypePlugins={[rehypeSanitize, rehypeKatex]}
           components={{ a: UIMarkdownLink, img: UIMarkdownImage }}
         >
           {markdown}
         </ReactMarkdown>
-      </UIBox>
+      </UIStack>
 
       {hasHiddenRichContent ? (
         <UIChip label={t("content.richContentDisabled")} size="small" />

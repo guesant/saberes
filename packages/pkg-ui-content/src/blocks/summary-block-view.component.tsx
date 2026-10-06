@@ -1,4 +1,4 @@
-import { UIContentSurface, UIContentText } from "@guesant/saberes-ui";
+import { UIContentGroup, UIContentSurface, UIContentText } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { SummaryBlock } from "@guesant/saberes-application";
 
@@ -13,11 +13,13 @@ export function UISummaryBlockView(props: UISummaryBlockViewProps) {
 
   return (
     <UIContentSurface mode="summary">
-      <UIContentText variant="heading">{block.title || t("content.summary")}</UIContentText>
+      <UIContentGroup variant="tight">
+        <UIContentText variant="heading">{block.title || t("content.summary")}</UIContentText>
 
-      <UIContentText preserveWhitespace variant="body">
-        {block.content}
-      </UIContentText>
+        <UIContentText preserveWhitespace variant="body">
+          {block.content}
+        </UIContentText>
+      </UIContentGroup>
     </UIContentSurface>
   );
 }

@@ -1,7 +1,8 @@
-import { UIAlert, UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { ActionFeedbackErrorDetails } from "./action-feedback-error-details.component";
-import { useTransientSuccessFeedback } from "./use-transient-success-feedback.hook";
+import { useActionToast } from "./use-action-toast.hook";
 import type { ActionFeedbackDescriptor } from "./action-feedback-descriptor.interface";
 import type { ActionFeedbackProps } from "./action-feedback-props.interface";
 
@@ -19,20 +20,31 @@ const actionFeedbackDescriptors: Record<
 export function ActionFeedback(props: ActionFeedbackProps) {
   const { t } = useTranslation();
 
+  const toast = useActionToast();
+
+  const previousState = useRef<ActionFeedbackProps["state"]>("idle");
+
   const descriptor = actionFeedbackDescriptors[props.state];
 
-  const savedVisible = useTransientSuccessFeedback(props.state === "saved");
+  useEffect(() => {
+    if (previousState.current === props.state) {
+      return;
+    }
 
-  if (descriptor.state === "idle" || (descriptor.state === "saved" && !savedVisible)) {
-    return null;
-  }
+    previousState.current = props.state;
 
-  return (
-    <UIAlert severity={descriptor.severity} role={descriptor.state === "error" ? "alert" : "status"}>
+    if (descriptor.state === "idle" || descriptor.state === "saving") {
+      return;
+    }
+
+    toast.enqueue(
       <UIContentGroup variant="content">
         <UITypography>{t(descriptor.messageKey)}</UITypography>
         <ActionFeedbackErrorDetails error={props.error} />
-      </UIContentGroup>
-    </UIAlert>
-  );
+      </UIContentGroup>,
+      descriptor.severity,
+    );
+  }, [descriptor, props.error, props.state, t, toast]);
+
+  return null;
 }

@@ -12,8 +12,8 @@ export interface UIQuestionRichTextProps {
 
 export function UIQuestionRichText(props: UIQuestionRichTextProps) {
   return (
-    <UIBox>
-      <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex, rehypeSanitize]} components={{ img: UIMarkdownImage }}>
+    <UIBox layout="flow">
+      <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeSanitize, rehypeKatex]} components={{ img: UIMarkdownImage }}>
         {props.text}
       </ReactMarkdown>
     </UIBox>

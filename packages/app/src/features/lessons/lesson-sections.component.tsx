@@ -8,7 +8,7 @@ export type LessonSectionsProps = {
 
 export function LessonSections(props: LessonSectionsProps) {
   return (
-    <UIContentGroup variant="list">
+    <UIContentGroup variant="section">
       {props.sections.map((section) => {
         return (
           <LessonSectionContent

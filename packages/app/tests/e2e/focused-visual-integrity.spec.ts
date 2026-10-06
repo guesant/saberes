@@ -6,6 +6,7 @@ import { validateRouteSettled } from "./validate-route-settled.function";
 const auditedRoutes = [
   "/preferencias",
   "/questoes/1",
+  "/licoes/matematica.funcoes-graficos.aula-1",
   "/desempenho/detalhes",
   "/mapa/mapa-unicamp-2027",
   "/topicos/fisica.mecanica",
@@ -30,6 +31,17 @@ visualCases.forEach(({ colorScheme, route, width }) => {
     await page.goto(route, { waitUntil: "networkidle" });
 
     await validateRouteSettled(page);
+
+    if (route === "/licoes/matematica.funcoes-graficos.aula-1") {
+      await expect(page.locator(".katex"))
+        .toHaveCount(1);
+
+      await expect(page.locator(".katex-html"))
+        .toBeVisible();
+
+      await expect(page.getByText("Resumo rápido"))
+        .toBeVisible();
+    }
 
     await validateLayoutMetadata(page);
 

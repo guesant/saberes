@@ -35,6 +35,7 @@ export * from "./editorial-validation-issue.interface";
 export * from "./import-progress-input.interface";
 export * from "./enroll-course-input.interface";
 export * from "./lesson-read-model.model";
+export * from "./lesson-topic-read-model.interface";
 export * from "./parse-editorial-blocks-input.interface";
 export * from "./parse-editorial-blocks-invalid-result.interface";
 export * from "./parse-editorial-blocks-result.type";

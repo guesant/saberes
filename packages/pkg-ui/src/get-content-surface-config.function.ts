@@ -12,7 +12,7 @@ const surfaceConfigs: Record<UIContentSurfaceProps["mode"], ContentSurfaceConfig
     variant: "outlined",
   },
   summary: {
-    backgroundColor: "background.paper",
+    backgroundColor: "action.hover",
     padding: 2.5,
     variant: "outlined",
   },

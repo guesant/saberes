@@ -1,4 +1,4 @@
-import { UIContentSurface } from "@guesant/saberes-ui";
+import { getLessonPracticeHref } from "./get-lesson-practice-href.function";
 import { LessonActionFeedback } from "./lesson-action-feedback.component";
 import { LessonReadyFooter } from "./lesson-ready-footer.component";
 import { LessonReadyHeader } from "./lesson-ready-header.component";
@@ -56,11 +56,9 @@ export function LessonReadyView(props: LessonReadyViewProps) {
         onSectionChange={props.onSectionChange}
       />
 
-      <UIContentSurface mode="outlined">
-        <LessonSections sections={data.sections} onQuestion={onQuestion} />
-      </UIContentSurface>
+      <LessonSections sections={data.sections} onQuestion={onQuestion} />
 
-      <LessonReadyFooter />
+      <LessonReadyFooter practiceHref={getLessonPracticeHref(data.topics)} />
     </>
   );
 }

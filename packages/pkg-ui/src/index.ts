@@ -13,6 +13,7 @@ export * from "./bookmark-border-icon.component";
 export * from "./bookmark-icon.component";
 
 export * from "./box.component";
+export * from "./layout/index";
 
 export * from "./bottom-navigation-action.component";
 
@@ -127,8 +128,6 @@ export * from "./explore-icon.component";
 export * from "./file-input.component";
 
 export * from "./file-input-props.type";
-
-export * from "./grid.component";
 
 export * from "./html-strong-text.component";
 
@@ -262,6 +261,8 @@ export * from "./text-field.component";
 export * from "./theme-provider.component";
 
 export * from "./theme.config";
+export * from "./toast.component";
+export * from "./toast-props.interface";
 
 export * from "./toolbar.component";
 

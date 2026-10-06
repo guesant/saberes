@@ -2,6 +2,7 @@ import { CatalogCardType } from "@guesant/saberes-domain";
 import { getCatalogFilters } from "./get-catalog-filters.function";
 import { getContentIdentifier } from "./get-content-identifier.function";
 import { mapAssessmentCatalogCard } from "./map-assessment-catalog-card.function";
+import { mapLessonTopicReadModel } from "./map-lesson-topic-read-model.function";
 import { readContentAssessment } from "./read-content-assessment.function";
 import { readContentQuestion } from "./read-content-question.function";
 import { readContentTopic } from "./read-content-topic.function";
@@ -284,6 +285,11 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
         "SELECT sd.title, sd.url, sd.provider, sd.kind FROM lesson_sources ls JOIN source_documents sd ON sd.id = ls.source_document_id WHERE ls.lesson_id = ? ORDER BY sd.title",
         [lesson.id],
       ),
+      topics: db.query(
+        "SELECT DISTINCT t.id, t.slug, t.name title, t.description FROM lesson_topics lt LEFT JOIN curriculum_topics ct ON ct.id = lt.curriculum_topic_id JOIN topics t ON t.id = COALESCE(lt.topic_id, ct.topic_id) WHERE lt.lesson_id = ? ORDER BY t.name",
+        [lesson.id],
+      )
+        .map(mapLessonTopicReadModel),
     };
   }
 

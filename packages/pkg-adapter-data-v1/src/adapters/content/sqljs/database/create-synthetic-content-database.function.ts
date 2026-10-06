@@ -149,6 +149,10 @@ export function createSyntheticContentDatabase(): ContentDatabase {
       return [];
     }
 
+    if (sql.includes("FROM lesson_topics")) {
+      return [{ id: topic.id, slug: topic.slug, title: topic.name, description: topic.description }];
+    }
+
     if (sql.includes("SELECT qo.id occurrence_id")) {
       return firstParameter === "1" ? [question] : [];
     }
@@ -258,7 +262,7 @@ export function createSyntheticContentDatabase(): ContentDatabase {
     }
 
     if (sql.includes("SELECT DISTINCT qo.id")) {
-      return [{ id: 1, number: 1, statement: question.statement, difficulty: question.difficulty }];
+      return [{ id: 1, occurrence_id: 1, slug: "primeiro-estudo", number: 1, statement: question.statement, difficulty: question.difficulty }];
     }
 
     if (sql.includes("FROM topic_relations")) {

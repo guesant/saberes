@@ -1,13 +1,18 @@
-import { UIButton, UIDivider } from "@guesant/saberes-ui";
+import { UIContentGroup, UIFormAction, UIDivider } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import type { LessonReadyFooterProps } from "./lesson-ready-footer-props.interface";
 
-export function LessonReadyFooter() {
+export function LessonReadyFooter(props: LessonReadyFooterProps) {
   const { t } = useTranslation();
 
+  if (!props.practiceHref) {
+    return null;
+  }
+
   return (
-    <>
+    <UIContentGroup variant="section">
       <UIDivider />
-      <UIButton href="/catalogo?modo=praticar" variant="contained">{t("lesson.practice")}</UIButton>
-    </>
+      <UIFormAction href={props.practiceHref} variant="contained">{t("lesson.practice")}</UIFormAction>
+    </UIContentGroup>
   );
 }

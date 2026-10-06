@@ -1466,6 +1466,9 @@ const fileKindContract = {
                 ...expectedNames.map((expectedName) => {
                   return `UI${expectedName}`;
                 }),
+                ...expectedNames.map((expectedName) => {
+                  return expectedName.replace(/^Ui(?=[A-Z])/, "UI");
+                }),
               ]
               : expectedNames,
           });

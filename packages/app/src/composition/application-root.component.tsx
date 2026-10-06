@@ -1,5 +1,6 @@
 import { createApplication } from "@guesant/saberes-application";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { ActionToastProvider } from "../components/action-toast-provider.component";
 import { queryClient } from "../query-client.config";
 import { AppServicesProvider } from "./app-services-provider.component";
 import { ApplicationRouter } from "./application-router.component";
@@ -12,9 +13,11 @@ const services = createApplication(dependencies);
 export function ApplicationRoot() {
   return (
     <QueryClientProvider client={queryClient}>
-      <AppServicesProvider services={services}>
-        <ApplicationRouter />
-      </AppServicesProvider>
+      <ActionToastProvider>
+        <AppServicesProvider services={services}>
+          <ApplicationRouter />
+        </AppServicesProvider>
+      </ActionToastProvider>
     </QueryClientProvider>
   );
 }

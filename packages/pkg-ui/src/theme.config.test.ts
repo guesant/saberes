@@ -14,4 +14,18 @@ describe("tema da plataforma", () => {
     expect(Object.hasOwn(theme, "colorSchemes"))
       .toBe(true);
   });
+
+  it("mantém a tipografia editorial e headings em negrito", () => {
+    expect(theme.typography.fontFamily)
+      .toContain("Roboto Slab");
+
+    expect(theme.typography.body1.lineHeight)
+      .toBe(1.5);
+
+    expect(theme.typography.h1.fontWeight)
+      .toBe(700);
+
+    expect(theme.typography.h4.fontWeight)
+      .toBe(700);
+  });
 });

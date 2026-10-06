@@ -110,6 +110,7 @@ export function UIParametricSceneBlock(props: UIParametricSceneBlockProps) {
       {hasError ? <UIAlert severity="info">{t("content.sceneFallback")}</UIAlert> : null}
 
       <UIBox
+        layout="flow"
         component="canvas"
         ref={canvasRef}
         role="img"

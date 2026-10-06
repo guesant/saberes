@@ -29,8 +29,25 @@ describe("renderizador de conteúdo editorial", () => {
 
     expect(screen.queryByText("Conteúdo editorial revisado"))
       .toBeNull();
-  });
 
+  });
+});
+
+describe("fórmulas do renderizador editorial", () => {
+  it("preserva a estrutura acessível sem duplicar sua apresentação", () => {
+    const { container } = render(
+      <UIContentRenderer blocks={[{ type: "formula", formula: "f(x)=ax+b" }]} />,
+    );
+
+    expect(container.querySelectorAll(".katex"))
+      .toHaveLength(1);
+
+    expect(container.querySelector(".katex-html"))
+      .not.toBeNull();
+  });
+});
+
+describe("sanitização do renderizador editorial", () => {
   it("não interpreta HTML arbitrário como conteúdo executável", () => {
     render(
       <UIContentRenderer markdown={"<script>alert(&quot;x&quot;)</script>\n\nTexto seguro"} />,

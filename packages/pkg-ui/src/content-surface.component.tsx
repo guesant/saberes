@@ -11,12 +11,11 @@ export function UIContentSurface(props: UIContentSurfaceProps): ReactElement {
       aria-label={props.ariaLabel}
       component={props.component ?? "div"}
       data-ui-inset="md"
-      data-ui-layout="stack"
+      data-ui-layout="layout-item"
       data-ui-outset="lg"
       data-ui-overflow="scroll-x"
       sx={{
         bgcolor: config.backgroundColor,
-        color: props.mode === "summary" ? "primary.contrastText" : undefined,
         overflowX: config.overflowX,
         p: config.padding,
       }}

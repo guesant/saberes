@@ -10,5 +10,5 @@ export function UIMarkdownImage(props: UIMarkdownImageProps) {
 
   const url = /^https:\/\//i.test(source) || source.startsWith("/") ? source : undefined;
 
-  return <UIBox component="img" src={url} alt={alt || ""} />;
+  return <UIBox component="img" layout="flow" src={url} alt={alt || ""} />;
 }

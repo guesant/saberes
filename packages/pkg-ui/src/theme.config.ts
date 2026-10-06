@@ -1,4 +1,5 @@
 import { createTheme } from "./create-theme.function";
+import { cssBaselineConfig } from "./css-baseline.config";
 
 export const theme = createTheme({
   cssVariables: true,
@@ -46,6 +47,7 @@ export const theme = createTheme({
   },
   shape: { borderRadius: 4 },
   components: {
+    MuiCssBaseline: { styleOverrides: cssBaselineConfig },
     MuiCard: {
       styleOverrides: {
         root: {
@@ -119,6 +121,12 @@ export const theme = createTheme({
     MuiAlert: {
       styleOverrides: {
         root: { borderRadius: "0.25rem" },
+        standardInfo: {
+          backgroundColor: "var(--mui-palette-action-hover)",
+          border: "1px solid var(--mui-palette-divider)",
+          color: "var(--mui-palette-text-primary)",
+          "& .MuiAlert-icon": { color: "var(--mui-palette-primary-main)" },
+        },
       },
     },
     MuiChip: {

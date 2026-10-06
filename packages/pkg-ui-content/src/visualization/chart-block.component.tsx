@@ -67,7 +67,7 @@ export function UIChartBlock(props: UIChartBlockProps) {
 
       {hasError ? <UIAlert severity="info">{t("content.chartFallback")}</UIAlert> : null}
 
-      <UIBox ref={containerRef} role="img" aria-label={title || t("content.editorialChart")} />
+      <UIBox ref={containerRef} layout="flow" role="img" aria-label={title || t("content.editorialChart")} />
 
       <UIVisualizationTextSummary summary={textSummary} title={t("content.textualAlternative")} />
     </UIContentSurface>

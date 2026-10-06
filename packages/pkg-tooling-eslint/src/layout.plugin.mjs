@@ -156,6 +156,7 @@ const layoutTokens = new Set([
   "bottom-tabs",
   "cluster",
   "equal-grid",
+  "flow",
   "layout-item",
   "page-shell",
   "row",

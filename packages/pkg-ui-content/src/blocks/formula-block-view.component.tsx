@@ -1,4 +1,4 @@
-import { UIContentSurface } from "@guesant/saberes-ui";
+import { UIContentGroup, UIContentSurface } from "@guesant/saberes-ui";
 import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import rehypeSanitize from "rehype-sanitize";
@@ -15,11 +15,13 @@ export function UIFormulaBlockView(props: UIFormulaBlockViewProps) {
 
   return (
     <UIContentSurface mode="scrolling">
-      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex, rehypeSanitize]}>
-        {`$$${block.formula}$$`}
-      </ReactMarkdown>
+      <UIContentGroup variant="tight">
+        <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeSanitize, rehypeKatex]}>
+          {`$$${block.formula}$$`}
+        </ReactMarkdown>
 
-      <UIFormulaCaption caption={block.caption} />
+        <UIFormulaCaption caption={block.caption} />
+      </UIContentGroup>
     </UIContentSurface>
   );
 }

@@ -1,8 +1,9 @@
-import { Box as MuiBox, type BoxProps as MuiBoxProps } from "@mui/material";
+import { UIBox } from "./box.component";
+import type { UILayoutProps } from "./layout/ui-layout-props.interface";
 import type { ReactElement } from "react";
 
-export type UIStackProps = MuiBoxProps;
+export type UIStackProps = UILayoutProps;
 
 export function UIStack(props: UIStackProps): ReactElement {
-  return <MuiBox {...props} data-ui-layout="stack" display="flex" flexDirection="column" />;
+  return <UIBox {...props} inset={props.inset ?? "none"} layout="column" />;
 }
