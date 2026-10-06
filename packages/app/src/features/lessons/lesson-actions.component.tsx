@@ -3,6 +3,7 @@ import {
   UIBookmarkBorderIcon,
   UIButton,
   UICheckCircleIcon,
+  UICheckCircleOutlineIcon,
   UIInlineActions,
 } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
@@ -53,7 +54,7 @@ export function LessonActions(props: LessonActionsProps) {
         disabled={props.progressActionState === "saving"}
         iconOnly
         iconShape="square"
-        startIcon={<UICheckCircleIcon />}
+        startIcon={props.completed ? <UICheckCircleIcon /> : <UICheckCircleOutlineIcon />}
         onClick={() => {
           return props.onComplete(!props.completed);
         }}

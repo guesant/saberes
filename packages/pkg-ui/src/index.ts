@@ -81,6 +81,7 @@ export * from "./get-content-typography-variant.function";
 export * from "./course-hero-card.component";
 
 export * from "./check-circle-icon.component";
+export * from "./check-circle-outline-icon.component";
 
 export * from "./chip.component";
 export * from "./choice-option-content.component";

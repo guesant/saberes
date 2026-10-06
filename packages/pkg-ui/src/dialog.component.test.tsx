@@ -21,6 +21,17 @@ describe("UIDialog", () => {
     expect(screen.getByRole("button", { name: "Confirmar" })).toBeVisible();
   });
 
+  it("provides a confirmation action in the footer when no custom action is supplied", () => {
+    render(
+      <UIDialog onClose={vi.fn()} open title="Filtrar catálogo">
+        <p>Filtros</p>
+      </UIDialog>,
+    );
+
+    expect(screen.getByRole("button", { name: "Cancelar" })).toBeVisible();
+    expect(screen.getByRole("button", { name: "Confirmar" })).toBeVisible();
+  });
+
   it("does not close when the backdrop is clicked", () => {
     render(
       <UIDialog onClose={vi.fn()} open title="Modal de teste">

@@ -42,7 +42,11 @@ export function UIDialog(props: UIDialogProps): ReactElement {
         <UIButton onClick={props.onClose} variant="outlined">
           {props.cancelLabel ?? "Cancelar"}
         </UIButton>
-        {props.actions}
+        {props.actions ?? (
+          <UIButton onClick={props.onConfirm ?? props.onClose} variant="contained">
+            {props.confirmLabel ?? "Confirmar"}
+          </UIButton>
+        )}
       </DialogActions>
     </Dialog>
   );
