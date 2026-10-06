@@ -1,5 +1,5 @@
 import { PriorKnowledgeStatus } from "@guesant/saberes-application";
-import { UIChoiceButton, UIInlineActions } from "@guesant/saberes-ui";
+import { UIChoiceButton, UIContentGroup } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { QuestionPriorKnowledgeActionsProps } from "./question-prior-knowledge-actions-props.type";
 
@@ -7,8 +7,9 @@ export function QuestionPriorKnowledgeActions(props: QuestionPriorKnowledgeActio
   const { t } = useTranslation();
 
   return (
-    <UIInlineActions>
+    <UIContentGroup variant="list">
       <UIChoiceButton
+        fullWidth
         variant={props.selected === PriorKnowledgeStatus.Known ? "contained" : "outlined"}
         disabled={props.disabled}
         onClick={() => {
@@ -18,6 +19,7 @@ export function QuestionPriorKnowledgeActions(props: QuestionPriorKnowledgeActio
         {t("exercise.priorKnowledge.known")}
       </UIChoiceButton>
       <UIChoiceButton
+        fullWidth
         variant={props.selected === PriorKnowledgeStatus.Uncertain ? "contained" : "outlined"}
         disabled={props.disabled}
         onClick={() => {
@@ -27,6 +29,7 @@ export function QuestionPriorKnowledgeActions(props: QuestionPriorKnowledgeActio
         {t("exercise.priorKnowledge.uncertain")}
       </UIChoiceButton>
       <UIChoiceButton
+        fullWidth
         variant={props.selected === PriorKnowledgeStatus.Unknown ? "contained" : "outlined"}
         disabled={props.disabled}
         onClick={() => {
@@ -35,6 +38,6 @@ export function QuestionPriorKnowledgeActions(props: QuestionPriorKnowledgeActio
       >
         {t("exercise.priorKnowledge.unknown")}
       </UIChoiceButton>
-    </UIInlineActions>
+    </UIContentGroup>
   );
 }

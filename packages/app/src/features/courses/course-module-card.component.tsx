@@ -17,20 +17,22 @@ export function CourseModuleCard(props: CourseModuleCardProps) {
     <UICard>
       <UICardContent>
         <UIContentGroup variant="content">
-          <UITypography variant="h6">
-            {String(module.position)}.{String(module.title)}
-          </UITypography>
+          <UIContentGroup variant="content">
+            <UITypography variant="h6">
+              {String(module.position)}.{String(module.title)}
+            </UITypography>
 
-          <UITypography variant="body2" color="text.secondary">
-            {String(module.description || "")}
-          </UITypography>
+            <UITypography variant="body2" color="text.secondary">
+              {String(module.description || "")}
+            </UITypography>
+          </UIContentGroup>
+
+          <UIList>
+            {moduleItems.map((item) => {
+              return <CourseItemRow key={String(item.id)} item={item} />;
+            })}
+          </UIList>
         </UIContentGroup>
-
-        <UIList>
-          {moduleItems.map((item) => {
-            return <CourseItemRow key={String(item.id)} item={item} />;
-          })}
-        </UIList>
       </UICardContent>
     </UICard>
   );

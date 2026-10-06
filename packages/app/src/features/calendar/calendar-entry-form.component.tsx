@@ -8,11 +8,16 @@ export function CalendarEntryForm(props: CalendarEntryFormProps) {
 
   return (
     <UIDialog
-      actions={(
-        <UIButton disabled={!state.title.trim() || !state.startsAt} onClick={state.create} variant="contained">
+      actions={
+        <UIButton
+          disabled={!state.title.trim() || !state.startsAt}
+          iconOnly={false}
+          onClick={state.create}
+          variant="contained"
+        >
           {props.submitLabel}
         </UIButton>
-      )}
+      }
       onClose={props.onClose}
       open={props.open}
       title={props.dialogTitle}

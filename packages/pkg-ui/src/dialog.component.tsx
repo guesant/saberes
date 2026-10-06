@@ -31,7 +31,7 @@ export function UIDialog(props: UIDialogProps): ReactElement {
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent sx={{ border: 0, paddingBlock: 3 }}>{props.children}</DialogContent>
+      <DialogContent sx={{ border: 0, padding: 3 }}>{props.children}</DialogContent>
       <DialogActions
         sx={{
           borderBlockStart: "1px solid var(--mui-palette-divider)",
@@ -39,11 +39,11 @@ export function UIDialog(props: UIDialogProps): ReactElement {
           padding: 2,
         }}
       >
-        <UIButton onClick={props.onClose} variant="outlined">
+        <UIButton iconOnly={false} onClick={props.onClose} variant="outlined">
           {props.cancelLabel ?? "Cancelar"}
         </UIButton>
         {props.actions ?? (
-          <UIButton onClick={props.onConfirm ?? props.onClose} variant="contained">
+          <UIButton iconOnly={false} onClick={props.onConfirm ?? props.onClose} variant="contained">
             {props.confirmLabel ?? "Confirmar"}
           </UIButton>
         )}

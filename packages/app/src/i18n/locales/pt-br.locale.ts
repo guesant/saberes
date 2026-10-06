@@ -18,7 +18,8 @@ const ptBR = {
     noMaterials: "Ainda não há materiais de apoio para este tópico.",
     externalResource: "Recurso externo · requer internet",
     localResource: "Recurso do aplicativo · disponibilidade offline depende do conteúdo salvo",
-    assessmentsEmpty: "Nenhuma prova ou simulado encontrado. Ajuste os filtros ou explore o catálogo.",
+    assessmentsEmpty:
+      "Nenhuma prova ou simulado encontrado. Ajuste os filtros ou explore o catálogo.",
     browseCatalog: "Explorar catálogo",
     openAssessment: "Abrir prova ou simulado",
     questionImage: "Imagem de apoio da questão",
@@ -95,6 +96,7 @@ const ptBR = {
     cancelled: "Operação cancelada.",
     saveError: "Não foi possível salvar esta alteração localmente.",
     save: "Salvar",
+    done: "Concluir",
   },
   errors: {
     contentLoad:
@@ -490,6 +492,7 @@ const ptBR = {
     respond: "Responder",
     retry: "Nova tentativa",
     saved: "Questão salva",
+    removed: "Questão removida dos itens salvos",
     save: "Salvar questão",
     bookmarkError: "O favorito desta questão não está disponível agora: {{message}}",
     removeSaved: "Remover dos salvos",
@@ -582,8 +585,10 @@ const ptBR = {
     correctAnswers_one: "{{count}} acerto",
     correctAnswers_other: "{{count}} acertos",
     practiceQuestions: "Praticar questões",
-    simulationAvailable: "No simulado, você revisa as respostas antes de finalizar. Duração: {{minutes}} min.",
-    simulationUnavailable: "O simulado ainda não está disponível para esta lista. Você pode praticar as questões normalmente.",
+    simulationAvailable:
+      "No simulado, você revisa as respostas antes de finalizar. Duração: {{minutes}} min.",
+    simulationUnavailable:
+      "O simulado ainda não está disponível para esta lista. Você pode praticar as questões normalmente.",
     progressError: "O progresso desta avaliação não está disponível agora: {{message}}",
     emptyDescription:
       "Resolva em sequência ou escolha uma questão. Cada tentativa fica salva localmente e alimenta seu desempenho, revisão e recomendações.",
@@ -613,7 +618,8 @@ const ptBR = {
     flag: "Marcar para revisar",
     flagged: "Marcada para revisar",
     previous: "Anterior",
-    confirmFinish: "Ao finalizar, suas respostas serão corrigidas e não poderão ser alteradas. Deseja concluir agora?",
+    confirmFinish:
+      "Ao finalizar, suas respostas serão corrigidas e não poderão ser alteradas. Deseja concluir agora?",
     keepSolving: "Continuar resolvendo",
     finishNow: "Concluir simulado",
     saveError: "Não foi possível salvar sua resposta neste dispositivo.",

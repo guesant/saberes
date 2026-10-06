@@ -19,6 +19,7 @@ describe("UIDialog", () => {
     expect(screen.getByRole("button", { name: "Fechar" })).toBeVisible();
     expect(screen.getByRole("button", { name: "Cancelar" })).toBeVisible();
     expect(screen.getByRole("button", { name: "Confirmar" })).toBeVisible();
+    expect(screen.getByRole("button", { name: "Cancelar" })).not.toHaveClass("UIButton-iconOnly");
   });
 
   it("provides a confirmation action in the footer when no custom action is supplied", () => {
@@ -30,6 +31,7 @@ describe("UIDialog", () => {
 
     expect(screen.getByRole("button", { name: "Cancelar" })).toBeVisible();
     expect(screen.getByRole("button", { name: "Confirmar" })).toBeVisible();
+    expect(screen.getByRole("button", { name: "Confirmar" })).not.toHaveClass("UIButton-iconOnly");
   });
 
   it("does not close when the backdrop is clicked", () => {
