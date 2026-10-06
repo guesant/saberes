@@ -1,5 +1,5 @@
-import { Box as MuiBox, Typography as MuiTypography } from "@mui/material";
 import { useState, type ReactElement, type ReactNode } from "react";
+import { UIBox } from "./box.component";
 
 export interface UIDisclosureProps {
   children: ReactNode;
@@ -31,18 +31,21 @@ export function UIDisclosure(props: UIDisclosureProps): ReactElement {
   const [open, setOpen] = useState(false);
 
   return (
-    <MuiBox
+    <UIBox
       component="details"
+      gap="sm"
+      inset="none"
+      layout="column"
       open={open}
       onToggle={(event) => {
         return setOpen(event.currentTarget.open);
       }}
       sx={disclosureSx}
     >
-      <MuiTypography component="summary" variant="body2">
+      <UIBox component="summary" gap="sm" inset="none" layout="row" sx={{ minHeight: 44, cursor: "pointer", fontWeight: 600 }}>
         {props.summary}
-      </MuiTypography>
+      </UIBox>
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

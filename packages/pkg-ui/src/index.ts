@@ -1,4 +1,7 @@
 export * from "./alert.component";
+export * from "./autocomplete-option.interface";
+export * from "./autocomplete-props.interface";
+export * from "./autocomplete.component";
 export * from "./focused-content.component";
 export * from "./discovery-grid.component";
 export * from "./discovery-link.component";
@@ -122,6 +125,7 @@ export * from "./header-brand.component";
 export * from "./header-navigation.component";
 
 export * from "./event-note-icon.component";
+export * from "./equal-actions-grid.component";
 
 export * from "./explore-icon.component";
 
@@ -182,6 +186,7 @@ export * from "./overflow-boundary-props.type";
 export * from "./paper.component";
 
 export * from "./page-content.component";
+export * from "./page-content-main.component";
 export * from "./preference-row.component";
 export * from "./responsive-group-gap.interface";
 

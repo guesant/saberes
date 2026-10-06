@@ -1,3 +1,4 @@
+import { getContentReferenceKey } from "@guesant/saberes-domain";
 import type { PersonalSearchIndexEntry } from "./personal-search-index-entry.interface";
 import type { PersonalWorkspace } from "@guesant/saberes-domain";
 
@@ -9,7 +10,7 @@ export function createPersonalSearchIndexEntries(
       id: `note:${note.id}`,
       recordId: note.id,
       recordType: "note",
-      searchText: [note.title, note.body, note.contentKey ?? ""].join(" "),
+      searchText: [note.title, note.body, getContentReferenceKey(note.contentReference) ?? ""].join(" "),
       updatedAt: note.updatedAt,
     };
   });
@@ -19,7 +20,7 @@ export function createPersonalSearchIndexEntries(
       id: `checklist:${checklist.id}`,
       recordId: checklist.id,
       recordType: "checklist",
-      searchText: [checklist.title, ...checklist.items.map((item) => {return item.label;}), checklist.contentKey ?? ""].join(" "),
+      searchText: [checklist.title, ...checklist.items.map((item) => {return item.label;}), getContentReferenceKey(checklist.contentReference) ?? ""].join(" "),
       updatedAt: checklist.updatedAt,
     };
   });
@@ -29,7 +30,7 @@ export function createPersonalSearchIndexEntries(
       id: `capture:${capture.id}`,
       recordId: capture.id,
       recordType: "capture",
-      searchText: [capture.title, capture.description, capture.contentKey ?? ""].join(" "),
+      searchText: [capture.title, capture.description, getContentReferenceKey(capture.contentReference) ?? ""].join(" "),
       updatedAt: capture.updatedAt,
     };
   });
@@ -39,7 +40,7 @@ export function createPersonalSearchIndexEntries(
       id: `activity:${activity.id}`,
       recordId: activity.id,
       recordType: "activity",
-      searchText: [activity.title, activity.description, activity.contentKey ?? ""].join(" "),
+      searchText: [activity.title, activity.description, getContentReferenceKey(activity.contentReference) ?? ""].join(" "),
       updatedAt: activity.updatedAt,
     };
   });
@@ -55,7 +56,7 @@ export function createPersonalSearchIndexEntries(
         reference.location,
         reference.tags.join(" "),
         reference.privateNote,
-        reference.contentKey ?? "",
+        getContentReferenceKey(reference.contentReference) ?? "",
       ].join(" "),
       updatedAt: reference.updatedAt,
     };

@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIFooterSurfaceProps = {
@@ -7,8 +7,8 @@ export type UIFooterSurfaceProps = {
 
 export function UIFooterSurface(props: UIFooterSurfaceProps): ReactElement {
   return (
-    <MuiBox component="footer" data-ui-inset="xl" data-ui-layout="stack" sx={{ color: "text.secondary", py: 4, textAlign: "center" }}>
+    <UIBox component="footer" gap="md" inset="xl" sx={{ color: "text.secondary", textAlign: "center" }}>
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

@@ -30,7 +30,7 @@ describe("addStudyCapture", () => {
         id: "capture-1",
         title: "Revisar conceito",
         description: "Retomar depois do exercício",
-        contentKey: "topic:algebra",
+        contentReference: { type: "topic", id: "algebra" },
         dueDate: "2026-10-06",
         completed: false,
         archived: false,

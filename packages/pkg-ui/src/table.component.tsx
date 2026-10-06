@@ -1,8 +1,9 @@
-import { Table as MuiTable, type TableProps as MuiTableProps } from "@mui/material";
+import { UIBox } from "./box.component";
+import type { UIBoxProps } from "./layout/ui-box-props.type";
 import type { ReactElement } from "react";
 
-export type UITableProps = MuiTableProps;
+export type UITableProps = UIBoxProps<"table">;
 
 export function UITable(props: UITableProps): ReactElement {
-  return <MuiTable {...props} />;
+  return <UIBox {...props} component="table" layout="native" />;
 }

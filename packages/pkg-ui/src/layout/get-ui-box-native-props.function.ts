@@ -16,6 +16,8 @@ export function getUiBoxNativeProps<Component extends ElementType>(props: UIBoxP
 
   delete nativeProps.inset;
 
+  delete nativeProps.sx;
+
   delete nativeProps.layout;
 
   delete nativeProps.minItemWidth;

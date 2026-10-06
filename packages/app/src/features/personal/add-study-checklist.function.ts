@@ -1,3 +1,4 @@
+import { parseContentReference } from "@guesant/saberes-application";
 import type { PersonalWorkspace, StudyChecklist } from "@guesant/saberes-application";
 
 export interface AddStudyChecklistInput {
@@ -14,7 +15,7 @@ export function addStudyChecklist(input: AddStudyChecklistInput): PersonalWorksp
   const checklist: StudyChecklist = {
     id: input.id,
     title: input.title,
-    contentKey: input.contentKey,
+    contentReference: parseContentReference(input.contentKey),
     items: input.items.map((label, position) => {
       return {
         id: input.itemIds[position],

@@ -252,7 +252,7 @@ describe("progresso local Dexie", () => {
         {
           archived: false,
           available: true,
-          contentKey: "lesson:carro",
+          contentReference: { type: "lesson", id: "carro" },
           createdAt: now,
           favorite: true,
           id: "reference-carro",

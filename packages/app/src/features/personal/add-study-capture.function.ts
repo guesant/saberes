@@ -1,3 +1,4 @@
+import { parseContentReference } from "@guesant/saberes-application";
 import type { PersonalWorkspace, StudyCapture } from "@guesant/saberes-application";
 
 export interface AddStudyCaptureInput {
@@ -15,7 +16,7 @@ export function addStudyCapture(input: AddStudyCaptureInput): PersonalWorkspace 
     id: input.id,
     title: input.title,
     description: input.description,
-    contentKey: input.contentKey,
+    contentReference: parseContentReference(input.contentKey),
     dueDate: input.dueDate,
     priority: "medium",
     completed: false,

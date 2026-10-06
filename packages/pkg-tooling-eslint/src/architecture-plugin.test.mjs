@@ -71,6 +71,27 @@ test("map-to-imported-component accepts an imported self-closing component", () 
   );
 });
 
+test("ui-box-only-structural-rendering routes structure exclusively through UIBox", () => {
+  for (const code of [
+    "function View() { return <div />; }",
+    "function View() { return <nav />; }",
+    "function View() { return <section />; }",
+    'function View() { return <MuiBox component="footer" />; }',
+    'function View() { return <UICard component="article" />; }',
+    'function View() { return <MuiPaper component={interactive ? "button" : "div"} />; }',
+  ]) {
+    assert.equal(verifyLayout(code, "ui-box-only-structural-rendering").length, 1);
+  }
+
+  for (const code of [
+    'function View() { return <UIBox component="section" layout="column" />; }',
+    'function View() { return <UIBox component="footer" layout="column" />; }',
+    'function Link() { return <UIButton component="a" />; }',
+  ]) {
+    assert.equal(verifyLayout(code, "ui-box-only-structural-rendering").length, 0);
+  }
+});
+
 test("map-to-imported-component rejects local, native, fragment and nested JSX results", () => {
   for (const code of [
     "const Card = () => null; items.map((item) => <Card item={item} />);",

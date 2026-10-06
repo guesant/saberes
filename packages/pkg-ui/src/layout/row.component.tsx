@@ -9,7 +9,6 @@ export function UIRow(props: UIRowProps): ReactElement {
   return (
     <UIBox
       align={layout.align}
-      component={layout.component}
       data-ui-align={layout.align}
       data-ui-gap={layout.gap}
       data-ui-inset={layout.inset}

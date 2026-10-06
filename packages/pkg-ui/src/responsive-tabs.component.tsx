@@ -6,19 +6,31 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export interface UIResponsiveTabsProps extends Omit<MuiTabsProps, "sx"> {}
+export interface UIResponsiveTabsProps extends Omit<
+  MuiTabsProps,
+  "allowScrollButtonsMobile" | "scrollButtons" | "sx" | "variant"
+> {}
 
 const responsiveTabsSx: SxProps<Theme> = {
   "& .MuiTab-root": {
-    flex: { sm: "1 1 0", xs: "1 0 50%" },
-    maxWidth: { sm: "none", xs: "50%" },
-    minWidth: { sm: 0, xs: "50%" },
+    flex: "0 0 auto",
+    maxWidth: "none",
+    minWidth: "max-content",
+    whiteSpace: "nowrap",
   },
   "& .MuiTabs-flexContainer": {
-    flexWrap: { sm: "nowrap", xs: "wrap" },
+    flexWrap: "nowrap",
   },
 };
 
 export function UIResponsiveTabs(props: UIResponsiveTabsProps): ReactElement {
-  return <MuiTabs {...props} sx={responsiveTabsSx} variant="fullWidth" />;
+  return (
+    <MuiTabs
+      {...props}
+      allowScrollButtonsMobile
+      scrollButtons="auto"
+      sx={responsiveTabsSx}
+      variant="scrollable"
+    />
+  );
 }

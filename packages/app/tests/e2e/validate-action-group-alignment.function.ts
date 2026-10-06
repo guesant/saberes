@@ -33,6 +33,11 @@ export function validateActionGroupAlignment(
     `action groups must keep horizontal sibling gaps uniform: gaps=${JSON.stringify(gaps)}, row=${JSON.stringify(row)}`,
   );
 
+  validateLayoutUniform(
+    row.map((box) => { return box.height; }),
+    `action groups must keep sibling control heights uniform: row=${JSON.stringify(row)}`,
+  );
+
   expect(new Set(children.map((child) => {return child.textAlign;})).size)
     .toBe(1);
 }

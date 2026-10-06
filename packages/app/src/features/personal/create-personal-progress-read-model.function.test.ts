@@ -7,7 +7,7 @@ import type { CreatePersonalProgressReadModelInput } from "./create-personal-pro
 const connectedInput: CreatePersonalProgressReadModelInput = {
   activities: [
     {
-      contentKey: "topic:algebra",
+      contentReference: { type: "topic", id: "algebra" },
       createdAt: "2026-10-05T10:00:00.000Z",
       description: "Retomar prática",
       id: "activity-1",

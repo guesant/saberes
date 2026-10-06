@@ -1,4 +1,5 @@
-import { Container as MuiContainer } from "@mui/material";
+import { UIBox } from "./box.component";
+import { UIPageContentMain } from "./page-content-main.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIPageContentProps = {
@@ -8,26 +9,25 @@ export type UIPageContentProps = {
 
 export function UIPageContent(props: UIPageContentProps): ReactElement {
   return (
-    <MuiContainer
-      component="main"
-      data-ui-inset="xl"
-      data-ui-layout="page-shell"
-      data-ui-outset="none"
-      id="main-content"
-      maxWidth="lg"
+    <UIBox
+      component="div"
+      inset="none"
+      layout="column"
       sx={{
+        alignContent: "start",
         boxSizing: "border-box",
-        gridColumn: props.sidebarAware ? { md: "2", xs: "1" } : "1 / -1",
-        justifySelf: { md: "center", xs: "stretch" },
-        maxWidth: { md: "60rem", xs: "100%" },
+        bgcolor: "background.default",
+        display: "grid",
+        gridColumn: props.sidebarAware ? { md: "2", xs: "1 / -1" } : "1 / -1",
+        gridTemplateColumns: "minmax(0, 1fr)",
+        justifySelf: "stretch",
+        minHeight: { md: "calc(100vh - 64px)", xs: "auto" },
         minWidth: 0,
-        px: { md: 3, xs: 2 },
-        pb: { md: 5, xs: 11 },
-        pt: { md: 4, xs: 3 },
+        justifyItems: "center",
         width: "100%",
       }}
     >
-      {props.children}
-    </MuiContainer>
+      <UIPageContentMain>{props.children}</UIPageContentMain>
+    </UIBox>
   );
 }

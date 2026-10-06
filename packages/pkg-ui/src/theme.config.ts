@@ -1,5 +1,8 @@
+import { buttonThemeOverrides } from "./button-theme-overrides.config";
+import { cardThemeOverrides } from "./card-theme-overrides.config";
 import { createTheme } from "./create-theme.function";
 import { cssBaselineConfig } from "./css-baseline.config";
+import { tabsThemeOverrides } from "./tabs-theme-overrides.config";
 
 export const theme = createTheme({
   cssVariables: true,
@@ -48,29 +51,14 @@ export const theme = createTheme({
   shape: { borderRadius: 4 },
   components: {
     MuiCssBaseline: { styleOverrides: cssBaselineConfig },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          border: "1px solid var(--mui-palette-divider)",
-          borderRadius: "0.25rem",
-          boxShadow: "none",
-          boxSizing: "border-box",
-          maxWidth: "100%",
-          minWidth: 0,
-        },
-      },
-    },
+    ...cardThemeOverrides,
     MuiPaper: {
       styleOverrides: {
         root: { borderRadius: "0.25rem", backgroundImage: "none" },
         outlined: { borderColor: "var(--mui-palette-divider)", borderWidth: 1 },
       },
     },
-    MuiFormControl: {
-      styleOverrides: {
-        root: { maxWidth: "100%", minWidth: 0 },
-      },
-    },
+    MuiFormControl: { styleOverrides: { root: { maxWidth: "100%", minWidth: 0 } } },
     MuiOutlinedInput: {
       styleOverrides: {
         root: { borderRadius: "0.25rem" },
@@ -93,15 +81,8 @@ export const theme = createTheme({
         h1: { fontSize: "1.75rem", "@media (min-width: 900px)": { fontSize: "2rem" } },
       },
     },
-    MuiTabs: {
-      styleOverrides: {
-        root: { maxWidth: "100%", minWidth: 0, width: "100%" },
-      },
-    },
-    MuiButton: {
-      defaultProps: { disableElevation: true, disableRipple: true },
-      styleOverrides: { root: { borderRadius: "0.25rem", minHeight: 44, textAlign: "center" } },
-    },
+    ...tabsThemeOverrides,
+    ...buttonThemeOverrides,
     MuiAppBar: {
       styleOverrides: {
         root: { backgroundColor: "#1b1e23", color: "#fff", boxShadow: "none" },
@@ -117,7 +98,6 @@ export const theme = createTheme({
       styleOverrides: { root: { minHeight: 44 } },
     },
     MuiStepButton: { defaultProps: { disableRipple: true } },
-    MuiTab: { defaultProps: { disableRipple: true } },
     MuiAlert: {
       styleOverrides: {
         root: { borderRadius: "0.25rem" },

@@ -10,6 +10,48 @@ afterEach(async () => {
 });
 
 describe("migração do progresso local", () => {
+  it("normaliza relações ao importar um backup antigo", async () => {
+    const database = new ProgressDatabase(databaseName);
+
+    try {
+      await database.importProgress({
+        snapshot: JSON.stringify({
+          formatVersion: 1,
+          exportedAt: "2026-10-05T10:00:00.000Z",
+          stores: {
+            settings: [{
+              key: "personal-workspace",
+              value: {
+                activities: [{ id: "activity", contentKey: "topic:algebra", title: "Revisar" }],
+                captures: [],
+                checklists: [],
+                notes: [{ id: "note", contentKey: "broken-key", title: "Nota", body: "Texto" }],
+                references: [],
+              },
+            }],
+            focusSessions: [{ id: "focus", contentKey: "lesson:one", startedAt: "2026-10-05T10:00:00.000Z" }],
+          },
+        }),
+        strategy: "replace",
+      });
+
+      const workspace = await database.getPersonalWorkspace();
+
+      expect(workspace.activities[0].contentReference)
+        .toEqual({ type: "topic", id: "algebra" });
+
+      expect(workspace.notes[0].contentReference)
+        .toBeUndefined();
+
+      await expect(database.listFocusSessions()).resolves.toEqual([
+        expect.objectContaining({ id: "focus", contentReference: { type: "lesson", id: "one" } }),
+      ]);
+    }
+    finally {
+      database.close();
+    }
+  });
+
   it("preserva tentativas e converte itens de revisão da versão anterior", async () => {
     await Dexie.delete(databaseName);
 
@@ -82,6 +124,21 @@ describe("migração do progresso local", () => {
         unlockedAt: "2026-10-04T10:00:00.000Z",
       });
 
+    await legacyDatabase.table("settings")
+      .put({
+        key: "personal-workspace",
+        value: {
+          activities: [{ id: "activity-valid", contentKey: "topic:algebra", title: "Revisar" }, { id: "activity-invalid", contentKey: "unknown:gone", title: "Preservar" }],
+          captures: [],
+          checklists: [{ id: "checklist-valid", contentKey: "lesson:one", title: "Plano", items: [] }],
+          notes: [{ id: "note-valid", contentKey: "question:11", title: "Anotação", body: "Texto" }],
+          references: [{ id: "reference-empty", title: "Fonte" }],
+        },
+      });
+
+    await legacyDatabase.table("focusSessions")
+      .put({ id: "focus-valid", contentKey: "lesson:one", status: "completed", startedAt: "2026-10-04T10:00:00.000Z", elapsedMs: 60000 });
+
     legacyDatabase.close();
 
     const currentDatabase = new ProgressDatabase(databaseName);
@@ -114,6 +171,30 @@ describe("migração do progresso local", () => {
 
       await expect(currentDatabase.listAchievements()).resolves.toEqual([
         expect.objectContaining({ contentKey: "achievement:legacy" }),
+      ]);
+
+      const personalWorkspace = await currentDatabase.getPersonalWorkspace();
+
+      expect(personalWorkspace.activities)
+        .toEqual([
+          expect.objectContaining({ id: "activity-valid", contentReference: { type: "topic", id: "algebra" } }),
+          expect.objectContaining({ id: "activity-invalid", title: "Preservar" }),
+        ]);
+
+      expect(personalWorkspace.activities[1].contentReference)
+        .toBeUndefined();
+
+      expect(personalWorkspace.checklists[0].contentReference)
+        .toEqual({ type: "lesson", id: "one" });
+
+      expect(personalWorkspace.notes[0].contentReference)
+        .toEqual({ type: "question", id: "11" });
+
+      expect(personalWorkspace.references[0].contentReference)
+        .toBeUndefined();
+
+      await expect(currentDatabase.listFocusSessions()).resolves.toEqual([
+        expect.objectContaining({ id: "focus-valid", contentReference: { type: "lesson", id: "one" } }),
       ]);
     } finally {
       currentDatabase.close();

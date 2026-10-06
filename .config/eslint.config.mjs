@@ -632,6 +632,7 @@ export default [
     ignores: generatedFiles,
     rules: {
       "layout/no-mui-stack": "error",
+      "layout/ui-box-only-structural-rendering": "error",
     },
   },
   {

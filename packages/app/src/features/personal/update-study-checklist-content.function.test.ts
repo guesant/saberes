@@ -8,7 +8,7 @@ const workspace: PersonalWorkspace = {
   checklists: [
     {
       archived: false,
-      contentKey: "lesson:one",
+      contentReference: { type: "lesson", id: "one" },
       createdAt: "2026-10-04T00:00:00.000Z",
       id: "checklist-1",
       items: [

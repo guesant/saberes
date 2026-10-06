@@ -64,3 +64,16 @@ it("createUiBoxLayout uses normal document flow without adding spacing or inset"
   expect(layout)
     .toMatchObject({ dataGap: "none", display: "block", gap: 0, inset: "none", layoutName: "flow" });
 });
+
+it("createUiBoxLayout preserves native display semantics for structural table elements", () => {
+  const layout = createUiBoxLayout({ component: "table", layout: "native" });
+
+  expect(layout)
+    .toMatchObject({ dataGap: "none", display: undefined, gap: 0, inset: "none", layoutName: "native" });
+
+  expect(layout.sx)
+    .not.toHaveProperty("width");
+
+  expect(layout.sx)
+    .not.toHaveProperty("maxWidth");
+});

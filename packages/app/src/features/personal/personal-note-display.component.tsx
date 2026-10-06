@@ -1,3 +1,4 @@
+import { getContentReferenceKey } from "@guesant/saberes-application";
 import { UIButton, UIContentGroup, UIInlineActions, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { PersonalEntitySelectionSurface } from "./personal-entity-selection-surface.component";
@@ -30,8 +31,8 @@ export function PersonalNoteDisplay(props: PersonalNoteDisplayProps) {
       <UIContentGroup variant="content">
         <UITypography variant="h6">{props.note.title}</UITypography>
         <UITypography color="text.secondary">{props.note.body}</UITypography>
-        {props.note.contentKey ? (
-          <PersonalRelatedContent value={props.note.contentKey} />
+        {getContentReferenceKey(props.note.contentReference) ? (
+          <PersonalRelatedContent value={getContentReferenceKey(props.note.contentReference) || ""} />
         ) : null}
         <UIInlineActions>
           <UIButton onClick={props.onArchive} variant="text">

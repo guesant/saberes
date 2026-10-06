@@ -11,12 +11,9 @@ export function UICluster(props: UIClusterProps): ReactElement {
 
   const inset = props.inset ?? "none";
 
-  const component = props.component ?? "div";
-
   return (
     <UIBox
       align={align}
-      component={component}
       data-ui-align={align}
       data-ui-gap={gap}
       data-ui-inset={inset}

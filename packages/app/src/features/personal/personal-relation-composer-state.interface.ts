@@ -7,15 +7,9 @@ export interface PersonalRelationComposerState {
   kind: PersonalRelationKind;
   setKind(kind: PersonalRelationKind): void;
 
-  setSourceId(value: string): void;
+  setSource(value: string): void;
 
-  setSourceType(value: string): void;
-
-  setTargetId(value: string): void;
-
-  setTargetType(value: string): void;
-  sourceId: string;
-  sourceType: string;
-  targetId: string;
-  targetType: string;
+  setTarget(value: string): void;
+  source: string;
+  target: string;
 }

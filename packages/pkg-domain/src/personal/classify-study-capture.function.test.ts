@@ -11,7 +11,7 @@ const workspace: PersonalWorkspace = {
       id: "capture-1",
       title: "Revisar conceito",
       description: "Retomar depois do exercício",
-      contentKey: "topic:algebra",
+      contentReference: { type: "topic", id: "algebra" },
       dueDate: "2026-10-06",
       priority: "medium",
       completed: false,
@@ -39,7 +39,7 @@ describe("classifyStudyCapture", () => {
         sourceCaptureId: "capture-1",
         title: "Revisar conceito",
         body: "Retomar depois do exercício",
-        contentKey: "topic:algebra",
+        contentReference: { type: "topic", id: "algebra" },
       });
 
     expect(result.captures[0].archived)
@@ -64,7 +64,7 @@ describe("classifyStudyCapture", () => {
         sourceCaptureId: "capture-1",
         title: "Revisar conceito",
         description: "Retomar depois do exercício",
-        contentKey: "topic:algebra",
+        contentReference: { type: "topic", id: "algebra" },
         dueDate: "2026-10-06",
         status: "planned",
       });

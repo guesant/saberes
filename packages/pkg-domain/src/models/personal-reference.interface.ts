@@ -1,8 +1,8 @@
-import type { ContentKey } from "./content-key.type";
+import type { ContentReference } from "./content-reference.type";
 
 export interface PersonalReference {
   id: string;
-  contentKey?: ContentKey | string;
+  contentReference?: ContentReference;
   title: string;
   type: "book" | "video" | "article" | "link" | "local";
   source: string;

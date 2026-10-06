@@ -1,3 +1,4 @@
+import { UIBox } from "./box.component";
 import type { ReactNode } from "react";
 
 export type UIHtmlTableBodyProps = {
@@ -5,5 +6,5 @@ export type UIHtmlTableBodyProps = {
 };
 
 export function UIHtmlTableBody(props: UIHtmlTableBodyProps) {
-  return <tbody>{props.children}</tbody>;
+  return <UIBox component="tbody" inset="none" layout="native">{props.children}</UIBox>;
 }

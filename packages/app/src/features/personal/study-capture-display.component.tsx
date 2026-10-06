@@ -1,3 +1,4 @@
+import { getContentReferenceKey } from "@guesant/saberes-application";
 import { getPersonalCaptureContentPath } from "./get-personal-capture-content-path.function";
 import { PersonalEntitySelectionSurface } from "./personal-entity-selection-surface.component";
 import { StudyCaptureActions } from "./study-capture-actions.component";
@@ -19,7 +20,9 @@ export interface StudyCaptureDisplayProps {
 }
 
 export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
-  const contentPath = getPersonalCaptureContentPath(props.capture.contentKey);
+  const contentKey = getContentReferenceKey(props.capture.contentReference);
+
+  const contentPath = getPersonalCaptureContentPath(contentKey);
 
   return (
     <>
@@ -38,7 +41,7 @@ export function StudyCaptureDisplay(props: StudyCaptureDisplayProps) {
         onDelete={props.onDelete}
         onEdit={props.onEdit}
         onUpdateCompletion={props.onUpdateCompletion}
-        reviewPath={props.capture.contentKey ? "/revisoes" : null}
+        reviewPath={contentKey ? "/revisoes" : null}
       />
     </>
   );

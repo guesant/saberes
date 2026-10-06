@@ -1,4 +1,5 @@
 import { FocusSessionStatus, type FocusSession } from "@guesant/saberes-application";
+import { parseContentReference } from "@guesant/saberes-application";
 
 export function createFocusSession(
   id: string,
@@ -6,7 +7,7 @@ export function createFocusSession(
   contentKey?: string,
 ): FocusSession {
   return {
-    contentKey,
+    contentReference: parseContentReference(contentKey),
     id,
     status: FocusSessionStatus.Active,
     startedAt,

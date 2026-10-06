@@ -1,9 +1,9 @@
-import type { ContentKey } from "./content-key.type";
+import type { ContentReference } from "./content-reference.type";
 
 export interface PersonalNote {
   id: string;
   sourceCaptureId?: string;
-  contentKey?: ContentKey | string;
+  contentReference?: ContentReference;
   title: string;
   body: string;
   archived: boolean;

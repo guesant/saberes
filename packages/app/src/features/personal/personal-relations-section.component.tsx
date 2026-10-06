@@ -4,6 +4,7 @@ import { getPersonalRelationsForContext } from "./get-personal-relations-for-con
 import { PersonalRelationComposer } from "./personal-relation-composer.component";
 import { PersonalRelationContextFilterControls } from "./personal-relation-context-filter-controls.component";
 import { PersonalRelationItem } from "./personal-relation-item.component";
+import { usePersonalRelationOptions } from "./use-personal-relation-options.hook";
 import type { PersonalRelationContextFilter } from "./personal-relation-context-filter.type";
 import type { PersonalRelationsSectionProps } from "./personal-relations-section-props.interface";
 
@@ -15,13 +16,15 @@ export function PersonalRelationsSection(props: PersonalRelationsSectionProps) {
     filter,
   );
 
+  const options = usePersonalRelationOptions(props.workspace);
+
   return (
     <UIContentGroup variant="section">
       <UITypography variant="h5">Relações locais</UITypography>
       <UITypography color="text.secondary" variant="body2">
         Ligue registros existentes sem copiar o conteúdo de origem.
       </UITypography>
-      <PersonalRelationComposer onCreate={props.onCreate} />
+      <PersonalRelationComposer onCreate={props.onCreate} options={options} />
       <PersonalRelationContextFilterControls onChange={setFilter} value={filter} />
       {relations.map((relation) => { return (
         <PersonalRelationItem

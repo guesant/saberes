@@ -1,3 +1,4 @@
+import { getContentReferenceKey } from "@guesant/saberes-application";
 import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { PersonalRelatedContent } from "./personal-related-content.component";
@@ -14,8 +15,8 @@ export function StudyCaptureSummary(props: StudyCaptureSummaryProps) {
     <UIContentGroup variant="content">
       <UITypography variant="h6">{props.capture.title}</UITypography>
       <UITypography color="text.secondary">{props.capture.description}</UITypography>
-      {props.capture.contentKey ? (
-        <PersonalRelatedContent value={props.capture.contentKey} />
+      {getContentReferenceKey(props.capture.contentReference) ? (
+        <PersonalRelatedContent value={getContentReferenceKey(props.capture.contentReference) || ""} />
       ) : null}
       <UITypography color="text.secondary">
         {props.capture.dueDate

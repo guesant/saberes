@@ -9,6 +9,8 @@ export function UIFormAction(props: UIFormActionProps): ReactElement {
       {...props}
       data-ui-layout="layout-item"
       sx={{ alignSelf: "flex-start", width: { sm: "auto", xs: "100%" }, ...props.sx }}
-    />
+    >
+      <span data-ui-button-label="true">{props.children}</span>
+    </MuiButton>
   );
 }

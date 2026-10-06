@@ -17,6 +17,10 @@ const layoutConfigurations = {
     false: { alignContent: undefined, childStyle: { "& > *": { maxWidth: "100%", minWidth: 0, overflowWrap: "anywhere" } }, closure: "closed", display: "grid", direction: undefined, gap: "md", gridAutoRows: undefined, inset: "sm", layout: "equal-grid", wrap: "nowrap" },
     true: { alignContent: undefined, childStyle: { "& > *": { maxWidth: "100%", minWidth: 0, overflowWrap: "anywhere" } }, closure: "closed", display: "grid", direction: undefined, gap: "md", gridAutoRows: undefined, inset: "sm", layout: "equal-grid", wrap: "nowrap" },
   },
+  native: {
+    false: { alignContent: "start", childStyle: undefined, closure: undefined, display: undefined, direction: undefined, gap: "none", gridAutoRows: "max-content", inset: "none", layout: "native", wrap: "nowrap" },
+    true: { alignContent: "start", childStyle: undefined, closure: undefined, display: undefined, direction: undefined, gap: "none", gridAutoRows: "max-content", inset: "none", layout: "native", wrap: "nowrap" },
+  },
   row: {
     false: { alignContent: undefined, childStyle: undefined, closure: undefined, display: "flex", direction: "row", gap: "md", gridAutoRows: undefined, inset: "sm", layout: "row", wrap: "nowrap" },
     true: { alignContent: undefined, childStyle: undefined, closure: undefined, display: "flex", direction: "row", gap: "sm", gridAutoRows: undefined, inset: "none", layout: "cluster", wrap: "wrap" },
@@ -28,6 +32,8 @@ const alignmentValues = { center: "center", end: "flex-end", start: "flex-start"
 export function createUiBoxLayout<Component extends ElementType>(props: UIBoxProps<Component>): UiBoxLayoutConfig {
   const layout = props.layout ?? "column";
 
+  const nativeLayout = layout === "native";
+
   const wrapping = String(props.wrap ?? false) as "false" | "true";
 
   const alignment = props.align ?? "stretch";
@@ -37,6 +43,13 @@ export function createUiBoxLayout<Component extends ElementType>(props: UIBoxPro
   const { gap: gapToken, inset: insetToken } = { gap: configuration.gap, inset: configuration.inset, ...props };
 
   const tracks = getUiBoxGridTracks(layout, props.columns, props.minItemWidth);
+
+  const sizingStyles: UiBoxLayoutConfig["sx"] = nativeLayout ? {} : { boxSizing: "border-box", maxWidth: "100%", width: "100%" };
+
+  const structuralStyles = Object.fromEntries(
+    Object.entries({ alignContent: configuration.alignContent, gridAutoRows: configuration.gridAutoRows })
+      .filter(([, value]) => { return value !== undefined; }),
+  ) as UiBoxLayoutConfig["sx"];
 
   return {
     alignItems: alignmentValues[alignment],
@@ -53,13 +66,10 @@ export function createUiBoxLayout<Component extends ElementType>(props: UIBoxPro
     layoutName: configuration.layout,
     sx: {
       ...configuration.childStyle,
-      alignContent: configuration.alignContent,
-      boxSizing: "border-box",
-      gridAutoRows: configuration.gridAutoRows,
+      ...structuralStyles,
       gridTemplateColumns: tracks,
-      maxWidth: "100%",
+      ...sizingStyles,
       padding: getUiSpacing(insetToken),
-      width: "100%",
     },
   };
 }

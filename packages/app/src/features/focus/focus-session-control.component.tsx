@@ -2,11 +2,11 @@ import {
   UICard,
   UICardContent,
   UIContentGroup,
-  UITextField,
   UITypography,
 } from "@guesant/saberes-ui";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ContentReferenceField } from "../../components/content-reference-field.component";
 import { FocusPauseAction } from "./focus-pause-action.component";
 import { FocusResumeAction } from "./focus-resume-action.component";
 import { FocusStartAction } from "./focus-start-action.component";
@@ -35,12 +35,10 @@ export function FocusSessionControl(props: FocusSessionControlProps) {
           <UITypography variant="h5">
             {props.active ? t("focus.active") : t("focus.ready")}
           </UITypography>
-          <UITextField
+          <ContentReferenceField
             disabled={props.active || props.paused}
             label={t("focus.contentKey")}
-            onChange={(event) => {
-              return setContentKey(event.target.value);
-            }}
+            onChange={setContentKey}
             value={contentKey}
           />
           <FocusPauseAction active={props.active} onPause={props.onPause} />

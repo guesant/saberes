@@ -1,3 +1,4 @@
+import { UIBox } from "./box.component";
 import { UIButton } from "./button.component";
 import type { UIFileInputProps } from "./file-input-props.type";
 import type { ChangeEvent, ReactElement } from "react";
@@ -14,7 +15,15 @@ export function UIFileInput(props: UIFileInputProps): ReactElement {
   return (
     <UIButton component="label" disabled={props.disabled} variant="outlined">
       {props.label}
-      <input accept={props.accept} hidden onChange={handleChange} type="file" />
+      <UIBox
+        accept={props.accept}
+        component="input"
+        hidden
+        layout="flow"
+        inset="none"
+        onChange={handleChange}
+        type="file"
+      />
     </UIButton>
   );
 }

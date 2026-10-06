@@ -158,11 +158,53 @@ const layoutTokens = new Set([
   "equal-grid",
   "flow",
   "layout-item",
+  "native",
   "page-shell",
   "row",
   "split",
   "stack",
   "toolbar",
+]);
+
+const structuralHtmlElements = new Set([
+  "address",
+  "article",
+  "aside",
+  "blockquote",
+  "body",
+  "caption",
+  "col",
+  "colgroup",
+  "dd",
+  "details",
+  "div",
+  "dl",
+  "dt",
+  "figure",
+  "figcaption",
+  "fieldset",
+  "footer",
+  "form",
+  "header",
+  "main",
+  "menu",
+  "nav",
+  "li",
+  "ol",
+  "table",
+  "section",
+  "summary",
+  "tbody",
+  "td",
+  "tfoot",
+  "th",
+  "thead",
+  "tr",
+  "ul",
+]);
+
+const forbiddenRawStructuralElements = new Set([
+  ...structuralHtmlElements,
 ]);
 
 const muiStackSourcePattern = /^@mui\/(?:material|system)(?:\/Stack)?$/;
@@ -479,6 +521,10 @@ const noSpacingDefinitionOutsideUi = {
         const name = getJsxAttributeName(node);
 
         if (name && spacingPropertyNames.has(name)) {
+          if (getJsxOpeningElementName(node) === "UIBox" && name === "gap") {
+            return;
+          }
+
           context.report({ node: node.name, messageId: "attribute" });
 
           return;
@@ -654,6 +700,10 @@ const spacingContract = {
     }
 
     function reportMetadata(node, category) {
+      if (getOpeningElementName(node) === "UIBox") {
+        return;
+      }
+
       const attributeName = `data-ui-${category}`;
 
       if (!hasJsxAttribute(node, attributeName)) {
@@ -676,7 +726,11 @@ const spacingContract = {
 
       const layoutCategory = getLayoutCategory(name);
 
-      if (name === "alignItems" && !hasJsxAttribute(node, "data-ui-align")) {
+      if (
+        name === "alignItems" &&
+        getOpeningElementName(node) !== "UIBox" &&
+        !hasJsxAttribute(node, "data-ui-align")
+      ) {
         context.report({ node, messageId: "alignment" });
       }
 
@@ -1245,6 +1299,61 @@ const noMuiStack = {
   },
 };
 
+const uiBoxOnlyStructuralRendering = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      element: "Render structural HTML through UIBox, never as a raw JSX element.",
+      component: "Only UIBox may receive a native structural component prop.",
+    },
+  },
+  create(context) {
+    return {
+      JSXOpeningElement(node) {
+        if (
+          node.name.type === "JSXIdentifier" &&
+          forbiddenRawStructuralElements.has(node.name.name)
+        ) {
+          context.report({ node: node.name, messageId: "element" });
+        }
+
+        const elementName = node.name.type === "JSXIdentifier" ? node.name.name : undefined;
+
+        if (!elementName || elementName === "UIBox") {
+          return;
+        }
+
+        const componentAttribute = getJsxAttribute(node, "component");
+
+        if (!componentAttribute) {
+          return;
+        }
+
+        const { value } = componentAttribute;
+
+        if (value?.type === "Literal" && structuralHtmlElements.has(value.value)) {
+          context.report({ node: componentAttribute.name, messageId: "component" });
+
+          return;
+        }
+
+        const expression = getJsxExpression(componentAttribute);
+
+        if (expression?.type === "ConditionalExpression") {
+          const values = [expression.consequent, expression.alternate]
+            .filter((branch) => { return branch.type === "Literal"; })
+            .map((branch) => { return branch.value; });
+
+          if (values.some((component) => { return structuralHtmlElements.has(component); })) {
+            context.report({ node: componentAttribute.name, messageId: "component" });
+          }
+        }
+      },
+    };
+  },
+};
+
 export default {
   meta: { name: "portal-guesant-saberes-layout", version: "1.0.0" },
   rules: {
@@ -1261,5 +1370,6 @@ export default {
     "form-control-label-contract": formControlLabelContract,
     "no-technical-form-copy": noTechnicalFormCopy,
     "no-mui-stack": noMuiStack,
+    "ui-box-only-structural-rendering": uiBoxOnlyStructuralRendering,
   },
 };

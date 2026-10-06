@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export interface UIDiscoveryGridProps {
@@ -8,14 +8,15 @@ export interface UIDiscoveryGridProps {
 
 export function UIDiscoveryGrid(props: UIDiscoveryGridProps): ReactElement {
   return (
-    <MuiBox
+    <UIBox
       aria-label={props.label}
       component="nav"
-      data-ui-gap="md"
-      data-ui-layout="equal-grid"
-      sx={{ display: "grid", gap: 2, gridTemplateColumns: { xs: "minmax(0, 1fr)", sm: "repeat(3, minmax(0, 1fr))" } }}
+      columns={3}
+      gap="md"
+      inset="none"
+      layout="grid"
     >
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

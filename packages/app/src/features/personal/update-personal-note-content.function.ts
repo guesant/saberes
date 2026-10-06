@@ -1,3 +1,4 @@
+import { parseContentReference } from "@guesant/saberes-application";
 import type { UpdatePersonalNoteContentInput } from "./update-personal-note-content-input.interface";
 import type { PersonalWorkspace } from "@guesant/saberes-application";
 
@@ -12,7 +13,7 @@ export function updatePersonalNoteContent(
           ...note,
           title: input.title,
           body: input.body,
-          contentKey: input.contentKey,
+          contentReference: parseContentReference(input.contentKey),
           updatedAt: new Date()
             .toISOString(),
         }

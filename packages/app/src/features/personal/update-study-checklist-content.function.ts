@@ -1,3 +1,4 @@
+import { parseContentReference } from "@guesant/saberes-application";
 import { getUpdatedStudyChecklistItems } from "./get-updated-study-checklist-items.function";
 import type { UpdateStudyChecklistContentInput } from "./update-study-checklist-content-input.interface";
 import type { PersonalWorkspace } from "@guesant/saberes-application";
@@ -12,7 +13,7 @@ export function updateStudyChecklistContent(
         ? {
           ...checklist,
           items: getUpdatedStudyChecklistItems(input, checklist.items),
-          contentKey: input.contentKey,
+          contentReference: parseContentReference(input.contentKey),
           title: input.title,
           updatedAt: input.now,
         }

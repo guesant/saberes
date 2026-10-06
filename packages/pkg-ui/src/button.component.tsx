@@ -9,5 +9,9 @@ export interface UIButtonProps extends MuiButtonProps {
 }
 
 export function UIButton(props: UIButtonProps): ReactElement {
-  return <MuiButton {...(props as MuiButtonProps)} />;
+  return (
+    <MuiButton {...(props as MuiButtonProps)}>
+      <span data-ui-button-label="true">{props.children}</span>
+    </MuiButton>
+  );
 }

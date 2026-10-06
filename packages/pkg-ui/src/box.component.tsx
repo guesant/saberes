@@ -13,7 +13,7 @@ export function UIBox<Component extends ElementType = "div">(props: UIBoxProps<C
     <MuiBox
       {...elementProps}
       alignItems={geometry.alignItems}
-      component={geometry.component}
+      component={geometry.component ?? "div"}
       data-ui-align={geometry.dataAlign}
       data-ui-closure={geometry.dataClosure}
       data-ui-gap={geometry.dataGap}
@@ -25,7 +25,7 @@ export function UIBox<Component extends ElementType = "div">(props: UIBoxProps<C
       flexWrap={geometry.flexWrap}
       gap={geometry.gap}
       minWidth={0}
-      sx={geometry.sx}
+      sx={Array.isArray(props.sx) ? [geometry.sx, ...props.sx] : [geometry.sx, props.sx]}
     >
       {props.children}
     </MuiBox>

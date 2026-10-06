@@ -1,3 +1,4 @@
+import { parseContentReference } from "@guesant/saberes-application";
 import { getPersonalReferenceSourceKind } from "./get-personal-reference-source-kind.function";
 import type { PersonalReference, PersonalWorkspace } from "@guesant/saberes-application";
 
@@ -16,7 +17,7 @@ export function addPersonalReference(input: AddPersonalReferenceInput): Personal
   const reference: PersonalReference = {
     id: input.id,
     title: input.title,
-    contentKey: input.contentKey,
+    contentReference: parseContentReference(input.contentKey),
     type: sourceKind === "external" ? "link" : "local",
     source: input.source,
     location: input.source,

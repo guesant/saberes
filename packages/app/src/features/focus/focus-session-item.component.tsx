@@ -1,3 +1,4 @@
+import { getContentReferenceKey } from "@guesant/saberes-application";
 import { UICard, UICardContent, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { FocusSessionContentKey } from "./focus-session-content-key.component";
@@ -19,8 +20,8 @@ export function FocusSessionItem(props: FocusSessionItemProps) {
             elapsed: Math.round(props.session.elapsedMs / 60000),
           })}
         </UITypography>
-        {props.session.contentKey ? (
-          <FocusSessionContentKey contentKey={props.session.contentKey} />
+        {getContentReferenceKey(props.session.contentReference) ? (
+          <FocusSessionContentKey contentKey={getContentReferenceKey(props.session.contentReference) || ""} />
         ) : null}
       </UICardContent>
     </UICard>

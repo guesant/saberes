@@ -5,16 +5,15 @@ const alignments = { center: "center", end: "flex-end", start: "flex-start", str
 
 const layoutNames = { false: "row", true: "cluster" } as const;
 
-const defaultRowProps = { align: "center", component: "div", gap: "md", inset: "none", wrap: false } as const;
+const defaultRowProps = { align: "center", gap: "md", inset: "none", wrap: false } as const;
 
 export function createUiRowLayout(props: UIRowProps): UiRowLayout {
-  const { align, children, component, gap, inset, wrap } = { ...defaultRowProps, ...props };
+  const { align, children, gap, inset, wrap } = { ...defaultRowProps, ...props };
 
   return {
     align,
     alignItems: alignments[align],
     children,
-    component,
     gap,
     inset,
     layout: layoutNames[String(wrap) as "false" | "true"],

@@ -13,6 +13,7 @@ import {
   type PersonalWorkspace,
   type BackupRetentionPolicy,
   type LocalRecordTombstone,
+  parseContentReference,
 } from "@guesant/saberes-domain";
 import { AttemptConfidence as AttemptConfidenceEnum } from "@guesant/saberes-domain";
 import Dexie, { type Table } from "dexie";
@@ -37,6 +38,8 @@ import { createPersonalSearchIndexEntries } from "./create-personal-search-index
 import { getProgressSnapshotChecksum } from "./get-progress-snapshot-checksum.function";
 import { isPersonalSearchIndexEntries } from "./is-personal-search-index-entries.function";
 import { isPersonalWorkspace } from "./is-personal-workspace.function";
+import { isRecord } from "./is-record.function";
+import { normalizeLegacyPersonalWorkspace } from "./normalize-legacy-personal-workspace.function";
 import { updatePersonalSearchIndexEntries } from "./update-personal-search-index-entries.function";
 import type { AttemptDiagnosis } from "./attempt-diagnosis.interface";
 import type { AttemptWithId } from "./attempt-with-id.interface";
@@ -260,6 +263,45 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
     this.version(8)
       .stores({
         tombstones: "id, recordType, recordId, deletedAt",
+      });
+
+    this.version(9)
+      .stores({
+        focusSessions: "id, startedAt, endedAt, status, contentReference.type, contentReference.id",
+      })
+      .upgrade(async (tx) => {
+        const workspaceSetting = await tx.table("settings")
+          .get(personalWorkspaceSettingKey);
+
+        const workspace = workspaceSetting?.value;
+
+        if (isPersonalWorkspace(workspace)) {
+          await tx.table("settings")
+            .put({
+              ...workspaceSetting,
+              value: normalizeLegacyPersonalWorkspace(workspace),
+            });
+        }
+
+        const focusSessions = await tx.table("focusSessions")
+          .toArray();
+
+        await Promise.all(focusSessions.map(async (session: Record<string, unknown>) => {
+          const rest = { ...session };
+
+          const contentReference = parseContentReference(session.contentKey);
+
+          delete rest.contentKey;
+
+          if (contentReference) {
+            await tx.table("focusSessions")
+              .put({ ...rest, contentReference });
+          }
+          else {
+            await tx.table("focusSessions")
+              .put(rest);
+          }
+        }));
       });
   }
 
@@ -856,8 +898,38 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
               return progressStoreNames.includes(storeName);
             })
             .map(([storeName, rows]) => {
-              return Array.isArray(rows) ? this.table(storeName)
-                .bulkPut(rows) : Promise.resolve();
+              if (!Array.isArray(rows)) {
+                return Promise.resolve();
+              }
+
+              const normalizedRows = rows.map((row) => {
+                if (!isRecord(row)) {
+                  return row;
+                }
+
+                if (storeName === "settings" && row.key === personalWorkspaceSettingKey) {
+                  return { ...row, value: normalizeLegacyPersonalWorkspace(row.value) };
+                }
+
+                if (storeName === "focusSessions") {
+                  const rest = { ...row };
+
+                  const contentReference = parseContentReference(row.contentKey);
+
+                  delete rest.contentKey;
+
+                  if (contentReference) {
+                    return { ...rest, contentReference };
+                  }
+
+                  return rest;
+                }
+
+                return row;
+              });
+
+              return this.table(storeName)
+                .bulkPut(normalizedRows);
             }),
         );
 

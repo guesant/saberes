@@ -6,6 +6,7 @@ export function UISimulationAnswerOption(props: UISimulationAnswerOptionProps) {
   return (
     <MuiButton
       aria-pressed={props.selected}
+      data-ui-control="choice"
       data-ui-gap="none"
       data-ui-layout="row"
       disabled={props.disabled}

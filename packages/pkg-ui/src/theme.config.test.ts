@@ -28,4 +28,21 @@ describe("tema da plataforma", () => {
     expect(theme.typography.h4.fontWeight)
       .toBe(700);
   });
+
+  it("mantém controles de ação em uma linha e com altura fixa", () => {
+    const buttonRoot = theme.components?.MuiButton?.styleOverrides?.root;
+
+    expect(buttonRoot)
+      .toMatchObject({ height: 44, minHeight: 44, whiteSpace: "nowrap" });
+  });
+
+  it("diferencia cards do fundo e mantém suas bordas", () => {
+    const cardRoot = theme.components?.MuiCard?.styleOverrides?.root;
+
+    expect(cardRoot)
+      .toMatchObject({
+        backgroundColor: "var(--mui-palette-action-hover)",
+        border: "1px solid var(--mui-palette-divider)",
+      });
+  });
 });

@@ -1,4 +1,4 @@
-import { Paper as MuiPaper } from "@mui/material";
+import { UIBox } from "./box.component";
 import { getContentSurfaceConfig } from "./get-content-surface-config.function";
 import type { UIContentSurfaceProps } from "./content-surface-props.interface";
 import type { ReactElement } from "react";
@@ -7,21 +7,19 @@ export function UIContentSurface(props: UIContentSurfaceProps): ReactElement {
   const config = getContentSurfaceConfig(props.mode);
 
   return (
-    <MuiPaper
+    <UIBox
       aria-label={props.ariaLabel}
-      component={props.component ?? "div"}
-      data-ui-inset="md"
-      data-ui-layout="layout-item"
-      data-ui-outset="lg"
-      data-ui-overflow="scroll-x"
+      gap="sm"
+      inset="md"
+      layout="column"
       sx={{
         bgcolor: config.backgroundColor,
+        border: "1px solid var(--mui-palette-divider)",
+        borderRadius: "0.25rem",
         overflowX: config.overflowX,
-        p: config.padding,
       }}
-      variant={config.variant}
     >
       {props.children}
-    </MuiPaper>
+    </UIBox>
   );
 }

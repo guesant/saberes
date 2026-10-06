@@ -18,7 +18,6 @@ export function QuestionOption(props: QuestionOptionProps) {
       disabled={props.disabled}
       aria-pressed={selected}
       selected={selected}
-      variant="outlined"
       onClick={() => {
         return onSelect(option.canonicalCode);
       }}

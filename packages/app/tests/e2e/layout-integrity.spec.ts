@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { createLayoutSnapshotName } from "./create-layout-snapshot-name.function";
+import { validateControlGeometry } from "./validate-control-geometry.function";
 import { validateDocumentOverflow } from "./validate-document-overflow.function";
 import { validateLayoutMetadata } from "./validate-layout-metadata.function";
 
@@ -39,6 +40,8 @@ viewports.forEach((viewport) => {
         await expect(page.locator("#root")).not.toBeEmpty();
 
         await validateLayoutMetadata(page);
+
+        await validateControlGeometry(page);
 
         await validateDocumentOverflow(page);
       });

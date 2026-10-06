@@ -1,3 +1,4 @@
+import { parseContentReference } from "@guesant/saberes-application";
 import type { PersonalNote, PersonalWorkspace } from "@guesant/saberes-application";
 
 export interface AddPersonalNoteInput {
@@ -14,7 +15,7 @@ export function addPersonalNote(input: AddPersonalNoteInput): PersonalWorkspace 
     id: input.id,
     title: input.title,
     body: input.body,
-    contentKey: input.contentKey,
+    contentReference: parseContentReference(input.contentKey),
     archived: false,
     createdAt: input.now,
     updatedAt: input.now,

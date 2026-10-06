@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { createPersonalRelationEndpoints } from "./create-personal-relation-endpoints.function";
 import type { PersonalRelationComposerProps } from "./personal-relation-composer-props.interface";
 import type { PersonalRelationComposerState } from "./personal-relation-composer-state.interface";
 import type { PersonalRelationKind } from "@guesant/saberes-application";
@@ -9,30 +8,26 @@ export function usePersonalRelationComposer(
 ): PersonalRelationComposerState {
   const [kind, setKind] = useState<PersonalRelationKind>("anchor");
 
-  const [sourceId, setSourceId] = useState("");
+  const [source, setSource] = useState("");
 
-  const [sourceType, setSourceType] = useState("note");
+  const [target, setTarget] = useState("");
 
-  const [targetId, setTargetId] = useState("");
+  const sourceOption = props.options.find((option) => { return option.value === source; });
 
-  const [targetType, setTargetType] = useState("topic");
+  const targetOption = props.options.find((option) => { return option.value === target; });
 
-  const canCreate = Boolean(
-    createPersonalRelationEndpoints({ sourceId, sourceType, targetId, targetType }),
-  );
+  const canCreate = Boolean(sourceOption && targetOption && source !== target);
 
   const create = async (): Promise<void> => {
-    const endpoints = createPersonalRelationEndpoints({ sourceId, sourceType, targetId, targetType });
-
-    if (!endpoints) {
+    if (!sourceOption || !targetOption || !canCreate) {
       return;
     }
 
-    await props.onCreate(kind, endpoints.source, endpoints.target);
+    await props.onCreate(kind, sourceOption.endpoint, targetOption.endpoint);
 
-    setSourceId("");
+    setSource("");
 
-    setTargetId("");
+    setTarget("");
   };
 
   return {
@@ -40,13 +35,9 @@ export function usePersonalRelationComposer(
     create,
     kind,
     setKind,
-    setSourceId,
-    setSourceType,
-    setTargetId,
-    setTargetType,
-    sourceId,
-    sourceType,
-    targetId,
-    targetType,
+    setSource,
+    setTarget,
+    source,
+    target,
   };
 }
