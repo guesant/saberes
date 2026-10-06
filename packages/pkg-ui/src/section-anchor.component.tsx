@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UISectionAnchorProps = {
@@ -7,5 +7,5 @@ export type UISectionAnchorProps = {
 };
 
 export function UISectionAnchor(props: UISectionAnchorProps): ReactElement {
-  return <MuiBox id={props.id}>{props.children}</MuiBox>;
+  return <UIBox id={props.id} inset="none" layout="flow">{props.children}</UIBox>;
 }

@@ -115,17 +115,6 @@ const styleFactoryNames = new Set(["createTheme", "makeStyles", "styled", "withS
 
 const semanticLayoutAttributes = new Map([["UIInputAdornment", new Set(["position"])]]);
 
-const spacingTokens = new Set(["none", "section", "xs", "sm", "md", "lg", "xl"]);
-
-const spacingTokenByMuiValue = new Map([
-  [0, "none"],
-  [0.5, "xs"],
-  [1, "sm"],
-  [2, "md"],
-  [3, "lg"],
-  [4, "xl"],
-]);
-
 const structuralActionNames = new Set([
   "UIButton",
   "UIIconButton",
@@ -150,20 +139,6 @@ const actionGroupNames = new Set([
   "UIFormActions",
   "UIInlineActions",
   "UIToolbar",
-]);
-
-const layoutTokens = new Set([
-  "bottom-tabs",
-  "cluster",
-  "equal-grid",
-  "flow",
-  "layout-item",
-  "native",
-  "page-shell",
-  "row",
-  "split",
-  "stack",
-  "toolbar",
 ]);
 
 const structuralHtmlElements = new Set([
@@ -323,50 +298,6 @@ function getExpressionProperties(node) {
   }
 
   return { inspectable, properties };
-}
-
-function getSpacingCategory(name) {
-  if (["gap", "columnGap", "columnSpacing", "rowGap", "rowSpacing", "spacing"].includes(name)) {
-    return "gap";
-  }
-
-  if (name.startsWith("padding") || ["p", "px", "py", "pt", "pr", "pb", "pl"].includes(name)) {
-    return "inset";
-  }
-
-  if (name.startsWith("margin") || ["m", "mx", "my", "mt", "mr", "mb", "ml"].includes(name)) {
-    return "outset";
-  }
-
-  return undefined;
-}
-
-function getLayoutCategory(name) {
-  if (["overflow", "overflowX", "overflowY"].includes(name)) {
-    return "overflow";
-  }
-
-  if (layoutPropertyNames.has(name)) {
-    return "layout";
-  }
-
-  return undefined;
-}
-
-function getStaticSpacingToken(value) {
-  if (typeof value === "string") {
-    return spacingTokens.has(value) ? value : undefined;
-  }
-
-  if (typeof value === "number") {
-    return spacingTokenByMuiValue.get(value);
-  }
-
-  return undefined;
-}
-
-function isStaticLiteral(value) {
-  return value?.type === "Literal";
 }
 
 function isSemanticLayoutAttribute(node, name) {
@@ -679,99 +610,65 @@ const noNegativeSpacingOutsideUi = {
   },
 };
 
-const spacingContract = {
+
+const noUiDataAttributes = {
   meta: {
     type: "problem",
     schema: [],
     messages: {
-      metadata: "Layout spacing must declare its semantic metadata on the UI primitive.",
-      token: "Spacing metadata must use one of: none, xs, sm, md, lg or xl.",
-      layoutToken: "Layout metadata must use an approved semantic layout token.",
-      mismatch: "The spacing value does not match the declared spacing token.",
-      scale: "Spacing values must use the approved MUI spacing scale.",
-      overflow: "Overflow declarations must declare data-ui-overflow.",
-      wrapping: "flexWrap must use a semantic cluster layout.",
-      alignment: "alignItems must declare data-ui-align so sibling alignment can be verified.",
+      attribute: "Do not encode UI contracts in data-ui-* attributes; use typed UI props and semantic HTML/ARIA.",
     },
   },
   create(context) {
-    if (!isUiImplementationFilename(context.getFilename())) {
+    if (!isLayoutFilename(context.getFilename())) {
       return {};
     }
 
-    function reportMetadata(node, category) {
-      if (getOpeningElementName(node) === "UIBox") {
-        return;
-      }
+    return {
+      JSXAttribute(node) {
+        const name = getJsxAttributeName(node);
 
-      const attributeName = `data-ui-${category}`;
-
-      if (!hasJsxAttribute(node, attributeName)) {
-        context.report({ node, messageId: "metadata" });
-      }
-    }
-
-    function inspectProperty(node, name, value) {
-      const spacingCategory = getSpacingCategory(name);
-
-      if (spacingCategory) {
-        reportMetadata(node, "layout");
-
-        reportMetadata(node, spacingCategory);
-
-        if (isStaticLiteral(value) && !getStaticSpacingToken(value.value)) {
-          context.report({ node: value, messageId: "scale" });
+        if (name?.startsWith("data-ui-")) {
+          context.report({ node: node.name, messageId: "attribute" });
         }
-      }
+      },
+    };
+  },
+};
 
-      const layoutCategory = getLayoutCategory(name);
-
-      if (
-        name === "alignItems" &&
-        getOpeningElementName(node) !== "UIBox" &&
-        !hasJsxAttribute(node, "data-ui-align")
-      ) {
-        context.report({ node, messageId: "alignment" });
-      }
-
-      if (layoutCategory === "layout") {
-        reportMetadata(node, "layout");
-      }
-
-      if (layoutCategory === "overflow") {
-        reportMetadata(node, "overflow");
-      }
-
-      if (
-        name === "flexWrap" &&
-        isStaticLiteral(value) &&
-        value.value === "wrap" &&
-        getStaticAttributeValue(node, "data-ui-layout") !== "cluster"
-      ) {
-        context.report({ node: value, messageId: "wrapping" });
-      }
-
-      if (
-        name === "justifyContent" &&
-        isStaticLiteral(value) &&
-        value.value === "space-between" &&
-        !["split", "toolbar"].includes(getStaticAttributeValue(node, "data-ui-layout"))
-      ) {
-        context.report({ node: value, messageId: "metadata" });
-      }
+const uiBoxOnlyLayoutDefinition = {
+  meta: {
+    type: "problem",
+    schema: [],
+    messages: {
+      attribute: "Structural layout must be configured through UIBox, not directly on {{component}}.",
+      style: "Structural layout styles must be passed through UIBox, not {{component}} sx/style.",
+      primitive: "Use UIBox instead of the raw MUI layout primitive {{component}}.",
+    },
+  },
+  create(context) {
+    if (!isUiImplementationFilename(context.getFilename()) || /\/box\.component\.tsx$/u.test(context.getFilename())) {
+      return {};
     }
+
+    const structuralProperties = new Set([
+      "alignContent", "alignItems", "columnGap", "display", "flexDirection", "flexWrap", "gap",
+      "gridAutoColumns", "gridAutoFlow", "gridAutoRows", "gridColumn", "gridRow", "gridTemplate",
+      "gridTemplateAreas", "gridTemplateColumns", "gridTemplateRows", "justifyContent", "justifyItems",
+      "rowGap",
+    ]);
 
     return {
       JSXOpeningElement(node) {
-        const sxAttribute = getJsxAttribute(node, "sx") ?? getJsxAttribute(node, "style");
+        const component = getOpeningElementName(node);
 
-        const expression = sxAttribute ? getJsxExpression(sxAttribute) : undefined;
+        if (!component || component === "UIBox") {
+          return;
+        }
 
-        const result = expression ? getExpressionProperties(expression) : undefined;
-
-        result?.properties.forEach((property) => {
-          inspectProperty(node, property.name, property.value);
-        });
+        if (["Box", "Grid", "MuiBox", "MuiGrid", "MuiStack", "Stack"].includes(component)) {
+          context.report({ node: node.name, data: { component }, messageId: "primitive" });
+        }
 
         node.attributes.forEach((attribute) => {
           if (attribute.type !== "JSXAttribute") {
@@ -780,54 +677,28 @@ const spacingContract = {
 
           const name = getJsxAttributeName(attribute);
 
-          if (!name || name.startsWith("data-ui-")) {
+          if (name === "container" || name === "spacing") {
+            context.report({ node: attribute.name, data: { component }, messageId: "attribute" });
+          }
+
+          if (name && structuralProperties.has(name)) {
+            context.report({ node: attribute.name, data: { component }, messageId: "attribute" });
+          }
+
+          if (name !== "sx" && name !== "style") {
             return;
           }
 
-          const category = getSpacingCategory(name) ?? getLayoutCategory(name);
+          const expression = getJsxExpression(attribute);
 
-          if (category) {
-            inspectProperty(node, name, getJsxExpression(attribute));
-          }
+          const properties = getExpressionProperties(expression);
+
+          properties.properties.forEach((property) => {
+            if (structuralProperties.has(property.name)) {
+              context.report({ node: property.node ?? expression, data: { component }, messageId: "style" });
+            }
+          });
         });
-
-        const gapToken = getStaticAttributeValue(node, "data-ui-gap");
-
-        const layoutToken = getStaticAttributeValue(node, "data-ui-layout");
-
-        if (
-          layoutToken !== undefined &&
-          (typeof layoutToken !== "string" || !layoutTokens.has(layoutToken))
-        ) {
-          context.report({ node, messageId: "layoutToken" });
-        }
-
-        if (
-          gapToken !== undefined &&
-          (typeof gapToken !== "string" || !spacingTokens.has(gapToken))
-        ) {
-          context.report({ node, messageId: "token" });
-        }
-
-        const spacingAttribute = ["spacing", "gap", "rowGap", "columnGap"]
-          .map((name) => {
-            return getJsxAttribute(node, name);
-          })
-          .find(Boolean);
-
-        const declaredGap = getStaticAttributeValue(node, "data-ui-gap");
-
-        const spacingValue = spacingAttribute
-          ? getStaticAttributeValue(node, getJsxAttributeName(spacingAttribute))
-          : undefined;
-
-        if (
-          typeof declaredGap === "string" &&
-          typeof spacingValue === "number" &&
-          getStaticSpacingToken(spacingValue) !== declaredGap
-        ) {
-          context.report({ node: spacingAttribute, messageId: "mismatch" });
-        }
       },
     };
   },
@@ -875,8 +746,6 @@ const bottomNavigationContract = {
     type: "problem",
     schema: [],
     messages: {
-      layout: "Bottom navigation must declare data-ui-layout=bottom-tabs.",
-      safeArea: "Bottom navigation must declare data-ui-safe-area=bottom.",
       icon: "Bottom navigation actions must provide an icon.",
       label: "Bottom navigation actions must provide a label.",
       value: "Bottom navigation actions must provide a value.",
@@ -890,16 +759,6 @@ const bottomNavigationContract = {
     return {
       JSXOpeningElement(node) {
         const name = getOpeningElementName(node);
-
-        if (name === "UIBottomNavigation") {
-          if (getStaticAttributeValue(node, "data-ui-layout") !== "bottom-tabs") {
-            context.report({ node, messageId: "layout" });
-          }
-
-          if (getStaticAttributeValue(node, "data-ui-safe-area") !== "bottom") {
-            context.report({ node, messageId: "safeArea" });
-          }
-        }
 
         if (name !== "UIBottomNavigationAction") {
           return;
@@ -1361,7 +1220,8 @@ export default {
     "no-spacing-definition-outside-ui": noSpacingDefinitionOutsideUi,
     "no-layout-definition-outside-ui": noLayoutDefinitionOutsideUi,
     "no-negative-spacing-outside-ui": noNegativeSpacingOutsideUi,
-    "spacing-contract": spacingContract,
+    "no-ui-data-attributes": noUiDataAttributes,
+    "ui-box-only-layout-definition": uiBoxOnlyLayoutDefinition,
     "action-group-contract": actionGroupContract,
     "bottom-navigation-contract": bottomNavigationContract,
     "content-group-contract": contentGroupContract,

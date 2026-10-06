@@ -4,6 +4,13 @@ import type { ElementType } from "react";
 export function getUiBoxNativeProps<Component extends ElementType>(props: UIBoxProps<Component>) {
   const nativeProps = { ...props };
 
+  Object.keys(nativeProps)
+    .forEach((attribute) => {
+      if (attribute.startsWith("data-ui-")) {
+        delete nativeProps[attribute as keyof typeof nativeProps];
+      }
+    });
+
   delete nativeProps.align;
 
   delete nativeProps.children;

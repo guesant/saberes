@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UICodeTextProps = {
@@ -6,5 +6,5 @@ export type UICodeTextProps = {
 };
 
 export function UICodeText(props: UICodeTextProps): ReactElement {
-  return <MuiBox component="code">{props.children}</MuiBox>;
+  return <UIBox component="code" inset="none" layout="flow">{props.children}</UIBox>;
 }

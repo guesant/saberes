@@ -1,4 +1,4 @@
-import { UIDisclosure } from "@guesant/saberes-ui";
+import { UIDisclosure, UIContentGroup } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import { CourseModules } from "./course-modules.component";
 import { CourseReadyHero } from "./course-ready-hero.component";
@@ -21,7 +21,7 @@ export function CourseReadyView(props: CourseReadyViewProps) {
   const { t } = useTranslation();
 
   return (
-    <>
+    <UIContentGroup variant="section">
       <CourseReadyHero
         data={data}
         onStart={onStart}
@@ -34,6 +34,6 @@ export function CourseReadyView(props: CourseReadyViewProps) {
       <UIDisclosure summary={t("course.learnInSequence")}>
         <CourseModules modules={data.modules} items={data.items} />
       </UIDisclosure>
-    </>
+    </UIContentGroup>
   );
 }

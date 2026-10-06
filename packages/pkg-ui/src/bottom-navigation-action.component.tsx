@@ -10,8 +10,6 @@ export function UIBottomNavigationAction(props: UIBottomNavigationActionProps): 
   return (
     <MuiBottomNavigationAction
       {...props}
-      data-ui-layout="layout-item"
-      data-ui-overflow="hidden"
       sx={{
         "& .MuiBottomNavigationAction-label": {
           maxWidth: "100%",

@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIPageSurfaceProps = {
@@ -7,21 +7,27 @@ export type UIPageSurfaceProps = {
 
 export function UIPageSurface(props: UIPageSurfaceProps): ReactElement {
   return (
-    <MuiBox
-      data-ui-layout="page-shell"
+    <UIBox
+      inset="none"
+      layout="grid"
       sx={{
-        display: { md: "grid", xs: "block" },
+        height: "100vh",
+        inset: 0,
+        overflow: "hidden",
+        position: "fixed",
         gridTemplateColumns: {
           md: "264px minmax(0, 1fr) 264px",
           xs: "minmax(0, 1fr)",
         },
-        gridTemplateRows: { md: "64px minmax(0, 1fr)", xs: "auto" },
-        minHeight: "100vh",
+        gridTemplateRows: "auto minmax(0, 1fr)",
+        minHeight: 0,
+        minWidth: 0,
+        width: "100%",
+        "@supports (height: 100dvh)": { height: "100dvh" },
         bgcolor: "background.default",
-        "& > [data-ui-layout='toolbar']": { gridColumn: "1 / -1" },
       }}
     >
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

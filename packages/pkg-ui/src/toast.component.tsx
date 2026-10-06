@@ -13,9 +13,6 @@ export function UIToast(props: UIToastProps): ReactElement {
     <Snackbar
       anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
       autoHideDuration={props.autoHideDuration ?? 3500}
-      data-ui-gap="none"
-      data-ui-inset="none"
-      data-ui-layout="flow"
       onClose={props.onClose}
       open={props.open}
       sx={{
@@ -24,14 +21,10 @@ export function UIToast(props: UIToastProps): ReactElement {
       }}
     >
       <Alert
-        data-ui-align="center"
-        data-ui-gap="none"
-        data-ui-inset="none"
-        data-ui-layout="flow"
         onClose={props.onClose}
         role={role}
         severity={props.severity}
-        sx={{ alignItems: "center", width: "100%" }}
+        sx={{ width: "100%" }}
       >
         {props.children}
       </Alert>

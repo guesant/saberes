@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { validateDocumentOverflow } from "./validate-document-overflow.function";
-import { validateLayoutMetadata } from "./validate-layout-metadata.function";
+import { validateRenderedLayout } from "./validate-rendered-layout.function";
 import { validateVisualComposition } from "./validate-visual-composition.function";
 import type { VisualAuditScenario } from "./visual-audit-scenario.type";
 
@@ -43,7 +43,7 @@ viewports.forEach((viewport) => {
         await expect(page.locator("#root"))
           .not.toBeEmpty();
 
-        await validateLayoutMetadata(page);
+        await validateRenderedLayout(page);
 
         await validateDocumentOverflow(page);
 

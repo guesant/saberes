@@ -2,12 +2,22 @@ import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
 export async function validateControlGeometry(page: Page): Promise<void> {
-  const buttonGeometry = await page.locator(".MuiButton-root:visible:not([data-ui-control='choice'])")
+  const visibleButtonsHaveLeadingIcons = await page.locator(".MuiButton-root:visible")
+    .evaluateAll((buttons) => {
+      return buttons.every((button) => {
+        return button.querySelector(".MuiButton-startIcon");
+      });
+    });
+
+  expect(visibleButtonsHaveLeadingIcons)
+    .toBe(true);
+
+  const buttonGeometry = await page.locator(".MuiButton-root:visible:not(.UISimulationAnswerOption-root)")
     .evaluateAll((buttons) => {
       return buttons.map((button) => {
         const style = window.getComputedStyle(button);
 
-        const label = button.querySelector("[data-ui-button-label]");
+        const label = button.querySelector(".UIButton-label");
 
         let labelWhiteSpace = style.whiteSpace;
 
@@ -40,7 +50,7 @@ export async function validateControlGeometry(page: Page): Promise<void> {
       .toBe("ellipsis");
   });
 
-  const choiceGeometry = await page.locator(".MuiButton-root[data-ui-control='choice']:visible")
+  const choiceGeometry = await page.locator(".MuiButton-root.UISimulationAnswerOption-root:visible")
     .evaluateAll((choices) => {
       return choices.map((choice) => {
         const style = window.getComputedStyle(choice);

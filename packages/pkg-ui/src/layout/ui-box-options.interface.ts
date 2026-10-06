@@ -8,6 +8,7 @@ export interface UiBoxOptions<Component extends ElementType> {
   align?: UiBoxAlignment;
   columns?: 2 | 3 | 4;
   children?: ReactNode;
+  className?: string;
   component?: Component;
   disabled?: boolean;
   gap?: UiSpacingToken;

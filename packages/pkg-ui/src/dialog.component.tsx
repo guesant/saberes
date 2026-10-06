@@ -5,7 +5,6 @@ import type { ReactElement } from "react";
 export function UIDialog(props: UIDialogProps): ReactElement {
   return (
     <Dialog
-      data-ui-layout="stack"
       fullWidth
       maxWidth="sm"
       onClose={props.onClose}

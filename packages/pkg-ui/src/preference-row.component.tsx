@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export interface UIPreferenceRowProps {
@@ -8,16 +8,13 @@ export interface UIPreferenceRowProps {
 
 export function UIPreferenceRow(props: UIPreferenceRowProps): ReactElement {
   return (
-    <MuiBox
-      data-ui-gap="md"
-      data-ui-inset="md"
-      data-ui-layout="split"
-      data-ui-align="center"
-      display="grid"
-      gap={2}
-      gridTemplateColumns={{ sm: "minmax(0, 1fr) auto", xs: "1fr" }}
-      alignItems="center"
+    <UIBox
+      align="center"
+      gap="md"
+      inset="none"
+      layout="grid"
       sx={{
+        gridTemplateColumns: { sm: "minmax(0, 1fr) auto", xs: "1fr" },
         borderBottom: "1px solid",
         borderColor: "divider",
         minHeight: 72,
@@ -27,6 +24,6 @@ export function UIPreferenceRow(props: UIPreferenceRowProps): ReactElement {
     >
       {props.children}
       {props.control}
-    </MuiBox>
+    </UIBox>
   );
 }

@@ -1,8 +1,18 @@
 import { AppBar as MuiAppBar, type AppBarProps as MuiAppBarProps } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement } from "react";
 
-export type UIAppBarProps = Omit<MuiAppBarProps, "position">;
+export type UIAppBarProps = Omit<MuiAppBarProps, "position" | "sx">;
 
 export function UIAppBar(props: UIAppBarProps): ReactElement {
-  return <MuiAppBar {...props} data-ui-layout="toolbar" position="sticky" />;
+  return (
+    <UIBox
+      {...props}
+      component={MuiAppBar}
+      inset="none"
+      layout="flow"
+      position="sticky"
+      sx={{ gridColumn: "1 / -1" }}
+    />
+  );
 }

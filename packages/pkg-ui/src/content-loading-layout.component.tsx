@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIContentLoadingLayoutProps = {
@@ -7,18 +7,16 @@ export type UIContentLoadingLayoutProps = {
 
 export function UIContentLoadingLayout(props: UIContentLoadingLayoutProps): ReactElement {
   return (
-    <MuiBox
-      alignItems="center"
+    <UIBox
+      align="center"
       aria-live="polite"
-      data-ui-align="center"
-      data-ui-inset="xl"
-      data-ui-layout="stack"
-      display="flex"
-      flexDirection="column"
+      gap="md"
+      inset="xl"
+      layout="column"
       role="status"
       sx={{ py: 4 }}
     >
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

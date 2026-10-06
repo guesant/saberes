@@ -47,6 +47,7 @@ const ptBR = {
   common: {
     offline: "Offline",
     loadingContent: "Carregando conteúdo...",
+    checkingForUpdates: "Verificando se há atualizações...",
     loadingCatalog: "Carregando catálogo...",
     loadingCourse: "Carregando curso...",
     loadingAssessment: "Carregando avaliação...",

@@ -1,18 +1,14 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { UIResponsiveGridProps } from "./responsive-grid-props.interface";
 import type { ReactElement } from "react";
 
 export function UIResponsiveGrid(props: UIResponsiveGridProps): ReactElement {
   return (
-    <MuiBox
-      alignItems="stretch"
-      data-ui-align="stretch"
-      data-ui-closure="closed"
-      data-ui-gap="md"
-      data-ui-layout="equal-grid"
-      display="grid"
-      gap={2}
-      minWidth={0}
+    <UIBox
+      align="stretch"
+      gap="md"
+      inset="none"
+      layout="grid"
       sx={{
         "& > *": {
           maxWidth: "100%",
@@ -25,6 +21,6 @@ export function UIResponsiveGrid(props: UIResponsiveGridProps): ReactElement {
       }}
     >
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

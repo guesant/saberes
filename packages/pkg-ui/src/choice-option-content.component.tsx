@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export interface UIChoiceOptionContentProps {
@@ -8,19 +8,15 @@ export interface UIChoiceOptionContentProps {
 
 export function UIChoiceOptionContent(props: UIChoiceOptionContentProps): ReactElement {
   return (
-    <MuiBox
-      alignItems="flex-start"
-      data-ui-align="start"
-      data-ui-gap="sm"
-      data-ui-layout="row"
-      display="flex"
-      gap={1}
-      minWidth={0}
+    <UIBox
+      align="start"
+      gap="sm"
+      inset="none"
+      layout="row"
       sx={{ "& > :last-child": { flex: 1, minWidth: 0, overflowWrap: "anywhere" } }}
-      width="100%"
     >
       {props.marker}
       {props.children}
-    </MuiBox>
+    </UIBox>
   );
 }

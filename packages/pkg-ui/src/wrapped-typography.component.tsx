@@ -6,7 +6,6 @@ export function UIWrappedTypography(props: UIWrappedTypographyProps): ReactEleme
   return (
     <MuiTypography
       color={props.color}
-      data-ui-layout="stack"
       sx={{
         maxWidth: "100%",
         minWidth: 0,

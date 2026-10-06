@@ -1,3 +1,4 @@
+import { UIBox } from "./box.component";
 import { UIDrawer } from "./drawer.component";
 import type { ReactElement, ReactNode } from "react";
 
@@ -9,10 +10,12 @@ export function UIResponsiveNavigationDrawer(
   props: UIResponsiveNavigationDrawerProps,
 ): ReactElement {
   return (
-    <UIDrawer
+    <UIBox
       anchor="left"
-      data-ui-layout="stack"
-      data-ui-navigation="drawer"
+      component={UIDrawer}
+      data-testid="desktop-navigation-drawer"
+      inset="none"
+      layout="flow"
       open
       sx={{
         display: { md: "block", xs: "none" },
@@ -27,6 +30,6 @@ export function UIResponsiveNavigationDrawer(
       variant="permanent"
     >
       {props.children}
-    </UIDrawer>
+    </UIBox>
   );
 }

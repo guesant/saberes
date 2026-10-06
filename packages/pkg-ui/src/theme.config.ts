@@ -91,7 +91,21 @@ export const theme = createTheme({
     MuiButtonBase: { defaultProps: { disableRipple: true } },
     MuiIconButton: {
       defaultProps: { disableRipple: true },
-      styleOverrides: { root: { minHeight: 44, minWidth: 44 } },
+      styleOverrides: {
+        root: {
+          borderRadius: "0.25rem",
+          border: "1px solid transparent",
+          minHeight: 44,
+          minWidth: 44,
+          "&.UIIconButton-toggle": { borderColor: "var(--mui-palette-divider)" },
+          "&.UIIconButton-shape-round": { borderRadius: "50%" },
+          "&.UIIconButton-toggle[aria-pressed='true']": {
+            backgroundColor: "var(--mui-palette-action-selected)",
+            outline: "1px solid var(--mui-palette-primary-main)",
+            outlineOffset: -1,
+          },
+        },
+      },
     },
     MuiListItemButton: {
       defaultProps: { disableRipple: true },

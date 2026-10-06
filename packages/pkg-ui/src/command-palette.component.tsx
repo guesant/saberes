@@ -15,7 +15,7 @@ export function UICommandPalette(props: UICommandPaletteProps): ReactElement {
   });
 
   return (
-    <Dialog data-ui-layout="stack" fullWidth maxWidth="sm" onClose={props.onClose} open={props.open}>
+    <Dialog fullWidth maxWidth="sm" onClose={props.onClose} open={props.open}>
       <DialogTitle>{props.title}</DialogTitle>
       <DialogContent>
         <UITextField

@@ -1,4 +1,4 @@
-import { Box as MuiBox } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIAccentIconProps = {
@@ -6,5 +6,5 @@ export type UIAccentIconProps = {
 };
 
 export function UIAccentIcon(props: UIAccentIconProps): ReactElement {
-  return <MuiBox color="primary.main">{props.children}</MuiBox>;
+  return <UIBox component="span" inset="none" layout="flow" sx={{ color: "primary.main", display: "inline-flex" }}>{props.children}</UIBox>;
 }

@@ -1,4 +1,4 @@
-import { Grid as MuiGrid } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UIQuickAccessGridProps = {
@@ -7,14 +7,8 @@ export type UIQuickAccessGridProps = {
 
 export function UIQuickAccessGrid(props: UIQuickAccessGridProps): ReactElement {
   return (
-    <MuiGrid
-      container
-      data-ui-closure="closed"
-      data-ui-gap="md"
-      data-ui-layout="equal-grid"
-      spacing={2}
-    >
+    <UIBox gap="md" inset="none" layout="grid" sx={{ gridTemplateColumns: { md: "repeat(4, minmax(0, 1fr))", xs: "repeat(2, minmax(0, 1fr))" } }}>
       {props.children}
-    </MuiGrid>
+    </UIBox>
   );
 }

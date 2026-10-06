@@ -36,6 +36,7 @@ describe("tema da plataforma", () => {
       .toMatchObject({ height: 44, minHeight: 44, whiteSpace: "nowrap" });
   });
 
+
   it("diferencia cards do fundo e mantém suas bordas", () => {
     const cardRoot = theme.components?.MuiCard?.styleOverrides?.root;
 

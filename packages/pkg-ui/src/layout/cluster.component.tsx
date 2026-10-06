@@ -14,10 +14,6 @@ export function UICluster(props: UIClusterProps): ReactElement {
   return (
     <UIBox
       align={align}
-      data-ui-align={align}
-      data-ui-gap={gap}
-      data-ui-inset={inset}
-      data-ui-layout="cluster"
       gap={gap}
       inset={inset}
       layout="row"

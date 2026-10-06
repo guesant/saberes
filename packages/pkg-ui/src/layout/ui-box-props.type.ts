@@ -1,3 +1,4 @@
+import type { UiBoxCustomDataRestriction } from "./ui-box-custom-data-restriction.type";
 import type { UiBoxOptions } from "./ui-box-options.interface";
 import type { ComponentPropsWithRef, ElementType } from "react";
 
@@ -19,4 +20,5 @@ export type UIBoxProps<Component extends ElementType = "div"> =
     | "sx"
     | "style"
   > &
-  UiBoxOptions<Component>;
+  UiBoxOptions<Component> &
+  UiBoxCustomDataRestriction;

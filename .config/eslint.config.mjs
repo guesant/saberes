@@ -649,7 +649,15 @@ export default [
     files: uiImplementationFiles,
     ignores: ["**/*.test.ts", "**/*.test.tsx"],
     rules: {
-      "layout/spacing-contract": "error",
+      "layout/no-ui-data-attributes": "error",
+      "layout/ui-box-only-layout-definition": "error",
+    },
+  },
+  {
+    files: layoutImplementationFiles,
+    ignores: ["**/*.test.ts", "**/*.test.tsx"],
+    rules: {
+      "layout/no-ui-data-attributes": "error",
     },
   },
   {

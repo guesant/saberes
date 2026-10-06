@@ -250,9 +250,7 @@ export * from "./simulation-text-answer-input.component";
 export * from "./simulation-text-answer-input-props.interface";
 
 export * from "./section-anchor.component";
-
 export * from "./split-content-row.component";
-
 export * from "./start-aligned-row.component";
 
 export * from "./tab.component";

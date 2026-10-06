@@ -8,6 +8,20 @@ test("carrega a aplicação e registra o service worker", async ({ page }) => {
 
   await expect(page.locator("#root")).not.toBeEmpty();
 
+  await expect(page.locator("#main-content"))
+    .toBeVisible();
+
+  await expect(page.locator(".MuiButton-root"))
+    .not.toHaveCount(0);
+
+  const actionButtonsHaveLeadingIcons = await page.locator(".MuiButton-root")
+    .evaluateAll((buttons) => {
+      return buttons.every((button) => {return button.querySelector(".MuiButton-startIcon");});
+    });
+
+  expect(actionButtonsHaveLeadingIcons)
+    .toBe(true);
+
   await expect(page.locator("meta[name=description]"))
     .toHaveAttribute("content", /Saberes/);
 

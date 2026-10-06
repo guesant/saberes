@@ -16,6 +16,7 @@
   },
   "exports": {
     ".": "./src/index.ts",
+    "./startup-screen": "./src/startup-screen.component.tsx",
     "./styles": "./src/ui.styles.ts"
   }
 }

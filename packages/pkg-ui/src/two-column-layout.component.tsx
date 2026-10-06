@@ -1,4 +1,4 @@
-import { Grid as MuiGrid } from "@mui/material";
+import { UIBox } from "./box.component";
 import type { ReactElement, ReactNode } from "react";
 
 export type UITwoColumnLayoutProps = {
@@ -8,9 +8,14 @@ export type UITwoColumnLayoutProps = {
 
 export function UITwoColumnLayout(props: UITwoColumnLayoutProps): ReactElement {
   return (
-    <MuiGrid container data-ui-align="start" data-ui-gap="lg" data-ui-layout="split" spacing={3}>
-      <MuiGrid size={{ md: 8, xs: 12 }}>{props.primary}</MuiGrid>
-      <MuiGrid size={{ md: 4, xs: 12 }}>{props.secondary}</MuiGrid>
-    </MuiGrid>
+    <UIBox
+      gap="lg"
+      inset="none"
+      layout="grid"
+      sx={{ gridTemplateColumns: { md: "minmax(0, 2fr) minmax(0, 1fr)", xs: "minmax(0, 1fr)" } }}
+    >
+      {props.primary}
+      {props.secondary}
+    </UIBox>
   );
 }

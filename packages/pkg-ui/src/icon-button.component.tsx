@@ -4,8 +4,19 @@ import {
 } from "@mui/material";
 import type { ReactElement } from "react";
 
-export type UIIconButtonProps = MuiIconButtonProps;
+export interface UIIconButtonProps extends MuiIconButtonProps {
+  shape?: "round" | "square";
+  "aria-label": string;
+}
 
 export function UIIconButton(props: UIIconButtonProps): ReactElement {
-  return <MuiIconButton {...props} />;
+  const { shape = "square", ...buttonProps } = props;
+
+  return (
+    <MuiIconButton
+      {...buttonProps}
+      className={`${props.className ?? ""} UIIconButton-shape-${shape}${props["aria-pressed"] !== undefined ? " UIIconButton-toggle" : ""}`.trim()}
+      title={props["aria-label"]}
+    />
+  );
 }
