@@ -1,11 +1,14 @@
 import { Typography as MuiTypography } from "@mui/material";
 import { UIBox } from "./box.component";
+import { UIButtonActionIcon } from "./button-action-icon.component";
+import type { UIButtonActionIconName } from "./get-button-action-icon-name.function";
 import type { ReactElement } from "react";
 
 export interface UIDiscoveryLinkProps {
   title: string;
   description: string;
   href: string;
+  iconName: UIButtonActionIconName;
 }
 
 export function UIDiscoveryLink(props: UIDiscoveryLinkProps): ReactElement {
@@ -23,7 +26,10 @@ export function UIDiscoveryLink(props: UIDiscoveryLinkProps): ReactElement {
         color: "text.primary", minWidth: 0, textDecoration: "none",
       }}
     >
-      <MuiTypography component="strong" variant="h6">{props.title}</MuiTypography>
+      <UIBox align="center" gap="sm" inset="none" layout="row">
+        <UIButtonActionIcon name={props.iconName} aria-hidden="true" />
+        <MuiTypography component="strong" variant="h6">{props.title}</MuiTypography>
+      </UIBox>
       <MuiTypography color="text.secondary" variant="body2">{props.description}</MuiTypography>
     </UIBox>
   );

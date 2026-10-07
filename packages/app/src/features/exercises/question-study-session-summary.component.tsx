@@ -29,7 +29,7 @@ export function QuestionStudySessionSummary(props: QuestionStudySessionSummaryPr
           percentage: props.progress.percentage,
         })}
       </UITypography>
-      <UIInlineActions>
+      <UIInlineActions stacked>
         <UIButton variant="contained" onClick={props.onReview}>
           {t("exercise.sessionReviewAction")}
         </UIButton>

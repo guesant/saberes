@@ -35,7 +35,7 @@ export function PersonalNoteEditor(props: PersonalNoteEditorProps) {
         value={props.body}
       />
       <PersonalContentKeyField onChange={props.onContentKeyChange} value={props.contentKey} />
-      <UIInlineActions>
+      <UIInlineActions stacked>
         <UIButton
           disabled={!props.title.trim() || !props.body.trim()}
           onClick={props.onSave}

@@ -3,7 +3,9 @@ import Add from "@mui/icons-material/Add";
 import Anchor from "@mui/icons-material/Anchor";
 import ArchiveOutlined from "@mui/icons-material/ArchiveOutlined";
 import ArrowBack from "@mui/icons-material/ArrowBack";
+import ArrowDownward from "@mui/icons-material/ArrowDownward";
 import ArrowForward from "@mui/icons-material/ArrowForward";
+import ArrowUpward from "@mui/icons-material/ArrowUpward";
 import BookmarkAdded from "@mui/icons-material/BookmarkAdded";
 import BookmarkBorder from "@mui/icons-material/BookmarkBorder";
 import Check from "@mui/icons-material/Check";
@@ -35,6 +37,7 @@ import SentimentSatisfied from "@mui/icons-material/SentimentSatisfied";
 import SentimentVeryDissatisfied from "@mui/icons-material/SentimentVeryDissatisfied";
 import SentimentVerySatisfied from "@mui/icons-material/SentimentVerySatisfied";
 import SettingsOutlined from "@mui/icons-material/SettingsOutlined";
+import SkipNext from "@mui/icons-material/SkipNext";
 import Snooze from "@mui/icons-material/Snooze";
 import ThumbUp from "@mui/icons-material/ThumbUp";
 import Topic from "@mui/icons-material/Topic";
@@ -53,7 +56,9 @@ const actionIcons = {
   dependsOn: AccountTree,
   archive: ArchiveOutlined,
   arrowBack: ArrowBack,
+  arrowDown: ArrowDownward,
   arrowForward: ArrowForward,
+  arrowUp: ArrowUpward,
   bookmark: BookmarkBorder,
   check: Check,
   close: Close,
@@ -83,6 +88,7 @@ const actionIcons = {
   settings: SettingsOutlined,
   supports: ThumbUp,
   snooze: Snooze,
+  skipNext: SkipNext,
   suspend: PauseCircleOutline,
   uncertain: HelpOutline,
   unknown: School,

@@ -16,7 +16,7 @@ export function LocalBackupPreview(props: LocalBackupPreviewProps) {
         })}
       </UITypography>
       <UITypography color="text.secondary">{t("backup.scope")}</UITypography>
-      <UIInlineActions>
+      <UIInlineActions stacked>
         <UIButton
           variant="outlined"
           onClick={() => {

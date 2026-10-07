@@ -31,7 +31,7 @@ export function MyStudyFirstStudyPrompt(props: MyStudyFirstStudyPromptProps) {
         <UITypography variant="overline">{t("home.firstStudyEyebrow")}</UITypography>
         <UITypography variant="h3">{t("home.firstStudyTitle")}</UITypography>
         <UITypography color="text.secondary">{t("home.firstStudyDescription")}</UITypography>
-        <UIInlineActions>
+        <UIInlineActions stacked>
           <UIButton href={coursePath} variant="contained">
             {t("home.firstStudyContinue")}
           </UIButton>

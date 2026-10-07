@@ -10,7 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { StudyPlanStepMoveActions } from "./study-plan-step-move-actions.component";
 import { StudyPlanStepSkipAction } from "./study-plan-step-skip-action.component";
-import { StudyPlanStepStatus } from "./study-plan-step-status.component";
+import { StudyPlanStepStatusGroup } from "./study-plan-step-status-group.component";
 
 export type StudyPlanStepProps = {
   step: Record<string, unknown>;
@@ -45,7 +45,7 @@ export function StudyPlanStep(props: StudyPlanStepProps) {
 
           <UITypography color="text.secondary">{String(props.step.description || "")}</UITypography>
 
-          <StudyPlanStepStatus completed={props.completed} skipped={props.skipped} />
+          <StudyPlanStepStatusGroup completed={props.completed} skipped={props.skipped} />
           <StudyPlanStepSkipAction
             disabled={props.completed}
             skipped={props.skipped}

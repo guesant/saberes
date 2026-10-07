@@ -21,7 +21,7 @@ export function LocalBackupPanel(props: LocalBackupPanelProps) {
       <UITypography color="text.secondary" role="status">
         {t(`backup.states.${props.viewModel.state}`)}
       </UITypography>
-      <UIInlineActions>
+      <UIInlineActions stacked>
         <UIDownloadFileButton
           disabled={isBusy}
           fileName="saberes-progress.json"

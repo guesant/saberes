@@ -36,7 +36,7 @@ export function StudyChecklistDisplay(props: StudyChecklistDisplayProps) {
           onMoveItem={props.onMoveItem}
           onUpdateItem={props.onUpdateItem}
         />
-        <UIInlineActions>
+        <UIInlineActions stacked>
           <UIButton onClick={props.onDelete} variant="text">
             Excluir checklist
           </UIButton>

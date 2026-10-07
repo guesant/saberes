@@ -16,7 +16,7 @@ export function PersonalRelationContent(props: PersonalRelationContentProps): Re
       </UITypography>
       <PersonalRelationEndpointStatus availability={props.sourceAvailability} />
       <PersonalRelationEndpointStatus availability={props.targetAvailability} />
-      <UIInlineActions>
+      <UIInlineActions stacked>
         <UIButton onClick={props.onOpenOrigin} variant="text">
           Abrir origem
         </UIButton>

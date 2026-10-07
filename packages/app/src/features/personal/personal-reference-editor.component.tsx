@@ -29,7 +29,7 @@ export function PersonalReferenceEditor(props: PersonalReferenceEditorProps) {
         }}
         value={props.source}
       />
-      <UIInlineActions>
+      <UIInlineActions stacked>
         <UIButton
           disabled={!props.title.trim() || !props.source.trim()}
           onClick={props.onSave}

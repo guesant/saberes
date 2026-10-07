@@ -1,5 +1,5 @@
 import { LearningCourseType } from "@guesant/saberes-application";
-import { UIChoiceButton, UIInlineActions } from "@guesant/saberes-ui";
+import { UIChoiceButton, UIContentGroup } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { CatalogCourseTypeFilterProps } from "./catalog-course-type-filter-props.type";
 
@@ -7,7 +7,7 @@ export function CatalogCourseTypeFilter(props: CatalogCourseTypeFilterProps) {
   const { t } = useTranslation();
 
   return (
-    <UIInlineActions>
+    <UIContentGroup variant="content">
       <UIChoiceButton
         onClick={() => {
           return props.onChange(undefined);
@@ -35,6 +35,6 @@ export function CatalogCourseTypeFilter(props: CatalogCourseTypeFilterProps) {
       >
         {t("catalog.courseType.specific")}
       </UIChoiceButton>
-    </UIInlineActions>
+    </UIContentGroup>
   );
 }

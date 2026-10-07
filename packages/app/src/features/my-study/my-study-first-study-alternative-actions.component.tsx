@@ -5,7 +5,7 @@ export function MyStudyFirstStudyAlternativeActions() {
   const { t } = useTranslation();
 
   return (
-    <UIInlineActions>
+    <UIInlineActions stacked>
       <UIButton href="/catalogo" variant="text">
         {t("home.firstStudySkip")}
       </UIButton>

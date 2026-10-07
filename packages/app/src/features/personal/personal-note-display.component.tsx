@@ -34,7 +34,7 @@ export function PersonalNoteDisplay(props: PersonalNoteDisplayProps) {
         {getContentReferenceKey(props.note.contentReference) ? (
           <PersonalRelatedContent value={getContentReferenceKey(props.note.contentReference) || ""} />
         ) : null}
-        <UIInlineActions>
+        <UIInlineActions stacked>
           <UIButton onClick={props.onArchive} variant="text">
             {t("personal.capture.archive")}
           </UIButton>

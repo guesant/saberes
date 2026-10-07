@@ -27,7 +27,7 @@ export function PersonalReferenceDisplay(props: PersonalReferenceDisplayProps) {
       <UIContentGroup variant="content">
         <UITypography variant="h6">{props.reference.title}</UITypography>
         <PersonalReferenceSource reference={props.reference} />
-        <UIInlineActions>
+        <UIInlineActions stacked>
           <UIButton onClick={props.onFavorite} variant="text">
             {props.reference.favorite ? "Remover favorito" : "Favoritar"}
           </UIButton>

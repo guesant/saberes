@@ -7,7 +7,7 @@ export interface UIEqualActionsGridProps {
 
 export function UIEqualActionsGrid(props: UIEqualActionsGridProps): ReactElement {
   return (
-    <UIGrid minItemWidth="compact">
+    <UIGrid columns={2} minItemWidth="compact">
       {props.content}
     </UIGrid>
   );

@@ -34,7 +34,7 @@ export function QuestionSubmissionFeedback(props: QuestionSubmissionFeedbackProp
       <QuestionAnswerKey answer={answer} />
       <QuestionExplanation explanation={explanation} />
       <QuestionDiagnosisPanel onDiagnose={onDiagnose} result={result.correct} />
-      <UIInlineActions>
+      <UIInlineActions stacked>
         {props.onContinue ? (
           <QuestionSessionContinueAction
             label={t("exercise.continueSession")}

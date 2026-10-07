@@ -1,4 +1,4 @@
-import { UIButton, UIInlineActions } from "@guesant/saberes-ui";
+import { UIButtonActionIcon, UIIconButton, UIInlineActions } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { StudyPlanStepMoveActionsProps } from "./study-plan-step-move-actions-props.type";
 
@@ -7,26 +7,22 @@ export function StudyPlanStepMoveActions(props: StudyPlanStepMoveActionsProps) {
 
   return (
     <UIInlineActions>
-      <UIButton
-        size="small"
-        variant="text"
+      <UIIconButton
         aria-label={t("plan.moveStepUp")}
         onClick={() => {
           return props.onMove(props.stepId, -1);
         }}
       >
-        ↑
-      </UIButton>
-      <UIButton
-        size="small"
-        variant="text"
+        <UIButtonActionIcon name="arrowUp" />
+      </UIIconButton>
+      <UIIconButton
         aria-label={t("plan.moveStepDown")}
         onClick={() => {
           return props.onMove(props.stepId, 1);
         }}
       >
-        ↓
-      </UIButton>
+        <UIButtonActionIcon name="arrowDown" />
+      </UIIconButton>
     </UIInlineActions>
   );
 }

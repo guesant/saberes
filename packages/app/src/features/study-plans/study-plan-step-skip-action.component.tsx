@@ -1,4 +1,4 @@
-import { UIButton } from "@guesant/saberes-ui";
+import { UIButton, UIButtonActionIcon } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 import type { StudyPlanStepSkipActionProps } from "./study-plan-step-skip-action-props.type";
 
@@ -8,6 +8,7 @@ export function StudyPlanStepSkipAction(props: StudyPlanStepSkipActionProps) {
   return (
     <UIButton
       disabled={props.disabled}
+      startIcon={<UIButtonActionIcon name="skipNext" />}
       size="small"
       variant="text"
       onClick={() => {

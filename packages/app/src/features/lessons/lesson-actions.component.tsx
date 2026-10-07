@@ -50,7 +50,7 @@ export function LessonActions(props: LessonActionsProps) {
 
       <UIButton
         aria-pressed={props.completed}
-        variant="contained"
+        variant="outlined"
         disabled={props.progressActionState === "saving"}
         iconOnly
         iconShape="square"

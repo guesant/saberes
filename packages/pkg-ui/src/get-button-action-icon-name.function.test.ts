@@ -14,10 +14,25 @@ describe("getButtonActionIconName: common actions", () => {
 
     expect(getButtonActionIconName("Continuar"))
       .toBe("arrowForward");
+
+    expect(getButtonActionIconName("Pular questão"))
+      .toBe("skipNext");
+
+    expect(getButtonActionIconName("Subir"))
+      .toBe("arrowUp");
+
+    expect(getButtonActionIconName("Descer"))
+      .toBe("arrowDown");
+
+    expect(getButtonActionIconName("Começar sessão"))
+      .toBe("queue");
+
+    expect(getButtonActionIconName("Personalizar plano"))
+      .toBe("settings");
   });
 });
 
-describe("getButtonActionIconName: contextual actions", () => {
+describe("getButtonActionIconName: personal actions", () => {
   it("uses distinct icons for personal workspace creation and relation choices", () => {
     expect(getButtonActionIconName("Nova nota"))
       .toBe("note");
@@ -43,7 +58,9 @@ describe("getButtonActionIconName: contextual actions", () => {
     expect(getButtonActionIconName("Depende de"))
       .toBe("dependsOn");
   });
+});
 
+describe("getButtonActionIconName: prior knowledge", () => {
   it("gives prior-knowledge choices distinct, meaningful icons", () => {
     expect(getButtonActionIconName("Já conheço"))
       .toBe("known");
@@ -54,7 +71,9 @@ describe("getButtonActionIconName: contextual actions", () => {
     expect(getButtonActionIconName("Ainda não conheço"))
       .toBe("unknown");
   });
+});
 
+describe("getButtonActionIconName: review actions", () => {
   it("uses meaningful icons for review actions instead of generic arrows", () => {
     expect(getButtonActionIconName("Novamente · 06/10/2026 19:46"))
       .toBe("reviewAgain");
@@ -80,7 +99,9 @@ describe("getButtonActionIconName: contextual actions", () => {
     expect(getButtonActionIconName("Suspender"))
       .toBe("suspend");
   });
+});
 
+describe("getButtonActionIconName: review entry actions", () => {
   it("uses a review affordance instead of media playback for starting review", () => {
     expect(getButtonActionIconName("Começar revisão"))
       .toBe("refresh");
@@ -94,7 +115,9 @@ describe("getButtonActionIconName: contextual actions", () => {
     expect(getButtonActionIconName("Iniciar foco"))
       .toBe("play");
   });
+});
 
+describe("getButtonActionIconName: fallback", () => {
   it("uses a neutral action icon when there is no known action keyword", () => {
     expect(getButtonActionIconName("Meu curso"))
       .toBe("action");

@@ -5,7 +5,9 @@ export type UIButtonActionIconName =
   | "archive"
   | "backlink"
   | "arrowBack"
+  | "arrowDown"
   | "arrowForward"
+  | "arrowUp"
   | "bookmark"
   | "check"
   | "checklist"
@@ -36,6 +38,7 @@ export type UIButtonActionIconName =
   | "question"
   | "queue"
   | "snooze"
+  | "skipNext"
   | "suspend"
   | "action"
   | "known"
@@ -45,6 +48,11 @@ export type UIButtonActionIconName =
   | "upload";
 
 const actionIconMatchers: Array<[RegExp, UIButtonActionIconName]> = [
+  [/personalizar/iu, "settings"],
+  [/pular|skip/iu, "skipNext"],
+  [/mover etapa para cima|^subir$/iu, "arrowUp"],
+  [/mover etapa para baixo|^descer$/iu, "arrowDown"],
+  [/começar sessão|iniciar sessão/iu, "queue"],
   [/novamente|tentar de novo/iu, "reviewAgain"],
   [/difícil/iu, "reviewHard"],
   [/\bbom\b/iu, "reviewGood"],

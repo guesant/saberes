@@ -36,7 +36,7 @@ export function StudyCaptureEditor(props: StudyCaptureEditorProps) {
         type="date"
         value={props.dueDate}
       />
-      <UIInlineActions>
+      <UIInlineActions stacked>
         <UIButton
           disabled={!props.title.trim() || !props.description.trim()}
           onClick={props.onSave}
