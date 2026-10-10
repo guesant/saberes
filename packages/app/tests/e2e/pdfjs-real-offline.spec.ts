@@ -14,49 +14,72 @@ test("PDF.js renderiza página do caderno oficial após o app ficar offline", as
     await navigator.serviceWorker.ready;
   });
 
-  await page.waitForFunction(() => {return Boolean(navigator.serviceWorker.controller);});
+  await page.waitForFunction(() => {
+    return Boolean(navigator.serviceWorker.controller);
+  });
 
-  const fetchedPdf = await page.evaluate(async ({ path, url }) => {
-    const manifestText = await fetch("/data/asset-manifest.jsonl")
-      .then((response) => {
-        return response.text();
+  const fetchedPdf = await page.evaluate(
+    async ({ path, url }) => {
+      const manifestResponse = await fetch("/data/asset-manifest.jsonl");
+
+      const manifestText = await manifestResponse.text();
+
+      const manifestLines = manifestText.split("\n");
+
+      const nonEmptyManifestLines = manifestLines.filter(Boolean);
+
+      const manifestRecords = nonEmptyManifestLines.map((line) => {
+        return JSON.parse(line);
       });
 
-    const manifestEntry = manifestText
-      .split("\n")
-      .filter(Boolean)
-      .map((line) => {return JSON.parse(line);})
-      .find((entry) => {return entry.path === path;});
+      const manifestEntry = manifestRecords.find((entry) => {
+        return entry.path === path;
+      });
 
-    const response = await fetch(url);
+      const response = await fetch(url);
 
-    const bytes = await response.arrayBuffer();
+      const bytes = await response.arrayBuffer();
 
-    const digest = await crypto.subtle.digest("SHA-256", bytes);
+      const digest = await crypto.subtle.digest("SHA-256", bytes);
 
-    const actualSha256 = Array.from(new Uint8Array(digest))
-      .map((value) => {return value.toString(16)
-        .padStart(2, "0");})
-      .join("");
+      const digestBytes = Array.from(new Uint8Array(digest));
 
-    return {
-      ok: response.ok,
-      size: bytes.byteLength,
-      signature: new TextDecoder()
-        .decode(bytes.slice(0, 5)),
-      expectedSha256: manifestEntry?.sha256,
-      actualSha256,
-    };
-  }, { path: pdfPath.replace(/^\/data\//u, ""), url: pdfUrl });
+      const hexadecimalBytes = digestBytes.map((value) => {
+        return value.toString(16);
+      });
 
-  expect(fetchedPdf)
-    .toMatchObject({ ok: true, signature: "%PDF-" });
+      const paddedHexadecimalBytes = hexadecimalBytes.map((value) => {
+        return value.padStart(2, "0");
+      });
 
-  expect(fetchedPdf.size)
-    .toBeGreaterThan(100_000);
+      const actualSha256 = paddedHexadecimalBytes.join("");
 
-  expect(fetchedPdf.actualSha256)
-    .toBe(fetchedPdf.expectedSha256);
+      const signatureDecoder = new TextDecoder();
+
+      const signature = signatureDecoder.decode(bytes.slice(0, 5));
+
+      return {
+        ok: response.ok,
+        size: bytes.byteLength,
+        signature,
+        expectedSha256: manifestEntry?.sha256,
+        actualSha256,
+      };
+    },
+    { path: pdfPath.replace(/^\/data\//u, ""), url: pdfUrl },
+  );
+
+  const fetchedPdfMatch = expect(fetchedPdf);
+
+  await fetchedPdfMatch.toMatchObject({ ok: true, signature: "%PDF-" });
+
+  const fetchedPdfSize = expect(fetchedPdf.size);
+
+  await fetchedPdfSize.toBeGreaterThan(100_000);
+
+  const fetchedPdfHash = expect(fetchedPdf.actualSha256);
+
+  await fetchedPdfHash.toBe(fetchedPdf.expectedSha256);
 
   await page.waitForFunction(async (url) => {
     const cache = await caches.open("saberes-official-study-assets");
@@ -68,13 +91,15 @@ test("PDF.js renderiza página do caderno oficial após o app ficar offline", as
 
   await page.goto("/questoes/2737");
 
-  await page.getByRole("button", { name: /Abrir página 3/ })
-    .click();
+  const openPdfPageButton = page.getByRole("button", { name: /Abrir página 3/ });
+
+  await openPdfPageButton.click();
 
   const renderedPage = page.getByLabel(/Página 3 do documento/);
 
-  await expect(renderedPage)
-    .toBeVisible();
+  const renderedPageVisibility = expect(renderedPage);
+
+  await renderedPageVisibility.toBeVisible();
 
   await page.waitForFunction(() => {
     const canvas = document.querySelector('canvas[aria-label^="Página 3 do documento"]');
@@ -108,12 +133,15 @@ test("PDF.js renderiza página do caderno oficial após o app ficar offline", as
     };
   });
 
-  expect(renderedPixels.width)
-    .toBeGreaterThan(0);
+  const renderedWidth = expect(renderedPixels.width);
 
-  expect(renderedPixels.height)
-    .toBeGreaterThan(0);
+  await renderedWidth.toBeGreaterThan(0);
 
-  expect(renderedPixels.nonWhitePixels)
-    .toBeGreaterThan(500);
+  const renderedHeight = expect(renderedPixels.height);
+
+  await renderedHeight.toBeGreaterThan(0);
+
+  const renderedContent = expect(renderedPixels.nonWhitePixels);
+
+  await renderedContent.toBeGreaterThan(500);
 });
