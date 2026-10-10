@@ -1,0 +1,104 @@
+{
+  "format": "lesson-independent-second-review/v1",
+  "review_id": "unicamp-2027-sciences-fast-corrections-second-review-v1-2026-10-10",
+  "audit_date": "2026-10-10",
+  "reviewer": "Codex — independent second review",
+  "scope": {
+    "curriculum_topic_ids": [2501, 2504, 2506, 2507, 2510],
+    "stage": "Vestibular Unicamp 2027 — 1ª fase",
+    "reviewed_artifact": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+    "reviewed_package_id": "unicamp-2027-sciences-fast-corrections-2026-10-10-v1",
+    "method": "Conferi cada versão e adendo propostos contra a versão-base vigente no SQLite e os holds/pareceres existentes; reli as seções atuais teoria, exemplo e síntese junto dos adendos, cotejei limites e termos com o programa oficial 2027 cadastrado como source_document_id 148 e recalculei as operações numéricas. Para 2507 e 2510, verifiquei se os exemplos sustentam as relações e ressalvas afirmadas. Nenhuma URL externa foi aberta nesta revisão.",
+    "interpretation": "publish_candidate indica que a versão proposta passou nesta revisão independente de conteúdo para uso como introdução editorial. Não altera nem publica a lição ou o SQLite; o status editorial permanece sujeito ao fluxo formal.",
+    "database_modified": false,
+    "lesson_content_modified": false
+  },
+  "items": [
+    {
+      "curriculum_topic_id": 2501,
+      "official_label": "Fundamentos da Física e Mecânica",
+      "reviewed_version": "1.3.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "A delimitação acrescentada identifica a microaula como etapa parcial, lista conteúdos que exigem etapas próprias e evita alegar cobertura ou domínio integral.",
+        "As ressalvas de referencial, hipóteses e unidades são compatíveis com o caráter introdutório da lição."
+      ],
+      "scope_notes": [
+        "A publicação como candidata pressupõe que a indicação de percurso parcial acompanhe a lição; o texto não afirma que os itens listados já foram ensinados ou praticados."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "official_label": "Óptica e ondas",
+      "reviewed_version": "1.2.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "A interferência distingue fontes coerentes em fase, mínimos ideais com amplitudes iguais e a inversão para fase inicial oposta.",
+        "A convenção declarada para lente delgada é aplicada de modo consistente a objeto real e imagem virtual; objetos virtuais, sistemas de lentes e aberrações ficam fora do escopo declarado.",
+        "O novo limite identifica a lição como introdução parcial e adia explicitamente ondas em cordas, polarização, ondas esféricas, espelhos, prismas, instrumentos ópticos, espectro eletromagnético e visão; também qualifica som, difração e sistemas ópticos como conteúdos que exigem estudo mais amplo."
+      ],
+      "scope_notes": [
+        "A etapa não deve ser apresentada como cobertura integral de Óptica e ondas."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "official_label": "Materiais, gases, líquidos e sólidos",
+      "reviewed_version": "1.3.2",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "Para gás ideal clássico, 3kBT/2 por partícula e 3RT/2 por mol estão corretos e se referem à energia cinética translacional média.",
+        "A 300 K, a conta resulta em 6,2129205×10⁻²¹ J; a 600 K, 1,2425841×10⁻²⁰ J. O texto corretamente não atribui a energia média exata a cada partícula nem a confunde com energia interna total."
+      ],
+      "scope_notes": [
+        "A relação é qualificada para gás ideal clássico em equilíbrio térmico e temperatura absoluta em kelvin."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "official_label": "Estrutura atômica, classificação periódica e ligação química",
+      "reviewed_version": "1.1.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "NaCl sólido não apresenta íons móveis como um metal; NaCl fundido ou em solução pode conduzir por mobilidade iônica.",
+        "A geometria linear do CO₂ cancela os dipolos das ligações C=O; a geometria angular da água deixa dipolo resultante, e moléculas de água podem formar ligações de hidrogênio.",
+        "O exemplo do cobre associa elétrons deslocalizados a propriedades metálicas com a ressalva adequada de que propriedades também dependem de estrutura, composição, temperatura e estado físico."
+      ],
+      "scope_notes": [
+        "Os exemplos demonstram modelos de ligação e propriedades; não generalizam uma propriedade única para todas as substâncias de uma classe."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "official_label": "Eletroquímica e compostos orgânicos",
+      "reviewed_version": "1.3.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "Na pilha Zn/Cu, oxidação no ânodo, redução no cátodo, reação global e fluxo externo de elétrons estão balanceados; E°cel=0,34−(−0,76)=+1,10 V.",
+        "A ressalva distingue corretamente a aproximação didática de solução 1 mol/L da definição rigorosa de estado padrão por atividade unitária para solutos.",
+        "Etanol e éter dimetílico têm fórmula C₂H₆O e conectividades distintas; as afirmações sobre glicose, triglicerídeos, proteínas, amilase e RNAs catalíticos estão qualificadas como exemplos introdutórios, sem afirmar que toda enzima é proteína."
+      ],
+      "scope_notes": [
+        "O potencial indicado é padrão e não deve ser estendido a concentrações arbitrárias; as condições do exemplo estão explícitas."
+      ]
+    }
+  ],
+  "review_summary": {
+    "editorial_recommendation": "As cinco versões propostas passaram como publish_candidate nesta revisão independente. Preservar o escopo parcial explicitado, especialmente para 2504; esta recomendação não muda o status no SQLite.",
+    "non_goals": [
+      "Não altera o SQLite, as seções das lições ou o pacote de correções.",
+      "Não declara o material editorial como oficial da Comvest; o programa oficial é usado apenas para escopo.",
+      "Não constitui revisão de acessibilidade, proveniência integral ou licença de conteúdo externo."
+    ]
+  }
+}

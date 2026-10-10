@@ -6,7 +6,7 @@ import sqlite3
 
 ROOT = Path(__file__).resolve().parents[3]
 DATABASE = ROOT / ".local/content/content.sqlite"
-OUTPUT = Path(__file__).with_name("qx-2026-q08-q30-classification-decisions.json")
+OUTPUT = Path(__file__).with_name("qx-2026-q08-q30-classification-decisions-rebased-2026-10-10.json")
 SOURCE_ID = 44
 SOURCE_URL = "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf"
 
@@ -74,6 +74,17 @@ def main():
                 "SELECT * FROM question_canonical_topics WHERE question_id=? AND canonical_topic_id=?",
                 (question_id, topic_id),
             ).fetchone()
+            target_state = {
+                "relation_type": new_type,
+                "confidence": confidence,
+                "source_document_id": SOURCE_ID,
+                "source_page": page,
+                "source_excerpt": excerpt,
+                "review_status": "published",
+            }
+            if row is not None and all(dict(row).get(column) == value for column, value in target_state.items()):
+                # Safe rebase: this exact decision was already applied in an earlier batch.
+                continue
             if old_type is None:
                 if row is not None:
                     raise ValueError(f"Unexpected existing relation: {key}")

@@ -1,0 +1,111 @@
+{
+  "format": "lesson-independent-second-review/v1",
+  "audit_date": "2026-10-10",
+  "reviewer": "Codex — revisão editorial independente",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "1ª fase",
+    "reviewed_artifact": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+    "method": "Leitura integral das seções alteradas e appendidas nos seis tópicos; conferência read-only das versões e seções vigentes no SQLite; confronto com o Programa das Provas oficial; recálculo independente dos exemplos de matemática, domínios e geometria espacial. A avaliação considera as lições como introduções curtas e registra lacunas de escopo sem confundi-las com erros factuais.",
+    "official_program_source": {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "institution": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_copy_reviewed": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+      "relevant_pages": "Língua Portuguesa e literaturas: pp. 3–5; Matemática: pp. 5–6; Geografia: pp. 7–8."
+    },
+    "interpretation": "publish_candidate indica que a versão revisada não tem bloqueador factual ou pedagógico para ser considerada candidata à publicação como introdução. Não altera o SQLite nem publica conteúdo; o pacote de correções conserva review."
+  },
+  "items": [
+    {
+      "curriculum_topic_id": 2472,
+      "official_label": "Morfologia da língua portuguesa",
+      "reviewed_version": "1.0.4",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "Em “os estudantes jovens”, jovens é adjetivo que caracteriza o substantivo expresso estudantes; em “os jovens”, o adjetivo está substantivado pelo artigo, conforme a análise escolar apresentada."
+      ],
+      "scope_notes": [
+        "A lição é metodológica e introdutória; não se apresenta como cobertura exaustiva da morfologia."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "official_label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "reviewed_version": "1.0.6",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "Títulos, autoria e extensão da lista citada correspondem ao programa oficial; a indicação de seis contos de Morangos mofados é correta, e o texto orienta consultar a seleção oficial."
+      ],
+      "scope_notes": [
+        "O exemplo é explicitamente hipotético, não atribuído a obra obrigatória; análises textuais específicas das leituras ainda são necessárias e a lição declara esse limite."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "official_label": "Conjuntos numéricos",
+      "reviewed_version": "1.2.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "A convenção ℕ={0,1,2,…}, a regra de decimal finito, a fórmula de contagem de divisores e as regras de MDC/MMC estão corretamente qualificadas.",
+        "A∪B e A∩B, MDC(12,18)=6 e MMC(12,18)=36, nove divisores positivos de 36, a₁₀=31 na PA, a₆=96 na PG, os montantes de juros simples/compostos e 200×0,85×1,15=195,50 foram conferidos."
+      ],
+      "scope_notes": [
+        "Módulo, desigualdades e outros conteúdos do programa podem exigir prática posterior; a lição se identifica como introdução."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "official_label": "Funções",
+      "reviewed_version": "1.3.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "Para h(x)=(√(x−1))/(x−2), as condições x≥1 e x≠2 resultam em Dom(h)=[1,2)∪(2,∞); a notação deixa claro que a raiz cobre apenas o numerador.",
+        "Os valores C(5)=16, d=7 para C=20, a transformação de f(x)=x² e (f∘g)(2)=24 estão corretos."
+      ],
+      "scope_notes": [
+        "Funções trigonométricas, inversas e outros tipos e operações previstos no programa permanecem para etapas posteriores, conforme o limite declarado."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "official_label": "Geometria espacial",
+      "reviewed_version": "1.2.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "A fórmula g=√(h²+(R−r)²) e A_l=π(R+r)g estão corretamente condicionadas a tronco de cone circular reto, com g como geratriz inclinada; a área total soma as duas bases circulares.",
+        "Cilindro r=3 cm, h=4 cm: A_l=24π cm² e A_total=42π cm². Cone reto r=3 cm, g=5 cm: A_l=15π cm² e A_total=24π cm².",
+        "Tronco reto R=3 cm, r=1 cm, h=3 cm: g=√13 cm, A_l=4π√13 cm², A_total=(4√13+10)π cm² e V=13π cm³."
+      ],
+      "scope_notes": [
+        "Áreas de prismas e pirâmides, troncos de pirâmide e aplicações mais amplas permanecem para etapas posteriores; o texto declara esse limite."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "official_label": "Componentes físico-naturais do espaço geográfico",
+      "reviewed_version": "1.2.3",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": [
+        "O solo é corretamente situado na pedosfera como interface de materiais minerais, matéria orgânica, água, ar e organismos, sem reduzi-lo à litosfera.",
+        "As relações entre infiltração, escoamento, erosão e cobertura/compactação são apresentadas de modo condicional, considerando solo, declividade e chuva."
+      ],
+      "scope_notes": [
+        "A lição oferece uma visão sistêmica e um exemplo de bacia; tectônica, climas, biomas, conservação, riscos, mudanças climáticas e gestão ambiental exigem etapas próprias, como o texto informa."
+      ]
+    }
+  ]
+}

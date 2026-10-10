@@ -1,0 +1,18 @@
+{
+  "summary": "Aprova somente relações editoriais sustentadas pela prova oficial Q/X 2026, preserva dois candidatos inadequados em revisão e fora dos treinos, e detalha calorimetria/termodinâmica e óptica para QX 8 e QX 12.",
+  "decisions": [],
+  "not_approved": [
+    {
+      "question_id": 303,
+      "canonical_topic_id": 2495,
+      "occurrence_key": "vu-2026-qx-f1-q15",
+      "reason": "Não promover: o vínculo amplo com Território e geopolítica não é específico o bastante para esta questão. A relação secundária mais precisa com Globalização, economia e trabalho já está publicada; o candidato antigo permanece em revisão e fora do treino."
+    },
+    {
+      "question_id": 318,
+      "canonical_topic_id": 2492,
+      "occurrence_key": "vu-2026-qx-f1-q30",
+      "reason": "Não promover: a questão trata do Contrato Social de Rousseau e não sustenta associação a História do Brasil. O candidato permanece em revisão e fora do treino."
+    }
+  ]
+}

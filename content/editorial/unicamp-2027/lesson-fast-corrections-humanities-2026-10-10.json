@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "package_id": "lesson-fast-corrections-humanities-2026-10-10",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "1ª fase",
+    "curriculum_topic_ids": [2472, 2474, 2475, 2476, 2481, 2487],
+    "database_baseline": ".local/content/content.sqlite",
+    "status_policy": "Todas as revisões permanecem em review; não publicar."
+  },
+  "revisions": [
+    {
+      "curriculum_topic_id": 2472,
+      "supersedes_version": "1.0.3",
+      "editorial_version": "1.0.4",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "sections": [
+        {
+          "type": "summary",
+          "content": "Analise a palavra em três passos: identifique a forma, descreva a relação morfológica e explique o efeito que ela produz naquele enunciado. Distinga derivação de flexão e use a função contextual para reconhecer a classe.\n\n**Autochecagem:** em “os estudantes jovens”, qual é o substantivo expresso que “jovens” caracteriza? **Resposta:** “estudantes”; aqui, “jovens” acrescenta uma característica ao substantivo expresso. Compare com “os jovens organizaram a mostra”: nesta análise de gramática escolar, “jovens” aparece substantivado pelo artigo “os” e nomeia o grupo. O referente do grupo depende do contexto, mas o substantivo ao qual “jovens” se liga na primeira expressão está explícito."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "supersedes_version": "1.0.5",
+      "editorial_version": "1.0.6",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "sections": [
+        {
+          "type": "theory",
+          "content": "A leitura literária observa como escolhas de composição e linguagem organizam a experiência do texto. Em prosa, observe narrador, focalização, personagens, tempo, espaço e conflito; narrador não é automaticamente o autor. Na poesia, examine voz, imagens, ritmo, sonoridade, versos e quebras. No teatro, acompanhe falas, rubricas, ação, cenas e conflito. Relacione uma interpretação a evidências localizadas na obra e distinga o que o texto mostra do que é hipótese do leitor.\n\nA relação de leituras obrigatórias da edição 2027 inclui *Prosas seguidas de odes mínimas*, *Canções escolhidas*, *Os funerais da Mamãe Grande*, seis contos de *Morangos mofados*, *Olhos d’água*, *No seu pescoço*, *Vida e morte de M. J. Gonzaga de Sá*, *Memórias Póstumas de Brás Cubas* e *A vida não é útil*. Para os títulos com seleção, é necessário consultar a lista oficial para identificar os textos exigidos.\n\n**Erros comuns**\n\nNão atribua automaticamente ao autor uma fala de narrador ou personagem. Não use época literária como molde que determina cada passagem. Evite resumir o enredo no lugar de analisar a composição e não sustente uma interpretação apenas em biografia ou opinião externa.\n\n**Limite desta etapa:** esta lição apresenta um método geral; não traz leitura guiada nem análise demonstrada de uma obra ou texto obrigatório, e não ensina ainda a relacionar uma passagem específica a dimensões sociais, morais ou políticas. Ela não substitui a leitura das obras nem cobre, por si só, o programa literário. Essas análises devem ser feitas em etapas próprias, com passagens efetivamente lidas e localizadas."
+        },
+        {
+          "type": "example",
+          "content": "**Exemplo metodológico inventado, não retirado de uma obra obrigatória:** imagine um conto em que o narrador chama uma festa de grandiosa, mas menciona repetidamente cadeiras vazias e pratos intocados.\n\n1. **Evidência:** a avaliação “grandiosa” contrasta com detalhes de ausência.\n2. **Voz e forma:** a descrição passa pelo narrador; sua avaliação não é automaticamente uma declaração do autor.\n3. **Efeito possível:** o contraste pode produzir ironia ou distância entre aparência e experiência. Seria preciso ler o conjunto para decidir entre essas interpretações.\n4. **Limite da conclusão:** sem outras evidências, não se pode afirmar qual grupo é criticado nem atribuir à obra uma posição social ou política definida.\n\nO exemplo apenas demonstra como começar uma leitura formal. Não é análise de literatura portuguesa nem de qualquer título da lista oficial. Para aplicar o método às leituras obrigatórias, registre o texto e a localização da passagem e examine a obra em seu conjunto."
+        },
+        {
+          "type": "summary",
+          "content": "Ao ler, registre quem fala, quais escolhas de gênero e composição são observáveis, que efeito elas produzem e que interpretação as evidências sustentam. Separe evidência, interpretação e hipótese; compare recorrências e tensões no conjunto da obra ou dos textos selecionados.\n\n**Autochecagem:** o exemplo da festa comprova uma interpretação social de uma obra obrigatória? **Resposta:** não; é inventado e só ilustra uma pergunta de leitura. Uma análise das dimensões sociais, morais ou políticas exige passagens reais, localizadas e interpretadas no contexto da obra.\n\nEsta etapa é introdutória e metodológica. Permanecem por fazer leituras guiadas e análises específicas das obras e seleções da edição; não se deve considerar o tópico integralmente coberto com esta lição."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "supersedes_version": "1.2.2",
+      "editorial_version": "1.2.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "sections": [
+        {
+          "type": "theory",
+          "content": "Neste material, adotamos **ℕ={0,1,2,…}**. Os inteiros ℤ incluem os negativos; os racionais ℚ são quocientes m/n, com m,n∈ℤ e n≠0; os reais ℝ também incluem irracionais, como √2. Para conjuntos A e B, A∪B reúne os elementos que pertencem a pelo menos um deles, e A∩B reúne os que pertencem a ambos. A∈B e A⊆B expressam relações diferentes: x∈A afirma que x é elemento de A; A⊆B afirma que todo elemento de A também pertence a B. Em ℕ e ℤ, respeite sinais e precedência das operações; divisão por zero é indefinida.\n\nMódulo |x| é a distância de x a zero; desigualdades podem ser representadas por intervalos. Uma fração irredutível tem representação decimal finita se, e somente se, seu denominador possui apenas fatores primos 2 e/ou 5; nos demais casos, a expansão é periódica. A fatoração prima permite contar divisores: se N=p^a q^b, com p e q primos distintos, N tem (a+1)(b+1) divisores positivos. Para inteiros positivos, o MDC usa os menores expoentes comuns na fatoração e o MMC usa os maiores expoentes de todos os primos presentes.\n\nUma sequência é uma lista definida por uma regra. Na progressão aritmética (PA), a diferença d entre termos consecutivos é constante e a_n=a_1+(n−1)d; na progressão geométrica (PG), a razão q é constante e a_n=a_1q^(n−1). Porcentagem é uma razão por cem. Para capital C, taxa i por período e t períodos, juros simples dão M=C(1+it), enquanto juros compostos dão M=C(1+i)^t, sob taxa constante e sem aportes. A unidade de i e a de t devem ser compatíveis.\n\n**Erros comuns**\n\nNão confunda x∈A (pertinência de um elemento) com A⊆B (inclusão de conjuntos), nem união com interseção. Não presuma outra convenção para ℕ sem declará-la; respeite sinais, precedência e denominadores não nulos. Não some percentuais sucessivos sobre a mesma base quando o valor-base muda. Em fatoração, o MDC não inclui primos que não sejam comuns; o MMC inclui todos os primos presentes. Esta etapa é uma introdução: desigualdades, módulo, sequências, progressões e matemática financeira requerem prática adicional."
+        },
+        {
+          "type": "example",
+          "content": "Considere A={1,2,4,6}, B={2,3,6} e C={1,2,3,4,6}. Como 2 é elemento de A, escrevemos **2∈A**. Como todo elemento de A está em C, escrevemos **A⊆C**. A inclusão compara conjuntos inteiros; a pertinência relaciona um elemento a um conjunto. Além disso, A∪B={1,2,3,4,6} e A∩B={2,6}.\n\nPara 12=2²·3 e 18=2·3², MDC(12,18)=2¹·3¹=6, usando os menores expoentes comuns; MMC(12,18)=2²·3²=36, usando os maiores expoentes. Como verificação, 36=2²·3² tem (2+1)(2+1)=9 divisores positivos."
+        },
+        {
+          "type": "summary",
+          "content": "Declare a convenção de ℕ; identifique os elementos e as operações; confira sinais e restrições; simplifique a fração antes de decidir se o decimal termina; use fatoração para divisores, MDC e MMC. Em progressões e juros, explicite a regra, a base e as unidades.\n\n**Autochecagem:** para A={1,2} e B={1,2,3}, é correto dizer 2∈A e A⊆B? **Resposta:** sim. A primeira afirmação trata 2 como elemento de A; a segunda afirma que todos os elementos de A pertencem a B. Também, para X={1,2} e Y={2,3}, X∪Y={1,2,3} e X∩Y={2}."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "supersedes_version": "1.3.2",
+      "editorial_version": "1.3.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "sections": [
+        {
+          "type": "theory",
+          "content": "Uma função associa a cada entrada do domínio exatamente uma saída. Em f:D→C, D é o domínio, C o contradomínio e a imagem reúne apenas os valores de C efetivamente obtidos. Uma reta vertical que cruza um gráfico em mais de um ponto mostra que ele não define y como função de x.\n\nLeia eixos, escala, unidade e intervalo. Zeros satisfazem f(x)=0; o intercepto vertical (0,f(0)) só existe se 0 pertencer ao domínio. A taxa média de variação entre a e b, com a≠b, é [f(b)−f(a)]/(b−a). Em composição (f∘g)(x)=f(g(x)), aplique g primeiro e confirme que sua saída pertence ao domínio de f. Composição não é produto e, em geral, a ordem importa.\n\nO domínio depende da expressão e do contexto: para √g(x), exija g(x)≥0; para p(x)/q(x), exija q(x)≠0. Uma simplificação algébrica não devolve ao domínio pontos excluídos pela expressão original. Modelos devem respeitar o contexto; dados observados não justificam extrapolação automática.\n\n**Erros comuns**\n\nNão confunda domínio, contradomínio e imagem; f(g(x)) com f(x)g(x); nem zeros com interceptos verticais. Verifique restrições antes e depois de simplificar, escala e unidades dos eixos e o domínio da função interna na composição.\n\n**Limite desta etapa:** esta lição trabalha definições, leitura de representações, domínio, composição e taxa de variação, com exemplos selecionados de funções. Não desenvolve de modo sistemático todos os tipos e operações do programa, em particular funções trigonométricas, equações e inequações funcionais. Esses conteúdos devem ser estudados em etapas próprias; esta introdução não representa cobertura integral do tópico."
+        },
+        {
+          "type": "summary",
+          "content": "Diga o que entrada e saída representam; determine o domínio antes de operar; leia escala e unidade; substitua valores para conferir e interprete a resposta no contexto. Em composição, aplique primeiro a função interna e verifique o domínio intermediário.\n\n**Autochecagem:** em h(x)=(√(x−1))/(x−2), x=1 pertence ao domínio, x=2 não, e x=3 pertence. Para f(x)=x²−1 e g(x)=2x+1, (f∘g)(2)=f(5)=24.\n\nEsta etapa não cobre com profundidade funções trigonométricas, equações e inequações funcionais, nem todos os tipos e operações previstos no programa. Trate esses assuntos nas etapas seguintes; não conclua que o tópico inteiro está coberto aqui."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "supersedes_version": "1.2.2",
+      "editorial_version": "1.2.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "sections": [
+        {
+          "type": "theory",
+          "content": "Duas retas no espaço podem ser coincidentes, paralelas distintas, concorrentes (coplanares e com um ponto comum) ou reversas (não coplanares). Uma reta e um plano podem ser paralelos sem ponto comum, ter a reta contida no plano ou cruzar-se em um ponto. No último caso, são perpendiculares quando a reta é perpendicular a toda reta do plano que passa pelo ponto de interseção. Planos paralelos distintos não se encontram; planos perpendiculares formam diedro de 90°.\n\nPoliedros têm faces planas. Prismas e cilindros têm volume B·h; pirâmides e cones têm volume B·h/3, sempre com h perpendicular à base. A esfera de raio r tem volume 4πr³/3 e área 4πr². Em cilindro de raio r e altura h, A_l=2πrh e A_total=2πr(h+r). Em cone reto de raio r e geratriz g, A_l=πrg e A_total=πr(g+r). Para tronco de cone circular reto com bases paralelas de raios R e r, A_l=π(R+r)g e V=πh(R²+Rr+r²)/3; g é a geratriz inclinada, com g=√(h²+(R−r)²). A área total inclui as duas bases: A_total=A_l+πR²+πr². Área total considera apenas superfícies externas; planificações ajudam a identificar faces, mas é preciso verificar quais arestas se unem. Volume usa unidades cúbicas e área unidades quadradas; 1 L=1 dm³=1000 cm³.\n\n**Erros comuns**\n\nNão omita retas coincidentes nem confunda paralelas distintas com coincidentes. Retas reversas não se encontram e não são coplanares. Uma reta secante a um plano não é necessariamente perpendicular. Não use geratriz ou apótema como altura perpendicular para volume; não some superfícies internas coladas nem misture unidades de área e volume.\n\n**Limite desta etapa:** há exemplos resolvidos de áreas laterais e totais de cilindro, cone e tronco circular reto, mas não de áreas de prismas e pirâmides. Troncos de pirâmide e aplicações mais amplas de áreas de superfícies ficam para etapas posteriores; esta lição é introdutória e não cobre sozinha toda a geometria espacial do programa."
+        },
+        {
+          "type": "summary",
+          "content": "Classifique cada par de objetos antes de aplicar fórmulas: coincidente, paralelo distinto, concorrente ou reverso para duas retas; contido, paralelo ou secante para reta e plano. Secância não implica perpendicularidade: verifique se a reta é perpendicular às retas do plano que passam pelo ponto. Depois identifique base, altura perpendicular, faces externas e unidades.\n\n**Autochecagem:** duas retas reversas não são coplanares; uma reta contida no plano não o cruza em um único ponto; uma reta perpendicular ao plano é perpendicular às retas desse plano pelo ponto de interseção. Pirâmide de base 36 e altura 4 tem volume 48.\n\nA etapa demonstra áreas laterais e totais de cilindro, cone e tronco circular reto; áreas de prismas e pirâmides, troncos de pirâmide e aplicações mais amplas requerem etapas próprias. A geometria espacial não se esgota aqui."
+        },
+        {
+          "type": "example",
+          "append": "**Áreas de superfícies.** Um cilindro de raio 3 cm e altura 4 cm tem A_l=2π·3·4=24π cm² e A_total=24π+2π·3²=42π cm². Um cone reto de raio 3 cm e geratriz 5 cm tem A_l=π·3·5=15π cm² e A_total=15π+π·3²=24π cm².\n\nPara um tronco circular reto com R=3 cm, r=1 cm e h=3 cm, primeiro calcule g=√(3²+(3−1)²)=√13 cm. Então A_l=π(3+1)√13=4π√13 cm²; A_total=4π√13+π·3²+π·1²=(4√13+10)π cm². O volume é V=π·3(3²+3·1+1²)/3=13π cm³. A área usa unidades quadradas e o volume, cúbicas."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "supersedes_version": "1.2.2",
+      "editorial_version": "1.2.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "sections": [
+        {
+          "type": "theory",
+          "content": "O sistema terrestre pode ser estudado pelas interações entre litosfera (rochas e relevo), hidrosfera (água), atmosfera, criosfera (água congelada) e biosfera (vida e suas relações com os demais componentes). **Solos compõem a pedosfera**, uma interface de material mineral, matéria orgânica, água, ar e organismos; não são apenas rocha. Água, carbono, sedimentos e nutrientes circulam entre componentes, e energia solar e interna impulsiona processos.\n\nEsta visão integrada ajuda a formular relações entre processos: tectônica pode construir relevo; intemperismo altera rochas; erosão transporta materiais e deposição os acumula; circulações atmosférica e oceânica redistribuem energia e umidade; bacias organizam a drenagem até um exutório. Clima, solo, relevo e comunidades participam da dinâmica dos biomas, que não são unidades homogêneas. Usos humanos também podem modificar fluxos, ecossistemas e riscos.\n\n**Erros comuns**\n\nNão reduza solos a rochas nem confunda tempo atmosférico (condição de curto prazo) com clima (padrões de longo prazo). Bioma não é sinônimo de clima. Não atribua um evento extremo a uma causa única sem evidências e escala adequadas; disponibilidade física de água não significa acesso igualitário.\n\n**Limite desta etapa:** esta é uma visão geral das interações físico-naturais, ilustrada por uma bacia hidrográfica. Não ensina em detalhe tectônica, classificações climáticas, dinâmica de cada bioma, conservação, riscos e desastres, mudanças climáticas ou planejamento ambiental. Esses conteúdos exigem módulos próprios; esta aula não substitui o percurso detalhado do programa."
+        },
+        {
+          "type": "summary",
+          "content": "Relacione componentes terrestres e fluxos de matéria e energia; reconheça o solo como interface da pedosfera; identifique processo, escala, condições e intervenções humanas. Diferencie tempo atmosférico de clima e evite explicações monocausais.\n\n**Autochecagem:** solo não é sinônimo de litosfera: integra a pedosfera e conecta materiais minerais, matéria orgânica, água, ar e organismos. Em uma encosta, relevo, solo, chuva e cobertura vegetal influenciam conjuntamente o escoamento e a erosão.\n\nEsta lição oferece uma visão integrada, não módulos detalhados de tectônica, clima, biomas, conservação, riscos, mudança climática e gestão ambiental. Estude esses subtemas nas etapas seguintes; não considere o tópico integralmente coberto por este panorama."
+        }
+      ]
+    }
+  ]
+}

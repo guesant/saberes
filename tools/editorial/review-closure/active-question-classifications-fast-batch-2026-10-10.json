@@ -1,0 +1,357 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "scope": {
+    "backlog": "content/editorial/unicamp-2027/active-question-classification-backlog-luna-2026-10-10.json",
+    "representatives": [
+      { "source_document_id": 36, "edition": 2025, "booklet": "QZ" },
+      { "source_document_id": 44, "edition": 2026, "booklet": "QX" },
+      { "source_document_id": 335, "edition": 2027, "booklet": "QT" }
+    ],
+    "authority": "Current .local/content/content.sqlite, read-only; the backlog is interpretive guidance and current rows/relations were rechecked before drafting.",
+    "classification_notice": "All published relations here are editorial mappings, not official Comvest tags. Secondary relations describe contextual or supporting concepts and are labeled as such in source_excerpt.",
+    "database_modified": false
+  },
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 63, "canonical_topic_id": 2520 },
+      "expected": { "relation_type": "related", "confidence": 0.76, "source_document_id": 36, "source_page": 21, "source_excerpt": "Revisão editorial: o medicamento é apenas contexto; o item avalia cálculo de composição do sal/proporção molar, não conceitos de química orgânica. Candidato preservado como rascunho; ver nova relação publicada com quimica.reacoes.", "review_status": "draft" },
+      "changes": { "review_status": "draft", "source_document_id": 36, "source_page": 21, "source_excerpt": "A venlafaxina é apenas o contexto do cálculo de proporção molar entre o sal e HCl; Química orgânica não é exigida. Relação editorial rejeitada, mantida como rascunho, não como tag oficial." },
+      "reason": "Manter a relação já rejeitada como rascunho, preservando a trilha; o vínculo publicado de Reações químicas cobre o cálculo estequiométrico.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/63", "detail": "QZ 2025, p. 21: o comando compara massas molares do cloridrato, da venlafaxina neutra e do HCl para inferir proporção molar; não cobra função ou reação orgânica." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 303, "canonical_topic_id": 2495 },
+      "expected": { "relation_type": "related", "confidence": 0.88, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.78, "source_document_id": 44, "source_page": 6, "source_excerpt": "A circulação global de alimentos e as cadeias de produção/consumo são contexto para a homogeneização dos hábitos alimentares; relação editorial contextual, não habilidade central nem tag oficial Comvest.", "review_status": "published" },
+      "reason": "Publicar Território e geopolítica somente como relação secundária contextual; a ligação mais direta com globalização já está publicada em outro vínculo da questão.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/303", "detail": "QX 2026, p. 6: o texto relaciona circulação internacional de alimentos ultraprocessados, cadeias produtivas e homogeneização alimentar; a questão não pede análise territorial ou geopolítica." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 318, "canonical_topic_id": 2492 },
+      "expected": { "relation_type": "primary", "confidence": 0.9, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "review_status": "draft", "source_document_id": 44, "source_page": 12, "source_excerpt": "O excerto é de Mariano Moreno, secretário argentino em Buenos Aires, e trata da tradução de Rousseau e da obediência política; História do Brasil não corresponde ao objeto. Relação editorial rejeitada, mantida como rascunho." },
+      "reason": "A atribuição a História do Brasil é incorreta: agente e cenário são argentinos. Preservar a linha como rascunho e publicar História do período moderno como principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/318", "detail": "QX 2026, p. 12: o próprio enunciado identifica Mariano Moreno como secretário do primeiro governo da Argentina (1810–1811) e situa o texto em Buenos Aires." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 318, "canonical_topic_id": 2511 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 318, "canonical_topic_id": 2511, "relation_type": "primary", "confidence": 0.94, "source_document_id": 44, "source_page": 12, "source_excerpt": "O item situa em 1810 a tradução e a intervenção política de Mariano Moreno sobre O contrato social, no contexto das independências hispano-americanas; classificação editorial em História do período moderno, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Usar o tópico histórico existente mais apoiado pelo período e pelo conteúdo político do texto, sem manter a classificação nacional brasileira errada.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/318", "detail": "QX 2026, p. 12: o texto de 1810 discute a tradução de Rousseau por Mariano Moreno e a origem da obediência política na Argentina." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 319, "canonical_topic_id": 2493 },
+      "expected": { "relation_type": "related", "confidence": 0.85, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.82, "source_document_id": 44, "source_page": 13, "source_excerpt": "A circulação internacional das notícias é dimensão contextual da questão; o conteúdo histórico central é o Estado Novo e a censura no Brasil. Relação secundária editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Manter a dimensão internacional da imprensa como contexto secundário, sem competir com História do Brasil, já publicada como principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/319", "detail": "QX 2026, p. 13: a questão trata do Estado Novo, de Vargas e da censura no Brasil, comparando relatos de correspondentes internacionais." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 320, "canonical_topic_id": 2495 },
+      "expected": { "relation_type": "related", "confidence": 0.85, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.8, "source_document_id": 44, "source_page": 13, "source_excerpt": "A disputa comercial entre China e Estados Unidos e a adesão à OMC dão contexto geopolítico ao tema; a relação é editorial, secundária e contextual, não habilidade central nem tag oficial Comvest.", "review_status": "published" },
+      "reason": "Conservar uma conexão contextual com geopolítica em nível secundário; Mundo contemporâneo permanece como vínculo principal publicado.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/320", "detail": "QX 2026, p. 13: o texto compara expectativas sobre a entrada da China na OMC e menciona acordo bilateral e comércio internacional." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 322, "canonical_topic_id": 2492 },
+      "expected": { "relation_type": "primary", "confidence": 0.9, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "review_status": "draft", "source_document_id": 44, "source_page": 14, "source_excerpt": "O item compara jus soli e jus sanguinis no mundo e em diferentes períodos; a presença do Brasil no mapa não o torna conteúdo de História do Brasil. Relação editorial rejeitada, preservada como rascunho." },
+      "reason": "A classificação nacional específica não é sustentada por uma comparação transnacional de cidadania e nacionalidade; manter o registro rejeitado e usar História ampla como vínculo editorial principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/322", "detail": "QX 2026, p. 14: texto e mapa comparam princípios de nacionalidade e sua distribuição entre países, sem caso brasileiro específico." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 322, "canonical_topic_id": 2474 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 322, "canonical_topic_id": 2474, "relation_type": "primary", "confidence": 0.84, "source_document_id": 44, "source_page": 14, "source_excerpt": "O item compara historicamente jus soli e jus sanguinis, conceitos de cidadania e nacionalidade e sua distribuição entre países; História é o melhor conceito existente, sem tópico canônico específico de cidadania comparada. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Preservar uma classificação ampla de História, que é sustentada pelo recorte histórico comparativo, sem forçar História do Brasil ou inventar um tópico de cidadania.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/322", "detail": "QX 2026, p. 14: o texto situa a invenção da dicotomia jus soli/jus sanguinis no século XIX e compara princípios de pertencimento no Antigo Regime." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 323, "canonical_topic_id": 2490 },
+      "expected": { "relation_type": "primary", "confidence": 0.91, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "review_status": "draft", "source_document_id": 44, "source_page": 15, "source_excerpt": "O experimento mede o efeito de microbiotas de diferentes populações sobre a resposta de camundongos a infecção intestinal; não avalia uma interação ecológica entre populações ou espécies. Relação editorial rejeitada como principal e mantida como rascunho." },
+      "reason": "Ecologia não descreve o foco medido pelo experimento; preservar o vínculo questionado e classificar o tema de microbiota e saúde pelo tópico existente mais próximo.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/323", "detail": "QX 2026, p. 15: camundongos colonizados com microbiotas humanas são comparados quanto à inflamação e à infecção por Citrobacter rodentium." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 323, "canonical_topic_id": 2513 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 323, "canonical_topic_id": 2513, "relation_type": "primary", "confidence": 0.88, "source_document_id": 44, "source_page": 15, "source_excerpt": "O item compara a resposta à infecção intestinal em camundongos colonizados por microbiotas de diferentes populações humanas; Biodiversidade e saúde humana é o tópico existente mais próximo da relação microbiota–hospedeiro–saúde. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Usar o conceito canônico existente mais próximo da relação entre microbiota e saúde, sem alegar que o modelo animal seja conteúdo oficial ou criar tópico de fisiologia microbiana.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/323", "detail": "QX 2026, p. 15: a pergunta relaciona diferenças geográficas na composição da microbiota intestinal com resposta do hospedeiro a patógeno e inflamação." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 324, "canonical_topic_id": 2473 },
+      "expected": { "relation_type": "primary", "confidence": 0.9, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "confidence": 0.88, "source_document_id": 44, "source_page": 15, "source_excerpt": "O anelamento remove tecidos condutores do caule; o item exige distinguir xilema e floema e interpretar transporte vegetal. Biologia é mantida como classificação ampla porque não há tópico canônico específico de anatomia/fisiologia vegetal. Relação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Publicar a classificação ampla de Biologia que o conteúdo sustenta; não inventar um tópico específico ausente do vocabulário canônico.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/324", "detail": "QX 2026, p. 15: o item pergunta quais vasos são eliminados pelo anelamento e compara efeitos sobre folhas, frutos e transporte no caule." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 326, "canonical_topic_id": 2491 },
+      "expected": { "relation_type": "primary", "confidence": 0.94, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.78, "source_document_id": 44, "source_page": 15, "source_excerpt": "A ancestralidade comum é mencionada como contexto; a tarefa central ordena plasmogamia, cariogamia, mitose e meiose no ciclo haplonte de fungos. Relação secundária editorial contextual, não habilidade central nem tag oficial Comvest.", "review_status": "published" },
+      "reason": "Manter a referência evolutiva introdutória somente como contexto secundário e publicar Bases moleculares e celulares da vida como principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/326", "detail": "QX 2026, p. 15: o comando pede identificar eventos do ciclo haplonte de fungo, incluindo mitose, meiose, plasmogamia e cariogamia." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 326, "canonical_topic_id": 2512 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 326, "canonical_topic_id": 2512, "relation_type": "primary", "confidence": 0.94, "source_document_id": 44, "source_page": 15, "source_excerpt": "O item pede ordenar mitose, meiose, plasmogamia e cariogamia no ciclo de vida haplonte de um fungo; corresponde a Bases moleculares e celulares da vida. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Retargetar para o tópico canônico existente de processos celulares que correspondem ao ciclo pedido.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/326", "detail": "QX 2026, p. 15: a figura representa um ciclo de vida haplonte e as alternativas identificam eventos celulares em sequência." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 330, "canonical_topic_id": 2468 },
+      "expected": { "relation_type": "primary", "confidence": 0.9, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.8, "source_document_id": 44, "source_page": 17, "source_excerpt": "Matemática é a área ampla da tarefa, mas o procedimento específico é ler o gráfico de distribuição regional e comparar valores/percentuais; relação secundária editorial de agrupamento, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Preservar o assunto amplo como agrupamento secundário e classificar a habilidade efetivamente exercitada com o tópico existente de gráficos.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/330", "detail": "QX 2026, p. 17: a questão usa um gráfico de cardeais votantes por região em diferentes conclaves e exige comparar os dados." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 330, "canonical_topic_id": 2521 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 330, "canonical_topic_id": 2521, "relation_type": "primary", "confidence": 0.98, "source_document_id": 44, "source_page": 17, "source_excerpt": "O item interpreta dados de distribuição regional apresentados em gráfico e compara valores entre conclaves; interpretação de tabelas e gráficos é o procedimento diretamente exigido. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Especificar a habilidade matemática diretamente avaliada com o tópico canônico existente de interpretação de gráficos.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/330", "detail": "QX 2026, p. 17: o gráfico apresenta a distribuição dos cardeais votantes por região em cada conclave desde 2005." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 333, "canonical_topic_id": 2479 },
+      "expected": { "relation_type": "primary", "confidence": 0.98, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "review_status": "draft", "source_document_id": 44, "source_page": 17, "source_excerpt": "O item usa graus de soma, produto e diferença de polinômios; não modela nem interpreta função ou gráfico. Relação editorial incorreta, preservada como rascunho." },
+      "reason": "Manter Funções e gráficos como rascunho por não corresponder à operação pedida; publicar Polinômios, equações e inequações como tópico principal existente.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/333", "detail": "QX 2026, p. 17: dados os graus de p+q e p·q, pede-se inferir o grau de p−q." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 333, "canonical_topic_id": 2502 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 333, "canonical_topic_id": 2502, "relation_type": "primary", "confidence": 0.99, "source_document_id": 44, "source_page": 17, "source_excerpt": "O item fornece os graus de p+q e p·q e pede o grau de p−q; o conteúdo diretamente cobrado é operação com polinômios. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Usar o tópico canônico específico de polinômios já existente no cadastro.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/333", "detail": "QX 2026, p. 17: enunciado declara explicitamente os polinômios p(x), q(x), soma, produto e diferença." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 334, "canonical_topic_id": 2481 },
+      "expected": { "relation_type": "primary", "confidence": 0.95, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.8, "source_document_id": 44, "source_page": 18, "source_excerpt": "Geometria é o agrupamento amplo; a equação da reta, seu ângulo e a distância à origem são tratados mais precisamente por Geometria analítica. Relação ampla secundária editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Manter a categoria ampla como secundária e promover Geometria analítica, já relacionada e publicada, a principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/334", "detail": "QX 2026, p. 18: a questão fornece a equação y=ax+b, o ângulo da reta com o eixo y e sua distância à origem." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 334, "canonical_topic_id": 2507 },
+      "expected": { "relation_type": "secondary", "confidence": 0.96, "source_document_id": 44, "source_page": 18, "source_excerpt": "A questão fornece a equação de uma reta, seu ângulo com o eixo y e sua distância até a origem; pede o produto dos coeficientes da reta.", "review_status": "published" },
+      "changes": { "relation_type": "primary", "confidence": 0.99, "source_document_id": 44, "source_page": 18, "source_excerpt": "A questão usa equação da reta, ângulo e distância até a origem; Geometria analítica é o procedimento central. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Promover o tópico específico já publicado, que corresponde diretamente aos procedimentos geométricos pedidos.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/334", "detail": "QX 2026, p. 18: o enunciado fornece equação cartesiana da reta, ângulo com eixo e distância à origem." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 338, "canonical_topic_id": 2481 },
+      "expected": { "relation_type": "primary", "confidence": 0.96, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.8, "source_document_id": 44, "source_page": 19, "source_excerpt": "A configuração de quadrado e triângulo é o agrupamento amplo; Geometria plana descreve melhor o cálculo da área. Relação ampla secundária editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Manter Geometria como agrupamento secundário e especificar Geometria plana como principal; Trigonometria já está publicada como apoio secundário explícito.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/338", "detail": "QX 2026, p. 19: a figura mostra um quadrado e um triângulo PMQ; pede a área do triângulo e fornece cos(θ)=2/3." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 338, "canonical_topic_id": 2504 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 338, "canonical_topic_id": 2504, "relation_type": "primary", "confidence": 0.96, "source_document_id": 44, "source_page": 19, "source_excerpt": "O item determina a área de um triângulo inscrito entre lados paralelos de um quadrado; Geometria plana é o conteúdo principal, com cos(θ) como ferramenta auxiliar. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Aproveitar o tópico canônico específico de geometria plana, mantendo a trigonometria auxiliar publicada em separado.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/338", "detail": "QX 2026, p. 19: a questão relaciona um quadrado, ponto médio, ângulo e área de triângulo." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 339, "canonical_topic_id": 2468 },
+      "expected": { "relation_type": "related", "confidence": 0.98, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "review_status": "draft", "source_document_id": 44, "source_page": 19, "source_excerpt": "A questão define um conjunto por desigualdades com valor absoluto e pede contar os primos que pertencem a ele; Conjuntos numéricos e operações já é o vínculo primário específico publicado. Matemática genérica é redundante e fica preservada como rascunho.", "confidence": 0.78 },
+      "reason": "Encerrar a associação genérica redundante sem apagar o registro; a relação primária específica publicada permanece visível.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/339", "detail": "QX 2026, p. 19: define A em ℕ por duas desigualdades de valor absoluto e pergunta quantos primos pertencem ao conjunto." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 340, "canonical_topic_id": 2468 },
+      "expected": { "relation_type": "primary", "confidence": 0.98, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.8, "source_document_id": 44, "source_page": 19, "source_excerpt": "Matemática é o agrupamento amplo; a determinação simultânea de duas quantidades por duas condições lineares corresponde mais precisamente a Sistemas lineares e matrizes. Relação secundária editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Preservar Matemática como contexto amplo secundário e acrescentar o tópico canônico específico de sistemas lineares como principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/340", "detail": "QX 2026, p. 19: as quantidades de soldados e estrategistas devem satisfazer simultaneamente os totais de força e astúcia da tropa." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 340, "canonical_topic_id": 2503 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 340, "canonical_topic_id": 2503, "relation_type": "primary", "confidence": 0.97, "source_document_id": 44, "source_page": 19, "source_excerpt": "O item impõe duas equações lineares simultâneas para encontrar as quantidades de dois tipos de combatentes; corresponde a Sistemas lineares e matrizes. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Usar o conceito canônico existente que descreve diretamente a resolução simultânea das duas condições lineares.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/340", "detail": "QX 2026, p. 19: o enunciado define pontuações por tipo de combatente e exige igualar força e astúcia totais." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 341, "canonical_topic_id": 2481 },
+      "expected": { "relation_type": "primary", "confidence": 0.97, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "confidence": 0.8, "source_document_id": 44, "source_page": 19, "source_excerpt": "Geometria é o agrupamento amplo; a figura e o cálculo de área em um quadrado correspondem mais especificamente a Geometria plana. Relação ampla secundária editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Preservar a classificação ampla e especificar o tópico plano existente como principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/341", "detail": "QX 2026, p. 19: a figura é um quadrado com pontos nos lados e pede a área da região sombreada." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 341, "canonical_topic_id": 2504 },
+      "expected": { "exists": false },
+      "changes": { "question_id": 341, "canonical_topic_id": 2504, "relation_type": "primary", "confidence": 0.97, "source_document_id": 44, "source_page": 19, "source_excerpt": "A figura é um quadrado com pontos sobre os lados e a tarefa central é calcular área por relações geométricas planas. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Usar Geometria plana, tópico específico já existente, sem criar uma subdivisão taxonômica nova.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/341", "detail": "QX 2026, p. 19: medidas dos segmentos sobre os lados de um quadrado determinam a região sombreada." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 354, "canonical_topic_id": 2472 },
+      "expected": { "relation_type": "primary", "confidence": 0.94, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "confidence": 0.9, "source_document_id": 44, "source_page": 24, "source_excerpt": "A questão pede identificar os domínios macroscópico, submicroscópico e simbólico do modelo de Johnstone; Química é mantida como classificação ampla porque o mapa não oferece tópico canônico específico de representações químicas. Relação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Publicar o conceito amplo de Química, que é o melhor existente para representações químicas no vocabulário atual.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/354", "detail": "QX 2026, p. 24: a figura do triângulo de Johnstone identifica domínios de representação química; a questão pergunta quais rótulos correspondem aos domínios." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 354, "canonical_topic_id": 2488 },
+      "expected": { "relation_type": "related", "confidence": 0.85, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "review_status": "draft", "source_document_id": 44, "source_page": 24, "source_excerpt": "Reações químicas aparecem como exemplo no texto, mas a alternativa distingue representações macroscópica, submicroscópica e simbólica, não conteúdo sobre reações. Associação temática rejeitada e preservada como rascunho.", "confidence": 0.75 },
+      "reason": "Manter Reações químicas como rascunho: é um exemplo contextual e não o conceito que a questão pede identificar.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/354", "detail": "QX 2026, p. 24: o comando trata do triângulo de Johnstone e de seus três domínios de representação." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 356, "canonical_topic_id": 2488 },
+      "expected": { "relation_type": "primary", "confidence": 0.93, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "confidence": 0.96, "source_document_id": 44, "source_page": 25, "source_excerpt": "O item compara energia de combustão, densidade e massa molar de querosene e hidrogênio, calculando energia por massa e volume. Reações químicas é o tópico existente mais apoiado; classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Publicar Reações químicas como o melhor tópico canônico existente; não criar uma subcategoria de energia de reação ausente do cadastro.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/356", "detail": "QX 2026, p. 25: a tabela informa energia de combustão e propriedades dos combustíveis para comparação energética." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 357, "canonical_topic_id": 2472 },
+      "expected": { "relation_type": "primary", "confidence": 0.96, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "review_status": "draft", "source_document_id": 44, "source_page": 25, "source_excerpt": "O item calcula razão molar entre CO₂ e K₄Ti(O₂)₄ e variação percentual de massa; Química genérica é redundante diante do vínculo específico de Reações químicas. Registro preservado como rascunho.", "confidence": 0.8 },
+      "reason": "Encerrar a classificação genérica redundante sem apagar a linha; promover a relação específica existente com Reações químicas.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/357", "detail": "QX 2026, p. 25: enunciado e gráfico tratam de captura de CO₂; a resolução requer proporção molar e cálculo percentual de massa." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 357, "canonical_topic_id": 2488 },
+      "expected": { "relation_type": "related", "confidence": 0.9, "source_document_id": 44, "source_page": 25, "source_excerpt": "A questão calcula a razão molar entre CO₂ adsorvido e K₄Ti(O₂)₄ e a variação percentual de massa do sólido, aplicando proporções estequiométricas.", "review_status": "published" },
+      "changes": { "relation_type": "primary", "confidence": 0.98, "source_document_id": 44, "source_page": 25, "source_excerpt": "A questão calcula proporção molar entre CO₂ e K₄Ti(O₂)₄ e variação percentual de massa; Reações químicas é a classificação específica primária. Relação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Promover o vínculo específico já publicado, sustentado pelo cálculo estequiométrico do item.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/357", "detail": "QX 2026, p. 25: a resolução usa a razão molar do adsorvente e do CO₂ capturado e a variação percentual da massa do sólido." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 359, "canonical_topic_id": 2472 },
+      "expected": { "relation_type": "primary", "confidence": 0.96, "source_document_id": null, "source_page": null, "source_excerpt": null, "review_status": "review" },
+      "changes": { "relation_type": "secondary", "review_status": "draft", "source_document_id": 44, "source_page": 26, "source_excerpt": "A tabela de densidade e teor alcoólico caracteriza uma mistura ideal de água e etanol; Materiais e estados físicos é o vínculo específico existente. Química genérica fica preservada como rascunho redundante.", "confidence": 0.8 },
+      "reason": "Encerrar o vínculo genérico redundante, mantendo a linha e promovendo a classificação específica existente de propriedades de misturas.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/359", "detail": "QX 2026, p. 26: a questão completa uma tabela de massa específica e teor alcoólico para misturas de etanol e água." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 359, "canonical_topic_id": 2517 },
+      "expected": { "relation_type": "secondary", "confidence": 0.92, "source_document_id": 44, "source_page": 26, "source_excerpt": "Tabela de densidade e teor alcoólico em massa para uma mistura ideal de água e etanol; cálculo de propriedades da mistura.", "review_status": "published" },
+      "changes": { "relation_type": "primary", "confidence": 0.97, "source_document_id": 44, "source_page": 26, "source_excerpt": "A questão completa tabela de densidade e composição em massa de uma mistura ideal de água e etanol; Materiais e estados físicos é o conceito específico diretamente aplicado. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Promover o tópico existente de propriedades e composição de misturas, diretamente exigido pela tabela.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/359", "detail": "QX 2026, p. 26: o enunciado fornece composição e massa específica para determinar os valores faltantes da mistura água–etanol." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2752, "canonical_topic_id": 2495 },
+      "expected": { "relation_type": "related", "confidence": 0.88, "source_document_id": 335, "source_page": 6, "source_excerpt": "A tabela a seguir aponta os cinco maiores produtores de café no mundo, sendo o Brasil o mais importante deles (em termos de produção e exportação). Produção dos cinco principais produtores mundiais de café – safra 2025/2026 Produção em Total de 2025/2026 exportação País (em milhões de (em milhões de sacos de 60 kg) sacos de 60 kg) Brasil 63,000 37,000 Vietnã 30,800 24,600 Colômbia 13,800 11,500 Indonésia 12,450 7,800 Etiópia 11,600 7,800 Total estimado 178,800 123,800 (USDA, 2026. Dados disponív", "review_status": "draft" },
+      "changes": { "relation_type": "related", "confidence": 0.88, "source_document_id": 335, "source_page": 6, "source_excerpt": "A tabela mundial de produtores de café contextualiza o item; o comando avalia fatores físico-naturais da produção, já ligados ao tópico primário publicado. Território e geopolítica não é habilidade cobrada; relação rejeitada e preservada como rascunho.", "review_status": "draft" },
+      "reason": "Manter como rascunho a associação contextual não temática; a relação primária publicada com Componentes físico-naturais do espaço geográfico permanece correta.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2767", "detail": "QT 2027, p. 6: a tabela de produção de café é contexto; a pergunta pede fatores de clima, chuva, altitude e solo." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2753, "canonical_topic_id": 2495 },
+      "expected": { "relation_type": "related", "confidence": 0.88, "source_document_id": 335, "source_page": 7, "source_excerpt": "Em termos absolutos, a alta disponibilidade hídrica no Brasil não garante necessariamente uma oferta adequada de água, pois os recursos podem estar concentrados em certas áreas e a qualidade pode não atender às demandas de uso econômico dos recursos hídricos. (MAGALHÃES JUNIOR, A. P; LOPES, F. W. de A. Recursos Hídricos: as águas na interface sociedade-natureza. São Paulo: Oficina de Textos, 2022.) A partir da leitura do texto, assinale a alternativa correta.", "review_status": "draft" },
+      "changes": { "relation_type": "secondary", "confidence": 0.8, "source_document_id": 335, "source_page": 7, "source_excerpt": "A concentração espacial e a qualidade dos recursos hídricos contextualizam a disponibilidade e os usos econômicos da água; relação secundária editorial de território, não habilidade central nem tag oficial Comvest.", "review_status": "published" },
+      "reason": "Publicar Território e geopolítica como relação secundária contextual, conforme a distribuição espacial citada; Componentes físico-naturais permanece como vínculo principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2769", "detail": "QT 2027, p. 7: o texto afirma que recursos hídricos podem estar concentrados em certas áreas e sua qualidade pode não atender às demandas econômicas." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2771, "canonical_topic_id": 2513 },
+      "expected": { "relation_type": "primary", "confidence": 0.88, "source_document_id": 335, "source_page": 12, "source_excerpt": "A capacidade de eliminar substâncias tóxicas resultantes do metabolismo é muito importante aos seres vivos, pois permite a manutenção da homeostase. Assinale a alternativa que preenche corretamente as lacunas no excerto a seguir. A principal excreta (i) ________ é o ácido úrico, um composto nitrogenado que é pouco tóxico e (ii) ________ em água, sendo eliminado (iii) ________. Por sua vez, a principal excreta (iv) ________ é a ureia, sintetizada no fígado a partir da reação da amônia com o gás c", "review_status": "review" },
+      "changes": { "relation_type": "secondary", "review_status": "draft", "source_document_id": 335, "source_page": 12, "source_excerpt": "O item compara excreção de ácido úrico e ureia em grupos de vertebrados; não trata de saúde humana. Biodiversidade e saúde humana não é um tópico preciso para fisiologia/excreção animal; vínculo rejeitado e preservado como rascunho.", "confidence": 0.7 },
+      "reason": "Não aprovar o tópico voltado à saúde humana para uma questão de fisiologia animal comparada; manter o vínculo amplo de Biologia como principal, sem inventar tópico específico.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2805", "detail": "QT 2027, p. 12: o comando compara excreção de ácido úrico e ureia, solubilidade e eliminação em diferentes grupos de vertebrados." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2771, "canonical_topic_id": 2473 },
+      "expected": { "relation_type": "related", "confidence": 0.78, "source_document_id": 335, "source_page": 12, "source_excerpt": "A capacidade de eliminar substâncias tóxicas resultantes do metabolismo é muito importante aos seres vivos, pois permite a manutenção da homeostase. Assinale a alternativa que preenche corretamente as lacunas no excerto a seguir. A principal excreta (i) ________ é o ácido úrico, um composto nitrogenado que é pouco tóxico e (ii) ________ em água, sendo eliminado (iii) ________. Por sua vez, a principal excreta (iv) ________ é a ureia, sintetizada no fígado a partir da reação da amônia com o gás c", "review_status": "published" },
+      "changes": { "relation_type": "primary", "confidence": 0.94, "source_document_id": 335, "source_page": 12, "source_excerpt": "O item compara produtos nitrogenados de excreção e sua eliminação em grupos de vertebrados; Biologia é a classificação ampla mais precisa disponível no cadastro. Vínculo editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Promover Biologia ampla como principal, pois o foco é fisiologia animal e o cadastro não contém tópico canônico específico de excreção comparada.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2805", "detail": "QT 2027, p. 12: as lacunas distinguem grupos de animais pelas excretas nitrogenadas, sua toxicidade, solubilidade e via de eliminação." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2778, "canonical_topic_id": 2501 },
+      "expected": { "relation_type": "primary", "confidence": 0.88, "source_document_id": 335, "source_page": 14, "source_excerpt": "Vale a pena colocar energia solar na sua casa? Entenda e tire suas dúvidas. A função da energia solar fotovoltaica é usar a luz do sol como fonte de eletricidade. A fácil manutenção, o tempo de vida útil dos equipamentos e a vantagem ecológica fazem o sistema compensar financeiramente em muitos casos, embora o valor inicial de investimento seja alto. (Adaptado de Vale a pena colocar energia solar na sua casa? Entenda e tire suas dúvidas. UOL Tilt, 16/07/2024. http://www.uol.com.br/tilt/ faq/ener", "review_status": "review" },
+      "changes": { "relation_type": "primary", "confidence": 0.96, "source_document_id": 335, "source_page": 14, "source_excerpt": "O cálculo do retorno financeiro divide o investimento pelo valor mensal economizado, obtido como 90% do gasto mensal; envolve porcentagem e operações numéricas. Classificação editorial, não tag oficial Comvest.", "review_status": "published" },
+      "reason": "Publicar Conjuntos numéricos e operações como o tópico existente mais próximo do cálculo numérico exigido.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2819", "detail": "QT 2027, p. 14: o item estima o prazo de retorno dividindo o investimento pelo valor economizado mensalmente." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2778, "canonical_topic_id": 2468 },
+      "expected": { "relation_type": "related", "confidence": 0.78, "source_document_id": 335, "source_page": 14, "source_excerpt": null, "review_status": "published" },
+      "changes": { "relation_type": "secondary", "confidence": 0.78, "source_document_id": 335, "source_page": 14, "source_excerpt": "Matemática é o agrupamento amplo do cálculo de porcentagem e divisão; relação secundária editorial, não conceito específico cobrado nem tag oficial Comvest.", "review_status": "published" },
+      "reason": "Documentar explicitamente o vínculo amplo como secundário e contextual ao classificar a operação numérica específica.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2819", "detail": "QT 2027, p. 14: o item usa porcentagem e divisão para calcular o tempo de retorno do investimento fotovoltaico." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2804, "canonical_topic_id": 2488 },
+      "expected": { "relation_type": "related", "confidence": 0.88, "source_document_id": 335, "source_page": 20, "source_excerpt": "Um estudo publicado no periódico Cutaneous and Ocular Toxicology, em 2021, avaliou a eficácia da descontaminação da pele após exposição a uma quantidade definida do agente nervoso VX. Foram comparadas a lavagem com água e sabão, uma solução denominada RSDL e a ausência de lavagem. Mediram-se a velocidade de penetração do VX na pele e a quantidade de agente removida por extrações com fita; os resultados são mostrados nas figuras. (Elaboração Comvest com base em BUCHT, A. et al. Cutan. Ocul. Toxic", "review_status": "draft" },
+      "changes": { "review_status": "draft", "source_document_id": 335, "source_page": 20, "source_excerpt": "O contexto é químico, mas o comando compara valores e tendências em gráficos de penetração e remoção do VX; não exige mecanismo ou cálculo de reação. Reações químicas fica preservada como rascunho rejeitado.", "confidence": 0.78 },
+      "reason": "Manter o registro de Reações químicas em rascunho porque o contexto não é o conteúdo avaliado; Interpretação e elaboração de tabelas e gráficos já está publicada como principal.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2871", "detail": "QT 2027, p. 20: os gráficos comparam a taxa de penetração e a quantidade de agente VX removida por diferentes tratamentos." }]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 2807, "canonical_topic_id": 2518 },
+      "expected": { "relation_type": "secondary", "confidence": 0.72, "source_document_id": 335, "source_page": 21, "source_excerpt": "A questão descreve ligações covalentes entre moléculas de metacrilato e a estrutura reticulada do polímero; o foco principal é polimerização orgânica.", "review_status": "review" },
+      "changes": { "review_status": "draft", "source_document_id": 335, "source_page": 21, "source_excerpt": "Ligações covalentes são mencionadas para explicar a reticulação do polímero, mas o comando pergunta sobre possíveis danos diretos à saúde e não exige estrutura atômica ou ligação química. Relação irrelevante ao conteúdo avaliado, preservada como rascunho.", "confidence": 0.78 },
+      "reason": "Rejeitar como relação temática porque o conceito é explicativo/contextual e não é necessário para responder; preservar a relação e seu histórico em draft.",
+      "evidence": [{ "locator": "sqlite://question_occurrences/2877", "detail": "QT 2027, p. 21: embora o texto cite ligações covalentes, a pergunta final solicita avaliar danos diretos à saúde na aplicação/remoção de unhas de gel; Química orgânica já está publicada como principal." }]
+    }
+  ],
+  "unresolved": [],
+  "summary": {
+    "current_nonpublished_rows_in_scope": 27,
+    "current_rows_decided": 27,
+    "additional_relations_inserted": 9,
+    "unresolved_exceptions": [],
+    "notes": [
+      "The scoped questions-recent-apply.json was checked: its QX13 question-text repair does not create or modify a question_canonical_topics row in this decision set.",
+      "Several backlog recommendations were already published in SQLite and are intentionally absent here; decisions use current SQLite expected values.",
+      "The backlog's QZ 2025 Q62 missing-link finding is already present as a published Eletrochemistry relation in current SQLite and is not duplicated.",
+      "No database writes are authorized or performed by this manifest; dry-run validation used the script without --apply, which opens SQLite read-only and validates in memory."
+    ]
+  }
+}

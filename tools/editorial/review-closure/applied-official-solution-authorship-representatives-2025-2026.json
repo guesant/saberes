@@ -1,0 +1,4042 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T17:05:25.429913+00:00",
+  "database_before_sha256": "f434182cc17256252da4283b72e531700f16b6dfc41ab2c8b36e5c6bf63ef735",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 886
+      },
+      "expected": {
+        "question_id": 289,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/886",
+          "detail": "Solução publicada da questão 289; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 887
+      },
+      "expected": {
+        "question_id": 290,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/887",
+          "detail": "Solução publicada da questão 290; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 888
+      },
+      "expected": {
+        "question_id": 291,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/888",
+          "detail": "Solução publicada da questão 291; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 889
+      },
+      "expected": {
+        "question_id": 292,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/889",
+          "detail": "Solução publicada da questão 292; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 890
+      },
+      "expected": {
+        "question_id": 293,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/890",
+          "detail": "Solução publicada da questão 293; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 894
+      },
+      "expected": {
+        "question_id": 294,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/894",
+          "detail": "Solução publicada da questão 294; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 898
+      },
+      "expected": {
+        "question_id": 295,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/898",
+          "detail": "Solução publicada da questão 295; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 902
+      },
+      "expected": {
+        "question_id": 296,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/902",
+          "detail": "Solução publicada da questão 296; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 906
+      },
+      "expected": {
+        "question_id": 297,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/906",
+          "detail": "Solução publicada da questão 297; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 907
+      },
+      "expected": {
+        "question_id": 298,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/907",
+          "detail": "Solução publicada da questão 298; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 908
+      },
+      "expected": {
+        "question_id": 299,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/908",
+          "detail": "Solução publicada da questão 299; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 909
+      },
+      "expected": {
+        "question_id": 300,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/909",
+          "detail": "Solução publicada da questão 300; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 913
+      },
+      "expected": {
+        "question_id": 301,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/913",
+          "detail": "Solução publicada da questão 301; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 914
+      },
+      "expected": {
+        "question_id": 302,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/914",
+          "detail": "Solução publicada da questão 302; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 915
+      },
+      "expected": {
+        "question_id": 303,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/915",
+          "detail": "Solução publicada da questão 303; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 919
+      },
+      "expected": {
+        "question_id": 304,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/919",
+          "detail": "Solução publicada da questão 304; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 920
+      },
+      "expected": {
+        "question_id": 305,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/920",
+          "detail": "Solução publicada da questão 305; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 924
+      },
+      "expected": {
+        "question_id": 306,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/924",
+          "detail": "Solução publicada da questão 306; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 928
+      },
+      "expected": {
+        "question_id": 307,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/928",
+          "detail": "Solução publicada da questão 307; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 932
+      },
+      "expected": {
+        "question_id": 308,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/932",
+          "detail": "Solução publicada da questão 308; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 936
+      },
+      "expected": {
+        "question_id": 309,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/936",
+          "detail": "Solução publicada da questão 309; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 940
+      },
+      "expected": {
+        "question_id": 310,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/940",
+          "detail": "Solução publicada da questão 310; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 944
+      },
+      "expected": {
+        "question_id": 311,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/944",
+          "detail": "Solução publicada da questão 311; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 948
+      },
+      "expected": {
+        "question_id": 312,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/948",
+          "detail": "Solução publicada da questão 312; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 952
+      },
+      "expected": {
+        "question_id": 313,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/952",
+          "detail": "Solução publicada da questão 313; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 956
+      },
+      "expected": {
+        "question_id": 314,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/956",
+          "detail": "Solução publicada da questão 314; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 957
+      },
+      "expected": {
+        "question_id": 315,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/957",
+          "detail": "Solução publicada da questão 315; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 961
+      },
+      "expected": {
+        "question_id": 316,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/961",
+          "detail": "Solução publicada da questão 316; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 965
+      },
+      "expected": {
+        "question_id": 317,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/965",
+          "detail": "Solução publicada da questão 317; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 969
+      },
+      "expected": {
+        "question_id": 318,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/969",
+          "detail": "Solução publicada da questão 318; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 973
+      },
+      "expected": {
+        "question_id": 319,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/973",
+          "detail": "Solução publicada da questão 319; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 977
+      },
+      "expected": {
+        "question_id": 320,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/977",
+          "detail": "Solução publicada da questão 320; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 981
+      },
+      "expected": {
+        "question_id": 321,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/981",
+          "detail": "Solução publicada da questão 321; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 985
+      },
+      "expected": {
+        "question_id": 322,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/985",
+          "detail": "Solução publicada da questão 322; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 989
+      },
+      "expected": {
+        "question_id": 323,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/989",
+          "detail": "Solução publicada da questão 323; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 993
+      },
+      "expected": {
+        "question_id": 324,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/993",
+          "detail": "Solução publicada da questão 324; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 997
+      },
+      "expected": {
+        "question_id": 325,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/997",
+          "detail": "Solução publicada da questão 325; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1001
+      },
+      "expected": {
+        "question_id": 326,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1001",
+          "detail": "Solução publicada da questão 326; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1005
+      },
+      "expected": {
+        "question_id": 327,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1005",
+          "detail": "Solução publicada da questão 327; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1009
+      },
+      "expected": {
+        "question_id": 328,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1009",
+          "detail": "Solução publicada da questão 328; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1013
+      },
+      "expected": {
+        "question_id": 329,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1013",
+          "detail": "Solução publicada da questão 329; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1017
+      },
+      "expected": {
+        "question_id": 330,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1017",
+          "detail": "Solução publicada da questão 330; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1021
+      },
+      "expected": {
+        "question_id": 331,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1021",
+          "detail": "Solução publicada da questão 331; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1025
+      },
+      "expected": {
+        "question_id": 332,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1025",
+          "detail": "Solução publicada da questão 332; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1026
+      },
+      "expected": {
+        "question_id": 333,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1026",
+          "detail": "Solução publicada da questão 333; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1027
+      },
+      "expected": {
+        "question_id": 334,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1027",
+          "detail": "Solução publicada da questão 334; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1028
+      },
+      "expected": {
+        "question_id": 335,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1028",
+          "detail": "Solução publicada da questão 335; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1032
+      },
+      "expected": {
+        "question_id": 336,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1032",
+          "detail": "Solução publicada da questão 336; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1036
+      },
+      "expected": {
+        "question_id": 337,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1036",
+          "detail": "Solução publicada da questão 337; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1037
+      },
+      "expected": {
+        "question_id": 338,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1037",
+          "detail": "Solução publicada da questão 338; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1038
+      },
+      "expected": {
+        "question_id": 339,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1038",
+          "detail": "Solução publicada da questão 339; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1039
+      },
+      "expected": {
+        "question_id": 340,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1039",
+          "detail": "Solução publicada da questão 340; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1043
+      },
+      "expected": {
+        "question_id": 341,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1043",
+          "detail": "Solução publicada da questão 341; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1044
+      },
+      "expected": {
+        "question_id": 342,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1044",
+          "detail": "Solução publicada da questão 342; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1048
+      },
+      "expected": {
+        "question_id": 343,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1048",
+          "detail": "Solução publicada da questão 343; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1052
+      },
+      "expected": {
+        "question_id": 344,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1052",
+          "detail": "Solução publicada da questão 344; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1056
+      },
+      "expected": {
+        "question_id": 345,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1056",
+          "detail": "Solução publicada da questão 345; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1060
+      },
+      "expected": {
+        "question_id": 346,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1060",
+          "detail": "Solução publicada da questão 346; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1064
+      },
+      "expected": {
+        "question_id": 347,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1064",
+          "detail": "Solução publicada da questão 347; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1068
+      },
+      "expected": {
+        "question_id": 348,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1068",
+          "detail": "Solução publicada da questão 348; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1072
+      },
+      "expected": {
+        "question_id": 349,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1072",
+          "detail": "Solução publicada da questão 349; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1076
+      },
+      "expected": {
+        "question_id": 350,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1076",
+          "detail": "Solução publicada da questão 350; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1077
+      },
+      "expected": {
+        "question_id": 351,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1077",
+          "detail": "Solução publicada da questão 351; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1081
+      },
+      "expected": {
+        "question_id": 352,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1081",
+          "detail": "Solução publicada da questão 352; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1085
+      },
+      "expected": {
+        "question_id": 353,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1085",
+          "detail": "Solução publicada da questão 353; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1089
+      },
+      "expected": {
+        "question_id": 354,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1089",
+          "detail": "Solução publicada da questão 354; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1093
+      },
+      "expected": {
+        "question_id": 355,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1093",
+          "detail": "Solução publicada da questão 355; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1097
+      },
+      "expected": {
+        "question_id": 356,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1097",
+          "detail": "Solução publicada da questão 356; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1101
+      },
+      "expected": {
+        "question_id": 357,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1101",
+          "detail": "Solução publicada da questão 357; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1102
+      },
+      "expected": {
+        "question_id": 358,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1102",
+          "detail": "Solução publicada da questão 358; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1103
+      },
+      "expected": {
+        "question_id": 360,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1103",
+          "detail": "Solução publicada da questão 360; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1403
+      },
+      "expected": {
+        "question_id": 359,
+        "source_document_id": 4,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Documento oficial ‘Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/1403",
+          "detail": "Solução publicada da questão 359; source_document_id=4."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 682
+      },
+      "expected": {
+        "question_id": 1,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/682",
+          "detail": "Solução publicada da questão 1; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 686
+      },
+      "expected": {
+        "question_id": 2,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/686",
+          "detail": "Solução publicada da questão 2; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 690
+      },
+      "expected": {
+        "question_id": 3,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/690",
+          "detail": "Solução publicada da questão 3; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 694
+      },
+      "expected": {
+        "question_id": 4,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/694",
+          "detail": "Solução publicada da questão 4; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 698
+      },
+      "expected": {
+        "question_id": 5,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/698",
+          "detail": "Solução publicada da questão 5; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 702
+      },
+      "expected": {
+        "question_id": 6,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/702",
+          "detail": "Solução publicada da questão 6; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 706
+      },
+      "expected": {
+        "question_id": 7,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/706",
+          "detail": "Solução publicada da questão 7; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 710
+      },
+      "expected": {
+        "question_id": 8,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/710",
+          "detail": "Solução publicada da questão 8; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 714
+      },
+      "expected": {
+        "question_id": 9,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/714",
+          "detail": "Solução publicada da questão 9; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 715
+      },
+      "expected": {
+        "question_id": 10,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/715",
+          "detail": "Solução publicada da questão 10; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 716
+      },
+      "expected": {
+        "question_id": 11,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/716",
+          "detail": "Solução publicada da questão 11; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 720
+      },
+      "expected": {
+        "question_id": 12,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/720",
+          "detail": "Solução publicada da questão 12; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 724
+      },
+      "expected": {
+        "question_id": 13,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/724",
+          "detail": "Solução publicada da questão 13; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 728
+      },
+      "expected": {
+        "question_id": 14,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/728",
+          "detail": "Solução publicada da questão 14; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 729
+      },
+      "expected": {
+        "question_id": 15,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/729",
+          "detail": "Solução publicada da questão 15; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 730
+      },
+      "expected": {
+        "question_id": 16,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/730",
+          "detail": "Solução publicada da questão 16; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 731
+      },
+      "expected": {
+        "question_id": 17,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/731",
+          "detail": "Solução publicada da questão 17; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 735
+      },
+      "expected": {
+        "question_id": 18,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/735",
+          "detail": "Solução publicada da questão 18; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 739
+      },
+      "expected": {
+        "question_id": 19,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/739",
+          "detail": "Solução publicada da questão 19; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 740
+      },
+      "expected": {
+        "question_id": 20,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/740",
+          "detail": "Solução publicada da questão 20; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 744
+      },
+      "expected": {
+        "question_id": 21,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/744",
+          "detail": "Solução publicada da questão 21; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 748
+      },
+      "expected": {
+        "question_id": 22,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/748",
+          "detail": "Solução publicada da questão 22; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 749
+      },
+      "expected": {
+        "question_id": 23,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/749",
+          "detail": "Solução publicada da questão 23; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 753
+      },
+      "expected": {
+        "question_id": 24,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/753",
+          "detail": "Solução publicada da questão 24; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 754
+      },
+      "expected": {
+        "question_id": 25,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/754",
+          "detail": "Solução publicada da questão 25; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 758
+      },
+      "expected": {
+        "question_id": 26,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/758",
+          "detail": "Solução publicada da questão 26; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 762
+      },
+      "expected": {
+        "question_id": 27,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/762",
+          "detail": "Solução publicada da questão 27; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 763
+      },
+      "expected": {
+        "question_id": 28,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/763",
+          "detail": "Solução publicada da questão 28; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 764
+      },
+      "expected": {
+        "question_id": 29,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/764",
+          "detail": "Solução publicada da questão 29; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 768
+      },
+      "expected": {
+        "question_id": 30,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/768",
+          "detail": "Solução publicada da questão 30; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 772
+      },
+      "expected": {
+        "question_id": 31,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/772",
+          "detail": "Solução publicada da questão 31; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 776
+      },
+      "expected": {
+        "question_id": 32,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/776",
+          "detail": "Solução publicada da questão 32; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 780
+      },
+      "expected": {
+        "question_id": 33,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/780",
+          "detail": "Solução publicada da questão 33; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 781
+      },
+      "expected": {
+        "question_id": 34,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/781",
+          "detail": "Solução publicada da questão 34; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 785
+      },
+      "expected": {
+        "question_id": 35,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/785",
+          "detail": "Solução publicada da questão 35; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 786
+      },
+      "expected": {
+        "question_id": 36,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/786",
+          "detail": "Solução publicada da questão 36; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 790
+      },
+      "expected": {
+        "question_id": 37,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/790",
+          "detail": "Solução publicada da questão 37; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 791
+      },
+      "expected": {
+        "question_id": 38,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/791",
+          "detail": "Solução publicada da questão 38; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 795
+      },
+      "expected": {
+        "question_id": 39,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/795",
+          "detail": "Solução publicada da questão 39; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 796
+      },
+      "expected": {
+        "question_id": 40,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/796",
+          "detail": "Solução publicada da questão 40; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 797
+      },
+      "expected": {
+        "question_id": 41,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/797",
+          "detail": "Solução publicada da questão 41; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 801
+      },
+      "expected": {
+        "question_id": 42,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/801",
+          "detail": "Solução publicada da questão 42; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 805
+      },
+      "expected": {
+        "question_id": 43,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/805",
+          "detail": "Solução publicada da questão 43; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 809
+      },
+      "expected": {
+        "question_id": 44,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/809",
+          "detail": "Solução publicada da questão 44; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 813
+      },
+      "expected": {
+        "question_id": 45,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/813",
+          "detail": "Solução publicada da questão 45; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 817
+      },
+      "expected": {
+        "question_id": 46,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/817",
+          "detail": "Solução publicada da questão 46; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 821
+      },
+      "expected": {
+        "question_id": 47,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/821",
+          "detail": "Solução publicada da questão 47; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 825
+      },
+      "expected": {
+        "question_id": 48,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/825",
+          "detail": "Solução publicada da questão 48; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 826
+      },
+      "expected": {
+        "question_id": 49,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/826",
+          "detail": "Solução publicada da questão 49; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 827
+      },
+      "expected": {
+        "question_id": 50,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/827",
+          "detail": "Solução publicada da questão 50; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 831
+      },
+      "expected": {
+        "question_id": 51,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/831",
+          "detail": "Solução publicada da questão 51; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 835
+      },
+      "expected": {
+        "question_id": 52,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/835",
+          "detail": "Solução publicada da questão 52; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 836
+      },
+      "expected": {
+        "question_id": 53,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/836",
+          "detail": "Solução publicada da questão 53; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 840
+      },
+      "expected": {
+        "question_id": 54,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/840",
+          "detail": "Solução publicada da questão 54; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 841
+      },
+      "expected": {
+        "question_id": 55,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/841",
+          "detail": "Solução publicada da questão 55; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 842
+      },
+      "expected": {
+        "question_id": 56,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/842",
+          "detail": "Solução publicada da questão 56; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 843
+      },
+      "expected": {
+        "question_id": 57,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/843",
+          "detail": "Solução publicada da questão 57; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 844
+      },
+      "expected": {
+        "question_id": 58,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/844",
+          "detail": "Solução publicada da questão 58; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 848
+      },
+      "expected": {
+        "question_id": 59,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/848",
+          "detail": "Solução publicada da questão 59; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 849
+      },
+      "expected": {
+        "question_id": 60,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/849",
+          "detail": "Solução publicada da questão 60; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 850
+      },
+      "expected": {
+        "question_id": 61,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/850",
+          "detail": "Solução publicada da questão 61; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 854
+      },
+      "expected": {
+        "question_id": 62,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/854",
+          "detail": "Solução publicada da questão 62; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 855
+      },
+      "expected": {
+        "question_id": 63,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/855",
+          "detail": "Solução publicada da questão 63; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 856
+      },
+      "expected": {
+        "question_id": 64,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/856",
+          "detail": "Solução publicada da questão 64; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 860
+      },
+      "expected": {
+        "question_id": 65,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/860",
+          "detail": "Solução publicada da questão 65; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 861
+      },
+      "expected": {
+        "question_id": 66,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/861",
+          "detail": "Solução publicada da questão 66; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 865
+      },
+      "expected": {
+        "question_id": 67,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/865",
+          "detail": "Solução publicada da questão 67; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 869
+      },
+      "expected": {
+        "question_id": 68,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/869",
+          "detail": "Solução publicada da questão 68; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 873
+      },
+      "expected": {
+        "question_id": 69,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/873",
+          "detail": "Solução publicada da questão 69; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 877
+      },
+      "expected": {
+        "question_id": 70,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/877",
+          "detail": "Solução publicada da questão 70; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 881
+      },
+      "expected": {
+        "question_id": 71,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/881",
+          "detail": "Solução publicada da questão 71; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 885
+      },
+      "expected": {
+        "question_id": 72,
+        "source_document_id": 5,
+        "editorial_status": "published",
+        "editorial_version": null,
+        "authorship": null
+      },
+      "changes": {
+        "authorship": "Comvest / Unicamp"
+      },
+      "reason": "A resolução é parte de um documento oficial de prova comentada publicado pela Comvest/Unicamp. Atribui-se somente autoria institucional sustentada pelo documento; não se infere autor individual nem se inventa versão editorial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "Documento oficial ‘Vestibular Unicamp 2025 — 1ª fase, prova comentada’, publicado por Comvest / Unicamp; a resolução permanece vinculada à fonte original."
+        },
+        {
+          "locator": "sqlite://question_solutions/885",
+          "detail": "Solução publicada da questão 72; source_document_id=5."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T170525444973Z.sqlite",
+  "database_after_sha256": "0c01aa985817ffc7860a805a088a8b9a123f5936fc4fa6fa9de22f9e6f4c2a0d"
+}

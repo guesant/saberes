@@ -1,11 +1,11 @@
 {
-  "version": "unicamp-2027-practice-map-v13",
+  "version": "unicamp-2027-practice-pool-v40",
   "local_only": true,
-  "database_sha256": "4e557a0448ff765756d8152df102a4a17ee1fbd56ed090391a996b9047ced2d5",
+  "database_sha256": "36ffa86b6a5e6d4ced80923f76b63444f377fa753391e1b523edece7a1bc4ec2",
   "integrity_check": "ok",
   "foreign_key_check": [],
   "main_equals_build": true,
-  "assets_verified_in_source_and_build": 331,
+  "assets_verified_in_source_and_build": 60,
   "preserved_identity_tables": [
     "schema_migrations",
     "universities",

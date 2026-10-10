@@ -1,0 +1,1716 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T17:11:10.910099+00:00",
+  "database_before_sha256": "0c01aa985817ffc7860a805a088a8b9a123f5936fc4fa6fa9de22f9e6f4c2a0d",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "lessons",
+      "key": {
+        "id": 13
+      },
+      "expected": {
+        "editorial_version": "1.0.3",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.0.4",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2472.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.0.4.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 14
+      },
+      "expected": {
+        "editorial_version": "1.0.3",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.0.4",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2472.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.0.4.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 15
+      },
+      "expected": {
+        "editorial_version": "1.0.3",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.0.4",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2472.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.0.4.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 15
+      },
+      "expected": {
+        "content": "Analise a palavra em três passos: identifique a forma, descreva a relação morfológica e explique o efeito que ela produz naquele enunciado. Distinga derivação de flexão e use a função contextual para reconhecer a classe.\n\n**Autochecagem:** em “o novo destaca a acessibilidade”, “novo” continua apenas qualificando um substantivo expresso? **Resposta:** não; com o artigo “o”, o adjetivo está substantivado e funciona como núcleo de uma expressão nominal. O referente exato depende do contexto anterior."
+      },
+      "changes": {
+        "content": "Analise a palavra em três passos: identifique a forma, descreva a relação morfológica e explique o efeito que ela produz naquele enunciado. Distinga derivação de flexão e use a função contextual para reconhecer a classe.\n\n**Autochecagem:** em “os estudantes jovens”, qual é o substantivo expresso que “jovens” caracteriza? **Resposta:** “estudantes”; aqui, “jovens” acrescenta uma característica ao substantivo expresso. Compare com “os jovens organizaram a mostra”: nesta análise de gramática escolar, “jovens” aparece substantivado pelo artigo “os” e nomeia o grupo. O referente do grupo depende do contexto, mas o substantivo ao qual “jovens” se liga na primeira expressão está explícito."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.0.4, do tópico 2472.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.0.4 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 19
+      },
+      "expected": {
+        "editorial_version": "1.0.5",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.0.6",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2474.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.0.6.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 20
+      },
+      "expected": {
+        "editorial_version": "1.0.5",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.0.6",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2474.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.0.6.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 21
+      },
+      "expected": {
+        "editorial_version": "1.0.5",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.0.6",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2474.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.0.6.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 19
+      },
+      "expected": {
+        "content": "Leitura literária não é apenas resumir o enredo ou procurar uma mensagem escondida: é explicar como escolhas de composição e linguagem produzem uma experiência e como essa experiência se relaciona com seu contexto. A interpretação deve partir de evidências da obra. Narrador não é automaticamente autor; voz lírica não é automaticamente a pessoa biográfica do poeta.\n\nNa prosa, observe narrador, personagem, tempo, espaço, enredo, foco e escolhas de linguagem. Na poesia, examine voz, imagens, versos, estrofes, ritmo, sonoridade e figuras; relacione a forma ao efeito, sem reduzir o poema a paráfrase. No teatro, considere diálogo, rubrica, ato/cena, ação e arquitetura do conflito. Em todos os gêneros, pergunte que perspectivas aparecem, quais tensões são construídas e como a obra permite relacioná-las a dimensões sociais, morais e políticas — sem substituir a análise por uma opinião atual ou por biografia isolada.\n\nPara o Vestibular Unicamp 2027, o Programa das Provas apresenta esta relação de leitura: **Prosas seguidas de odes mínimas**, José Paulo Paes (obra completa); **Canções escolhidas**, Paulo César Pinheiro: “Canto das três raças”; “Cordilheira”; “Desenredo”; “Estrela da terra”; “Evangelho”; “Mordaça”; “Na volta que o mundo dá”; “Navio fantasma”; “O dia em que o morro descer e não for carnaval”; “Pesadelo”; “Velho arvoredo”; “Vento bravo”; “Viagem”; e “Vontade de chorar”. Confira a grafia e a seleção na relação oficial de livros da edição.; **Os funerais da Mamãe Grande**, Gabriel García Márquez (obra completa); seis contos de **Morangos mofados**, Caio Fernando Abreu — “Diálogo”, “Além do Ponto”, “Terça-Feira Gorda”, “Pêra, uva ou maçã?”, “O dia em que Júpiter encontrou Saturno” e “Aqueles dois”; **Olhos d’água**, Conceição Evaristo (obra completa); **No seu pescoço**, Chimamanda Ngozi Adichie (obra completa); **Vida e morte de M. J. Gonzaga de Sá**, Lima Barreto (obra completa); **Memórias Póstumas de Brás Cubas**, Machado de Assis (obra completa); e **A vida não é útil**, Ailton Krenak (obra completa). A lista e a indicação de extensão são as publicadas no documento oficial; confirme o documento vigente antes de planejar a leitura.\n\n**Erros comuns**\n\nNão atribua ao autor toda fala de narrador ou personagem. Não use uma escola literária como molde que determina cada passagem. Não trate resumo, adaptação ou comentário como substituto da leitura dos textos exigidos. Não conclua que uma obra “defende” uma posição só porque uma personagem a enuncia. Ao propor uma leitura crítica, mostre primeiro a evidência textual e depois explique o efeito e a relação contextual.\n\nEsta lição apresenta um método de leitura; ela não substitui a leitura das obras nem constitui, sozinha, análise de cada título obrigatório. Para cada obra ou conjunto de textos indicado, registre uma passagem efetivamente lida, sua localização (conto, poema, capítulo ou cena), as escolhas formais observáveis e a interpretação que essas evidências sustentam. Não atribua à lista uma análise que ainda não foi feita."
+      },
+      "changes": {
+        "content": "A leitura literária observa como escolhas de composição e linguagem organizam a experiência do texto. Em prosa, observe narrador, focalização, personagens, tempo, espaço e conflito; narrador não é automaticamente o autor. Na poesia, examine voz, imagens, ritmo, sonoridade, versos e quebras. No teatro, acompanhe falas, rubricas, ação, cenas e conflito. Relacione uma interpretação a evidências localizadas na obra e distinga o que o texto mostra do que é hipótese do leitor.\n\nA relação de leituras obrigatórias da edição 2027 inclui *Prosas seguidas de odes mínimas*, *Canções escolhidas*, *Os funerais da Mamãe Grande*, seis contos de *Morangos mofados*, *Olhos d’água*, *No seu pescoço*, *Vida e morte de M. J. Gonzaga de Sá*, *Memórias Póstumas de Brás Cubas* e *A vida não é útil*. Para os títulos com seleção, é necessário consultar a lista oficial para identificar os textos exigidos.\n\n**Erros comuns**\n\nNão atribua automaticamente ao autor uma fala de narrador ou personagem. Não use época literária como molde que determina cada passagem. Evite resumir o enredo no lugar de analisar a composição e não sustente uma interpretação apenas em biografia ou opinião externa.\n\n**Limite desta etapa:** esta lição apresenta um método geral; não traz leitura guiada nem análise demonstrada de uma obra ou texto obrigatório, e não ensina ainda a relacionar uma passagem específica a dimensões sociais, morais ou políticas. Ela não substitui a leitura das obras nem cobre, por si só, o programa literário. Essas análises devem ser feitas em etapas próprias, com passagens efetivamente lidas e localizadas."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.0.6, do tópico 2474.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.0.6 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 20
+      },
+      "expected": {
+        "content": "**Exemplo didático inventado, não retirado da lista oficial:** imagine um conto em que o narrador relata uma festa como grandiosa, mas menciona repetidamente cadeiras vazias e pratos intocados.\n\n1. **Evidência:** há contraste entre a avaliação “grandiosa” do narrador e os detalhes de ausência.\n2. **Forma e voz:** a descrição é filtrada pelo narrador; não se deve confundir sua avaliação com uma declaração direta do autor.\n3. **Efeito possível:** a discrepância pode produzir ironia ou expor a distância entre aparência e experiência. Para decidir, seria preciso observar o restante do conto, o tom e as consequências narrativas.\n4. **Leitura crítica:** se a obra relaciona a festa a prestígio ou exclusão, os detalhes podem sustentar uma análise social. O exemplo isolado não permite afirmar qual grupo é criticado nem qual é a posição do autor.\n\nEsse mesmo procedimento se adapta a poema ou peça: primeiro descreva recurso formal, depois explique o efeito no conjunto e só então formule uma interpretação contextual. Para as obras da lista, faça a análise com passagens efetivamente lidas, registrando capítulo, conto, poema ou cena e sem substituir a evidência por este exemplo hipotético."
+      },
+      "changes": {
+        "content": "**Exemplo metodológico inventado, não retirado de uma obra obrigatória:** imagine um conto em que o narrador chama uma festa de grandiosa, mas menciona repetidamente cadeiras vazias e pratos intocados.\n\n1. **Evidência:** a avaliação “grandiosa” contrasta com detalhes de ausência.\n2. **Voz e forma:** a descrição passa pelo narrador; sua avaliação não é automaticamente uma declaração do autor.\n3. **Efeito possível:** o contraste pode produzir ironia ou distância entre aparência e experiência. Seria preciso ler o conjunto para decidir entre essas interpretações.\n4. **Limite da conclusão:** sem outras evidências, não se pode afirmar qual grupo é criticado nem atribuir à obra uma posição social ou política definida.\n\nO exemplo apenas demonstra como começar uma leitura formal. Não é análise de literatura portuguesa nem de qualquer título da lista oficial. Para aplicar o método às leituras obrigatórias, registre o texto e a localização da passagem e examine a obra em seu conjunto."
+      },
+      "reason": "Aplicar conteúdo revisado da seção example, versão 1.0.6, do tópico 2474.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção example.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.0.6 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 21
+      },
+      "expected": {
+        "content": "Em cada leitura, registre: (1) quem fala e de que posição; (2) quais escolhas de gênero, estrutura e linguagem são observáveis; (3) que efeito elas produzem no conjunto; (4) que interpretação social, moral ou política a evidência sustenta; e (5) o que ainda não é possível afirmar. Compare recorrências e tensões ao longo da obra integral ou dos textos indicados.\n\n**Autochecagem:** uma personagem afirma algo; isso prova que essa é a opinião do autor? **Resposta:** não. É preciso distinguir personagem, narrador/voz e organização da obra, sustentando qualquer conclusão com evidências.\n\nAo concluir uma leitura guiada, acrescente uma evidência textual localizada e explique como um recurso de composição contribui para uma questão social, moral ou política da obra. Diferencie o que o texto mostra, a interpretação sustentada por essa evidência e o que permanece hipótese. Até que esse percurso seja feito para as obras da relação, mantenha esta lição marcada como introdutória e em revisão."
+      },
+      "changes": {
+        "content": "Ao ler, registre quem fala, quais escolhas de gênero e composição são observáveis, que efeito elas produzem e que interpretação as evidências sustentam. Separe evidência, interpretação e hipótese; compare recorrências e tensões no conjunto da obra ou dos textos selecionados.\n\n**Autochecagem:** o exemplo da festa comprova uma interpretação social de uma obra obrigatória? **Resposta:** não; é inventado e só ilustra uma pergunta de leitura. Uma análise das dimensões sociais, morais ou políticas exige passagens reais, localizadas e interpretadas no contexto da obra.\n\nEsta etapa é introdutória e metodológica. Permanecem por fazer leituras guiadas e análises específicas das obras e seleções da edição; não se deve considerar o tópico integralmente coberto com esta lição."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.0.6, do tópico 2474.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.0.6 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 22
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2475.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 23
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2475.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 24
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2475.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 22
+      },
+      "expected": {
+        "content": "Neste material, adotamos **ℕ={0,1,2,…}**. Os inteiros ℤ incluem os negativos; os racionais ℚ são quocientes m/n, com m,n∈ℤ e n≠0; os reais ℝ também incluem irracionais, como √2. Em conjuntos A e B, A∪B reúne os elementos que pertencem a pelo menos um dos conjuntos, e A∩B reúne os que pertencem a ambos. Em ℕ e ℤ, operações fundamentais seguem suas regras de sinais e precedência; divisão por zero é indefinida.\n\nMódulo |x| é a distância de x a zero; desigualdades podem ser representadas por intervalos. Uma fração irredutível tem representação decimal finita se, e somente se, o denominador possui apenas fatores primos 2 e/ou 5; nos demais casos, a expansão é periódica. A fatoração prima permite contar divisores: se N=p^a q^b, com p e q primos distintos, N tem (a+1)(b+1) divisores positivos. Para inteiros positivos, o **MDC usa os menores expoentes comuns** na fatoração; o **MMC usa os maiores expoentes de todos os primos presentes**.\n\nUma sequência é uma lista definida por uma regra. Na progressão aritmética (PA), a diferença d entre termos consecutivos é constante e a_n=a_1+(n−1)d; na progressão geométrica (PG), a razão q é constante e a_n=a_1q^(n−1). Porcentagem é uma razão por cem. Para capital C, taxa i por período e t períodos, juros simples dão M=C(1+it), enquanto juros compostos dão M=C(1+i)^t, sob taxa constante e sem aportes. A unidade de i e a de t devem ser compatíveis.\n\n**Erros comuns**\n\nNão presuma outra convenção para ℕ sem declará-la; não confunda união com interseção; respeite sinais, precedência e denominadores não nulos. Não some percentuais sucessivos sobre a mesma base quando o valor-base muda. Em fatoração, o MDC não inclui primos que não sejam comuns; o MMC inclui todos os primos presentes."
+      },
+      "changes": {
+        "content": "Neste material, adotamos **ℕ={0,1,2,…}**. Os inteiros ℤ incluem os negativos; os racionais ℚ são quocientes m/n, com m,n∈ℤ e n≠0; os reais ℝ também incluem irracionais, como √2. Para conjuntos A e B, A∪B reúne os elementos que pertencem a pelo menos um deles, e A∩B reúne os que pertencem a ambos. A∈B e A⊆B expressam relações diferentes: x∈A afirma que x é elemento de A; A⊆B afirma que todo elemento de A também pertence a B. Em ℕ e ℤ, respeite sinais e precedência das operações; divisão por zero é indefinida.\n\nMódulo |x| é a distância de x a zero; desigualdades podem ser representadas por intervalos. Uma fração irredutível tem representação decimal finita se, e somente se, seu denominador possui apenas fatores primos 2 e/ou 5; nos demais casos, a expansão é periódica. A fatoração prima permite contar divisores: se N=p^a q^b, com p e q primos distintos, N tem (a+1)(b+1) divisores positivos. Para inteiros positivos, o MDC usa os menores expoentes comuns na fatoração e o MMC usa os maiores expoentes de todos os primos presentes.\n\nUma sequência é uma lista definida por uma regra. Na progressão aritmética (PA), a diferença d entre termos consecutivos é constante e a_n=a_1+(n−1)d; na progressão geométrica (PG), a razão q é constante e a_n=a_1q^(n−1). Porcentagem é uma razão por cem. Para capital C, taxa i por período e t períodos, juros simples dão M=C(1+it), enquanto juros compostos dão M=C(1+i)^t, sob taxa constante e sem aportes. A unidade de i e a de t devem ser compatíveis.\n\n**Erros comuns**\n\nNão confunda x∈A (pertinência de um elemento) com A⊆B (inclusão de conjuntos), nem união com interseção. Não presuma outra convenção para ℕ sem declará-la; respeite sinais, precedência e denominadores não nulos. Não some percentuais sucessivos sobre a mesma base quando o valor-base muda. Em fatoração, o MDC não inclui primos que não sejam comuns; o MMC inclui todos os primos presentes. Esta etapa é uma introdução: desigualdades, módulo, sequências, progressões e matemática financeira requerem prática adicional."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.2.3, do tópico 2475.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 23
+      },
+      "expected": {
+        "content": "Considere A={1,2,4,6} e B={2,3,6}. Então A∪B={1,2,3,4,6} e A∩B={2,6}. Para 12=2²·3 e 18=2·3², MDC(12,18)=2¹·3¹=6, usando os menores expoentes comuns; MMC(12,18)=2²·3²=36, usando os maiores expoentes.\n\nComo verificação de divisores, 36=2²·3² tem (2+1)(2+1)=9 divisores positivos. Na PA 4,7,10,…, a_10=4+9·3=31; na PG 3,6,12,…, a_6=3·2⁵=96. R$ 1.000 a 10% ao ano por dois anos resulta em R$ 1.200 no regime simples e R$ 1.210 no composto. Desconto de 15% e, depois, aumento de 15% sobre o novo preço dão 200×0,85×1,15=R$ 195,50, não R$ 200."
+      },
+      "changes": {
+        "content": "Considere A={1,2,4,6}, B={2,3,6} e C={1,2,3,4,6}. Como 2 é elemento de A, escrevemos **2∈A**. Como todo elemento de A está em C, escrevemos **A⊆C**. A inclusão compara conjuntos inteiros; a pertinência relaciona um elemento a um conjunto. Além disso, A∪B={1,2,3,4,6} e A∩B={2,6}.\n\nPara 12=2²·3 e 18=2·3², MDC(12,18)=2¹·3¹=6, usando os menores expoentes comuns; MMC(12,18)=2²·3²=36, usando os maiores expoentes. Como verificação, 36=2²·3² tem (2+1)(2+1)=9 divisores positivos."
+      },
+      "reason": "Aplicar conteúdo revisado da seção example, versão 1.2.3, do tópico 2475.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção example.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 24
+      },
+      "expected": {
+        "content": "Declare a convenção de ℕ; identifique união e interseção; confira sinais e restrições; simplifique a fração antes de decidir se o decimal termina; use fatoração para divisores, MDC e MMC; reconheça diferença de PA e razão de PG; alinhe taxa e período dos juros.\n\n**Autochecagem:** com a convenção adotada, 0∈ℕ. Para A={1,2} e B={2,3}, A∪B={1,2,3} e A∩B={2}. MDC(12,18)=6 e MMC(12,18)=36. 0,125=1/8 tem decimal finito, enquanto 1/3 é periódico. A PA 4,7,10,… tem a_10=31; R$ 1.000 a 10% por dois períodos compostos totalizam R$ 1.210."
+      },
+      "changes": {
+        "content": "Declare a convenção de ℕ; identifique os elementos e as operações; confira sinais e restrições; simplifique a fração antes de decidir se o decimal termina; use fatoração para divisores, MDC e MMC. Em progressões e juros, explicite a regra, a base e as unidades.\n\n**Autochecagem:** para A={1,2} e B={1,2,3}, é correto dizer 2∈A e A⊆B? **Resposta:** sim. A primeira afirmação trata 2 como elemento de A; a segunda afirma que todos os elementos de A pertencem a B. Também, para X={1,2} e Y={2,3}, X∪Y={1,2,3} e X∩Y={2}."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.2.3, do tópico 2475.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 25
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2476.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 26
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2476.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 27
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2476.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 25
+      },
+      "expected": {
+        "content": "Uma função associa a cada entrada do domínio exatamente uma saída. Em f:D→C, D é o domínio, C o contradomínio e a imagem reúne apenas os valores de C efetivamente obtidos. Uma reta vertical que cruza um gráfico em mais de um ponto mostra que ele não define y como função de x.\n\nLeia eixos, escala, unidade e intervalo. Zeros satisfazem f(x)=0; o intercepto vertical (0,f(0)) só existe se 0 pertencer ao domínio. A taxa média de variação entre a e b, com a≠b, é [f(b)−f(a)]/(b−a). Em composição (f∘g)(x)=f(g(x)), aplique g primeiro e confirme que sua saída pertence ao domínio de f. Composição não é produto e, em geral, a ordem importa.\n\nO domínio depende da expressão e do contexto: para √g(x), exija g(x)≥0; para p(x)/q(x), exija q(x)≠0. Uma simplificação algébrica não devolve ao domínio pontos excluídos pela expressão original. Modelos devem respeitar o contexto; dados observados não justificam extrapolação automática.\n\n**Erros comuns**\n\nNão confunda domínio, contradomínio e imagem; f(g(x)) com f(x)g(x); nem zeros com interceptos verticais. Verifique restrições antes e depois de simplificar, escala e unidades dos eixos e o domínio da função interna na composição."
+      },
+      "changes": {
+        "content": "Uma função associa a cada entrada do domínio exatamente uma saída. Em f:D→C, D é o domínio, C o contradomínio e a imagem reúne apenas os valores de C efetivamente obtidos. Uma reta vertical que cruza um gráfico em mais de um ponto mostra que ele não define y como função de x.\n\nLeia eixos, escala, unidade e intervalo. Zeros satisfazem f(x)=0; o intercepto vertical (0,f(0)) só existe se 0 pertencer ao domínio. A taxa média de variação entre a e b, com a≠b, é [f(b)−f(a)]/(b−a). Em composição (f∘g)(x)=f(g(x)), aplique g primeiro e confirme que sua saída pertence ao domínio de f. Composição não é produto e, em geral, a ordem importa.\n\nO domínio depende da expressão e do contexto: para √g(x), exija g(x)≥0; para p(x)/q(x), exija q(x)≠0. Uma simplificação algébrica não devolve ao domínio pontos excluídos pela expressão original. Modelos devem respeitar o contexto; dados observados não justificam extrapolação automática.\n\n**Erros comuns**\n\nNão confunda domínio, contradomínio e imagem; f(g(x)) com f(x)g(x); nem zeros com interceptos verticais. Verifique restrições antes e depois de simplificar, escala e unidades dos eixos e o domínio da função interna na composição.\n\n**Limite desta etapa:** esta lição trabalha definições, leitura de representações, domínio, composição e taxa de variação, com exemplos selecionados de funções. Não desenvolve de modo sistemático todos os tipos e operações do programa, em particular funções trigonométricas, equações e inequações funcionais. Esses conteúdos devem ser estudados em etapas próprias; esta introdução não representa cobertura integral do tópico."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.3.3, do tópico 2476.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.3.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 27
+      },
+      "expected": {
+        "content": "Diga o que entrada e saída representam; determine o domínio antes de operar; leia escala e unidade; substitua valores para conferir e interprete a resposta no contexto. Em composição, aplique primeiro a função interna e verifique o domínio intermediário.\n\n**Autochecagem:** em h(x)=(√(x−1))/(x−2), x=1 pertence ao domínio, x=2 não, e x=3 pertence. Para f(x)=x²−1 e g(x)=2x+1, (f∘g)(2)=f(5)=24."
+      },
+      "changes": {
+        "content": "Diga o que entrada e saída representam; determine o domínio antes de operar; leia escala e unidade; substitua valores para conferir e interprete a resposta no contexto. Em composição, aplique primeiro a função interna e verifique o domínio intermediário.\n\n**Autochecagem:** em h(x)=(√(x−1))/(x−2), x=1 pertence ao domínio, x=2 não, e x=3 pertence. Para f(x)=x²−1 e g(x)=2x+1, (f∘g)(2)=f(5)=24.\n\nEsta etapa não cobre com profundidade funções trigonométricas, equações e inequações funcionais, nem todos os tipos e operações previstos no programa. Trate esses assuntos nas etapas seguintes; não conclua que o tópico inteiro está coberto aqui."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.3.3, do tópico 2476.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.3.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 40
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2481.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 41
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2481.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 42
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2481.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 40
+      },
+      "expected": {
+        "content": "Duas retas no espaço podem ser **coincidentes**, **paralelas distintas**, **concorrentes** (coplanares e com um ponto comum) ou **reversas** (não coplanares). Uma reta e um plano podem ser paralelos sem ponto comum, ter a reta contida no plano ou cruzar-se em um único ponto. Nesse último caso, são perpendiculares quando a reta é perpendicular, no ponto de interseção, a duas retas concorrentes do plano; equivalentemente, forma 90° com toda direção do plano que passa por esse ponto.\n\nPoliedros têm faces planas. Prismas e cilindros têm volume B·h; pirâmides e cones têm volume B·h/3, sempre com h perpendicular à base. A esfera de raio r tem volume 4πr³/3 e área 4πr². Área total considera apenas superfícies externas; planificações ajudam a identificar faces, mas é preciso verificar quais arestas se unem. Em pirâmide regular, a área lateral é (perímetro da base × apótema lateral)/2. Volume usa unidades cúbicas e área unidades quadradas; 1 L=1 dm³=1000 cm³.\n\n**Erros comuns**\n\nNão omita retas coincidentes nem confunda paralelas distintas com coincidentes. Retas reversas não se encontram e não são coplanares. Uma reta secante a um plano não é necessariamente perpendicular. Não use geratriz ou apótema como altura perpendicular para volume; não some superfícies internas coladas nem misture unidades de área e volume."
+      },
+      "changes": {
+        "content": "Duas retas no espaço podem ser coincidentes, paralelas distintas, concorrentes (coplanares e com um ponto comum) ou reversas (não coplanares). Uma reta e um plano podem ser paralelos sem ponto comum, ter a reta contida no plano ou cruzar-se em um ponto. No último caso, são perpendiculares quando a reta é perpendicular a toda reta do plano que passa pelo ponto de interseção. Planos paralelos distintos não se encontram; planos perpendiculares formam diedro de 90°.\n\nPoliedros têm faces planas. Prismas e cilindros têm volume B·h; pirâmides e cones têm volume B·h/3, sempre com h perpendicular à base. A esfera de raio r tem volume 4πr³/3 e área 4πr². Em cilindro de raio r e altura h, A_l=2πrh e A_total=2πr(h+r). Em cone reto de raio r e geratriz g, A_l=πrg e A_total=πr(g+r). Para tronco de cone circular reto com bases paralelas de raios R e r, A_l=π(R+r)g e V=πh(R²+Rr+r²)/3; g é a geratriz inclinada, com g=√(h²+(R−r)²). A área total inclui as duas bases: A_total=A_l+πR²+πr². Área total considera apenas superfícies externas; planificações ajudam a identificar faces, mas é preciso verificar quais arestas se unem. Volume usa unidades cúbicas e área unidades quadradas; 1 L=1 dm³=1000 cm³.\n\n**Erros comuns**\n\nNão omita retas coincidentes nem confunda paralelas distintas com coincidentes. Retas reversas não se encontram e não são coplanares. Uma reta secante a um plano não é necessariamente perpendicular. Não use geratriz ou apótema como altura perpendicular para volume; não some superfícies internas coladas nem misture unidades de área e volume.\n\n**Limite desta etapa:** há exemplos resolvidos de áreas laterais e totais de cilindro, cone e tronco circular reto, mas não de áreas de prismas e pirâmides. Troncos de pirâmide e aplicações mais amplas de áreas de superfícies ficam para etapas posteriores; esta lição é introdutória e não cobre sozinha toda a geometria espacial do programa."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.2.3, do tópico 2481.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 41
+      },
+      "expected": {
+        "content": "Em um cubo, duas arestas que compartilham um vértice são concorrentes; duas arestas distintas da mesma direção são paralelas; uma aresta é coincidente consigo mesma; e duas arestas sem interseção que não pertencem a um mesmo plano são reversas. Uma reta perpendicular ao plano de uma face encontra esse plano em um ponto e forma 90° com duas direções concorrentes da face por esse ponto.\n\nUma pirâmide quadrada regular tem lado da base 6 e apótema lateral 5. Sua área lateral é (4·6·5)/2=60 e a base tem área 36, logo a área total é 96. Se a altura perpendicular é 4, o volume é 36·4/3=48 unidades cúbicas. Um cone de raio 3 e altura 10 tem volume π·3²·10/3=30π; a geratriz não substitui a altura."
+      },
+      "changes": {
+        "content": "Em um cubo, duas arestas que compartilham um vértice são concorrentes; duas arestas distintas da mesma direção são paralelas; uma aresta é coincidente consigo mesma; e duas arestas sem interseção que não pertencem a um mesmo plano são reversas. Uma reta perpendicular ao plano de uma face encontra esse plano em um ponto e forma 90° com duas direções concorrentes da face por esse ponto.\n\nUma pirâmide quadrada regular tem lado da base 6 e apótema lateral 5. Sua área lateral é (4·6·5)/2=60 e a base tem área 36, logo a área total é 96. Se a altura perpendicular é 4, o volume é 36·4/3=48 unidades cúbicas. Um cone de raio 3 e altura 10 tem volume π·3²·10/3=30π; a geratriz não substitui a altura.\n\n**Áreas de superfícies.** Um cilindro de raio 3 cm e altura 4 cm tem A_l=2π·3·4=24π cm² e A_total=24π+2π·3²=42π cm². Um cone reto de raio 3 cm e geratriz 5 cm tem A_l=π·3·5=15π cm² e A_total=15π+π·3²=24π cm².\n\nPara um tronco circular reto com R=3 cm, r=1 cm e h=3 cm, primeiro calcule g=√(3²+(3−1)²)=√13 cm. Então A_l=π(3+1)√13=4π√13 cm²; A_total=4π√13+π·3²+π·1²=(4√13+10)π cm². O volume é V=π·3(3²+3·1+1²)/3=13π cm³. A área usa unidades quadradas e o volume, cúbicas."
+      },
+      "reason": "Aplicar conteúdo revisado da seção example, versão 1.2.3, do tópico 2481.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção example.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 42
+      },
+      "expected": {
+        "content": "Classifique cada par de objetos antes de aplicar fórmulas: coincidente, paralelo distinto, concorrente ou reverso para duas retas; contido, paralelo ou secante para reta e plano. Secância não implica perpendicularidade: verifique o ângulo com duas direções concorrentes no plano. Depois identifique base, altura perpendicular, faces externas e unidades.\n\n**Autochecagem:** duas retas reversas não são coplanares; uma reta contida no plano não é secante em um único ponto; uma reta perpendicular ao plano faz 90° com duas retas concorrentes desse plano no ponto. Pirâmide de base 36 e altura 4 tem volume 48."
+      },
+      "changes": {
+        "content": "Classifique cada par de objetos antes de aplicar fórmulas: coincidente, paralelo distinto, concorrente ou reverso para duas retas; contido, paralelo ou secante para reta e plano. Secância não implica perpendicularidade: verifique se a reta é perpendicular às retas do plano que passam pelo ponto. Depois identifique base, altura perpendicular, faces externas e unidades.\n\n**Autochecagem:** duas retas reversas não são coplanares; uma reta contida no plano não o cruza em um único ponto; uma reta perpendicular ao plano é perpendicular às retas desse plano pelo ponto de interseção. Pirâmide de base 36 e altura 4 tem volume 48.\n\nA etapa demonstra áreas laterais e totais de cilindro, cone e tronco circular reto; áreas de prismas e pirâmides, troncos de pirâmide e aplicações mais amplas requerem etapas próprias. A geometria espacial não se esgota aqui."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.2.3, do tópico 2481.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 58
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2487.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 59
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2487.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 60
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2487.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 58
+      },
+      "expected": {
+        "content": "O sistema terrestre pode ser estudado pelas interações entre litosfera (rochas e relevo), hidrosfera (água), atmosfera, criosfera (água congelada) e biosfera. **Solos compõem a pedosfera**, uma interface formada por material mineral, matéria orgânica, água, ar e organismos, em interação com essas esferas. Essa organização evita tratar o solo como se fosse apenas rocha.\n\nEnergia solar e interna impulsiona processos; água, carbono, sedimentos e nutrientes circulam entre componentes. Tectônica de placas, vulcanismo e terremotos são processos endógenos; intemperismo altera rochas, erosão transporta materiais e deposição os acumula. Clima descreve padrões de longo prazo de temperatura, umidade e pressão; circulações atmosférica e oceânica redistribuem energia e umidade. A criosfera influencia o sistema por meio de água congelada e responde às mudanças ambientais. Bacias hidrográficas organizam a drenagem até um exutório. Biomas e domínios naturais variam com clima, solo, relevo e comunidades, sem serem homogêneos. Usos humanos podem modificar fluxos, ecossistemas e riscos.\n\n**Erros comuns**\n\nNão reduza solos a rochas nem confunda tempo atmosférico e clima. Bioma não é sinônimo de clima. Não atribua evento extremo a uma causa única sem evidências e escala adequadas; disponibilidade física de água não significa acesso igualitário."
+      },
+      "changes": {
+        "content": "O sistema terrestre pode ser estudado pelas interações entre litosfera (rochas e relevo), hidrosfera (água), atmosfera, criosfera (água congelada) e biosfera (vida e suas relações com os demais componentes). **Solos compõem a pedosfera**, uma interface de material mineral, matéria orgânica, água, ar e organismos; não são apenas rocha. Água, carbono, sedimentos e nutrientes circulam entre componentes, e energia solar e interna impulsiona processos.\n\nEsta visão integrada ajuda a formular relações entre processos: tectônica pode construir relevo; intemperismo altera rochas; erosão transporta materiais e deposição os acumula; circulações atmosférica e oceânica redistribuem energia e umidade; bacias organizam a drenagem até um exutório. Clima, solo, relevo e comunidades participam da dinâmica dos biomas, que não são unidades homogêneas. Usos humanos também podem modificar fluxos, ecossistemas e riscos.\n\n**Erros comuns**\n\nNão reduza solos a rochas nem confunda tempo atmosférico (condição de curto prazo) com clima (padrões de longo prazo). Bioma não é sinônimo de clima. Não atribua um evento extremo a uma causa única sem evidências e escala adequadas; disponibilidade física de água não significa acesso igualitário.\n\n**Limite desta etapa:** esta é uma visão geral das interações físico-naturais, ilustrada por uma bacia hidrográfica. Não ensina em detalhe tectônica, classificações climáticas, dinâmica de cada bioma, conservação, riscos e desastres, mudanças climáticas ou planejamento ambiental. Esses conteúdos exigem módulos próprios; esta aula não substitui o percurso detalhado do programa."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.2.3, do tópico 2487.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 60
+      },
+      "expected": {
+        "content": "Relacione esferas e fluxos de matéria/energia; reconheça o solo como interface da pedosfera; identifique processo, escala, condições e intervenções humanas. Diferencie tempo atmosférico de clima e evite explicações monocausais.\n\n**Autochecagem:** solo não é sinônimo de litosfera: integra a pedosfera e conecta materiais minerais, matéria orgânica, água, ar e organismos. Em uma encosta, relevo, solo, chuva e cobertura vegetal influenciam conjuntamente o escoamento e a erosão. Tempo atmosférico é condição de curto prazo; clima é padrão observado ao longo de períodos prolongados."
+      },
+      "changes": {
+        "content": "Relacione componentes terrestres e fluxos de matéria e energia; reconheça o solo como interface da pedosfera; identifique processo, escala, condições e intervenções humanas. Diferencie tempo atmosférico de clima e evite explicações monocausais.\n\n**Autochecagem:** solo não é sinônimo de litosfera: integra a pedosfera e conecta materiais minerais, matéria orgânica, água, ar e organismos. Em uma encosta, relevo, solo, chuva e cobertura vegetal influenciam conjuntamente o escoamento e a erosão.\n\nEsta lição oferece uma visão integrada, não módulos detalhados de tectônica, clima, biomas, conservação, riscos, mudança climática e gestão ambiental. Estude esses subtemas nas etapas seguintes; não considere o tópico integralmente coberto por este panorama."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.2.3, do tópico 2487.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "21b401673e7ca167e792020927a23bfa99c08af9646c974ec8453038ea538628"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-humanities-second-review-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "17b3d0e62f0960e96033226e789627614c38013d719dfd6b134f8d2b3058dfac"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 100
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2501.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 101
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2501.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 102
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2501.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 100
+      },
+      "expected": {
+        "content": "Uma descrição física declara referencial, grandezas, unidades e hipóteses. Em duas dimensões, decomponha posição, velocidade, aceleração e força em eixos perpendiculares. Para aceleração constante, use vₓ=v₀ₓ+aₓt e x=x₀+v₀ₓt+aₓt²/2 em cada eixo; no lançamento horizontal ideal, aₓ=0 e aᵧ=−g. A inclinação de gráfico posição-tempo é velocidade; a área algébrica sob velocidade-tempo é deslocamento.\n\nAs leis de Newton relacionam força resultante e movimento; ação e reação atuam em corpos diferentes. A força gravitacional entre massas puntuais (ou corpos esféricos fora deles) é F=Gm₁m₂/r², dirigida ao longo da linha que une os centros. Próximo à superfície da Terra, o peso é aproximadamente mg; g resulta do campo gravitacional local e não é uma constante universal. A energia potencial gravitacional perto da superfície pode ser aproximada por mgh quando a variação de altura é pequena em comparação ao raio terrestre.\n\nQuantidade de movimento é o vetor p=mv. O impulso da força resultante é J=∫Fdt=Δp; para força constante, J=FΔt. Em sistema isolado, a quantidade de movimento total se conserva. Trabalho, energia cinética, energia potencial, torque e equilíbrio conectam forças a mudanças e rotações. Em fluido uniforme, a pressão hidrostática relativa varia como ρgh e o empuxo equivale ao peso do fluido deslocado.\n\n**Erros comuns**\n\nNão some módulos de vetores sem considerar direção e sentido. Não confunda G (constante universal) com g (campo local). Use F=Gm₁m₂/r² com a distância entre centros e massas apropriadas. Impulso é variação vetorial de quantidade de movimento; o sinal depende do eixo escolhido. A equação mgh é aproximação local, não a expressão geral para grandes distâncias."
+      },
+      "changes": {
+        "content": "Uma descrição física declara referencial, grandezas, unidades e hipóteses. Em duas dimensões, decomponha posição, velocidade, aceleração e força em eixos perpendiculares. Para aceleração constante, use vₓ=v₀ₓ+aₓt e x=x₀+v₀ₓt+aₓt²/2 em cada eixo; no lançamento horizontal ideal, aₓ=0 e aᵧ=−g. A inclinação de gráfico posição-tempo é velocidade; a área algébrica sob velocidade-tempo é deslocamento.\n\nAs leis de Newton relacionam força resultante e movimento; ação e reação atuam em corpos diferentes. A força gravitacional entre massas puntuais (ou corpos esféricos fora deles) é F=Gm₁m₂/r², dirigida ao longo da linha que une os centros. Próximo à superfície da Terra, o peso é aproximadamente mg; g resulta do campo gravitacional local e não é uma constante universal. A energia potencial gravitacional perto da superfície pode ser aproximada por mgh quando a variação de altura é pequena em comparação ao raio terrestre.\n\nQuantidade de movimento é o vetor p=mv. O impulso da força resultante é J=∫Fdt=Δp; para força constante, J=FΔt. Em sistema isolado, a quantidade de movimento total se conserva. Trabalho, energia cinética, energia potencial, torque e equilíbrio conectam forças a mudanças e rotações. Em fluido uniforme, a pressão hidrostática relativa varia como ρgh e o empuxo equivale ao peso do fluido deslocado.\n\n**Erros comuns**\n\nNão some módulos de vetores sem considerar direção e sentido. Não confunda G (constante universal) com g (campo local). Use F=Gm₁m₂/r² com a distância entre centros e massas apropriadas. Impulso é variação vetorial de quantidade de movimento; o sinal depende do eixo escolhido. A equação mgh é aproximação local, não a expressão geral para grandes distâncias.\n\n**Escopo desta etapa.** Esta microaula aprofunda vetores, impulso, gravitação e algumas conexões com energia e fluidos; não substitui o estudo separado de todos os itens de Mecânica do programa. A sequência de estudos também deve tratar cinemática em uma dimensão, leis de Newton e atrito, torque e equilíbrio, órbitas e leis de Kepler, conservação da quantidade de movimento, trabalho e potência e hidrostática. Em cada etapa, declare referencial, hipóteses e unidades; a presença de um tema nesta introdução não significa que todo o tópico esteja coberto ou dominado."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.3.3, do tópico 2501.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.3.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 102
+      },
+      "expected": {
+        "content": "Defina eixos e referencial; decomponha vetores; identifique a lei e as hipóteses antes de substituir valores. Para impulso, calcule Δp=m(v_f−v_i) com sinais e depois divida pelo intervalo quando se pede força média. Para gravitação, use as massas e a separação entre centros; diferencie G de g.\n\n**Autochecagem:** se a bola do exemplo terminasse em +5 m/s, mantendo massa e tempo, qual seria Δp? **0,20(5−10)=−1,0 kg·m/s**, e a força média seria −10 N. Se a distância entre centros dobrar, mantendo as massas, a força gravitacional fica **um quarto**, pois F∝1/r². O que o sinal negativo do impulso informa? **Direção oposta ao eixo positivo escolhido.**"
+      },
+      "changes": {
+        "content": "Defina eixos e referencial; decomponha vetores; identifique a lei e as hipóteses antes de substituir valores. Para impulso, calcule Δp=m(v_f−v_i) com sinais e depois divida pelo intervalo quando se pede força média. Para gravitação, use as massas e a separação entre centros; diferencie G de g.\n\n**Autochecagem:** se a bola do exemplo terminasse em +5 m/s, mantendo massa e tempo, qual seria Δp? **0,20(5−10)=−1,0 kg·m/s**, e a força média seria −10 N. Se a distância entre centros dobrar, mantendo as massas, a força gravitacional fica **um quarto**, pois F∝1/r². O que o sinal negativo do impulso informa? **Direção oposta ao eixo positivo escolhido.**\n\n**Limite do resumo:** use esta síntese como ponto de partida. Confira no roteiro se cinemática, dinâmica, equilíbrio, gravitação orbital, energia e fluidos também foram estudados e praticados."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.3.3, do tópico 2501.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.3.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 109
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2504.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 110
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2504.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 111
+      },
+      "expected": {
+        "editorial_version": "1.2.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.2.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2504.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.2.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 109
+      },
+      "expected": {
+        "content": "Ondas transportam energia sem transporte líquido de matéria. Para onda periódica, v=λf e T=1/f. Ao cruzar uma interface, a frequência permanece determinada pela fonte; velocidade e comprimento de onda podem mudar. Som é mecânico; luz é eletromagnética. Difração é mais acentuada quando abertura/obstáculo tem dimensão comparável ao comprimento de onda.\n\nPara duas fontes coerentes em fase e amplitudes comparáveis, diferença de caminho Δr=mλ produz máximo construtivo; Δr=(m+1/2)λ produz mínimo destrutivo ideal. Se as fontes começam em oposição de fase, as condições se invertem. Reflexão mede ângulos a partir da normal; refração segue n₁senθ₁=n₂senθ₂. Reflexão interna total requer propagação do meio de maior índice para o de menor e ângulo acima do crítico. Dispersão decorre da dependência do índice em relação ao comprimento de onda.\n\nPara lentes delgadas em aproximação paraxial, 1/f=1/p+1/p′. Nesta lição, adotamos eixo positivo na direção de propagação: objeto real p>0, lente convergente f>0 e imagem real p′>0; imagem virtual terá p′<0. O aumento transversal é m=−p′/p; m<0 indica imagem invertida. A mesma convenção precisa ser mantida em toda substituição.\n\n**Erros comuns**\n\nNão confunda distância de caminho com comprimento de onda; confira a fase inicial das fontes. Ângulos são medidos à normal. Não diga que frequência muda na refração. Fórmulas de lentes dependem da convenção de sinais, que deve ser declarada antes da conta."
+      },
+      "changes": {
+        "content": "Ondas transportam energia sem transporte líquido de matéria. Para onda periódica, v=λf e T=1/f. Ao cruzar uma interface, a frequência permanece determinada pela fonte; velocidade e comprimento de onda podem mudar. Som é mecânico; luz é eletromagnética. Difração é mais acentuada quando abertura/obstáculo tem dimensão comparável ao comprimento de onda.\n\nPara duas fontes coerentes em fase e amplitudes comparáveis, diferença de caminho Δr=mλ produz máximo construtivo; Δr=(m+1/2)λ produz mínimo destrutivo ideal. Se as fontes começam em oposição de fase, as condições se invertem. Reflexão mede ângulos a partir da normal; refração segue n₁senθ₁=n₂senθ₂. Reflexão interna total requer propagação do meio de maior índice para o de menor e ângulo acima do crítico. Dispersão decorre da dependência do índice em relação ao comprimento de onda.\n\nPara lentes delgadas em aproximação paraxial, 1/f=1/p+1/p′. Nesta lição, adotamos eixo positivo na direção de propagação: objeto real p>0, lente convergente f>0 e imagem real p′>0; imagem virtual terá p′<0. O aumento transversal é m=−p′/p; m<0 indica imagem invertida. A mesma convenção precisa ser mantida em toda substituição.\n\n**Erros comuns**\n\nNão confunda distância de caminho com comprimento de onda; confira a fase inicial das fontes. Ângulos são medidos à normal. Não diga que frequência muda na refração. Fórmulas de lentes dependem da convenção de sinais, que deve ser declarada antes da conta.\n\n**Hipóteses e convenções.** Para duas fontes coerentes, a diferença de fase deve permanecer estável; se elas estão em fase, máximos construtivos ocorrem quando Δr=mλ e mínimos destrutivos ideais quando Δr=(m+1/2)λ. O cancelamento mínimo completo também pressupõe amplitudes iguais. Se a fase inicial for oposta, máximo e mínimo se invertem. A equação 1/f=1/p+1/p′ vale aqui para lente delgada e raios paraxiais. Mantendo o eixo positivo na direção de propagação já declarado, objeto real tem p>0, lente convergente f>0 e lente divergente f<0; para objeto real diante de lente divergente, a imagem é virtual e p′<0. Declare a convenção antes de substituir valores e não misture regras de convenções diferentes. Objetos virtuais, sistemas de lentes e aberrações não são tratados nesta etapa.\n\n**Limite desta etapa.** Esta microaula introduz ondas planas, uma onda sonora, interferência e difração em nível inicial, refração e um modelo de lente delgada. Não desenvolve ondas em cordas, polarização, ondas esféricas, espelhos planos ou esféricos, prismas, instrumentos ópticos, espectro eletromagnético nem óptica da visão; difração, som e sistemas ópticos também exigem estudo mais amplo. Esses pontos do programa precisam de etapas específicas. A presença de exemplos de refração e lentes não significa que todo o tópico Óptica e ondas esteja coberto."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.2.3, do tópico 2504.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 111
+      },
+      "expected": {
+        "content": "Use λ=v/f com unidades coerentes; ao mudar de meio, mantenha a frequência e reavalie v e λ. Em interferência, determine fase inicial e compare Δr com λ. Em lentes, escreva a convenção antes de substituir e interprete p′ e m.\n\n**Autochecagem:** se v=300 m/s e f=600 Hz, λ=0,50 m. Para duas fontes em fase e Δr=0,5λ, ocorre mínimo destrutivo ideal. Na lente do exemplo, uma imagem virtual seria representada por p′ positivo ou negativo nesta convenção? **Negativo.**"
+      },
+      "changes": {
+        "content": "Use λ=v/f com unidades coerentes; ao mudar de meio, mantenha a frequência e reavalie v e λ. Em interferência, determine fase inicial e compare Δr com λ. Em lentes, escreva a convenção antes de substituir e interprete p′ e m.\n\n**Autochecagem:** se v=300 m/s e f=600 Hz, λ=0,50 m. Para duas fontes em fase e Δr=0,5λ, ocorre mínimo destrutivo ideal. Na lente do exemplo, uma imagem virtual seria representada por p′ positivo ou negativo nesta convenção? **Negativo.**\n\nAntes de aplicar máximos ou mínimos, confira coerência, fase inicial e igualdade de amplitudes para o mínimo ideal. Na equação de lentes, identifique objeto real, tipo de lente e convenção de sinais; nesta convenção, uma imagem virtual tem p′<0."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.2.3, do tópico 2504.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.2.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 115
+      },
+      "expected": {
+        "editorial_version": "1.3.1",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.2",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2506.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.2.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 116
+      },
+      "expected": {
+        "editorial_version": "1.3.1",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.2",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2506.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.2.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 117
+      },
+      "expected": {
+        "editorial_version": "1.3.1",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.2",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2506.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.2.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 115
+      },
+      "expected": {
+        "content": "Uma substância é identificada por propriedades características e composição; purificação pode usar filtração, destilação, cristalização ou cromatografia conforme tamanho, volatilidade, solubilidade e afinidade. Fórmulas representam átomos/íons/moléculas; quantidade de matéria n=m/M. Sólidos têm forma própria, líquidos escoam e gases são compressíveis; mudanças de estado dependem de temperatura e pressão. Pressão de vapor descreve equilíbrio entre vapor e líquido. Para quantidade fixa de gás ideal, PV=nRT; a volume constante P/T é constante, a pressão constante V/T é constante e, a temperatura constante, PV é constante. Em misturas ideais, p_i=x_iP. Difusão decorre do movimento molecular; gases reais desviam do modelo ideal e podem liquefazer por resfriamento/compressão. Soluções são misturas homogêneas; concentração pode ser mol/L, g/L, fração em massa/mol ou mol/kg. Eletrólitos formam íons móveis e conduzem em solução. Soluto não volátil pode reduzir pressão de vapor e alterar temperaturas de ebulição/congelamento. Coloides têm partículas dispersas que espalham luz sem se comportar como solução molecular simples.\n\n**Erros comuns**\n\nVolume final da solução não é necessariamente volume do solvente. Não misture concentração molar e molal. Pressão parcial usa fração molar, não fração em massa. O modelo ideal é aproximação. Filtração não remove sal dissolvido; decantação não separa líquidos miscíveis. Em mudanças de estado, pressão também importa.\n\nGás ideal, quantidade fixa: Boyle P₁V₁=P₂V₂ (T constante); Gay-Lussac P₁/T₁=P₂/T₂ (V constante); Charles V₁/T₁=V₂/T₂ (P constante). Avogadro: V/n constante a P,T constantes. Use kelvin; são limites do modelo ideal e gases reais podem liquefazer. Concentração pode ser g/L, porcentagem ou fração molar; coloides espalham luz; pressão de vapor corresponde ao equilíbrio líquido-vapor."
+      },
+      "changes": {
+        "content": "Uma substância é identificada por propriedades características e composição; purificação pode usar filtração, destilação, cristalização ou cromatografia conforme tamanho, volatilidade, solubilidade e afinidade. Fórmulas representam átomos/íons/moléculas; quantidade de matéria n=m/M. Sólidos têm forma própria, líquidos escoam e gases são compressíveis; mudanças de estado dependem de temperatura e pressão. Pressão de vapor descreve equilíbrio entre vapor e líquido. Para quantidade fixa de gás ideal, PV=nRT; a volume constante P/T é constante, a pressão constante V/T é constante e, a temperatura constante, PV é constante. Em misturas ideais, p_i=x_iP. Difusão decorre do movimento molecular; gases reais desviam do modelo ideal e podem liquefazer por resfriamento/compressão. Soluções são misturas homogêneas; concentração pode ser mol/L, g/L, fração em massa/mol ou mol/kg. Eletrólitos formam íons móveis e conduzem em solução. Soluto não volátil pode reduzir pressão de vapor e alterar temperaturas de ebulição/congelamento. Coloides têm partículas dispersas que espalham luz sem se comportar como solução molecular simples.\n\n**Erros comuns**\n\nVolume final da solução não é necessariamente volume do solvente. Não misture concentração molar e molal. Pressão parcial usa fração molar, não fração em massa. O modelo ideal é aproximação. Filtração não remove sal dissolvido; decantação não separa líquidos miscíveis. Em mudanças de estado, pressão também importa.\n\nGás ideal, quantidade fixa: Boyle P₁V₁=P₂V₂ (T constante); Gay-Lussac P₁/T₁=P₂/T₂ (V constante); Charles V₁/T₁=V₂/T₂ (P constante). Avogadro: V/n constante a P,T constantes. Use kelvin; são limites do modelo ideal e gases reais podem liquefazer. Concentração pode ser g/L, porcentagem ou fração molar; coloides espalham luz; pressão de vapor corresponde ao equilíbrio líquido-vapor.\n\n**Temperatura e energia cinética translacional média.** Para partículas de um gás ideal clássico em equilíbrio térmico, a energia cinética translacional média por partícula é ⟨Eₖ⟩=3kBT/2, em que T deve estar em kelvin e kB=1,380649×10⁻²³ J/K. Por mol, a energia cinética translacional média é 3RT/2. Essa relação se refere à média translacional; não equivale à energia interna total de qualquer material, que pode incluir outros graus de liberdade e interações."
+      },
+      "reason": "Aplicar conteúdo revisado da seção theory, versão 1.3.2, do tópico 2506.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção theory.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.3.2 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 116
+      },
+      "expected": {
+        "content": "Para separar areia e sal de uma mistura com água, primeiro filtre: a areia fica retida; o sal dissolvido atravessa. Depois destile ou evapore a água para recuperar sal, escolhendo destilação se também for necessário recolher o solvente. Para 5,85 g de NaCl (M≈58,5 g/mol) em volume final de 0,50 L, n=0,10 mol e concentração=0,20 mol/L. Uma mistura ideal com x_N2=0,75 e P_total=0,80 atm tem p_N2=0,60 atm. Cada passo usa uma propriedade diferente e unidades explícitas.\n\nA 300 K, 2 mol ocupam 10 L; a P,T constantes, 3 mol ocupam 10·3/2=15 L."
+      },
+      "changes": {
+        "content": "Para separar areia e sal de uma mistura com água, primeiro filtre: a areia fica retida; o sal dissolvido atravessa. Depois destile ou evapore a água para recuperar sal, escolhendo destilação se também for necessário recolher o solvente. Para 5,85 g de NaCl (M≈58,5 g/mol) em volume final de 0,50 L, n=0,10 mol e concentração=0,20 mol/L. Uma mistura ideal com x_N2=0,75 e P_total=0,80 atm tem p_N2=0,60 atm. Cada passo usa uma propriedade diferente e unidades explícitas.\n\nA 300 K, 2 mol ocupam 10 L; a P,T constantes, 3 mol ocupam 10·3/2=15 L.\n\n**Energia média e temperatura.** A 300 K, para uma partícula de gás ideal clássico, ⟨Eₖ⟩=(3/2)(1,380649×10⁻²³ J/K)(300 K)=6,2129205×10⁻²¹ J≈6,21×10⁻²¹ J. A 600 K, ⟨Eₖ⟩=1,2425841×10⁻²⁰ J≈1,24×10⁻²⁰ J. Ao dobrar a temperatura absoluta, dobra a energia cinética translacional média; isso não significa que cada partícula tenha exatamente essa energia, pois é uma média estatística."
+      },
+      "reason": "Aplicar conteúdo revisado da seção example, versão 1.3.2, do tópico 2506.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção example.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.3.2 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 117
+      },
+      "expected": {
+        "content": "Identifique substância/fases e propriedade explorada; selecione técnica de separação; converta massa em mol por massa molar; declare qual concentração está calculando; use leis de gases apenas com as variáveis mantidas constantes indicadas. Autochecagem: 5,85 g de NaCl em 0,50 L correspondem a 0,20 mol/L; fração molar 0,75 em 0,80 atm dá pressão parcial 0,60 atm."
+      },
+      "changes": {
+        "content": "Identifique substância/fases e propriedade explorada; selecione técnica de separação; converta massa em mol por massa molar; declare qual concentração está calculando; use leis de gases apenas com as variáveis mantidas constantes indicadas. Autochecagem: 5,85 g de NaCl em 0,50 L correspondem a 0,20 mol/L; fração molar 0,75 em 0,80 atm dá pressão parcial 0,60 atm.\n\nPara comparar energias cinéticas translacionais médias no modelo de gás ideal clássico, use ⟨Eₖ,2⟩/⟨Eₖ,1⟩=T₂/T₁, com temperaturas em kelvin. Distinga a média por partícula da energia total do sistema."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.3.2, do tópico 2506.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.3.2 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 118
+      },
+      "expected": {
+        "editorial_version": "1.1.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.1.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2507.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.1.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 119
+      },
+      "expected": {
+        "editorial_version": "1.1.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.1.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2507.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.1.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 120
+      },
+      "expected": {
+        "editorial_version": "1.1.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.1.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2507.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.1.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 119
+      },
+      "expected": {
+        "content": "**Comparação F/Cl com arredondamento consistente.** O NIST registra aproximadamente 3,6131 eV para Cl e 3,401191 eV para F, como energias de afinidade liberadas. Usando 1 eV por partícula≈96,485 kJ/mol: Cl: 3,6131×96,485≈348,610 kJ/mol, isto é, **348,6 kJ/mol** a uma casa decimal; F: 3,401191×96,485≈328,164 kJ/mol, isto é, **328,2 kJ/mol**. Na convenção de entalpia da reação X(g)+e⁻→X⁻(g), os sinais são aproximadamente −348,6 e −328,2 kJ/mol. Cl libera mais energia ao receber o elétron. A exceção à tendência simples é compatível com maior repulsão ao elétron que chega no orbital 2p compacto do F; não significa que afinidade e eletronegatividade sejam a mesma propriedade.\n\n**Lewis versus conectividade.** Em H–Cl, a ligação covalente é um par compartilhado; o Cl ainda tem três pares de elétrons não ligantes. A fórmula estrutural H–Cl mostra quais átomos se conectam; a descrição de Lewis acrescenta os pares não ligantes.\n\n**Meia-vida e equação nuclear.** Uma amostra de 80 mg com meia-vida de 6 h, após 12 h, fica com 80(1/2)²=20 mg. Um exemplo balanceado de beta menos é ¹⁴₆C→¹⁴₇N+⁰₋₁e+ν̅ₑ: A permanece 14 e a soma das cargas nucleares/partículas emitidas conserva a carga."
+      },
+      "changes": {
+        "content": "**Comparação F/Cl com arredondamento consistente.** O NIST registra aproximadamente 3,6131 eV para Cl e 3,401191 eV para F, como energias de afinidade liberadas. Usando 1 eV por partícula≈96,485 kJ/mol: Cl: 3,6131×96,485≈348,610 kJ/mol, isto é, **348,6 kJ/mol** a uma casa decimal; F: 3,401191×96,485≈328,164 kJ/mol, isto é, **328,2 kJ/mol**. Na convenção de entalpia da reação X(g)+e⁻→X⁻(g), os sinais são aproximadamente −348,6 e −328,2 kJ/mol. Cl libera mais energia ao receber o elétron. A exceção à tendência simples é compatível com maior repulsão ao elétron que chega no orbital 2p compacto do F; não significa que afinidade e eletronegatividade sejam a mesma propriedade.\n\n**Lewis versus conectividade.** Em H–Cl, a ligação covalente é um par compartilhado; o Cl ainda tem três pares de elétrons não ligantes. A fórmula estrutural H–Cl mostra quais átomos se conectam; a descrição de Lewis acrescenta os pares não ligantes.\n\n**Meia-vida e equação nuclear.** Uma amostra de 80 mg com meia-vida de 6 h, após 12 h, fica com 80(1/2)²=20 mg. Um exemplo balanceado de beta menos é ¹⁴₆C→¹⁴₇N+⁰₋₁e+ν̅ₑ: A permanece 14 e a soma das cargas nucleares/partículas emitidas conserva a carga.\n\n**Modelos de ligação e propriedades.** No NaCl sólido, íons Na⁺ e Cl⁻ formam uma rede; os íons não se deslocam livremente pela estrutura, por isso o sólido não conduz como um metal. NaCl fundido ou em solução aquosa pode conduzir porque há íons móveis. Em CO₂, cada ligação C=O é polar, mas a geometria linear e simétrica cancela os dipolos, tornando a molécula apolar. Em H₂O, as ligações O–H são polares e a geometria angular deixa um dipolo resultante; moléculas de água também podem formar ligações de hidrogênio. No cobre sólido, elétrons deslocalizados contribuem para a condução elétrica e térmica e para a maleabilidade típicas de metais. São modelos explicativos: propriedades observadas também dependem da estrutura, composição, temperatura e estado físico."
+      },
+      "reason": "Aplicar conteúdo revisado da seção example, versão 1.1.3, do tópico 2507.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção example.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.1.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 120
+      },
+      "expected": {
+        "content": "Use Z, A e carga para contar partículas; aplique Aufbau, Pauli e Hund; trate propriedades periódicas como tendências e declare a convenção de afinidade. Separe fórmula molecular, conectividade estrutural e informação eletrônica de Lewis. Distinga ligação intramolecular de forças intermoleculares e confira conservação em equações nucleares.\n\n**Autochecagem:** a 1 eV≈96,485 kJ/mol, quanto vale 3,6131 eV/mol de partículas, a uma casa decimal? **348,6 kJ/mol.** Em uma estrutura de Lewis de H–Cl, quantos pares não ligantes ficam no Cl? **Três.** H ligado a O pode participar de ligação de hidrogênio entre moléculas? **Sim, quando há uma região aceitadora com par eletrônico disponível.** Após três meias-vidas resta **1/8** da amostra inicial."
+      },
+      "changes": {
+        "content": "Use Z, A e carga para contar partículas; aplique Aufbau, Pauli e Hund; trate propriedades periódicas como tendências e declare a convenção de afinidade. Separe fórmula molecular, conectividade estrutural e informação eletrônica de Lewis. Distinga ligação intramolecular de forças intermoleculares e confira conservação em equações nucleares.\n\n**Autochecagem:** a 1 eV≈96,485 kJ/mol, quanto vale 3,6131 eV/mol de partículas, a uma casa decimal? **348,6 kJ/mol.** Em uma estrutura de Lewis de H–Cl, quantos pares não ligantes ficam no Cl? **Três.** H ligado a O pode participar de ligação de hidrogênio entre moléculas? **Sim, quando há uma região aceitadora com par eletrônico disponível.** Após três meias-vidas resta **1/8** da amostra inicial.\n\nAo relacionar ligação e propriedade, explicite o mecanismo e as condições: mobilidade de íons no sal fundido ou em solução, polaridade e geometria em moléculas, ou elétrons deslocalizados no metal. Não conclua que toda substância com um mesmo tipo de ligação terá propriedades idênticas."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.1.3, do tópico 2507.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.1.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 127
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2510.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 128
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2510.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 129
+      },
+      "expected": {
+        "editorial_version": "1.3.2",
+        "review_status": "review"
+      },
+      "changes": {
+        "editorial_version": "1.3.3",
+        "review_status": "published"
+      },
+      "reason": "Publicar uma microlição corrigida após conferência editorial e segunda revisão independente; os limites de escopo permanecem explícitos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Patch editorial versionado para o tópico curricular 2510.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Segunda revisão independente aprovou a versão 1.3.3.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        },
+        {
+          "locator": "sqlite://source_documents/148",
+          "detail": "Programa oficial da primeira fase de 2027, usado para delimitar o escopo curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 128
+      },
+      "expected": {
+        "content": "**Lewis e estrutura.** A molécula de água pode ser representada estruturalmente como H–O–H. Na representação de Lewis, o oxigênio tem duas ligações simples com H e dois pares não ligantes. A fórmula molecular H₂O, sozinha, não mostra essa conectividade nem os pares.\n\n**Função e nome.** Em CH₃COOCH₂CH₃, a sequência –C(=O)–O–C– identifica um éster. O nome é etanoato de etila. Não é ácido carboxílico, pois o oxigênio ligado ao carbonil está ligado a outro grupo carbônico, não a H. Em CH₃COOH, por contraste, há o grupo –COOH do ácido etanoico.\n\n**Obtenção e polímero.** A hidratação do eteno, sob catálise ácida apropriada, adiciona H e OH à ligação dupla: CH₂=CH₂+H₂O→CH₃CH₂OH; o produto é etanol. Já na polimerização por adição, n CH₂=CH₂→(–CH₂–CH₂–)ₙ. A unidade repetitiva conserva os dois carbonos e os quatro hidrogênios do monômero; não há perda de molécula pequena nesta representação.\n\n**Propriedade ligada à estrutura.** O grupo –OH do etanol permite interações de hidrogênio com água, o que ajuda a explicar a miscibilidade do etanol com água. A ligação C–C/C–H também contribui para caráter combustível; “polar” não significa que a molécula inteira seja iônica.\n\n**Eletrólise de cobre.** Com corrente 2,0 A durante 600 s, Q=It=1200 C. Para Cu²⁺+2e⁻→Cu e F≈96.500 C/mol, n(Cu)=1200/(2·96.500)=0,00622 mol. Com M(Cu)=63,5 g/mol, m≈0,395 g para rendimento de 100%."
+      },
+      "changes": {
+        "content": "**Lewis e estrutura.** A molécula de água pode ser representada estruturalmente como H–O–H. Na representação de Lewis, o oxigênio tem duas ligações simples com H e dois pares não ligantes. A fórmula molecular H₂O, sozinha, não mostra essa conectividade nem os pares.\n\n**Função e nome.** Em CH₃COOCH₂CH₃, a sequência –C(=O)–O–C– identifica um éster. O nome é etanoato de etila. Não é ácido carboxílico, pois o oxigênio ligado ao carbonil está ligado a outro grupo carbônico, não a H. Em CH₃COOH, por contraste, há o grupo –COOH do ácido etanoico.\n\n**Obtenção e polímero.** A hidratação do eteno, sob catálise ácida apropriada, adiciona H e OH à ligação dupla: CH₂=CH₂+H₂O→CH₃CH₂OH; o produto é etanol. Já na polimerização por adição, n CH₂=CH₂→(–CH₂–CH₂–)ₙ. A unidade repetitiva conserva os dois carbonos e os quatro hidrogênios do monômero; não há perda de molécula pequena nesta representação.\n\n**Propriedade ligada à estrutura.** O grupo –OH do etanol permite interações de hidrogênio com água, o que ajuda a explicar a miscibilidade do etanol com água. A ligação C–C/C–H também contribui para caráter combustível; “polar” não significa que a molécula inteira seja iônica.\n\n**Eletrólise de cobre.** Com corrente 2,0 A durante 600 s, Q=It=1200 C. Para Cu²⁺+2e⁻→Cu e F≈96.500 C/mol, n(Cu)=1200/(2·96.500)=0,00622 mol. Com M(Cu)=63,5 g/mol, m≈0,395 g para rendimento de 100%.\n\n**Pilha Zn/Cu em condições padrão.** Considere Zn(s)|Zn²⁺(aq, 1 mol/L)||Cu²⁺(aq, 1 mol/L)|Cu(s), a 25 °C, com os potenciais padrão de redução tabelados. A concentração de 1 mol/L é a aproximação didática usual para soluções em estado padrão; rigorosamente, a condição padrão para solutos é definida por atividade unitária. E°red(Cu²⁺/Cu)=+0,34 V e E°red(Zn²⁺/Zn)=−0,76 V. O zinco oxida no ânodo: Zn(s)→Zn²⁺(aq)+2e⁻; Cu²⁺ reduz no cátodo: Cu²⁺(aq)+2e⁻→Cu(s). A reação global é Zn(s)+Cu²⁺(aq)→Zn²⁺(aq)+Cu(s), e E°cel=0,34−(−0,76)=+1,10 V. Elétrons seguem pelo circuito externo do Zn ao Cu; a ponte salina permite migração de íons e ajuda a manter a eletroneutralidade. Esse potencial padrão não deve ser atribuído sem ressalva a concentrações arbitrárias.\n\n**Isomeria, biomoléculas e enzimas.** Etanol (CH₃CH₂OH) e éter dimetílico (CH₃OCH₃) têm fórmula molecular C₂H₆O, mas conectividades e funções diferentes: são isômeros constitucionais. Glicose é um carboidrato usado em processos metabólicos; triglicerídeos são lipídios de reserva; proteínas são cadeias de aminoácidos e exercem funções variadas, incluindo estrutura e transporte. Muitas enzimas são proteínas catalíticas: por exemplo, amilase catalisa a hidrólise do amido, e a atividade enzimática depende de condições como temperatura e pH. Existem também RNAs catalíticos, então nem toda enzima é proteína."
+      },
+      "reason": "Aplicar conteúdo revisado da seção example, versão 1.3.3, do tópico 2510.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção example.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.3.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lesson_sections",
+      "key": {
+        "id": 129
+      },
+      "expected": {
+        "content": "Em eletroquímica, balanceie elétrons, identifique oxidação/redução e use Q=It antes de converter carga em mol. Em orgânica, diferencie composição, conectividade e pares eletrônicos; reconheça a função pela ligação entre átomos; nomeie e relacione estrutura a propriedade, reação ou material.\n\n**Autochecagem:** CH₃OCH₃ é álcool ou éter? **Éter: o oxigênio liga dois grupos carbônicos.** Em Lewis de H₂O, quantos pares não ligantes há no oxigênio? **Dois.** No polímero do eteno, qual unidade se repete? **–CH₂–CH₂–.** A miscibilidade do etanol com água relaciona-se a qual grupo? **Ao –OH, que permite interações de hidrogênio.** Qual massa de Cu se deposita no exemplo se o rendimento for 80%? **0,80×0,395≈0,316 g.**"
+      },
+      "changes": {
+        "content": "Em eletroquímica, balanceie elétrons, identifique oxidação/redução e use Q=It antes de converter carga em mol. Em orgânica, diferencie composição, conectividade e pares eletrônicos; reconheça a função pela ligação entre átomos; nomeie e relacione estrutura a propriedade, reação ou material.\n\n**Autochecagem:** CH₃OCH₃ é álcool ou éter? **Éter: o oxigênio liga dois grupos carbônicos.** Em Lewis de H₂O, quantos pares não ligantes há no oxigênio? **Dois.** No polímero do eteno, qual unidade se repete? **–CH₂–CH₂–.** A miscibilidade do etanol com água relaciona-se a qual grupo? **Ao –OH, que permite interações de hidrogênio.** Qual massa de Cu se deposita no exemplo se o rendimento for 80%? **0,80×0,395≈0,316 g.**\n\nNa pilha padrão, use potenciais de redução para calcular E°cel e identifique oxidação no ânodo e redução no cátodo; condições diferentes podem alterar o potencial. Para isomeria constitucional, compare fórmula molecular e conectividade. Associe biomoléculas a exemplos e funções, e descreva enzimas como catalisadores cuja atividade depende do meio, lembrando que também existem RNAs catalíticos."
+      },
+      "reason": "Aplicar conteúdo revisado da seção summary, versão 1.3.3, do tópico 2510.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-2026-10-10.json",
+          "detail": "Texto revisado para a seção summary.",
+          "sha256": "760edf4ed8565e777c0549c6b590cf080be57b798e4ff663b44fbd2eab174395"
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-fast-corrections-sciences-second-review-v1-2026-10-10.json",
+          "detail": "Versão 1.3.3 conferida por segunda revisão independente.",
+          "sha256": "beab0f365bb6ef1fba68e03de04cb64dcb59f34682f64583f68406046ed4dbad"
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T171110925291Z.sqlite",
+  "database_after_sha256": "6150e4387d33c8b530d40eb964662c63b646589e210d80252e1dd28b63997a99"
+}
