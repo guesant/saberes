@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "decisions": [
+    {
+      "table": "edition_regulatory_rules",
+      "key": { "id": 8 },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Conferir orientações completas sobre embalagem e itens permitidos diretamente no comunicado oficial antes de publicar um checklist resumido.  Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Resumo rechecado em 10/10/2026 na página oficial atual da Comvest. Itens permitidos mantidos conforme a lista publicada; a nota não amplia regras de embalagem que não estejam expressas."
+      },
+      "reason": "Remover texto histórico que contradiz o estado editorial publicado. Preservar a regra e sua aprovação; apenas atualizar a nota de revisão com a verificação oficial atual.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção 'O que levar', consultada em 10/10/2026: lista documento original, canetas pretas em material transparente, lápis preto, borracha, régua transparente e compasso; autoriza água, sucos, chocolates e alimentos leves. Não afirma regras adicionais sobre embalagem."
+        }
+      ]
+    }
+  ]
+}

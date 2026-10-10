@@ -16,13 +16,14 @@
 
 ## Baseline vigente
 
-- Banco principal: `.local/content/content.sqlite`, release local `unicamp-2027-practice-pool-v38`, schema 20. O lote recente ampliou a prática com questões representativas aprovadas, manteve os exercícios já existentes em primeiro lugar e preservou as etapas editoriais.
+- Banco principal: `.local/content/content.sqlite`, release local `unicamp-2027-practice-pool-v39`, schema 20. Esta rodada alinhou uma nota regulatória ao estado editorial já aprovado; não alterou a regra substantiva.
 - Após o lote, `integrity_check`, `foreign_key_check`, as primeiras etapas de prática preservadas e a ausência de equivalentes duplicados dentro dos módulos foram verificados. O bundle local foi reconstruído e confere byte a byte com o SQLite; o hash e o estado do release estão em `.local/content/guided-study-release.json`.
 - A suíte unitária, o typecheck e o build local passaram após as mudanças.
-- Os testes isolados de retomada/pontuação de simulado e de pré-download/renderização de PDFs offline passaram em rodada anterior; só repetir se o código desses fluxos mudar.
+- A validação integrada de PDF offline passou nesta rodada: em `pdfjs-real-offline.spec.ts`, o PDF oficial do simulado Q/T 2027 foi carregado, a rede foi cortada e a página 3 renderizou no PDF.js. O SHA do PDF bateu com o manifesto. A amostra verifica o fluxo real sem conferência visual página a página.
 - O caderno representante Q/Z de 2025 já está liberado para treino e tem ordem, alternativas, gabarito e resolução cadastrados. Os outros modelos de 2025 ficam preservados para consulta/histórico; a conciliação entre eles não é bloqueio para estudar.
 - O fluxo usa um representante por prova: Q/Z 2025, Q/X 2026 e Q/T do simulado preparatório 2027. Questões e ocorrências permanecem separadas; o treino deduplica questões equivalentes.
-- Os relatórios atuais não indicam lacuna mínima de questão aprovada nem de link de aprendizagem/prática nos tópicos do programa-alvo. Isso não comprova profundidade por subtópico, qualidade pedagógica integral, acessibilidade ou licença para redistribuição.
+- Os relatórios atuais mostram ao menos uma questão elegível e links de aprendizagem/prática para cada tópico do programa-alvo. Isso é cobertura mínima do índice, não prova de que todo subtópico tenha exercício específico, nem aprovação pedagógica integral, acessibilidade ou licença para redistribuição.
+- As fichas de recursos estão visíveis e publicadas para consulta; disponibilidade e estado da ficha não certificam a qualidade de todo o conteúdo externo. Não reabrir todos os links: tratar somente exceções documentadas ou sinais novos, usando amostragem por tipo.
 - O acervo visível pode conter material em revisão. “Visível para consulta”, “aprovado editorialmente” e “elegível para treino” são estados diferentes; não promovê-los em conjunto.
 
 ## Fila ativa
@@ -39,15 +40,16 @@
 ### P0 — Classificações editoriais de questões
 
 - Usar `tools/editorial/review-closure/target-question-coverage.json` e os manifestos rebaseados como fila filtrada da trilha, não inventários históricos globais. A cobertura mínima já existe; o lote serve para resolver relações específicas úteis, não para forçar mais tags.
-- Aplicar em lote somente candidatos cuja chave ainda corresponda ao SQLite e cuja fonte/evidência sustente a associação. Classificações secundárias podem ser amplas, mas devem explicar pertinência; contexto incidental não basta. Relações editoriais nunca são apresentadas como tags oficiais da Comvest.
-- Manter pendentes as relações conflitantes ou de baixa confiança, inclusive associações contextuais documentadas para QZ 2025/QT 2027. Não reaplicar `active-question-classification-apply-ready-2026-10-10.json` nem repetir a propagação de equivalências de 2026 já aplicada.
-- Critério de fechamento de cada lote: dry-run sem chaves obsoletas, amostras por tipo de associação, justificativa/fonte por relação aplicada e relatório de cobertura atualizado.
+- A propagação das classificações aprovadas de Q/X 2026 às ocorrências de cadernos equivalentes já foi aplicada pelo crosswalk textual; não repetir esse lote. Relações canônicas publicadas acompanham a questão compartilhada, não criam uma nova questão por caderno.
+- Permanecem como exceções editoriais os vínculos conflitantes Q/T35 e Q/X39 com “Biodiversidade e saúde humana”, Q/T71 com estrutura/ligação química e a família de 2025 sobre venlafaxina/química orgânica. Não elevar ou rebaixar essas relações em lote sem adjudicação da evidência; a relação principal já aprovada da questão pode continuar elegível para treino.
+- Cobertura de questões e recursos está preenchida segundo os relatórios atuais; isso não equivale a 44 tópicos com prática específica para cada subtópico. Relações editoriais nunca são apresentadas como tags oficiais da Comvest.
+- Não há lote adicional de propagação a aplicar: os candidatos seguros do crosswalk de Q/X já estão refletidos no banco. Se surgir nova evidência, exigir precondição/hash atual, fonte por relação e atualização do relatório.
 
 ### P1 — Materiais externos por tópico
 
 - A vinculação de fontes e metadados de direitos foi feita em lote. A cobertura de links de aprendizagem e prática já está preenchida segundo o relatório atual; isso não equivale a aprovação pedagógica nem licença aberta.
-- Agrupar os recursos ainda em revisão por motivo já registrado (por exemplo, questão/atividade ambígua, escopo parcial, bloqueio de navegador ou informação de direitos incompleta). Auditar causas e corrigir em lote com evidência existente; reabrir navegador apenas para exceções cujo resultado possa mudar o uso no estudo.
-- Conferir poucas amostras por tipo e disciplina. Não abrir individualmente todos os links novamente. Se um recurso não sustentar uso didático, mantê-lo visível como consulta/revisão ou registrar a lacuna — não rotulá-lo como prática validada.
+- Não existe fila geral de fichas de recurso em estado `review` no SQLite. A fila remanescente é de exceções nas relações recurso–tópico, links inconclusivos e validação pedagógica não exaustiva — não de disponibilidade básica.
+- Conferir poucas amostras por tipo e disciplina; não abrir individualmente todos os links novamente. Reabrir no navegador apenas exceções cuja resolução altere uso, treino ou afirmação de gratuidade. Recurso suplementar/ambíguo permanece visível como consulta, sem ser descrito como prática validada.
 - Preservar URL, tipo, idioma, gratuidade observada, origem e direitos. Sem licença permissiva/autorização comprovada, usar apenas link e metadados; não copiar o conteúdo.
 
 ### P1 — Proveniência dos comentários de resolução
@@ -60,7 +62,7 @@
 ### P1 — Regulamentação vigente
 
 - As regras estruturadas pertinentes ao estudo já foram incorporadas. Manter a divergência de calendário documentada: o calendário geral e o comunicado específico de liberação dos locais têm datas diferentes; prevalência e histórico não devem ser alterados sem fonte.
-- Antes da prova, consultar a página oficial da Comvest uma vez e comparar documentos, datas e hashes. Se não houver documento novo, encerrar a rodada sem reabrir o manual inteiro. Atualizar somente o delta publicado.
+- A nota da regra de itens permitidos (registro 8) foi alinhada em 10/10/2026 ao estado `published`; o conteúdo da regra não foi alterado. Antes da prova, consultar a página oficial da Comvest uma vez e comparar documentos, datas e hashes. Se não houver documento novo, encerrar a rodada sem reabrir o manual inteiro. Atualizar somente o delta publicado.
 - Alocações de vagas/campus, que permanecem em revisão, não bloqueiam a trilha da primeira fase; não exibir valores ambíguos como definitivos.
 
 ### Fechamento local após cada lote
@@ -93,3 +95,5 @@ Integridade e release podem ser conferidos em SQLite somente leitura; executar j
 - Aulas e decisões: `content/editorial/unicamp-2027/lesson-batch-humanities-2026-10-10.json`, `lesson-batch-sciences-2026-10-10.json` e pareceres independentes por tópico.
 - Proveniência de soluções: `tools/editorial/review-closure/solution-coverage-audit-2025-2026-2026-10-10.json` e `applied-solutions-provenance.json`.
 - QA em lote de PDFs: `content/editorial/unicamp-2027/pdf-qa-v32-similarity-2026-10-10.jsonl` e `pdf-qa-issues-audit-2026-10-10.json`; usar como triagem, não como substituto de fonte.
+- Renderização real sem rede: `packages/app/tests/e2e/pdfjs-real-offline.spec.ts`; verificação em 10/10/2026 contra o PDF Q/T oficial incluído no bundle.
+- Nota regulatória reaplicável/auditável: `content/editorial/unicamp-2027/regulatory-materials-note-cleanup-2026-10-10.json` e `tools/editorial/review-closure/applied-regulatory-materials-note-cleanup-2026-10-10.json`.

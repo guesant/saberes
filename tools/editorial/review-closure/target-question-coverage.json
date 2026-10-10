@@ -1,7 +1,7 @@
 {
   "format": "target-question-coverage/v1",
-  "generated_at": "2026-10-10T15:49:11.118292+00:00",
-  "database_sha256": "01014a8ca906a3fab91a7ef645b1427f304637193472e009a997f97f4b8dba11",
+  "generated_at": "2026-10-10T16:40:08.781442+00:00",
+  "database_sha256": "f434182cc17256252da4283b72e531700f16b6dfc41ab2c8b36e5c6bf63ef735",
   "target": "unicamp-2027/primeira-fase",
   "qualification": "Selected course practice is the curated representative currently in the guided course. Approved canonical question records are candidate associations, not every relevant question. Relations are editorial, not official Comvest tags. This report does not prove full PDF transcription, image accessibility, or complete subtopic coverage.",
   "topics": [
@@ -13,14 +13,14 @@
         "page": 3
       },
       "selected_course_practice": {
-        "question_id": 2790,
-        "question_slug": "vu2027-simulado-presencial-q54",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 54,
-        "source_document_id": 335,
-        "source_page": 15,
-        "selection_note": "Unicamp 2027 · QT · questão 54. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 347,
+        "question_slug": "vu-2026-qx-q59",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 59,
+        "source_document_id": 44,
+        "source_page": 22,
+        "selection_note": "Unicamp 2026 · QX · questão 59. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -234,14 +234,14 @@
         "page": 3
       },
       "selected_course_practice": {
-        "question_id": 2791,
-        "question_slug": "vu2027-simulado-presencial-q55",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 55,
-        "source_document_id": 335,
-        "source_page": 16,
-        "selection_note": "Unicamp 2027 · QT · questão 55. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 347,
+        "question_slug": "vu-2026-qx-q59",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 59,
+        "source_document_id": 44,
+        "source_page": 22,
+        "selection_note": "Unicamp 2026 · QX · questão 59. Associação editorial aprovada; responder não implica domínio. Questão ligada a mais de um tópico; ao respondê-la, esta etapa também conta nos demais."
       },
       "approved_question_records": [
         {
@@ -455,14 +455,14 @@
         "page": 3
       },
       "selected_course_practice": {
-        "question_id": 2793,
-        "question_slug": "vu2027-simulado-presencial-q57",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 57,
-        "source_document_id": 335,
-        "source_page": 17,
-        "selection_note": "Unicamp 2027 · QT · questão 57. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 347,
+        "question_slug": "vu-2026-qx-q59",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 59,
+        "source_document_id": 44,
+        "source_page": 22,
+        "selection_note": "Unicamp 2026 · QX · questão 59. Associação editorial aprovada; responder não implica domínio. Questão ligada a mais de um tópico; ao respondê-la, esta etapa também conta nos demais."
       },
       "approved_question_records": [
         {
@@ -797,7 +797,7 @@
         "number": 54,
         "source_document_id": 44,
         "source_page": 20,
-        "selection_note": "Unicamp 2026 · QX · questão 54. Associação editorial aprovada; responder não implica domínio."
+        "selection_note": "Unicamp 2026 · QX · questão 54. Associação editorial aprovada; responder não implica domínio. Questão ligada a mais de um tópico; ao respondê-la, esta etapa também conta nos demais."
       },
       "approved_question_records": [
         {
@@ -843,14 +843,14 @@
         "page": 4
       },
       "selected_course_practice": {
-        "question_id": 2799,
-        "question_slug": "vu2027-simulado-presencial-q63",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 63,
-        "source_document_id": 335,
-        "source_page": 18,
-        "selection_note": "Unicamp 2027 · QT · questão 63. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 353,
+        "question_slug": "vu-2026-qx-q65",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 65,
+        "source_document_id": 44,
+        "source_page": 24,
+        "selection_note": "Unicamp 2026 · QX · questão 65. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1173,14 +1173,14 @@
         "page": 5
       },
       "selected_course_practice": {
-        "question_id": 2789,
-        "question_slug": "vu2027-simulado-presencial-q53",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 53,
-        "source_document_id": 335,
-        "source_page": 15,
-        "selection_note": "Unicamp 2027 · QT · questão 53. Associação editorial aprovada; responder não implica domínio. Seleção editorial: Composição de funções; é prática mais direta do tópico Funções do que a questão de logaritmos selecionada antes."
+        "question_id": 336,
+        "question_slug": "vu-2026-qx-q48",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 48,
+        "source_document_id": 44,
+        "source_page": 18,
+        "selection_note": "Unicamp 2026 · QX · questão 48. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1258,14 +1258,14 @@
         "page": 5
       },
       "selected_course_practice": {
-        "question_id": 2783,
-        "question_slug": "vu2027-simulado-presencial-q47",
+        "question_id": 2788,
+        "question_slug": "vu2027-simulado-presencial-q52",
         "year": 2027,
         "paper_code": "QT",
-        "number": 47,
+        "number": 52,
         "source_document_id": 335,
-        "source_page": 14,
-        "selection_note": "Unicamp 2027 · QT · questão 47. Associação editorial aprovada; responder não implica domínio."
+        "source_page": 15,
+        "selection_note": "Unicamp 2027 · QT · questão 52. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1367,14 +1367,14 @@
         "page": 5
       },
       "selected_course_practice": {
-        "question_id": 2780,
-        "question_slug": "vu2027-simulado-presencial-q44",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 44,
-        "source_document_id": 335,
-        "source_page": 14,
-        "selection_note": "Unicamp 2027 · QT · questão 44. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 337,
+        "question_slug": "vu-2026-qx-q49",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 49,
+        "source_document_id": 44,
+        "source_page": 19,
+        "selection_note": "Unicamp 2026 · QX · questão 49. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1481,14 +1481,14 @@
         "page": 5
       },
       "selected_course_practice": {
-        "question_id": 2781,
-        "question_slug": "vu2027-simulado-presencial-q45",
+        "question_id": 2782,
+        "question_slug": "vu2027-simulado-presencial-q46",
         "year": 2027,
         "paper_code": "QT",
-        "number": 45,
+        "number": 46,
         "source_document_id": 335,
         "source_page": 14,
-        "selection_note": "Unicamp 2027 · QT · questão 45. Associação editorial aprovada; responder não implica domínio."
+        "selection_note": "Unicamp 2027 · QT · questão 46. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1725,14 +1725,14 @@
         "page": 6
       },
       "selected_course_practice": {
-        "question_id": 2779,
-        "question_slug": "vu2027-simulado-presencial-q43",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 43,
-        "source_document_id": 335,
-        "source_page": 14,
-        "selection_note": "Unicamp 2027 · QT · questão 43. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão calcula um logaritmo de uma sequência exponencial; corresponde diretamente ao tópico Logaritmos e exponenciais."
+        "question_id": 336,
+        "question_slug": "vu-2026-qx-q48",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 48,
+        "source_document_id": 44,
+        "source_page": 18,
+        "selection_note": "Unicamp 2026 · QX · questão 48. Associação editorial aprovada; responder não implica domínio. Questão ligada a mais de um tópico; ao respondê-la, esta etapa também conta nos demais."
       },
       "approved_question_records": [
         {
@@ -1810,14 +1810,14 @@
         "page": 6
       },
       "selected_course_practice": {
-        "question_id": 304,
-        "question_slug": "vu-2026-qx-q16",
-        "year": 2026,
-        "paper_code": "QX",
-        "number": 16,
-        "source_document_id": 44,
-        "source_page": 7,
-        "selection_note": "Unicamp 2026 · QX · questão 16. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A leitura da divisão Norte/Sul Global no mapa aborda regionalização e conceitos geográficos com aderência maior que a questão puramente cartográfica escolhida antes."
+        "question_id": 1,
+        "question_slug": "vu-2025-qz-q01",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 1,
+        "source_document_id": 36,
+        "source_page": 3,
+        "selection_note": "Unicamp 2025 · QZ · questão 1. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1879,14 +1879,14 @@
         "page": 6
       },
       "selected_course_practice": {
-        "question_id": 2754,
-        "question_slug": "vu2027-simulado-presencial-q18",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 18,
-        "source_document_id": 335,
-        "source_page": 7,
-        "selection_note": "Unicamp 2027 · QT · questão 18. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 335,
+        "question_slug": "vu-2026-qx-q47",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 47,
+        "source_document_id": 44,
+        "source_page": 18,
+        "selection_note": "Unicamp 2026 · QX · questão 47. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1924,14 +1924,14 @@
         "page": 6
       },
       "selected_course_practice": {
-        "question_id": 2751,
-        "question_slug": "vu2027-simulado-presencial-q15",
+        "question_id": 2756,
+        "question_slug": "vu2027-simulado-presencial-q20",
         "year": 2027,
         "paper_code": "QT",
-        "number": 15,
+        "number": 20,
         "source_document_id": 335,
-        "source_page": 6,
-        "selection_note": "Unicamp 2027 · QT · questão 15. Associação editorial aprovada; responder não implica domínio."
+        "source_page": 7,
+        "selection_note": "Unicamp 2027 · QT · questão 20. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -1977,14 +1977,14 @@
         "page": 7
       },
       "selected_course_practice": {
-        "question_id": 303,
-        "question_slug": "vu-2026-qx-q15",
+        "question_id": 306,
+        "question_slug": "vu-2026-qx-q18",
         "year": 2026,
         "paper_code": "QX",
-        "number": 15,
+        "number": 18,
         "source_document_id": 44,
-        "source_page": 6,
-        "selection_note": "Unicamp 2026 · QX · questão 15. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão articula sistemas alimentares, produtos ultraprocessados globalizados e fluxos mundiais de produção e consumo; é mais específica para Globalização, economia e trabalho do que a questão sobre adesão à OTAN."
+        "source_page": 8,
+        "selection_note": "Unicamp 2026 · QX · questão 18. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -2094,14 +2094,14 @@
         "page": 7
       },
       "selected_course_practice": {
-        "question_id": 308,
-        "question_slug": "vu-2026-qx-q20",
+        "question_id": 306,
+        "question_slug": "vu-2026-qx-q18",
         "year": 2026,
         "paper_code": "QX",
-        "number": 20,
+        "number": 18,
         "source_document_id": 44,
-        "source_page": 9,
-        "selection_note": "Unicamp 2026 · QX · questão 20. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão trata de políticas territoriais e circuitos produtivos na Bahia; é mais diretamente ligada à dinâmica territorial brasileira que a questão genérica escolhida antes."
+        "source_page": 8,
+        "selection_note": "Unicamp 2026 · QX · questão 18. Associação editorial aprovada; responder não implica domínio. Questão ligada a mais de um tópico; ao respondê-la, esta etapa também conta nos demais."
       },
       "approved_question_records": [
         {
@@ -2171,14 +2171,14 @@
         "page": 8
       },
       "selected_course_practice": {
-        "question_id": 2764,
-        "question_slug": "vu2027-simulado-presencial-q28",
+        "question_id": 2766,
+        "question_slug": "vu2027-simulado-presencial-q30",
         "year": 2027,
         "paper_code": "QT",
-        "number": 28,
+        "number": 30,
         "source_document_id": 335,
         "source_page": 10,
-        "selection_note": "Unicamp 2027 · QT · questão 28. Associação editorial aprovada; responder não implica domínio."
+        "selection_note": "Unicamp 2027 · QT · questão 30. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -2232,14 +2232,14 @@
         "page": 8
       },
       "selected_course_practice": {
-        "question_id": 2765,
-        "question_slug": "vu2027-simulado-presencial-q29",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 29,
-        "source_document_id": 335,
-        "source_page": 10,
-        "selection_note": "Unicamp 2027 · QT · questão 29. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 321,
+        "question_slug": "vu-2026-qx-q33",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 33,
+        "source_document_id": 44,
+        "source_page": 13,
+        "selection_note": "Unicamp 2026 · QX · questão 33. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -2389,14 +2389,14 @@
         "page": 8
       },
       "selected_course_practice": {
-        "question_id": 2768,
-        "question_slug": "vu2027-simulado-presencial-q32",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 32,
-        "source_document_id": 335,
-        "source_page": 11,
-        "selection_note": "Unicamp 2027 · QT · questão 32. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 321,
+        "question_slug": "vu-2026-qx-q33",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 33,
+        "source_document_id": 44,
+        "source_page": 13,
+        "selection_note": "Unicamp 2026 · QX · questão 33. Associação editorial aprovada; responder não implica domínio. Questão ligada a mais de um tópico; ao respondê-la, esta etapa também conta nos demais."
       },
       "approved_question_records": [
         {
@@ -2546,14 +2546,14 @@
         "page": 9
       },
       "selected_course_practice": {
-        "question_id": 2758,
-        "question_slug": "vu2027-simulado-presencial-q22",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 22,
-        "source_document_id": 335,
-        "source_page": 8,
-        "selection_note": "Unicamp 2027 · QT · questão 22. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 350,
+        "question_slug": "vu-2026-qx-q62",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 62,
+        "source_document_id": 44,
+        "source_page": 23,
+        "selection_note": "Unicamp 2026 · QX · questão 62. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -2767,14 +2767,14 @@
         "page": 10
       },
       "selected_course_practice": {
-        "question_id": 2761,
-        "question_slug": "vu2027-simulado-presencial-q25",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 25,
-        "source_document_id": 335,
-        "source_page": 9,
-        "selection_note": "Unicamp 2027 · QT · questão 25. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 318,
+        "question_slug": "vu-2026-qx-q30",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 30,
+        "source_document_id": 44,
+        "source_page": 12,
+        "selection_note": "Unicamp 2026 · QX · questão 30. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -2892,14 +2892,14 @@
         "page": 10
       },
       "selected_course_practice": {
-        "question_id": 2737,
-        "question_slug": "vu2027-simulado-presencial-q01",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 1,
-        "source_document_id": 335,
-        "source_page": 3,
-        "selection_note": "Unicamp 2027 · QT · questão 1. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 295,
+        "question_slug": "vu-2026-qx-q07",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 7,
+        "source_document_id": 44,
+        "source_page": 4,
+        "selection_note": "Unicamp 2026 · QX · questão 7. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -3145,14 +3145,14 @@
         "page": 11
       },
       "selected_course_practice": {
-        "question_id": 2772,
-        "question_slug": "vu2027-simulado-presencial-q36",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 36,
-        "source_document_id": 335,
-        "source_page": 12,
-        "selection_note": "Unicamp 2027 · QT · questão 36. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 68,
+        "question_slug": "vu-2025-qz-q68",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 68,
+        "source_document_id": 36,
+        "source_page": 22,
+        "selection_note": "Unicamp 2025 · QZ · questão 68. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -3262,14 +3262,14 @@
         "page": 11
       },
       "selected_course_practice": {
-        "question_id": 2775,
-        "question_slug": "vu2027-simulado-presencial-q39",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 39,
-        "source_document_id": 335,
-        "source_page": 13,
-        "selection_note": "Unicamp 2027 · QT · questão 39. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 70,
+        "question_slug": "vu-2025-qz-q70",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 70,
+        "source_document_id": 36,
+        "source_page": 23,
+        "selection_note": "Unicamp 2025 · QZ · questão 70. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -3331,14 +3331,14 @@
         "page": 11
       },
       "selected_course_practice": {
-        "question_id": 2776,
-        "question_slug": "vu2027-simulado-presencial-q40",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 40,
-        "source_document_id": 335,
-        "source_page": 13,
-        "selection_note": "Unicamp 2027 · QT · questão 40. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 70,
+        "question_slug": "vu-2025-qz-q70",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 70,
+        "source_document_id": 36,
+        "source_page": 23,
+        "selection_note": "Unicamp 2025 · QZ · questão 70. Associação editorial aprovada; responder não implica domínio. Questão ligada a mais de um tópico; ao respondê-la, esta etapa também conta nos demais."
       },
       "approved_question_records": [
         {
@@ -3400,14 +3400,14 @@
         "page": 11
       },
       "selected_course_practice": {
-        "question_id": 2774,
-        "question_slug": "vu2027-simulado-presencial-q38",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 38,
-        "source_document_id": 335,
-        "source_page": 13,
-        "selection_note": "Unicamp 2027 · QT · questão 38. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 69,
+        "question_slug": "vu-2025-qz-q69",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 69,
+        "source_document_id": 36,
+        "source_page": 22,
+        "selection_note": "Unicamp 2025 · QZ · questão 69. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -3461,14 +3461,14 @@
         "page": 12
       },
       "selected_course_practice": {
-        "question_id": 328,
-        "question_slug": "vu-2026-qx-q40",
-        "year": 2026,
-        "paper_code": "QX",
-        "number": 40,
-        "source_document_id": 44,
-        "source_page": 16,
-        "selection_note": "Unicamp 2026 · QX · questão 40. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 71,
+        "question_slug": "vu-2025-qz-q71",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 71,
+        "source_document_id": 36,
+        "source_page": 23,
+        "selection_note": "Unicamp 2025 · QZ · questão 71. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -3594,14 +3594,14 @@
         "page": 12
       },
       "selected_course_practice": {
-        "question_id": 2744,
-        "question_slug": "vu2027-simulado-presencial-q08",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 8,
-        "source_document_id": 335,
-        "source_page": 4,
-        "selection_note": "Unicamp 2027 · QT · questão 8. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 302,
+        "question_slug": "vu-2026-qx-q14",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 14,
+        "source_document_id": 44,
+        "source_page": 6,
+        "selection_note": "Unicamp 2026 · QX · questão 14. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -3836,14 +3836,14 @@
         "page": 12
       },
       "selected_course_practice": {
-        "question_id": 2745,
-        "question_slug": "vu2027-simulado-presencial-q09",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 9,
-        "source_document_id": 335,
+        "question_id": 296,
+        "question_slug": "vu-2026-qx-q08",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 8,
+        "source_document_id": 44,
         "source_page": 5,
-        "selection_note": "Unicamp 2027 · QT · questão 9. Associação editorial aprovada; responder não implica domínio."
+        "selection_note": "Unicamp 2026 · QX · questão 8. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -3921,14 +3921,14 @@
         "page": 13
       },
       "selected_course_practice": {
-        "question_id": 2748,
-        "question_slug": "vu2027-simulado-presencial-q12",
-        "year": 2027,
-        "paper_code": "QT",
+        "question_id": 300,
+        "question_slug": "vu-2026-qx-q12",
+        "year": 2026,
+        "paper_code": "QX",
         "number": 12,
-        "source_document_id": 335,
+        "source_document_id": 44,
         "source_page": 5,
-        "selection_note": "Unicamp 2027 · QT · questão 12. Associação editorial aprovada; responder não implica domínio."
+        "selection_note": "Unicamp 2026 · QX · questão 12. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -4006,14 +4006,14 @@
         "page": 13
       },
       "selected_course_practice": {
-        "question_id": 2750,
-        "question_slug": "vu2027-simulado-presencial-q14",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 14,
-        "source_document_id": 335,
+        "question_id": 298,
+        "question_slug": "vu-2026-qx-q10",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 10,
+        "source_document_id": 44,
         "source_page": 5,
-        "selection_note": "Unicamp 2027 · QT · questão 14. Associação editorial aprovada; responder não implica domínio."
+        "selection_note": "Unicamp 2026 · QX · questão 10. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -4149,14 +4149,14 @@
         "page": 14
       },
       "selected_course_practice": {
-        "question_id": 2805,
-        "question_slug": "vu2027-simulado-presencial-q69",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 69,
-        "source_document_id": 335,
-        "source_page": 20,
-        "selection_note": "Unicamp 2027 · QT · questão 69. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão exige cálculo estequiométrico dos produtos da combustão da glicose; é prática mais direta de estequiometria que a questão qualitativa escolhida antes."
+        "question_id": 63,
+        "question_slug": "vu-2025-qz-q63",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 63,
+        "source_document_id": 36,
+        "source_page": 21,
+        "selection_note": "Unicamp 2025 · QZ · questão 63. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -4343,14 +4343,14 @@
         "page": 14
       },
       "selected_course_practice": {
-        "question_id": 2807,
-        "question_slug": "vu2027-simulado-presencial-q71",
-        "year": 2027,
-        "paper_code": "QT",
-        "number": 71,
-        "source_document_id": 335,
-        "source_page": 21,
-        "selection_note": "Unicamp 2027 · QT · questão 71. Associação editorial aprovada; responder não implica domínio."
+        "question_id": 62,
+        "question_slug": "vu-2025-qz-q62",
+        "year": 2025,
+        "paper_code": "QZ",
+        "number": 62,
+        "source_document_id": 36,
+        "source_page": 20,
+        "selection_note": "Unicamp 2025 · QZ · questão 62. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {
@@ -4380,14 +4380,14 @@
         "page": 5
       },
       "selected_course_practice": {
-        "question_id": 2784,
-        "question_slug": "vu2027-simulado-presencial-q48",
+        "question_id": 2804,
+        "question_slug": "vu2027-simulado-presencial-q68",
         "year": 2027,
         "paper_code": "QT",
-        "number": 48,
+        "number": 68,
         "source_document_id": 335,
-        "source_page": 14,
-        "selection_note": "Unicamp 2027 · QT · questão 48. Associação editorial aprovada; responder não implica domínio."
+        "source_page": 20,
+        "selection_note": "Unicamp 2027 · QT · questão 68. Associação editorial aprovada; responder não implica domínio."
       },
       "approved_question_records": [
         {

@@ -1,8 +1,8 @@
 # Entrega local — roteiro Unicamp 2027
 
-Data: 10/10/2026. Sem push ou deploy externo.
+Data: 10/10/2026. Release e build locais; push de código autorizado pelo usuário, sem deploy público.
 
-**Estado atual:** release local `unicamp-2027-bulk-editorial-v36` (schema 20, release 293; SHA-256 `01014a8ca906a3fab91a7ef645b1427f304637193472e009a997f97f4b8dba11`). Notas regulatórias e fontes/direitos de recursos foram atualizados em lote, sem promover aprovação pedagógica. Classificações sustentadas foram propagadas a cadernos equivalentes de 2026; conflitos seguem em revisão. Integridade, FKs, checksums, typecheck, lint sem erros, build e igualdade SQLite/build passaram. Playwright isolado verifica o predownload de todos os PDFs, abertura da questão offline com PDF.js e início/retomada/conclusão de simulado com pontuação da anulada. QA Docling é automatizado para lotes; conferência humana limita-se a pequenas amostras representativas, sem revisão visual página a página.
+**Estado atual:** release local `unicamp-2027-practice-pool-v39` (schema 20, release 296; SHA-256 `f434182cc17256252da4283b72e531700f16b6dfc41ab2c8b36e5c6bf63ef735`). A nota da regra de itens permitidos foi alinhada ao estado publicado sem mudar a regra. Classificações sustentadas já foram propagadas às posições equivalentes de Q/X; conflitos seguem explícitos em revisão. Release verificou integridade, FKs e os assets; build local passou. O teste Playwright `pdfjs-real-offline.spec.ts` passou com PDF oficial Q/T: abriu a aplicação, desativou a rede e confirmou a renderização da página 3 pelo PDF.js. QA Docling é automatizado; conferência humana limita-se a pequenas amostras, sem revisão visual página a página.
 
 ## Atualização: questões em PDF.js
 
@@ -14,12 +14,12 @@ Data: 10/10/2026. Sem push ou deploy externo.
 
 ## Disponível
 
-- `/cursos/unicamp-2027-primeira-fase`: 44 módulos oficiais e 176 passos conectados; ordem recomendada e livre, anterior/próximo, posição atual e retorno ao roteiro.
+- `/cursos/unicamp-2027-primeira-fase`: módulos oficiais com passos conectados; ordem recomendada e livre, anterior/próximo, posição atual e retorno ao roteiro.
 - O roteiro contém microaulas e passos conectados. Estados atuais devem ser lidos do SQLite/release, não da descrição histórica do v29. O tópico 2500 está conciliado e publicado na versão 1.3.2. O tópico 2506 segue visível para consulta, mas em revisão: o parecer de aprovação não correspondia ao conteúdo da versão registrada; o estado foi corrigido sem alterar IDs ou ocultar o texto.
 - Prática nos tópicos do roteiro, com deduplicação de famílias. A seleção atual prioriza o simulado preparatório e a prova recente; a origem de cada passo está no relatório de importação `.local/content/staging/unicamp-2027-guided-study-2026-10-10-chemistry-refinement.json`. O caderno Q/Z 2025 está liberado como simulado completo; Q53 permanece anulada, sem resposta, e recebe a pontuação oficial ao finalizar. A prática individual não pede resposta para a anulada. A auditoria confirmou equivalência e ordem dos quatro cadernos de 2025; os não representantes continuam em consulta/rascunho enquanto transcrições e figuras de cada ocorrência não forem fechadas.
 - Importador idempotente com backup/transação e preservação de IDs. Corrigidas flags técnicas de gradabilidade de 72 gabaritos de 2026 e dois históricos elegíveis; respostas e versões não foram alteradas.
 - Triagem PDF em lote, calibração explícita vinculada a hashes, opções em linha/tabelas e bloqueio de substituição de questões publicadas. Um representante por prova: 2025/QZ, 2026/QX, 2027/QT.
-- A build atual do v29 inclui o banco sincronizado e o worker PDF.js. Typecheck e os testes direcionados do visualizador passaram; o build concluiu com o aviso existente de chunks grandes. O release local registra hash e validações correntes; releases anteriores permanecem no histórico.
+- O release v29 e sua build são históricos. O release ativo está no cabeçalho; não usar evidências antigas como status do build corrente.
 - O texto de apoio compartilhado pelas questões 57 e 58 do simulado preparatório foi conferido visualmente no PDF oficial, incluído como estímulo canônico e ligado às duas questões sem duplicá-las. O importador é repetível, exige evidência de ocorrência e gerou backup antes da gravação; teste e integridade passaram.
 - Aulas de Funções e Trigonometria ampliadas com exemplos calculados, erros comuns e autochecagem, aprovadas como material introdutório. IDs, questões, ocorrências e gabaritos preservados, comparados com o backup.
 - Reparos de PDF publicados agora exigem plano explícito, valor/hash anterior, evidência visual e fonte verificada. Journal durável permite recuperação após falha na gravação do histórico; replay não reaplica alterações. Nenhum reparo de texto sem erro comprovado foi importado.
@@ -49,7 +49,7 @@ O cotejo anterior identificou QX18 e QX19 na página física 8 como alertas de s
 
 Em 10/10, foi aplicado o lote rebaseado de classificações questão–tópico do caderno Q/X 2026: decisões editoriais com fonte e página, sem inserir questões. QZ/2025 Q62 não foi reaplicada; QT/2027 Q42 segue em revisão por associação indireta. O journal é `content/editorial/unicamp-2027/applied-active-question-classification-v31-2026-10-10.json`.
 
-Release local anterior: `unicamp-2027-editorial-classifications-v32`, schema 20, release 289. O release vigente é v36, schema 20, release 293, SHA-256 `01014a8ca906a3fab91a7ef645b1427f304637193472e009a997f97f4b8dba11`. Relatórios de cobertura e registros abertos foram regenerados do SQLite. Integridade, FKs, checksums e igualdade com `dist/data/content.sqlite` passam.
+Release local anterior: `unicamp-2027-practice-pool-v38`, schema 20. O release vigente é v39, schema 20, release 296, SHA-256 `f434182cc17256252da4283b72e531700f16b6dfc41ab2c8b36e5c6bf63ef735`. Relatórios de cobertura refletem o banco vigente; o bundle foi reconstruído após o release.
 
 O QA Docling foi executado em lote nos cadernos representantes QZ/2025, QX/2026 e QT/2027, sem modificar o SQLite. Foi acrescentada comparação normalizada de enunciados e alternativas para triagem; scores não aprovam nem substituem texto. O relatório separa baixo overlap e conteúdo em imagem, sem exigir nova revisão visual por página. Evidência mais recente: `content/editorial/unicamp-2027/pdf-qa-v32-similarity-2026-10-10.jsonl`.
 
@@ -77,12 +77,13 @@ O build inclui o SQLite, o manifesto e os módulos `.mjs` no precache; PDFs ofic
 
 Planos, evidências e journals: `tools/editorial/review-closure`. Inventário integral de estados ainda abertos: `open-records.json`, gerado a partir do banco atual. O inventário inclui históricos e não deve ser confundido com pendência de cada passo da trilha ativa.
 
-O relatório `tools/editorial/review-closure/release-verification-2026-10-10-v14.json` é evidência histórica do v14. O release local atual é v36; `release_local.py` confirmou integridade, FKs e checksums dos assets. Os relatórios refletem o novo hash e o build contém o mesmo banco. O catálogo em `localhost:5173` continua servindo diretamente o banco principal. Links inconclusivos permanecem visíveis em revisão; aprovação pedagógica é uma decisão separada. Não foi feito push nem deploy.
+O relatório `tools/editorial/review-closure/release-verification-2026-10-10-v14.json` é evidência histórica do v14. O release atual é v39; `release_local.py` confirmou integridade, FKs e checksums dos assets, e o build foi reconstruído. O catálogo em `localhost:5173` continua servindo diretamente o banco principal. Links inconclusivos permanecem consultáveis sem alegação de aprovação pedagógica. A prova de PDF offline é integrada e passou; não requer inspeção de cada página.
 
-## Ainda aberto — não confundir com conclusão editorial
+## Limites editoriais ainda visíveis
 
-- Aprofundar as aulas introdutórias aprovadas e ampliar resoluções passo a passo; material próprio não é comentário oficial. Estado de revisão por solução ainda exige suporte específico.
-- Revisão dos demais recursos externos e classificações históricas permanece no backlog único; aprovação dos lotes descritos acima não significa aprovação de todos os registros do banco. Revalidar mudanças posteriores da regulamentação.
+- Algumas microaulas permanecem com estado `review` após holds específicos documentados no backlog único; continuam consultáveis, mas não são apresentadas como material editorial aprovado. Não há promoção automática de conteúdo para esconder a pendência.
+- Materiais externos são consultáveis e cobrem os links mínimos por tópico, mas a cobertura de links não declara validação pedagógica integral nem licença para copiar. Exceções e classificações conflitantes permanecem no backlog único, visíveis e fora do uso que exija aprovação.
+- Ampliar resoluções passo a passo é trabalho editorial posterior; material próprio não é comentário oficial da Comvest. Revalidar mudanças posteriores da regulamentação.
 - Consolidação física dos registros canônicos não aplicada: planner disponível, mas arquivar duplicatas antes de adaptar leitores retiraria ocorrências válidas. Prática usa famílias existentes e não cria questões duplicadas.
 
 Detalhes operacionais: `tools/editorial/course/README.md` e `tools/editorial/pdf/README.md`. Pendências: `docs/backlog-preparacao-unicamp-2027.md`.
