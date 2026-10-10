@@ -1,7 +1,7 @@
 {
   "format": "target-resource-coverage/v1",
-  "generated_at": "2026-10-10T17:11:40.383469+00:00",
-  "database_sha256": "8c9b9a704d29f043a389fa5e7cded3f79852ea3b8da68d8932ce93e11b9f3861",
+  "generated_at": "2026-10-10T17:18:56.621955+00:00",
+  "database_sha256": "36ffa86b6a5e6d4ced80923f76b63444f377fa753391e1b523edece7a1bc4ec2",
   "target": "unicamp-2027/primeira-fase",
   "qualification": "External supplements only; approval is not exhaustive curriculum coverage, a WCAG certification, or reproduction permission. Reference/discovery and consultation-only resources do not close learning/practice gaps. Visual limitations remain explicit per resource.",
   "topics": [

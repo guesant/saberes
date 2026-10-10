@@ -19,9 +19,11 @@
 - Banco principal: `.local/content/content.sqlite`, release local `unicamp-2027-practice-pool-v40`, schema 20. Esta rodada aplicou correções editoriais em lote, fechou classificações da piscina representante e registrou autoria institucional das resoluções oficiais sem inventar versão editorial.
 - As microlições da trilha-alvo estão publicadas após correções versionadas e segunda revisão independente. O conteúdo continua identificado como editorial próprio, introdutório e parcial quando aplicável; não é material oficial da Comvest.
 - As relações pendentes nos cadernos representantes Q/Z 2025, Q/X 2026 e Q/T do simulado preparatório foram adjudicadas em lote. Relações sustentadas estão publicadas como classificações editoriais; associações incorretas ou incidentais permanecem como rascunhos rejeitados com justificativa, fora do treino. Nenhuma é apresentada como tag oficial.
-- Após o lote, `integrity_check`, `foreign_key_check`, preservação de identidades e consistência de gabaritos foram verificados. O bundle local foi reconstruído e confere byte a byte com o SQLite; hashes e estado do release estão em `.local/content/guided-study-release.json`.
-- Os testes editoriais direcionados e o build local passaram. A validação integrada de PDF offline passou novamente: o caderno oficial Q/T foi lido do cache, a rede foi desativada e a página solicitada renderizou no PDF.js.
-- A validação integrada de PDF offline passou nesta rodada: em `pdfjs-real-offline.spec.ts`, o PDF oficial do simulado Q/T 2027 foi carregado, a rede foi cortada e a página 3 renderizou no PDF.js. O SHA do PDF bateu com o manifesto. A amostra verifica o fluxo real sem conferência visual página a página.
+- Após o lote, `integrity_check`, `foreign_key_check`, preservação de identidades e consistência de gabaritos foram verificados. O bundle local confere byte a byte com o SQLite (`36ffa86b…`); o release e o build continuam em v40.
+- As coberturas de questões e recursos foram recalculadas diretamente do SQLite e os dois relatórios agora carregam o hash vigente. Ambos mostram cobertura utilizável para os 44 tópicos, sem lacunas de aprendizagem, prática ou questão no recorte mínimo.
+- O E2E integrado foi executado contra o PDF oficial `simulado_Q_T.pdf` do bundle: SHA-256 conferido com o manifesto enquanto online; depois rede desativada, app recarregado do cache e página 3 aberta no PDF.js. O teste agora também exige mais de 500 pixels não brancos no canvas, provando que houve conteúdo renderizado, não só um canvas com dimensões. Não houve conferência página a página.
+- Em 10/10/2026, a página oficial da Comvest foi consultada novamente. Ela informa locais de prova liberados em 02/10, primeira fase em 18/10/2026, 72 questões e cinco horas; não foi identificado novo delta regulatório a importar nesta rodada. Fonte: https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/.
+- A fila editorial ativa da primeira fase está fechada para o recorte mínimo: tópicos, aulas, classificações da piscina de treino, recursos por tópico, comentários de resolução dos representantes e regras regulatórias pertinentes estão publicados. Estados de `review`/`draft` em registros históricos ou associações rejeitadas com justificativa não são pendências abertas nem entram no treino.
 - O caderno representante Q/Z de 2025 já está liberado para treino e tem ordem, alternativas, gabarito e resolução cadastrados. Os outros modelos de 2025 ficam preservados para consulta/histórico; a conciliação entre eles não é bloqueio para estudar.
 - O fluxo usa um representante por prova: Q/Z 2025, Q/X 2026 e Q/T do simulado preparatório 2027. Questões e ocorrências permanecem separadas; o treino deduplica questões equivalentes.
 - Os relatórios atuais mostram ao menos uma questão elegível e links de aprendizagem/prática para cada tópico do programa-alvo. Isso é cobertura mínima do índice, não prova de que todo subtópico tenha exercício específico, nem aprovação pedagógica integral, acessibilidade ou licença para redistribuição.
@@ -40,14 +42,14 @@
 
 - O lote `active-question-classifications-fast-batch-2026-10-10.json` foi aplicado com dry-run, precondições, backup e journal. As relações sustentadas foram publicadas; as incorretas/incidentes foram explicitamente mantidas como rascunho rejeitado, sem apagar histórico nem introduzi-las nos treinos.
 - Q/Z 2025, Q/X 2026 e Q/T do simulado oficial preparatório 2027 seguem como representantes. A cobertura mínima continua completa e os treinos deduplicam pela identidade canônica; os outros cadernos permanecem exploráveis como ocorrências históricas.
+- A auditoria do curso confirmou que nenhum exercício selecionado é bloqueado pelos filtros de classificação. Os rascunhos restantes nos representantes têm justificativa explícita de rejeição/redundância; são decisões encerradas preservadas para auditoria, não uma fila editorial aberta.
 - Não resta fila de classificação ativa nesses representantes. As relações editoriais não são tags oficiais da Comvest. Só reabrir se aparecer nova evidência ou uma questão adequada para lacuna real de tópico.
 
-### P1 — Materiais externos por tópico
+### P1 — Materiais externos por tópico: fechado para prontidão da trilha
 
-- A vinculação de fontes e metadados de direitos foi feita em lote. A cobertura de links de aprendizagem e prática já está preenchida segundo o relatório atual; isso não equivale a aprovação pedagógica nem licença aberta.
-- Não existe fila geral de fichas de recurso em estado `review` no SQLite. A fila remanescente é de exceções nas relações recurso–tópico, links inconclusivos e validação pedagógica não exaustiva — não de disponibilidade básica.
-- Conferir poucas amostras por tipo e disciplina; não abrir individualmente todos os links novamente. Reabrir no navegador apenas exceções cuja resolução altere uso, treino ou afirmação de gratuidade. Recurso suplementar/ambíguo permanece visível como consulta, sem ser descrito como prática validada.
-- Preservar URL, tipo, idioma, gratuidade observada, origem e direitos. Sem licença permissiva/autorização comprovada, usar apenas link e metadados; não copiar o conteúdo.
+- Os 44 tópicos têm pelo menos um link aprovado para aprendizagem e um para prática no relatório recalculado; não há vínculos recurso–tópico ativos em `review`. Recursos classificados como referência/consulta não contam como prática.
+- A auditoria pedagógica não afirma cobertura exaustiva de cada subtópico. Esse limite está explícito nos cards e relatórios e não bloqueia a trilha introdutória; lacunas novas comprovadas devem virar uma nova rodada, sem reabrir todos os links.
+- Direitos `unknown` permanecem link-only: não copiar nem redistribuir sem licença/autorização comprovada. Acessibilidade dos recursos permanece fora do escopo atual.
 
 ### P1 — Proveniência dos comentários de resolução: fechado para os representantes
 
@@ -56,11 +58,11 @@
 - A divergência interna do PDF comentado de 2026, cuja introdução menciona 2025, permanece preservada no título e nas evidências; não foi corrigida silenciosamente.
 - Reabrir somente se nova versão oficial, errata ou evidência de divergência for encontrada.
 
-### P1 — Regulamentação vigente
+### P1 — Regulamentação vigente: fechado para a primeira fase
 
-- As regras estruturadas pertinentes ao estudo já foram incorporadas. Manter a divergência de calendário documentada: o calendário geral e o comunicado específico de liberação dos locais têm datas diferentes; prevalência e histórico não devem ser alterados sem fonte.
-- A nota da regra de itens permitidos (registro 8) foi alinhada em 10/10/2026 ao estado `published`; o conteúdo da regra não foi alterado. Antes da prova, consultar a página oficial da Comvest uma vez e comparar documentos, datas e hashes. Se não houver documento novo, encerrar a rodada sem reabrir o manual inteiro. Atualizar somente o delta publicado.
-- Alocações de vagas/campus, que permanecem em revisão, não bloqueiam a trilha da primeira fase; não exibir valores ambíguos como definitivos.
+- As regras pertinentes à primeira fase estão publicadas com fontes associadas. A conferência oficial de 10/10 confirmou a nota de locais liberados em 02/10, prova em 18/10, 72 questões e duração de cinco horas; não houve delta a importar. A divergência histórica do calendário permanece documentada, sem sobrescrever versões.
+- O estado geral da edição permanece `review`, pois inclui a segunda fase, fora deste escopo. Isso não bloqueia o curso local nem as consultas da primeira fase. Não promover dados da segunda fase por consequência.
+- Alocações de vagas/campus não são usadas pela trilha de estudo e permanecem fora do escopo editorial ativo; não apresentar números ambíguos como definitivos.
 
 ### Fechamento local após cada lote
 
@@ -95,5 +97,5 @@ Integridade e release podem ser conferidos em SQLite somente leitura; executar j
 - Release local vigente: `unicamp-2027-practice-pool-v40`; validação de identidade, assets, gabaritos e bundle em `tools/editorial/review-closure/release-verification.json`.
 - Proveniência de soluções: `tools/editorial/review-closure/solution-coverage-audit-2025-2026-2026-10-10.json` e `applied-solutions-provenance.json`.
 - QA em lote de PDFs: `content/editorial/unicamp-2027/pdf-qa-v32-similarity-2026-10-10.jsonl` e `pdf-qa-issues-audit-2026-10-10.json`; usar como triagem, não como substituto de fonte.
-- Renderização real sem rede: `packages/app/tests/e2e/pdfjs-real-offline.spec.ts`; verificação em 10/10/2026 contra o PDF Q/T oficial incluído no bundle.
+- Renderização real sem rede e verificação de pixels: `packages/app/tests/e2e/pdfjs-real-offline.spec.ts`; execução aprovada em 10/10/2026 contra o PDF Q/T oficial incluído no bundle.
 - Nota regulatória reaplicável/auditável: `content/editorial/unicamp-2027/regulatory-materials-note-cleanup-2026-10-10.json` e `tools/editorial/review-closure/applied-regulatory-materials-note-cleanup-2026-10-10.json`.

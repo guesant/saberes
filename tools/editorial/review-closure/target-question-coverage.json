@@ -1,7 +1,7 @@
 {
   "format": "target-question-coverage/v1",
-  "generated_at": "2026-10-10T17:11:36.678219+00:00",
-  "database_sha256": "8c9b9a704d29f043a389fa5e7cded3f79852ea3b8da68d8932ce93e11b9f3861",
+  "generated_at": "2026-10-10T17:18:56.586742+00:00",
+  "database_sha256": "36ffa86b6a5e6d4ced80923f76b63444f377fa753391e1b523edece7a1bc4ec2",
   "target": "unicamp-2027/primeira-fase",
   "qualification": "Selected course practice is the curated representative currently in the guided course. Approved canonical question records are candidate associations, not every relevant question. Relations are editorial, not official Comvest tags. This report does not prove full PDF transcription, image accessibility, or complete subtopic coverage.",
   "topics": [

@@ -82,15 +82,38 @@ test("PDF.js renderiza página do caderno oficial após o app ficar offline", as
     return canvas instanceof HTMLCanvasElement && canvas.width > 0 && canvas.height > 0;
   });
 
-  const renderedDimensions = await renderedPage.evaluate((element) => {
+  const renderedPixels = await renderedPage.evaluate((element) => {
     const canvas = element as HTMLCanvasElement;
 
-    return { width: canvas.width, height: canvas.height };
+    const canvasContext = canvas.getContext("2d");
+
+    if (!canvasContext) {
+      throw new Error("PDF.js did not create a readable canvas context.");
+    }
+
+    const { data } = canvasContext.getImageData(0, 0, canvas.width, canvas.height);
+
+    let nonWhitePixels = 0;
+
+    for (let index = 0; index < data.length; index += 4) {
+      if (data[index] < 245 || data[index + 1] < 245 || data[index + 2] < 245) {
+        nonWhitePixels += 1;
+      }
+    }
+
+    return {
+      width: canvas.width,
+      height: canvas.height,
+      nonWhitePixels,
+    };
   });
 
-  expect(renderedDimensions.width)
+  expect(renderedPixels.width)
     .toBeGreaterThan(0);
 
-  expect(renderedDimensions.height)
+  expect(renderedPixels.height)
     .toBeGreaterThan(0);
+
+  expect(renderedPixels.nonWhitePixels)
+    .toBeGreaterThan(500);
 });
