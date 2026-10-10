@@ -1,5 +1,7 @@
 * text=auto eol=lf
 
+*.pdf binary
+
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html
