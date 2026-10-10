@@ -4,4 +4,5 @@ export interface UpdateSimulationSessionCommand {
   answer?: string;
   toggleFlag?: boolean;
   currentIndex?: number;
+  hintIdsUsed?: Array<number | string>;
 }

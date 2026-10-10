@@ -1,0 +1,394 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:03:16.109788+00:00",
+  "database_before_sha256": "415e02fe439d27d58879a77cb6c789f24fd01fdd8ae200ca854d8a6e60633fb9",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 68,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 36,
+        "source_page": 22,
+        "source_excerpt": "Relação ampla, secundária: o item trata de cílios do epitélio respiratório, motilidade e transporte de muco; o vínculo específico Bases moleculares e celulares da vida permanece primário."
+      },
+      "reason": "Publicar somente a relação ampla Biologia como related; não substitui nem duplica o vínculo específico já publicado.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/QZ.pdf",
+          "detail": "Caderno QZ, PDF p. 22 (página impressa 20), questão 68: figura e comando tratam de cílios e epitélio respiratório.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de família aprovou o vínculo específico de Biologia celular para a questão 68; o item também pertence inequivocamente à área ampla Biologia.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 119,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 38,
+        "source_page": 15,
+        "source_excerpt": "Relação ampla, secundária: o item trata de cílios do epitélio respiratório, motilidade e transporte de muco; o vínculo específico Bases moleculares e celulares da vida permanece primário."
+      },
+      "reason": "Publicar somente a relação ampla Biologia como related; não substitui nem duplica o vínculo específico já publicado.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/RW.pdf",
+          "detail": "Caderno RW, PDF p. 15, questão equivalente 47: figura e comando tratam de cílios e epitélio respiratório.",
+          "sha256": "02b7495df6218427e2f072f3472236cf45ba82b2b77521cfadee2bfb33aa4a56"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de família aprovou o vínculo específico de Biologia celular para a questão equivalente 47; a área ampla Biologia é pertinente.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 178,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 40,
+        "source_page": 11,
+        "source_excerpt": "Relação ampla, secundária: o item trata de cílios do epitélio respiratório, motilidade e transporte de muco; o vínculo específico Bases moleculares e celulares da vida permanece primário."
+      },
+      "reason": "Publicar somente a relação ampla Biologia como related; não substitui nem duplica o vínculo específico já publicado.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/SX.pdf",
+          "detail": "Caderno SX, PDF p. 11, questão equivalente 34: figura e comando tratam de cílios e epitélio respiratório.",
+          "sha256": "a569418ab9739411a4498aaee88724ae17dbffe8387bb8a22b5d8db3b7ef46f9"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de família aprovou o vínculo específico de Biologia celular para a questão equivalente 34; a área ampla Biologia é pertinente.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 226,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 42,
+        "source_page": 5,
+        "source_excerpt": "Relação ampla, secundária: o item trata de cílios do epitélio respiratório, motilidade e transporte de muco; o vínculo específico Bases moleculares e celulares da vida permanece primário."
+      },
+      "reason": "Publicar somente a relação ampla Biologia como related; não substitui nem duplica o vínculo específico já publicado.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/TY.pdf",
+          "detail": "Caderno TY, PDF p. 5, questão equivalente 10: figura e comando tratam de cílios e epitélio respiratório.",
+          "sha256": "ecbe6470f3b738679129facdcb71ca0aa6731df712023158e2f87a5bb86f3828"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de família aprovou o vínculo específico de Biologia celular para a questão equivalente 10; a área ampla Biologia é pertinente.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 69,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 36,
+        "source_page": 22,
+        "source_excerpt": "Relação ampla, secundária: o item exige analisar fotoperíodo, duração e interrupção do escuro na floração de espécie vegetal; o vínculo específico Ecologia permanece publicado."
+      },
+      "reason": "A classificação ampla Biologia é substantiva porque a resolução aplica respostas fisiológicas vegetais ao fotoperíodo; Ecologia continua sendo a relação específica já publicada.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/QZ.pdf",
+          "detail": "Caderno QZ, PDF p. 22 (página impressa 20–21), questão 69: condições de luz/escuro são usadas para inferir floração vegetal.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "A auditoria registra classificações biológicas específicas para famílias de 2025; a questão 69 exige conhecimento de resposta vegetal ao fotoperíodo.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 120,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 38,
+        "source_page": 15,
+        "source_excerpt": "Relação ampla, secundária: o item exige analisar fotoperíodo, duração e interrupção do escuro na floração de espécie vegetal; o vínculo específico Ecologia permanece publicado."
+      },
+      "reason": "A classificação ampla Biologia é substantiva porque a resolução aplica respostas fisiológicas vegetais ao fotoperíodo; Ecologia continua sendo a relação específica já publicada.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/RW.pdf",
+          "detail": "Caderno RW, PDF p. 15, questão equivalente 48: as condições de luz/escuro determinam se uma espécie vegetal floresce.",
+          "sha256": "02b7495df6218427e2f072f3472236cf45ba82b2b77521cfadee2bfb33aa4a56"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "A auditoria registra classificações biológicas específicas para famílias de 2025; a questão equivalente exige conhecimento de resposta vegetal ao fotoperíodo.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 179,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 40,
+        "source_page": 11,
+        "source_excerpt": "Relação ampla, secundária: o item exige analisar fotoperíodo, duração e interrupção do escuro na floração de espécie vegetal; o vínculo específico Ecologia permanece publicado."
+      },
+      "reason": "A classificação ampla Biologia é substantiva porque a resolução aplica respostas fisiológicas vegetais ao fotoperíodo; Ecologia continua sendo a relação específica já publicada.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/SX.pdf",
+          "detail": "Caderno SX, PDF p. 11, questão equivalente 35: as condições de luz/escuro determinam se uma espécie vegetal floresce.",
+          "sha256": "a569418ab9739411a4498aaee88724ae17dbffe8387bb8a22b5d8db3b7ef46f9"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "A auditoria registra classificações biológicas específicas para famílias de 2025; a questão equivalente exige conhecimento de resposta vegetal ao fotoperíodo.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 227,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 42,
+        "source_page": 5,
+        "source_excerpt": "Relação ampla, secundária: o item exige analisar fotoperíodo, duração e interrupção do escuro na floração de espécie vegetal; o vínculo específico Ecologia permanece publicado."
+      },
+      "reason": "A classificação ampla Biologia é substantiva porque a resolução aplica respostas fisiológicas vegetais ao fotoperíodo; Ecologia continua sendo a relação específica já publicada.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/TY.pdf",
+          "detail": "Caderno TY, PDF p. 5, questão equivalente 11: as condições de luz/escuro determinam se uma espécie vegetal floresce.",
+          "sha256": "ecbe6470f3b738679129facdcb71ca0aa6731df712023158e2f87a5bb86f3828"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "A auditoria registra classificações biológicas específicas para famílias de 2025; a questão equivalente exige conhecimento de resposta vegetal ao fotoperíodo.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 71,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 36,
+        "source_page": 23,
+        "source_excerpt": "Relação ampla, secundária: o item aborda biodiversidade marinha, endemismo e identificação zoológica; o vínculo específico Biodiversidade e saúde humana permanece publicado."
+      },
+      "reason": "O item cobra diretamente biodiversidade e distribuição de animais marinhos; Biologia é relação ampla related, enquanto o vínculo específico já publicado é mantido.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/QZ.pdf",
+          "detail": "Caderno QZ, PDF p. 23 (página impressa 21), questão 71: expedição documenta fauna marinha, espécies novas e endemismo.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de classificação biológica aprovou relação específica para a família de biodiversidade/especiação; o conteúdo zoológico da questão 71 sustenta a área ampla Biologia.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 122,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 38,
+        "source_page": 16,
+        "source_excerpt": "Relação ampla, secundária: o item aborda biodiversidade marinha, endemismo e identificação zoológica; o vínculo específico Biodiversidade e saúde humana permanece publicado."
+      },
+      "reason": "O item cobra diretamente biodiversidade e distribuição de animais marinhos; Biologia é relação ampla related, enquanto o vínculo específico já publicado é mantido.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/RW.pdf",
+          "detail": "Caderno RW, PDF p. 16, questão equivalente 50: expedição documenta fauna marinha, espécies novas e endemismo.",
+          "sha256": "02b7495df6218427e2f072f3472236cf45ba82b2b77521cfadee2bfb33aa4a56"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de classificação biológica aprovou relação específica para a família de biodiversidade/especiação; o conteúdo zoológico da questão equivalente sustenta Biologia.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 181,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 40,
+        "source_page": 12,
+        "source_excerpt": "Relação ampla, secundária: o item aborda biodiversidade marinha, endemismo e identificação zoológica; o vínculo específico Biodiversidade e saúde humana permanece publicado."
+      },
+      "reason": "O item cobra diretamente biodiversidade e distribuição de animais marinhos; Biologia é relação ampla related, enquanto o vínculo específico já publicado é mantido.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/SX.pdf",
+          "detail": "Caderno SX, PDF p. 12, questão equivalente 37: expedição documenta fauna marinha, espécies novas e endemismo.",
+          "sha256": "a569418ab9739411a4498aaee88724ae17dbffe8387bb8a22b5d8db3b7ef46f9"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de classificação biológica aprovou relação específica para a família de biodiversidade/especiação; o conteúdo zoológico da questão equivalente sustenta Biologia.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 229,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "draft",
+        "relation_type": "related",
+        "confidence": 0.75
+      },
+      "changes": {
+        "review_status": "published",
+        "source_document_id": 42,
+        "source_page": 6,
+        "source_excerpt": "Relação ampla, secundária: o item aborda biodiversidade marinha, endemismo e identificação zoológica; o vínculo específico Biodiversidade e saúde humana permanece publicado."
+      },
+      "reason": "O item cobra diretamente biodiversidade e distribuição de animais marinhos; Biologia é relação ampla related, enquanto o vínculo específico já publicado é mantido.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/TY.pdf",
+          "detail": "Caderno TY, PDF p. 6, questão equivalente 13: expedição documenta fauna marinha, espécies novas e endemismo.",
+          "sha256": "ecbe6470f3b738679129facdcb71ca0aa6731df712023158e2f87a5bb86f3828"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/2025-biology-question-classifications-review-2026-10-08.jsonl",
+          "detail": "Auditoria de classificação biológica aprovou relação específica para a família de biodiversidade/especiação; o conteúdo zoológico da questão equivalente sustenta Biologia.",
+          "sha256": "2b86c3cdf42c39d225aff85dd5d45825efbf4cc03fbc728b2e8194f2e4ee9847"
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T200316171917Z.sqlite",
+  "database_after_sha256": "fec941ea8c78f80e4bf48db59c6925af7ed79f6835d7bbc237021c389686a245"
+}

@@ -1,0 +1,171 @@
+{
+  "format": "lesson-candidate-independent-review/v1",
+  "reviewed_at": "2026-10-10",
+  "scope": "Revisão independente apenas das propostas dos tópicos 2475, 2476 e 2481; nenhuma alteração em lições, estados editoriais, SQLite, release ou backlog.",
+  "sources": {
+    "candidate_file": {
+      "path": "content/editorial/unicamp-2027/lesson-reconciled-candidates-luna-2026-10-10.json",
+      "sha256": "e99d49f4506dc39715de5e9f6a6ada6b72fca8952e1a00df37245a8e69edad9f"
+    },
+    "official_program": {
+      "document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_file": ".local/content/staging/unicamp-2027-v1/official-pdfs/2027-simulation/programa-provas-2027.pdf",
+      "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+      "verified_against_database_source_document_id": 148,
+      "relevant_pages": [
+        5,
+        6
+      ]
+    }
+  },
+  "method": "Leitura integral das seções theory/example/summary de cada candidata; rechecagem independente dos resultados numéricos e das condições das fórmulas; comparação com o índice oficial de Matemática nas páginas 5–6. O arquivo oficial local tem o mesmo SHA-256 registrado para a fonte 148. Nenhuma fonte secundária foi necessária.",
+  "candidates": [
+    {
+      "curriculum_topic_id": 2475,
+      "topic": "Conjuntos numéricos",
+      "proposal_version": "1.2.3-reconciliation-candidate",
+      "verdict": "Matematicamente correta; introdução bem delimitada e alinhada ao programa.",
+      "factual_checks": [
+        {
+          "area": "Convenções e conjuntos numéricos",
+          "result": "Correto",
+          "detail": "A convenção ℕ={0,1,…} está declarada; ℕ⊆ℤ⊆ℚ⊆ℝ, as definições de racionais/irracionais, operações de conjuntos e distinção entre ∈ e ⊆ estão corretas. A convenção explicitada evita ambiguidade."
+        },
+        {
+          "area": "Decimais, operações, módulo e desigualdades",
+          "result": "Correto",
+          "detail": "Para racional irredutível, decimal termina exatamente quando o denominador tem apenas fatores 2 e 5; do contrário é periódico. Fechamento, módulo e inversão do sinal ao multiplicar/dividir por negativo estão corretamente descritos, considerando divisor não nulo."
+        },
+        {
+          "area": "Fatoração, divisores, MDC e MMC",
+          "result": "Correto",
+          "detail": "A regra de menores/maiores expoentes e o produto (aᵢ+1) para contagem de divisores positivos são corretos para inteiro positivo em fatoração prima."
+        },
+        {
+          "area": "PA, PG, porcentagem e juros",
+          "result": "Correto",
+          "detail": "Fórmulas gerais de PA/PG e juros simples/compostos são corretas sob taxa constante, períodos compatíveis e sem aportes; essas condições estão declaradas."
+        },
+        {
+          "area": "Exemplos e autochecagem",
+          "result": "Conferidos",
+          "detail": "União/interseção e inclusão; MDC(12,18)=6, MMC=36 e 9 divisores; PA a₁₀=31; PG a₆=96; montantes R$1.200/R$1.210; desconto/aumento sucessivos R$195,50; MDC(20,30)=10, MMC=60; 0,125=1/8. Todos corretos."
+        }
+      ],
+      "program_alignment": {
+        "official_scope": "Doc. 148, pp. 5–6: conjuntos/subconjuntos/operações; naturais e inteiros; primos, fatoração, divisores, MDC/MMC; reais, módulo, desigualdades e decimal; sequências/PA/PG; porcentagem e juros simples/compostos.",
+        "assessment": "A introdução menciona corretamente todas essas famílias; o roteiro declara que prática específica e aprofundamento ainda são necessários. A rotulagem introdutória não sugere cobertura integral."
+      },
+      "required_corrections": [],
+      "optional_precision": "No trecho da fatoração, pode explicitar que n é inteiro positivo; o contexto já torna essa leitura clara, então não é erro impeditivo."
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "topic": "Funções",
+      "proposal_version": "1.3.3-reconciliation-candidate",
+      "verdict": "Exemplos e afirmações centrais corretos; requer pequenos ajustes de precisão e explicitação das lacunas do programa antes de alegar que o roteiro futuro é completo.",
+      "factual_checks": [
+        {
+          "area": "Definição, domínio, imagem, zeros e taxa média",
+          "result": "Correto",
+          "detail": "Definição de função, teste da reta vertical, distinção domínio/contradomínio/imagem, condição para intercepto em y e taxa média [f(b)-f(a)]/(b-a) estão corretos."
+        },
+        {
+          "area": "Famílias e restrições de domínio",
+          "result": "Correto",
+          "detail": "Afim, quadrática com a≠0, k/x com x≠0, módulo, raízes pares e funções racionais são descritos corretamente dentro do recorte apresentado."
+        },
+        {
+          "area": "Operações, composição e inversa",
+          "result": "Correto",
+          "detail": "A composição aplica g antes de f e requer imagem intermediária no domínio de f; operações ponto a ponto usam domínio comum; inversa requer bijeção nos conjuntos escolhidos e os gráficos refletem em y=x."
+        },
+        {
+          "area": "Exemplo da corrida e domínio de h",
+          "result": "Conferido",
+          "detail": "C(5)=R$16 e custo R$20 implica d=7 km. Para h(x)=√(x−1)/(x−2), com raiz somente no numerador, domínio [1,2)∪(2,∞); correto."
+        },
+        {
+          "area": "Quadrática, módulo, transformações e composição",
+          "result": "Conferido",
+          "detail": "x²−4 tem raízes ±2 e vértice (0,−4); a expressão por partes de |x−2| está correta; 2f(x)=2x² difere de f(2x)=4x²; (f∘g)(2)=24. Autochecagens também conferem."
+        }
+      ],
+      "program_alignment": {
+        "official_scope": "Doc. 148, pp. 5–6: afim/quadrática; k/x, x e |x|; trigonométricas e gráficos/arcos notáveis; equações/inequações; soma/produto/composição; translação/reflexão/homotetia; raízes n-ésimas e domínios; racionais e inversas.",
+        "assessment": "A candidata identifica-se claramente como introdução e não promete cobertura total. A lista de próximas etapas, porém, não nomeia explicitamente alguns itens oficiais: identidade y=x; arcos notáveis; translação/reflexão/homotetia; gráficos e domínios da família x^(1/n) (incluindo raízes ímpares). A lista futura deve incluí-los para não deixar lacunas invisíveis."
+      },
+      "required_corrections": [
+        {
+          "issue": "Transformação horizontal",
+          "detail": "f(cx) altera a escala horizontal, mas a redação pode induzir à leitura do fator c como o fator de escala. Especificar que a escala horizontal é 1/|c| e, se c<0, há também reflexão horizontal."
+        },
+        {
+          "issue": "Inversa de x²",
+          "detail": "Na autochecagem, restringir o domínio a x≥0 é necessário, mas para bijeção deve-se também declarar contradomínio/imagem [0,∞). Sugestão: f:[0,∞)→[0,∞), f(x)=x², cuja inversa é √x."
+        },
+        {
+          "issue": "Plano das próximas etapas",
+          "detail": "Acrescentar explicitamente y=x, arcos notáveis, translações/reflexões/homotetias e domínios/gráficos de x^(1/n); o texto atual diz que a cobertura é incompleta, mas essa lista não fecha todos os subitens oficiais."
+        }
+      ],
+      "publication_boundary": "Não há erro matemático que invalide os exemplos. A proposta pode continuar identificada como introdução; as correções acima são para precisão e para manter as próximas etapas alinhadas ao programa."
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "topic": "Geometria espacial",
+      "proposal_version": "1.2.3-reconciliation-candidate",
+      "verdict": "Fórmulas e exemplos corretos; introdução aderente ao escopo oficial, com duas distinções terminológicas a tornar inequívocas.",
+      "factual_checks": [
+        {
+          "area": "Posições relativas",
+          "result": "Correto com ajuste de redação",
+          "detail": "As categorias de retas coincidentes, paralelas distintas, concorrentes e reversas estão corretas. Para reta-plano, as três possibilidades também cobrem os casos, mas ‘paralela’ deve ser qualificada como disjunta para não colidir com convenções que incluem reta contida."
+        },
+        {
+          "area": "Perpendicularidade",
+          "result": "Correto",
+          "detail": "Uma reta perpendicular a duas retas concorrentes distintas do plano, ambas passando pelo ponto de interseção, é perpendicular ao plano; a formulação equivalente por direção normal está correta."
+        },
+        {
+          "area": "Fórmulas de sólidos",
+          "result": "Correto",
+          "detail": "Volumes de prismas/cilindros e pirâmides/cones; áreas lateral/total do cilindro e cone reto; área e volume da esfera; geratriz e fórmulas lateral/volume do tronco de cone reto estão corretas sob as hipóteses indicadas."
+        },
+        {
+          "area": "Tronco de pirâmide e superfícies",
+          "result": "Correto",
+          "detail": "Subtrair a pirâmide menor semelhante da maior é válido para corte paralelo à base; a ressalva sobre bases paralelas/semelhantes aparece. Área externa de sólido composto exclui superfícies de contato."
+        },
+        {
+          "area": "Exemplos e autochecagem",
+          "result": "Conferidos",
+          "detail": "Cilindro: V=90π, A_l=60π, A_t=78π; cone 3-4-5: V=12π, A_l=15π, A_t=24π; tronco R=3,r=1,h=4: g=2√5, V=52π/3, A_l=8π√5; cone 5-12-13: V=100π, A_l=65π, A_t=90π. Todos corretos."
+        }
+      ],
+      "program_alignment": {
+        "official_scope": "Doc. 148, p. 6: paralelismo/perpendicularidade entre retas e planos; poliedros, prismas, pirâmides, áreas, volumes e troncos; cilindros, cones, esferas, áreas, volumes e troncos.",
+        "assessment": "O texto lista as famílias oficiais e chama-se explicitamente introdução. Reconhece que planificações, troncos de pirâmide, esfera, prismas/pirâmides e problemas contextualizados precisam de prática adicional; não declara domínio integral."
+      },
+      "required_corrections": [
+        {
+          "issue": "Concorrência entre retas",
+          "detail": "Definir concorrentes como coplanares e com exatamente um ponto comum, para distingui-las de coincidentes."
+        },
+        {
+          "issue": "Reta paralela ao plano",
+          "detail": "Escrever ‘paralela disjunta do plano’ ou indicar explicitamente que reta contida é caso separado; evita ambiguidade terminológica."
+        },
+        {
+          "issue": "Teste de perpendicularidade",
+          "detail": "Onde diz ‘duas retas concorrentes’, explicitar que são distintas/não paralelas, condição necessária para determinar o plano."
+        }
+      ],
+      "publication_boundary": "Não encontrei erro de fórmula ou cálculo nos exemplos. As correções propostas são de precisão terminológica; a cobertura permanece introdutória e depende das etapas de prática já apontadas."
+    }
+  ],
+  "overall_conclusion": "Nenhuma das três candidatas apresenta erro factual ou matemático nos exemplos examinados. 2475 está coerente e claramente introdutória; 2476 precisa de três clarificações e completar a lista de subtemas futuros; 2481 precisa explicitar condições terminológicas de posições relativas. Parecer é revisão independente, não aprovação nem alteração de status.",
+  "no_changes_made": true
+}

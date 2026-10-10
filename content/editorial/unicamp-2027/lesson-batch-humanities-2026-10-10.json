@@ -1,0 +1,316 @@
+{
+  "schema": "saberes.editorial.lesson-decision-package/v1",
+  "package_id": "lesson-batch-humanities-2026-10-10",
+  "created_at": "2026-10-10",
+  "status": "prepared_not_applied",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "1ª fase",
+    "curriculum_topic_ids": [2472, 2474, 2487],
+    "subjects": ["Língua Portuguesa", "Literatura", "Geografia"],
+    "excluded": ["outros tópicos", "SQLite writes", "release/build changes"]
+  },
+  "database_baseline": {
+    "path": ".local/content/content.sqlite",
+    "access": "read_only",
+    "sha256": "6f9f28511663f16987e04972edc7c7b9bf16210cf47e1e9c46bdd19d724cd1a8",
+    "editorial_status_policy": "Manter review em todas as aulas. O programa delimita escopo, mas não aprova por si só a correção pedagógica ou factual do texto editorial."
+  },
+  "official_program": {
+    "source_document_id": 148,
+    "title": "Programa das Provas — Vestibular 2027",
+    "institution": "Comvest / Unicamp",
+    "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+    "local_path": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+    "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+    "page_numbering": "páginas impressas no documento"
+  },
+  "reviewed_artifacts": [
+    {
+      "path": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json",
+      "sha256": "6dab1f0c867ef6352bb0d1320f46062de0a57f0db1b2a0d06bb6c2bb63e06395",
+      "role": "candidate section text for topics 2472, 2474 and 2487"
+    },
+    {
+      "path": "content/editorial/unicamp-2027/lesson-final-review-humanities-portuguese-2026-10-10.json",
+      "sha256": "265e4167e7288d1717451c2a6236011f2ff05b7f75fe6988339b28d598e87a2a",
+      "role": "final independent review; identifies version/content collisions and remaining holds"
+    },
+    {
+      "path": "content/editorial/unicamp-2027/lesson-audit-portuguese-second-review-2026-10-10.json",
+      "sha256": "35627faff053f2091bc9af6cda97390ead56c0c1ab9276fb7ccf48d380e1da27",
+      "role": "second review of morphology and literature proposals"
+    },
+    {
+      "path": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+      "sha256": "c79dd31fd7a420edb8fab4ac21c336ca08ee6c6315f00cc51470834d7f73fc1e",
+      "role": "independent review of humanities proposals, including pedosphere correction"
+    },
+    {
+      "path": "content/editorial/unicamp-2027/lesson-backlog-luna-2026-10-10.json",
+      "sha256": "6fe92d21c23ae39e99e9096b9fd7e1a010360e16bd279256788586ac018217d4",
+      "role": "reconciliation notes and precise open blockers"
+    }
+  ],
+  "candidate_source_binding": {
+    "path": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json",
+    "sha256": "6dab1f0c867ef6352bb0d1320f46062de0a57f0db1b2a0d06bb6c2bb63e06395",
+    "rule": "Each replace_section_content operation points to an exact JSON Pointer in this SHA-pinned file. If the source file hash differs, do not apply the pointer or infer replacement text."
+  },
+  "decisions": [
+    {
+      "curriculum_topic_id": 2472,
+      "official_label": "Morfologia da língua portuguesa",
+      "subject": "Língua Portuguesa",
+      "official_evidence": [
+        {
+          "source_document_id": 148,
+          "page": 4,
+          "location": "Índice de conteúdos programáticos gerais, item 5",
+          "supports": "Estrutura do vocábulo, formação de palavras e efeitos semânticos/expressivos das classes morfológicas."
+        }
+      ],
+      "sqlite_baseline": {
+        "lesson_id": 13,
+        "related_lesson_ids": [13, 14, 15],
+        "editorial_version": "1.0.3",
+        "review_status": "review",
+        "section_ids": {"theory": 13, "example": 14, "summary": 15},
+        "section_sha256": {
+          "13": "7be987dbe2d8e2072c46f53979a06805aa34d9d4ff707bac53a8c9836a7d4b8d",
+          "14": "3f37af9275bb274222a96045e566e44ce921fccbfa0231232bb4dd3291e7c72a",
+          "15": "e98721070ebec90626a548eae8113348af9999be96e4eccc109f95f6a278b001"
+        }
+      },
+      "version_reconciliation": {
+        "candidate_version_in_prior_package": "1.0.3",
+        "sqlite_current_version": "1.0.3",
+        "decision": "Do not treat equal version labels as equal content; the three current section hashes differ from the pinned candidate sections.",
+        "next_version_if_rebased": "1.0.4"
+      },
+      "desired_lesson_status": "review",
+      "lesson_decision": "rebase_candidate_with_small_terminology_correction; require another editorial check before any promotion",
+      "section_decisions": [
+        {
+          "section_id": 13,
+          "type": "theory",
+          "desired_state": "review",
+          "operation": "replace_section_content_from_pointer_then_insert_after_exact_text",
+          "json_pointer": "/decisions/0/proposed_sections/0/content",
+          "title_pointer": "/decisions/0/proposed_sections/0/title",
+          "insert_after_exact_text": "— uso tradicionalmente chamado de adjetivo substantivado.",
+          "insert_exactly": " Essa denominação segue a terminologia da gramática escolar adotada nesta aula; outras abordagens podem descrever a construção de modo diferente.",
+          "rationale": "A proposta troca o exemplo genérico “o novo” por contraste contextual e explicita estrutura, formação, flexão e efeito. A ressalva terminológica é exigida pela revisão independente; não transforma uma análise escolar em classificação universal.",
+          "evidence": ["official_program:page-4-item-5", "lesson-audit-portuguese-second-review-2026-10-10.json:topic-2472", "lesson-final-review-humanities-portuguese-2026-10-10.json:topic-2472"]
+        },
+        {
+          "section_id": 14,
+          "type": "example",
+          "desired_state": "review",
+          "operation": "replace_section_content_from_pointer",
+          "json_pointer": "/decisions/0/proposed_sections/1/content",
+          "title_pointer": "/decisions/0/proposed_sections/1/title",
+          "rationale": "Mantém o contraste mínimo já revisado entre “os jovens” e “os estudantes jovens”; a mudança proposta é editorial/formatting e fica vinculada à ressalva terminológica da teoria.",
+          "evidence": ["official_program:page-4-item-5", "lesson-audit-portuguese-second-review-2026-10-10.json:exact_correction"]
+        },
+        {
+          "section_id": 15,
+          "type": "summary",
+          "desired_state": "review",
+          "operation": "replace_section_content_from_pointer",
+          "json_pointer": "/decisions/0/proposed_sections/2/content",
+          "title_pointer": "/decisions/0/proposed_sections/2/title",
+          "rationale": "Remove a autochecagem baseada em “o novo”, cujo referente foi considerado ambíguo, e substitui-a por contraste nominal verificável.",
+          "evidence": ["official_program:page-4-item-5", "lesson-audit-portuguese-second-review-2026-10-10.json:exact_correction"]
+        }
+      ],
+      "unresolved": [
+        "A terminologia deve continuar qualificada como enquadramento de gramática escolar; a nova redação ainda precisa de revisão independente após rebasing.",
+        "O programa oficial delimita o conteúdo, mas não atesta a correção linguística ou a suficiência pedagógica da microaula."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "official_label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "subject": "Literatura",
+      "official_evidence": [
+        {
+          "source_document_id": 148,
+          "page": 4,
+          "location": "Literaturas de Língua Portuguesa — habilidades e conteúdos",
+          "supports": "Leitura analítica/crítica, prosa, poesia e teatro, composição e relações com dimensões sociais, morais e políticas."
+        },
+        {
+          "source_document_id": 148,
+          "page": 5,
+          "location": "Relação de Livros, tabela completa",
+          "supports": "Títulos, autores, textos selecionados e extensão prevista para a edição."
+        }
+      ],
+      "sqlite_baseline": {
+        "lesson_id": 19,
+        "related_lesson_ids": [19, 20, 21],
+        "editorial_version": "1.0.5",
+        "review_status": "review",
+        "section_ids": {"theory": 19, "example": 20, "summary": 21},
+        "section_sha256": {
+          "19": "2d113c116ffc87f1d11fc6b66238a5ccd8dbb0d9f5baa9e2ebd6f7c0d2f23473",
+          "20": "219611098b6a96dada9ae34a9da3f088718c66ab911d551123e5ee2cb3fff909",
+          "21": "7b572a2fefa4bce827c0c28911611837bac2c673c9bb84b3905393df10e15d73"
+        }
+      },
+      "version_reconciliation": {
+        "candidate_version_in_prior_package": "1.0.5",
+        "sqlite_current_version": "1.0.5",
+        "decision": "The existing version labels collide while the section content differs. Use the pinned candidate only as a rebase proposal, not as proof it is already applied.",
+        "next_version_if_rebased": "1.0.6"
+      },
+      "desired_lesson_status": "review",
+      "lesson_decision": "rebase_candidate_but_hold_publication; the candidate is an introductory step, not complete coverage of the required readings",
+      "section_decisions": [
+        {
+          "section_id": 19,
+          "type": "theory",
+          "desired_state": "review",
+          "operation": "replace_official_readings_block_between_exact_markers",
+          "start_marker": "Para o Vestibular Unicamp 2027, o Programa das Provas apresenta esta relação de leitura: ",
+          "end_marker": "\n\n**Erros comuns**",
+          "candidate_content_pointer": "/decisions/1/proposed_sections/0/content",
+          "candidate_start_marker": "**Relação oficial de leituras — edição 2027**",
+          "candidate_end_marker": "\n\nA grafia e a extensão acima seguem a tabela da Comvest.",
+          "replacement_scope": "Take the exact substring between the candidate markers, including all 14 named songs and the six named Morangos mofados stories; replace the current substring between start_marker and end_marker and preserve surrounding theory text.",
+          "title_action": "retain current section title",
+          "rationale": "The current SQL text has an awkward punctuation join in the reading list and omits the item-level song details supplied by the corrected candidate. The source audit verified the official list against the program pages.",
+          "evidence": ["official_program:pages-4-5", "lesson-audit-portuguese-second-review-2026-10-10.json:topic-2474", "lesson-final-review-humanities-portuguese-2026-10-10.json:topic-2474"]
+        },
+        {
+          "section_id": 20,
+          "type": "example",
+          "desired_state": "review_hold",
+          "operation": "replace_section_content_from_pointer",
+          "json_pointer": "/decisions/1/proposed_sections/1/content",
+          "title_pointer": "/decisions/1/proposed_sections/1/title",
+          "rationale": "Substitui o exemplo hipotético por uma paráfrase guiada do paratexto “Ao leitor”, sem reproduzir trecho protegido. A análise demonstra voz e composição, mas a revisão final considera ainda insuficiente a demonstração da relação com dimensão social/moral/política; por isso não aprovar nem promover.",
+          "evidence": [
+            "official_program:page-4",
+            "official_program:page-5",
+            "https://pt.wikisource.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas/Pref%C3%A1cio#location=Pref%C3%A1cio/Ao_leitor",
+            "lesson-final-review-humanities-portuguese-2026-10-10.json:topic-2474"
+          ]
+        },
+        {
+          "section_id": 21,
+          "type": "summary",
+          "desired_state": "review_hold",
+          "operation": "replace_section_content_from_pointer",
+          "json_pointer": "/decisions/1/proposed_sections/2/content",
+          "title_pointer": "/decisions/1/proposed_sections/2/title",
+          "rationale": "Mantém explícito que a lição é introdutória e que faltam leituras guiadas por obra/texto, com passagens localizadas e análise revista; não declara o programa literário coberto.",
+          "evidence": ["official_program:pages-4-5", "lesson-backlog-luna-2026-10-10.json:topic-2474"]
+        }
+      ],
+      "unresolved": [
+        "O exemplo proposto não conclui, com evidência textual localizada, uma relação social, moral ou política; falta uma leitura guiada adequada ou um vínculo funcional para essa etapa.",
+        "Faltam leituras/análises revisadas para cada obra ou conjunto de textos da lista. A microaula não pode ser marcada como cobertura integral.",
+        "A página do Wikisource é HTML e não tem paginação impressa; a evidência local citada é a seção Prefácio/Ao leitor."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "official_label": "Componentes físico-naturais do espaço geográfico",
+      "subject": "Geografia",
+      "official_evidence": [
+        {
+          "source_document_id": 148,
+          "page": 7,
+          "location": "Geografia, III(a), interações entre litosfera, hidrosfera, atmosfera e criosfera",
+          "supports": "Tectônica, gênese/evolução do relevo, solos, clima, águas e criosfera."
+        },
+        {
+          "source_document_id": 148,
+          "page": 7,
+          "location": "Geografia, III(b), biosfera e questão ambiental",
+          "supports": "Biomas, Unidades de Conservação, hotspots, recursos, riscos/desastres, mudanças climáticas e planejamento/gestão ambiental."
+        },
+        {
+          "source_document_id": 148,
+          "page": 8,
+          "location": "Geografia, habilidades e continuação do programa",
+          "supports": "Leitura multiescalar e relação dos componentes naturais com processos socioespaciais."
+        }
+      ],
+      "sqlite_baseline": {
+        "lesson_id": 58,
+        "related_lesson_ids": [58, 59, 60],
+        "editorial_version": "1.2.2",
+        "review_status": "review",
+        "section_ids": {"theory": 58, "example": 59, "summary": 60},
+        "section_sha256": {
+          "58": "ffcda4a0309e99c8af597a4bbc8dfc702bc6a0dca38f1adba6c38820235e20c7",
+          "59": "6c6cacdbe41b0a2101ed8e6133f250921f6ed26fb1cf2155e8944078ff7c1538",
+          "60": "34255c6d6dab2a3f8ae84def02cd90c8b440a4f1f6b7dd255f0cbd8e968af890"
+        }
+      },
+      "version_reconciliation": {
+        "candidate_version_in_prior_package": "1.2.2",
+        "sqlite_current_version": "1.2.2",
+        "decision": "The pinned proposal sections differ from the sections materialized under the same SQLite version. Rebase rather than treating the candidate as applied.",
+        "next_version_if_rebased": "1.2.3"
+      },
+      "desired_lesson_status": "review",
+      "lesson_decision": "rebase_as_introductory_overview; retain explicit scope limits and do not mark full-topic coverage",
+      "section_decisions": [
+        {
+          "section_id": 58,
+          "type": "theory",
+          "desired_state": "review",
+          "operation": "replace_section_content_from_pointer",
+          "json_pointer": "/decisions/5/proposed_sections/0/content",
+          "title_pointer": "/decisions/5/proposed_sections/0/title",
+          "rationale": "A proposta rearticula os componentes, nomeia a pedosfera sem reduzir solo à litosfera e amplia a visão introdutória para relevo, clima, hidrologia, criosfera, biomas e gestão, dentro dos itens documentados no programa.",
+          "evidence": ["official_program:pages-7-8", "lesson-audit-humanities-second-review-2026-10-10.json:topic-2487", "lesson-final-review-humanities-portuguese-2026-10-10.json:topic-2487"]
+        },
+        {
+          "section_id": 59,
+          "type": "example",
+          "desired_state": "review",
+          "operation": "replace_section_content_from_pointer",
+          "json_pointer": "/decisions/5/proposed_sections/1/content",
+          "title_pointer": "/decisions/5/proposed_sections/1/title",
+          "rationale": "A proposta traz balanço hídrico com unidades e hipótese explícitas; a revisão anterior conferiu a aritmética, mas isso não transforma o exemplo em conteúdo oficial nem aprova sozinho a explicação geográfica.",
+          "evidence": ["official_program:pages-7-8", "lesson-final-review-humanities-portuguese-2026-10-10.json:topic-2487; arithmetic check"]
+        },
+        {
+          "section_id": 60,
+          "type": "summary",
+          "desired_state": "review_hold",
+          "operation": "replace_section_content_from_pointer",
+          "json_pointer": "/decisions/5/proposed_sections/2/content",
+          "title_pointer": "/decisions/5/proposed_sections/2/title",
+          "rationale": "Acrescenta um roteiro explícito dos subtemas oficiais ainda a estudar e impede que esta visão geral seja confundida com cobertura integral.",
+          "evidence": ["official_program:pages-7-8", "lesson-backlog-luna-2026-10-10.json:topic-2487"]
+        }
+      ],
+      "supporting_references_in_candidate": [
+        {"title": "Atlas Geográfico Escolar", "url": "https://www.ibge.gov.br/geociencias/atlas/nacional/2402-np-atlas-geografico-escolar/16633-atlas-geografico-escolar.html", "role": "mapas de relevo, clima, vegetação e uso da terra"},
+        {"title": "Bacias e Divisões Hidrográficas do Brasil", "url": "https://www.ibge.gov.br/geociencias/cartas-e-mapas/informacoes-ambientais/31653-bacias-e-divisoes-hidrograficas-do-brasil.html", "role": "bacias, divisores e exutório"},
+        {"title": "Sistema Nacional de Unidades de Conservação", "url": "https://www.gov.br/mma/pt-br/composicao/sbio/dap/sistema-nacional-de-unidades-de-conservacao-snuc/", "role": "finalidade de conservação e gestão de Unidades de Conservação"}
+      ],
+      "unresolved": [
+        "O programa define o escopo, mas não valida fatos geográficos/científicos da explicação; a versão expandida precisa de conferência independente por conteúdo.",
+        "O roteiro lista tectônica, classificações climáticas, biomas/hotspots, riscos e planejamento, mas não comprova que existam lições guiadas vinculadas a cada etapa.",
+        "Não declarar este tópico integralmente ensinado nem liberar a aula como substituta dos subtemas oficiais."
+      ]
+    }
+  ],
+  "application_guard": {
+    "sqlite_write_performed": false,
+    "lesson_status_promotions": 0,
+    "apply_only_if": [
+      "O SQLite ainda corresponde ao database_baseline SHA-256 e às section_sha256 registradas.",
+      "Os arquivos candidatos ainda correspondem ao SHA-256 registrado em candidate_source_binding.",
+      "A revisão humana resolve os itens de unresolved ou os mantém explicitamente como hold."
+    ],
+    "publication_rule": "Depois de aplicar qualquer rebase, manter review até revisão independente do conteúdo materializado. Não promover com base apenas no programa oficial ou na coincidência de número de versão."
+  }
+}

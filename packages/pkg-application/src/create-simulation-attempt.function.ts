@@ -6,6 +6,10 @@ export function createSimulationAttempt(input: CreateSimulationAttemptInput): At
     return answer.questionKey === input.questionKey;
   });
 
+  const context = input.session.questionContexts?.[input.questionKey];
+
+  const answerKeyVersion = context?.answerKeyVersion ?? input.data.question.answer_key_version;
+
   return {
     id: `${input.session.id}:simulation:${input.questionKey}`,
     sessionId: input.session.id,
@@ -16,5 +20,20 @@ export function createSimulationAttempt(input: CreateSimulationAttemptInput): At
     isCorrect: input.result.isCorrect,
     answeredAt: draft?.answeredAt || input.completedAt,
     source: "simulation",
+    ...context,
+    canonicalQuestionId: context?.canonicalQuestionId ?? input.data.question.question_id,
+    targetEditionKey: context?.targetEditionKey ?? input.session.targetEditionKey ?? input.data.question.target_edition_slug,
+    targetStageKey: context?.targetStageKey ?? input.session.targetStageKey ?? input.data.question.target_stage_slug,
+    sourceEditionKey: context?.sourceEditionKey ?? input.data.question.source_edition_slug,
+    sourceStageKey: context?.sourceStageKey ?? input.data.question.source_stage_slug,
+    questionContentVersion: context?.questionContentVersion ?? input.data.question.editorial_version,
+    answerKeyVersion: answerKeyVersion === null || answerKeyVersion === undefined ? undefined : String(answerKeyVersion),
+    blueprintId: context?.blueprintId ?? input.session.blueprintId,
+    blueprintVersion: context?.blueprintVersion ?? input.session.blueprintVersion,
+    subjectIds: input.data.subjectIds || [],
+    skillIds: input.data.skills?.map((skill) => {return skill.id;}) || [],
+    hintIdsUsed: draft?.hintIdsUsed || [],
+    studyMode: "simulation",
+    assisted: Boolean(draft?.hintIdsUsed?.length),
   };
 }

@@ -1,0 +1,304 @@
+{
+  "format": "lesson-post-review-corrections/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "curriculum_topic_ids": [
+      2475,
+      2476,
+      2478,
+      2481,
+      2484,
+      2487
+    ],
+    "stage": "Vestibular Unicamp 2027 — 1ª fase",
+    "purpose": "Correções textuais integrais das seis lições apontadas pela revisão independente; permanecer em revisão até nova conferência independente.",
+    "rule": "O Programa das Provas delimita o conteúdo, mas não atesta a correção de explicações editoriais. As correções incorporam os exact_correction do parecer independente sem publicar lições."
+  },
+  "sources_consulted": [
+    {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "institution": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_copy_reviewed": "dist/data/official-pdfs/2027-simulation/programa-provas-2027.pdf",
+      "use": "Conferência visual do escopo nas páginas impressas 5–7: Matemática e componentes físico-naturais da Geografia."
+    }
+  ],
+  "independent_review": {
+    "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+    "format": "lesson-independent-second-review/v1",
+    "use": "As justificativas abaixo citam os problemas e incorporam literalmente o conteúdo prescritivo de cada exact_correction, com ajustes apenas para contexto, legibilidade e precisão das seções completas."
+  },
+  "decisions": [
+    {
+      "curriculum_topic_id": 2475,
+      "decision": "revise",
+      "current_version": "1.2.1",
+      "proposed_version": "1.2.2",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "A revisão independente do tópico 2475 pediu uma convenção explícita para 0 em ℕ, operações e união/interseção de conjuntos, além de uso operacional de fatoração para MDC e MMC. Esta substituição integral incorpora as duas exact_correction, mantém a lição em revisão e segue o escopo do Programa das Provas, p. 5 (continuação na p. 6). Parecer: content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json.",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 5,
+          "official_excerpt": "Conjuntos numéricos: operações, união e interseção; naturais e inteiros; fatoração, divisores, MDC, MMC; reais, módulo, desigualdades, representação decimal, sequências, progressões, porcentagem e juros."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+          "detail": "Os exact_correction de 2475 determinam a convenção de ℕ, a explicação de união/interseção e a regra de expoentes para MDC/MMC."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conjuntos numéricos",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization",
+          "content": "Neste material, adotamos **ℕ={0,1,2,…}**. Os inteiros ℤ incluem os negativos; os racionais ℚ são quocientes m/n, com m,n∈ℤ e n≠0; os reais ℝ também incluem irracionais, como √2. Em conjuntos A e B, A∪B reúne os elementos que pertencem a pelo menos um dos conjuntos, e A∩B reúne os que pertencem a ambos. Em ℕ e ℤ, operações fundamentais seguem suas regras de sinais e precedência; divisão por zero é indefinida.\n\nMódulo |x| é a distância de x a zero; desigualdades podem ser representadas por intervalos. Uma fração irredutível tem representação decimal finita se, e somente se, o denominador possui apenas fatores primos 2 e/ou 5; nos demais casos, a expansão é periódica. A fatoração prima permite contar divisores: se N=p^a q^b, com p e q primos distintos, N tem (a+1)(b+1) divisores positivos. Para inteiros positivos, o **MDC usa os menores expoentes comuns** na fatoração; o **MMC usa os maiores expoentes de todos os primos presentes**.\n\nUma sequência é uma lista definida por uma regra. Na progressão aritmética (PA), a diferença d entre termos consecutivos é constante e a_n=a_1+(n−1)d; na progressão geométrica (PG), a razão q é constante e a_n=a_1q^(n−1). Porcentagem é uma razão por cem. Para capital C, taxa i por período e t períodos, juros simples dão M=C(1+it), enquanto juros compostos dão M=C(1+i)^t, sob taxa constante e sem aportes. A unidade de i e a de t devem ser compatíveis.\n\n**Erros comuns**\n\nNão presuma outra convenção para ℕ sem declará-la; não confunda união com interseção; respeite sinais, precedência e denominadores não nulos. Não some percentuais sucessivos sobre a mesma base quando o valor-base muda. Em fatoração, o MDC não inclui primos que não sejam comuns; o MMC inclui todos os primos presentes."
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content_format": "markdown",
+          "pedagogical_role": "example",
+          "content": "Considere A={1,2,4,6} e B={2,3,6}. Então A∪B={1,2,3,4,6} e A∩B={2,6}. Para 12=2²·3 e 18=2·3², MDC(12,18)=2¹·3¹=6, usando os menores expoentes comuns; MMC(12,18)=2²·3²=36, usando os maiores expoentes.\n\nComo verificação de divisores, 36=2²·3² tem (2+1)(2+1)=9 divisores positivos. Na PA 4,7,10,…, a_10=4+9·3=31; na PG 3,6,12,…, a_6=3·2⁵=96. R$ 1.000 a 10% ao ano por dois anos resulta em R$ 1.200 no regime simples e R$ 1.210 no composto. Desconto de 15% e, depois, aumento de 15% sobre o novo preço dão 200×0,85×1,15=R$ 195,50, não R$ 200."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "pedagogical_role": "review",
+          "content": "Declare a convenção de ℕ; identifique união e interseção; confira sinais e restrições; simplifique a fração antes de decidir se o decimal termina; use fatoração para divisores, MDC e MMC; reconheça diferença de PA e razão de PG; alinhe taxa e período dos juros.\n\n**Autochecagem:** com a convenção adotada, 0∈ℕ. Para A={1,2} e B={2,3}, A∪B={1,2,3} e A∩B={2}. MDC(12,18)=6 e MMC(12,18)=36. 0,125=1/8 tem decimal finito, enquanto 1/3 é periódico. A PA 4,7,10,… tem a_10=31; R$ 1.000 a 10% por dois períodos compostos totalizam R$ 1.210."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "decision": "revise",
+      "current_version": "1.3.1",
+      "proposed_version": "1.3.2",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "A revisão independente identificou ambiguidade tipográfica no alcance da raiz no exemplo. A substituição integral torna inequívoca a fração e conserva a exclusão de x=2 no domínio original. Estado permanece review. Parecer: content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json.",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 5,
+          "official_excerpt": "Funções e gráficos: domínios e gráficos, funções racionais e funções inversas."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+          "detail": "O exact_correction de 2476 exige que a raiz fique explicitamente limitada ao numerador: (√(x−1))/(x−2)."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Funções: entradas, saídas e representações",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization",
+          "content": "Uma função associa a cada entrada do domínio exatamente uma saída. Em f:D→C, D é o domínio, C o contradomínio e a imagem reúne apenas os valores de C efetivamente obtidos. Uma reta vertical que cruza um gráfico em mais de um ponto mostra que ele não define y como função de x.\n\nLeia eixos, escala, unidade e intervalo. Zeros satisfazem f(x)=0; o intercepto vertical (0,f(0)) só existe se 0 pertencer ao domínio. A taxa média de variação entre a e b, com a≠b, é [f(b)−f(a)]/(b−a). Em composição (f∘g)(x)=f(g(x)), aplique g primeiro e confirme que sua saída pertence ao domínio de f. Composição não é produto e, em geral, a ordem importa.\n\nO domínio depende da expressão e do contexto: para √g(x), exija g(x)≥0; para p(x)/q(x), exija q(x)≠0. Uma simplificação algébrica não devolve ao domínio pontos excluídos pela expressão original. Modelos devem respeitar o contexto; dados observados não justificam extrapolação automática.\n\n**Erros comuns**\n\nNão confunda domínio, contradomínio e imagem; f(g(x)) com f(x)g(x); nem zeros com interceptos verticais. Verifique restrições antes e depois de simplificar, escala e unidades dos eixos e o domínio da função interna na composição."
+        },
+        {
+          "type": "example",
+          "title": "Exemplos resolvidos",
+          "content_format": "markdown",
+          "pedagogical_role": "example",
+          "content": "Uma corrida cobra R$ 6 de tarifa fixa mais R$ 2 por quilômetro: C(d)=6+2d, com d≥0. Para 5 km, C(5)=R$ 16; se o total é R$ 20, então 6+2d=20 e d=7 km.\n\nConsidere **h(x)=(√(x−1))/(x−2)**, com a raiz apenas no numerador. A condição da raiz é x−1≥0, portanto x≥1; o denominador exige x≠2. Assim, Dom(h)=[1,2)∪(2,∞). x=1 é permitido e produz h(1)=0; x=2 é excluído.\n\nSe f(x)=x², então 2f(x)=2x² dobra cada ordenada, enquanto f(2x)=4x² comprime horizontalmente o gráfico por fator 1/2."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "pedagogical_role": "review",
+          "content": "Diga o que entrada e saída representam; determine o domínio antes de operar; leia escala e unidade; substitua valores para conferir e interprete a resposta no contexto. Em composição, aplique primeiro a função interna e verifique o domínio intermediário.\n\n**Autochecagem:** em h(x)=(√(x−1))/(x−2), x=1 pertence ao domínio, x=2 não, e x=3 pertence. Para f(x)=x²−1 e g(x)=2x+1, (f∘g)(2)=f(5)=24."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2478,
+      "decision": "revise",
+      "current_version": "1.1.1",
+      "proposed_version": "1.1.2",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "A revisão independente apontou ausência do princípio da casa dos pombos, binômio de Newton e probabilidade da união/interseção. A teoria integral incorpora a exact_correction, especifica o modelo de objetos distintos e exemplifica cada ideia; permanece em review. Parecer: content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json.",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 5,
+          "official_excerpt": "Princípio da casa dos pombos; inclusão-exclusão e princípio multiplicativo; arranjos, combinações e permutações; probabilidade da união e interseção; probabilidade condicional; binômio de Newton."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+          "detail": "O exact_correction de 2478 prescreve a regra da união de eventos, o princípio da casa dos pombos e a expansão de (a+b)^2 pelo binômio de Newton."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Contagem e probabilidade",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization",
+          "content": "Comece definindo o que conta como resultado. Pelo princípio multiplicativo, etapas com m₁,…,m_k opções compatíveis produzem m₁⋯m_k resultados. Se N+1 objetos são distribuídos em N caixas, alguma caixa contém pelo menos dois: é o princípio da casa dos pombos. Para n elementos distintos, uma permutação ordena todos e há n! possibilidades; um arranjo escolhe k e considera a ordem, com n!/(n−k)!; uma combinação escolhe k sem considerar a ordem, com C(n,k)=n!/[k!(n−k)!]. O binômio de Newton expande (a+b)^n como soma de termos C(n,k)a^(n−k)b^k.\n\nA inclusão-exclusão evita contar duas vezes a interseção: |A∪B|=|A|+|B|−|A∩B|. Para eventos, P(A∪B)=P(A)+P(B)−P(A∩B). Probabilidade clássica é casos favoráveis sobre possíveis apenas quando os resultados são equiprováveis. Probabilidade condicional é P(A|B)=P(A∩B)/P(B), com P(B)>0. Independência exige P(A∩B)=P(A)P(B); não significa apenas que os eventos são diferentes.\n\n**Erros comuns**\n\nDistinga seleção de ordenação; declare se há reposição e qual é o espaço amostral; não presuma equiprobabilidade ou independência; em união, desconte a interseção; em retirada sem reposição, atualize possibilidades."
+        },
+        {
+          "type": "example",
+          "title": "Exemplos resolvidos",
+          "content_format": "markdown",
+          "pedagogical_role": "example",
+          "content": "De 5 estudantes, escolher presidente e vice dá 5·4=20 arranjos, pois trocar cargos muda o resultado. Escolher 2 representantes sem cargos dá C(5,2)=10 pares. Se 12 pessoas participam de A, 9 de B e 4 de ambos, |A∪B|=12+9−4=17.\n\nEntre 11 objetos distribuídos em 10 caixas, ao menos uma caixa recebe pelo menos dois. Para eventos A e B com P(A)=0,5, P(B)=0,4 e P(A∩B)=0,2, P(A∪B)=0,5+0,4−0,2=0,7. Por fim, (a+b)^2=C(2,0)a²+C(2,1)ab+C(2,2)b²=a²+2ab+b²."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "pedagogical_role": "review",
+          "content": "Especifique objetos, caixas, etapas, ordem e reposição; escolha princípio multiplicativo, arranjo, combinação ou permutação. Para união, subtraia a interseção. Para probabilidades condicionais, atualize o espaço amostral; só use razão de contagens sob equiprobabilidade.\n\n**Autochecagem:** 11 objetos em 10 caixas garantem uma caixa com pelo menos 2. Se P(A)=0,5, P(B)=0,4 e P(A∩B)=0,2, P(A∪B)=0,7. O coeficiente de ab em (a+b)^2 é C(2,1)=2."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "decision": "revise",
+      "current_version": "1.2.1",
+      "proposed_version": "1.2.2",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "A revisão independente encontrou uma lista incompleta de posições relativas de retas e ausência de distinção operacional para perpendicularidade reta-plano. A seção teórica substitui a classificação e define perpendicularidade por duas direções não paralelas do plano no ponto de interseção; o exemplo e a autochecagem tornam os casos verificáveis. Parecer: content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json.",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 6,
+          "official_excerpt": "Geometria espacial: paralelismo e perpendicularidade entre retas e planos; sólidos, áreas, volumes e troncos."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+          "detail": "O exact_correction de 2481 inclui retas coincidentes, paralelas distintas, concorrentes e reversas; e distingue reta contida, paralela ou secante ao plano, incluindo perpendicularidade."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Posições relativas e medidas de sólidos",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization",
+          "content": "Duas retas no espaço podem ser **coincidentes**, **paralelas distintas**, **concorrentes** (coplanares e com um ponto comum) ou **reversas** (não coplanares). Uma reta e um plano podem ser paralelos sem ponto comum, ter a reta contida no plano ou cruzar-se em um único ponto. Nesse último caso, são perpendiculares quando a reta é perpendicular, no ponto de interseção, a duas retas concorrentes do plano; equivalentemente, forma 90° com toda direção do plano que passa por esse ponto.\n\nPoliedros têm faces planas. Prismas e cilindros têm volume B·h; pirâmides e cones têm volume B·h/3, sempre com h perpendicular à base. A esfera de raio r tem volume 4πr³/3 e área 4πr². Área total considera apenas superfícies externas; planificações ajudam a identificar faces, mas é preciso verificar quais arestas se unem. Em pirâmide regular, a área lateral é (perímetro da base × apótema lateral)/2. Volume usa unidades cúbicas e área unidades quadradas; 1 L=1 dm³=1000 cm³.\n\n**Erros comuns**\n\nNão omita retas coincidentes nem confunda paralelas distintas com coincidentes. Retas reversas não se encontram e não são coplanares. Uma reta secante a um plano não é necessariamente perpendicular. Não use geratriz ou apótema como altura perpendicular para volume; não some superfícies internas coladas nem misture unidades de área e volume."
+        },
+        {
+          "type": "example",
+          "title": "Exemplos resolvidos",
+          "content_format": "markdown",
+          "pedagogical_role": "example",
+          "content": "Em um cubo, duas arestas que compartilham um vértice são concorrentes; duas arestas distintas da mesma direção são paralelas; uma aresta é coincidente consigo mesma; e duas arestas sem interseção que não pertencem a um mesmo plano são reversas. Uma reta perpendicular ao plano de uma face encontra esse plano em um ponto e forma 90° com duas direções concorrentes da face por esse ponto.\n\nUma pirâmide quadrada regular tem lado da base 6 e apótema lateral 5. Sua área lateral é (4·6·5)/2=60 e a base tem área 36, logo a área total é 96. Se a altura perpendicular é 4, o volume é 36·4/3=48 unidades cúbicas. Um cone de raio 3 e altura 10 tem volume π·3²·10/3=30π; a geratriz não substitui a altura."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "pedagogical_role": "review",
+          "content": "Classifique cada par de objetos antes de aplicar fórmulas: coincidente, paralelo distinto, concorrente ou reverso para duas retas; contido, paralelo ou secante para reta e plano. Secância não implica perpendicularidade: verifique o ângulo com duas direções concorrentes no plano. Depois identifique base, altura perpendicular, faces externas e unidades.\n\n**Autochecagem:** duas retas reversas não são coplanares; uma reta contida no plano não é secante em um único ponto; uma reta perpendicular ao plano faz 90° com duas retas concorrentes desse plano no ponto. Pirâmide de base 36 e altura 4 tem volume 48."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "decision": "revise",
+      "current_version": "1.1.1",
+      "proposed_version": "1.1.2",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "A revisão independente observou que as propriedades de produto e quociente precisam explicitar argumentos positivos e mesma base válida. A substituição incorpora a exact_correction, declara condições da base, demonstra a checagem de domínio e mantém review. Parecer: content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json.",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 6,
+          "official_excerpt": "Potências, função exponencial e gráfico; logaritmos, definição e propriedades; função logarítmica e gráficos; equações e inequações logarítmicas e exponenciais."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+          "detail": "O exact_correction de 2484 exige a>0, b>0 e logaritmos na mesma base válida ao usar produto e quociente."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Exponenciais, logaritmos e domínio",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization",
+          "content": "Para c>0 e c≠1, a função exponencial f(x)=c^x é crescente se c>1 e decrescente se 0<c<1; sua imagem é (0,∞). O logaritmo log_c(x)=y equivale a c^y=x e exige x>0. A função logarítmica tem domínio (0,∞); exponencial e logaritmo de mesma base são inversas e seus gráficos são simétricos em relação à reta y=x.\n\nPara x,y>0 e logaritmos na mesma base válida c (c>0, c≠1), log_c(xy)=log_c(x)+log_c(y) e log_c(x/y)=log_c(x)−log_c(y). Não há regra que transforme log_c(x+y) em soma. Em inequações, aplicar uma função crescente preserva a ordem; uma decrescente a inverte. Em modelos, informe a unidade temporal e se o tempo pode assumir valores fracionários.\n\n**Erros comuns**\n\nO argumento de um logaritmo deve ser positivo e a base deve ser positiva e diferente de 1. Verifique o domínio na equação original, não use a propriedade do produto para uma soma e inverta o sentido da desigualdade quando aplicar uma função decrescente."
+        },
+        {
+          "type": "example",
+          "title": "Exemplos resolvidos",
+          "content_format": "markdown",
+          "pedagogical_role": "example",
+          "content": "Para x>1, resolva log₂(x−1)+log₂(x+1)=3. O domínio exige x−1>0 e x+1>0, portanto x>1. Como os dois logaritmos têm a mesma base válida e os argumentos são positivos, log₂((x−1)(x+1))=3. Assim, x²−1=8; as soluções algébricas são ±3, mas apenas x=3 satisfaz o domínio.\n\nComo log₂ é crescente, log₂(x)>2 equivale a x>4. Já (1/2)^x>4=(1/2)^−2 implica x<−2, pois a exponencial de base 1/2 é decrescente. No modelo N(t)=500·2^t, N(t)>10.000 quando t>log₂20≈4,32; se só são admitidas horas inteiras, a primeira é t=5."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "pedagogical_role": "review",
+          "content": "Traduza logaritmo para expoente; declare o domínio e as condições da base; determine crescimento ou decrescimento; em inequações, preserve ou inverta a ordem conforme a monotonicidade; interprete unidades e contexto. Propriedades de produto e quociente requerem argumentos positivos e a mesma base válida.\n\n**Autochecagem:** log₂(8)=3; log₂(x−1) exige x>1. Para x,y>0, log₃(xy)=log₃(x)+log₃(y); a expressão log₃(x+y) não se separa em soma de logaritmos. A inequação (1/2)^x>4 tem solução x<−2."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "decision": "revise",
+      "current_version": "1.2.1",
+      "proposed_version": "1.2.2",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "A revisão independente identificou a classificação imprecisa de solos como parte simples da litosfera. A substituição integral trata a pedosfera como interface entre componentes e incorpora a exact_correction; clima, criosfera, biosfera e processos permanecem articulados ao escopo do programa. Estado review. Parecer: content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json.",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 7,
+          "official_excerpt": "Interação Litosfera × Hidrosfera × Atmosfera × Criosfera; solos, clima, ciclo hidrológico, oceanos e mares; biosfera e biomas."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+          "detail": "O exact_correction de 2487 especifica pedosfera (solos) ou solos como interface entre litosfera, atmosfera, hidrosfera e biosfera."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Componentes físico-naturais e suas interações",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization",
+          "content": "O sistema terrestre pode ser estudado pelas interações entre litosfera (rochas e relevo), hidrosfera (água), atmosfera, criosfera (água congelada) e biosfera. **Solos compõem a pedosfera**, uma interface formada por material mineral, matéria orgânica, água, ar e organismos, em interação com essas esferas. Essa organização evita tratar o solo como se fosse apenas rocha.\n\nEnergia solar e interna impulsiona processos; água, carbono, sedimentos e nutrientes circulam entre componentes. Tectônica de placas, vulcanismo e terremotos são processos endógenos; intemperismo altera rochas, erosão transporta materiais e deposição os acumula. Clima descreve padrões de longo prazo de temperatura, umidade e pressão; circulações atmosférica e oceânica redistribuem energia e umidade. A criosfera influencia o sistema por meio de água congelada e responde às mudanças ambientais. Bacias hidrográficas organizam a drenagem até um exutório. Biomas e domínios naturais variam com clima, solo, relevo e comunidades, sem serem homogêneos. Usos humanos podem modificar fluxos, ecossistemas e riscos.\n\n**Erros comuns**\n\nNão reduza solos a rochas nem confunda tempo atmosférico e clima. Bioma não é sinônimo de clima. Não atribua evento extremo a uma causa única sem evidências e escala adequadas; disponibilidade física de água não significa acesso igualitário."
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content_format": "markdown",
+          "pedagogical_role": "example",
+          "content": "Em uma bacia hidrográfica, a chuva que cai numa encosta pode infiltrar-se no solo ou escoar pela superfície. O solo — parte da pedosfera — armazena e transmite água; sua estrutura, cobertura vegetal e declividade afetam a infiltração e a erosão. A água e os sedimentos seguem por afluentes até o rio principal e o exutório, conectando pedosfera, hidrosfera e relevo.\n\nSe a encosta é desmatada e compactada, pode haver menos interceptação e infiltração e mais escoamento rápido, erosão e deposição no curso d’água. A intensidade depende também do tipo de solo, da declividade, do volume e da duração da chuva e dos usos a montante. Não se deve inferir o resultado observando apenas uma esfera ou um fator."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "pedagogical_role": "review",
+          "content": "Relacione esferas e fluxos de matéria/energia; reconheça o solo como interface da pedosfera; identifique processo, escala, condições e intervenções humanas. Diferencie tempo atmosférico de clima e evite explicações monocausais.\n\n**Autochecagem:** solo não é sinônimo de litosfera: integra a pedosfera e conecta materiais minerais, matéria orgânica, água, ar e organismos. Em uma encosta, relevo, solo, chuva e cobertura vegetal influenciam conjuntamente o escoamento e a erosão. Tempo atmosférico é condição de curto prazo; clima é padrão observado ao longo de períodos prolongados."
+        }
+      ]
+    }
+  ]
+}

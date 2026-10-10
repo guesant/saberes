@@ -1,0 +1,196 @@
+{
+  "schema": "saberes.editorial.lesson-backlog-review/v1",
+  "review_date": "2026-10-10",
+  "review_type": "revisão independente baseada somente nas fontes locais listadas; não altera aulas, banco, release ou build",
+  "scope": {
+    "stage": "Vestibular Unicamp 2027 — primeira fase",
+    "priority_packages": [
+      "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json",
+      "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json"
+    ],
+    "meaning_of_publishability": "Candidato editorial após revisão humana e reconciliação/versionamento; não é status publicado e não atribui o texto à Comvest."
+  },
+  "global_findings": [
+    {
+      "finding": "Os pareceres verificam conteúdo e cobertura, mas registram divergência entre as versões/textos propostos e os registros atuais do SQLite. O status review deve permanecer até reconciliar o texto integral e a versão no fluxo editorial.",
+      "evidence": [
+        "content/editorial/unicamp-2027/lesson-final-review-humanities-portuguese-2026-10-10.json",
+        "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json"
+      ]
+    },
+    {
+      "finding": "A fonte oficial consultada delimita o programa; as aulas e correções são conteúdo editorial próprio. Não usar expressões como ‘resolução oficial’ ou ‘classificação oficial’ para elas.",
+      "evidence": [
+        "source_document_id 148: Programa das Provas — Vestibular 2027, Comvest/Unicamp",
+        "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+      ]
+    }
+  ],
+  "lesson_decisions": [
+    {
+      "curriculum_topic_id": 2472,
+      "topic": "Morfologia da língua portuguesa",
+      "package_version": "1.0.3",
+      "decision": "corrigir e reconciliar antes de publicar",
+      "evidence": [
+        "Programa 2027, doc. 148, p. 4, item 5: estrutura/formação de palavras e efeitos semânticos ou expressivos das classes morfológicas.",
+        "lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json: proposta 1.0.3 e rationale.",
+        "lesson-final-review-humanities-portuguese-2026-10-10.json: texto proposto não coincide com a versão atual reconciliada; manter terminology caveat para ‘adjetivo substantivado’."
+      ],
+      "correção_textual_proposta": "Manter a comparação ‘os estudantes jovens’ / ‘os jovens’, mas qualificar ‘adjetivo substantivado’ como análise da gramática escolar tradicional adotada nesta aula. Não afirmar que a interpretação é a única análise linguística possível. Preservar a explicação contextual de base, afixo, flexão e função; o texto da proposta já contém essa correção.",
+      "publicavel_apos_revisao": false,
+      "bloqueio_preciso": "O parecer final encontrou diferença entre a proposta 1.0.3 e o texto/versionamento reconciliado no SQLite. Confirmar qual conjunto de seções é o texto final e aplicar a ressalva terminológica nele; só então nova checagem e decisão formal."
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "topic": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "package_version": "1.0.5",
+      "decision": "manter como etapa introdutória; revisão adicional necessária",
+      "evidence": [
+        "Programa 2027, doc. 148, pp. 4–5: leitura analítica/crítica, relações sociais, morais e políticas e relação oficial de obras/textos.",
+        "lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json: lista de obras e demonstração por paratexto de ‘Ao leitor’.",
+        "lesson-final-review-humanities-portuguese-2026-10-10.json: o exemplo não demonstra ainda a ligação formal solicitada a dimensões sociais/morais/políticas; requer exemplo fundamentado ou link explícito para etapa seguinte."
+      ],
+      "correção_textual_proposta": "No exemplo de ‘Ao leitor’, acrescentar uma conclusão limitada e sustentada: a interpelação ao leitor e a encenação da apresentação da obra permitem discutir como o narrador negocia autoridade e expectativa de leitura; não bastam, isoladamente, para concluir uma tese social, moral ou política sobre o romance. Alternativamente, marcar claramente esta aula como introdutória e ligar uma próxima leitura guiada que faça essa análise. Manter a lista de leituras e não alegar cobertura integral das obras.",
+      "publicavel_apos_revisao": false,
+      "bloqueio_preciso": "Falta uma demonstração efetiva, ancorada em texto, da conexão entre escolhas literárias e dimensão social/moral/política, ou uma ligação funcional à etapa que a fará. Além disso, reconciliar a divergência de texto/versão indicada pelo parecer final."
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "topic": "Conjuntos numéricos",
+      "package_version": "1.2.2",
+      "decision": "candidato a publicação introdutória após reconciliação",
+      "evidence": [
+        "Programa 2027, doc. 148, pp. 5–6: conjuntos, subconjuntos, operações, divisibilidade, fatoração, divisores, MDC/MMC e demais tópicos associados.",
+        "lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json: convenção de naturais, operações e exemplos de MDC/MMC.",
+        "lesson-final-review-humanities-portuguese-2026-10-10.json: definições e cálculos verificados; sequências, porcentagem e juros devem permanecer em etapas próprias."
+      ],
+      "correção_textual_proposta": "Não foi identificado erro matemático concreto no escopo revisado. Preservar ℕ={0,1,2,…}, a convenção explícita de A⊂B, os exemplos verificados e a nota de escopo: sequências, porcentagem e juros são etapas relacionadas, não conteúdo ensinado por esta microaula.",
+      "publicavel_apos_revisao": true,
+      "bloqueio_preciso": "Reconciliar proposta e conteúdo/versionamento do SQLite; após comparação textual integral, revisão final de linguagem e confirmação de que a trilha aponta para as etapas de sequências/porcentagem/juros. O parecer não autoriza promoção automática."
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "topic": "Funções",
+      "package_version": "1.3.2",
+      "decision": "candidato a publicação como etapa delimitada após reconciliação",
+      "evidence": [
+        "Programa 2027, doc. 148, pp. 5–7: famílias de funções, domínios, gráficos, operações, equações e inversas.",
+        "lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json: expressão radical corrigida e exemplos/domínios conferidos.",
+        "lesson-final-review-humanities-portuguese-2026-10-10.json: cálculos checados; funções trigonométricas, inversas, racionais e famílias de equações devem ter etapas próprias."
+      ],
+      "correção_textual_proposta": "Não foi identificado erro matemático concreto nos exemplos auditados. Manter a notação radical inequívoca e explicitar, junto ao título/fecho, que esta é uma visão inicial, não a cobertura integral do programa. Garantir links sequenciais para etapas com funções trigonométricas, inversas e racionais, gráficos e resolução de equações/inequações.",
+      "publicavel_apos_revisao": true,
+      "bloqueio_preciso": "Reconciliar proposta e conteúdo/versionamento do SQLite e confirmar que o roteiro contém as etapas explicitamente prometidas. Sem essas etapas conectadas, não declarar o tópico integralmente coberto."
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "topic": "Geometria espacial",
+      "package_version": "1.2.2",
+      "decision": "candidato a publicação introdutória após ajuste de precisão e reconciliação",
+      "evidence": [
+        "Programa 2027, doc. 148, p. 6: posições relativas, poliedros, prismas/pirâmides, cilindros, cones, esferas, áreas, volumes e troncos.",
+        "lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json: correção das posições relativas e fórmulas/exemplos ampliados.",
+        "lesson-final-review-humanities-portuguese-2026-10-10.json: fórmulas e resultados conferidos; sugere definir perpendicularidade reta-plano com maior rigor."
+      ],
+      "correção_textual_proposta": "Substituir ‘a reta forma 90° com as direções do plano’ por: ‘Uma reta é perpendicular a um plano quando é perpendicular a toda reta do plano que passa pelo ponto de interseção; equivalentemente, sua direção é normal ao plano.’ Preservar a ressalva de que planificações e problemas contextualizados exigem prática em etapas seguintes.",
+      "publicavel_apos_revisao": true,
+      "bloqueio_preciso": "Aplicar/verificar a definição geométrica precisa e reconciliar a proposta com o texto/versionamento atual. A aula é introdutória e não deve ser rotulada como cobertura exaustiva de todos os poliedros e problemas."
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "topic": "Componentes físico-naturais do espaço geográfico",
+      "package_version": "1.2.2",
+      "decision": "corrigir e reconciliar antes de publicar",
+      "evidence": [
+        "Programa 2027, doc. 148, pp. 7–8: componentes terrestres, tectônica/relevo, solos, clima, água, biomas, conservação, riscos e planejamento.",
+        "lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json: solos tratados como pedosfera/interface e exemplo de balanço hídrico com hipóteses/unidades.",
+        "lesson-final-review-humanities-portuguese-2026-10-10.json: proposta é visão geral, não cobre integralmente tectônica, classificações climáticas, biomas/hotspots, riscos e planejamento."
+      ],
+      "correção_textual_proposta": "Manter ‘solos na interface entre litosfera, atmosfera, hidrosfera e biosfera’ (ou nomear pedosfera como componente de interface), sem listá-los simplesmente como parte da litosfera. Rotular a aula como visão integrada introdutória e preservar um roteiro explícito para tectônica, climas brasileiros/sul-americanos, biomas/hotspots, riscos, mudanças climáticas e gestão ambiental.",
+      "publicavel_apos_revisao": false,
+      "bloqueio_preciso": "Não promover como lição completa do tópico; confirmar que o texto final mantém a classificação corrigida dos solos e que as etapas do roteiro para os subtemas ausentes existem e estão ligadas. Reconciliar também a divergência texto/versão."
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "topic": "Biodiversidade e saúde humana",
+      "package_version": "1.3.2",
+      "decision": "candidato a publicação após revisão formal",
+      "evidence": [
+        "Programa 2027, doc. 148, pp. 11–12: biodiversidade, grupos biológicos, corpo humano, reprodução e saúde/doenças.",
+        "lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json: decisão publish candidate; lacuna epidemiológica anterior considerada corrigida.",
+        "lesson-final-hold-corrections-sciences-v2-2026-10-10.json: proposta v1.3.2."
+      ],
+      "correção_textual_proposta": "Não foi identificado erro impeditivo na proposta v1.3.2. Preservar no exemplo a correspondência agente–via–intervenção, a distinção entre vírus e bactéria, o limite de eficácia das medidas e o aviso de que a orientação geral não substitui cuidado profissional. Não apresentar como orientação médica individual.",
+      "publicavel_apos_revisao": true,
+      "bloqueio_preciso": "A recomendação independente é apenas editorial. Comparar integralmente as três seções v1.3.2 com o texto reconciliado no SQLite e realizar revisão formal antes de alterar status; o registro atual continua review."
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "topic": "Fundamentos da Física e Mecânica",
+      "package_version": "1.3.2",
+      "decision": "hold",
+      "evidence": [
+        "Programa 2027, doc. 148, p. 12: cinemática, leis de Newton, atrito, torque/equilíbrio, gravitação/Kepler, quantidade de movimento, trabalho/energia, potência e hidrostática.",
+        "lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json: remaining_blocker e contas verificadas.",
+        "lesson-final-hold-corrections-sciences-v2-2026-10-10.json: proposta v1.3.2."
+      ],
+      "correção_textual_proposta": "Acrescentar blocos didáticos aplicados, não apenas menções, para leis de Kepler, força de atrito, torque e equilíbrio estático/dinâmico, potência, trabalho/energia e hidrostática. Alternativamente, delimitar esta aula como etapa parcial e ligar etapas próprias para cada lacuna; não anunciar cobertura integral. Os cálculos novos de impulso e gravitação conferidos podem ser preservados.",
+      "publicavel_apos_revisao": false,
+      "bloqueio_preciso": "A substituição v1.3.2 é apresentada como aula integral, mas deixa de ensinar/praticar itens expressos no programa. É necessário acrescentar esses conteúdos ou redefinir o escopo como parcial com etapas conectadas."
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "topic": "Óptica e ondas",
+      "package_version": "1.2.2",
+      "decision": "hold",
+      "evidence": [
+        "Programa 2027, doc. 148, p. 13: ondas planas/esféricas e mecânicas, polarização, interferência/difração, espelhos, refração, prismas, lentes, instrumentos, espectro e visão.",
+        "lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json: remaining_blocker; cálculos λ=v/f, interferência e lente conferidos sob as convenções declaradas.",
+        "lesson-final-hold-corrections-sciences-v2-2026-10-10.json: proposta v1.2.2."
+      ],
+      "correção_textual_proposta": "Acrescentar explicações/aplicações para ondas esféricas, ondas em cordas e som, polarização e difração; espelhos planos/esféricos; prismas e instrumentos ópticos; espectro eletromagnético e óptica da visão. Ou declarar claramente que esta é apenas uma etapa de cálculo introdutório e fornecer as etapas seguintes. Manter as convenções de sinais explícitas nos exemplos de lente.",
+      "publicavel_apos_revisao": false,
+      "bloqueio_preciso": "A proposta cobre cálculos selecionados, mas não os demais componentes enumerados no programa e não delimita a aula como parcial."
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "topic": "Estrutura atômica, classificação periódica e ligação química",
+      "package_version": "1.1.2",
+      "decision": "hold",
+      "evidence": [
+        "Programa 2027, doc. 148, pp. 13–14: estrutura/configuração, propriedades periódicas, radioatividade, modelos de ligação, polaridade e propriedades das substâncias/interações.",
+        "lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json: remaining_blocker; conversões de afinidade, configuração do Na e decaimento beta conferidos.",
+        "lesson-final-hold-corrections-sciences-v2-2026-10-10.json: proposta v1.1.2."
+      ],
+      "correção_textual_proposta": "Explicar e comparar os modelos iônico, covalente e metálico com exemplos estruturais. Demonstrar como ligação/polaridade ajudam a prever propriedades de substâncias simples (por exemplo, NaCl, CO₂/H₂O e um metal), evitando que as ligações fiquem apenas enumeradas. Preservar a distinção entre fórmula estrutural e Lewis e as contas já verificadas.",
+      "publicavel_apos_revisao": false,
+      "bloqueio_preciso": "O texto ainda não mostra aplicação suficiente dos modelos de ligação nem sua relação com propriedades, parte explícita do programa."
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "topic": "Eletroquímica e compostos orgânicos",
+      "package_version": "1.3.2",
+      "decision": "hold",
+      "evidence": [
+        "Programa 2027, doc. 148, p. 14: eletroquímica e compostos orgânicos, incluindo isomeria, biomoléculas e enzimas.",
+        "lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json: remaining_blocker; eletrólise, hidratação/polimerização e demais contas conferidas.",
+        "lesson-final-hold-corrections-sciences-v2-2026-10-10.json: proposta v1.3.2."
+      ],
+      "correção_textual_proposta": "Adicionar um exemplo breve de isomeria estrutural com mesma fórmula molecular e conectividades distintas. Acrescentar uma autochecagem aplicada que diferencie carboidratos, lipídios e proteínas e explique a função catalítica das enzimas, sem ficar apenas na enumeração/definição. As demais melhorias e cálculos verificados podem permanecer.",
+      "publicavel_apos_revisao": false,
+      "bloqueio_preciso": "A proposta ainda omite isomeria e não aplica as noções de carboidratos, lipídios, proteínas e enzimas em exemplo/autochecagem; ambos constam do programa."
+    }
+  ],
+  "non_scope_review_state": {
+    "note": "O arquivo lesson-revisions.json contém revisões adicionais em review fora dos dois pacotes prioritários. Este relatório não declara essas revisões aprovadas nem completas; elas exigem reconciliação própria contra seu parecer e texto atual antes de qualquer promoção.",
+    "source": "content/editorial/unicamp-2027/lesson-revisions.json"
+  },
+  "integrity": {
+    "new_file_only": true,
+    "sqlite_modified": false,
+    "release_or_build_modified": false,
+    "source_lesson_or_audit_files_modified": false,
+    "editorial_status_changed": false
+  }
+}

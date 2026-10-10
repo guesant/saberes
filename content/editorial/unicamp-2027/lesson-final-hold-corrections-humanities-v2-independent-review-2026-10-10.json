@@ -1,0 +1,23 @@
+{
+  "format": "lesson-final-corrections-independent-review/v1",
+  "review_date": "2026-10-10",
+  "status": "blocked_missing_source",
+  "scope": {
+    "expected_package": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-v2-2026-10-10.json",
+    "requested_topics": [2472, 2474, 2475, 2476, 2481, 2487],
+    "review_constraints": "Somente leitura; não alterar o pacote nem o SQLite."
+  },
+  "blocker": {
+    "reason": "O pacote de correções v2 não estava presente na checagem inicial nem após cinco minutos de espera com verificações espaçadas.",
+    "last_checked_at": "2026-10-10",
+    "topic_decisions": [],
+    "note": "Nenhuma decisão publish/hold foi emitida: sem as seções substitutivas não é possível compará-las com o parecer anterior, o programa oficial ou as versões-base."
+  },
+  "reference_material_prepared": [
+    "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+    ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+    ".local/content/content.sqlite (consulta somente leitura; sem alteração)"
+  ],
+  "database_modified": false,
+  "package_modified": false
+}

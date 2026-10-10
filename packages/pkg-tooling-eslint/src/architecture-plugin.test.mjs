@@ -635,6 +635,10 @@ test("purposeful-naming enforces names that match the symbol responsibility", ()
           filename: resolve(process.cwd(), "packages/pkg-domain/src/classify-value.ts"),
         },
         {
+          code: "export function downloadValue() { return 1; }",
+          filename: resolve(process.cwd(), "packages/pkg-domain/src/download-value.ts"),
+        },
+        {
           code: "export function CourseView() { return <div />; }",
           filename: resolve(process.cwd(), "packages/app/src/course-view.component.tsx"),
         },

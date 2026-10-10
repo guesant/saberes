@@ -1,0 +1,117 @@
+{
+  "schema": "saberes.editorial.question-classification-review/v1",
+  "review_date": "2026-10-10",
+  "scope": "Revisão de duas famílias de questões da primeira fase Unicamp 2025; equivalências e relações consultadas sem escrita no SQLite.",
+  "sources": {
+    "official_program": {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "provider": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_copy": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+      "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+      "pages_visually_checked": [8, 13, 14]
+    },
+    "question_pdfs": [
+      {"source_document_id": 36, "booklet_pair": "QZ", "url": "https://www.comvest.unicamp.br/vest2025/F1/f12025Q_Z.pdf"},
+      {"source_document_id": 38, "booklet_pair": "RW", "url": "https://www.comvest.unicamp.br/vest2025/F1/f12025R_W.pdf"},
+      {"source_document_id": 40, "booklet_pair": "SX", "url": "https://www.comvest.unicamp.br/vest2025/F1/f12025S_X.pdf"},
+      {"source_document_id": 42, "booklet_pair": "TY", "url": "https://www.comvest.unicamp.br/vest2025/F1/f12025T_Y.pdf"}
+    ],
+    "database": ".local/content/content.sqlite",
+    "database_access": "somente leitura"
+  },
+  "method": {
+    "comparison": "Conferi visualmente os oito trechos de caderno, texto, quatro alternativas e figuras; confirmei no SQLite as ocorrências e relações de equivalência. Fingerprint é SHA-256 do enunciado concatenado com alternativas A-D em ordem, após normalização de espaços.",
+    "editorial_status_note": "Uma associação editorial não é uma tag oficial da Comvest. A decisão publish/hold é recomendação para a relação candidata, não publicação da ocorrência; RW, SX e TY permanecem draft no banco."
+  },
+  "families": [
+    {
+      "family_key": "unicamp-2025-cocoa-production",
+      "canonical_question_ids": [3, 126, 185, 270],
+      "occurrences": [
+        {"occurrence_id": 3, "question_id": 3, "booklet": "QZ", "number": 3, "printed_page": 1, "pdf_page": 3, "status": "published"},
+        {"occurrence_id": 126, "question_id": 126, "booklet": "RW", "number": 54, "printed_page": 15, "pdf_page": 17, "status": "draft"},
+        {"occurrence_id": 185, "question_id": 185, "booklet": "SX", "number": 41, "printed_page": 11, "pdf_page": 13, "status": "draft"},
+        {"occurrence_id": 270, "question_id": 270, "booklet": "TY", "number": 54, "printed_page": 15, "pdf_page": 17, "status": "draft"}
+      ],
+      "equivalence": {
+        "sqlite_relation_type": "equivalent",
+        "text_and_options_match": true,
+        "sha256_statement_plus_ordered_options": "97aacf9ded7e863a096eac0ad097de88a2366148b0a76bf927fcda8101a307f2",
+        "figure_check": "O gráfico de dez maiores produtores (2022) está presente nos quatro cadernos, com os mesmos países, barras e ordem; não encontrei diferença material. Não se deve contar quatro questões distintas no treino.",
+        "short_evidence": "QZ Q3: ‘Indique a principal região cacaueira do continente africano, associando-a às condições socioambientais de produção.’ As quatro versões repetem o mesmo enunciado e as mesmas alternativas A-D."
+      },
+      "topic_candidates": [
+        {
+          "topic": "Geografia da produção agropecuária / culturas agrícolas",
+          "canonical_topic_id": null,
+          "role": "primary",
+          "decision": "hold",
+          "confidence": 0.91,
+          "evidence": [
+            {"source_document_id": 148, "page": 8, "location": "Geografia, IV-b Dimensões demográficas, urbanas, produtivas e sociais", "excerpt": "Os circuitos da produção mundial: indústria, serviços e agropecuária."},
+            {"source_document_id": 148, "page": 8, "location": "Geografia, V-b Economia, sociedade e território", "excerpt": "Produção agropecuária e questão agrária no Brasil."},
+            {"booklet": "QZ", "number": 3, "page": 1, "excerpt": "principal região cacaueira ... associando-a às condições socioambientais de produção"}
+          ],
+          "reason": "É o foco direto do comando e das alternativas: regionalização da produção de cacau e condições ambientais/trabalho. O item não trata da questão agrária brasileira especificamente. Não encontrei no registro canônico global um nó dedicado a geografia da produção agropecuária; por isso, não criar nem forçar uma associação a outro conceito sob esse rótulo. Criar/revisar um conceito canônico estável antes de publicar essa relação primária."
+        },
+        {
+          "topic": "Globalização, economia e trabalho",
+          "canonical_topic_id": 2509,
+          "role": "secondary",
+          "decision": "publish",
+          "confidence": 0.84,
+          "current_sqlite_relation": {"question_id": 3, "relation_type": "related", "confidence": 0.9, "review_status": "published", "source_document_id": 36, "source_page": 3, "source_excerpt": "Elo fundamental dos circuitos espaciais de produção, distribuição e consumo do chocolate no mundo."},
+          "evidence": [{"source_document_id": 148, "page": 8, "location": "Geografia, IV-b", "excerpt": "Os circuitos da produção mundial ... agropecuária."}, {"booklet": "QZ", "number": 3, "page": 1, "excerpt": "elo fundamental dos circuitos espaciais de produção, distribuição e consumo do chocolate no mundo"}],
+          "reason": "O circuito global é explicitamente enunciado e corresponde ao programa, portanto há relação secundária pertinente; não é a habilidade principal pedida. Recomendo manter a relação QZ existente como secundária e replicá-la à identidade canônica da família/equivalentes, sem chamá-la de classificação oficial da Comvest."
+        }
+      ]
+    },
+    {
+      "family_key": "unicamp-2025-venlafaxine-hydrochloride",
+      "canonical_question_ids": [63, 114, 173, 221],
+      "occurrences": [
+        {"occurrence_id": 63, "question_id": 63, "booklet": "QZ", "number": 63, "printed_page": 19, "pdf_page": 21, "status": "published"},
+        {"occurrence_id": 114, "question_id": 114, "booklet": "RW", "number": 42, "printed_page": 12, "pdf_page": 14, "status": "draft"},
+        {"occurrence_id": 173, "question_id": 173, "booklet": "SX", "number": 29, "printed_page": 8, "pdf_page": 10, "status": "draft"},
+        {"occurrence_id": 221, "question_id": 221, "booklet": "TY", "number": 5, "printed_page": 2, "pdf_page": 4, "status": "draft"}
+      ],
+      "equivalence": {
+        "sqlite_relation_type": "equivalent",
+        "text_and_options_match": true,
+        "sha256_statement_plus_ordered_options": "282ce39b9a99dbacab7b3155af6cc5b23041f7eb62e006019afd9a444bdbf21d",
+        "figure_check": "Nenhuma figura acompanha essa questão nos quatro trechos conferidos.",
+        "short_evidence": "QZ Q63 informa 42,4 mg de cloridrato correspondentes a 37,5 mg de venlafaxina neutra e fornece M(HCl)=36,5 g/mol; pede a proporção de HCl por molécula e a massa molar da base. Enunciado e alternativas A-D são idênticos nos quatro cadernos."
+      },
+      "topic_candidates": [
+        {
+          "topic": "Reações químicas — composição/proporção molar e estequiometria",
+          "canonical_topic_id": 2488,
+          "role": "primary",
+          "decision": "publish",
+          "confidence": 0.86,
+          "current_sqlite_relation": {"question_id": 63, "relation_type": "primary", "confidence": 0.96, "review_status": "published", "source_document_id": 36, "source_page": 21, "source_excerpt": "O item compara a massa do cloridrato, da venlafaxina neutra e do HCl para determinar proporção molar e massa molar."},
+          "evidence": [{"source_document_id": 148, "page": 13, "location": "Química, Materiais", "excerpt": "Símbolos e fórmulas na representação de átomos, moléculas e íons. Massas atômicas, massas molares e quantidade de substância."}, {"source_document_id": 148, "page": 14, "location": "Química, Transformações dos materiais", "excerpt": "Cálculos estequiométricos: relações ponderais e volumétricas nas reações químicas."}, {"booklet": "QZ", "number": 63, "page": 19, "excerpt": "42,4 mg ... corresponde a 37,5 mg ... Dado: massa molar do HCl = 36,5 g/mol."}],
+          "reason": "O raciocínio central é usar a diferença de massas e massas molares para determinar proporção molar/composição do sal. A etiqueta canônica ampla Reações químicas inclui estequiometria, embora o item não peça equacionar uma reação; o vínculo é razoável, com confiança menor do que uma questão de reação explícita."
+        },
+        {
+          "topic": "Química orgânica",
+          "canonical_topic_id": 2520,
+          "role": "secondary",
+          "decision": "hold",
+          "confidence": 0.96,
+          "current_sqlite_relation": {"question_id": 63, "relation_type": "related", "confidence": 0.76, "review_status": "draft", "source_document_id": 36, "source_page": 21, "source_excerpt": "Revisão editorial: o medicamento é apenas contexto; o item avalia cálculo de composição do sal/proporção molar, não conceitos de química orgânica. Candidato preservado como rascunho; ver nova relação publicada com quimica.reacoes."},
+          "evidence": [{"source_document_id": 148, "page": 14, "location": "Química de compostos orgânicos", "excerpt": "Fórmulas moleculares, estruturais e de Lewis, cadeias carbônicas, ligações e isomeria; funções orgânicas, nomenclatura, obtenção e propriedades."}, {"booklet": "QZ", "number": 63, "page": 19, "excerpt": "O enunciado apresenta venlafaxina neutra associada ao HCl e compara massas; não solicita identificar estrutura, cadeia, função, isomeria ou propriedade orgânica."}],
+          "reason": "O fato de a substância contextual ser um fármaco orgânico não torna a questão um exercício de Química Orgânica: nenhuma propriedade ou estrutura orgânica é mobilizada. Manter a associação como draft/hold; contexto incidental não justifica nem relação secundária."
+        }
+      ]
+    }
+  ],
+  "editorial_guardrails": [
+    "As relações recomendadas são editoriais, não tags oficiais da Comvest.",
+    "As equivalências dos quatro cadernos já estão registradas; deduplicar por questão canônica no treino e manter cada ocorrência para exploração histórica.",
+    "O vínculo temático não muda os status draft/published das ocorrências. Nenhum banco, gabarito, asset ou arquivo-fonte foi alterado."
+  ],
+  "validation": {"json": "valid", "database_modified": false, "source_files_modified": false}
+}

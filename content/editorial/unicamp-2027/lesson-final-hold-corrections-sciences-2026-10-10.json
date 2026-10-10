@@ -1,0 +1,281 @@
+{
+  "format": "lesson-final-hold-corrections/v1",
+  "created_at": "2026-10-10",
+  "edition": "Vestibular Unicamp 2027",
+  "stage": "primeira fase",
+  "editorial_notice": "Conteúdo didático original do Portal Saberes, elaborado para estudo a partir do programa oficial. Não é material oficial da Comvest nem substitui o documento oficial. As propostas permanecem em revisão e não devem ser tratadas como aprovadas/publicadas.",
+  "official_program": {
+    "source_document_id": 148,
+    "title": "Programa das Provas — Vestibular 2027",
+    "institution": "Comvest / Unicamp",
+    "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+    "local_verified_copy": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/programa-provas-2027.pdf",
+    "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+    "page_numbering": "Os números abaixo são os impressos no documento oficial; o PDF consultado tem 14 páginas e os números impressos coincidem com as páginas PDF para este trecho.",
+    "visual_verification": "Páginas 11–14 renderizadas e conferidas visualmente."
+  },
+  "independent_verification_references": [
+    {
+      "title": "NIST Chemistry WebBook — Chlorine atom, electron-affinity determinations",
+      "institution": "National Institute of Standards and Technology",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C22537151&Mask=223&Units=SI",
+      "consulted_at": "2026-10-10",
+      "use": "Valor experimental de afinidade eletrônica do Cl próximo de 3.613 eV."
+    },
+    {
+      "title": "NIST Chemistry WebBook — Fluorine atom, electron-affinity determinations",
+      "institution": "National Institute of Standards and Technology",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C14762948&Mask=238&Units=SI",
+      "consulted_at": "2026-10-10",
+      "use": "Valor experimental de afinidade eletrônica do F próximo de 3.401 eV."
+    },
+    {
+      "title": "Variation in Electron Affinities",
+      "institution": "University of Calgary Chemistry Textbook",
+      "url": "https://chem-textbook.ucalgary.ca/version2/chapter-6-main/periodic-properties/variation-in-electron-affinities/",
+      "consulted_at": "2026-10-10",
+      "use": "Conferência qualitativa das tendências, exceções de subníveis e da comparação F/Cl; redação do material abaixo é original."
+    }
+  ],
+  "lessons": [
+    {
+      "curriculum_topic_id": 2500,
+      "topic": "Biodiversidade e saúde humana",
+      "base_editorial_version": "1.3.1",
+      "proposed_editorial_version": "1.3.2",
+      "editorial_status": "review",
+      "authorship": "original_editorial",
+      "source_document_ids": [148],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 11,
+          "program_topics": ["Biodiversidade: classificação dos seres vivos; vírus, bactérias, protistas e fungos; plantas e algas; animais."]
+        },
+        {
+          "source_document_id": 148,
+          "page": 12,
+          "program_topics": ["Saúde humana: saúde, células, órgãos e sistemas; reprodução, concepção, contracepção, hormônios e ISTs; saúde das populações, saneamento e serviços; doenças por microrganismos e vetores."]
+        }
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Diversidade da vida, reprodução e saúde coletiva",
+          "content_format": "markdown",
+          "content": "Biodiversidade inclui diversidade genética, de espécies e de ecossistemas. A classificação biológica compara características e evidências para formular hipóteses de parentesco; grupos como “algas” e “protistas” reúnem linhagens diversas e não devem ser tratados como blocos evolutivos uniformes. Bactérias são procariontes; protozoários são eucariontes unicelulares; fungos obtêm nutrientes por absorção; muitas plantas e algas realizam fotossíntese; animais obtêm alimento por ingestão. Vírus não têm organização celular e só se replicam usando células hospedeiras. A estrutura e a função de células, órgãos e sistemas explicam processos do corpo, como circulação, respiração, digestão, regulação hormonal e defesa imune.\n\nNa reprodução humana, hormônios como FSH e LH participam da regulação ovariana; estrogênio e progesterona variam ao longo do ciclo. A fecundação pode ocorrer quando espermatozoide e ovócito se encontram, mas contracepção pode atuar antes desse evento. Preservativos funcionam como barreira e reduzem o risco de gravidez e de muitas infecções sexualmente transmissíveis, embora não eliminem todo risco. Métodos hormonais podem inibir a ovulação e/ou alterar o muco cervical; o DIU de cobre prejudica a mobilidade e a função dos espermatozoides no ambiente uterino. Métodos diferem em mecanismo, eficácia de uso e proteção contra ISTs; os que não são de barreira não protegem contra ISTs.\n\nSaúde coletiva envolve prevenção, saneamento, vacinação, vigilância, acesso a serviços e determinantes sociais. Para analisar uma doença, separe agente causador, hospedeiro, via de transmissão e condições ambientais. Um vetor pode transmitir um agente sem ser o agente causador.\n\n**Erros comuns**\n\nAntibióticos não tratam vírus. Não confunda contracepção com prevenção de ISTs. Um preservativo reduz riscos, mas não oferece proteção absoluta. Não conclua que biodiversidade, presença de vetores ou uma mudança ambiental isolada causou um surto sem evidência epidemiológica."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: escolher a prevenção pelo mecanismo",
+          "content_format": "markdown",
+          "content": "**Situação.** Uma questão pergunta qual estratégia atende simultaneamente a dois objetivos: reduzir a chance de gravidez e reduzir o risco de ISTs.\n\n**Resolução.** O preservativo é uma barreira entre mucosas e fluidos e, quando usado corretamente, reduz os dois riscos; não os zera. Um método hormonal ou um DIU pode reduzir a chance de gravidez por outro mecanismo, mas não substitui a barreira para prevenção de ISTs. Portanto, se os dois objetivos precisam ser contemplados, a resposta deve incluir preservativo e pode combinar outro método contraceptivo conforme orientação profissional. A conclusão decorre de comparar mecanismos, não de tratar todos os métodos como equivalentes."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Classifique organismos com base em organização celular e modo de vida; relacione estruturas do corpo às suas funções; diferencie concepção, contracepção e prevenção de IST; e analise doenças por agente, hospedeiro, via e contexto social/ambiental.\n\n**Autochecagem:** um método hormonal previne ISTs? **Não.** O que distingue vetor de agente? **O agente causa a infecção; o vetor pode transportá-lo entre hospedeiros.** Um resultado epidemiológico pode ser explicado por uma única associação? **Não sem avaliar mecanismo, evidências e fatores concorrentes.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "topic": "Fundamentos da Física e Mecânica",
+      "base_editorial_version": "1.3.1",
+      "proposed_editorial_version": "1.3.2",
+      "editorial_status": "review",
+      "authorship": "original_editorial",
+      "source_document_ids": [148],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 12,
+          "program_topics": ["Grandezas escalares e vetoriais; gráficos e estimativas; cinemática em uma e duas dimensões; leis de Newton; atrito, peso e gravidade; torque e equilíbrio; quantidade de movimento; trabalho e energia; potência; hidrostática."]
+        }
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Movimento vetorial, forças e conservação",
+          "content_format": "markdown",
+          "content": "Uma descrição física exige referencial, grandeza, unidade e condições do modelo. Escalares têm módulo; vetores também têm direção e sentido. Em duas dimensões, escreva componentes em eixos perpendiculares: r=(x,y), v=(vₓ,vᵧ) e a=(aₓ,aᵧ). Para aceleração constante, aplique vₓ=v₀ₓ+aₓt e x=x₀+v₀ₓt+aₓt²/2 separadamente em cada eixo. No lançamento horizontal ideal, aₓ=0 e aᵧ=−g; despreza-se a resistência do ar. Em gráfico posição-tempo, a inclinação representa velocidade; em velocidade-tempo, a área algébrica representa deslocamento.\n\nA força resultante obedece ΣF=ma; peso próximo à superfície terrestre é mg. Torque é o produto da força pelo braço perpendicular, e equilíbrio exige tanto ΣF=0 quanto Στ=0. Trabalho transfere energia; K=mv²/2, U_g≈mgh e potência é trabalho por intervalo de tempo. Energia mecânica pode mudar quando forças não conservativas transferem energia, embora a energia total se conserve. Quantidade de movimento é o vetor p=mv. Impulso da força resultante é J=∫Fdt=Δp; para força constante, J=FΔt. Em sistema isolado, a quantidade de movimento total se conserva. Em fluido de densidade uniforme, o acréscimo hidrostático é ρgh e o empuxo corresponde ao peso do fluido deslocado.\n\n**Erros comuns**\n\nNão some módulos de vetores sem considerar direções. Use a aceleração constante só quando indicada ou justificada. Ação e reação atuam em corpos diferentes. Não confunda deslocamento com distância, nem massa com peso. Em problemas 2D, não misture componentes dos eixos."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: lançamento horizontal e impulso",
+          "content_format": "markdown",
+          "content": "Uma bola de massa 0,50 kg é lançada horizontalmente a 6,0 m/s de uma altura de 20 m. Considere g=10 m/s² e despreze o ar. Tome +x na direção do lançamento e +y para cima.\n\nNo eixo vertical, 20−(1/2)gt²=0, então t²=4 e t=2,0 s. No eixo horizontal, x=vₓt=6,0·2,0=12 m. No instante anterior ao impacto, vₓ=6,0 m/s e vᵧ=−gt=−20 m/s; portanto, v=(6,−20) m/s. A variação de quantidade de movimento causada pela gravidade é Δp=m(0,−20)=(0,−10) kg·m/s. Assim, o impulso gravitacional é J=(0,−10) N·s e a força média vertical durante os 2,0 s é (0,−5) N, igual ao peso no modelo adotado. O sinal negativo indica direção para baixo."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Escolha referencial e eixos; decomponha vetores; use uma equação por componente; desenhe forças; e confira unidades, sinais e hipóteses. Relacione inclinação/área dos gráficos às grandezas físicas. Para impulso, compare p antes e depois.\n\n**Autochecagem:** na bola do exemplo, qual é o deslocamento horizontal? **12 m.** Qual a componente vertical do impulso da gravidade? **−10 N·s.** Por que o sinal é negativo? **Porque o eixo vertical positivo foi escolhido para cima e a gravidade aponta para baixo.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "topic": "Óptica e ondas",
+      "base_editorial_version": "1.2.1",
+      "proposed_editorial_version": "1.2.2",
+      "editorial_status": "review",
+      "authorship": "original_editorial",
+      "source_document_ids": [148],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 13,
+          "program_topics": ["Ondas planas, ondas em cordas e sonoras; polarização, interferência e difração; ondas esféricas; espectro eletromagnético; óptica geométrica, reflexão, refração e dispersão; lentes, espelhos e instrumentos ópticos; visão."]
+        }
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Ondas, interferência e formação de imagens",
+          "content_format": "markdown",
+          "content": "Ondas transportam energia sem transporte líquido de matéria. Para ondas periódicas, v=λf, em que v é velocidade, λ comprimento de onda e f frequência; T=1/f. Ao cruzar uma interface, a frequência é determinada pela fonte e permanece igual, enquanto velocidade e comprimento de onda podem mudar. Som é mecânico; luz é eletromagnética e se propaga no vácuo. O espectro eletromagnético inclui rádio, micro-ondas, infravermelho, visível, ultravioleta, raios X e gama. Polarização seleciona orientações de oscilação de ondas transversais. Difração é mais marcada quando abertura/obstáculo tem dimensão comparável a λ.\n\nNa interferência de duas fontes coerentes e em fase, a diferença de caminho Δr=mλ produz máximo construtivo; Δr=(m+1/2)λ produz mínimo destrutivo se as amplitudes forem comparáveis. Para fontes em oposição de fase, as condições se invertem. Reflexão obedece ângulos iguais medidos à normal. Refração obedece n₁senθ₁=n₂senθ₂; a reflexão interna total só pode ocorrer do meio de maior índice para o menor, acima do ângulo crítico. Dispersão decorre da dependência do índice com o comprimento de onda.\n\nEm óptica geométrica paraxial, 1/f=1/p+1/p′. Nesta convenção, objeto real tem p>0; lente convergente tem f>0; imagem real tem p′>0; aumento transversal m=−p′/p. Espelhos e lentes podem formar imagens reais ou virtuais; instrumentos e o olho combinam elementos para focar luz na retina.\n\n**Erros comuns**\n\nMeça ângulos a partir da normal. Não confunda interferência com difração. Não aplique a condição de mínimos a fontes fora de fase sem ajustar a fase inicial. A frequência não muda na refração; a velocidade e λ mudam. Fórmulas de lente com sinais exigem uma convenção explícita."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: interferência e lente convergente",
+          "content_format": "markdown",
+          "content": "**Interferência.** Duas fontes coerentes em fase emitem som de comprimento de onda λ=0,68 m. Em um ponto cuja diferença de caminhos é 1,36 m, Δr=2λ, portanto há reforço construtivo. Se a diferença for 1,02 m, Δr=1,5λ=(1+1/2)λ, portanto há cancelamento destrutivo ideal quando as amplitudes são iguais.\n\n**Imagem.** Uma lente convergente tem f=10 cm e um objeto real está a p=30 cm. Pela equação, 1/p′=1/10−1/30=1/15 cm⁻¹, logo p′=15 cm. Como p′ é positivo, a imagem é real. O aumento é m=−15/30=−0,5: imagem invertida e com metade da altura do objeto."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Use v=λf; acompanhe o que muda na interface; desenhe a normal; diferencie reflexão, refração, dispersão, difração e polarização. Para duas fontes em fase, compare Δr com λ. Em lentes, declare os sinais e interprete p′ e m.\n\n**Autochecagem:** Δr=2λ, fontes em fase: máximo ou mínimo? **Máximo.** Na lente do exemplo, a imagem é direita ou invertida? **Invertida, pois m<0.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "topic": "Materiais, estados físicos e soluções",
+      "base_editorial_version": "1.3.1",
+      "proposed_editorial_version": "1.3.2",
+      "editorial_status": "review",
+      "authorship": "original_editorial",
+      "source_document_ids": [148],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 13,
+          "program_topics": ["Materiais, purificação e identificação; fórmulas; massa atômica/molar; gases e leis de Boyle, Gay-Lussac e Avogadro; energia cinética média; misturas gasosas e Dalton; difusão, gases reais e liquefação; estados líquido/sólido, pressão de vapor; soluções, eletrólitos e propriedades coligativas; concentrações; coloides."]
+        }
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Materiais, gases e propriedades das soluções",
+          "content_format": "markdown",
+          "content": "Substâncias são identificadas por composição e propriedades; filtração, destilação, cristalização e cromatografia separam componentes por propriedades distintas. Sólidos mantêm forma, líquidos escoam e gases são compressíveis; mudanças de fase dependem de temperatura e pressão. Para quantidade fixa de gás ideal, Boyle dá P₁V₁=P₂V₂ a T constante; Gay-Lussac dá P₁/T₁=P₂/T₂ a V constante; Charles dá V₁/T₁=V₂/T₂ a P constante. A lei de Avogadro estabelece V/n constante quando P e T não variam. Use temperatura em kelvin. A equação geral é PV=nRT; gases reais se desviam do modelo, sobretudo em condições de alta pressão/baixa temperatura, e podem liquefazer.\n\nA teoria cinética relaciona temperatura absoluta à energia cinética translacional média por partícula: ⟨K⟩=3kBT/2. Assim, dobrar T em kelvin dobra essa energia média; ela não depende da identidade do gás ideal. Na mistura ideal, a pressão parcial é pᵢ=xᵢP_total, com xᵢ fração molar (lei de Dalton). Difusão decorre do movimento molecular.\n\nSolução é mistura homogênea; concentração pode ser expressa em g/L, mol/L, porcentagem ou fração em massa/mol, entre outras formas. Quantidade de matéria é n=m/M. Eletrólitos geram íons móveis em solução e conduzem eletricidade; a mobilidade importa. Pressão de vapor corresponde ao equilíbrio líquido-vapor. Soluto não volátil pode reduzir a pressão de vapor e alterar temperaturas de ebulição/congelamento. Coloides têm partículas dispersas que espalham luz e não equivalem a soluções moleculares simples.\n\n**Erros comuns**\n\nNão use Celsius nas relações proporcionais de gases. Pressão parcial usa fração molar, não fração em massa. Volume final da solução não é necessariamente igual ao volume de solvente. Filtração não remove sal dissolvido. A equação do gás ideal é modelo aproximado, não lei exata para qualquer condição."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: gás, energia média e concentração",
+          "content_format": "markdown",
+          "content": "**Lei de Avogadro.** A 300 K e pressão constante, 2,0 mol de gás ideal ocupam 10 L. Para 3,0 mol nas mesmas condições, V₂=V₁(n₂/n₁)=10·(3/2)=15 L.\n\n**Energia cinética média.** Se a temperatura absoluta passa de 300 K para 600 K, ⟨K⟩₂/⟨K⟩₁=T₂/T₁=2; a energia translacional média por partícula dobra.\n\n**Solução.** Dissolvem-se 5,85 g de NaCl (M≈58,5 g/mol) e completa-se o volume final para 0,50 L. Então n=5,85/58,5=0,100 mol e c=n/V=0,100/0,50=0,200 mol/L. A unidade indica quantidade de soluto por volume final da solução."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Identifique as variáveis mantidas constantes antes de escolher uma lei dos gases; converta T para kelvin; use fração molar em Dalton; diferencie concentração molar de g/L; relacione ⟨K⟩ à temperatura absoluta.\n\n**Autochecagem:** se T absoluta dobra, o que ocorre com a energia cinética translacional média do gás ideal? **Dobra.** Qual volume no exemplo de Avogadro? **15 L.** Qual concentração da solução? **0,200 mol/L.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "topic": "Estrutura atômica e classificação periódica",
+      "base_editorial_version": "1.1.1",
+      "proposed_editorial_version": "1.1.2",
+      "editorial_status": "review",
+      "authorship": "original_editorial",
+      "source_document_ids": [148],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 13,
+          "program_topics": ["Subpartículas, níveis e distribuição eletrônica; Z, A, isótopos; energia de ionização, afinidade eletrônica e eletronegatividade; propriedades periódicas; radioatividade, radioisótopos, equações e cinética do decaimento."]
+        }
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Configuração eletrônica, periodicidade e afinidade",
+          "content_format": "markdown",
+          "content": "O número atômico Z é o número de prótons; o número de massa A é prótons mais nêutrons. Em átomo neutro, elétrons=Z; para íons, ajuste conforme a carga. Isótopos têm o mesmo Z e diferentes números de nêutrons. Elétrons ocupam níveis e subníveis; o preenchimento segue a ordem energética (Aufbau), com no máximo dois elétrons por orbital de spins opostos (Pauli) e ocupação individual de orbitais degenerados antes do pareamento (Hund). Para Na (Z=11), a configuração é 1s² 2s² 2p⁶ 3s¹.\n\nAo longo de um período, o raio atômico tende a diminuir e a energia de ionização tende a aumentar; descendo um grupo, o raio tende a crescer e a energia de ionização a diminuir. São tendências, sujeitas a exceções por estrutura eletrônica. Eletronegatividade descreve atração por elétrons em ligação. Afinidade eletrônica refere-se à adição de elétron a átomo gasoso: X(g)+e⁻→X⁻(g). Declare a convenção: aqui ΔH<0 significa processo exotérmico e energia liberada; algumas tabelas publicam como afinidade positiva a magnitude −ΔH. Em geral, a adição fica mais favorável ao longo de períodos, mas subníveis cheios/semicheios, gases nobres e repulsão em orbitais compactos produzem exceções. Um caso importante é Cl/F: Cl libera mais energia que F ao receber o primeiro elétron, embora F esteja acima no grupo, porque o orbital 2p muito compacto do F aumenta a repulsão eletrônica.\n\nLigações iônicas correspondem à atração entre íons; covalentes compartilham pares e metálicas têm elétrons deslocalizados. Radioatividade é transformação de núcleos instáveis. Em emissão alfa, A diminui 4 e Z diminui 2; em beta menos, A não muda e Z aumenta 1. Decaimento radioativo segue N=N₀(1/2)^(t/t₁/₂), em que t₁/₂ é a meia-vida.\n\n**Erros comuns**\n\nNão confunda A com Z. Afinidade eletrônica e eletronegatividade são conceitos diferentes. Uma tendência periódica não dispensa exceções. Sempre declare se afinidade é reportada como energia liberada positiva ou como ΔH de reação. Em decaimento, conserve A e Z e não atribua a emissão à eletrosfera."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: comparar F/Cl e calcular meia-vida",
+          "content_format": "markdown",
+          "content": "**Afinidade eletrônica.** Dados experimentais compilados pelo NIST: primeira afinidade de Cl≈3,613 eV e de F≈3,401 eV, como energia liberada. Usando 1 eV por partícula≈96,485 kJ/mol, Cl libera aproximadamente 3,613·96,485≈348,7 kJ/mol; F libera cerca de 3,401·96,485≈328,1 kJ/mol. Na convenção de entalpia da reação X(g)+e⁻→X⁻(g), isso corresponde aproximadamente a ΔH=−348,7 kJ/mol para Cl e −328,1 kJ/mol para F. Logo, Cl é mais exotérmico nesse processo. O resultado não contradiz a posição do F: seu orbital 2p pequeno concentra os elétrons e aumenta a repulsão ao elétron que chega.\n\n**Meia-vida.** Uma amostra de 80 mg tem meia-vida de 6 h. Após 12 h passaram-se duas meias-vidas: m=80(1/2)^(12/6)=80/4=20 mg."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Calcule prótons, nêutrons e elétrons por Z, A e carga; escreva configuração seguindo Aufbau, Pauli e Hund; use tendências com ressalvas; ao tratar afinidade, declare convenção e espécie gasosa; em radioatividade, conserve A/Z e conte meias-vidas.\n\n**Autochecagem:** qual átomo libera mais energia ao receber o primeiro elétron, F ou Cl? **Cl, conforme os valores NIST usados no exemplo.** Após duas meias-vidas, qual fração resta? **Um quarto.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "topic": "Eletroquímica e química de compostos orgânicos",
+      "base_editorial_version": "1.3.1",
+      "proposed_editorial_version": "1.3.2",
+      "editorial_status": "review",
+      "authorship": "original_editorial",
+      "source_document_ids": [148],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "page": 14,
+          "program_topics": ["Eletroquímica: oxidação/redução, N.O., espécies oxidantes/redutoras, potenciais padrão, pilhas e leis de Faraday. Compostos orgânicos: fórmulas molecular, estrutural e de Lewis; cadeias, ligações e isomeria; funções, nomenclatura e obtenção de compostos simples; carboidratos, lipídios, proteínas, enzimas e polímeros."]
+        }
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Redox, pilhas e leitura/nomenclatura orgânica",
+          "content_format": "markdown",
+          "content": "Oxidação é aumento do número de oxidação e perda de elétrons; redução é diminuição e ganho. Agente redutor doa elétrons e se oxida; agente oxidante recebe elétrons e se reduz. Em pilha espontânea, oxidação ocorre no ânodo e redução no cátodo; E°cel=E°red(cátodo)−E°red(ânodo). Na eletrólise, uma fonte externa promove processo não espontâneo. Carga elétrica é Q=It; a quantidade de produto depende da estequiometria eletrônica e da constante de Faraday.\n\nEm química orgânica, fórmula molecular informa composição; fórmula estrutural evidencia conectividade; representação de Lewis também mostra pares eletrônicos. Classifique a cadeia (aberta/fechada, saturada/insaturada, normal/ramificada) e reconheça grupos funcionais: hidrocarboneto, haleto orgânico, álcool (R–OH), fenol (Ar–OH), éter (R–O–R′), aldeído (R–CHO), cetona (R–CO–R′), ácido carboxílico (R–COOH), éster (R–COO–R′), amina e amida. Nomes simples usam prefixo de carbonos (met-, et-, prop-, but-), infixo de saturação (-an-, -en-, -in-) e terminação da função principal; posição de insaturação/substituinte deve ser indicada quando necessária. Exemplos: CH₃CH₂OH é etanol; CH₃CHO, etanal; CH₃COCH₃, propanona; CH₃COOH, ácido etanoico; CH₃COOCH₂CH₃, etanoato de etila.\n\nObtenções simples incluem adição a ligações duplas, oxidação/redução e esterificação, conforme reagentes e condições. Carboidratos, lipídios e proteínas são classes distintas de biomoléculas; enzimas são catalisadores biológicos, em geral proteínas; polímeros são macromoléculas de unidades repetitivas. A fórmula molecular sozinha não identifica isômeros nem propriedades.\n\n**Erros comuns**\n\nÂnodo é oxidação e cátodo redução em pilha e eletrólise; o sinal dos eletrodos depende do sistema. Não confunda agente oxidante com espécie oxidada. Identifique função pela conectividade, não só pela fórmula. Éster e ácido carboxílico são funções diferentes. Polímero não significa necessariamente plástico sintético."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: obtenção/nomeação e pilha Zn/Cu",
+          "content_format": "markdown",
+          "content": "**Composto orgânico.** A hidratação do eteno adiciona água à ligação dupla: CH₂=CH₂ + H₂O → CH₃CH₂OH, sob condições catalíticas apropriadas. O produto tem dois carbonos e grupo –OH ligado a carbono saturado; seu nome é etanol e sua função é álcool. Em CH₃COOCH₂CH₃, o fragmento –COO– entre grupos carbônicos identifica um éster; o nome sistemático é etanoato de etila.\n\n**Eletroquímica.** Na pilha Zn|Zn²⁺||Cu²⁺|Cu, E°red(Cu²⁺/Cu)=+0,34 V e E°red(Zn²⁺/Zn)=−0,76 V. Logo, E°cel=0,34−(−0,76)=+1,10 V; Zn oxida no ânodo e Cu²⁺ reduz no cátodo. Se uma eletrólise deposita Cu²⁺+2e⁻→Cu com corrente 2,0 A por 600 s, Q=It=1200 C. Com F≈96 500 C/mol, n(e⁻)=1200/96500≈0,0124 mol; como são necessários 2 mol de elétrons por mol de Cu, n(Cu)≈0,00622 mol. Para M(Cu)≈63,5 g/mol, m≈0,395 g, supondo rendimento de 100%."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Em redox, identifique transferência eletrônica, N.O., ânodo/cátodo e balanceamento; em eletrólise, use Q=It e a proporção de elétrons. Em orgânica, leia conectividade, classifique cadeia e função, aplique nomenclatura e relacione reagentes/produtos sem ignorar condições.\n\n**Autochecagem:** na pilha Zn/Cu, onde ocorre oxidação? **No ânodo de Zn.** Como diferenciar álcool de éter? **No álcool, –OH está ligado a carbono; no éter, um oxigênio liga dois grupos carbônicos.** Quantos mols de elétrons são necessários para 1 mol de Cu²⁺ virar Cu? **2 mol.**"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {"id": 553},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://github.com/seeingtheory/Seeing-Theory",
+        "source_document_id": 531
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "description": "Repositório técnico do projeto Seeing Theory; referência para consulta de implementação, não curso ou recurso de estudo.",
+        "editorial_note": "Publicado apenas como referência técnica/consulta. A página do repositório identifica o código-fonte do projeto de visualizações interativas Seeing Theory; não é o curso nem a interface de aprendizagem. Acessibilidade das visualizações implantadas não auditada. Nenhuma associação curricular; não recomendar como material de estudo. Direitos de conteúdo visual não inferidos do repositório; link-only, sem cópia."
+      },
+      "reason": "A aprovação é delimitada à identificação factual do repositório técnico, com distinção explícita entre código e material de aprendizagem; não se presume adequação pedagógica nem licença de reutilização.",
+      "evidence": [
+        {"locator": "https://github.com/seeingtheory/Seeing-Theory", "detail": "Página primária do repositório, identificada pela auditoria como código-fonte do projeto Seeing Theory, não curso para estudantes."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl", "detail": "Auditoria individual do resource_id=553: natureza de repositório de desenvolvedores, idioma inglês, limites de acessibilidade e decisão de não mapear tópico."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 562},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.oercommons.org/",
+        "source_document_id": 540
+      },
+      "changes": {
+        "editorial_status": "published",
+        "url": "https://help.oercommons.org/support/solutions/articles/42000046848-welcome-to-oer-commons",
+        "availability_mode": "reference",
+        "is_free": 1,
+        "title": "OER Commons — apresentação institucional da biblioteca",
+        "description": "Página institucional que apresenta a biblioteca/plataforma OER Commons para descoberta de recursos educacionais; não é uma aula nem um catálogo de tópico específico.",
+        "editorial_note": "Publicado como referência institucional de descoberta. A página oficial descreve OER Commons como biblioteca online de acesso livre e plataforma de comunidades; lista áreas incluindo matemática, mas os itens têm direitos, idiomas, níveis e qualidade próprios. A página inicial do catálogo não carregou nesta inspeção; por isso o link deste registro foi substituído pela apresentação institucional verificável, não pelo catálogo. Verificar licença e utilidade de cada item antes de recomendar; sem associação curricular. Interface em inglês; acessibilidade do portal e dos itens não auditada. Link-only; sem cópia."
+      },
+      "reason": "Página primária institucional efetivamente inspecionada confirma a natureza da biblioteca e acesso livre à plataforma; a URL foi substituída por essa página verificável porque a raiz do catálogo não carregou. A aprovação não atribui direitos uniformes aos materiais catalogados.",
+      "evidence": [
+        {"locator": "https://help.oercommons.org/support/solutions/articles/42000046848-welcome-to-oer-commons", "detail": "Apresentação oficial afirma que OER Commons é biblioteca digital de acesso livre/plataforma de descoberta; enumera áreas como matemática e públicos escolares, sem certificar itens específicos."},
+        {"locator": "https://help.oercommons.org/support/solutions/articles/42000046845-usage-rights", "detail": "Política oficial explicita rótulos de direitos por recurso e exige conferir termos/licença do item; não há licença única da coleção."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl", "detail": "Auditoria do resource_id=562 documenta que a raiz falhou na coleta automatizada, interface em inglês e necessidade de verificação de direitos item a item."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 566},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://books.scielo.org/",
+        "source_document_id": 544
+      },
+      "changes": {
+        "editorial_status": "published",
+        "url": "https://search-books.scielo.org/?lang=pt",
+        "availability_mode": "reference",
+        "title": "SciELO Livros — catálogo em português",
+        "description": "Catálogo e descoberta de livros em português; a disponibilidade e os direitos variam por título/editora. Referência de busca, não livro individual.",
+        "editorial_note": "Publicado como catálogo de descoberta, não como material de estudo por capítulo. A busca oficial apresenta registros bibliográficos com título, autoria, editora, idioma e ano e distingue publicações em acesso aberto e comerciais; formatos e situação variam por obra. Não inferir gratuidade nem licença do portal para todo o acervo: verificar página, editora e aviso de direitos de cada livro. A URL substitui a raiz que não carregou na inspeção automatizada por uma busca oficial em português efetivamente identificada. Acessibilidade do catálogo e de cada arquivo não auditada; sem associação curricular e sem cópia."
+      },
+      "reason": "A busca primária verificável comprova identidade, língua e funcionamento de catálogo; a ficha fica explicitamente limitada a descoberta bibliográfica, sem declarar acesso universal ou adequação curricular.",
+      "evidence": [
+        {"locator": "https://search-books.scielo.org/?lang=pt", "detail": "Busca oficial SciELO Livros em português; mostra resultados bibliográficos e filtros por tipo de publicação, editora, formato, ano e idioma, inclusive acesso aberto/comercial."},
+        {"locator": "https://books.scielo.org/faq/", "detail": "FAQ oficial afirma que a decisão entre modalidade de acesso aberto ou comercial cabe às editoras; confirma variação por livro e formatos de leitura."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl", "detail": "Auditoria do resource_id=566 registra que a raiz não carregou, que a ficha representa catálogo (não livro individual) e que não existe licença geral inferida."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 567},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://search-books.scielo.org/",
+        "source_document_id": 545
+      },
+      "changes": {
+        "editorial_status": "published",
+        "url": "https://search-books.scielo.org/search/?lang=pt&view=desktop",
+        "availability_mode": "reference",
+        "title": "Busca SciELO Livros — resultados em português",
+        "description": "Interface de busca do catálogo SciELO Livros em português; usar para localizar títulos e conferir acesso/edição no registro individual.",
+        "editorial_note": "Publicado como ferramenta de busca e descoberta, não como aula nem recurso curricular individual. A página de resultados oficial mostra filtros de tipo de publicação (acesso aberto/comercial), editora, PDF/ePUB, ano e idioma, além de metadados/sinopses de títulos em português. A modalidade de acesso é decidida por editora e cada registro deve ser verificado; não generalizar a condição de um resultado para o catálogo. A URL substitui a raiz de busca que não carregou nesta inspeção por rota de resultados oficial identificada. Acessibilidade do mecanismo não auditada; sem associação curricular e sem cópia."
+      },
+      "reason": "Página primária de resultados confirma que o item é uma ferramenta de busca bibliográfica e expõe filtros úteis, mantendo a ressalva explícita de acesso por título e sem alegar utilidade didática automática.",
+      "evidence": [
+        {"locator": "https://search-books.scielo.org/search/?lang=pt&view=desktop", "detail": "Resultados oficiais do catálogo em português exibem filtros aberto/comercial, formatos, idioma e ano, além de registros com metadados e sinopses."},
+        {"locator": "https://books.scielo.org/faq/", "detail": "FAQ oficial atribui a cada editora a decisão de acesso aberto ou comercial; a página não autoriza generalização de acesso/licença."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl", "detail": "Auditoria do resource_id=567 confirma que a ficha era de portal de busca, não obra individual, e que a página-base falhou na coleta automatizada."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 576},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://openlogicproject.org/download/",
+        "source_document_id": 554
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "description": "Portal técnico de downloads do Open Logic Project: PDFs por seção, capítulo, parte e livro; referência de consulta, não curso recomendado para a primeira fase.",
+        "editorial_note": "Publicado somente para consulta técnica. A página oficial de downloads informa que há PDFs em diferentes granularidades e fontes LaTeX para compilação; descreve o Open Logic Text como colaborativo e de nível intermediário. Há material em português, mas edição e idioma devem ser conferidos em cada volume. Não é curso alinhado ao programa da Unicamp nem trilha de preparação; sem tópico associado. A página indica CC BY 4.0 salvo indicação em contrário, então conferir aviso da edição específica antes de reutilizar. Acessibilidade dos PDFs não auditada; link-only aqui, sem cópia."
+      },
+      "reason": "Inspeção direta da página oficial confirma função de portal de downloads e natureza de texto de lógica intermediário; aprovação é estritamente técnica/consulta e não uma recomendação didática.",
+      "evidence": [
+        {"locator": "https://openlogicproject.org/download/", "detail": "Página oficial descreve PDFs por seção/capítulo/parte, repositório LaTeX, texto colaborativo de nível intermediário e licença geral com exceções por item."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl", "detail": "Auditoria do resource_id=576 registra arquivos, variação de idioma, ressalva de acessibilidade e decisão de não recomendar por tópico."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 577},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://builds.openlogicproject.org/",
+        "source_document_id": 555
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "description": "Índice técnico de PDFs compilados do Open Logic Project, com textos de lógica avançada; consulta pontual, não curso ou recomendação de preparação.",
+        "editorial_note": "Publicado somente para consulta técnica. A página primária identifica os arquivos como PDFs gerados do Open Logic Text e separa textos por disciplinas universitárias, incluindo metalógica, teoria dos conjuntos, lógica de primeira ordem, computabilidade e incompletude; avisa que o compilado completo não se destina a funcionar como livro-texto. Há caminho de tradução para português, mas conferir cada edição/arquivo. Conteúdo e nível não representam um curso de ensino médio nem preparação da primeira fase; não associar a tópico. Acessibilidade de arquivos específicos não auditada; não copiar conteúdo."
+      },
+      "reason": "Inspeção direta do índice primário confirma a identidade e o nível técnico dos builds e permite classificá-lo com segurança apenas como consulta, sem recomendação ou associação curricular.",
+      "evidence": [
+        {"locator": "https://builds.openlogicproject.org/", "detail": "Índice oficial diz que os PDFs são builds do Open Logic Text, lista textos de metalógica, computabilidade, teoria dos conjuntos e lógicas avançadas, e declara que o compilado não é destinado a ser livro-texto; há link de tradução portuguesa."},
+        {"locator": "https://openlogicproject.org/download/", "detail": "Página oficial de downloads explica relação do índice com PDFs compilados e fonte LaTeX."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl", "detail": "Auditoria do resource_id=577 documenta o caráter de mirror/build, a variação de edição/idioma e ausência de adequação à primeira fase."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 581},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/402",
+        "source_document_id": 559
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "description": "Registro de livro universitário de física baseada em cálculo, mantido para consulta bibliográfica; explicitamente não recomendado para preparação da primeira fase.",
+        "editorial_note": "Adjudicação publicada como consulta bibliográfica, não recomendação. O registro da Open Textbook Library identifica Calculus-Based Physics I, de Jeffrey W. Schnick (2008), em inglês e com pré-requisito de cálculo; a auditoria da ficha registra poucos exemplos e ausência de problemas independentes. Esse perfil e nível não atendem à preparação da primeira fase do ensino médio. Não associar a tópico nem recomendar; acessibilidade do PDF não auditada. A licença indicada no registro deve ser consultada diretamente na obra antes de qualquer reutilização; aqui apenas link."
+      },
+      "reason": "A identidade e os metadados do item foram conferidos na ficha da biblioteca e a avaliação de nível/ausência de exercícios torna a decisão de não pertinência explícita; publicar apenas preserva consulta e evita recomendação enganosa.",
+      "evidence": [
+        {"locator": "https://open.umn.edu/opentextbooks/textbooks/402", "detail": "Ficha primária identifica título, autor, edição/ano, nível de física baseada em cálculo e formatos do livro."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl", "detail": "Auditoria individual documenta idioma inglês, pré-requisito de cálculo, poucos exemplos e ausência de exercícios independentes; recomenda explicitamente não mapear à primeira fase."}
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 581, "topic_id": 2471, "curriculum_topic_id": null},
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "not_relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "not_relevant",
+        "review_note": "Adjudicação publicada: manter o vínculo candidato apenas como resultado negativo auditável, não como recomendação. O livro é física universitária baseada em cálculo, em inglês, e a ficha/auditoria registra ausência de exercícios independentes; não é pertinente à preparação da primeira fase. Não recomendar nem associar como material de estudo."
+      },
+      "reason": "A decisão solicitada é publicar a adjudicação not_relevant, preservando o registro histórico do candidato sem transformar o vínculo em recomendação positiva.",
+      "evidence": [
+        {"locator": "https://open.umn.edu/opentextbooks/textbooks/402", "detail": "Registro primário identifica livro universitário de física baseada em cálculo, em inglês."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl", "detail": "Auditoria do item registra nível/pré-requisito e ausência de exercícios independentes; candidata explicitamente considerada fora de escopo."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 590},
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.sesamath.net/",
+        "source_document_id": 568
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal institucional francês de descoberta de projetos e recursos de matemática; não é uma aula nem garante alinhamento curricular ou cobertura de tópico.",
+        "editorial_note": "Publicado como portal de descoberta. Inspeção direta da página oficial mostra Mathenpoche dedicado a estudantes, com recursos classificados por capítulo, além de ferramentas para aula, complementos de manuais, área docente e projetos associados; a própria página distingue projetos pelos quais a associação não é responsável. O portal e os recursos estão em francês e variam em público/nível; conferir cada item antes de recomendar. Não mapear o hub a tópico nem presumir acessibilidade/licença uniforme. Sem cópia."
+      },
+      "reason": "A página institucional oficial foi inspecionada e permite corrigir o estado de disponibilidade factual do hub; a aprovação é somente de referência/descoberta, com idioma, escopo e projetos externos claramente delimitados.",
+      "evidence": [
+        {"locator": "https://www.sesamath.net/", "detail": "Página oficial inspecionada em 2026-10-09: apresenta associação, Mathenpoche para alunos com recursos por capítulo, LaboMEP, complementos de manuais, área docente e ferramentas; assinala projetos associados que não são responsabilidade da associação."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl", "detail": "Auditoria anterior confirma que a ficha representa portal geral, em francês, não aula; registra que a página raiz não havia carregado na inspeção anterior e que licenças variam por projeto/material."}
+      ]
+    }
+  ],
+  "blocked": [],
+  "summary": "Follow-up dos oito recursos antes bloqueados: três referências técnicas aprovadas somente para consulta (553, 576, 577); três portais aprovados como descoberta após inspeção ou substituição por páginas oficiais verificáveis (562, 566, 567); 581 publicado apenas como consulta com adjudicação negativa not_relevant; 590 publicado como hub de descoberta francês, sem associação curricular. Nenhuma associação positiva foi criada; URLs substituídas preservam os IDs e a URL anterior permanece registrada no expected/evidence e no histórico do recurso. Propostas apenas, para dry-run/aplicação posterior pelo escritor principal; SQLite não foi alterado."
+}

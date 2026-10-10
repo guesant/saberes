@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "package_type": "full_replacement_resolutions",
+  "source_review_file": "simulado-2027-qt-solutions-01-36-second-review.json",
+  "solutions": [
+    {
+      "question_id": 2740,
+      "occurrence_id": 2743,
+      "number": 4,
+      "title": "Rosy and the book title",
+      "content": "O poema diz apenas que Rosy não sabia soletrar o título; isso não basta para concluir que não soubesse ler e escrever. O contraste entre não saber soletrá-lo e ainda assim comprá-lo, podendo revendê-lo, sustenta a alternativa B como melhor resposta disponível no gabarito. A formulação “sem saber ler e escrever” da alternativa é mais ampla que a evidência do poema.",
+      "source_document_ids": [335, 337],
+      "source_page": 3,
+      "answer_value": "B",
+      "review_status": "review",
+      "authorship": "original_editorial"
+    },
+    {
+      "question_id": 2753,
+      "occurrence_id": 2769,
+      "number": 17,
+      "title": "Barragens, população e recursos hídricos",
+      "content": "A alternativa D relaciona crescimento populacional e padrões de consumo ao aumento da demanda por energia hidráulica e do despejo de efluentes. Não afirma diretamente que a demanda por água aumenta. A é incorreta porque barragens podem dificultar a migração de peixes; B erra ao afirmar redução da sedimentação; C erra ao associar espécies exóticas ao aumento da biodiversidade. Portanto, D é a resposta do gabarito.",
+      "source_document_ids": [335, 337],
+      "source_page": 7,
+      "answer_value": "D",
+      "review_status": "review",
+      "authorship": "original_editorial"
+    },
+    {
+      "question_id": 2768,
+      "occurrence_id": 2799,
+      "number": 32,
+      "title": "Mulheres e mobilização durante a Grande Guerra",
+      "content": "O texto registra duas formas de mobilização ligadas à Grande Guerra: integrantes do Partido Republicano Feminino se ofereciam para atuar como força policial no país caso o Exército fosse enviado ao exterior; voluntárias da Cruz Vermelha treinavam resgate e primeiros socorros. A alternativa C é a resposta indicada pelo gabarito, mas “força do combate” deve ser entendida com ressalva: o excerto não afirma que as integrantes do Partido lutariam na frente de batalha.",
+      "source_document_ids": [335, 337],
+      "source_page": 11,
+      "answer_value": "C",
+      "review_status": "review",
+      "authorship": "original_editorial"
+    },
+    {
+      "question_id": 2770,
+      "occurrence_id": 2803,
+      "number": 34,
+      "title": "A COP e a governança climática global",
+      "content": "A Conferência das Partes articula respostas internacionais à mudança climática por meio de pactos multilaterais, o que torna C correta. B é falsa porque os impactos não recaem igualmente sobre todos; D confunde a meta de 1,5 °C com um limite já atingido; A generaliza a posição política de países específicos. Nota factual: o enunciado atribui à COP a data de 21/03/1994, mas essa é a entrada em vigor da Convenção-Quadro da ONU sobre Mudança do Clima. A primeira Conferência das Partes (COP 1) ocorreu em Berlim, em 1995. A alternativa C continua sendo a correta entre as opções, pois o regime climático se desenvolveu por meio de acordos e cooperação multilaterais.",
+      "source_document_ids": [335, 337],
+      "source_page": 12,
+      "answer_value": "C",
+      "review_status": "review",
+      "authorship": "original_editorial",
+      "supplementary_sources": [
+        "https://unfccc.int/process-and-meetings/united-nations-framework-convention-on-climate-change",
+        "https://unfccc.int/cop3/resource/docs/cop1/inf02.htm"
+      ]
+    }
+  ]
+}

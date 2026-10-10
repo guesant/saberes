@@ -5,4 +5,5 @@ export interface UseCourseStartNavigationActionInput {
   attempts: Attempt[] | undefined;
   course: CourseReadModel | null | undefined;
   lessonProgress: StudyRecord[] | undefined;
+  assessmentItemsById?: Record<string, Array<Record<string, unknown>> | undefined>;
 }

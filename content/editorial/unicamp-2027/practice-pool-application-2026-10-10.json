@@ -1,0 +1,2812 @@
+{
+  "course_slug": "unicamp-2027-primeira-fase",
+  "topics": 44,
+  "lessons": 132,
+  "practice_topics": 44,
+  "gaps": [],
+  "editorial_status": "review",
+  "booklets": [
+    "2027/QT",
+    "2026/QX",
+    "2025/QZ"
+  ],
+  "modules": [
+    {
+      "topic_id": 2468,
+      "practice": {
+        "id": 2843,
+        "question_id": 2790,
+        "number": 54,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 15,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2843,
+          "question_id": 2790,
+          "number": 54,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2845,
+          "question_id": 2791,
+          "number": 55,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2849,
+          "question_id": 2793,
+          "number": 57,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2851,
+          "question_id": 2794,
+          "number": 58,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2853,
+          "question_id": 2795,
+          "number": 59,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 342,
+          "question_id": 342,
+          "number": 54,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 343,
+          "question_id": 343,
+          "number": 55,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 344,
+          "question_id": 344,
+          "number": 56,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 346,
+          "question_id": 346,
+          "number": 58,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 21,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 347,
+          "question_id": 347,
+          "number": 59,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2469,
+      "practice": {
+        "id": 2845,
+        "question_id": 2791,
+        "number": 55,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 16,
+        "relation_priority": 0,
+        "shared": true
+      },
+      "practices": [
+        {
+          "id": 2845,
+          "question_id": 2791,
+          "number": 55,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2843,
+          "question_id": 2790,
+          "number": 54,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2849,
+          "question_id": 2793,
+          "number": 57,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2851,
+          "question_id": 2794,
+          "number": 58,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2853,
+          "question_id": 2795,
+          "number": 59,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 342,
+          "question_id": 342,
+          "number": 54,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 343,
+          "question_id": 343,
+          "number": 55,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 344,
+          "question_id": 344,
+          "number": 56,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 346,
+          "question_id": 346,
+          "number": 58,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 21,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 347,
+          "question_id": 347,
+          "number": 59,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": true
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2470,
+      "practice": {
+        "id": 2849,
+        "question_id": 2793,
+        "number": 57,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 17,
+        "relation_priority": 0,
+        "shared": true
+      },
+      "practices": [
+        {
+          "id": 2849,
+          "question_id": 2793,
+          "number": 57,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2843,
+          "question_id": 2790,
+          "number": 54,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2845,
+          "question_id": 2791,
+          "number": 55,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2851,
+          "question_id": 2794,
+          "number": 58,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2853,
+          "question_id": 2795,
+          "number": 59,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 342,
+          "question_id": 342,
+          "number": 54,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 343,
+          "question_id": 343,
+          "number": 55,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 344,
+          "question_id": 344,
+          "number": 56,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 346,
+          "question_id": 346,
+          "number": 58,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 21,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 347,
+          "question_id": 347,
+          "number": 59,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": true
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2471,
+      "practice": {
+        "id": 345,
+        "question_id": 345,
+        "number": 57,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 21,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 345,
+          "question_id": 345,
+          "number": 57,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 21,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2472,
+      "practice": {
+        "id": 2847,
+        "question_id": 2792,
+        "number": 56,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 16,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2847,
+          "question_id": 2792,
+          "number": 56,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2473,
+      "practice": {
+        "id": 342,
+        "question_id": 342,
+        "number": 54,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 20,
+        "relation_priority": 1,
+        "shared": true
+      },
+      "practices": [
+        {
+          "id": 342,
+          "question_id": 342,
+          "number": 54,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 1,
+          "shared": true
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2474,
+      "practice": {
+        "id": 2861,
+        "question_id": 2799,
+        "number": 63,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 18,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2861,
+          "question_id": 2799,
+          "number": 63,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 18,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 348,
+          "question_id": 348,
+          "number": 60,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 349,
+          "question_id": 349,
+          "number": 61,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 23,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 353,
+          "question_id": 353,
+          "number": 65,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 24,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2475,
+      "practice": {
+        "id": 339,
+        "question_id": 339,
+        "number": 51,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 19,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 339,
+          "question_id": 339,
+          "number": 51,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 19,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2476,
+      "practice": {
+        "id": 2841,
+        "question_id": 2789,
+        "number": 53,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 15,
+        "editorial_selection_reason": "Composição de funções; é prática mais direta do tópico Funções do que a questão de logaritmos selecionada antes.",
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2841,
+          "question_id": 2789,
+          "number": 53,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "editorial_selection_reason": "Composição de funções; é prática mais direta do tópico Funções do que a questão de logaritmos selecionada antes.",
+          "shared": false
+        },
+        {
+          "id": 2821,
+          "question_id": 2779,
+          "number": 43,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 14,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 331,
+          "question_id": 331,
+          "number": 43,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 332,
+          "question_id": 332,
+          "number": 44,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 336,
+          "question_id": 336,
+          "number": 48,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 18,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": "Composição de funções; é prática mais direta do tópico Funções do que a questão de logaritmos selecionada antes."
+    },
+    {
+      "topic_id": 2477,
+      "practice": {
+        "id": 2829,
+        "question_id": 2783,
+        "number": 47,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 14,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2829,
+          "question_id": 2783,
+          "number": 47,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 14,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2835,
+          "question_id": 2786,
+          "number": 50,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2839,
+          "question_id": 2788,
+          "number": 52,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2478,
+      "practice": {
+        "id": 2823,
+        "question_id": 2780,
+        "number": 44,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 14,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2823,
+          "question_id": 2780,
+          "number": 44,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 14,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 337,
+          "question_id": 337,
+          "number": 49,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 19,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2479,
+      "practice": {
+        "id": 2837,
+        "question_id": 2787,
+        "number": 51,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 15,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2837,
+          "question_id": 2787,
+          "number": 51,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2480,
+      "practice": {
+        "id": 2825,
+        "question_id": 2781,
+        "number": 45,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 14,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2825,
+          "question_id": 2781,
+          "number": 45,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 14,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2827,
+          "question_id": 2782,
+          "number": 46,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 14,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2481,
+      "practice": {
+        "id": 2833,
+        "question_id": 2785,
+        "number": 49,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 15,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2833,
+          "question_id": 2785,
+          "number": 49,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2482,
+      "practice": {
+        "id": 338,
+        "question_id": 338,
+        "number": 50,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 19,
+        "relation_priority": 1,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 338,
+          "question_id": 338,
+          "number": 50,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 19,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2483,
+      "practice": {
+        "id": 334,
+        "question_id": 334,
+        "number": 46,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 18,
+        "relation_priority": 1,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 334,
+          "question_id": 334,
+          "number": 46,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 18,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2484,
+      "practice": {
+        "id": 2821,
+        "question_id": 2779,
+        "number": 43,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 14,
+        "editorial_selection_reason": "A questão calcula um logaritmo de uma sequência exponencial; corresponde diretamente ao tópico Logaritmos e exponenciais.",
+        "shared": true
+      },
+      "practices": [
+        {
+          "id": 2821,
+          "question_id": 2779,
+          "number": 43,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 14,
+          "editorial_selection_reason": "A questão calcula um logaritmo de uma sequência exponencial; corresponde diretamente ao tópico Logaritmos e exponenciais.",
+          "shared": true
+        },
+        {
+          "id": 2841,
+          "question_id": 2789,
+          "number": 53,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 331,
+          "question_id": 331,
+          "number": 43,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 332,
+          "question_id": 332,
+          "number": 44,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 17,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 336,
+          "question_id": 336,
+          "number": 48,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 18,
+          "relation_priority": 0,
+          "shared": true
+        }
+      ],
+      "practice_selection_reason": "A questão calcula um logaritmo de uma sequência exponencial; corresponde diretamente ao tópico Logaritmos e exponenciais."
+    },
+    {
+      "topic_id": 2485,
+      "practice": {
+        "id": 304,
+        "question_id": 304,
+        "number": 16,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 7,
+        "editorial_selection_reason": "A leitura da divisão Norte/Sul Global no mapa aborda regionalização e conceitos geográficos com aderência maior que a questão puramente cartográfica escolhida antes.",
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 304,
+          "question_id": 304,
+          "number": 16,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 7,
+          "editorial_selection_reason": "A leitura da divisão Norte/Sul Global no mapa aborda regionalização e conceitos geográficos com aderência maior que a questão puramente cartográfica escolhida antes.",
+          "shared": false
+        },
+        {
+          "id": 1,
+          "question_id": 1,
+          "number": 1,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": "A leitura da divisão Norte/Sul Global no mapa aborda regionalização e conceitos geográficos com aderência maior que a questão puramente cartográfica escolhida antes."
+    },
+    {
+      "topic_id": 2486,
+      "practice": {
+        "id": 2771,
+        "question_id": 2754,
+        "number": 18,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 7,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2771,
+          "question_id": 2754,
+          "number": 18,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 7,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 304,
+          "question_id": 304,
+          "number": 16,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 7,
+          "relation_priority": 1,
+          "shared": true
+        },
+        {
+          "id": 335,
+          "question_id": 335,
+          "number": 47,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 18,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2487,
+      "practice": {
+        "id": 2765,
+        "question_id": 2751,
+        "number": 15,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 6,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2765,
+          "question_id": 2751,
+          "number": 15,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 6,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2767,
+          "question_id": 2752,
+          "number": 16,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 6,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2769,
+          "question_id": 2753,
+          "number": 17,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 7,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2775,
+          "question_id": 2756,
+          "number": 20,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 7,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2488,
+      "practice": {
+        "id": 303,
+        "question_id": 303,
+        "number": 15,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 6,
+        "editorial_selection_reason": "A questão articula sistemas alimentares, produtos ultraprocessados globalizados e fluxos mundiais de produção e consumo; é mais específica para Globalização, economia e trabalho do que a questão sobre adesão à OTAN.",
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 303,
+          "question_id": 303,
+          "number": 15,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 6,
+          "editorial_selection_reason": "A questão articula sistemas alimentares, produtos ultraprocessados globalizados e fluxos mundiais de produção e consumo; é mais específica para Globalização, economia e trabalho do que a questão sobre adesão à OTAN.",
+          "shared": false
+        },
+        {
+          "id": 2773,
+          "question_id": 2755,
+          "number": 19,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 7,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2777,
+          "question_id": 2757,
+          "number": 21,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 8,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 304,
+          "question_id": 304,
+          "number": 16,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 7,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 307,
+          "question_id": 307,
+          "number": 19,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 8,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 308,
+          "question_id": 308,
+          "number": 20,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 9,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 309,
+          "question_id": 309,
+          "number": 21,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 9,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 306,
+          "question_id": 306,
+          "number": 18,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 8,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": "A questão articula sistemas alimentares, produtos ultraprocessados globalizados e fluxos mundiais de produção e consumo; é mais específica para Globalização, economia e trabalho do que a questão sobre adesão à OTAN."
+    },
+    {
+      "topic_id": 2489,
+      "practice": {
+        "id": 308,
+        "question_id": 308,
+        "number": 20,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 9,
+        "editorial_selection_reason": "A questão trata de políticas territoriais e circuitos produtivos na Bahia; é mais diretamente ligada à dinâmica territorial brasileira que a questão genérica escolhida antes.",
+        "shared": true
+      },
+      "practices": [
+        {
+          "id": 308,
+          "question_id": 308,
+          "number": 20,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 9,
+          "editorial_selection_reason": "A questão trata de políticas territoriais e circuitos produtivos na Bahia; é mais diretamente ligada à dinâmica territorial brasileira que a questão genérica escolhida antes.",
+          "shared": true
+        },
+        {
+          "id": 2773,
+          "question_id": 2755,
+          "number": 19,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 7,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2777,
+          "question_id": 2757,
+          "number": 21,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 8,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 304,
+          "question_id": 304,
+          "number": 16,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 7,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 307,
+          "question_id": 307,
+          "number": 19,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 8,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 309,
+          "question_id": 309,
+          "number": 21,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 9,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 306,
+          "question_id": 306,
+          "number": 18,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 8,
+          "relation_priority": 1,
+          "shared": true
+        }
+      ],
+      "practice_selection_reason": "A questão trata de políticas territoriais e circuitos produtivos na Bahia; é mais diretamente ligada à dinâmica territorial brasileira que a questão genérica escolhida antes."
+    },
+    {
+      "topic_id": 2490,
+      "practice": {
+        "id": 2791,
+        "question_id": 2764,
+        "number": 28,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 10,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2791,
+          "question_id": 2764,
+          "number": 28,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 10,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2795,
+          "question_id": 2766,
+          "number": 30,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 10,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2491,
+      "practice": {
+        "id": 2793,
+        "question_id": 2765,
+        "number": 29,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 10,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2793,
+          "question_id": 2765,
+          "number": 29,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 10,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2797,
+          "question_id": 2767,
+          "number": 31,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2799,
+          "question_id": 2768,
+          "number": 32,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2801,
+          "question_id": 2769,
+          "number": 33,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 316,
+          "question_id": 316,
+          "number": 28,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 12,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 319,
+          "question_id": 319,
+          "number": 31,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 321,
+          "question_id": 321,
+          "number": 33,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2492,
+      "practice": {
+        "id": 2799,
+        "question_id": 2768,
+        "number": 32,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 11,
+        "relation_priority": 0,
+        "shared": true
+      },
+      "practices": [
+        {
+          "id": 2799,
+          "question_id": 2768,
+          "number": 32,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2793,
+          "question_id": 2765,
+          "number": 29,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 10,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2801,
+          "question_id": 2769,
+          "number": 33,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2803,
+          "question_id": 2770,
+          "number": 34,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 12,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 316,
+          "question_id": 316,
+          "number": 28,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 12,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 319,
+          "question_id": 319,
+          "number": 31,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 320,
+          "question_id": 320,
+          "number": 32,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 321,
+          "question_id": 321,
+          "number": 33,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": true
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2493,
+      "practice": {
+        "id": 2779,
+        "question_id": 2758,
+        "number": 22,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 8,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2779,
+          "question_id": 2758,
+          "number": 22,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 8,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2781,
+          "question_id": 2759,
+          "number": 23,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 8,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2783,
+          "question_id": 2760,
+          "number": 24,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 9,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 310,
+          "question_id": 310,
+          "number": 22,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 10,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 311,
+          "question_id": 311,
+          "number": 23,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 10,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 312,
+          "question_id": 312,
+          "number": 24,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 10,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 313,
+          "question_id": 313,
+          "number": 25,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 11,
+          "relation_priority": 1,
+          "shared": false
+        },
+        {
+          "id": 343,
+          "question_id": 343,
+          "number": 55,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 1,
+          "shared": true
+        },
+        {
+          "id": 344,
+          "question_id": 344,
+          "number": 56,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 20,
+          "relation_priority": 1,
+          "shared": true
+        },
+        {
+          "id": 350,
+          "question_id": 350,
+          "number": 62,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 23,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2494,
+      "practice": {
+        "id": 2785,
+        "question_id": 2761,
+        "number": 25,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 9,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2785,
+          "question_id": 2761,
+          "number": 25,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 9,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2787,
+          "question_id": 2762,
+          "number": 26,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 9,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2789,
+          "question_id": 2763,
+          "number": 27,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 9,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 313,
+          "question_id": 313,
+          "number": 25,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 314,
+          "question_id": 314,
+          "number": 26,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 315,
+          "question_id": 315,
+          "number": 27,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 11,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 318,
+          "question_id": 318,
+          "number": 30,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 12,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2495,
+      "practice": {
+        "id": 2737,
+        "question_id": 2737,
+        "number": 1,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 3,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2737,
+          "question_id": 2737,
+          "number": 1,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2739,
+          "question_id": 2738,
+          "number": 2,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2741,
+          "question_id": 2739,
+          "number": 3,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2743,
+          "question_id": 2740,
+          "number": 4,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2745,
+          "question_id": 2741,
+          "number": 5,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2747,
+          "question_id": 2742,
+          "number": 6,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 4,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2749,
+          "question_id": 2743,
+          "number": 7,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 4,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 289,
+          "question_id": 289,
+          "number": 1,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 290,
+          "question_id": 290,
+          "number": 2,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 291,
+          "question_id": 291,
+          "number": 3,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 3,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 292,
+          "question_id": 292,
+          "number": 4,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 4,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 293,
+          "question_id": 293,
+          "number": 5,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 4,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 294,
+          "question_id": 294,
+          "number": 6,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 4,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 295,
+          "question_id": 295,
+          "number": 7,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 4,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2496,
+      "practice": {
+        "id": 2807,
+        "question_id": 2772,
+        "number": 36,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 12,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2807,
+          "question_id": 2772,
+          "number": 36,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 12,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 68,
+          "question_id": 68,
+          "number": 68,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2497,
+      "practice": {
+        "id": 2813,
+        "question_id": 2775,
+        "number": 39,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 13,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2813,
+          "question_id": 2775,
+          "number": 39,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2815,
+          "question_id": 2776,
+          "number": 40,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 325,
+          "question_id": 325,
+          "number": 37,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 329,
+          "question_id": 329,
+          "number": 41,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 67,
+          "question_id": 67,
+          "number": 67,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 70,
+          "question_id": 70,
+          "number": 70,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 23,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2498,
+      "practice": {
+        "id": 2815,
+        "question_id": 2776,
+        "number": 40,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 13,
+        "relation_priority": 0,
+        "shared": true
+      },
+      "practices": [
+        {
+          "id": 2815,
+          "question_id": 2776,
+          "number": 40,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2813,
+          "question_id": 2775,
+          "number": 39,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 325,
+          "question_id": 325,
+          "number": 37,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 15,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 329,
+          "question_id": 329,
+          "number": 41,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 67,
+          "question_id": 67,
+          "number": 67,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 70,
+          "question_id": 70,
+          "number": 70,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 23,
+          "relation_priority": 0,
+          "shared": true
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2499,
+      "practice": {
+        "id": 2811,
+        "question_id": 2774,
+        "number": 38,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 13,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2811,
+          "question_id": 2774,
+          "number": 38,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 327,
+          "question_id": 327,
+          "number": 39,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 66,
+          "question_id": 66,
+          "number": 66,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 22,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 305,
+          "question_id": 305,
+          "number": 17,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 7,
+          "relation_priority": 1,
+          "shared": false
+        },
+        {
+          "id": 69,
+          "question_id": 69,
+          "number": 69,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 22,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2500,
+      "practice": {
+        "id": 328,
+        "question_id": 328,
+        "number": 40,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 16,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 328,
+          "question_id": 328,
+          "number": 40,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 16,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2817,
+          "question_id": 2777,
+          "number": 41,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 13,
+          "relation_priority": 1,
+          "shared": false
+        },
+        {
+          "id": 327,
+          "question_id": 327,
+          "number": 39,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 16,
+          "relation_priority": 1,
+          "shared": true
+        },
+        {
+          "id": 70,
+          "question_id": 70,
+          "number": 70,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 23,
+          "relation_priority": 1,
+          "shared": true
+        },
+        {
+          "id": 71,
+          "question_id": 71,
+          "number": 71,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 23,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2501,
+      "practice": {
+        "id": 2751,
+        "question_id": 2744,
+        "number": 8,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 4,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2751,
+          "question_id": 2744,
+          "number": 8,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 4,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2755,
+          "question_id": 2746,
+          "number": 10,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2757,
+          "question_id": 2747,
+          "number": 11,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 299,
+          "question_id": 299,
+          "number": 11,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 301,
+          "question_id": 301,
+          "number": 13,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 6,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 302,
+          "question_id": 302,
+          "number": 14,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 6,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2502,
+      "practice": {
+        "id": 926,
+        "question_id": 926,
+        "number": 34,
+        "code": "QZ",
+        "year": 2023,
+        "source_document_id": 65,
+        "source_page": 13,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 926,
+          "question_id": 926,
+          "number": 34,
+          "code": "QZ",
+          "year": 2023,
+          "source_document_id": 65,
+          "source_page": 13,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2503,
+      "practice": {
+        "id": 2753,
+        "question_id": 2745,
+        "number": 9,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 5,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2753,
+          "question_id": 2745,
+          "number": 9,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2761,
+          "question_id": 2749,
+          "number": 13,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 296,
+          "question_id": 296,
+          "number": 8,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2504,
+      "practice": {
+        "id": 2759,
+        "question_id": 2748,
+        "number": 12,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 5,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2759,
+          "question_id": 2748,
+          "number": 12,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 300,
+          "question_id": 300,
+          "number": 12,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2505,
+      "practice": {
+        "id": 2763,
+        "question_id": 2750,
+        "number": 14,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 5,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2763,
+          "question_id": 2750,
+          "number": 14,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 297,
+          "question_id": 297,
+          "number": 9,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 298,
+          "question_id": 298,
+          "number": 10,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 5,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2506,
+      "practice": {
+        "id": 359,
+        "question_id": 359,
+        "number": 71,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 26,
+        "relation_priority": 1,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 359,
+          "question_id": 359,
+          "number": 71,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 26,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2507,
+      "practice": {
+        "id": 2869,
+        "question_id": 2803,
+        "number": 67,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 19,
+        "relation_priority": 1,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2869,
+          "question_id": 2803,
+          "number": 67,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 19,
+          "relation_priority": 1,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2508,
+      "practice": {
+        "id": 2873,
+        "question_id": 2805,
+        "number": 69,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 20,
+        "editorial_selection_reason": "A questão exige cálculo estequiométrico dos produtos da combustão da glicose; é prática mais direta de estequiometria que a questão qualitativa escolhida antes.",
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2873,
+          "question_id": 2805,
+          "number": 69,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 20,
+          "editorial_selection_reason": "A questão exige cálculo estequiométrico dos produtos da combustão da glicose; é prática mais direta de estequiometria que a questão qualitativa escolhida antes.",
+          "shared": false
+        },
+        {
+          "id": 2867,
+          "question_id": 2802,
+          "number": 66,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 19,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2869,
+          "question_id": 2803,
+          "number": 67,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 19,
+          "relation_priority": 0,
+          "shared": true
+        },
+        {
+          "id": 2875,
+          "question_id": 2806,
+          "number": 70,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2879,
+          "question_id": 2808,
+          "number": 72,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 21,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 358,
+          "question_id": 358,
+          "number": 70,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 26,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 360,
+          "question_id": 360,
+          "number": 72,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 26,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 63,
+          "question_id": 63,
+          "number": 63,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 21,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": "A questão exige cálculo estequiométrico dos produtos da combustão da glicose; é prática mais direta de estequiometria que a questão qualitativa escolhida antes."
+    },
+    {
+      "topic_id": 2509,
+      "practice": {
+        "id": 355,
+        "question_id": 355,
+        "number": 67,
+        "code": "QX",
+        "year": 2026,
+        "source_document_id": 44,
+        "source_page": 25,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 355,
+          "question_id": 355,
+          "number": 67,
+          "code": "QX",
+          "year": 2026,
+          "source_document_id": 44,
+          "source_page": 25,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2510,
+      "practice": {
+        "id": 2877,
+        "question_id": 2807,
+        "number": 71,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 21,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2877,
+          "question_id": 2807,
+          "number": 71,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 21,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 62,
+          "question_id": 62,
+          "number": 62,
+          "code": "QZ",
+          "year": 2025,
+          "source_document_id": 36,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    },
+    {
+      "topic_id": 2511,
+      "practice": {
+        "id": 2831,
+        "question_id": 2784,
+        "number": 48,
+        "code": "QT",
+        "year": 2027,
+        "source_document_id": 335,
+        "source_page": 14,
+        "relation_priority": 0,
+        "shared": false
+      },
+      "practices": [
+        {
+          "id": 2831,
+          "question_id": 2784,
+          "number": 48,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 14,
+          "relation_priority": 0,
+          "shared": false
+        },
+        {
+          "id": 2871,
+          "question_id": 2804,
+          "number": 68,
+          "code": "QT",
+          "year": 2027,
+          "source_document_id": 335,
+          "source_page": 20,
+          "relation_priority": 0,
+          "shared": false
+        }
+      ],
+      "practice_selection_reason": null
+    }
+  ],
+  "distinct_practice_families": 132,
+  "practice_sync": {
+    "modules": 44,
+    "practice_items": 185
+  },
+  "backup": ".local/content/backups/before-study-path-20261010T161826829481Z.sqlite",
+  "applied": true,
+  "practice_mode": "all_approved_representatives",
+  "package_sha256": "147bd4802801e559205184d0aac23500079ff0fd6cff5b944002d929284216f5",
+  "revision_package": "content/editorial/unicamp-2027/lesson-revisions.json",
+  "revision_package_sha256": "39ca58a60832be4d1c5d4167d783c63a560abee99dcaeef91f1d6ccafbafa9b9",
+  "lesson_audits": [],
+  "practice_selection_package": "content/editorial/unicamp-2027/practice-selections.json",
+  "practice_selection_package_sha256": "b1be8bfd86350fb2ff6a7e88d4d9e3ca0aa3c7b5f3caf6e9833706cdf86dbd77"
+}

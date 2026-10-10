@@ -1,0 +1,35 @@
+{
+  "summary": "Corrige a seleção de prática do tópico combinado Biodiversidade e saúde humana: retira uma questão de excreção sem vínculo suficiente, mantém diabetes como relação secundária e prioriza a questão que exige analisar invasão biológica e perda de biodiversidade.",
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 2771, "canonical_topic_id": 2513},
+      "expected": {"relation_type": "primary", "review_status": "published"},
+      "changes": {"review_status": "review"},
+      "reason": "A questão Q/T 35 aborda excreção nitrogenada e fisiologia animal. A classificação de biologia geral permanece, mas o item não exercita biodiversidade nem a relação entre biodiversidade e saúde humana com especificidade suficiente para ser prática do tópico-alvo.",
+      "evidence": [
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=12", "detail": "Simulado oficial Q/T 2027, questão 35: o comando trata de produtos de excreção animal; não pergunta sobre diversidade, conservação ou mecanismo de saúde humana relacionado à biodiversidade."}
+      ]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 2777, "canonical_topic_id": 2513},
+      "expected": {"relation_type": "primary", "review_status": "published"},
+      "changes": {"relation_type": "secondary"},
+      "reason": "A questão Q/T 41 sobre diabetes tipo 1 e insulina é prática pertinente para a dimensão de saúde humana do tópico combinado, mas não cobre biodiversidade; portanto, o vínculo é secundário e não deve superar uma questão que avalia diretamente biodiversidade no roteiro principal.",
+      "evidence": [
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=13", "detail": "Simulado oficial Q/T 2027, questão 41: o item pergunta sobre ação fisiológica da insulina no diabetes tipo 1. É conteúdo de saúde humana, não de biodiversidade."}
+      ]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 327, "canonical_topic_id": 2513},
+      "expected": {"relation_type": "secondary", "review_status": "published"},
+      "changes": {"relation_type": "primary"},
+      "reason": "A questão Q/X 39 menciona explicitamente perda de biodiversidade e exige interpretar o resultado populacional de uma invasão biológica. É uma prática mais direta para a dimensão de biodiversidade do tópico combinado do que o item de insulina; mantém as ocorrências equivalentes e não altera gabarito.",
+      "evidence": [
+        {"locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=16", "detail": "Caderno Q/X 2026, página 16, questão 39: o enunciado relaciona predador exótico, espécies nativas, extinção e perda de biodiversidade e solicita identificar o cenário de sucesso da invasão."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": { "id": 166 },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Funções | Álgebra (todo o conteúdo)",
+        "url": "https://pt.khanacademy.org/math/algebra-home/alg-functions"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado em 2026-10-09 como trilha complementar de teoria e prática para Funções e gráficos na primeira fase da Unicamp 2027. A página direta da Khan Academy apresenta conteúdo em português com seções Aprender e Praticar sobre cálculo de funções, domínio, gráficos, taxa de variação, composição, transformações e inversas. A unidade inclui também subtópicos mais avançados, como funções de duas variáveis e domínio avançado; selecione os itens adequados ao programa, sem tratar a unidade inteira como requisito. A aderência foi conferida com o tópico legado matematica.funcoes-graficos (topics.id=2479) e com o item candidato do programa 2027 ‘Funções’ (curriculum_topics.id=2476). Estrutura textual básica observada na página; teclado, leitor de tela e WCAG não foram auditados. Recomendação somente por link; nenhuma licença de republicação foi inferida nem conteúdo copiado."
+      },
+      "reason": "A unidade é uma fonte direta e específica, com explicações e exercícios nos mesmos subtemas de funções e gráficos que aparecem no programa 2027. O caráter amplo/avançado não impede recomendá-la como suplemento, desde que a ficha limite seu escopo e não a apresente como curso oficial ou cobertura integral obrigatória.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/algebra-home/alg-functions",
+          "detail": "Página direta, título ‘Funções | Álgebra (todo o conteúdo)’. Conteúdo exposto organiza seções Aprender e Praticar e enumera avaliação de função, domínio, interpretação de gráficos, combinação/composição e inversas, além de tópicos avançados. Consultada em 2026-10-09."
+        },
+        {
+          "locator": ".local/content/content.sqlite — PRAGMA foreign_key_list(resource_topics); resource_topics(resource_id=166)",
+          "detail": "Metadados SQLite em modo somente leitura confirmam que resource_topics.topic_id referencia topics.id. O vínculo corrente é topic_id=2479, slug matematica.funcoes-graficos, nome ‘Funções e gráficos’; curriculum_topic_id está NULL. A associação é compatível, sem comparação equivocada com curriculum_topics.id."
+        },
+        {
+          "locator": ".local/content/content.sqlite — curriculum_topics(id=2476)",
+          "detail": "Consulta somente leitura identifica o item oficial candidato da primeira fase 2027 ‘Funções’, sob o currículo correspondente à edição 2027. Evidência de compatibilidade de escopo, não de equivalência integral entre curso e programa."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/topic-scoped-learning-resource-candidates-2026-10-09.jsonl",
+          "detail": "Registro learn-00632e17df15 identifica a mesma URL como material learn-and-practice para o tópico matematica.funcoes-graficos; a decisão editorial acima se baseia também na inspeção direta da página, não apenas no candidato."
+        },
+        {
+          "locator": "https://support.khanacademy.org/hc/en-us/articles/202262954-Can-I-use-Khan-Academy-s-videos-name-materials-links-in-my-project",
+          "detail": "Política oficial consultada em 2026-10-09 permite criar links para materiais no site; reutilização/embutimento de conteúdo tem condições próprias. Esta proposta mantém somente link e metadados, sem copiar ou republicar material."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 169 },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Probabilidade | Estatística e probabilidade",
+        "url": "https://pt.khanacademy.org/math/probability/probability-and-combinatorics-topic"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado em 2026-10-09 somente como trilha complementar de teoria e prática para Contagem e probabilidade na primeira fase da Unicamp 2027. Na página direta da Khan Academy, as unidades 7 ‘Probabilidade’ e 8 ‘Contagem, permutações e combinações’ incluem explicações e prática de espaço amostral, eventos, probabilidade condicional e contagem. O curso completo tem 16 unidades e também cobre inferência estatística avançada; esses conteúdos adicionais não são apresentados como necessários para a prova. Relação conferida com o tópico legado matematica.contagem-probabilidade (topics.id=2480) e o item candidato 2027 ‘Princípios de contagem e probabilidade’ (curriculum_topics.id=2478). Estrutura textual básica e seções da unidade observadas; teclado, leitor de tela e WCAG não foram auditados. Recomendação somente por link; nenhuma licença de republicação foi inferida nem conteúdo copiado."
+      },
+      "reason": "As unidades identificadas na página-fonte dão suporte direto a teoria e prática para o tópico 2027. O curso completo é mais amplo que a prova, mas a nota delimita com precisão as unidades pertinentes e evita endossar inferência estatística avançada como parte necessária da trilha.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/probability/probability-and-combinatorics-topic",
+          "detail": "Página direta ‘Probabilidade | Estatística e probabilidade’: a unidade 7 aborda probabilidade simples/composta, eventos dependentes, probabilidade condicional, explicações e prática; a unidade 8 trata contagem, permutações e combinações. O curso também contém unidades de inferência avançada, explicitamente excluídas do escopo recomendado. Consultada em 2026-10-09."
+        },
+        {
+          "locator": ".local/content/content.sqlite — PRAGMA foreign_key_list(resource_topics); resource_topics(resource_id=169)",
+          "detail": "Metadados SQLite em modo somente leitura confirmam que resource_topics.topic_id referencia topics.id. O vínculo corrente é topic_id=2480, slug matematica.contagem-probabilidade, nome ‘Contagem e probabilidade’; curriculum_topic_id está NULL. A associação é compatível, sem comparação equivocada com curriculum_topics.id."
+        },
+        {
+          "locator": ".local/content/content.sqlite — curriculum_topics(id=2478)",
+          "detail": "Consulta somente leitura identifica o item oficial candidato da primeira fase 2027 ‘Princípios de contagem e probabilidade’, no currículo da edição 2027. A evidência sustenta o recorte complementar, não a cobertura completa do curso."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/topic-scoped-learning-resource-candidates-2026-10-09.jsonl",
+          "detail": "Registro learn-ebccbdaa30d7 identifica a mesma URL como learn-and-practice para matematica.contagem-probabilidade; a decisão se baseia também na inspeção direta da página-fonte."
+        },
+        {
+          "locator": "https://support.khanacademy.org/hc/en-us/articles/202262954-Can-I-use-Khan-Academy-s-videos-name-materials-links-in-my-project",
+          "detail": "Política oficial consultada em 2026-10-09 permite link para os materiais no site e distingue isso de reutilizar/embutir conteúdo. A proposta mantém somente link e metadados, sem copiar ou republicar material."
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "table": "resources",
+      "key": { "id": 174 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: duas das quatro questões dependem de imagens sem descrição acessível suficiente, incluindo cartaz e tirinha; conteúdo necessário à interpretação não foi conferido independentemente. A lista é só prática suplementar.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-redacao/exercicios-sobre-texto-contexto.htm",
+          "detail": "Página-fonte identificada no exame direto. Q2 depende da mensagem visual do cartaz e Q4 da linguagem visual de uma tirinha; as descrições observadas não expõem esse conteúdo."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-audits-batch-2026-10-09.jsonl",
+          "detail": "Auditoria de 2026-10-09: quatro itens, gabaritos A/D/C/C; resultado remain_in_review por dependências visuais sem alternativa textual adequada; direitos limitados a link."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 179 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: Q3 admite duas alternativas verdadeiras; Q4 depende de tabela em imagem sem texto alternativo e a afirmação métrica da explicação não foi resolvida. Aderência apenas complementar a gêneros literários.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-literatura/exercicios-sobre-generos-literarios.htm",
+          "detail": "Página direta da lista; o registro de auditoria identifica ambiguidade de resposta em Q3 e dependência essencial da tabela visual em Q4."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resources-174-179-240-parallel-audits-2026-10-09.jsonl",
+          "detail": "Revisão de 2026-10-09 recomenda manter em revisão; também pede verificação confiável da afirmação sobre hexâmetro/pentâmetro associada à Elegia 1938."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 205 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: embora as figuras tenham descrições editoriais propostas, elas não foram adicionadas ao site de origem; além disso, Q8 inverte a relação entre escala grande/pequena e Q9 generaliza incorretamente as unidades de coordenadas. São erros conceituais materiais para uma lista de estudo.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia-do-brasil/exercicios-sobre-cartografia.htm",
+          "detail": "Página direta da lista de cartografia. As notas visuais locais descrevem figuras, mas não constituem alternativas textuais publicadas no recurso externo."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-205-cartography-audit-2026-10-09.jsonl",
+          "detail": "Auditoria item a item: Q8 tem explicação invertida sobre escala cartográfica; Q9 restringe indevidamente coordenadas a graus/minutos/segundos. Q2, Q10 e Q11 têm descrições visuais somente como notas editoriais."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 502 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: embora os quatro itens tenham sido revisados e sejam pertinentes à introdução celular, os três itens de resposta única expõem caixas de seleção, em conflito com a instrução. É um problema de interação/acessibilidade observado, não uma declaração de conformidade WCAG.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/biologia-ensino-medio/x008af9690f00e6cd:celulas/x008af9690f00e6cd:introducao-as-celulas/e/intro-to-cells",
+          "detail": "Exercício direto da Khan Academy, com quatro problemas. A auditoria registrou checkbox nos três enunciados que pedem uma resposta; o item multisseleção final é coerente com as caixas."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-editorial-review-khan-intro-cells-practice-followup-2026-10-09.jsonl",
+          "detail": "Follow-up confirma conteúdo pertinente, mas mantém recurso e acessibilidade em revisão por incompatibilidade instrução/controle; teclado e leitor de tela não foram testados."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 514 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: Q4 identifica bromo como ‘B’ em vez de ‘Br’; Q6 chama Al3+ de cátion monovalente apesar da carga +3. Os gabaritos observados não eliminam os erros explicativos.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-ligacoes-ionicas.htm",
+          "detail": "Página direta de exercícios de ligação iônica; defeitos materiais de símbolo químico em Q4 e valência em Q6 descritos na auditoria."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-514-ionic-bonds-audit-2026-10-09.jsonl",
+          "detail": "Todas as seis explicações foram expandidas; resultado review_pending. A própria auditoria recomenda manter o recurso e a relação em revisão até correção dos dois defeitos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 520 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: a auditoria identifica explicações contraditórias/insuficientes em Q7 e Q9 e convenções de transcrição regional não declaradas em múltiplas questões (Q2, Q3, Q5, Q10 e Q11). Aderência temática não resolve esses pontos.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-fonemas.htm",
+          "detail": "Página direta de prática sobre fonemas; apontamentos referem-se aos enunciados e explicações específicos listados no registro de auditoria."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-520-phonemes-audit-2026-10-09.jsonl",
+          "detail": "As 12 explicações foram abertas; texto indica ambiguidade/justificativa insuficiente em Q7, contradição conceitual em Q9 e convenções regionais ausentes em cinco itens."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 523 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: Q11 não tem alternativa correta como redigida; Q3, Q5, Q8, Q9 e Q12 dependem de fórmulas, gráficos ou alternativas expostos somente como imagens sem equivalente textual acessível. Nenhum texto/figura foi reconstruído ou substituído.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcoes-trigonometricas.htm",
+          "detail": "Página direta de exercícios de funções trigonométricas; para sin(x) em [0,2π], as afirmações II e III citadas em Q11 são ambas falsas, embora a questão peça identificar uma única afirmação falsa."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-audits-batch-2026-10-09.jsonl",
+          "detail": "Auditoria completa de 12 exercícios mantém o recurso em revisão por Q11 inválida e conteúdo matemático essencial de cinco questões sem equivalente acessível."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 543 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: a auditoria confirmou identidade e escopo estreito sobre grupos da tabela periódica, mas não assistiu à aula completa nem verificou precisão detalhada, legendas ou acessibilidade. Metadados e duração não bastam para recomendá-la como teoria revisada.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=tT-jm2Cfsf0",
+          "detail": "Vídeo identificado como aula de 11:51 sobre grupos da tabela periódica; não há na evidência uma revisão do conteúdo integral ou das legendas."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-editorial-review-khan-periodic-groups-2026-10-08.jsonl",
+          "detail": "Revisão existente mantém editorial_status em review e accessibilityStatus unknown; não infere aprovação a partir da disponibilidade no YouTube."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 544 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: o exemplo de decaimento radioativo contradiz a fórmula e confunde taxa absoluta e relativa; há também descrições não informativas para diagramas e embeds. O erro não foi corrigido na fonte.",
+      "evidence": [
+        {
+          "locator": "https://betterexplained.com/articles/an-intuitive-guide-to-exponential-functions-e/",
+          "detail": "Artigo direto apresenta M(t)=10e^(-t), mas a narrativa descrita na auditoria não acompanha o resultado numérico nem a meia-vida implícita na fórmula."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-editorial-review-betterexplained-exponential-e-2026-10-08.jsonl",
+          "detail": "Revisão editorial documenta a inconsistência quantitativa, a confusão entre kg/ano e taxa relativa e problemas de nomes de imagens/frames; mantém em review."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 547 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar: o artigo generaliza incorretamente a relação entre equações com quadrados e o teorema de Pitágoras e atribui uma conclusão de complexidade de quicksort que não decorre do teorema; há figuras/frames com rótulos insuficientes.",
+      "evidence": [
+        {
+          "locator": "https://betterexplained.com/articles/surprising-uses-of-the-pythagorean-theorem/",
+          "detail": "Artigo direto usado como material de teoria; a auditoria identificou analogias sem as ressalvas matemáticas necessárias para recomendação não acompanhada."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-editorial-review-betterexplained-pythagorean-2026-10-08.jsonl",
+          "detail": "Revisão confere a passagem sobre quicksort com referência técnica e mantém em review por generalizações enganosas e acessibilidade de imagens/frames."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 549 },
+      "expected": { "editorial_status": "review" },
+      "reason": "Não aprovar neste lote: o artigo é teoria suplementar pertinente, mas usa figuras com nomes genéricos/não descritivos e requer uma ressalva editorial sobre a mudança de notação e o exemplo com raízes complexas. A revisão existente não registra que essas lacunas foram resolvidas no recurso ou na ficha.",
+      "evidence": [
+        {
+          "locator": "https://betterexplained.com/articles/quadratic-formula/",
+          "detail": "Artigo direto sobre fórmula quadrática; a inspeção anterior encontrou exemplo trabalhado, mudança de notação ao normalizar o coeficiente e exemplo com raízes complexas."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-editorial-review-betterexplained-quadratic-2026-10-08.jsonl",
+          "detail": "Revisão o descreve como suplemento opcional em inglês e ainda aponta nomes não descritivos em diagramas; não há aprovação final registrada."
+        }
+      ]
+    }
+  ],
+  "summary": "Lote revisado: 2 propostas de publicação e 11 recursos mantidos bloqueados por razões específicas. Corrigi o erro de leitura das chaves: resource_topics.topic_id referencia topics.id, não curriculum_topics.id. A consulta das FKs e dos rótulos confirmou que 166 já se vincula a matematica.funcoes-graficos e 169 a matematica.contagem-probabilidade; nenhum vínculo precisa ser corrigido. As duas propostas se limitam a recomendações complementares com escopo selecionado e nota explícita sobre conteúdo avançado. Os bloqueios restantes apoiam-se em falhas de conteúdo, dependência visual sem descrição suficiente, erro de interação ou verificação incompleta documentada nos respectivos registros. Os recursos 182, 222, 226, 488, 496 e 519 já estão published e têm auditorias favoráveis; foram excluídos porque não satisfazem expected.editorial_status='review'. Nenhuma licença de republicação é inferida; as propostas para Khan Academy mantêm somente link e metadados. A consulta textual direta mostrou títulos/seções e agrupamentos de aprendizagem/prática, mas teclado, leitor de tela e WCAG não foram testados. Somente leituras SQLite em modo read-only foram realizadas; não houve escrita no banco. Lote direcionado, não alegação de revisão exaustiva de todo o catálogo."
+}

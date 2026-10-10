@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "package_id": "unicamp-2027-sciences-hold-corrections-2026-10-10",
+  "purpose": "Propostas versionadas de revisão para tratar holds editoriais em microaulas de Ciências. São patches para validação automática e amostragem editorial; não são parecer independente nem aprovação.",
+  "editorial_notice": "Todas as alterações permanecem em review. O programa oficial delimita os assuntos, mas os exemplos e explicações são conteúdo editorial próprio e ainda precisam de validação.",
+  "write_policy": {
+    "sqlite_modified": false,
+    "existing_files_modified": false,
+    "apply_ready": false,
+    "review_status": "review"
+  },
+  "revisions": [
+    {
+      "curriculum_topic_id": 2501,
+      "supersedes_version": "1.3.2",
+      "editorial_version": "1.3.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Torna explícito que esta microaula é um recorte, não cobertura integral de Mecânica, e conecta o estudo às demais partes do programa sem alegar que já foram ensinadas aqui.",
+      "hold_addressed": [
+        "Escopo parcial da microaula identificado para o estudante.",
+        "Continuidade com os demais itens oficiais de Mecânica explicitada sem os substituir por uma alegação de cobertura."
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "append": "\n\n**Escopo desta etapa.** Esta microaula aprofunda vetores, impulso, gravitação e algumas conexões com energia e fluidos; ela não substitui o estudo separado de todos os itens de Mecânica do programa. Na sequência, trate explicitamente cinemática em uma dimensão, leis de Newton e atrito, torque e equilíbrio, órbitas e leis de Kepler, conservação da quantidade de movimento, trabalho e potência e hidrostática. Em cada etapa, declare referencial, hipóteses e unidades; não conclua que um tópico está dominado apenas por ter aparecido nesta introdução."
+        },
+        {
+          "type": "summary",
+          "append": "\n\n**Limite do resumo:** os procedimentos desta aula são um ponto de partida. Confira no roteiro se as etapas específicas de cinemática, dinâmica, equilíbrio, gravitação orbital, energia e fluidos também foram estudadas e praticadas."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "supersedes_version": "1.2.2",
+      "editorial_version": "1.2.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Delimita as condições dos modelos de onda e lente e explicita a convenção de sinais usada, sem estendê-la indevidamente a situações não desenvolvidas.",
+      "hold_addressed": [
+        "Definições operacionais e hipóteses para ondas e interferência explicitadas.",
+        "Convenção de lentes delimitada, incluindo o caso de lente divergente com objeto real; objetos virtuais e sistemas de lentes ficam fora deste exemplo."
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "append": "\n\n**Definições e limites dos modelos.** Em uma onda periódica, amplitude mede o afastamento máximo em relação ao equilíbrio, período é o tempo de um ciclo, frequência é o número de ciclos por tempo e comprimento de onda é a distância entre pontos consecutivos em mesma fase; vale T=1/f e v=λf. Na interferência descrita acima, as fontes precisam ser coerentes (mesma frequência e diferença de fase estável); o cancelamento ideal também pressupõe amplitudes iguais. Para lentes, 1/f=1/p+1/p′ é usada aqui no modelo de lente delgada e raios paraxiais. Mantendo a convenção declarada, objeto real tem p>0, lente convergente f>0 e divergente f<0; para um objeto real diante de lente divergente, a imagem é virtual e p′<0. Não misture essa convenção com tabelas que adotem sinais diferentes. Objetos virtuais, associações de lentes e aberrações não são resolvidos nesta microaula."
+        },
+        {
+          "type": "summary",
+          "append": "\n\n**Conferência de escopo:** antes de usar a equação de lentes, identifique se o objeto é real, o tipo de lente e a convenção de sinais; antes de aplicar máximos ou mínimos de interferência, verifique coerência, fase inicial e a hipótese de amplitudes iguais para o mínimo ideal."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "supersedes_version": "1.3.1",
+      "editorial_version": "1.3.2",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Reconcilia a divergência de versão: acrescenta à versão efetivamente presente no SQLite a relação entre temperatura absoluta e energia cinética translacional média, com exemplo 300 K→600 K. A aprovação anterior da proposta 1.3.2 não é herdada; este novo patch continua em revisão.",
+      "hold_addressed": [
+        "Energia cinética translacional média das partículas relacionada à temperatura absoluta para gás ideal clássico.",
+        "Exemplo numérico mostra que dobrar a temperatura em kelvin dobra essa energia média, sem confundi-la com energia interna total."
+      ],
+      "sections": [
+        {
+          "type": "theory",
+          "append": "\n\n**Temperatura e energia cinética translacional média.** Para partículas de um gás ideal clássico em equilíbrio térmico, a energia cinética translacional média por partícula é ⟨Eₖ⟩=3kBT/2, em que T deve estar em kelvin e kB=1,380649×10⁻²³ J/K. Por mol, ⟨Eₖ⟩=3RT/2. A relação descreve a média translacional por partícula, não a energia interna total de qualquer material; graus de liberdade, interações e desvios do modelo ideal exigem cuidado."
+        },
+        {
+          "type": "example",
+          "append": "\n\n**Efeito da temperatura.** Para uma partícula de gás ideal clássico a 300 K, ⟨Eₖ⟩=(3/2)(1,380649×10⁻²³)(300)≈6,21×10⁻²¹ J. A 600 K, ⟨Eₖ⟩≈1,24×10⁻²⁰ J: a temperatura absoluta dobrou e a energia cinética translacional média também. Isso não afirma que cada partícula tenha exatamente essa energia, pois se trata de uma média estatística."
+        },
+        {
+          "type": "summary",
+          "append": "\n\nPara comparar energias cinéticas translacionais médias pelo modelo de gás ideal clássico, use a razão das temperaturas absolutas: ⟨Eₖ,2⟩/⟨Eₖ,1⟩=T₂/T₁. Converta para kelvin e não confunda média por partícula com energia total do sistema."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "supersedes_version": "1.1.2",
+      "editorial_version": "1.1.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Acrescenta exemplos contrastivos de ligação iônica, covalente molecular e metálica e relaciona o modelo a propriedades sem generalizar para toda substância.",
+      "hold_addressed": [
+        "Exemplo de NaCl para modelo iônico e condutividade dependente do estado.",
+        "Exemplos de CO2 e H2O para ligação covalente, geometria e polaridade molecular.",
+        "Exemplo de cobre metálico para elétrons deslocalizados e propriedades típicas, com ressalva de contexto."
+      ],
+      "sections": [
+        {
+          "type": "example",
+          "append": "\n\n**Modelos de ligação e propriedades.** No NaCl sólido, a rede é formada por íons Na⁺ e Cl⁻; o sólido não conduz como um metal porque os íons não se deslocam livremente pela rede. Fundido ou dissolvido em água, há íons móveis e pode haver condução. Em CO₂, cada ligação C=O é polar, mas a geometria linear e simétrica faz os dipolos se cancelarem; em H₂O, as ligações O–H são polares e a geometria angular deixa dipolo resultante. No cobre sólido, elétrons deslocalizados ajudam a explicar a condução elétrica e térmica e a maleabilidade típicas dos metais. São modelos explicativos: estrutura, temperatura, composição e estado físico influenciam as propriedades observadas."
+        },
+        {
+          "type": "summary",
+          "append": "\n\nAo justificar uma propriedade, ligue o modelo à mobilidade das partículas e à estrutura: íons móveis em sal fundido/solução, dipolos e geometria em moléculas, ou elétrons deslocalizados no metal. Evite concluir que toda substância com uma mesma ligação terá propriedades idênticas."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "supersedes_version": "1.3.2",
+      "editorial_version": "1.3.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Acrescenta uma pilha Zn/Cu sob condições padrão, um par de isômeros constitucionais e aplicações introdutórias de biomoléculas e enzimas, mantendo os limites do escopo explícitos.",
+      "hold_addressed": [
+        "Célula Zn/Cu com semirreações, fluxo de elétrons e potencial padrão calculado a partir de potenciais de redução.",
+        "Isomeria constitucional exemplificada por etanol e éter dimetílico, ambos C2H6O.",
+        "Biomoléculas e função catalítica de enzimas exemplificadas sem afirmar que todas são proteínas ou que não dependem do meio."
+      ],
+      "sections": [
+        {
+          "type": "example",
+          "append": "\n\n**Pilha Zn/Cu em condições padrão.** Considere Zn(s)|Zn²⁺(aq, 1 mol/L)||Cu²⁺(aq, 1 mol/L)|Cu(s), a 25 °C, com eletrodos e soluções nas condições padrão adotadas para os potenciais tabulados. Como E°red(Cu²⁺/Cu)=+0,34 V e E°red(Zn²⁺/Zn)=−0,76 V, o zinco é oxidado (ânodo): Zn→Zn²⁺+2e⁻; o cobre(II) é reduzido (cátodo): Cu²⁺+2e⁻→Cu. A reação global é Zn+Cu²⁺→Zn²⁺+Cu e E°cel=0,34−(−0,76)=+1,10 V. Os elétrons percorrem o circuito externo do Zn ao Cu; a ponte salina mantém a eletroneutralidade por migração de íons. O valor é padrão: condições diferentes podem alterar o potencial da célula.\n\n**Isomeria e biomoléculas.** Etanol (CH₃CH₂OH) e éter dimetílico (CH₃OCH₃) têm fórmula molecular C₂H₆O, mas conectividades e funções diferentes; são isômeros constitucionais. A glicose é um carboidrato; triglicerídeos são lipídios de reserva; proteínas são cadeias de aminoácidos. Muitas enzimas são proteínas que catalisam reações ao oferecer um caminho de menor energia de ativação; atividade e estrutura dependem de condições como temperatura e pH. Existem também RNAs catalíticos, portanto “enzima” não significa necessariamente “proteína”."
+        },
+        {
+          "type": "summary",
+          "append": "\n\nNa pilha padrão, calcule E°cel usando potenciais de redução e identifique oxidação no ânodo e redução no cátodo; não confunda potencial padrão com valor em qualquer concentração. Para isomeria, compare fórmula molecular e conectividade. Para biomoléculas, associe exemplos à classe e descreva enzimas como catalisadores sem ignorar a dependência de condições e a existência de RNAs catalíticos."
+        }
+      ]
+    }
+  ],
+  "followups": []
+}

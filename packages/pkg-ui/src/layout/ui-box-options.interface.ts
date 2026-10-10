@@ -6,7 +6,7 @@ import type { ElementType, ReactNode } from "react";
 
 export interface UiBoxOptions<Component extends ElementType> {
     align?: UiBoxAlignment;
-    columns?: 2;
+    columns?: 1 | 2;
     children?: ReactNode;
     className?: string;
     component?: Component;

@@ -12,20 +12,21 @@ export function GoalFormTitleField(props: GoalFormTitleFieldProps) {
 
   return (
     <form.Field
-      asyncDebounceMs={350}
       name="details.title"
       validators={{
-        onBlur: ({ value }) => { return value.trim() ? undefined : "Informe um título."; },
-        onChangeAsync: async ({ value }) => {
-          const normalizedValue = value.trim()
-            .toLocaleLowerCase();
+        onBlur: ({ value }) => {
+          return value.trim() ? undefined : "Informe um título.";
+        },
+        onChange: ({ value }) => {
+          const normalizedValue = value.trim().toLocaleLowerCase();
 
           const alreadyExists = props.existingTitles.some((title) => {
-            return title.trim()
-              .toLocaleLowerCase() === normalizedValue;
+            return title.trim().toLocaleLowerCase() === normalizedValue;
           });
 
-          return alreadyExists ? "Já existe uma meta com este título." : undefined;
+          return alreadyExists
+            ? "Já existe uma meta com este título."
+            : undefined;
         },
       }}
     >
@@ -36,7 +37,9 @@ export function GoalFormTitleField(props: GoalFormTitleFieldProps) {
             helperText={field.state.meta.errors.join(", ")}
             label={props.label}
             onBlur={field.handleBlur}
-            onChange={(event) => { return field.handleChange(event.target.value); }}
+            onChange={(event) => {
+              return field.handleChange(event.target.value);
+            }}
             value={field.state.value}
           />
         );

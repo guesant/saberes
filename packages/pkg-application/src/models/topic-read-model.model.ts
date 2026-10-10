@@ -1,3 +1,4 @@
+import type { TopicCurriculumCoverage } from "./topic-curriculum-coverage.interface";
 import type { TopicDetailsReadModel } from "./topic-details-read-model.interface";
 import type { TopicLessonReadModel } from "./topic-lesson-read-model.interface";
 import type { TopicNavigationReadModel } from "./topic-navigation-read-model.interface";
@@ -12,4 +13,5 @@ export interface TopicReadModel {
   questions: TopicQuestionReadModel[];
   related: TopicNavigationReadModel[];
   resources: TopicResourceReadModel[];
+  curriculum?: TopicCurriculumCoverage;
 }

@@ -21,5 +21,12 @@ export function mapAssessmentCatalogCard(row: ContentRow): CatalogCard {
       .join(" · "),
     processName,
     year,
+    ...(Number(row.is_published) === 1
+      ? {}
+      : {
+        editorialStatus: "draft" as const,
+        editorialNote: "Consulta apenas; avaliação não liberada para treino.",
+        availabilityMode: "consultation_only" as const,
+      }),
   };
 }

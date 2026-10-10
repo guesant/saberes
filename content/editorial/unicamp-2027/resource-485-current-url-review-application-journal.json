@@ -1,0 +1,101 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T13:36:52.469308+00:00",
+  "database_before_sha256": "aff7fb7f59015305ad9aa979c8ade41f19c53267c876a22e3850853e7806967c",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 675
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 675,
+        "title": "Geometria: ângulos e polígonos — Matemática EF 7º Ano",
+        "url": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+        "provider": "Khan Academy",
+        "kind": "web",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "rights_note": "Link e metadados apenas. A licença deste recurso específico não foi confirmada; não copiar nem redistribuir conteúdo."
+      },
+      "reason": "Registrar a página específica como fonte primária do recurso, separada do registro genérico da plataforma. O acesso público e a utilidade didática foram verificados, mas a licença do item permanece não confirmada.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+          "detail": "Rechecagem em 10/10/2026: resposta HTTP 200. A página apresenta uma unidade de ângulos e polígonos com conteúdo de aprendizagem e exercícios/práticas, compatível como apoio introdutório de geometria plana."
+        },
+        {
+          "locator": "https://support.khanacademy.org/hc/en-us/articles/202262954-Can-I-use-Khan-Academy-s-videos-name-materials-links-in-my-project",
+          "detail": "A política da Khan Academy permite apontar links, mas não concede licença geral para redistribuir materiais; o registro permanece link_only."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 485
+      },
+      "expected": {
+        "editorial_status": "review",
+        "availability_mode": "consultation_only",
+        "source_document_id": null,
+        "editorial_note": "A URL cadastrada para a unidade de ângulos e polígonos retornou uma página explicitamente inexistente na inspeção em navegador de 10/10/2026. Manter o registro visível para consulta, mas não tratá-lo como material de aprendizagem aprovado até corrigir o destino. A licença de reutilização não foi confirmada; somente link e metadados."
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "source_document_id": 675,
+        "editorial_note": "Unidade gratuita de nível introdutório sobre ângulos, polígonos e relações geométricas; usar como complemento de geometria plana, não como cobertura integral do programa da Unicamp. Licença de reutilização não confirmada; somente link e metadados."
+      },
+      "reason": "A URL antes reportada como inexistente responde HTTP 200 na revalidação atual. O conteúdo da página confirma explicações e prática de ângulos/polígonos. Publicar somente como complemento introdutório, sem alegar cobertura total do tópico nem permissão de reprodução.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+          "detail": "Página atual acessível (HTTP 200), com tópicos de ângulos em retas paralelas, triângulos e polígonos, além de áreas de aprendizagem e prática."
+        },
+        {
+          "locator": "sqlite://canonical_topic_legacy_topics/2504/2547",
+          "detail": "O tópico legado 2547 ‘Geometria plana’ mapeia ao canônico 2504; o tópico curricular 2480 da primeira fase 2027 também se associa primariamente ao canônico 2504."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 485,
+        "topic_id": 2547,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "review_note": "Inspeção em navegador em 10/10/2026 encontrou página inexistente na URL cadastrada. Relação conceitual plausível, mas o recurso não pode ser usado como aprendizagem até corrigir/verificar o destino. Manter visível com estado em revisão."
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Relação editorial: unidade de ângulos e polígonos é pertinente como base introdutória de Geometria plana; não representa cobertura integral do tópico da primeira fase. URL revalidada em 10/10/2026."
+      },
+      "reason": "A página revalidada contém os conceitos nomeados no recurso e corresponde ao tópico legado de Geometria plana, que mapeia ao conceito canônico e tópico-alvo da edição 2027. Relação editorial, não classificação oficial.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+          "detail": "A página atual inclui estudo de relações entre ângulos, triângulos e ângulos de polígonos, com exercícios."
+        },
+        {
+          "locator": "sqlite://canonical_topic_legacy_topics/2504/2547",
+          "detail": "Mapeamento persistido no SQLite: tópico legado 2547 Geometria plana → canônico 2504; programa 2027 tópico curricular 2480 está mapeado ao mesmo conceito."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T133652479918Z.sqlite",
+  "database_after_sha256": "6101ff6d4edfd39de8b39ebb75616cf5b131fd80c9fb38f26fe26f452e27e4fd"
+}

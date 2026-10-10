@@ -1,0 +1,203 @@
+{
+  "format": "saberes-unicamp-2027-sciences-second-editorial-review-v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "curriculum_topic_id_range": [2496, 2511],
+    "stage": "Vestibular Unicamp 2027 — primeira fase",
+    "compared_files": [
+      "content/editorial/unicamp-2027/lesson-audit-sciences-2026-10-10.json",
+      "content/unicamp-2027/lessons.json",
+      "content/editorial/unicamp-2027/lesson-revisions.json",
+      "content/editorial/unicamp-2027/lessons.json"
+    ],
+    "sqlite_check": "Read-only cross-check of lesson/topic links, materialized versions and statuses; no database changes made.",
+    "decision_meaning": "publish means the reviewed lesson text is suitable for editorial publication after normal workflow checks; it does not change publication status. revise means apply the exact correction(s) before publication."
+  },
+  "official_source": {
+    "source_document_id": 148,
+    "title": "Programa das Provas — Vestibular 2027",
+    "institution": "Comvest / Unicamp",
+    "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+    "checksum": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+    "pages_checked": [
+      {"printed_page": 11, "scope": "Biologia — bases celulares, hereditariedade, evolução e ambiente"},
+      {"printed_page": 12, "scope": "Biologia — biodiversidade e saúde; Física — fundamentos, mecânica, astronomia, termodinâmica"},
+      {"printed_page": 13, "scope": "Física — ondas, óptica, eletricidade e magnetismo; Química — materiais e estrutura atômica"},
+      {"printed_page": 14, "scope": "Química — ligações, transformações, cinética, energia, equilíbrio, eletroquímica e orgânica"}
+    ],
+    "verification": "Localizado pelo vínculo source_documents.id=148 e content_assets.id=263 no SQLite; PDF oficial baixado a /tmp e páginas 11–14 conferidas visualmente. O arquivo temporário não foi adicionado ao repositório."
+  },
+  "method": "Revisão independente de cobertura em relação ao programa oficial, correção conceitual e aritmética, hipóteses declaradas e suficiência do raciocínio nos exemplos. A avaliação considera as revisões/followups mais recentes, não apenas o texto-base. Associações editoriais e explicações não são atribuídas à Comvest.",
+  "items": [
+    {
+      "curriculum_topic_id": 2496,
+      "topic": "Bases moleculares e celulares da vida",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "A proposta corrige a ausência de biomoléculas, mas a teoria substituta reduz a cobertura das organelas a núcleo, mitocôndria e cloroplasto; o programa exige estrutura e função das organelas em células vegetais e animais. O conteúdo mais completo existe no followup 1.2.0 de lesson-revisions.json, mas não está preservado explicitamente na substituição proposta.",
+          "evidence": "doc 148, p. 11; proposal replacement_sections.theory para 2496; followup 1.2.0 de curriculum_topic_id 2496.",
+          "exact_correction": "Acrescentar à teoria substituta: ‘Ribossomos sintetizam proteínas; o retículo endoplasmático rugoso participa da síntese e do transporte de proteínas, e o liso da síntese de lipídios e da desintoxicação; o complexo golgiense modifica e direciona moléculas; lisossomos realizam digestão intracelular; vacúolos armazenam substâncias e, em vegetais, ajudam no equilíbrio osmótico; parede de celulose e cloroplastos ocorrem em células vegetais, enquanto células animais não têm parede celular nem cloroplastos. Água é solvente e participa de reações; íons contribuem para equilíbrio osmótico e processos celulares.’ Manter também a distinção já correta entre número de cromossomos e quantidade de DNA no exemplo."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2497,
+      "topic": "Hereditariedade",
+      "decision": "publish",
+      "problems": [],
+      "publish_basis": "A proposta 1.3.0 resolve dois exemplos verificáveis: Aa×Aa resulta em 1/4 aa sob as hipóteses declaradas; a fita codificante 5′-ATG GAA TAA-3′ corresponde a mRNA 5′-AUG GAA UAA-3′ e a dois aminoácidos antes do códon de parada. A teoria cobre segregação, padrões de herança, biotecnologia e doenças sem confundir predisposição com destino. Conferir apenas se a tabela do código genético for apresentada como dado de apoio ao estudante."
+    },
+    {
+      "curriculum_topic_id": 2498,
+      "topic": "Origem e evolução da vida",
+      "decision": "publish",
+      "problems": [],
+      "publish_basis": "A revisão 1.2.0 separa origem da vida de evolução de populações e cobre variação, seleção, deriva, fluxo gênico, especiação, evidências e intervenção humana. O exemplo de resistência microbiana atribui seleção à diferença de reprodução entre variantes, sem sugerir mutação dirigida; não há erro conceitual ou aritmético impeditivo."
+    },
+    {
+      "curriculum_topic_id": 2499,
+      "topic": "O ambiente e a vida",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "O exemplo do corredor ecológico recomenda comparar indicadores, mas não fornece uma situação com dados nem conclui uma interpretação; portanto, não é um exemplo efetivamente resolvido. O followup 1.2.0 amplia corretamente dinâmica populacional e eutrofização, mas também não resolve esse exemplo.",
+          "evidence": "doc 148, p. 11; lesson-revisions.json 1.1.0 e followup 1.2.0 de curriculum_topic_id 2499; replacement_sections proposto no primeiro audit.",
+          "exact_correction": "Substituir a seção de exemplo por: ‘Exemplo hipotético: em um trecho de rio, antes do aumento de fertilizantes na bacia, a concentração de nitrato era 1 mg/L, o oxigênio dissolvido 8 mg/L e não havia floração intensa de algas. Depois, os valores medidos foram 5 mg/L e 3 mg/L, com floração. O aumento de nutrientes junto da queda de oxigênio é compatível com eutrofização: nutrientes favorecem algas; a decomposição da biomassa consome oxigênio. A comparação sugere essa hipótese, mas não prova sozinha causalidade; é preciso verificar outras fontes, período, vazão e locais de controle. Uma resposta completa identifica mecanismo, indicador, limite da inferência e ação possível, como reduzir o aporte de nutrientes e monitorar água e biodiversidade.’ Identificar os números como hipotéticos."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "topic": "Biodiversidade e saúde humana",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "A proposta enumera grupos biológicos e métodos contraceptivos, mas não diferencia mecanismos suficientes para aplicar o conhecimento; concepção e hormônios reprodutivos ficam apenas mencionados. O cenário de vírus respiratório apresenta medidas, porém não resolve uma pergunta ou compara explicitamente agente, via e prevenção.",
+          "evidence": "doc 148, pp. 11–12; proposal replacement_sections.theory e .example para 2500; revisão 1.2.0 de curriculum_topic_id 2500.",
+          "exact_correction": "Acrescentar à teoria: ‘Bactérias são procariontes e podem causar doença ou integrar microbiotas; vírus só se replicam em células; protozoários são eucariontes unicelulares; fungos obtêm nutrientes por absorção; plantas e algas realizam fotossíntese em diferentes linhagens; animais obtêm alimento por ingestão. Na reprodução humana, FSH e LH participam da regulação ovariana; estrogênio e progesterona variam ao longo do ciclo, e a fecundação pode ocorrer quando um espermatozoide encontra o ovócito. Métodos contraceptivos incluem barreira, hormonais e dispositivos intrauterinos; preservativos também reduzem o risco de muitas ISTs, sem proteção absoluta.’ Substituir o exemplo por uma pergunta e resolução: ‘Se uma infecção é transmitida por gotículas/aerossóis, antibiótico não age contra o vírus; ventilação reduz concentração de partículas, vacinação pode reduzir doença grave e preservativo não é a medida pertinente a essa via. Identifique agente, via e intervenção correspondente; diagnóstico e cuidado devem seguir orientação de serviço de saúde.’"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "topic": "Fundamentos da Física e Mecânica",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "O cálculo do carrinho está correto (a=2 m/s², v=6 m/s, ΔK=W=36 J) e a pressão manométrica a 2 m resulta em 19,6 kPa. Contudo, a proposta ainda não ensina impulso/quantidade de movimento nem cinemática vetorial em duas dimensões, ambos explicitamente no programa. O escopo combina muitos subtemas e o exemplo não pode representar cobertura deles.",
+          "evidence": "doc 148, p. 12; proposal replacement_sections.theory e .example para 2501; versões 1.2.1 em lesson-revisions.json e SQLite.",
+          "exact_correction": "Acrescentar à teoria: ‘A quantidade de movimento é vetor p=mv. O impulso da força resultante é J=∫Fdt e corresponde a Δp; para força constante, J=FΔt. Em duas dimensões, decomponha velocidade e aceleração em eixos perpendiculares e aplique as equações a cada componente; no lançamento horizontal ideal, v_x permanece constante e a_y=−g.’ Acrescentar exemplo resolvido: ‘Uma bola de 0,20 kg muda a velocidade horizontal de +10 m/s para −5 m/s em 0,10 s. Δp=m(v_f−v_i)=0,20(−5−10)=−3,0 kg·m/s; a força média horizontal é Δp/Δt=−30 N. O sinal indica sentido oposto ao eixo positivo e o módulo é 30 N.’"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2502,
+      "topic": "Astronomia",
+      "decision": "publish",
+      "problems": [],
+      "publish_basis": "A proposta corrige lacunas de estrutura da Terra, rotação/translação, escala cósmica e luminosidade versus brilho aparente. O exemplo de Kepler é resolvido corretamente: para a=4 UA no mesmo sistema, T²=4³=64 anos² e T=8 anos. As ressalvas sobre absorção/distância e sobre o modelo de Kepler são pertinentes."
+    },
+    {
+      "curriculum_topic_id": 2503,
+      "topic": "Calorimetria e termodinâmica",
+      "decision": "publish",
+      "problems": [],
+      "publish_basis": "A versão mais recente cobre equilíbrio térmico, primeira lei com convenção explícita, gás ideal como aproximação, calor específico e calor latente. A expansão a pressão constante converte 100 kPa·1 L em 100 J corretamente; o followup da rocha calcula Q=mcΔT=−140 kJ e interpreta o sinal como perda de energia pela rocha."
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "topic": "Óptica e ondas",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "As afirmações conceituais da revisão 1.2.0 são consistentes, mas o exemplo é uma coleção de conclusões qualitativas; não demonstra uma resolução numérica de v=λf nem de formação de imagem, apesar de esses serem procedimentos centrais e explicitamente cobrados. A condição de interferência também é apresentada sem aplicação a valores.",
+          "evidence": "doc 148, p. 13; lesson-revisions.json 1.1.0 e followup 1.2.0 de curriculum_topic_id 2504.",
+          "exact_correction": "Acrescentar ao exemplo: ‘Uma onda sonora no ar tem frequência 500 Hz; tomando v=340 m/s, λ=v/f=340/500=0,68 m. Para uma lente convergente de distância focal 10 cm e objeto a 30 cm, 1/f=1/p+1/p′; 1/p′=1/10−1/30=1/15 cm⁻¹, então p′=15 cm. Como p′ é positivo na convenção real, a imagem é real; m=−p′/p=−15/30=−0,5, isto é, invertida e com metade da altura do objeto.’ Declarar as convenções de sinais usadas."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2505,
+      "topic": "Eletricidade e magnetismo",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "O exemplo de 12 V e dois resistores em série verifica corrente e quedas de tensão; o cálculo de Q=CV e U=CV²/2 também está correto sob as condições dadas. A proposta de substituição, porém, não inclui fórmula nem aplicação de potência elétrica e não resolve associação de capacitores, embora ambas constem do programa. O followup anterior tem exemplo de potência para resistores, mas a versão substituta não o preserva explicitamente.",
+          "evidence": "doc 148, p. 13; proposal replacement_sections para 2505; lesson-revisions.json followup 1.2.0 para curriculum_topic_id 2505.",
+          "exact_correction": "Acrescentar à teoria: ‘Em resistor ôhmico, P=VI=I²R=V²/R. Capacitores em paralelo têm C_eq=ΣC_i; em série, 1/C_eq=Σ(1/C_i).’ Acrescentar exemplo resolvido: ‘Dois capacitores de 6 μF em série têm C_eq=3 μF; ligados a 12 V, a carga de cada um é Q=C_eqV=36 μC e cada capacitor recebe 6 V se forem iguais. A energia total é U=½C_eqV²=216 μJ. Para dois resistores de 6 Ω em paralelo sob 12 V, cada ramo conduz 2 A, a corrente total é 4 A e P_total=VI=48 W.’"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "topic": "Materiais, estados físicos e soluções",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "As contas propostas de NaCl (0,20 mol/L) e pressão parcial (0,60 atm) estão corretas. A teoria substituta, contudo, só nomeia as leis dos gases por relações verbais e não explicita Avogadro nem resolve essa lei; o rótulo oficial também inclui símbolos/fórmulas, massa molar, difusão, gases reais/liquefação, expressões de concentração, coloides e pressão de vapor. A revisão atual contém parte dessas inclusões, mas a proposta não demonstra que as preserva em material didático utilizável.",
+          "evidence": "doc 148, p. 13; proposal replacement_sections para 2506; lesson-revisions.json followup 1.2.0 para curriculum_topic_id 2506.",
+          "exact_correction": "Acrescentar à teoria: ‘Para quantidade fixa de gás: Boyle, P₁V₁=P₂V₂ a T constante; Gay-Lussac, P₁/T₁=P₂/T₂ a V constante; Charles, V₁/T₁=V₂/T₂ a P constante. Pela lei de Avogadro, a P e T constantes, V/n é constante. Use T em kelvin. Essas relações são limites do modelo ideal; compressão/resfriamento podem liquefazer gases reais.’ Acrescentar: ‘Concentração também pode ser g/L, porcentagem ou fração molar; coloides têm partículas dispersas que espalham luz; pressão de vapor corresponde ao equilíbrio líquido-vapor.’ Incluir exemplo: ‘A 300 K, 2 mol ocupam 10 L; mantendo P e T, 3 mol ocupam V₂=10·3/2=15 L.’"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "topic": "Estrutura atômica e classificação periódica",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "O exemplo de ²³₁₁Na⁺ está correto. A proposta inclui uma equação global simplificada para Rn-222→Pb-206 que conserva A e Z se neutrinos forem omitidos, mas não ensina a lei cinética do decaimento nem resolve meia-vida, conteúdo explícito do programa. Configuração eletrônica e afinidade eletrônica também são citadas sem procedimento/exemplo.",
+          "evidence": "doc 148, p. 13; proposal replacement_sections para 2507; lesson-revisions.json 1.0.4 e followups de curriculum_topic_id 2507.",
+          "exact_correction": "Acrescentar à teoria: ‘Na distribuição por subníveis, preencha na ordem energética indicada pelo diagrama de Aufbau, respeitando Pauli e Hund; para Na (Z=11): 1s² 2s² 2p⁶ 3s¹. Afinidade eletrônica é a variação de energia na adição de elétron a espécie gasosa; informe a convenção de sinal da tabela.’ Acrescentar exemplo resolvido: ‘Uma amostra de 80 mg tem meia-vida de 6 h. Após 12 h passaram-se duas meias-vidas: m=80(1/2)²=20 mg. Para uma emissão alfa, ΔA=−4 e ΔZ=−2; para beta menos, ΔA=0 e ΔZ=+1. Em equação nuclear completa, inclua antineutrino na emissão beta menos quando a notação exigir.’"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2508,
+      "topic": "Transformações dos materiais",
+      "decision": "publish",
+      "problems": [],
+      "publish_basis": "As proporções 1:1:2 em H₂+Cl₂→2HCl e os volumes gasosos sob mesmas condições estão corretos com excesso/completude explicitados. O exemplo acrescentado de 4 g H₂ e 32 g O₂ converte para 2 mol e 1 mol, forma 2 mol (36 g) H₂O e conserva massa. A teoria inclui balanceamento, mol, limitante e rendimento."
+    },
+    {
+      "curriculum_topic_id": 2509,
+      "topic": "Cinética, energia e equilíbrio químico",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "Hess (−50 kJ/mol), pH de HCl 10⁻³ mol/L (aprox. 3) e o critério Qsp>Ksp estão corretos. A proposta não calcula uma constante K nem resolve quantitativamente hidrólise/ácido-base fraco; apenas manda ‘escrever a reação’ e prever o pH. O programa nomeia explicitamente hidrólise e equilíbrio ácido-base, de modo que a lacuna afeta aplicação, não só profundidade opcional.",
+          "evidence": "doc 148, p. 14; proposal replacement_sections para 2509; lesson-revisions.json followup 1.2.0 de curriculum_topic_id 2509.",
+          "exact_correction": "Acrescentar exemplo resolvido de hidrólise: ‘Para solução 0,10 mol/L de acetato de sódio a 25 °C, CH₃COO⁻+H₂O⇌CH₃COOH+OH⁻. Usando K_a(CH₃COOH)=1,8×10⁻⁵ e K_w=1,0×10⁻¹⁴, K_b=K_w/K_a=5,6×10⁻¹⁰. Como x≪0,10, [OH⁻]≈√(K_bC)=7,5×10⁻⁶ mol/L; pOH≈5,12 e pH≈8,88. A aproximação é para solução diluída e 25 °C.’ Em outro exemplo curto, escrever K_c para uma reação balanceada e mostrar como comparar Q com K para determinar o sentido líquido."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "topic": "Eletroquímica e química de compostos orgânicos",
+      "decision": "revise",
+      "problems": [
+        {
+          "problem": "Os cálculos de E°cel=1,10 V e deposição de Cu≈0,39 g estão corretos para rendimento de 100%; a reação de Zn/Cu²⁺ também conserva átomos e carga. A cobertura orgânica permanece majoritariamente enumerativa: faltam exemplos de leitura de fórmulas estrutural/Lewis, distinção de várias funções exigidas, nomenclatura/obtenção de compostos simples e aplicação a biomoléculas/polímeros. O exemplo de álcool/cetona e propeno/polipropileno não cobre esse conjunto.",
+          "evidence": "doc 148, p. 14; proposal replacement_sections para 2510; lesson-revisions.json followups 1.2.0 de curriculum_topic_id 2510.",
+          "exact_correction": "Acrescentar à teoria uma chave de reconhecimento com estruturas: ‘CH₃CH₂Cl é haleto orgânico; CH₃CH₂OH, álcool; CH₃OCH₃, éter; CH₃CHO, aldeído; CH₃COCH₃, cetona; CH₃COOH, ácido carboxílico; CH₃COOCH₂CH₃, éster; CH₃NH₂, amina; CH₃CONH₂, amida; C₆H₅OH, fenol.’ Acrescentar exemplo resolvido: ‘CH₂=CH₂ tem fórmula C₂H₄ e uma ligação dupla C=C; por adição, n CH₂=CH₂→(–CH₂–CH₂–)ₙ. Os átomos do monômero permanecem na unidade repetitiva. Em CH₃COOCH₂CH₃, localizar –COO– entre dois radicais identifica éster, não ácido carboxílico. Proteínas são polímeros de aminoácidos; enzimas são catalisadores biológicos, geralmente proteínas; carboidratos e lipídios têm estruturas e funções distintas.’ Incluir ao menos uma representação de Lewis com pares eletrônicos e não atribuir a ela a mesma informação de conectividade simplificada da fórmula molecular."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2511,
+      "topic": "Interpretação e elaboração de tabelas e gráficos",
+      "decision": "publish",
+      "problems": [],
+      "publish_basis": "A revisão distingue variação absoluta e relativa, tipos de gráfico, escalas e associação versus causalidade. O cálculo de 120 para 150 é (150−120)/120=0,25=25%; as alturas e intervalos propostos para o gráfico de barras são consistentes. A síntese inclui procedimento de leitura e construção."
+    }
+  ],
+  "review_summary": {
+    "editorial_recommendation": "Não publicar os itens marcados revise antes de aplicar as correções exatas. Os itens publish estão aprovados apenas quanto ao conteúdo revisado neste escopo.",
+    "non_goals": [
+      "Não altera SQLite, arquivos de aulas, propostas, status ou snapshot.",
+      "Não declara este conteúdo como oficial da Comvest; o doc 148 é usado somente para validar o programa e a cobertura.",
+      "Não substitui revisão final de linguagem, acessibilidade ou proveniência editorial."
+    ]
+  }
+}

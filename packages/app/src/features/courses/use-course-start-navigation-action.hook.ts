@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCourseItems } from "./get-course-items.function";
+import { getCourseSlug } from "./get-course-slug.function";
 import { getNextCourseItemHref } from "./get-next-course-item-href.function";
 import type { CourseStartNavigationAction } from "./course-start-navigation-action.interface";
 import type { UseCourseStartNavigationActionInput } from "./use-course-start-navigation-action-input.interface";
@@ -21,6 +22,8 @@ export function useCourseStartNavigationAction(
       attempts: input.attempts,
       items: getCourseItems(input.course),
       lessonProgress: input.lessonProgress,
+      courseSlug: getCourseSlug(input.course),
+      assessmentItemsById: input.assessmentItemsById,
     });
 
     if (nextItemHref) {

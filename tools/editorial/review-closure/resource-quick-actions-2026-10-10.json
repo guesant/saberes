@@ -1,0 +1,38 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "summary": "Correção editorial não relacionada a acessibilidade: o resource 485 continua visível e em revisão, mas deixa de ser classificado como material de aprendizagem enquanto a URL comprovadamente retorna página inexistente. Não substitui URL, não aprova conteúdo e não altera a associação temática.",
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 485
+      },
+      "expected": {
+        "title": "Ângulos e polígonos — geometria",
+        "url": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": null,
+        "editorial_status": "review",
+        "editorial_note": "A URL cadastrada para a unidade de ângulos e polígonos retornou uma página explicitamente inexistente na inspeção em navegador de 10/10/2026. Manter o registro visível para consulta, mas não tratá-lo como material de aprendizagem aprovado até corrigir o destino. A licença de reutilização não foi confirmada; somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "availability_mode": "consultation_only"
+      },
+      "reason": "A inspeção visual documentada confirma que a URL não entrega o recurso. O próprio estado editorial atual manda mantê-lo visível, mas não tratá-lo como aprendizagem aprovada; consultation_only implementa essa restrição sem apagar o registro, ocultá-lo, alterar sua URL ou promovê-lo.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/resource-browser-followup-2468-2489-2026-10-10.json",
+          "detail": "Entrada do resource_id 485: título observado ‘Página não encontrada | Khan Academy’; corpo da página diz que o endereço não existe; decisão registrada needs_replacement. A classificação proposta restringe o modo de uso, não afirma adequação nem substitui o destino."
+        },
+        {
+          "locator": "tools/editorial/review-closure/khan-geometry-resource-485-review.json",
+          "detail": "Decisão editorial anterior documenta a mudança de published para review devido à página inexistente e orienta manter o registro visível sem recomendá-lo como aprendizagem até haver substituição verificada."
+        }
+      ]
+    }
+  ]
+}

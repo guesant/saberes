@@ -54,6 +54,35 @@ viewports.forEach((viewport) => {
     await expect(drawer)
       .toBeVisible();
 
+    await expect.poll(() => drawer.evaluate((element) => getComputedStyle(element).transform))
+      .toBe("none");
+
+    const drawerGeometry = await page.evaluate(() => {
+      const shell = document.querySelector<HTMLElement>('[data-testid="page-surface"]');
+      const paper = document.querySelector<HTMLElement>('[data-testid="navigation-drawer"] .MuiDrawer-paper');
+      const backdrop = document.querySelector<HTMLElement>('[data-testid="navigation-drawer"] .MuiBackdrop-root');
+      const shellRect = shell?.getBoundingClientRect();
+      const paperRect = paper?.getBoundingClientRect();
+      const backdropRect = backdrop?.getBoundingClientRect();
+
+      return {
+        shellLeft: shellRect?.left ?? -1,
+        shellWidth: shellRect?.width ?? 0,
+        drawerLeft: paperRect?.left ?? -1,
+        backdropLeft: backdropRect?.left ?? -1,
+        backdropWidth: backdropRect?.width ?? 0,
+      };
+    });
+
+    expect(drawerGeometry.drawerLeft)
+      .toBeCloseTo(drawerGeometry.shellLeft, 0);
+
+    expect(drawerGeometry.backdropLeft)
+      .toBeCloseTo(drawerGeometry.shellLeft, 0);
+
+    expect(drawerGeometry.backdropWidth)
+      .toBeCloseTo(drawerGeometry.shellWidth, 0);
+
     await page.keyboard.press("Escape");
 
     await expect(drawer)

@@ -1,0 +1,78 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "manifest_id": "unicamp-2027-regulations-rights-availability-batch-2026-10-10",
+  "database_baseline": {
+    "release": "unicamp-2027-bulk-editorial-v34",
+    "release_id": 291,
+    "schema_version": 20,
+    "sha256": "c7196bf58e0f80696d49d92e1cd6ca254d6adeaca457a35f1e225d94befbb25a"
+  },
+  "scope": "Auditoria em lote de regras 2027, metadados de direitos/licenças, links atuais e disponibilidade. Nenhuma alteração foi aplicada ao SQLite.",
+  "policy": "Acesso público não implica licença. Não promover qualidade pedagógica nem alterar disponibilidade por HTTP 403/timeout isolado. Manter explicitamente os direitos desconhecidos e nenhuma cópia de conteúdo.",
+  "audit_summary": {
+    "checked_at": "2026-10-10",
+    "first_phase_stage_id": 11,
+    "current_release_sha256": "c7196bf58e0f80696d49d92e1cd6ca254d6adeaca457a35f1e225d94befbb25a",
+    "resource_urls_checked_in_batch": {
+      "http_200": 192,
+      "local_paths": 7,
+      "http_403_inconclusive": [612],
+      "timeouts_inconclusive": [229, 631]
+    },
+    "external_resources_without_source_document": {
+      "count": 87,
+      "resource_ids": [166,167,169,170,174,175,177,179,180,183,185,186,187,189,191,193,195,197,203,205,206,209,211,213,215,220,223,224,225,229,240,247,248,251,252,253,254,255,256,257,259,261,262,263,264,265,266,475,477,479,481,482,483,484,487,489,491,493,495,497,499,502,503,505,507,509,510,513,514,515,517,518,522,523,524,525,526,528,532,538,539,541,542,543,544,547,549],
+      "rights_audit_groups": {
+        "link_only": [166,167,169,170,175,177,180,183,185,186,205,206,209,220,223,224,225,229,240,247,248,251,252,253,254,255,256,257,259,261,262,263,264,265,266,475,477,479,481,482,483,484,487,489,491,493,495,497,499,502,509,510,513,514,515,517,518,522,523,524,525,526,528,532,543,544,547,549],
+        "open_license_cc_by_sa_4_0_text_only": [187,189,191,193,195,197,203,211,213,215,503,505,507],
+        "unknown": [174,179,538,539,541,542]
+      }
+    },
+    "current_official_page": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+    "availability_semantics": "Os 202 recursos ligados ao estágio-alvo aparecem published/is_published=1 no banco; isso significa consultáveis, não aprovação pedagógica. availability_mode permanece a classificação existente."
+  },
+  "bulk_proposal_not_applied": {
+    "operation": "Attach a source_documents record to every listed resource whose source_document_id is NULL, then set resources.source_document_id to that record.",
+    "preconditions": [
+      "Database SHA-256 exactly matches database_baseline.sha256.",
+      "Target stage is stages.id=11 (Unicamp 2027, primeira fase).",
+      "Each resource still has source_document_id=NULL and its URL/title/provider/kind match the current row.",
+      "No source_documents row already exists with the resource URL."
+    ],
+    "deterministic_ids": "At the baseline max(source_documents.id)=675; assign IDs 676 onward by ascending resource_id in resource_ids. Abort if the baseline/preconditions differ.",
+    "source_document_template": {
+      "title": "copy resources.title",
+      "url": "copy resources.url",
+      "provider": "copy resources.provider",
+      "kind": "copy resources.kind",
+      "is_official": 0,
+      "reuse_status": "Use the per-resource rights_audit_groups above; do not infer from domain alone.",
+      "license_name": "CC BY-SA 4.0 only for open_license_cc_by_sa_4_0_text_only group; otherwise NULL.",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/ only for that group; otherwise NULL.",
+      "attribution": null,
+      "rights_note": "link_only: no item-specific reuse license/permission verified; link and metadata only, do not copy/adapt. open_license: CC BY-SA 4.0 applies to page text per existing audit; third-party media require separate checks. unknown: license/permission not confirmed; do not copy/adapt."
+    },
+    "evidence": [
+      {"path":"content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json","supports":"Per-URL rights/access review for resources in the first portion of the target topics."},
+      {"path":"content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json","supports":"Per-URL rights/access review for the remaining target topics."},
+      {"path":"content/editorial/unicamp-2027/resource-browser-followup-2468-2489-2026-10-10.json","supports":"Existing browser follow-up rights decisions, including link_only caveats."},
+      {"path":"content/editorial/unicamp-2027/resource-browser-followup-2490-2511-2026-10-10.json","supports":"Existing browser follow-up rights decisions and item-level license caveats."}
+    ],
+    "effect_boundary": "Only fills source provenance and conservative rights metadata. Must not change resource editorial_status, is_published, availability_mode, resource-topic links, or any lesson/question data. Expand into exact importer decisions before any future application."
+  },
+  "holds": [
+    {"scope":"availability","resource_ids":[229,612,631],"reason":"GET returned timeout for 229/631 and 403 for 612. These are inconclusive anti-bot/latency results; preserve current visible status and retry only if separately needed."},
+    {"scope":"pedagogical_approval","resource_ids":"all resources targeted to stage 11","reason":"HTTP response and existing modality do not establish pedagogical usefulness or accessibility. No resource promoted or demoted."},
+    {"scope":"rights","source_document_ids":[3,4,144,145,146,147,148,149,335,336,337,338,339,340,341,342,343,345,441,442,443,444],"reason":"These official documents/pages currently have reuse_status=unknown. No specific license or permission was found; retain unknown, link/metadata only and no reproduction. Do not infer reuse permission from official/public access."},
+    {"scope":"regulatory_rules","rule_ids":[4,8,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"reason":"No safe factual change was established by this automated pass. Preserve existing statements and historical deadlines; rule 8's note about packaging detail is intentionally retained."}
+  ],
+  "decisions": [
+    {"table":"edition_regulatory_rules","key":{"id":1},"expected":{"editorial_status":"published","reviewed_at":"2026-10-09","notes":"Datas do exame regular; não confundir com simulado presencial preparatório ocorrido em 14/06/2026.  Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."},"changes":{"reviewed_at":"2026-10-10","notes":"Regra da edição 2027. Rechecagem em 10/10/2026: a Resolução GR-022/2026 confirma as datas das fases e a página oficial atual da Comvest confirma a 1ª fase em 18/10/2026. Não confundir com o simulado presencial preparatório de 14/06/2026."},"reason":"Remover a frase histórica de status review incompatível com editorial_status=published e atualizar a checagem; a regra e o status não mudam.","evidence":[{"locator":"https://www.pg.unicamp.br/norma/32393/1","detail":"Art. 16, §1º, confirma as datas das duas fases."},{"locator":"https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/","detail":"Página oficial atual consultada em 10/10/2026 confirma a primeira fase em 18/10/2026."}]},
+    {"table":"edition_regulatory_rules","key":{"id":2},"expected":{"editorial_status":"published","reviewed_at":"2026-10-09","notes":"Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."},"changes":{"reviewed_at":"2026-10-10","notes":"Rechecado em 10/10/2026: a Resolução GR-022/2026, art. 19, e a página oficial atual da Comvest confirmam prova única, 72 questões e um ponto por questão; a orientação operacional informa quatro alternativas."},"reason":"Remover texto histórico review que contradiz o estado publicado no banco; não alterar conteúdo nem aprovação.","evidence":[{"locator":"https://www.pg.unicamp.br/norma/32393/1","detail":"Art. 19, caput e §2º, define prova única, 72 questões e um ponto por questão."},{"locator":"https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/","detail":"Seção Prova confirma formato atual e quatro alternativas."}]},
+    {"table":"edition_regulatory_rules","key":{"id":3},"expected":{"editorial_status":"published","reviewed_at":"2026-10-09","notes":"Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."},"changes":{"reviewed_at":"2026-10-10","notes":"Rechecado em 10/10/2026: distribuição confirmada na seção Prova da página oficial atual da Comvest e no Manual do Ingresso 2027, p. 22. Os quantitativos permanecem sem alteração."},"reason":"Remover texto histórico review que contradiz o estado publicado no banco; não alterar a regra.","evidence":[{"locator":"https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/","detail":"Seção Prova lista os quantitativos por área/disciplina."},{"locator":"https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf","detail":"Manual do Ingresso 2027, p. 22, quadro de distribuição."}]},
+    {"table":"edition_regulatory_rules","key":{"id":5},"expected":{"editorial_status":"published","reviewed_at":"2026-10-09","notes":"Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."},"changes":{"reviewed_at":"2026-10-10","notes":"Rechecado em 10/10/2026: horário de início e chegada são confirmados pela página atual da Comvest; duração e permanência mínima pelo art. 19, §1º, da Resolução e pelo Manual. Chegada às 8h é orientação; prova começa às 9h."},"reason":"Eliminar inconsistência de status na nota sem alterar a orientação regulatória.","evidence":[{"locator":"https://www.pg.unicamp.br/norma/32393/1","detail":"Art. 19, §1º, fixa permanência mínima de duas horas e máxima de cinco."},{"locator":"https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/","detail":"Página atual confirma início às 9h e recomendação de chegada às 8h."}]},
+    {"table":"edition_regulatory_rules","key":{"id":7},"expected":{"editorial_status":"published","reviewed_at":"2026-10-09","notes":"Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."},"changes":{"reviewed_at":"2026-10-10","notes":"Rechecado em 10/10/2026: identidade original indicada na inscrição e local designado conforme Manual do Ingresso 2027 e Resolução GR-022/2026. Não ampliar a lista de documentos aceitos."},"reason":"Remover estado review obsoleto da nota; preservar regra e status publicado.","evidence":[{"locator":"https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf","detail":"Manual do Ingresso 2027, orientações de identificação e local da prova."},{"locator":"https://www.pg.unicamp.br/norma/32393/1","detail":"Art. 13, §§6º e 15º–19º, sobre identificação e alocação."}]},
+    {"table":"edition_regulatory_rules","key":{"id":9},"expected":{"editorial_status":"published","reviewed_at":"2026-10-09","notes":"Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."},"changes":{"reviewed_at":"2026-10-10","notes":"Rechecado em 10/10/2026: itens proibidos e proibição de óculos inteligentes/componentes eletrônicos confirmados na seção O que levar da página oficial atual da Comvest. Resumo da edição, sem ampliar a lista normativa."},"reason":"Remover estado review obsoleto da nota; preservar proibições cadastradas.","evidence":[{"locator":"https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/","detail":"Seção O que levar lista eletrônicos, relógios e outros itens vedados, incluindo óculos inteligentes durante a prova."}]},
+    {"table":"edition_regulatory_rules","key":{"id":11},"expected":{"editorial_status":"published","reviewed_at":"2026-10-09","notes":"Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."},"changes":{"reviewed_at":"2026-10-10","notes":"Rechecado em 10/10/2026: a página oficial atual da Comvest anuncia que a consulta aos locais já está liberada, e o comunicado de 02/10/2026 confirma a divulgação. A lista de calendário na mesma página ainda mostra 05/10 como data programada; preservar a distinção entre previsão e liberação efetiva."},"reason":"Eliminar estado review obsoleto e registrar a divergência da página: previsão de calendário versus aviso posterior de liberação efetiva. Não alterar o enunciado da regra.","evidence":[{"locator":"https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/","detail":"Página atual contém aviso de locais liberados e mantém a data programada de 05/10 na lista de calendário."},{"locator":"https://www.comvest.unicamp.br/vestibular-unicamp-2027-liberada-a-consulta-aos-locais-de-prova-da-primeira-fase/","detail":"Comunicado oficial de 02/10/2026 confirma a liberação da consulta aos locais."}]}
+  ]
+}

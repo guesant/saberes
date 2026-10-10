@@ -7,6 +7,7 @@ export interface GetCourseProgressInput {
   attempts: Attempt[] | undefined;
   items: Array<Record<string, unknown>>;
   lessonProgress: StudyRecord[] | undefined;
+  assessmentItemsById?: Record<string, Array<Record<string, unknown>> | undefined>;
 }
 
 export function getCourseProgress(input: GetCourseProgressInput): CourseProgress {
@@ -17,14 +18,21 @@ export function getCourseProgress(input: GetCourseProgressInput): CourseProgress
       attempts: input.attempts,
       item,
       lessonProgress: input.lessonProgress,
+      assessmentItemsById: input.assessmentItemsById,
     });
   }).length;
 
   const totalItems = trackableItems.length;
 
+  let percentage = 0;
+
+  if (totalItems > 0) {
+    percentage = Math.round((completedItems / totalItems) * 100);
+  }
+
   return {
     completedItems,
-    percentage: totalItems ? Math.round((completedItems / totalItems) * 100) : 0,
+    percentage,
     totalItems,
   };
 }

@@ -1,0 +1,2311 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T19:50:55.992137+00:00",
+  "database_before_sha256": "efc19097bd68d4a6182c5ed5e6d408e2225d2c38555f94effae0ba515c371c22",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2468
+      },
+      "expected": {
+        "status": "review",
+        "name": "Matemática"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "O programa oficial identifica Matemática como componente curricular; a descrição do canônico corresponde ao domínio de conteúdos matemáticos da prova.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, seção Matemática: conteúdos programáticos de matemática para o vestibular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2469
+      },
+      "expected": {
+        "status": "review",
+        "name": "Língua Portuguesa"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "O programa apresenta leitura, interpretação e análise do funcionamento da língua como conteúdo de Língua Portuguesa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=4",
+          "detail": "Programa das Provas, p. 4, seção Língua Portuguesa: leitura e análise de textos e funcionamento linguístico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2470
+      },
+      "expected": {
+        "status": "review",
+        "name": "Literaturas de Língua Portuguesa"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "O programa possui bloco próprio de leitura analítica e interpretação crítica de literaturas em língua portuguesa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=4",
+          "detail": "Programa das Provas, p. 4, seção Literatura: gêneros, leitura crítica e obras da lista anual."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2471
+      },
+      "expected": {
+        "status": "review",
+        "name": "Física"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Física é componente explicitamente previsto; os enunciados vinculados cobrem calorimetria, ondas e óptica, conteúdos do programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=12",
+          "detail": "Programa das Provas, pp. 12–13, seção Física: mecânica, termodinâmica, ondas e óptica."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2472
+      },
+      "expected": {
+        "status": "review",
+        "name": "Química"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Química é componente explícito do programa; as classificações vinculadas tratam de transformações, energia química e compostos orgânicos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=14",
+          "detail": "Programa das Provas, p. 14, seção Química: materiais, transformações, energia, equilíbrio, eletroquímica e orgânica."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2473
+      },
+      "expected": {
+        "status": "review",
+        "name": "Biologia"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Biologia é componente explícito e abrange os conteúdos celulares, fisiológicos, ecológicos e de saúde presentes nos vínculos revisados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=11",
+          "detail": "Programa das Provas, pp. 11–12, seção Biologia: bases celulares, ambiente, biodiversidade, fisiologia e saúde."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2474
+      },
+      "expected": {
+        "status": "review",
+        "name": "História"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "História é componente explícito do programa; os itens vinculados abordam cidadania romana, sociedades africanas medievais, escravidão moderna e governança climática contemporânea.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=8",
+          "detail": "Programa das Provas, pp. 8–10, seção História: Antiguidade, período moderno, contemporaneidade e tempo presente."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2475
+      },
+      "expected": {
+        "status": "review",
+        "name": "Geografia"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Geografia é componente explícito; os enunciados vinculados mobilizam relevo sul-americano e relações entre produção, recursos e espaço.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=6",
+          "detail": "Programa das Provas, pp. 6–7, seção Geografia: componentes físico-naturais, território e dinâmica socioespacial."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2481
+      },
+      "expected": {
+        "status": "review",
+        "name": "Geometria"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Geometria é uma categoria substantiva presente no programa, que separa explicitamente conteúdos planos, espaciais e analíticos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, seção Matemática: geometria plana, espacial e analítica."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2472,
+        "canonical_topic_id": 2469
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 4
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Morfologia e formação de palavras é conteúdo de Língua Portuguesa, conforme o programa; o vínculo é de domínio, não uma associação incidental.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=4",
+          "detail": "Programa das Provas, p. 4, Língua Portuguesa: estrutura e formação de palavras e efeitos das classes morfológicas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2473,
+        "canonical_topic_id": 2469
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 4
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Fonologia e relação entre oralidade e escrita pertencem substantivamente ao estudo da língua portuguesa e estão nomeadas no programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=4",
+          "detail": "Programa das Provas, p. 4, Língua Portuguesa: efeitos fonético-fonológicos e relações entre oralidade e escrita."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2474,
+        "canonical_topic_id": 2470
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "source_document_id": 148,
+        "source_page": 4
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O tópico é a leitura crítica do programa literário em língua portuguesa; o canônico descreve diretamente esse domínio.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=4",
+          "detail": "Programa das Provas, p. 4, Literatura: leitura analítica por gêneros e obras anuais em língua portuguesa."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2475,
+        "canonical_topic_id": 2468
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Conjuntos numéricos e operações são fundamentos matemáticos explicitamente previstos no programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, Matemática: conjuntos numéricos, operações, fatoração, sequências, porcentagem e juros."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2477,
+        "canonical_topic_id": 2479
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Polinômios, equações e inequações se relacionam substantivamente às funções e gráficos, em especial às relações polinomiais e quadráticas do programa; o vínculo permanece relacionado, sem alegar equivalência total.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, Matemática: funções e gráficos e bloco de polinômios, equações e inequações."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2479,
+        "canonical_topic_id": 2468
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Sistemas lineares e matrizes são conteúdos matemáticos explícitos e pertencem diretamente ao domínio indicado pelo canônico.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, Matemática: resolução de sistemas lineares e operações matriciais."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2480,
+        "canonical_topic_id": 2481
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Geometria plana é uma subdivisão direta do domínio canônico Geometria.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, Matemática: congruência, semelhança, Tales, Pitágoras, polígonos, circunferências e áreas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2481,
+        "canonical_topic_id": 2481
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Geometria espacial é uma subdivisão direta do domínio canônico Geometria.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, Matemática: poliedros, prismas, pirâmides, cilindros, cones, esferas, áreas e volumes."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2482,
+        "canonical_topic_id": 2481
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Trigonometria integra substantivamente o estudo geométrico previsto no programa, inclusive relações em triângulos; o tipo relacionado evita tratá-la como sinônimo de toda geometria.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, Matemática: ângulos, relações trigonométricas e leis dos senos e cossenos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2483,
+        "canonical_topic_id": 2481
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Geometria analítica usa coordenadas e equações para estudar figuras; é uma subdivisão reconhecida do domínio geométrico do programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=5",
+          "detail": "Programa das Provas, p. 5, Matemática: coordenadas, distâncias, retas e circunferências no plano."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2485,
+        "canonical_topic_id": 2475
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 6
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O tópico reúne conceitos fundamentais próprios do raciocínio geográfico e coincide com o domínio de Geografia do canônico.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=6",
+          "detail": "Programa das Provas, p. 6, Geografia: espaço, território, paisagem, região, lugar, redes, escalas e fronteiras."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2487,
+        "canonical_topic_id": 2475
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 6
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Componentes físico-naturais e suas interações são conteúdo explícito da Geografia no programa e correspondem ao domínio canônico.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=6",
+          "detail": "Programa das Provas, p. 6, Geografia: interações entre litosfera, hidrosfera, atmosfera e criosfera."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2490,
+        "canonical_topic_id": 2474
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 8
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Antiguidade clássica e período medieval são recortes de História explicitamente nomeados no programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=8",
+          "detail": "Programa das Provas, p. 8, História: Grécia, Roma, sociedades medievais e crises do feudalismo."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2491,
+        "canonical_topic_id": 2474
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 8
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Renascimento, Reformas, expansão marítima e colonização compõem o recorte moderno da História definido pelo programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=8",
+          "detail": "Programa das Provas, p. 8, História: período moderno, colonização, povos indígenas, africanos e resistências."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2496,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 11
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Bases moleculares e celulares são conteúdos biológicos explícitos, diretamente cobertos pelo canônico Biologia.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=11",
+          "detail": "Programa das Provas, p. 11, Biologia: bioquímica, células, organelas, ciclo e divisão celular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2500,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 12
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Biodiversidade, sistemas humanos e saúde são conteúdos biológicos explícitos no programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=12",
+          "detail": "Programa das Provas, p. 12, Biologia: classificação, grupos de seres vivos, sistemas humanos, saúde e doenças."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2502,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 12
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Astronomia mobiliza modelos físicos de gravitação e movimento e consta expressamente do programa de Física.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=12",
+          "detail": "Programa das Provas, p. 12, Física: Terra, Sol, Lua, órbitas, sistema solar e evolução estelar."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2503,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 12
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Calorimetria e termodinâmica são conteúdos centrais explicitamente listados em Física.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=12",
+          "detail": "Programa das Provas, pp. 12–13, Física: equilíbrio térmico, leis da termodinâmica, calor, gases e fases."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2504,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 13
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Ondas e óptica são conteúdos explicitamente previstos no bloco de Física.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=13",
+          "detail": "Programa das Provas, p. 13, Física: ondas, som, interferência, difração, espelhos, refração e lentes."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2506,
+        "canonical_topic_id": 2472
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 14
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Estados físicos, gases, soluções e concentração são objetos de estudo da Química e estão explicitamente no programa.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=14",
+          "detail": "Programa das Provas, p. 14, Química: materiais, estados físicos, gases, soluções e coloides."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2507,
+        "canonical_topic_id": 2472
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 14
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Estrutura atômica, periodicidade e ligações são conteúdos fundamentais do programa de Química.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=14",
+          "detail": "Programa das Provas, p. 14, Química: estrutura atômica, tabela periódica, ligações e interações intermoleculares."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2510,
+        "canonical_topic_id": 2472
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "source_document_id": 148,
+        "source_page": 14
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Eletroquímica e compostos orgânicos pertencem diretamente ao programa de Química; o tópico abrange ambas as áreas explicitamente citadas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=14",
+          "detail": "Programa das Provas, p. 14, Química: oxidação-redução, pilhas, eletrólise e compostos orgânicos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2745,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O enunciado calcula calor extraído de uma rocha a partir de massa, calor específico e variação de temperatura; Física é correspondência direta.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=5",
+          "detail": "Caderno Q/T, questão 9: aplicação de Q=mcΔT ao resfriamento de rocha lunar; a mesma questão reaparece no caderno R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2748,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O enunciado relaciona velocidade, comprimento de onda e frequência da luz UV, conteúdo físico de ondas eletromagnéticas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=5",
+          "detail": "Caderno Q/T, questão 12: cálculo de frequência a partir da velocidade da luz e do comprimento de onda; reaparece no caderno R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2749,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 5
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão interpreta a variação do volume da água com a temperatura, fenômeno físico ligado a propriedades térmicas e densidade.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=5",
+          "detail": "Caderno Q/T, questão 13: gráfico volume-temperatura para água; a leitura do gráfico e a anomalia de expansão são físicas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2751,
+        "canonical_topic_id": 2475
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 6
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Enunciado e mapa relacionam estruturas geológicas sul-americanas a compartimentos do relevo; o vínculo com Geografia é substantivo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=6",
+          "detail": "Caderno Q/T, questão 15 e mapa de macrocompartimentos do relevo sul-americano; conferidos na imagem da página original."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2752,
+        "canonical_topic_id": 2495
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 6
+      },
+      "changes": {
+        "review_status": "draft",
+        "relation_type": "related"
+      },
+      "reason": "Associação inadequada: a pergunta usa a tabela de produção/exportação como contexto, mas solicita fatores geoambientais do cultivo (clima, altitude e solos), não território, soberania ou geopolítica. Rebaixo primary para related e draft antes da inclusão do vínculo substituto, preservando a associação original e esta justificativa para histórico/auditoria; nenhuma linha é excluída.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=6",
+          "detail": "Caderno Q/T, questão 16: o comando pede explicitamente características geoambientais dos países produtores; tabela e alternativas foram conferidas na imagem original."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2752,
+        "canonical_topic_id": 2508
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 2752,
+        "canonical_topic_id": 2508,
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "source_document_id": 335,
+        "source_page": 6,
+        "source_excerpt": "Questão 16: características geoambientais que ajudam a explicar a produção de café; alternativas com zona climática, temperatura, pluviosidade, altitude e solos.",
+        "review_status": "published"
+      },
+      "reason": "Vínculo substituto: o objeto pedido são condições físico-naturais do cultivo, não uma associação incidental com a tabela comercial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=6",
+          "detail": "Caderno Q/T, questão 16: comando sobre características geoambientais e alternativas climáticas/edáficas; correspondência direta com componentes físico-naturais."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2753,
+        "canonical_topic_id": 2495
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 7
+      },
+      "changes": {
+        "review_status": "draft",
+        "relation_type": "related"
+      },
+      "reason": "Associação inadequada: o texto trata da distribuição e qualidade da água e as alternativas abordam hidrologia, aquíferos, rios e impactos ambientais; não há foco em soberania ou geopolítica. Rebaixo primary para related e draft antes da inclusão do vínculo substituto, preservando a associação original e esta justificativa para histórico/auditoria; nenhuma linha é excluída.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=7",
+          "detail": "Caderno Q/T, questão 17: enunciado sobre disponibilidade hídrica e alternativas de processos hidrológicos e ambientais."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2753,
+        "canonical_topic_id": 2508
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 2753,
+        "canonical_topic_id": 2508,
+        "relation_type": "primary",
+        "confidence": 0.92,
+        "source_document_id": 335,
+        "source_page": 7,
+        "source_excerpt": "Questão 17: disponibilidade de água depende de distribuição espacial, qualidade e impactos sobre os recursos hídricos.",
+        "review_status": "published"
+      },
+      "reason": "Vínculo substituto: a questão exige raciocínio sobre hidrosfera e processos ambientais, que correspondem ao canônico físico-natural publicado.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=7",
+          "detail": "Caderno Q/T, questão 17: distribuição, qualidade e uso dos recursos hídricos; alternativas discutem efeitos sobre rios e aquíferos."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2764,
+        "canonical_topic_id": 2474
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 10
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão interpreta cidadania romana e o census na República, tema histórico da Antiguidade clássica.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=10",
+          "detail": "Caderno Q/T, questão 28: fonte sobre inscrição censitária e pertencimento à cidadania romana; reaparece como questão 7 no R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2766,
+        "canonical_topic_id": 2474
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 10
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O texto analisa a expansão do Islã e redes comerciais africanas entre os séculos VII e X, conteúdo histórico medieval e afro-asiático.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=10",
+          "detail": "Caderno Q/T, questão 30: circulação comercial e difusão islâmica no norte e leste da África; reaparece como questão 9 no R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2767,
+        "canonical_topic_id": 2474
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 11
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão contextualiza navio negreiro, plantation e escravidão atlântica moderna, tema histórico substantivo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=11",
+          "detail": "Caderno Q/T, questão 31: fonte sobre a formação histórica da plantation e da escravidão moderna; reaparece como questão 10 no R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2770,
+        "canonical_topic_id": 2474
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": null,
+        "source_page": null
+      },
+      "changes": {
+        "source_document_id": 335,
+        "source_page": 13,
+        "review_status": "published"
+      },
+      "reason": "A questão aborda a origem e o contexto internacional da COP e do Acordo de Paris; é conteúdo de história do tempo presente. Corrijo também a proveniência ausente usando o caderno oficial.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=13",
+          "detail": "Caderno Q/T, questão 34: texto situa a COP, a Convenção climática e o Acordo de Paris; p. 13 no PDF."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2771,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 12
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão compara excreção e manutenção da homeostase entre organismos, conteúdo de fisiologia e biologia comparada.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=12",
+          "detail": "Caderno Q/T, questão 35: identificação de excretas em seres vivos; a mesma questão está no caderno R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2771,
+        "canonical_topic_id": 2513
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 12
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Além de Biologia geral, a questão trata diretamente de fisiologia dos organismos; mantenho a classificação específica como primária e a área ampla como relacionada.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=12",
+          "detail": "Caderno Q/T, questão 35: excreção e homeostase, tópico compatível com biodiversidade e saúde/fisiologia humana e comparada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2772,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 12
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão infere a origem endossimbiótica de mitocôndrias e cloroplastos a partir de características celulares; correspondência biológica direta.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=12",
+          "detail": "Caderno Q/T, questão 36: organelas e endossimbiose; conteúdo de biologia celular e evolução."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2773,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 12
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O enunciado trata de vasos condutores, transporte e distribuição de fotoassimilados em plantas, conceitos de fisiologia vegetal.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=12",
+          "detail": "Caderno Q/T, questão 37: transporte de água, nutrientes e fotoassimilados nos órgãos vegetais."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2774,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 13
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão avalia impactos e sustentabilidade da aquicultura em ecossistemas amazônicos; relações biológicas e ambientais são centrais, não menção incidental a organismos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=13",
+          "detail": "Caderno Q/T, questão 38: aquicultura, oferta de proteína e efeitos em áreas sob pressão de desflorestamento."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2777,
+        "canonical_topic_id": 2473
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 13
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O texto sobre descoberta da insulina e diabetes tipo 1 contextualiza fisiologia, hormônio e doença; a relação com Biologia é material.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=13",
+          "detail": "Caderno Q/T, questão 41: insulina, diabetes tipo 1 e história da descoberta; conteúdo biológico e de saúde."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2778,
+        "canonical_topic_id": 2468
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": null,
+        "source_page": null
+      },
+      "changes": {
+        "source_document_id": 335,
+        "source_page": 14,
+        "review_status": "published"
+      },
+      "reason": "O problema calcula meses para recuperar investimento por economia mensal, uma modelagem aritmética de porcentagem e divisão. Registro a fonte oficial ausente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=14",
+          "detail": "Caderno Q/T, questão 42: investimento de R$ 18.000, economia mensal de 90% de R$ 350 e tempo de retorno."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2781,
+        "canonical_topic_id": 2481
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 14
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O problema determina a medida de um quadrado inscrito em triângulo retângulo, usando relações métricas e área; Geometria é central.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=14",
+          "detail": "Caderno Q/T, questão 45: figura e comando sobre quadrado inscrito em triângulo retângulo; reaparece como questão 43 no R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2782,
+        "canonical_topic_id": 2481
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 14
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O enunciado usa raízes de uma equação quadrática para determinar medidas de triângulo retângulo e sua área; Geometria é substantiva.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=14",
+          "detail": "Caderno Q/T, questão 46: relações entre lados de triângulo retângulo, raízes e área; reaparece como questão 44 no R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2784,
+        "canonical_topic_id": 2468
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 14
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão exige interpretar gráfico censitário e percentuais por faixa etária; análise quantitativa é essencial à resposta matemática.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=14",
+          "detail": "Caderno Q/T, questão 48: gráfico do Censo 2022 sobre escolaridade de jovens; leitura de dados e proporções."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2785,
+        "canonical_topic_id": 2481
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 15
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O problema calcula volume e perda de água em uma piscina paralelepipédica; Geometria espacial é conteúdo necessário.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=15",
+          "detail": "Caderno Q/T, questão 49: base retangular, altura de água e perda em litros; reaparece como questão 47 no R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2786,
+        "canonical_topic_id": 2468
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 15
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão resolve um sistema de equações algébricas com restrição de positividade; associação matemática direta.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=15",
+          "detail": "Caderno Q/T, questão 50: sistema envolvendo 2x²−y e 2x+y, com x e y reais positivos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2787,
+        "canonical_topic_id": 2468
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "related",
+        "confidence": 0.78,
+        "source_document_id": 335,
+        "source_page": 15
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O problema relaciona quantidades de itens comprados a custos para determinar valores desconhecidos; modelagem por sistema linear é central.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=15",
+          "detail": "Caderno Q/T, questão 51: dados de dois dias de compras e custos em evento; reaparece como questão 49 no R/S."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2790,
+        "canonical_topic_id": 2482
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 15
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão interpreta texto metafórico sobre palavras e escolhas de expressão; gênero, coesão e efeitos de sentido sustentam a classificação textual.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=15",
+          "detail": "Caderno Q/T, questão 54: texto de comparação entre palavras e roupas; interpretação de recursos verbais."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2791,
+        "canonical_topic_id": 2482
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 16
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão mobiliza leitura de depoimento e interpretação da relação entre fala sobre clipe e mensagem musical.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=16",
+          "detail": "Caderno Q/T, questão 55: depoimento sobre o clipe Indestrutível e a mensagem da música."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2792,
+        "canonical_topic_id": 2499
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 16
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O enunciado pergunta sobre a formação e o uso de acrônimos, conteúdo morfológico explicitamente correspondente ao canônico.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=16",
+          "detail": "Caderno Q/T, questão 56: definição e formação de acrônimos como IBGE e Unesco."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2793,
+        "canonical_topic_id": 2482
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 17
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão analisa a expressão “em situação de rua” e disputa sobre seu valor; interpretação textual e discursiva é central.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=17",
+          "detail": "Caderno Q/T, questão 57: julgamento linguístico de expressão usada para se referir a pessoas sem moradia."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2794,
+        "canonical_topic_id": 2482
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 17
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Carta aberta argumenta sobre terminologia, memória e efeitos sociais; gênero, interlocução e argumento justificam o canônico textual.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=17",
+          "detail": "Caderno Q/T, questão 58: carta aberta do Fórum da Cidade de São Paulo sobre a expressão “situação de rua”."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2795,
+        "canonical_topic_id": 2482
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 17
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão articula quadrinhos e texto explicativo sobre racismo ambiental; leitura verbal e não verbal e relações entre textos são essenciais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=17",
+          "detail": "Caderno Q/T, questão 59: dois textos, incluindo quadrinhos, relacionados ao conceito de racismo ambiental."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2796,
+        "canonical_topic_id": 2484
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 18
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão interpreta uma leitura crítica de romance e seus motivos narrativos; o canônico de elementos da narrativa é substantivo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=18",
+          "detail": "Caderno Q/T, questão 60: interpretação de Vida e morte de M. J. Gonzaga de Sá, de Lima Barreto."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2797,
+        "canonical_topic_id": 2484
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 18
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O trecho narrativo constrói voz, memória e imagem da mãe; leitura de focalização e linguagem da narrativa é central.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=18",
+          "detail": "Caderno Q/T, questão 61: trecho narrativo de Conceição Evaristo e interpretação de imagens e voz."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2798,
+        "canonical_topic_id": 2484
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 18
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão interpreta a voz e a ironia narrativa em texto de Lima Barreto; elementos da narrativa são pertinentes.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=18",
+          "detail": "Caderno Q/T, questão 62: trecho de “Explicação necessária”, de Vida e morte de M. J. Gonzaga de Sá."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2799,
+        "canonical_topic_id": 2485
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 18
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O poema constrói crítica ao consumo por imagens, ritmo e organização em versos; linguagem poética é o foco substantivo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=18",
+          "detail": "Caderno Q/T, questão 63: poema “Ao Shopping Center”, de José Paulo Paes, com estrutura e imagens poéticas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2800,
+        "canonical_topic_id": 2484
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 19
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão pede inferência sobre a experiência da protagonista num conto; personagem, focalização e conflito sustentam o canônico narrativo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=19",
+          "detail": "Caderno Q/T, questão 64: leitura de “Uma experiência privada”, de Chimamanda Adichie."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2801,
+        "canonical_topic_id": 2484
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 19
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O trecho organiza personagens, espaço e ação narrativa; a questão interpreta esses elementos da composição literária.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=19",
+          "detail": "Caderno Q/T, questão 65: trecho de narrativa literária e análise de personagens e cena."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2802,
+        "canonical_topic_id": 2488
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 19
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão relaciona combustão subterrânea do carvão a gases produzidos por transformação química; não é mera menção a substância química.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=19",
+          "detail": "Caderno Q/T, questão 66: incêndio em carvão e identificação de gás tóxico formado na combustão."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2803,
+        "canonical_topic_id": 2488
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 19
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão compara entalpias de dissolução e hidratação para explicar bolsas térmicas; transformação e energia química são o mecanismo pedido.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=19",
+          "detail": "Caderno Q/T, questão 67: comparação de entalpias de solução de CaCl₂ e NH₄NO₃ para bolsas quentes/frias."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2804,
+        "canonical_topic_id": 2488
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 20
+      },
+      "changes": {
+        "review_status": "draft",
+        "relation_type": "related"
+      },
+      "reason": "Associação incidental: a questão 68 não pede reação nem transformação química; pede leitura comparativa dos gráficos de taxa de penetração e quantidade removida em extrações. Rebaixo primary para related e draft antes da inclusão do vínculo substituto, preservando a associação original e esta justificativa para histórico/auditoria; nenhuma linha é excluída.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=20",
+          "detail": "Imagem original da página 20 do PDF (página impressa 18), questão 68 e gráficos A/B: eixos mostram tempo/taxa de penetração e número de extrações/quantidade do agente; o comando compara tratamentos a partir desses dados."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2804,
+        "canonical_topic_id": 2521
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 2804,
+        "canonical_topic_id": 2521,
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "source_document_id": 335,
+        "source_page": 20,
+        "source_excerpt": "Questão 68: comparar nos gráficos A e B taxa de penetração do agente e quantidade removida por número de extrações, entre tratamentos.",
+        "review_status": "published"
+      },
+      "reason": "Vínculo substituto: interpretação comparativa de duas séries gráficas é requisito direto e suficiente para responder; a presença de VX como contexto não torna reação química o objeto da classificação.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=20",
+          "detail": "Imagem original da página 20 do PDF (página impressa 18), questão 68: os dois gráficos e seus eixos são a evidência decisiva para comparar os tratamentos."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2805,
+        "canonical_topic_id": 2488
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 20
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "O problema exige balancear a oxidação da glicose e conservar átomos para comparar massa de reagentes e produtos; estequiometria é central.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=20",
+          "detail": "Caderno Q/T, questão 69: glicose formando CO₂ e H₂O e comparação de massas; página original conferida visualmente."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2806,
+        "canonical_topic_id": 2488
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 20
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão distingue processos de produção de biocombustíveis por fermentação e transesterificação, relacionando composição da biomassa e transformação química orgânica.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=20",
+          "detail": "Caderno Q/T, questão 70: composição de macroalgas/microalgas e escolha entre fermentação e transesterificação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2808,
+        "canonical_topic_id": 2488
+      },
+      "expected": {
+        "review_status": "review",
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 21
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "A questão compara produção de H₂ ao longo do tempo com diferentes quantidades de catalisador; cinética de reação é o conceito explícito, não mera menção química.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=21",
+          "detail": "Caderno Q/T, questão 72: hidrólise catalisada de borano de amônia e gráfico de produção de hidrogênio em função do tempo."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2476
+      },
+      "expected": {
+        "status": "review",
+        "slug": "ingles"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "O conceito global corresponde à leitura reflexiva e crítica em língua inglesa; a descrição não o torna específico de uma edição.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Inglesa: leitura como prática social, leitura crítica e mobilização de conhecimento sistêmico; conteúdo consultado em 09/10/2026."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2477
+      },
+      "expected": {
+        "status": "review",
+        "slug": "filosofia"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "A descrição global corresponde a análise de textos, teses, argumentos e contextos filosóficos; é conceito disciplinar estável.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Filosofia, habilidades 1–3: contextos, teses, argumentos e comparação crítica de abordagens; conteúdo consultado em 09/10/2026."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_topics",
+      "key": {
+        "id": 2478
+      },
+      "expected": {
+        "status": "review",
+        "slug": "sociologia"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "A descrição global contempla indivíduo, sociedade, cultura, desigualdades e mudanças sociais, sem confundir conceito com norma anual.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Sociologia: conceitos fundamentais e dimensões sociais incluem socialização, cultura, relações de trabalho e desigualdade; conteúdo consultado em 09/10/2026."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 1
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como introdução curta sobre texto, gênero e coesão. Texto original lido integralmente; explicação e exemplo são conceitualmente consistentes e não prometem cobrir o curso inteiro.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/0/sections/0",
+          "detail": "Teoria lida: gênero é apresentado como expectativa contextual, coesão por recursos diversos e leitura conjunta dos modos verbal e visual; ressalva contra regras rígidas e inferências sem evidência.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 1 (linhas 452–455): gêneros, recursos coesivos e interação verbal/não verbal integram o programa oficial do Vestibular 2027."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 2
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como exemplo curto de leitura multimodal. O cartaz fictício relaciona imperativo, imagem e justificativa sem alegar que o visual tenha significado universal.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/0/sections/1",
+          "detail": "Exemplo lido integralmente: a análise ancora o efeito no texto do cartaz e no contexto de circulação junto aos bebedouros.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 1 (linhas 452–455): prevê gêneros discursivos, coesão e articulação entre texto verbal e não verbal."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 3
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como síntese introdutória: orienta leitura de propósito, interlocução, suporte, coesão e recursos visuais, sem substituir prática com textos completos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/0/sections/2",
+          "detail": "Síntese lida integralmente e consistente com a teoria e o exemplo deste tópico.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 1 (linhas 452–455): confirma aderência temática ao programa oficial de 2027."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 4
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como introdução à inferência e às relações discursivas. As generalizações são qualificadas; a inferência é vinculada a pistas linguísticas/contextuais e o pressuposto é descrito como algo que costuma persistir sob negação.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/1/sections/0",
+          "detail": "Teoria lida integralmente: distingue inferência sustentada de associação livre e apresenta conectivos como pistas interpretadas no contexto.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 2 (linhas 456–459): relações lógico-discursivas, intertextualidade e efeitos expressivos fazem parte do programa."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 5
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como exemplo de inferência pragmática. A leitura da ironia é apresentada como hipótese sustentada por marcas textuais e contexto, não como sentido literal obrigatório.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/1/sections/1",
+          "detail": "Exemplo lido integralmente: a crítica inferida decorre de 'agora só falta' em relação à situação descrita; a explicação aponta a base contextual.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 2 (linhas 456–459): o programa inclui relações lógico-discursivas e efeitos de sentido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 6
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como síntese de leitura crítica: separa informação explícita de inferência e exige justificativa textual/contextual.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/1/sections/2",
+          "detail": "Síntese lida integralmente; resume adequadamente os procedimentos apresentados na teoria e no exemplo.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 2 (linhas 456–459): aderência a relações lógico-discursivas, intertextualidade e efeitos de sentido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 7
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como introdução à variação e adequação linguística. Evita hierarquizar falantes e diferencia descrição linguística de julgamento social; trata a norma-padrão como convenção de prestígio contextual.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/2/sections/0",
+          "detail": "Teoria lida integralmente: reconhece variação regional, social, histórica e situacional e caracteriza preconceito linguístico como estigmatização/exclusão.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 3 e linhas 438–443: o programa requer reconhecer variação segundo contexto, usos de variedades e valor social da norma urbana culta e de outras variedades."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 8
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como exemplo breve de mudança de registro entre fala e escrita. A interpretação é situada no gênero e no interlocutor, sem declarar a forma oral errada.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/2/sections/1",
+          "detail": "Exemplo lido integralmente: as duas construções são compreensíveis e o contraste é explicado como adequação à situação comunicativa.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 3 (linhas 461–464): variação, variedades e registros formais/informais estão no programa."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 9
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como síntese introdutória de análise sociolinguística situada; não promete descrever todas as variedades nem substituir estudo aprofundado.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/2/sections/2",
+          "detail": "Síntese lida integralmente e coerente com a teoria: recomenda contextualizar interlocutores, gênero e objetivo antes de avaliar escolhas linguísticas.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 3 (linhas 461–464): confirma alinhamento ao programa oficial."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 10
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como introdução à sintaxe. As definições de coordenação/subordinação e os alertas sobre sujeito, vírgula e conectivos são compatíveis com a descrição gramatical apresentada.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/3/sections/0",
+          "detail": "Teoria lida integralmente: apresenta relações sintáticas como instrumento de interpretação e alerta que conectivos não substituem a análise da relação contextual.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 4 (linhas 465–468): inclui sintaxe textual, ordem dos constituintes, coordenação e subordinação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 11
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como exemplo de concessão e causa. As duas orações estão bem formadas e a explicação identifica a expectativa contrariada sem confundir a oração concessiva com objeto.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/3/sections/1",
+          "detail": "Exemplo lido integralmente: 'porque' introduz causa/justificação no primeiro caso e 'embora' uma concessão no segundo; a análise é compatível com as frases citadas.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 4 (linhas 465–468): inclui relações de coordenação e subordinação e efeitos da ordem sintática."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 12
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como síntese: encaminha análise de núcleos, dependências, concordância e conectivos para a construção de sentido.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/3/sections/2",
+          "detail": "Síntese lida integralmente e consistente com o escopo curto da teoria e do exemplo.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 4 (linhas 465–468): confirma pertinência curricular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 13
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como introdução à morfologia. Distingue flexão e derivação com ressalva de que a função depende do contexto e de que a história lexical pode modificar valores de afixos.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/4/sections/0",
+          "detail": "Teoria lida integralmente: cobre constituintes, processos de formação, classes e efeitos expressivos, evitando regras absolutas para prefixos e diminutivos.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 5 (linhas 470–473): inclui estrutura do vocábulo, formação de palavras e efeitos semânticos/expressivos das classes."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 14
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como exemplo de formação de palavras. A decomposição de 'releitura' em prefixo re- e base 'leitura' é adequada ao propósito introdutório e as possibilidades de sentido ficam condicionadas ao contexto.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/4/sections/1",
+          "detail": "Exemplo lido integralmente: contrasta 'releitura' e 'reler' e não atribui um único valor semântico invariável ao prefixo.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 5 (linhas 470–473): formação vocabular e efeitos de sentido são conteúdo previsto."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "lessons",
+      "key": {
+        "id": 15
+      },
+      "expected": {
+        "review_status": "review",
+        "editorial_version": "1.0.0",
+        "is_published": 1
+      },
+      "changes": {
+        "review_status": "published"
+      },
+      "reason": "Aprovada como síntese curta, com foco apropriado em morfemas, processo de formação e função contextual.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lessons.json#/lessons/4/sections/2",
+          "detail": "Síntese lida integralmente e alinhada à teoria/exemplo deste tópico.",
+          "sha256": "5f354168aa658b9249125c123a7524164f3762ebf27cef1f74c7eba773aa46e9"
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Anexo II, Língua Portuguesa, índice 5 (linhas 470–473): confirma alinhamento curricular."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T195056008957Z.sqlite",
+  "database_after_sha256": "7e44370993bb25084d46f369e5599ca7321d26cb373b24a2b5e5e0106e92c460"
+}

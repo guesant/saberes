@@ -1,3 +1,4 @@
+import { getCourseReferenceId } from "./get-course-reference-id.function";
 import type { Attempt } from "@guesant/saberes-application";
 
 export interface GetCourseQuestionItemCompletedInput {
@@ -8,11 +9,18 @@ export interface GetCourseQuestionItemCompletedInput {
 export function getCourseQuestionItemCompleted(
   input: GetCourseQuestionItemCompletedInput,
 ): boolean {
-  const questionId = String(input.item.question_occurrence_id);
+  const occurrenceId = getCourseReferenceId(input.item.question_occurrence_id);
+
+  const canonicalQuestionId = getCourseReferenceId(input.item.question_id);
 
   return Boolean(
     input.attempts?.some((attempt) => {
-      return String(attempt.questionId) === questionId;
+      return (
+        (occurrenceId !== null && String(attempt.questionId) === occurrenceId) ||
+        (canonicalQuestionId !== null &&
+          attempt.canonicalQuestionId !== undefined &&
+          String(attempt.canonicalQuestionId) === canonicalQuestionId)
+      );
     }),
   );
 }

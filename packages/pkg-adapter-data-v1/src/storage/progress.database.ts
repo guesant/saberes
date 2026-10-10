@@ -303,6 +303,12 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
           }
         }));
       });
+
+    this.version(10)
+      .stores({
+        attempts: "id, answeredAt, sessionId, contentKey, targetEditionKey, targetStageKey, canonicalQuestionId, sourceEditionKey, sourceStageKey, studyMode, assisted, *subjectIds, *skillIds, *hintIdsUsed",
+        sessions: "id, startedAt, completedAt, targetEditionKey, targetStageKey, blueprintId",
+      });
   }
 
   private nowIso() {
@@ -403,13 +409,18 @@ export class ProgressDatabase extends Dexie implements ProgressDatabaseContract 
       if (input.questionKey && input.answer !== undefined) {
         const index = answers.findIndex((answer) => { return answer.questionKey === input.questionKey; });
 
-        const draft = { questionKey: input.questionKey, value: input.answer, answeredAt: input.updatedAt };
+        const draft = { questionKey: input.questionKey, value: input.answer, answeredAt: input.updatedAt, hintIdsUsed: input.hintIdsUsed || answers[index]?.hintIdsUsed || [] };
 
         if (index < 0) {
           answers.push(draft);
         } else {
           answers[index] = draft;
         }
+      } else if (input.questionKey && input.hintIdsUsed) {
+        const index = answers.findIndex((answer) => {return answer.questionKey === input.questionKey;});
+
+        if (index >= 0) {answers[index] = { ...answers[index], hintIdsUsed: [...new Set([...answers[index].hintIdsUsed || [], ...input.hintIdsUsed])] };}
+        else {answers.push({ questionKey: input.questionKey, value: "", answeredAt: input.updatedAt, hintIdsUsed: [...new Set(input.hintIdsUsed)] });}
       }
 
       let flags = session.flaggedQuestionKeys || [];

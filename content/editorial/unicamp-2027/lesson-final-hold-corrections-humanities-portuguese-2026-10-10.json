@@ -1,0 +1,292 @@
+{
+  "format": "lesson-post-review-corrections/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "curriculum_topic_ids": [2472, 2474, 2475, 2476, 2481, 2487],
+    "stage": "Vestibular Unicamp 2027 — 1ª fase",
+    "purpose": "Substituições completas para os tópicos em hold na revisão final; material original para nova revisão independente, sem alterar lições-base ou banco de dados.",
+    "publication_policy": "Todas as propostas permanecem em review. Literatura, funções e componentes físico-naturais são explicitamente apresentados como etapas de uma trilha, não como cobertura integral de todos os subitens oficiais."
+  },
+  "sources_consulted": [
+    {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "institution": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_copy_reviewed": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+      "pages": [4, 5, 6, 7, 8],
+      "use": "Conferência visual do programa de Língua Portuguesa, Literatura, Matemática e Geografia; páginas citadas individualmente em cada decisão."
+    },
+    {
+      "title": "Memórias Póstumas de Brás Cubas — Ao leitor",
+      "institution": "Wikisource; texto de Machado de Assis, edição de referência de 1881",
+      "url": "https://pt.wikisource.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas/Pref%C3%A1cio",
+      "use": "Conferência da localização e dos elementos narrativos usados no exemplo literário. A lição parafraseia a passagem e não reproduz seu texto."
+    },
+    {
+      "title": "Atlas Geográfico Escolar",
+      "institution": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+      "url": "https://www.ibge.gov.br/geociencias/atlas/nacional/2402-np-atlas-geografico-escolar/16633-atlas-geografico-escolar.html",
+      "use": "Referência institucional de mapas e temas físicos do Brasil para o encaminhamento de estudo de relevo, clima, vegetação e ambiente."
+    },
+    {
+      "title": "Bacias e Divisões Hidrográficas do Brasil",
+      "institution": "IBGE, em parceria com a Agência Nacional de Águas e Saneamento Básico (ANA)",
+      "url": "https://www.ibge.gov.br/geociencias/cartas-e-mapas/informacoes-ambientais/31653-bacias-e-divisoes-hidrograficas-do-brasil.html",
+      "use": "Definição de bacia hidrográfica como área delimitada por divisores de água, com escoamento para um exutório."
+    },
+    {
+      "title": "Sistema Nacional de Unidades de Conservação (SNUC)",
+      "institution": "Ministério do Meio Ambiente e Mudança do Clima",
+      "url": "https://www.gov.br/mma/pt-br/composicao/sbio/dap/sistema-nacional-de-unidades-de-conservacao-snuc/",
+      "use": "Referência institucional para finalidade de conservação e gestão das Unidades de Conservação."
+    },
+    {
+      "file": "content/editorial/unicamp-2027/lesson-audit-portuguese-second-review-2026-10-10.json",
+      "use": "Requisitos independentes e exact_correction para Morfologia e Literatura."
+    },
+    {
+      "file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json",
+      "use": "Problemas independentes, conferências de cálculo e escopo para os quatro tópicos de Humanidades."
+    }
+  ],
+  "decisions": [
+    {
+      "curriculum_topic_id": 2472,
+      "official_label": "Morfologia da língua portuguesa",
+      "decision": "revise",
+      "current_version": "1.0.2",
+      "proposed_version": "1.0.3",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Substitui o exemplo pelo contraste prescrito na segunda revisão e remove toda referência-resumo ao antigo exemplo ambíguo. Desenvolve estrutura, formação, flexão e efeito contextual de classe, em consonância com o item 5 do programa, p. 4. Parecer: lesson-audit-portuguese-second-review-2026-10-10.json.",
+      "evidence": [
+        {"source_document_id": 148, "page": 4, "location": "Índice de conteúdos programáticos gerais, item 5", "supports": "Estrutura do vocábulo, formação de palavras e efeitos semânticos/expressivos das classes morfológicas."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-portuguese-second-review-2026-10-10.json", "supports": "Exact correction do exemplo e eliminação da ambiguidade entre substantivação e retomada referencial."}
+      ],
+      "coverage_note": "A lição trata de morfologia lexical e de classe em contexto; não pretende esgotar todos os processos de formação e efeitos morfológicos possíveis.",
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Forma, formação e função das palavras",
+          "content_format": "markdown",
+          "content": "A morfologia observa a estrutura das palavras, os processos que formam vocábulos e as classes que eles assumem no enunciado. Uma palavra pode ser analisada em base e afixos: em **releitura**, por exemplo, reconhecemos a base **leitura** e o prefixo **re-**. O valor do afixo depende da palavra e do contexto; não se deve atribuir a todo prefixo um significado mecânico invariável.\n\nA classe não é determinada apenas pela terminação. Um adjetivo pode modificar um substantivo expresso ou, acompanhado por determinante, ocupar o núcleo de uma expressão nominal — uso tradicionalmente chamado de adjetivo substantivado. Compare **os estudantes jovens** (núcleo: estudantes; jovens caracteriza) com **os jovens** (o grupo é nomeado pela característica). Flexões de gênero e número estabelecem concordância; derivação pode formar novo vocábulo, enquanto flexão normalmente marca relações gramaticais sem criar outro lexema. A interpretação do efeito semântico ou expressivo depende da construção concreta.\n\n**Erros comuns**\n\nNão infira a classe pela terminação isolada; não confunda prefixo com palavra autônoma; não trate todo **-s** como derivação (pode marcar plural); e não atribua a uma forma um efeito fixo fora do contexto. Primeiro identifique a estrutura e a função, depois explique a nuance que a escolha produz naquela frase."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: formação e efeito de classe",
+          "content_format": "markdown",
+          "content": "Considere: “A turma fez uma releitura do poema. Os jovens organizaram a mostra; os estudantes jovens também participaram.”\n\n1. Em **releitura**, reconhecemos a base **leitura** e o prefixo **re-**; no contexto, a palavra nomeia uma nova leitura do poema. O prefixo não tem um único sentido mecânico em todas as palavras.\n2. Em **os jovens**, **jovens** é um adjetivo substantivado pelo artigo **os**: a expressão nomeia o grupo por uma característica. Em **os estudantes jovens**, **jovens** modifica o substantivo expresso **estudantes** e caracteriza esse grupo.\n3. O contraste muda o modo de apresentar os participantes: primeiro, a juventude é o traço que identifica o grupo; depois, **estudantes** é o núcleo e **jovens** acrescenta uma característica. O efeito decorre da construção e do contexto, não de uma regra fixa sobre todo adjetivo."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Para analisar uma palavra, localize a base e os afixos, identifique formação ou flexão e observe sua função na frase. Compare as relações entre núcleo e modificadores antes de explicar o efeito de sentido.\n\n**Autochecagem:** em “as pesquisadoras experientes apresentaram o estudo”, qual palavra é núcleo do grupo nominal e qual o caracteriza? **Resposta:** **pesquisadoras** é o núcleo; **experientes** é o adjetivo que o modifica. Em “as experientes apresentaram o estudo”, o adjetivo aparece substantivado e nomeia o grupo no contexto. A análise não depende de supor um antecedente ausente."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "official_label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "decision": "revise",
+      "current_version": "1.0.4",
+      "proposed_version": "1.0.5",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Enumera as nove entradas e os textos exigidos, inclusive as 14 canções e os seis contos; aplica o método a um paratexto de obra obrigatória sem reproduzir trecho protegido. Incorpora as três exact_correction da segunda revisão. A proposta é explicitamente introdutória: exige trilhas específicas para cada obra antes de poder alegar cobertura literária integral. Programa, pp. 4–5; texto consultado em Wikisource.",
+      "evidence": [
+        {"source_document_id": 148, "page": 4, "location": "Literaturas de Língua Portuguesa, habilidades e conteúdos de prosa, poesia e teatro", "supports": "Leitura analítica e crítica; composição literária e relações com dimensões sociais, morais e políticas."},
+        {"source_document_id": 148, "page": 5, "location": "Relação de Livros, tabela completa", "supports": "Títulos, autores, extensão das obras e seleção de textos; a lista de canções foi conferida visualmente."},
+        {"title": "Memórias Póstumas de Brás Cubas — Ao leitor", "url": "https://pt.wikisource.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas/Pref%C3%A1cio", "location": "Prefácio/Ao leitor", "supports": "Voz de Brás Cubas, relação direta com o leitor e comentário sobre a forma da obra; usado em paráfrase, sem transcrição."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-portuguese-second-review-2026-10-10.json", "supports": "Lista completa, exemplo aplicado a obra obrigatória, relação entre composição e dimensões sociais/morais/políticas e limite explícito de cobertura."}
+      ],
+      "coverage_note": "Esta é uma aula de método e demonstração, não uma leitura guiada de todas as obras. Cada obra/conjunto abaixo precisa de uma etapa própria com passagens localizadas; não declarar o tópico integralmente coberto até que essas etapas existam e sejam revisadas.",
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Como ler forma, voz e mundo representado",
+          "content_format": "markdown",
+          "content": "A leitura literária começa pela observação de como a obra foi construída. Em prosa, pergunte quem narra, de que posição, como se organizam tempo, espaço, personagens e conflito, e que informações ficam limitadas ou contraditórias. Em poesia, observe voz, imagens, ritmo, sonoridade, disposição dos versos e relações entre partes. No teatro, acompanhe falas, rubricas, ação, conflito e organização das cenas. Esses elementos não são uma lista a preencher: a interpretação deve explicar como uma escolha formal orienta a experiência de leitura.\n\nDepois, relacione a evidência formal a questões sociais, morais ou políticas que a própria obra constrói. Não reduza o texto a resumo de enredo, biografia do autor ou opinião atual do leitor. Diferencie: **evidência** (passagem ou estrutura verificável), **interpretação** (o que ela permite compreender) e **hipótese** (leitura possível que exige outras evidências). As obras da edição devem ser lidas no texto integral ou na extensão oficial indicada; esta lição não substitui esse trabalho.\n\n**Relação oficial de leituras — edição 2027**\n\n- José Paulo Paes, *Prosas seguidas de odes mínimas* — obra completa.\n- Paulo César Pinheiro, *Canções escolhidas*: “Canto das três raças” (com Mauro Duarte); “Cordilheira” (com Sueli Costa); “Desenredo” (com Dori Caymmi); “Estrela da terra” (com Dori Caymmi); “Evangelho” (com Dori Caymmi); “Mordaça” (com Eduardo Gudin); “Na volta que o mundo dá” (com Vicente Barreto); “Navio fantasma” (com Francis Hime); “O dia em que o morro descer e não for carnaval” (com Wilson das Neves); “Pesadelo” (com Maurício Tapajós); “Velho arvoredo” (com Hélio Delmiro); “Vento bravo” (com Edu Lobo); “Viagem” (com João de Aquino); “Vontade de chorar” (com Ivor Lancellotti).\n- Gabriel García Márquez, *Os funerais da Mamãe Grande* — obra completa.\n- Caio Fernando Abreu, *Morangos mofados* — seis contos: “Diálogo”, “Além do Ponto”, “Terça-Feira Gorda”, “Pêra, uva ou maçã?”, “O dia em que Júpiter encontrou Saturno” e “Aqueles dois”.\n- Conceição Evaristo, *Olhos d’água* — obra completa.\n- Chimamanda Ngozi Adichie, *No seu pescoço* — obra completa.\n- Lima Barreto, *Vida e morte de M.J. Gonzaga de Sá* — obra completa.\n- Machado de Assis, *Memórias Póstumas de Brás Cubas* — obra completa.\n- Ailton Krenak, *A vida não é útil* — obra completa; entrevistas/palestras, conforme a tabela oficial.\n\nA grafia e a extensão acima seguem a tabela da Comvest. Para cada entrada, a próxima etapa da trilha deve registrar texto/passagem efetivamente lidos, localização, escolhas de composição e interpretação sustentada."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: o paratexto de Memórias Póstumas de Brás Cubas",
+          "content_format": "markdown",
+          "content": "Consulte o prefácio “Ao leitor” de *Memórias Póstumas de Brás Cubas*. Sem reproduzir o trecho, observe três movimentos verificáveis: a voz que se apresenta é a de Brás Cubas; ela se dirige diretamente ao leitor; e comenta a forma e a recepção esperada do livro.\n\n**Passo 1 — voz e situação:** a apresentação em primeira pessoa constrói uma persona narrativa, não uma declaração automaticamente atribuível a Machado de Assis. A moldura de autor já morto altera a situação convencional de publicação e dá à voz liberdade para comentar o próprio livro.\n\n**Passo 2 — composição:** a interpelação ao leitor quebra a distância de uma narração que apenas relata acontecimentos. O prefácio promete discutir a forma, mas também encena a recusa de uma exposição longa; essa tensão entre explicar e desviar já faz parte da composição.\n\n**Passo 3 — interpretação:** a autodescrição da obra e a expectativa de recepção convidam o leitor a desconfiar de classificações simples e a acompanhar o modo como o narrador controla a apresentação de si. Isso sustenta uma leitura sobre autoridade narrativa e convenções do romance; uma conclusão social ou moral mais específica requer evidências de outros capítulos. O exemplo demonstra um método de leitura de um paratexto, não uma análise integral do romance nem das demais obras da lista."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese, autochecagem e próximos passos",
+          "content_format": "markdown",
+          "content": "Uma interpretação literária consistente liga uma escolha de composição a uma evidência localizada e explica o que essa relação permite ler. Não confunda narrador e autor, tema e resumo, nem contexto histórico e explicação automática. Ao concluir uma leitura guiada, acrescente uma evidência textual localizada e explique como um recurso de composição contribui para uma questão social, moral ou política da obra. Separe o que o texto mostra, a interpretação sustentada e o que permanece hipótese.\n\n**Autochecagem:** no exemplo de “Ao leitor”, a quem pertencem as opiniões expressas pela voz que fala? **Resposta:** à persona narrativa de Brás Cubas; atribuí-las diretamente ao autor exige evidências externas e não decorre apenas da primeira pessoa. O que foi analisado? **Resposta:** um paratexto e sua relação com o leitor, não o romance inteiro.\n\n**Próximos passos obrigatórios da trilha:** criar leituras guiadas para cada obra ou conjunto de textos listado, incluindo poemas/canções e contos exigidos. Cada etapa deve trazer localização conferível, análise original de forma e linguagem, relação fundamentada com dimensões sociais/morais/políticas e revisão editorial. Até a conclusão dessas etapas, esta lição permanece introdutória e o tópico não deve ser marcado como integralmente coberto."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "official_label": "Conjuntos numéricos",
+      "decision": "revise",
+      "current_version": "1.2.1",
+      "proposed_version": "1.2.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Incorpora convenção explícita para naturais, união/interseção, operações com sinais e uso operacional de fatoração para MDC/MMC; resolve as duas exact_correction. Amplia a lacuna oficial de subconjuntos com definição e exemplo. Programa, pp. 5–6.",
+      "evidence": [
+        {"source_document_id": 148, "page": 5, "location": "Matemática, índice geral, tópico 1", "supports": "Representação de conjuntos, subconjuntos, união/interseção, operações fundamentais, primos, fatoração, divisores, MDC e MMC."},
+        {"source_document_id": 148, "page": 6, "location": "Continuação do tópico 1", "supports": "Módulo, desigualdades, representação decimal, sequências, porcentagem e juros."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json", "supports": "Convenção de ℕ, operações e critérios de MDC/MMC; conferências numéricas independentes."}
+      ],
+      "coverage_note": "A lição contempla os itens associados diretamente a conjuntos e operações numéricas. Sequências, porcentagem e juros, também listados sob o item oficial, devem continuar articulados às etapas correspondentes da trilha matemática.",
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Conjuntos, números e operações",
+          "content_format": "markdown",
+          "content": "Nesta trilha adotamos **ℕ={0,1,2,…}**; declarar a convenção evita divergência entre livros. Temos ℕ⊂ℤ⊂ℚ⊂ℝ: inteiros incluem negativos; racionais podem ser escritos como quociente de inteiros com denominador não nulo; reais incluem também irracionais como √2. A representação decimal de um racional é finita ou periódica.\n\nUm conjunto pode ser descrito por seus elementos ou por uma propriedade. **A⊆B** significa que todo elemento de A também pertence a B; **A⊂B** será usado aqui para inclusão própria, quando A⊆B e A≠B. **A∪B** reúne o que pertence a pelo menos um dos conjuntos; **A∩B**, o que pertence a ambos. Diferença A\\B contém os elementos de A que não estão em B.\n\nEm ℕ e ℤ, soma e produto são fechados; subtração pode sair de ℕ e divisão pode sair de ℤ. A divisão por zero não é definida. Respeite parênteses e precedência; ao operar inteiros, sinais fazem parte do número: (−3)+8=5 e (−3)·8=−24. Valor absoluto |x| é a distância de x a zero, portanto é não negativo.\n\nFatorar em primos permite comparar divisibilidade. Para inteiros positivos, o **MDC** usa os menores expoentes comuns nas fatorações primas; o **MMC** usa os maiores expoentes de todos os primos presentes. O número de divisores positivos de n=∏pᵢᵃⁱ é ∏(aᵢ+1), pois cada divisor escolhe o expoente de cada primo entre 0 e aᵢ.\n\n**Erros comuns**\n\nNão suponha que ℕ inclui zero sem declarar a convenção; não confunda A∈B (elemento) com A⊆B (subconjunto); não cancele termos de uma soma em frações; não calcule MDC/MMC usando os mesmos expoentes; e não misture propriedades válidas em ℝ com regras de conjuntos menores."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: inclusão, operações e fatoração",
+          "content_format": "markdown",
+          "content": "Considere U={0,1,2,3,4}, A={0,2,4} e B={2,3}.\n\n1. **Subconjunto:** A⊄B, pois 0∈A mas 0∉B. Já {2}⊆A e {2}⊆B.\n2. **União e interseção:** A∪B={0,2,3,4}; A∩B={2}. O 2 aparece nos dois conjuntos; 0 e 4 só em A; 3 só em B.\n3. **Operação com sinais:** (−3)+8=5, enquanto (−3)·8=−24; soma e produto obedecem a regras de sinais diferentes.\n4. **MDC e MMC:** 12=2²·3 e 18=2·3². O MDC(12,18)=2¹·3¹=6, usando os menores expoentes comuns. O MMC(12,18)=2²·3²=36, usando os maiores expoentes de todos os primos presentes.\n5. **Contagem de divisores:** 36=2²·3² tem (2+1)(2+1)=9 divisores positivos, pois os expoentes possíveis de 2 e 3 são 0, 1 ou 2."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Declare a convenção dos naturais; diferencie elemento, inclusão e inclusão própria; calcule união/interseção pela condição de pertencimento; e use fatoração prima para divisores, MDC e MMC. Em problemas, confira domínio, sinal, unidade e plausibilidade do resultado.\n\n**Autochecagem:** se A={1,2} e B={1,2,3}, então A⊆B? Sim: todo elemento de A está em B. A⊂B na convenção desta aula? Sim, porque também são diferentes. Qual é MDC(20,30) e MMC(20,30)? 20=2²·5 e 30=2·3·5; MDC=2·5=10 e MMC=2²·3·5=60."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "official_label": "Funções",
+      "decision": "revise",
+      "current_version": "1.3.1",
+      "proposed_version": "1.3.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Torna a expressão radical tipograficamente inequívoca e acrescenta exemplos curtos para as famílias de funções listadas no programa. Os cálculos e domínios foram conferidos. Como um único exemplo não substitui o treino extenso de gráficos, trigonometria, equações e funções racionais, o texto nomeia as etapas que ainda exigem prática e segue em review. Programa, pp. 5–6.",
+      "evidence": [
+        {"source_document_id": 148, "page": 5, "location": "Matemática, índice geral, tópico 2", "supports": "Afins, quadráticas, k/x, |x|, trigonométricas, equações/inequações, operações, transformações e inversas."},
+        {"source_document_id": 148, "page": 6, "location": "Continuação do tópico 2", "supports": "Raízes n-ésimas e funções racionais p(x)/q(x), com domínios."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json", "supports": "Correção de legibilidade da raiz e validação independente dos domínios, composições e transformações."}
+      ],
+      "coverage_note": "A teoria faz uma revisão panorâmica das famílias oficiais; as funções trigonométricas, inversas, racionais e resolução de famílias de equações precisam de etapas próprias com gráficos e listas de exercícios antes do tópico ser considerado integralmente coberto.",
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Famílias de funções, domínio e gráficos",
+          "content_format": "markdown",
+          "content": "Uma função atribui exatamente uma saída a cada entrada de seu domínio. A expressão, o gráfico e o contexto precisam ser lidos juntos: o domínio registra entradas permitidas, a imagem registra saídas obtidas.\n\n- **Afim** f(x)=ax+b: variação constante; b é a ordenada na origem e a é a inclinação. **Quadrática** ax²+bx+c (a≠0): parábola; o sinal de a orienta a concavidade, e o vértice dá extremo global do modelo quadrático.\n- **Proporcionalidade inversa** y=k/x (x≠0): produto xy=k. **Módulo** y=|x| representa distância a zero e pode ser escrito por partes, x se x≥0 e −x se x<0.\n- **Trigonométricas** seno e cosseno são periódicas e dependem do ângulo (em radianos ou graus, conforme declarado); o gráfico, período e amplitude devem ser lidos com escala.\n- **Operações**: (f+g)(x)=f(x)+g(x), (fg)(x)=f(x)g(x) e (f∘g)(x)=f(g(x)), sempre respeitando os domínios. Em uma transformação, cf(x) altera valores verticais; f(cx) altera a escala horizontal e requer c≠0.\n- **Raiz n-ésima** exige radicando não negativo em ℝ quando n é par; **função racional** p(x)/q(x) exclui as raízes de q. **Função inversa** desfaz a correspondência quando a função é bijetiva entre os domínios/codomínios considerados; graficamente, os pontos de f e f⁻¹ trocam coordenadas e refletem na reta y=x.\n\nEquações f(x)=g(x) procuram interseções ou soluções algébricas; inequações com funções pedem comparar valores em intervalos, não apenas encontrar raízes. Transformações e restrições do domínio podem alterar número e localização das soluções.\n\n**Erros comuns**\n\nNão confunda f(2x) com 2f(x); não inclua zero no domínio de k/x sem analisar k e a expressão; exclua zeros do denominador; declare se a raiz cobre numerador inteiro; e não conclua que uma função é invertível sem verificar injetividade no domínio escolhido."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: domínio, transformação, composição e famílias",
+          "content_format": "markdown",
+          "content": "**1. Domínio com radical no numerador:** para h(x)=√(x−1)/(x−2), a raiz cobre apenas x−1. Exigimos x−1≥0, portanto x≥1, e x−2≠0, portanto x≠2. Logo Dom(h)=[1,2)∪(2,∞). O ponto x=1 é permitido (h(1)=0); x=2 não é.\n\n**2. Quadrática e módulo:** para q(x)=x²−4, q(x)=0 quando x=±2; a parábola abre para cima e tem vértice (0,−4). Para m(x)=|x−2|, m(x)=2−x se x<2 e x−2 se x≥2; o vértice em (2,0) vem da definição de distância.\n\n**3. Transformação:** se f(x)=x², então 2f(x)=2x² (multiplica as saídas), enquanto f(2x)=4x² (substitui a entrada por 2x). O segundo gráfico é comprimido horizontalmente em relação a f; a verificação algébrica também mostra que, para cada x, sua altura é quatro vezes x².\n\n**4. Composição:** sejam f(x)=x²−1 e g(x)=2x+1. Então (f∘g)(2)=f(g(2))=f(5)=25−1=24. A ordem importa: primeiro se calcula g, depois se aplica f.\n\nEsses cálculos são exemplos de leitura, não prova de cobertura completa das equações trigonométricas, funções inversas ou análise de gráficos racionais; esses casos devem ser praticados em etapas seguintes."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e roteiro de prática",
+          "content_format": "markdown",
+          "content": "Antes de calcular, escreva a família da função e seu domínio. Em seguida, interprete parâmetros e pontos, compare representações e resolva equações/inequações no intervalo válido. Em composição e transformação, substitua com parênteses; em inversas, declare domínio e imagem escolhidos.\n\n**Autochecagem:** para f(x)=x², qual é f(−3)? 9. Qual é 2f(−3)? 18. E f(2·(−3))? f(−6)=36. Para r(x)=1/(x−4), qual entrada deve ser excluída? x=4. Para uma inversa de x² em ℝ, é necessário restringir o domínio, por exemplo a x≥0, antes de definir a inversa como função.\n\n**Próximas etapas de estudo:** construir e ler gráficos afins/quadráticos; estudar y=k/x e |x|; fazer um módulo de seno/cosseno com período, escala, identidades, equações e inequações; praticar operações e composição; estudar transformações e inversas; e resolver problemas de funções racionais e raízes n-ésimas com domínio explícito. Esta lição inicia a sequência; não substitui esses módulos e exercícios."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "official_label": "Geometria espacial",
+      "decision": "revise",
+      "current_version": "1.2.1",
+      "proposed_version": "1.2.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Inclui a classificação completa das posições de duas retas e de reta/plano, e acrescenta tronco de cone, áreas de cilindro, cone e esfera e volumes correspondentes. Fórmulas e valores dos exemplos foram verificados. Programa, p. 6; permanece em review para conferência independente.",
+      "evidence": [
+        {"source_document_id": 148, "page": 6, "location": "Matemática, índice geral, tópico 7", "supports": "Paralelismo/perpendicularidade entre retas e planos; poliedros, prismas, pirâmides, troncos; cilindros, cones e esferas, áreas e volumes."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json", "supports": "Exact correction sobre retas coincidentes e perpendicularidade, e conferência de fórmulas/valores da proposta anterior."}
+      ],
+      "coverage_note": "A substituição cobre os sólidos e relações nomeados no item oficial, mas não é um catálogo de todos os poliedros nem substitui prática com desenhos, planificações e problemas contextualizados.",
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Posições relativas, áreas e volumes de sólidos",
+          "content_format": "markdown",
+          "content": "No espaço, duas retas podem ser **coincidentes**, **paralelas distintas**, **concorrentes** (cruzam-se num ponto) ou **reversas** (não coplanares). Uma reta e um plano podem ser paralelos, ter a reta contida no plano ou cruzar-se em um ponto; no último caso, são perpendiculares quando a reta forma 90° com as direções do plano. Duas retas distintas não são perpendiculares só por formarem ângulo reto em uma projeção: é preciso que sejam coplanares e concorrentes.\n\nPara sólidos, diferencie **área** (unidade quadrada) e **volume** (unidade cúbica), e use a altura perpendicular. Prismas e cilindros: V=A_base·h. Pirâmides e cones: V=A_base·h/3. Para cilindro de raio r e altura h, A_lateral=2πrh e A_total=2πr(h+r). Para cone reto, a geratriz g=√(r²+h²), A_lateral=πrg, A_total=πr(g+r) e V=πr²h/3. Para esfera, A=4πr² e V=4πr³/3.\n\nUm tronco de cone reto, de altura h e raios das bases R e r, tem V=πh(R²+Rr+r²)/3; sua geratriz é g=√(h²+(R−r)²), e área lateral A_lateral=π(R+r)g. Um tronco de pirâmide pode ser tratado comparando a pirâmide inteira com a parte removida, ou aplicando a fórmula correspondente quando as bases são paralelas e semelhantes. Em poliedros, planificação e contagem de faces ajudam a calcular área externa; superfícies de contato internas não entram na área exterior.\n\n**Erros comuns**\n\nNão use geratriz como altura do volume; não some uma face interna colada; não omita unidades; e não aplique fórmulas de tronco sem bases paralelas e sem a geometria indicada."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: cilindro, cone e tronco de cone",
+          "content_format": "markdown",
+          "content": "**Cilindro:** r=3 cm e h=10 cm. V=π·3²·10=90π cm³. A_lateral=2π·3·10=60π cm²; A_total=60π+2π·3²=78π cm².\n\n**Cone reto:** r=3 cm e h=4 cm. Primeiro g=√(3²+4²)=5 cm. Então V=π·9·4/3=12π cm³; A_lateral=π·3·5=15π cm²; A_total=15π+9π=24π cm².\n\n**Tronco de cone:** R=3 cm, r=1 cm e h=4 cm. A geratriz é g=√(4²+(3−1)²)=√20=2√5 cm. O volume é V=π·4(3²+3·1+1²)/3=52π/3 cm³; a área lateral é π(3+1)·2√5=8π√5 cm².\n\nComo controle, o volume do tronco é menor que o de um cilindro de raio 3 e altura 4 (36π cm³), o que é plausível. As unidades também distinguem as medidas: cm² para áreas e cm³ para volumes."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Classifique a relação geométrica antes de usar um desenho; em sólidos, identifique base, raio e altura perpendicular. Calcule área e volume separadamente, use geratriz apenas nas fórmulas laterais apropriadas e verifique se a área total inclui apenas a superfície externa. Para troncos, registre ambos os raios e a distância perpendicular entre as bases.\n\n**Autochecagem:** um cone reto tem r=5 cm e h=12 cm. Sua geratriz é 13 cm; portanto, A_lateral=65π cm², A_total=90π cm² e V=100π cm³. Uma reta contida no plano é paralela a ele? Na classificação adotada aqui, não: “paralela” significa sem ponto comum; contida é uma posição distinta.\n\nPara consolidar, pratique desenhos de prismas/pirâmides, troncos de pirâmide e esfera, incluindo planificações e problemas em que uma dimensão precisa ser inferida."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "official_label": "Componentes físico-naturais do espaço geográfico",
+      "decision": "revise",
+      "current_version": "1.2.1",
+      "proposed_version": "1.2.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Corrige a classificação dos solos como pedosfera/interface e amplia a lição para relevo brasileiro, clima, hidrologia, criosfera e conservação, além de explicar como interpretar suas interações. O exemplo quantitativo de bacia tem hipóteses e unidades explícitas. Programa, pp. 7–8; Atlas, IBGE/ANA e SNUC usados como referências institucionais.",
+      "evidence": [
+        {"source_document_id": 148, "page": 7, "location": "Geografia, III(a), mecanismos de interação entre litosfera, hidrosfera, atmosfera e criosfera", "supports": "Tectônica, gênese/evolução do relevo, solos, clima, águas e criosfera."},
+        {"source_document_id": 148, "page": 7, "location": "Geografia, III(b), biosfera e questão ambiental", "supports": "Biomas, Unidades de Conservação, hotspots, recursos, riscos/desastres, mudanças climáticas e planejamento/gestão ambiental."},
+        {"source_document_id": 148, "page": 8, "location": "Geografia, habilidades e continuação da regionalização", "supports": "Leitura multiescalar e relação dos componentes naturais com processos socioespaciais."},
+        {"title": "Atlas Geográfico Escolar", "url": "https://www.ibge.gov.br/geociencias/atlas/nacional/2402-np-atlas-geografico-escolar/16633-atlas-geografico-escolar.html", "supports": "Mapas escolares oficiais sobre relevo, clima, vegetação, uso da terra e diversidade ambiental."},
+        {"title": "Bacias e Divisões Hidrográficas do Brasil", "url": "https://www.ibge.gov.br/geociencias/cartas-e-mapas/informacoes-ambientais/31653-bacias-e-divisoes-hidrograficas-do-brasil.html", "supports": "Conceito geomorfológico de bacia, divisores de água e exutório."},
+        {"title": "Sistema Nacional de Unidades de Conservação", "url": "https://www.gov.br/mma/pt-br/composicao/sbio/dap/sistema-nacional-de-unidades-de-conservacao-snuc/", "supports": "Finalidade de conservação da biodiversidade e gestão das UCs."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-humanities-second-review-2026-10-10.json", "supports": "Correção da pedosfera e escopo de trilha recomendado na revisão independente."}
+      ],
+      "coverage_note": "A lição passa a oferecer uma visão integrada dos itens nomeados na revisão final. O programa completo ainda exige módulos específicos de deriva continental/tectônica, classificação de climas brasileiros e sul-americanos, recursos hídricos e gestão, biomas/hotspots, riscos, mudanças climáticas e planejamento ambiental; estes passos estão indicados e não devem ser contados como ensinados apenas por esta introdução.",
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Componentes naturais, paisagem e processos",
+          "content_format": "markdown",
+          "content": "O espaço físico-natural resulta de componentes em interação: **litosfera** (rochas e estrutura), **pedosfera** (solos, interface de material mineral, matéria orgânica, água, ar e organismos), **hidrosfera** (água líquida), **atmosfera**, **criosfera** (água congelada) e **biosfera**. O relevo expressa processos internos, como tectonismo, e externos, como intemperismo, erosão, transporte e deposição; sua forma influencia drenagem, circulação de ar, ocupação e usos do território.\n\nNo Brasil, mapas de relevo distinguem grandes compartimentos, como planaltos, planícies e depressões; a classificação não deve ser reduzida à altitude absoluta. Compare forma, estrutura geológica, processos predominantes e escala do mapa. Clima também não é o tempo de um dia: é analisado por padrões de longo prazo de temperatura, umidade, pressão e circulação. Latitude, altitude, relevo, maritimidade/continentalidade, vegetação e circulação atmosférica/oceânica interagem; por isso, a classificação climática depende do critério e da escala adotados.\n\nUma **bacia hidrográfica** é a área drenada por cursos d’água e delimitada por divisores, com saída em um exutório. Precipitação pode ser interceptada, infiltrar, evaporar ou escoar; a proporção varia com solo, declividade, cobertura, saturação e intensidade/duração da chuva. Rios e aquíferos conectam ambientes e usos humanos. A criosfera armazena água e participa de balanços de energia e nível do mar; mudanças em geleiras, neve e gelo marinho têm mecanismos e escalas diferentes.\n\nBiomas e domínios naturais articulam clima, relevo, solos e comunidades, sem serem homogêneos. Unidades de Conservação são instrumentos de proteção e gestão da biodiversidade, com categorias e objetivos distintos; conflitos de uso, mineração, desmatamento, riscos, eventos extremos e mudanças climáticas devem ser examinados com evidências e escala.\n\n**Erros comuns**\n\nNão classifique solo simplesmente como rocha/litosfera: trate-o como pedosfera ou interface. Não confunda bacia hidrográfica e divisão administrativa de gestão; não iguale altitude a tipo de relevo; não infira clima de um episódio meteorológico; não atribua todo desastre apenas à natureza ou ao clima sem avaliar exposição, vulnerabilidade e uso do território."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: chuva, encosta e bacia hidrográfica",
+          "content_format": "markdown",
+          "content": "Imagine uma bacia de 2 km² que recebe 50 mm de chuva num evento. Primeiro convertemos unidades: 2 km²=2.000.000 m² e 50 mm=0,05 m. O volume de água precipitado sobre a área é 2.000.000×0,05=100.000 m³.\n\nSuponha, apenas para estimativa, que um coeficiente de escoamento de 0,30 seja aplicável ao evento. O volume de escoamento estimado seria 0,30×100.000=30.000 m³. Não significa que esse volume chegue de uma vez ao exutório: há variação temporal, armazenamento, infiltração, evaporação e perdas; o coeficiente é hipótese do exercício, não constante universal da bacia.\n\nSe uma encosta da bacia perde cobertura vegetal e o solo é compactado, pode diminuir a infiltração e aumentar o escoamento superficial. Partículas removidas podem elevar a turbidez e se depositar em trechos de menor energia, contribuindo para assoreamento. A conclusão depende de declividade, tipo e umidade do solo, intensidade da chuva, manejo e medidas de conservação. A leitura espacial combina relevo, solo, água e ação humana; não atribui o resultado a uma única causa."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e roteiro de aprofundamento",
+          "content_format": "markdown",
+          "content": "Em cada questão, localize o processo e a escala; identifique componentes, fluxos de água/energia/materiais e intervenções humanas; depois compare a interpretação com mapas, gráficos ou dados. Solos pertencem à pedosfera/interface; clima descreve padrões de longo prazo; bacias são delimitadas por divisores e convergem para exutórios; relevo deve ser analisado por forma e processo, não só por altitude.\n\n**Autochecagem:** uma área de 1 km² recebe 20 mm de chuva. O volume precipitado é 1.000.000 m²×0,02 m=20.000 m³. Se o coeficiente hipotético de escoamento é 0,25, a estimativa é 5.000 m³, com as mesmas ressalvas sobre simplificação. Que informação falta para explicar erosão de encosta? Entre outras: declividade, solo, cobertura vegetal, manejo e intensidade da chuva.\n\n**Próximas etapas necessárias para o programa:** (1) deriva continental, tectônica e gênese/evolução do relevo, com exemplos brasileiros e sul-americanos; (2) formação, diferenciação e degradação dos solos; (3) elementos, classificações e climas do Brasil/América do Sul em mapas; (4) ciclo hidrológico, regiões hidrográficas, recursos, oceanos e gestão; (5) criosfera e mudanças ambientais globais; (6) biomas, hotspots e conservação; (7) recursos, riscos/desastres, mudanças climáticas e planejamento ambiental. Esta aula orienta a trilha, mas não substitui cada etapa nem autoriza marcar cobertura integral."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "consulted_on": "2026-10-10",
+  "items": [
+    {
+      "curriculum_topic_id": 2468,
+      "title": "Texto e contexto — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-redacao/exercicios-sobre-texto-contexto.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 1, poema ‘Verbo ser’; gabarito A.",
+      "scope_limit": "Interpretação e inferência textual; não representa todo o programa de língua portuguesa.",
+      "accessibility_note": "Item selecionado é textual e não depende de figura; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2469,
+      "title": "Semântica e relações de sentido — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-semantica.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 2, uso de ‘no entanto’; gabarito C.",
+      "scope_limit": "Prática de sentido contextual e conectivos; a lista mistura tópicos e apenas o item indicado foi conferido.",
+      "accessibility_note": "Item selecionado é textual; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2470,
+      "title": "Variação linguística — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-variacoes-linguisticas.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questões 1 (A), 3 (D), 7 (B), 11 (C) e 12 (A); excluir a questão 8, que depende de cartaz/imagem.",
+      "scope_limit": "Usar somente os itens enumerados; não tratar toda a lista como revisada.",
+      "accessibility_note": "Itens enumerados são textuais; questão 8 visual foi excluída; leitor de tela não testado."
+    },
+    {
+      "curriculum_topic_id": 2473,
+      "title": "Fonemas — prática com gabarito comentado",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-fonemas/",
+      "provider": "Toda Matéria",
+      "selected_items": "Questões 1–5 e 7. Excluir a questão 6, pois as alternativas A e C satisfazem o enunciado.",
+      "scope_limit": "Prática de fonema/letra e representação sonora; não cobre todos os elementos de fonologia.",
+      "accessibility_note": "Conteúdo web revisado anteriormente; conformidade assistiva não testada."
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "title": "Função logarítmica — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-logaritmica.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questões 1 (D) e 4 (E); respostas conferidas na própria página.",
+      "scope_limit": "Prática de propriedades e cálculo de logaritmos; usar somente os itens indicados.",
+      "accessibility_note": "Itens selecionados textuais; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "title": "Função exponencial — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-exponencial.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questões 1 (D) e 2 (A); respostas conferidas na própria página.",
+      "scope_limit": "Prática de crescimento/decrescimento e potências; usar somente os itens indicados.",
+      "accessibility_note": "Itens selecionados textuais; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "title": "Território brasileiro — prática selecionada",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-o-territorio-brasileiro-com-respostas-explicadas/",
+      "provider": "Toda Matéria",
+      "selected_items": "Questão 3 (B), fronteiras terrestres do Brasil; enunciado e explicação textuais.",
+      "scope_limit": "Prática de localização e fronteiras; cobertura parcial da dinâmica territorial.",
+      "accessibility_note": "Os itens selecionados não dependem do mapa decorativo; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "title": "Formação territorial do Brasil — prática selecionada",
+      "url": "https://www.historiadobrasil.net/exercicios/formacao_territorial_brasil.htm",
+      "provider": "História do Brasil",
+      "selected_items": "Questões 1 (D), 2 (B), 3 (C) e 5 (D); gabaritos conferidos.",
+      "scope_limit": "Complemento interdisciplinar sobre formação histórica; não cobre toda a dinâmica territorial contemporânea.",
+      "accessibility_note": "Itens selecionados textuais; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2497,
+      "title": "Primeira lei de Mendel — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-primeira-lei-mendel.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 6 (C, aa), cruzamento com proporção 3:1; enunciado textual e resposta explicada.",
+      "scope_limit": "Prática de herança mendeliana básica; não cobre genética inteira.",
+      "accessibility_note": "Item selecionado não depende de imagem; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2498,
+      "title": "Evolução e ancestralidade comum — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-teoria-evolucao.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 3 (B), parentesco entre humanos e baleias explicado por ancestral comum.",
+      "scope_limit": "Prática de ancestralidade comum; não cobre mecanismos, evidências e origem da vida em conjunto.",
+      "accessibility_note": "Item selecionado textual e sem imagem necessária; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2502,
+      "title": "Sistema Solar — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-sistema-solar.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 1 (E), identificação dos oito planetas; resposta explicitada na página.",
+      "scope_limit": "Usar somente a questão 1. A lista tem outros itens com respostas ou estímulos não auditados.",
+      "accessibility_note": "Questão selecionada é textual; imagens presentes em outros itens não foram consideradas; leitor de tela não testado."
+    },
+    {
+      "curriculum_topic_id": 2502,
+      "title": "Heliocentrismo — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-heliocentrismo.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 1 (B), modelos heliocêntrico e geocêntrico; item textual e resposta explicada.",
+      "scope_limit": "Complemento sobre modelos astronômicos; não cobre todo o programa de Astronomia.",
+      "accessibility_note": "Item selecionado textual; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2503,
+      "title": "Calor latente — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calor-latente.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 1 (B, 70 cal/g), resolvida por P·Δt=m·L; enunciado e solução textuais.",
+      "scope_limit": "Prática de calor latente; não representa toda a termodinâmica.",
+      "accessibility_note": "Usar somente a questão 1, que não depende do gráfico presente em outro item; leitor de tela não testado."
+    },
+    {
+      "curriculum_topic_id": 2505,
+      "title": "Circuitos e lei de Ohm — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-circuitos-eletricos.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 1 (B, 120 mA), aplicação da lei de Ohm; item textual.",
+      "scope_limit": "Usar somente a questão 1; cobre eletricidade básica, não magnetismo.",
+      "accessibility_note": "Item selecionado textual; a questão 3 depende de figura e não foi incluída; leitor de tela não testado."
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "title": "Pilhas e células eletroquímicas — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-ou-celulas-eletroquimicas.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 8 (B, eletrodo de cobre), identificação do cátodo a partir da reação global.",
+      "scope_limit": "Usar somente a questão 8. As demais questões da página não foram aprovadas como prática.",
+      "accessibility_note": "Enunciado selecionado textual; leitor de tela não testado."
+    },
+    {
+      "curriculum_topic_id": 2511,
+      "title": "Tabela de frequências relativas — prática selecionada",
+      "url": "https://pt.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/stats-two-way-tables/e/reading-two-way-relative-frequency-tables",
+      "provider": "Khan Academy",
+      "selected_items": "Um item sobre tabela de professores: resposta B, 11/15, calculada a partir dos dados e alternativas exibidos.",
+      "scope_limit": "Prática de leitura de tabela; solução comentada não estava visível e o curso de origem pode superar o nível do vestibular.",
+      "accessibility_note": "Tabela apresentada textualmente; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "title": "Substâncias e misturas — prática selecionada",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-substancias-e-misturas/",
+      "provider": "Toda Matéria",
+      "selected_items": "Questões 1–2, características de substância e propriedades físicas constantes; gabarito comentado.",
+      "scope_limit": "Prática introdutória sobre substâncias e misturas; não cobre todas as propriedades dos estados físicos.",
+      "accessibility_note": "Itens selecionados textuais, sem imagem necessária; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "title": "Estados físicos da matéria — prática selecionada",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-estados-fisicos-da-materia-com-gabarito-explicado/",
+      "provider": "Toda Matéria",
+      "selected_items": "Questão 3 (C), solidificação como processo exotérmico; explicação textual.",
+      "scope_limit": "Prática de mudanças de estado e troca de calor; escopo parcial.",
+      "accessibility_note": "Item selecionado textual; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "title": "Transformações dos gases — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-transformacoes-dos-gases.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 1 (D, 28 L), aplicação da equação geral dos gases com temperatura em kelvin; resolução textual.",
+      "scope_limit": "Prática de transformação gasosa; não cobre por si só todas as leis e condições de gases.",
+      "accessibility_note": "Item selecionado textual; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "title": "Concentração de soluções — prática selecionada",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-molaridade-molalidade-concentracao-e-diluicao-de-solucoes-com-respostas-comentadas/",
+      "provider": "Toda Matéria",
+      "selected_items": "Questões 3 (D, 0,2 mol/L) e 4 (A, 80 g/L), com resolução algébrica textual.",
+      "scope_limit": "Prática de molaridade e concentração em massa; não cobre todas as unidades previstas no tópico.",
+      "accessibility_note": "Itens selecionados textuais e sem imagem necessária; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "title": "Distribuição eletrônica — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-distribuicao-eletronica.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 9, configuração terminada em 3d²; resolução totaliza 22 elétrons.",
+      "scope_limit": "Prática de configuração eletrônica; não cobre todo o programa de estrutura atômica e tabela periódica.",
+      "accessibility_note": "Enunciado e solução textuais, sem figura necessária; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "title": "Organização da tabela periódica — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-organizacao-tabela-periodica.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 4 (C), halogênio do quarto período, deduzido da configuração eletrônica.",
+      "scope_limit": "Prática de grupo e período; não cobre propriedades periódicas em toda a extensão.",
+      "accessibility_note": "Enunciado e resolução textuais; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "title": "Emissões alfa, beta e gama — prática selecionada",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-as-emissoes-alfa-beta-gama.htm",
+      "provider": "Brasil Escola",
+      "selected_items": "Questão 2: Rn-222 → Pb-206 requer 4 emissões alfa e 4 beta; resolução textual por conservação de A e Z.",
+      "scope_limit": "Prática de equações nucleares e emissões; não cobre toda a cinética de decaimento.",
+      "accessibility_note": "Item selecionado textual; algumas questões da lista usam diagramas e não são incluídas; leitor de tela não testado."
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "title": "Funções nitrogenadas — prática textual selecionada",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-funcoes-nitrogenadas-questoes-resolvidas/",
+      "provider": "Toda Matéria",
+      "selected_items": "Questão 5 (B, amida): a fórmula textual CH₃—CONH₂ identifica o grupo carboxamida.",
+      "scope_limit": "Prática de identificação de amida; não cobre todas as funções orgânicas.",
+      "accessibility_note": "Enunciado e resolução textuais, sem figura necessária; teste formal com leitor de tela não realizado."
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "title": "Polímeros — prática textual selecionada",
+      "url": "https://exercicios.mundoeducacao.uol.com.br/exercicios-quimica/exercicios-sobre-polimeros.htm",
+      "provider": "Mundo Educação",
+      "selected_items": "Questão 2 (B), identifica propeno como monômero do polipropileno; comentário textual.",
+      "scope_limit": "Prática de relação monômero–polímero; não é exercício de nomenclatura IUPAC nem cobre todas as propriedades.",
+      "accessibility_note": "Enunciado, alternativas e comentário textuais; teste formal com leitor de tela não realizado."
+    }
+  ]
+}

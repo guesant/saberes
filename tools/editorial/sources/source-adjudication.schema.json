@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source-adjudication.schema.json",
+  "title": "Editorial source review adjudication",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_id",
+    "entity_type",
+    "entity_id",
+    "decision",
+    "reviewer",
+    "reviewed_at",
+    "expected_current_state_hash",
+    "rationale",
+    "evidence"
+  ],
+  "properties": {
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "entity_type": {
+      "enum": [
+        "resource",
+        "resource_topic",
+        "question_canonical_topic",
+        "curriculum_topic_canonical_topic",
+        "curriculum_topic_stage",
+        "edition_regulatory_rule"
+      ]
+    },
+    "entity_id": { "oneOf": [{ "type": "integer" }, { "type": "string", "minLength": 1 }] },
+    "decision": { "enum": ["approve", "reject", "defer"] },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "reviewed_at": { "type": "string", "format": "date-time" },
+    "expected_current_state_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "rationale": { "type": "string", "minLength": 1 },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["uri", "sha256", "finding"],
+        "properties": {
+          "uri": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "finding": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "decisions": [
+    {
+      "table": "content_assets",
+      "key": {"id": 243},
+      "expected": {"alt_text": "Página completa 5 do PDF do caderno Q/T; contém questões 9–14. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."},
+      "changes": {"alt_text": "Página completa 5 do caderno Q/T, com questões 9–14. Entre os elementos visuais, há um gráfico de volume da água em função da temperatura: a curva da água líquida tem formato de U, com marca em 4 °C, e o trecho do gelo aparece à esquerda. Na questão 14, um esquema mostra material entre dois condutores, um resistor R e uma fonte de tensão V. A página inteira é usada como imagem de apoio; a descrição não indica resultados nem alternativas."},
+      "reason": "O alt atual identifica apenas a página inteira e não descreve os dois elementos visuais necessários nas questões 13 e 14, que usam esta imagem como estímulo. Descrição baseada na página oficial renderizada; não inclui respostas.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "PDF oficial do simulado Q/T; conferidas visualmente as questões 9–14 na página impressa 3 (página 5 do arquivo), incluindo gráfico volume-temperatura e circuito com material, resistor e fonte."},
+        {"locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-05.png", "detail": "Render da página 5 conferido visualmente; mostra a curva de volume da água e o esquema elétrico citados na nova descrição."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 244},
+      "expected": {"alt_text": "Página completa 6 do PDF do caderno Q/T; contém questões 15–16. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."},
+      "changes": {"alt_text": "Página completa 6 do caderno Q/T, com questões 15–16. A questão 15 traz um mapa da América do Sul dividido em macrocompartimentos numerados de 1 a 4, acompanhado de legenda de morfoestruturas e compartimentos geológico-geomorfológicos. A questão 16 apresenta uma tabela com países produtores de café e colunas de produção e exportação. É a página inteira do caderno, não um recorte isolado."},
+      "reason": "O alt existente sinaliza que é página inteira, mas não identifica o mapa que serve de estímulo à questão 15; descrevo os recursos visuais conferidos sem interpretar as alternativas.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "PDF oficial Q/T; página impressa 4 (página 6 do arquivo) conferida visualmente. Mapa sul-americano numerado com legenda e tabela de produção/exportação de café."},
+        {"locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-06.png", "detail": "Render da página 6 confirma os números 1–4 no mapa, a legenda de morfoestruturas/compartimentos e a tabela de café."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 245},
+      "expected": {"alt_text": "Página completa 7 do PDF do caderno Q/T; contém questões 17–20. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."},
+      "changes": {"alt_text": "Página completa 7 do caderno Q/T, com questões 17–20. A questão 18 usa dois mapas esquemáticos: A localiza Belo Horizonte e São Paulo e marca entre elas um segmento de 2,5 cm e a distância de 500 km; B localiza Presidente Prudente e Campinas, marca um segmento de 3,22 cm e inclui escala gráfica de 0 a 140 km. Os mapas não mostram uma resposta calculada."},
+      "reason": "A imagem é um fallback de página inteira associado também ao estímulo de escala cartográfica; o alt genérico não descreve os dois mapas necessários à leitura da questão 18.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "PDF oficial Q/T; página impressa 5 (página 7 do arquivo) conferida visualmente. Os mapas A e B mostram pares de cidades, segmentos cotados e, no mapa B, escala gráfica."},
+        {"locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-07.png", "detail": "Render da página 7 confirma as legendas 2,5 cm/500 km e 3,22 cm/escala gráfica 0–140 km."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 251},
+      "expected": {"alt_text": "Página completa 13 do PDF do caderno Q/T; contém questões 38–41. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."},
+      "changes": {"alt_text": "Página completa 13 do caderno Q/T, com questões 38–41. Na questão 40 há um meme: a legenda diz “Segundo a teoria de Lamarck, assim ficará o aluno que cola nas provas...”, sobre uma fotografia em preto e branco de uma pessoa com o pescoço alongado. A página inteira é apresentada; a descrição não associa a imagem a uma alternativa."},
+      "reason": "A imagem é o único estímulo visual associado à questão 40; o alt atual informa somente que se trata da página completa. A descrição reproduz a legenda visível e descreve a fotografia, sem indicar resposta.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "PDF oficial Q/T; página impressa 11 (página 13 do arquivo) conferida visualmente, incluindo o meme da questão 40 e sua legenda."},
+        {"locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-13.png", "detail": "Render da página 13 confirma o texto do meme e a fotografia em preto e branco."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 252},
+      "expected": {"alt_text": "Página completa 14 do PDF do caderno Q/T; contém questões 42–48. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."},
+      "changes": {"alt_text": "Página completa 14 do caderno Q/T, com questões 42–48. Na questão 45, a figura mostra um triângulo retângulo ABC de hipotenusa unitária e um quadrado inscrito; o lado vertical do quadrado está marcado x. O vértice reto está em A, e a base BC forma a hipotenusa. A imagem é a página do caderno, não um recorte isolado; não indica a expressão de x."},
+      "reason": "O alt atual não descreve a figura geométrica da questão 45, associada a esta página. A descrição registra apenas as relações e marcações visíveis, sem resolver a questão.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "PDF oficial Q/T; página impressa 12 (página 14 do arquivo) conferida visualmente. A questão 45 mostra triângulo retângulo, quadrado inscrito, marca x e medida unitária da hipotenusa."},
+        {"locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-14.png", "detail": "Render da página 14 confirma a geometria e a posição de x na figura da questão 45."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 255},
+      "expected": {"alt_text": "Página completa 17 do PDF do caderno Q/T; contém questões 57–59. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."},
+      "changes": {"alt_text": "Página completa 17 do caderno Q/T, com questões 57–59. Na questão 59, a primeira imagem é uma sequência de três quadros em preto e branco: aparecem uma pessoa sobre um ônibus, uma mulher junto a uma área inundada e duas pessoas de costas diante de uma comunidade em encosta. As legendas em sequência dizem “O racismo ambiental…”, “…é mais uma forma…” e “…de genocídio.” A página também contém os textos que acompanham a imagem; a descrição não aponta uma alternativa."},
+      "reason": "A página contém um estímulo visual necessário à interpretação da questão 59, mas o alt atual é apenas identificador de página. Descrição confirmada no original e sem resolver a questão.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "PDF oficial Q/T; página impressa 15 (página 17 do arquivo) conferida visualmente. A questão 59 apresenta tira de três quadros com as legendas transcritas na nova descrição."},
+        {"locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-17.png", "detail": "Render da página 17 confirma a ordem dos quadros, cenas e legendas."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 258},
+      "expected": {"alt_text": "Página completa 20 do PDF do caderno Q/T; contém questões 68–70. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."},
+      "changes": {"alt_text": "Página completa 20 do caderno Q/T, com questões 68–70. Na questão 68 aparecem dois gráficos, A e B, com legendas para água com sabão, nenhuma ação e solução RSDL. O gráfico A relaciona taxa de penetração na pele e tempo; o B relaciona quantidade de agente removido e número de extrações com fita. As curvas e marcadores distinguem as três condições. A descrição identifica eixos e séries, sem comparar resultados ou indicar alternativa."},
+      "reason": "O alt genérico não descreve os dois gráficos usados como estímulo na questão 68. A nova descrição nomeia variáveis e séries visíveis sem interpretar qual condição é melhor.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "PDF oficial Q/T; página impressa 18 (página 20 do arquivo) conferida visualmente. A questão 68 tem dois gráficos A/B com as séries Água com sabão, Nenhuma ação e RSDL."},
+        {"locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-20.png", "detail": "Render da página 20 confirma os eixos: penetração versus tempo e quantidade de agente versus número de extrações."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 511},
+      "expected": {"alt_text": "Figura da questão sobre os três domínios de Johnstone. No triângulo, (1) macroscópico, (2) submicroscópico e (3) simbólico. A grade A–H mostra: A, balões enchendo; B, fórmulas estruturais de reagentes e produtos; C, perfil energético acompanhado de modelos de partículas; D, incêndio; E, chama dentro de um triângulo com equação de combustão do metano; F, rede de partículas; G, modelos de partículas antes e depois da reação; H, equação de combustão do etanol. A alternativa correta associa (1) a D, (2) a G e (3) a H; C combina representações submicroscópica e simbólica."},
+      "changes": {"alt_text": "Figura sobre os domínios de representação em Química. Um triângulo traz os rótulos macroscópico, submicroscópico e simbólico, com os números (1), (2) e (3) junto às posições. Abaixo, uma grade A–H mostra: A, balões em diferentes estados de enchimento; B, fórmulas estruturais em uma reação; C, perfil de energia e modelos de partículas; D, uma combustão; E, chama e equação de combustão do metano; F, rede de partículas; G, modelos moleculares de reagentes e produtos; H, equação de combustão do etanol. A descrição identifica os elementos visuais sem relacioná-los aos números do triângulo."},
+      "reason": "O alt atual revela explicitamente a associação correta solicitada na questão. Mantive a descrição da figura, removendo a correspondência-resposta entre os domínios numerados e os painéis A–H.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2026/QX.pdf", "detail": "Caderno oficial Q/X; questão 66, página impressa 24, conferida no original. O triângulo traz nomes e números dos domínios e a grade contém oito painéis A–H."},
+        {"locator": "dist/data/official-pdfs/2026/question-assets/qx-q66-johnstone-domains-450dpi.png", "detail": "Recorte de figura própria da questão 66 inspecionado visualmente; confirma cada elemento listado na descrição revisada."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 512},
+      "expected": {"alt_text": "Infográfico sobre acidificação dos oceanos e recifes de coral. À esquerda, fontes urbanas e industriais emitem CO₂, que chega ao mar. No oceano aparecem as etapas CO₂ + H₂O → HCO₃⁻ + H⁺, H⁺ + A → HCO₃⁻ e B → Ca²⁺ + C, identificada como formação do coral. Abaixo, um gráfico com escalas de 0 a 800 nos eixos X e Y mostra uma curva decrescente; os eixos são identificados apenas por X e Y na figura. O infográfico inclui recifes e peixes. A alternativa correta identifica A como CO₃²⁻, B como CaCO₃ e C como CO₃²⁻, e associa X a [CO₂]atm e Y a [CO₃²⁻]."},
+      "changes": {"alt_text": "Infográfico sobre CO₂ atmosférico, água do mar e recifes. À esquerda, cidade, veículo e instalações industriais aparecem junto a uma seta de CO₂ em direção ao oceano. No mar, a sequência CO₂ + H₂O → HCO₃⁻ + H⁺ é seguida por H⁺ + A → HCO₃⁻ e por B → Ca²⁺ + C, com indicação “coral”. Abaixo da área terrestre há um gráfico de curva decrescente, com eixos X e Y numerados de 0 a 800. Recifes e peixes aparecem ao redor das reações. Os símbolos A, B, C, X e Y permanecem como lacunas da figura; nenhuma identificação ou alternativa é fornecida."},
+      "reason": "O alt existente informa explicitamente os valores das lacunas A, B, C e dos eixos, revelando a resposta. A substituição descreve o fluxo visual e preserva as lacunas sem as resolver.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2026/QX.pdf", "detail": "Caderno oficial Q/X; questão 67, página impressa 25, conferida no original. A figura tem fontes terrestres, setas de CO₂, reações com lacunas A/B/C e gráfico com eixos X/Y."},
+        {"locator": "dist/data/official-pdfs/2026/question-assets/qx-q67-coral-carbonate-equilibrium-450dpi.png", "detail": "Recorte próprio da questão 67 inspecionado visualmente; confirma a sequência de setas, símbolos em branco, escalas e curva descritos."}
+      ]
+    },
+    {
+      "table": "content_assets", "key": {"id": 515},
+      "expected": {"alt_text": "Fluxograma do processo Solvay. NaCl saturado e CO₂ alimentam a etapa que forma NaHCO₃ e NH₄Cl. O calcário CaCO₃ produz CO₂ e CaO; o CO₂ retorna parcialmente ao processo. NaHCO₃ segue para Na₂CO₃, com liberação de H₂O; NH₄Cl reage com CaO e forma CaCl₂ e H₂O, regenerando NH₃, que retorna ao processo. O esquema mostra que a amônia é reciclada, enquanto salmoura e calcário precisam ser repostos. Referência impressa: Araújo et al., Química Nova, v. 21, n. 1, p. 114, 1998."},
+      "changes": {"alt_text": "Fluxograma do processo Solvay. CaCO₃(s) segue para CaO(s) e CO₂(g); o CO₂ entra no circuito central e também aparece em uma seta de retorno. NaCl saturado e CO₂ alimentam uma etapa que se divide em NaHCO₃(s) e NH₄Cl(aq). NaHCO₃ segue para Na₂CO₃(s) e H₂O(vap). NH₄Cl(aq) e CaO(s) seguem para CaCl₂(s) e H₂O(vap), com uma linha de retorno até NH₃(g), que entra novamente no circuito. O diagrama mostra espécies e fluxos, sem indicar quais insumos devem ser repostos."},
+      "reason": "O alt atual conclui quais materiais precisam ser repostos, antecipando a resposta da questão. A revisão descreve caixas, setas e retornos do fluxograma sem extrair a conclusão pedida.",
+      "evidence": [
+        {"locator": "dist/data/official-pdfs/2026/QX.pdf", "detail": "Caderno oficial Q/X; questão 70, página impressa 26, conferida no original. O fluxograma contém caixas de espécies químicas e setas de entrada, produto e retorno."},
+        {"locator": "dist/data/official-pdfs/2026/question-assets/qx-q70-solvay-process-flowchart-450dpi.png", "detail": "Recorte próprio da questão 70 inspecionado visualmente; confirma as espécies químicas, a sequência de caixas e as linhas de retorno descritas."}
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "scope": "QX 2026, assets 289–303 (simulador) e 265–267 (páginas inteiras)",
+      "reason": "Os alts dos simuladores apenas dizem que a imagem contém enunciado/alternativas/elementos visuais; as páginas 3–5 são explicitamente fallbacks de página. Os crops próprios e a transcrição textual existem para várias questões. Não propus alteração dessas imagens sobrepostas sem auditar visualmente cada questão e confirmar qual imagem o app realmente apresenta como estímulo; evitar duplicar descrições ou publicar alt conflitante."
+    },
+    {
+      "scope": "QT 2027, assets 242 e 246–250, 253–254, 256–257, 259",
+      "reason": "São descrições de página inteira compartilhadas por múltiplas questões; nesta passagem não foi possível validar visualmente cada elemento das páginas respectivas. As descrições continuam identificando honestamente que são páginas/fallbacks, mas não devem ser tratadas como alt específico de figura."
+    },
+    {
+      "scope": "QZ 2025, assets específicos ligados ao caderno Q/Z",
+      "reason": "A consulta encontrou recortes próprios com descrições substanciais em vez de rótulos genéricos; não alterei assets sem deficiência comprovada. A checagem textual não substitui nova inspeção individual de todas as figuras."
+    }
+  ],
+  "summary": "Propostas de 10 atualizações content_assets.alt_text, sem alterar relações nem banco. Sete descrições dão contexto visual a páginas Q/T 2027 usadas como fallback de estímulos; três corrigem alts de figuras próprias Q/X 2026 que revelavam resposta. Figuras Q/Z 2025 com descrições específicas foram preservadas."
+}

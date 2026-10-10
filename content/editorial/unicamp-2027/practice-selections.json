@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "mode": "all_approved_representatives",
+  "selections": [
+    {
+      "curriculum_topic_id": 2476,
+      "year": 2027,
+      "code": "QT",
+      "number": 53,
+      "source_document_id": 335,
+      "source_page": 15,
+      "reason": "Composição de funções; é prática mais direta do tópico Funções do que a questão de logaritmos selecionada antes.",
+      "source_url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=15"
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "year": 2027,
+      "code": "QT",
+      "number": 43,
+      "source_document_id": 335,
+      "source_page": 14,
+      "reason": "A questão calcula um logaritmo de uma sequência exponencial; corresponde diretamente ao tópico Logaritmos e exponenciais.",
+      "source_url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=14"
+    },
+    {
+      "curriculum_topic_id": 2485,
+      "year": 2026,
+      "code": "QX",
+      "number": 16,
+      "source_document_id": 44,
+      "source_page": 7,
+      "reason": "A leitura da divisão Norte/Sul Global no mapa aborda regionalização e conceitos geográficos com aderência maior que a questão puramente cartográfica escolhida antes.",
+      "source_url": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=7"
+    },
+    {
+      "curriculum_topic_id": 2488,
+      "year": 2026,
+      "code": "QX",
+      "number": 15,
+      "source_document_id": 44,
+      "source_page": 6,
+      "reason": "A questão articula sistemas alimentares, produtos ultraprocessados globalizados e fluxos mundiais de produção e consumo; é mais específica para Globalização, economia e trabalho do que a questão sobre adesão à OTAN.",
+      "source_url": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=6"
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "year": 2026,
+      "code": "QX",
+      "number": 20,
+      "source_document_id": 44,
+      "source_page": 9,
+      "reason": "A questão trata de políticas territoriais e circuitos produtivos na Bahia; é mais diretamente ligada à dinâmica territorial brasileira que a questão genérica escolhida antes.",
+      "source_url": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=9"
+    },
+    {
+      "curriculum_topic_id": 2508,
+      "year": 2027,
+      "code": "QT",
+      "number": 69,
+      "source_document_id": 335,
+      "source_page": 20,
+      "reason": "A questão exige cálculo estequiométrico dos produtos da combustão da glicose; é prática mais direta de estequiometria que a questão qualitativa escolhida antes.",
+      "source_url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=20"
+    }
+  ]
+}

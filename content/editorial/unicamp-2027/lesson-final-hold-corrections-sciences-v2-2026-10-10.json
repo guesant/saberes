@@ -1,0 +1,223 @@
+{
+  "format": "lesson-post-review-corrections/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "primeira fase",
+    "curriculum_topic_ids": [2500, 2501, 2504, 2507, 2510],
+    "purpose": "Substituições integrais v2 para responder às lacunas do parecer independente de Ciências. Todas permanecem em review; não alterar nem publicar o SQLite.",
+    "versioning_note": "sqlite_base_version registra a versão atualmente materializada no banco. current_version registra a versão produzida pela etapa de auditoria anterior no fluxo do importador. proposed_version avança a versão materializada atual sem reintroduzir o conteúdo intermediário que esta substituição integral supera.",
+    "rule": "A correção é editorial e original. O programa oficial delimita escopo, mas não valida fatos científicos. Não apresentar estas lições como resoluções oficiais da Comvest."
+  },
+  "official_program": {
+    "source_document_id": 148,
+    "title": "Programa das Provas — Vestibular 2027",
+    "institution": "Comvest / Unicamp",
+    "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+    "local_verified_copy": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+    "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+    "page_numbering": "Números de página impressos no documento; coincidem com a numeração do PDF nas páginas citadas.",
+    "pages_visually_checked": [11, 12, 13, 14]
+  },
+  "independent_review": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json",
+  "decisions": [
+    {
+      "curriculum_topic_id": 2500,
+      "official_label": "Biodiversidade e saúde humana",
+      "decision": "revise",
+    "current_version": "1.3.1",
+      "sqlite_base_version": "1.3.1",
+      "proposed_version": "1.3.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Fecha a lacuna do exemplo epidemiológico: analisa uma infecção respiratória, identifica agente e via, compara ventilação, vacinação e antibiótico, e explica por que preservativo não é medida para essa via. Mantém a distinção entre reduzir e eliminar risco. Programa, pp. 11–12; parecer independente de Ciências.",
+      "evidence": [
+        {"source_document_id": 148, "page": 12, "location": "Saúde humana", "supports": "Doenças causadas por microrganismos e vetores transmissores, saneamento e serviços de saúde."},
+        {"file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json", "supports": "Parecer hold: exemplo deve aplicar agente, via de transmissão e prevenção; correção não deve ficar apenas em contracepção."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction do cenário respiratório e comparação de medidas preventivas."}
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Biodiversidade, reprodução e saúde coletiva",
+          "pedagogical_role": "formalization",
+          "content_format": "markdown",
+          "content": "Biodiversidade abrange variação genética, espécies e ecossistemas. Bactérias são procariontes; vírus não têm organização celular e dependem de células para replicação; protozoários são eucariontes unicelulares; fungos obtêm nutrientes por absorção; plantas e várias linhagens de algas fazem fotossíntese; animais obtêm alimento por ingestão. Esses traços ajudam a comparar grupos, mas não substituem evidências evolutivas de parentesco.\n\nNa reprodução humana, FSH e LH participam da regulação ovariana; estrogênio e progesterona variam ao longo do ciclo. A fecundação pode ocorrer quando um espermatozoide encontra o ovócito. Métodos contraceptivos atuam por mecanismos diferentes: preservativos formam barreira; métodos hormonais podem inibir ovulação e/ou alterar muco cervical; o cobre no DIU prejudica mobilidade e função dos espermatozoides no ambiente uterino. Preservativos reduzem o risco de gravidez e de muitas ISTs, mas não o eliminam. Métodos hormonais e DIU não protegem contra ISTs. Escolhas e cuidados individuais devem seguir orientação de serviço de saúde.\n\nPara interpretar uma doença, separe **agente**, **hospedeiro**, **via de transmissão** e **intervenção**. Uma bactéria ou vírus pode ser o agente; um vetor pode transportá-lo; gotículas/aerossóis, contato, água ou alimento podem ser vias distintas. A medida preventiva precisa corresponder ao mecanismo. Antibióticos agem contra bactérias suscetíveis, não contra vírus. Ventilação reduz o acúmulo de partículas respiratórias no ar interior. Vacinas pertinentes podem reduzir infecção ou doença grave, conforme o agente, a vacina e o contexto; não são garantia absoluta.\n\n**Erros comuns**\n\nNão confunda vetor com agente. Não use antibiótico como tratamento de infecção viral. Não conclua que uma medida serve para todas as vias de transmissão. Contracepção e prevenção de IST são objetivos relacionados, mas não idênticos; preservativos reduzem riscos, sem proteção absoluta."
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido: agente, via e medida preventiva",
+          "pedagogical_role": "example",
+          "content_format": "markdown",
+          "content": "**Situação.** Em uma sala fechada, várias pessoas desenvolvem em poucos dias uma doença causada por um vírus respiratório. A questão informa que o agente se transmite principalmente por partículas respiratórias suspensas no ar. Um estudante sugere antibiótico, outro propõe melhorar a ventilação e uma terceira pessoa pergunta se preservativo interromperia essa transmissão.\n\n**Resolução.** (1) O agente é o vírus; a via relevante é a inalação de partículas respiratórias. (2) Antibiótico não age contra o vírus, embora possa ser indicado por profissional em situações bacterianas específicas. (3) Aumentar a renovação de ar reduz a concentração de partículas em ambientes internos e é pertinente à via descrita. Vacinação contra esse agente, se disponível e indicada, pode reduzir a probabilidade de doença grave; o efeito depende do imunizante e do contexto e não é proteção absoluta. (4) Preservativo não interrompe a via respiratória descrita; é relevante para prevenção de gravidez e de muitas ISTs em contextos de contato sexual.\n\nA conclusão usa as informações fornecidas sobre agente e via. Um diagnóstico ou decisão individual de tratamento não pode ser inferido do cenário e exige orientação profissional."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "pedagogical_role": "review",
+          "content_format": "markdown",
+          "content": "Em questões de saúde, escreva a cadeia **agente → via → hospedeiro → medida compatível** e explique o mecanismo. Diferencie contracepção e prevenção de ISTs; compare organismos por organização celular e modo de vida; relacione hormônios e reprodução sem transformar padrões gerais em diagnóstico individual.\n\n**Autochecagem:** uma doença viral transmitida por partículas no ar seria prevenida por antibiótico ou por ventilação? **A ventilação é pertinente à via descrita; antibióticos não agem contra vírus.** Preservativo seria a intervenção específica para essa via? **Não.** Uma vacina pertinente garante proteção total? **Não; pode reduzir risco conforme o agente e o imunizante, mas nenhuma proteção deve ser descrita como absoluta sem evidência.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "official_label": "Fundamentos da Física e Mecânica",
+      "decision": "revise",
+    "current_version": "1.3.1",
+      "sqlite_base_version": "1.3.1",
+      "proposed_version": "1.3.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Acrescenta gravitação universal com exemplo numérico e mantém a cinemática em duas dimensões; inclui a aplicação explícita da exact_correction de impulso por mudança de quantidade de movimento e força média. Programa, p. 12; cálculos conferidos independentemente.",
+      "evidence": [
+        {"source_document_id": 148, "page": 12, "location": "Mecânica", "supports": "Cinemática em uma e duas dimensões, leis de Newton, gravitação universal, quantidade de movimento e conservação, trabalho/energia e hidrostática."},
+        {"file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json", "supports": "Parecer hold: faltavam exemplo solicitado de impulso e conteúdo explícito de gravitação universal."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction de p=mv, J=Δp e decomposição vetorial em duas dimensões."}
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Vetores, mecânica e gravitação universal",
+          "pedagogical_role": "formalization",
+          "content_format": "markdown",
+          "content": "Uma descrição física declara referencial, grandezas, unidades e hipóteses. Em duas dimensões, decomponha posição, velocidade, aceleração e força em eixos perpendiculares. Para aceleração constante, use vₓ=v₀ₓ+aₓt e x=x₀+v₀ₓt+aₓt²/2 em cada eixo; no lançamento horizontal ideal, aₓ=0 e aᵧ=−g. A inclinação de gráfico posição-tempo é velocidade; a área algébrica sob velocidade-tempo é deslocamento.\n\nAs leis de Newton relacionam força resultante e movimento; ação e reação atuam em corpos diferentes. A força gravitacional entre massas puntuais (ou corpos esféricos fora deles) é F=Gm₁m₂/r², dirigida ao longo da linha que une os centros. Próximo à superfície da Terra, o peso é aproximadamente mg; g resulta do campo gravitacional local e não é uma constante universal. A energia potencial gravitacional perto da superfície pode ser aproximada por mgh quando a variação de altura é pequena em comparação ao raio terrestre.\n\nQuantidade de movimento é o vetor p=mv. O impulso da força resultante é J=∫Fdt=Δp; para força constante, J=FΔt. Em sistema isolado, a quantidade de movimento total se conserva. Trabalho, energia cinética, energia potencial, torque e equilíbrio conectam forças a mudanças e rotações. Em fluido uniforme, a pressão hidrostática relativa varia como ρgh e o empuxo equivale ao peso do fluido deslocado.\n\n**Erros comuns**\n\nNão some módulos de vetores sem considerar direção e sentido. Não confunda G (constante universal) com g (campo local). Use F=Gm₁m₂/r² com a distância entre centros e massas apropriadas. Impulso é variação vetorial de quantidade de movimento; o sinal depende do eixo escolhido. A equação mgh é aproximação local, não a expressão geral para grandes distâncias."
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido: impulso e força gravitacional",
+          "pedagogical_role": "example",
+          "content_format": "markdown",
+          "content": "**Impulso em uma colisão.** Uma bola de 0,20 kg muda sua velocidade horizontal de +10 m/s para −5 m/s em 0,10 s. Escolhendo como positivo o sentido inicial: Δp=m(v_f−v_i)=0,20(−5−10)=−3,0 kg·m/s. Logo, J=−3,0 N·s e a força resultante média é F_méd=Δp/Δt=−3,0/0,10=−30 N. O sinal indica sentido oposto ao eixo positivo; o módulo é 30 N.\n\n**Gravitação universal.** Estime a força gravitacional sobre uma pessoa de 70 kg na superfície terrestre, usando G=6,674×10⁻¹¹ N·m²/kg², M_T=5,972×10²⁴ kg e r_T=6,371×10⁶ m: F=GM_Tm/r_T²≈687 N. O valor é compatível com peso aproximado mg para g≈9,8 m/s². O resultado depende da distância ao centro da Terra; não se deve substituir r_T pela altura acima do solo sem somar o raio terrestre.\n\n**Conferência de movimento em 2D.** Para um lançamento horizontal ideal de altura 20 m com g=10 m/s², t=√(2h/g)=2 s. Se vₓ=6 m/s, o alcance é 12 m. Os eixos são resolvidos separadamente; o ar foi desprezado."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "pedagogical_role": "review",
+          "content_format": "markdown",
+          "content": "Defina eixos e referencial; decomponha vetores; identifique a lei e as hipóteses antes de substituir valores. Para impulso, calcule Δp=m(v_f−v_i) com sinais e depois divida pelo intervalo quando se pede força média. Para gravitação, use as massas e a separação entre centros; diferencie G de g.\n\n**Autochecagem:** se a bola do exemplo terminasse em +5 m/s, mantendo massa e tempo, qual seria Δp? **0,20(5−10)=−1,0 kg·m/s**, e a força média seria −10 N. Se a distância entre centros dobrar, mantendo as massas, a força gravitacional fica **um quarto**, pois F∝1/r². O que o sinal negativo do impulso informa? **Direção oposta ao eixo positivo escolhido.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "official_label": "Óptica e ondas",
+      "decision": "revise",
+    "current_version": "1.2.1",
+      "sqlite_base_version": "1.2.1",
+      "proposed_version": "1.2.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Inclui cálculo explícito λ=v/f, aplicação de interferência e imagem em lente, com unidade e convenção de sinais para a situação. Programa, p. 13; cálculos conferidos.",
+      "evidence": [
+        {"source_document_id": 148, "page": 13, "location": "Óptica e ondas", "supports": "Comprimento/frequência/velocidade de ondas, interferência/difração, refração, lentes e instrumentos ópticos."},
+        {"file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json", "supports": "Parecer hold: faltava cálculo de comprimento de onda a partir de frequência e velocidade."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction de v=λf e lente convergente com convenção de sinais."}
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Ondas, interferência e imagens ópticas",
+          "pedagogical_role": "formalization",
+          "content_format": "markdown",
+          "content": "Ondas transportam energia sem transporte líquido de matéria. Para onda periódica, v=λf e T=1/f. Ao cruzar uma interface, a frequência permanece determinada pela fonte; velocidade e comprimento de onda podem mudar. Som é mecânico; luz é eletromagnética. Difração é mais acentuada quando abertura/obstáculo tem dimensão comparável ao comprimento de onda.\n\nPara duas fontes coerentes em fase e amplitudes comparáveis, diferença de caminho Δr=mλ produz máximo construtivo; Δr=(m+1/2)λ produz mínimo destrutivo ideal. Se as fontes começam em oposição de fase, as condições se invertem. Reflexão mede ângulos a partir da normal; refração segue n₁senθ₁=n₂senθ₂. Reflexão interna total requer propagação do meio de maior índice para o de menor e ângulo acima do crítico. Dispersão decorre da dependência do índice em relação ao comprimento de onda.\n\nPara lentes delgadas em aproximação paraxial, 1/f=1/p+1/p′. Nesta lição, adotamos eixo positivo na direção de propagação: objeto real p>0, lente convergente f>0 e imagem real p′>0; imagem virtual terá p′<0. O aumento transversal é m=−p′/p; m<0 indica imagem invertida. A mesma convenção precisa ser mantida em toda substituição.\n\n**Erros comuns**\n\nNão confunda distância de caminho com comprimento de onda; confira a fase inicial das fontes. Ângulos são medidos à normal. Não diga que frequência muda na refração. Fórmulas de lentes dependem da convenção de sinais, que deve ser declarada antes da conta."
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido: comprimento de onda, interferência e lente",
+          "pedagogical_role": "example",
+          "content_format": "markdown",
+          "content": "**Comprimento de onda.** Uma onda sonora no ar tem frequência f=500 Hz; adote v=340 m/s. Então λ=v/f=340/500=0,68 m. A unidade resulta de (m/s)/s⁻¹=m.\n\n**Interferência.** Duas fontes coerentes em fase emitem essa onda. Em um ponto, Δr=1,36 m=2λ, logo há máximo construtivo. Se Δr=1,02 m=1,5λ=(1+1/2)λ, há mínimo destrutivo ideal se as amplitudes forem iguais.\n\n**Lente convergente.** Use p=+30 cm e f=+10 cm para objeto real e lente convergente. Pela equação, 1/p′=1/10−1/30=1/15 cm⁻¹, então p′=+15 cm: imagem real. m=−p′/p=−15/30=−0,5; portanto, invertida e com metade da altura do objeto. O sinal negativo é o da orientação, não uma distância física negativa."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "pedagogical_role": "review",
+          "content_format": "markdown",
+          "content": "Use λ=v/f com unidades coerentes; ao mudar de meio, mantenha a frequência e reavalie v e λ. Em interferência, determine fase inicial e compare Δr com λ. Em lentes, escreva a convenção antes de substituir e interprete p′ e m.\n\n**Autochecagem:** se v=300 m/s e f=600 Hz, λ=0,50 m. Para duas fontes em fase e Δr=0,5λ, ocorre mínimo destrutivo ideal. Na lente do exemplo, uma imagem virtual seria representada por p′ positivo ou negativo nesta convenção? **Negativo.**"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "official_label": "Estrutura atômica, classificação periódica e ligação química",
+      "decision": "revise",
+    "current_version": "1.1.1",
+      "sqlite_base_version": "1.1.1",
+      "proposed_version": "1.1.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Corrige os arredondamentos da afinidade eletrônica usando precisão consistente (Cl≈348,6 kJ/mol; F≈328,2 kJ/mol), mantém configuração/decadência e inclui modelos de ligação, polaridade e interações intermoleculares exigidos. Programa, pp. 13–14; dados NIST consultados.",
+      "evidence": [
+        {"source_document_id": 148, "page": 13, "location": "Estrutura atômica e classificação periódica", "supports": "Distribuição eletrônica, propriedades periódicas, afinidade, eletronegatividade e radioatividade/cinética de decaimento."},
+        {"source_document_id": 148, "page": 14, "location": "Ligação química", "supports": "Modelos iônico, covalente e metálico; polaridade; interações de van der Waals e ligação de hidrogênio."},
+        {"title": "NIST Chemistry WebBook — Chlorine atom", "institution": "NIST", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C22537151&Mask=223&Units=SI", "supports": "Medições experimentais de afinidade eletrônica do cloro, incluindo 3,6131 eV."},
+        {"title": "NIST Chemistry WebBook — Fluorine atom", "institution": "NIST", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C14762948&Mask=238&Units=SI", "supports": "Medição experimental de afinidade eletrônica do flúor: 3,401191 eV."},
+        {"title": "Variation in Electron Affinities", "institution": "University of Calgary Chemistry Textbook", "url": "https://chem-textbook.ucalgary.ca/version2/chapter-6-main/periodic-properties/variation-in-electron-affinities/", "supports": "Interpretação qualitativa da exceção F/Cl e do efeito de repulsões eletrônicas."},
+        {"file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json", "supports": "Parecer hold: aritmética do cloro e cobertura de ligações/interações ainda pendentes."}
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Estrutura atômica, periodicidade e ligações",
+          "pedagogical_role": "formalization",
+          "content_format": "markdown",
+          "content": "Número atômico Z é o número de prótons; número de massa A é prótons+nêutrons. Em átomo neutro, elétrons=Z; para íons, ajuste pela carga. Isótopos têm mesmo Z e diferentes nêutrons. Para distribuição eletrônica, siga a ordem energética (Aufbau), respeite no máximo dois elétrons de spins opostos por orbital (Pauli) e ocupe orbitais degenerados individualmente antes de parear (Hund). Para Na (Z=11), 1s² 2s² 2p⁶ 3s¹.\n\nAo longo de períodos, raio tende a diminuir e energia de ionização tende a aumentar; descendo grupos, raio tende a crescer e energia de ionização tende a diminuir. Tendências admitem exceções. Eletronegatividade compara atração por elétrons em ligações. Afinidade eletrônica diz respeito à adição de elétron a espécie gasosa X(g)+e⁻→X⁻(g). Declare a convenção: nesta lição, ΔH<0 indica energia liberada; tabelas que reportam afinidade como energia liberada listam a magnitude positiva −ΔH. Valores periódicos não variam de modo perfeitamente regular.\n\nModelos de ligação incluem transferência/atração iônica, compartilhamento covalente e elétrons deslocalizados no modelo metálico. Fórmula molecular informa quantidades; fórmula estrutural mostra conectividade; fórmula de Lewis também representa elétrons de valência e pares não ligantes. Polaridade de ligação depende de diferenças de eletronegatividade; polaridade molecular depende também da geometria. Entre moléculas podem ocorrer dispersão de London, interações dipolo-dipolo e ligação de hidrogênio quando H está ligado a N, O ou F e interage com par eletrônico de outra região apropriada. “Van der Waals” pode ser usado como categoria abrangente para certas interações intermoleculares; não é sinônimo de ligação covalente.\n\nRadioatividade é transformação nuclear. Em emissão alfa, ΔA=−4 e ΔZ=−2; em beta menos, ΔA=0 e ΔZ=+1, com emissão de elétron e antineutrino na equação nuclear completa. A lei de decaimento é N=N₀(1/2)^(t/t₁/₂).\n\n**Erros comuns**\n\nNão confunda A e Z, afinidade e eletronegatividade, ligação química e interação entre moléculas, nem magnitude positiva de afinidade com ΔH. Uma regularidade periódica é tendência, não regra sem exceções. Ao escrever decaimento beta menos, conserve número de massa e carga e inclua as partículas emitidas."
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido: afinidade eletrônica, Lewis e meia-vida",
+          "pedagogical_role": "example",
+          "content_format": "markdown",
+          "content": "**Comparação F/Cl com arredondamento consistente.** O NIST registra aproximadamente 3,6131 eV para Cl e 3,401191 eV para F, como energias de afinidade liberadas. Usando 1 eV por partícula≈96,485 kJ/mol: Cl: 3,6131×96,485≈348,610 kJ/mol, isto é, **348,6 kJ/mol** a uma casa decimal; F: 3,401191×96,485≈328,164 kJ/mol, isto é, **328,2 kJ/mol**. Na convenção de entalpia da reação X(g)+e⁻→X⁻(g), os sinais são aproximadamente −348,6 e −328,2 kJ/mol. Cl libera mais energia ao receber o elétron. A exceção à tendência simples é compatível com maior repulsão ao elétron que chega no orbital 2p compacto do F; não significa que afinidade e eletronegatividade sejam a mesma propriedade.\n\n**Lewis versus conectividade.** Em H–Cl, a ligação covalente é um par compartilhado; o Cl ainda tem três pares de elétrons não ligantes. A fórmula estrutural H–Cl mostra quais átomos se conectam; a descrição de Lewis acrescenta os pares não ligantes.\n\n**Meia-vida e equação nuclear.** Uma amostra de 80 mg com meia-vida de 6 h, após 12 h, fica com 80(1/2)²=20 mg. Um exemplo balanceado de beta menos é ¹⁴₆C→¹⁴₇N+⁰₋₁e+ν̅ₑ: A permanece 14 e a soma das cargas nucleares/partículas emitidas conserva a carga."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "pedagogical_role": "review",
+          "content_format": "markdown",
+          "content": "Use Z, A e carga para contar partículas; aplique Aufbau, Pauli e Hund; trate propriedades periódicas como tendências e declare a convenção de afinidade. Separe fórmula molecular, conectividade estrutural e informação eletrônica de Lewis. Distinga ligação intramolecular de forças intermoleculares e confira conservação em equações nucleares.\n\n**Autochecagem:** a 1 eV≈96,485 kJ/mol, quanto vale 3,6131 eV/mol de partículas, a uma casa decimal? **348,6 kJ/mol.** Em uma estrutura de Lewis de H–Cl, quantos pares não ligantes ficam no Cl? **Três.** H ligado a O pode participar de ligação de hidrogênio entre moléculas? **Sim, quando há uma região aceitadora com par eletrônico disponível.** Após três meias-vidas resta **1/8** da amostra inicial."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "official_label": "Eletroquímica e compostos orgânicos",
+      "decision": "revise",
+    "current_version": "1.3.1",
+      "sqlite_base_version": "1.3.1",
+      "proposed_version": "1.3.2",
+      "proposed_status": "review",
+      "source_document_ids": [148],
+      "rationale": "Completa a chave estrutural de funções orgânicas, explicita Lewis sem confundi-la com fórmula estrutural, demonstra obtenção/nomenclatura, propriedades de compostos simples, polimerização por adição e biomoléculas; mantém cálculos eletroquímicos conferidos. Programa, p. 14; parecer independente e exact_correction anterior.",
+      "evidence": [
+        {"source_document_id": 148, "page": 14, "location": "Eletroquímica e Química de compostos orgânicos", "supports": "Oxidação/redução, pilhas, Faraday, fórmulas moleculares/estruturais/Lewis, funções, nomenclatura/obtenção/propriedades, biomoléculas, enzimas e polímeros."},
+        {"file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json", "supports": "Parecer hold: faltavam Lewis, chave de funções, polímero, biomoléculas e propriedades de compostos representativos."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction de grupos funcionais, polimerização do eteno, biomoléculas e distinção entre fórmula estrutural e Lewis."}
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Eletroquímica e leitura de compostos orgânicos",
+          "pedagogical_role": "formalization",
+          "content_format": "markdown",
+          "content": "Oxidação aumenta o número de oxidação e corresponde à perda de elétrons; redução diminui o número de oxidação e corresponde ao ganho. Agente redutor doa elétrons e se oxida; agente oxidante recebe elétrons e se reduz. Em pilha espontânea, oxidação ocorre no ânodo, redução no cátodo e E°cel=E°red(cátodo)−E°red(ânodo). Na eletrólise, fonte externa promove processo não espontâneo. Carga é Q=It; a quantidade de produto exige a proporção estequiométrica de elétrons e a constante de Faraday.\n\nEm química orgânica, fórmula molecular mostra composição; fórmula estrutural mostra conectividade; fórmula de Lewis acrescenta pares eletrônicos ligantes e não ligantes. Uma chave inicial de reconhecimento: CH₃CH₂Cl, haleto orgânico; CH₃CH₂OH, álcool; CH₃OCH₃, éter; CH₃CHO, aldeído; CH₃COCH₃, cetona; CH₃COOH, ácido carboxílico; CH₃COOCH₂CH₃, éster; CH₃NH₂, amina; CH₃CONH₂, amida; C₆H₅OH, fenol. No fenol, –OH está ligado diretamente ao anel aromático; isso o distingue de álcool. Fórmulas simplificadas não mostram pares de Lewis.\n\nNomes simples combinam número de carbonos, saturação e função principal: CH₃CH₂OH é etanol; CH₃COOCH₂CH₃ é etanoato de etila. Uma reação de obtenção precisa indicar reagentes e condições relevantes. Propriedades decorrem da estrutura: etanol tem grupo polar –OH e interage por ligações de hidrogênio com água; é volátil e inflamável. Ácido etanoico é um ácido fraco em água; seus efeitos dependem de concentração e meio. Essas descrições não significam que todas as substâncias de uma função tenham comportamento idêntico.\n\nNa adição de eteno, a ligação dupla se abre e muitas moléculas formam polietileno, com unidade repetitiva –CH₂–CH₂–. Proteínas são cadeias de aminoácidos; enzimas são, em sua maioria, proteínas catalíticas, embora existam RNAs catalíticos. Carboidratos incluem açúcares e polissacarídeos; lipídios incluem moléculas de reserva e membranas e não são, em geral, polímeros de unidades repetidas.\n\n**Erros comuns**\n\nÂnodo é oxidação e cátodo redução tanto em pilha quanto em eletrólise; os sinais elétricos dos eletrodos variam conforme o sistema. Não confunda fórmula molecular com conectividade ou Lewis. Éster e ácido carboxílico são funções diferentes. Polimerização por adição reorganiza ligações, mas conserva os átomos do monômero na unidade repetitiva. Não chame todos os lipídios de polímeros."
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido: Lewis, função, nomenclatura, polímero e eletrólise",
+          "pedagogical_role": "example",
+          "content_format": "markdown",
+          "content": "**Lewis e estrutura.** A molécula de água pode ser representada estruturalmente como H–O–H. Na representação de Lewis, o oxigênio tem duas ligações simples com H e dois pares não ligantes. A fórmula molecular H₂O, sozinha, não mostra essa conectividade nem os pares.\n\n**Função e nome.** Em CH₃COOCH₂CH₃, a sequência –C(=O)–O–C– identifica um éster. O nome é etanoato de etila. Não é ácido carboxílico, pois o oxigênio ligado ao carbonil está ligado a outro grupo carbônico, não a H. Em CH₃COOH, por contraste, há o grupo –COOH do ácido etanoico.\n\n**Obtenção e polímero.** A hidratação do eteno, sob catálise ácida apropriada, adiciona H e OH à ligação dupla: CH₂=CH₂+H₂O→CH₃CH₂OH; o produto é etanol. Já na polimerização por adição, n CH₂=CH₂→(–CH₂–CH₂–)ₙ. A unidade repetitiva conserva os dois carbonos e os quatro hidrogênios do monômero; não há perda de molécula pequena nesta representação.\n\n**Propriedade ligada à estrutura.** O grupo –OH do etanol permite interações de hidrogênio com água, o que ajuda a explicar a miscibilidade do etanol com água. A ligação C–C/C–H também contribui para caráter combustível; “polar” não significa que a molécula inteira seja iônica.\n\n**Eletrólise de cobre.** Com corrente 2,0 A durante 600 s, Q=It=1200 C. Para Cu²⁺+2e⁻→Cu e F≈96.500 C/mol, n(Cu)=1200/(2·96.500)=0,00622 mol. Com M(Cu)=63,5 g/mol, m≈0,395 g para rendimento de 100%."
+        },
+        {
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "pedagogical_role": "review",
+          "content_format": "markdown",
+          "content": "Em eletroquímica, balanceie elétrons, identifique oxidação/redução e use Q=It antes de converter carga em mol. Em orgânica, diferencie composição, conectividade e pares eletrônicos; reconheça a função pela ligação entre átomos; nomeie e relacione estrutura a propriedade, reação ou material.\n\n**Autochecagem:** CH₃OCH₃ é álcool ou éter? **Éter: o oxigênio liga dois grupos carbônicos.** Em Lewis de H₂O, quantos pares não ligantes há no oxigênio? **Dois.** No polímero do eteno, qual unidade se repete? **–CH₂–CH₂–.** A miscibilidade do etanol com água relaciona-se a qual grupo? **Ao –OH, que permite interações de hidrogênio.** Qual massa de Cu se deposita no exemplo se o rendimento for 80%? **0,80×0,395≈0,316 g.**"
+        }
+      ]
+    }
+  ]
+}

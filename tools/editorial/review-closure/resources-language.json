@@ -1,0 +1,596 @@
+{
+  "summary": "Lote editorial de recursos: aprova referências externas com escopo e limites explícitos; não afirma cobertura integral do programa nem reutilização de conteúdo. Vídeos CRIA aprovados apenas como referências bibliográficas/metadados obra-vídeo, sem endosso pedagógico do vídeo não assistido. Recursos já publicados 179 e 182 preservados. Nenhum registro SQLite foi escrito.",
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {"id": 175},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta sobre linguística textual, com explicação geral e panorama conceitual. Complementar, não substitui o programa nem demonstra cobertura integral do tópico. Conteúdo externo pode mudar; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "A página em português identifica a linguística textual como área de estudo do texto e apresenta panorama conceitual. A publicação é exclusivamente como referência consultiva, não como curso validado nem cobertura completa.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Lingu%C3%ADstica_textual", "detail": "Artigo em português; introdução e seções do artigo identificam a linguística textual e seu objeto texto. Consulta complementar, sem alegação de revisão acadêmica integral."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 176},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para o tópico indicado na consulta. Não é aula nem lista de exercícios previamente selecionada ou avaliada; resultados podem variar. Uso apenas para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "O URL é uma busca temática, portanto só pode ser apresentado como navegação/descoberta, não como conteúdo didático específico ou prática verificada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=O+texto+e+seu+funcionamento+L%C3%ADngua+Portuguesa", "detail": "O caminho e parâmetro page_search_query mostram uma página de busca, não uma aula/exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 177},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta sobre sintaxe, com panorama de análise e termos gramaticais. Complementar, não substitui o programa nem demonstra cobertura integral do tópico. Conteúdo externo pode mudar; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "O artigo em português aborda sintaxe e organiza conceitos gramaticais pertinentes; publicação limitada a consulta complementar, sem endosso como material completo de ensino.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Sintaxe", "detail": "Artigo em português com seções de análise sintática e termos essenciais/integrantes/acessórios; referência geral, não plano didático validado."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 178},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para o tópico indicado na consulta. Não é aula nem lista de exercícios previamente selecionada ou avaliada; resultados podem variar. Uso apenas para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "O URL é uma busca temática, portanto só pode ser apresentado como navegação/descoberta, não como conteúdo didático específico ou prática verificada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Sintaxe+L%C3%ADngua+Portuguesa", "detail": "O caminho e parâmetro page_search_query mostram uma página de busca, não uma aula/exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 180},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta sobre narrativa, abordando relato, sequência de eventos, enredo e modos narrativos. Complementar, não substitui leitura analítica de obras nem demonstra cobertura integral do tópico. Conteúdo externo pode mudar; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "O artigo em português define narrativa e discute eventos, enredo e narrador, com relação direta ao tópico; a aprovação fica restrita à consulta geral.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Narrativa", "detail": "Introdução e visão geral descrevem narrativa como relato de eventos e discutem seleção/ordenação de eventos (enredo); artigo inclui modos e narradores."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 181},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para o tópico indicado na consulta. Não é aula nem lista de exercícios previamente selecionada ou avaliada; resultados podem variar. Uso apenas para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "O URL é uma busca temática, portanto só pode ser apresentado como navegação/descoberta, não como conteúdo didático específico ou prática verificada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Elementos+da+narrativa+Literaturas+de+L%C3%ADngua+Portuguesa", "detail": "O caminho e parâmetro page_search_query mostram uma página de busca, não uma aula/exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 183},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta introdutória sobre poesia. Serve para orientação conceitual, não substitui leitura e análise de poemas/obras nem demonstra cobertura integral do tópico. Conteúdo externo pode mudar; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "A página em português é uma referência enciclopédica sobre poesia; publicá-la apenas para consulta suplementar, sem alegação de suficiência ou endosso de cada seção.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Poesia", "detail": "Artigo enciclopédico em português identificado como Poesia; consulta complementar, não material instrucional integralmente avaliado."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 184},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para o tópico indicado na consulta. Não é aula nem lista de exercícios previamente selecionada ou avaliada; resultados podem variar. Uso apenas para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "O URL é uma busca temática, portanto só pode ser apresentado como navegação/descoberta, não como conteúdo didático específico ou prática verificada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Linguagem+po%C3%A9tica+Literaturas+de+L%C3%ADngua+Portuguesa", "detail": "O caminho e parâmetro page_search_query mostram uma página de busca, não uma aula/exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 187},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta geral sobre mecânica clássica, com tópicos como cinemática, dinâmica, estática e energia. Material de orientação, não curso calibrado à Unicamp nem cobertura integral do programa. Conferir conceitos com fontes didáticas; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "O artigo em português organiza conceitos centrais de mecânica; a aprovação é somente para consulta complementar e não certifica cada afirmação ou equivalência curricular.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Mec%C3%A2nica_cl%C3%A1ssica", "detail": "Artigo com seções sobre bases, estática, cinemática, dinâmica e energia; referência geral, sujeita a revisão externa."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 188},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para o tópico indicado na consulta. Não é aula nem lista de exercícios previamente selecionada ou avaliada; resultados podem variar. Uso apenas para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "O URL é uma busca temática, portanto só pode ser apresentado como navegação/descoberta, não como conteúdo didático específico ou prática verificada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Mec%C3%A2nica+F%C3%ADsica", "detail": "O caminho e parâmetro page_search_query mostram uma página de busca, não uma aula/exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 189},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta geral sobre eletricidade. Material de orientação suplementar, não curso calibrado à Unicamp nem cobertura integral do programa. Conferir conceitos com fontes didáticas; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "O artigo em português trata do tema de eletricidade e pode funcionar como consulta complementar; não é promovido como material autossuficiente ou validado em profundidade.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Eletricidade", "detail": "Artigo enciclopédico em português sobre eletricidade; referência geral, sujeita a revisão externa."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 190},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para o tópico indicado na consulta. Não é aula nem lista de exercícios previamente selecionada ou avaliada; resultados podem variar. Uso apenas para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "O URL é uma busca temática, portanto só pode ser apresentado como navegação/descoberta, não como conteúdo didático específico ou prática verificada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Eletricidade+F%C3%ADsica", "detail": "O caminho e parâmetro page_search_query mostram uma página de busca, não uma aula/exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 191},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta sobre reações químicas, para orientação conceitual suplementar. Não substitui material didático verificado nem demonstra cobertura integral do programa; conferir explicações e exemplos com fontes de Química. Acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "A página em português é diretamente temática e pode ser listada como referência geral, com cautela explícita quanto a verificação e cobertura.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Rea%C3%A7%C3%A3o_qu%C3%ADmica", "detail": "Artigo em português identificado como Reação química; referência conceitual geral, não avaliação didática integral."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 192},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para o tópico indicado na consulta. Não é aula nem lista de exercícios previamente selecionada ou avaliada; resultados podem variar. Uso apenas para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "O URL é uma busca temática, portanto só pode ser apresentado como navegação/descoberta, não como conteúdo didático específico ou prática verificada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Rea%C3%A7%C3%B5es+qu%C3%ADmicas+Qu%C3%ADmica", "detail": "O caminho e parâmetro page_search_query mostram uma página de busca, não uma aula/exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 193},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência externa de consulta sobre equilíbrio químico. Orientação conceitual suplementar, não substitui material didático verificado nem demonstra cobertura integral do programa; conferir explicações e exemplos com fontes de Química. Acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir conteúdo."},
+      "reason": "A página é diretamente temática e pertinente como referência geral, com escopo e cautela de verificação explicitados.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Equil%C3%ADbrio_qu%C3%ADmico", "detail": "Artigo em português identificado como Equilíbrio químico; referência conceitual geral, não avaliação didática integral."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 254},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Inspeção Chromium em 2026-10-08: HTTP 200 e conteúdo da página real renderizado; sem Client Challenge. Título cadastrado: Como escrever uma narrativa. Permanecem pendentes a adequação pedagógica ao tópico, acessibilidade e direitos/licença; não aprovado automaticamente."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Vídeo introdutório da Khan Academy sobre escrita narrativa, associado a materiais de Língua Portuguesa do 6º ano. Referência opcional para consulta, não material de preparação autossuficiente para a Unicamp nem cobertura integral do tópico. Não se afirma revisão da aula completa ou acessibilidade assistiva. Licença de reutilização não confirmada: somente link/metadados; não copiar vídeo, transcrição ou imagens."},
+      "reason": "Identidade/título e sinopse do recurso sustentam sua utilidade como consulta introdutória sobre narrativa; a série escolar e ausência de revisão integral limitam a classificação a reference.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Alp-6ano-textos-narrativos/v/lp-6ano-video-como-escrever-uma-narrativa", "detail": "Página identificada como vídeo 'Como escrever uma narrativa', em seção de textos narrativos do curso de Português do 6º ano; classificação limitada a consulta complementar."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 256},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Browser inspection 2026-10-08: redirected to the current Portuguese page 'Os elementos de um poema (vídeo)', 4:00, with an on-page transcript and linked poem-elements exercise. It is a 7th-grade introductory resource and only supplementary for Unicamp literary analysis. Page displays CC BY-NC-SA 4.0; link-out only, do not reproduce. Retain review pending pedagogical decision and accessibility review."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Vídeo Khan Academy 'Os elementos de um poema', introdutório (7º ano), com transcrição na página e exercício relacionado. Referência opcional para consulta sobre elementos do poema; não substitui análise das obras nem preparação integral para a Unicamp. Acessibilidade assistiva não auditada. Página informa CC BY-NC-SA 4.0, mas mantenha apenas link; não copiar/adaptar."},
+      "reason": "Título, nível introdutório, transcrição e exercício relacionado foram conferidos na página; isso basta para uma referência complementar, não para endosso como ensino abrangente.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/pma-pr-leitura-escrita-interpretacao-n2/xc04a86cd2e5054a3%3Aunidade-4-2024/xc04a86cd2e5054a3%3Aaula-16-efeitos-de-sentidos-provocados-pelos-usos-de-recursos-linguisticos-e-multissemioticos/v/lp-7ano-video-os-elementos-de-um-poema", "detail": "Página redireciona para vídeo em português 'Os elementos de um poema'; inspeção anterior identificou duração 4:00, transcrição e exercício relacionado, nível introdutório de 7º ano e indicação CC BY-NC-SA 4.0."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 276},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": "Fonte oficial vinculada. Identidade, vigência e/ou revisão editorial permanecem sinalizadas; consulte a origem indicada."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Índice oficial de playlists da TV Unicamp para descoberta de vídeos. É um hub, não uma aula, não garante estabilidade da seleção e não representa cobertura integral das leituras obrigatórias. Os vídeos individuais aprovados são apenas referências de identidade/obra; não se afirma que foram assistidos ou que ensinem integralmente as obras. Acessibilidade e reutilização não auditadas; acesso por link, sem cópia."},
+      "reason": "A fonte local registra que o portal oficial do Vestibular 2027 aponta para o índice da TV Unicamp e que títulos individuais foram identificados separadamente. Aprovação limitada a referência/discovery; não se presume cobertura ou qualidade pedagógica do conjunto.",
+      "evidence": [
+        {"locator": ".local/content/staging/unicamp-2027-v1/sources-2027-preparation.jsonl", "detail": "Registro tvunicamp-cria-playlists: índice classificado como oficial e linkado pelo portal VU2027; descreve nove associações individuais de título/descrição, sem afirmar revisão integral dos vídeos."},
+        {"locator": "https://www.youtube.com/@tvunicamp/playlists", "detail": "URL do índice de playlists da TV Unicamp; aprovado como ponto de descoberta, não como unidade didática."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 279},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre No seu pescoço, obra da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação, não substitui leitura da obra nem comprova cobertura de capítulo/tópico. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."},
+      "reason": "Metadados do canal TV Unicamp identificam obra e data dentro do escopo atual. A aprovação é somente referência de descoberta ligada à obra, sem juízo sobre o conteúdo audiovisual não assistido.",
+      "evidence": [
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId 2JJaydN_u0Q: título verificado pelo oEmbed como 'Por que “No seu Pescoço” é leitura obrigatória?', TV Unicamp, 2025-04-15; obra vinculada à lista 2027; arquivo declara explicitamente status editorial ainda review antes desta decisão."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "Registro oficial-cria-lesson identifica a obra No seu pescoço, autora e relação oficial da aula por título/descrição; não documenta visualização integral do vídeo."},
+        {"locator": "https://www.youtube.com/watch?v=2JJaydN_u0Q", "detail": "Link oficial individual do vídeo, preservado apenas como referência externa."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 280},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre Memórias Póstumas de Brás Cubas, obra da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação, não substitui leitura da obra nem comprova cobertura de capítulo/tópico. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."},
+      "reason": "Metadados do canal TV Unicamp identificam obra e data dentro do escopo atual. A aprovação é somente referência de descoberta ligada à obra, sem juízo sobre o conteúdo audiovisual não assistido.",
+      "evidence": [
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId HCrXbXF88rA: título verificado pelo oEmbed identifica Memórias Póstumas de Brás Cubas, TV Unicamp, 2026-05-01; obra vinculada à lista 2027; não atesta revisão integral do vídeo."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "Registro oficial-cria-lesson identifica a obra Memórias Póstumas de Brás Cubas, autor e comentário anunciado por título/descrição; não documenta visualização integral do vídeo."},
+        {"locator": "https://www.youtube.com/watch?v=HCrXbXF88rA", "detail": "Link oficial individual do vídeo, preservado apenas como referência externa."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 283},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre Canções escolhidas, obra de poesia/canção da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação nem substitui leitura dos textos selecionados. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."},
+      "reason": "Metadados oficiais identificam título e obra de poesia/canção do Vestibular 2027, justificando referência de descoberta ao tópico poesia. Não se afirma que o vídeo ensina poesia ou cobre os textos selecionados.",
+      "evidence": [
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId -YXW3ZgDi-w: título verificado pelo oEmbed sobre canções de Paulo César Pinheiro, TV Unicamp, 2026-05-20, relacionado à obra Canções escolhidas da lista 2027."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "Registro oficial-cria-lesson descreve aula sobre Canções escolhidas e identifica obra de poesia/canção; não atesta revisão integral do vídeo."},
+        {"locator": "https://www.youtube.com/watch?v=-YXW3ZgDi-w", "detail": "Link oficial individual do vídeo, preservado apenas como referência externa."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 284},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre Os funerais da Mamãe Grande, obra da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação nem substitui leitura da obra. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."},
+      "reason": "Metadados do canal TV Unicamp identificam obra e data dentro do escopo atual. A aprovação é somente referência de descoberta ligada à obra, sem juízo sobre conteúdo audiovisual não assistido.",
+      "evidence": [
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId Dlb8ODJqXdE: título verificado pelo oEmbed sobre García Márquez, TV Unicamp, 2025-06-02; descrição associa a aula ao conto Os funerais da Mamãe Grande da lista 2027."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "Registro oficial-cria-lesson identifica explicitamente Os funerais da Mamãe Grande, autor e relação da aula por título/descrição; não atesta visualização integral."},
+        {"locator": "https://www.youtube.com/watch?v=Dlb8ODJqXdE", "detail": "Link oficial individual do vídeo, preservado apenas como referência externa."}
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 175, "topic_id": 2482, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Relação com O texto e seu funcionamento confirmada pelo objeto declarado no artigo de linguística textual. Apenas referência introdutória; não equivale a cobertura integral. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "A classificação é semanticamente direta pelo tema e permanece limitada à referência externa.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Lingu%C3%ADstica_textual", "detail": "Artigo define a linguística textual como estudo centrado no texto; tópico canônico correspondente é O texto e seu funcionamento."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 176, "topic_id": 2482, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Consulta de descoberta da Khan Academy pesquisada pelo nome do tópico. Relação indica somente a intenção da busca, não confirma resultados, aula ou exercício pertinente. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O vínculo descreve a consulta de descoberta para o tópico, sem endossar resultados dinâmicos.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=O+texto+e+seu+funcionamento+L%C3%ADngua+Portuguesa", "detail": "A consulta de busca nomeia o tópico O texto e seu funcionamento; resultados não foram classificados como conteúdo aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 177, "topic_id": 2483, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo de consulta com tema explicitamente sintaxe. Referência geral; não cobre necessariamente o tópico integral. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "Título e conteúdo diretamente correspondem ao tópico canônico Sintaxe.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Sintaxe", "detail": "Artigo em português sobre sintaxe e análise sintática; consulta suplementar."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 178, "topic_id": 2483, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Consulta de descoberta da Khan Academy pesquisada pelo tópico Sintaxe. Relação indica somente intenção de busca; não confirma resultados, aula ou exercício pertinente. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O vínculo descreve a consulta de descoberta para Sintaxe, sem endossar resultados dinâmicos.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Sintaxe+L%C3%ADngua+Portuguesa", "detail": "A consulta de busca nomeia Sintaxe em Língua Portuguesa; resultados não foram classificados como conteúdo aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 180, "topic_id": 2484, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo de consulta discute narrativa, sequência de eventos, enredo e narradores. Relação tópica direta, mas referência externa não equivale a cobertura integral; acessibilidade assistiva não auditada; link-only."},
+      "reason": "Conteúdo e tópico canônico Elementos da narrativa têm correspondência explícita.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Narrativa", "detail": "Introdução/visão geral tratam de narrativa, eventos, enredo e processo narrativo."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 181, "topic_id": 2484, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Consulta de descoberta da Khan Academy pesquisada por Elementos da narrativa. Vínculo registra apenas intenção de busca; não valida resultados. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O vínculo descreve a consulta de descoberta para Elementos da narrativa, sem endossar resultados dinâmicos.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Elementos+da+narrativa+Literaturas+de+L%C3%ADngua+Portuguesa", "detail": "A consulta de busca nomeia Elementos da narrativa; resultados não foram classificados como conteúdo aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 183, "topic_id": 2485, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo enciclopédico em português sobre poesia; referência conceitual geral, sem afirmar análise das obras exigidas ou cobertura integral. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "O tema explícito do recurso corresponde ao tópico canônico Linguagem poética.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Poesia", "detail": "Artigo identificado como Poesia em português; relação ampla e suplementar com Linguagem poética."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 184, "topic_id": 2485, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Consulta de descoberta da Khan Academy pesquisada por Linguagem poética. Vínculo registra apenas intenção de busca; não valida resultados, aula ou exercício. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O vínculo descreve a consulta de descoberta para Linguagem poética, sem endossar resultados dinâmicos.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Linguagem+po%C3%A9tica+Literaturas+de+L%C3%ADngua+Portuguesa", "detail": "A consulta de busca nomeia Linguagem poética; resultados não foram classificados como conteúdo aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 187, "topic_id": 2486, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo de consulta geral sobre mecânica clássica, incluindo cinemática/dinâmica. Correspondência temática ampla; não substitui curso calibrado ao programa. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "O conteúdo enciclopédico cobre áreas do tópico canônico Mecânica, com limite explícito de escopo.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Mec%C3%A2nica_cl%C3%A1ssica", "detail": "Seções do artigo incluem cinemática, dinâmica, estática e energia."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 188, "topic_id": 2486, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Consulta de descoberta da Khan Academy pesquisada por Mecânica/Física. Vínculo registra somente intenção de busca; não valida resultados. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O vínculo descreve a consulta de descoberta para Mecânica, sem endossar resultados dinâmicos.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Mec%C3%A2nica+F%C3%ADsica", "detail": "A consulta de busca nomeia Mecânica em Física; resultados não foram classificados como conteúdo aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 189, "topic_id": 2487, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo enciclopédico de consulta sobre eletricidade. Correspondência temática ampla, sem alegar alinhamento integral ao programa. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "O título e tema do artigo correspondem ao tópico canônico Eletricidade.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Eletricidade", "detail": "Artigo em português identificado como Eletricidade; referência suplementar geral."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 190, "topic_id": 2487, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Consulta de descoberta da Khan Academy pesquisada por Eletricidade/Física. Vínculo registra somente intenção de busca; não valida resultados. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O vínculo descreve a consulta de descoberta para Eletricidade, sem endossar resultados dinâmicos.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Eletricidade+F%C3%ADsica", "detail": "A consulta de busca nomeia Eletricidade em Física; resultados não foram classificados como conteúdo aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 191, "topic_id": 2488, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo de consulta sobre reações químicas, relacionado ao tópico canônico; referência geral, sem alegar que exemplos e explicações foram didaticamente validados. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "Correspondência nominal e temática direta com Reações químicas, preservando limite da referência enciclopédica.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Rea%C3%A7%C3%A3o_qu%C3%ADmica", "detail": "Artigo em português sobre reação química; correspondência ampla com o tópico Reações químicas."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 192, "topic_id": 2488, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Consulta de descoberta da Khan Academy pesquisada por Reações químicas. Vínculo registra somente intenção de busca; não valida resultados, aula ou prática. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O vínculo descreve a consulta de descoberta para Reações químicas, sem endossar resultados dinâmicos.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Rea%C3%A7%C3%B5es+qu%C3%ADmicas+Qu%C3%ADmica", "detail": "A consulta de busca nomeia Reações químicas; resultados não foram classificados como conteúdo aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 193, "topic_id": 2489, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo de consulta sobre equilíbrio químico; correspondência temática direta, mas não substitui material didático verificado nem cobre integralmente o programa. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "O tema expresso do artigo corresponde ao tópico canônico Equilíbrio e pH, em caráter complementar.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Equil%C3%ADbrio_qu%C3%ADmico", "detail": "Artigo enciclopédico identificado como Equilíbrio químico; referência suplementar geral."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 254, "topic_id": 2484, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Vídeo introdutório identificado como escrita narrativa. Relação temática de consulta, não validação integral do conteúdo ou cobertura. Acessibilidade assistiva e direitos de reutilização não confirmados; link-only."},
+      "reason": "Título/seção da Khan Academy identificam diretamente o assunto narrativa; relação aprovada somente para referência.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Alp-6ano-textos-narrativos/v/lp-6ano-video-como-escrever-uma-narrativa", "detail": "Vídeo identificado como Como escrever uma narrativa, na unidade de textos narrativos."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 256, "topic_id": 2485, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Browser inspection 2026-10-08: redirected to the current Portuguese page 'Os elementos de um poema (vídeo)', 4:00, with an on-page transcript and linked poem-elements exercise. It is a 7th-grade introductory resource and only supplementary for Unicamp literary analysis. Page displays CC BY-NC-SA 4.0; link-out only, do not reproduce. Retain review pending pedagogical decision and accessibility review."},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Vídeo introdutório e exercício relacionado identificados como elementos de poema. Relação temática direta, mas suplemento inicial, não cobertura de análise literária da Unicamp. Acessibilidade assistiva não auditada; link-only apesar da licença exibida."},
+      "reason": "O título, transcrição e exercício relacionado sustentam relação ao tópico Linguagem poética; a classificação de referência evita alegar cobertura instrucional.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/pma-pr-leitura-escrita-interpretacao-n2/xc04a86cd2e5054a3%3Aunidade-4-2024/xc04a86cd2e5054a3%3Aaula-16-efeitos-de-sentidos-provocados-pelos-usos-de-recursos-linguisticos-e-multissemioticos/v/lp-7ano-video-os-elementos-de-um-poema", "detail": "Página do vídeo Os elementos de um poema (7º ano), inspeção anterior encontrou transcrição e exercício relacionado; escopo apenas introdutório."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 279, "topic_id": 2484, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "not_relevant", "review_note": "O vínculo existente com Elementos da narrativa foi atribuído sem evidência de conteúdo audiovisual revisado. O título confirma referência à obra No seu pescoço, mas não demonstra ensino do tópico canônico. Mantido como referência de obra, não como recurso deste tópico; vídeo/transcrição e acessibilidade não avaliados."},
+      "reason": "A aprovação da referência da obra não comprova relação pedagógica com o tópico genérico Elementos da narrativa; corrigida a classificação para evitar inferir conteúdo do vídeo não assistido.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "O registro associa o vídeo à obra No seu pescoço por título/descrição; não afirma que ensina o tópico canônico Elementos da narrativa."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 280, "topic_id": 2484, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "not_relevant", "review_note": "O vínculo existente com Elementos da narrativa foi atribuído sem evidência de conteúdo audiovisual revisado. O título confirma referência a Memórias Póstumas de Brás Cubas, mas não demonstra ensino do tópico canônico. Mantido como referência de obra, não como recurso deste tópico; vídeo/transcrição e acessibilidade não avaliados."},
+      "reason": "A aprovação da referência da obra não comprova relação pedagógica com o tópico genérico Elementos da narrativa; corrigida a classificação para evitar inferir conteúdo do vídeo não assistido.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "O registro associa o vídeo à obra Memórias Póstumas por título/descrição; não afirma que ensina o tópico canônico Elementos da narrativa."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 283, "topic_id": 2485, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "O título/descrição associa Canções escolhidas a canções e retratos do Brasil, relação de gênero com poesia/canção. Isso não valida o conteúdo da aula nem demonstra ensino de recursos poéticos. Referência da obra somente; acessibilidade e vídeo não avaliados; link-only."},
+      "reason": "A própria obra é poesia/canção, sustentando associação de gênero com Linguagem poética; o limite evita atribuir objetivos ou cobertura ao vídeo não visto.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "O registro identifica Canções escolhidas e descreve título sobre canções de Paulo César Pinheiro; associação de gênero, não validação da aula."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 284, "topic_id": 2484, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "not_relevant", "review_note": "O vínculo existente com Elementos da narrativa foi atribuído sem evidência de conteúdo audiovisual revisado. O título confirma referência ao conto Os funerais da Mamãe Grande, mas não demonstra ensino do tópico canônico. Mantido como referência de obra, não como recurso deste tópico; vídeo/transcrição e acessibilidade não avaliados."},
+      "reason": "A aprovação da referência da obra não comprova relação pedagógica com o tópico genérico Elementos da narrativa; corrigida a classificação para evitar inferir conteúdo do vídeo não assistido.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl", "detail": "O registro associa o vídeo ao conto Os funerais da Mamãe Grande por título/descrição; não afirma que ensina o tópico canônico Elementos da narrativa."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 167},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência enciclopédica de consulta sobre função matemática e conceitos associados. Não é curso integral nem demonstra cobertura/alinhamento completo ao programa da Unicamp. Conteúdo externo pode mudar; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir."},
+      "reason": "Artigo temático em português publicável como referência suplementar, não como proposta de aprendizagem integral.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)", "detail": "Artigo em português identificado como Função (matemática), referência enciclopédica para conceitos de funções."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 168},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para funções e gráficos. Não é aula nem prática específica previamente selecionada ou avaliada; os resultados podem variar. Serve somente para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "Busca temática pode ser aprovada como navegação/descoberta, nunca como conteúdo ou prática validada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Fun%C3%A7%C3%B5es+e+gr%C3%A1ficos+Matem%C3%A1tica", "detail": "O parâmetro page_search_query identifica busca dinâmica de funções/gráficos, não aula ou exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 170},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência enciclopédica de consulta sobre probabilidade. Material introdutório/suplementar, não curso integral nem demonstra cobertura completa de contagem e probabilidade no programa Unicamp. Conteúdo externo pode mudar; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir."},
+      "reason": "Artigo em português identificado pelo tema probabilidade; publicação limitada a referência complementar e não a aprendizagem integral.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Probabilidade", "detail": "Artigo em português sobre probabilidade; referência enciclopédica geral, não curso específico de vestibular."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 171},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para contagem e probabilidade. Não é aula nem prática específica previamente selecionada ou avaliada; os resultados podem variar. Serve somente para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "Busca temática pode ser aprovada como navegação/descoberta, nunca como conteúdo ou prática validada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Contagem+e+probabilidade+Matem%C3%A1tica", "detail": "O parâmetro page_search_query identifica busca dinâmica, não aula ou exercício individual."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 172},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial."},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência enciclopédica de consulta geral sobre geometria. Não é curso integral nem demonstra cobertura dos conteúdos específicos de geometria cobrados pela Unicamp. Conteúdo externo pode mudar; acessibilidade assistiva não auditada. Apenas link e metadados; não reproduzir."},
+      "reason": "Artigo geral em português pode servir de consulta suplementar, sem ser apresentado como tratamento suficiente do tópico curricular.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Geometria", "detail": "Artigo enciclopédico em português identificado como Geometria; escopo amplo, sem alinhamento integral presumido."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 173},
+      "expected": {"editorial_status": "review", "availability_mode": "reference", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Link de descoberta/pesquisa da Khan Academy para geometria. Não é aula nem prática específica previamente selecionada ou avaliada; os resultados podem variar. Serve somente para localizar material, sem alegar cobertura. Acessibilidade e direitos dos resultados não avaliados; não copiar."},
+      "reason": "Busca temática pode ser aprovada como navegação/descoberta, nunca como conteúdo ou prática validada.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Geometria+Matem%C3%A1tica", "detail": "O parâmetro page_search_query identifica busca dinâmica de geometria, não aula ou exercício individual."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 167, "topic_id": 2479, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo de consulta sobre função matemática, tema do tópico Funções e gráficos; relação ampla, não cobertura integral. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "Correspondência temática direta para referência geral.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)", "detail": "Artigo enciclopédico sobre função matemática, relacionado ao tópico Funções e gráficos."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 168, "topic_id": 2479, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Busca da Khan Academy por funções e gráficos; a classificação representa somente intenção de descoberta, não valida resultados. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O recurso é busca de descoberta explicitamente alinhada ao tópico pelo termo consultado.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Fun%C3%A7%C3%B5es+e+gr%C3%A1ficos+Matem%C3%A1tica", "detail": "Consulta de busca nomeia funções e gráficos; nenhum resultado individual é aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 170, "topic_id": 2480, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo de consulta geral sobre probabilidade, relacionado ao tópico Contagem e probabilidade; não implica cobertura de contagem ou do currículo completo. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "A relação cobre a componente probabilidade do tópico combinado, com limite explícito.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Probabilidade", "detail": "Artigo enciclopédico sobre probabilidade; corresponde a uma parte do tópico Contagem e probabilidade."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 171, "topic_id": 2480, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Busca da Khan Academy por contagem e probabilidade; classificação representa somente intenção de descoberta, não valida resultados. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O recurso é busca de descoberta explicitamente alinhada ao tópico pelo termo consultado.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Contagem+e+probabilidade+Matem%C3%A1tica", "detail": "Consulta de busca nomeia contagem e probabilidade; nenhum resultado individual é aprovado."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 172, "topic_id": 2481, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Artigo amplo de geometria relacionado ao tópico, sem demonstrar alinhamento com os conteúdos específicos do programa. Acessibilidade assistiva não auditada; link-only."},
+      "reason": "Correspondência temática ampla, publicada apenas como consulta.",
+      "evidence": [{"locator": "https://pt.wikipedia.org/wiki/Geometria", "detail": "Artigo enciclopédico sobre geometria; relação ampla com Geometria."}]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 173, "topic_id": 2481, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown", "review_note": null},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "review_note": "Busca da Khan Academy por geometria; a classificação representa somente intenção de descoberta, não valida resultados. Acessibilidade variável/não auditada; link-only."},
+      "reason": "O recurso é busca de descoberta explicitamente alinhada ao tópico pelo termo consultado.",
+      "evidence": [{"locator": "https://www.khanacademy.org/search?page_search_query=Geometria+Matem%C3%A1tica", "detail": "Consulta de busca nomeia geometria; nenhum resultado individual é aprovado."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 277},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada por metadados como comentário sobre Morangos mofados (contos escolhidos), obra da lista 2027. Vídeo de 2024; identidade/data/obra conferidas, mas não foi avaliado integralmente e não conta como cobertura pedagógica recente. Não endossa interpretação nem substitui a leitura dos contos selecionados. Acessibilidade/transcrição não verificadas. Somente link e metadados; sem reutilização."},
+      "reason": "Embora anterior ao recorte temporal de cobertura recente, os metadados confirmam referência legítima a obra da lista vigente. Publica-se apenas como índice de descoberta bibliográfica, não como conteúdo de ensino ou evidência de cobertura atual.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId fObv7-lZx4c confirma canal TV Unicamp, título, data 2024-04-24 e associação explícita à obra Morangos mofados; obra consta na lista oficial 2027 conforme o registro."}, {"locator": "https://www.youtube.com/watch?v=fObv7-lZx4c", "detail": "Link individual preservado como referência externa; vídeo não assistido nesta revisão."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 278},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada por metadados como comentário sobre Olhos d’água, obra da lista 2027. Vídeo de 2023; identidade/data/obra conferidas, mas não foi avaliado integralmente e não conta como cobertura pedagógica recente. Não endossa interpretação nem substitui a leitura. Acessibilidade/transcrição não verificadas. Somente link e metadados; sem reutilização."},
+      "reason": "Embora anterior ao recorte temporal de cobertura recente, os metadados confirmam referência legítima a obra da lista vigente. Publica-se apenas como índice de descoberta bibliográfica, não como conteúdo de ensino ou evidência de cobertura atual.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId reZorOzMFCo confirma canal TV Unicamp, título, data 2023-06-21 e associação explícita à obra Olhos d’água; obra consta na lista oficial 2027 conforme o registro."}, {"locator": "https://www.youtube.com/watch?v=reZorOzMFCo", "detail": "Link individual preservado como referência externa; vídeo não assistido nesta revisão."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 281},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada por metadados como palestra sobre A vida não é útil, obra da lista 2027. Vídeo de 2024; identidade/data/obra conferidas, mas não foi avaliado integralmente e não conta como cobertura pedagógica recente. Não endossa interpretação nem substitui leitura. Acessibilidade/transcrição não verificadas. Somente link e metadados; sem reutilização."},
+      "reason": "Embora anterior ao recorte temporal de cobertura recente, os metadados confirmam referência legítima a obra da lista vigente. Publica-se apenas como índice de descoberta bibliográfica, não como conteúdo de ensino ou evidência de cobertura atual.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId Llb6DrI4wj0 confirma canal TV Unicamp, título, data 2024-04-10 e associação à obra A vida não é útil da lista oficial 2027."}, {"locator": "https://www.youtube.com/watch?v=Llb6DrI4wj0", "detail": "Link individual preservado como referência externa; vídeo não assistido nesta revisão."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 282},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada por metadados como comentário sobre escritos de José Paulo Paes, autor de Prosas seguidas de odes mínimas, obra da lista 2027. Vídeo de 2024; identidade/data/obra conferidas, mas não foi avaliado integralmente e não conta como cobertura pedagógica recente. Não endossa interpretação nem substitui a leitura. Acessibilidade/transcrição não verificadas. Somente link e metadados; sem reutilização."},
+      "reason": "Embora anterior ao recorte temporal de cobertura recente, os metadados confirmam referência legítima a obra da lista vigente. Publica-se apenas como índice de descoberta bibliográfica, não como conteúdo de ensino ou evidência de cobertura atual.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId __xISnb_2mA confirma canal TV Unicamp, título, data 2024-05-15 e associação à obra Prosas seguidas de odes mínimas da lista oficial 2027."}, {"locator": "https://www.youtube.com/watch?v=__xISnb_2mA", "detail": "Link individual preservado como referência externa; vídeo não assistido nesta revisão."}]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 285},
+      "expected": {"editorial_status": "review", "availability_mode": "learning", "editorial_note": null},
+      "changes": {"editorial_status": "published", "availability_mode": "reference", "editorial_note": "Referência audiovisual da TV Unicamp identificada por metadados como comentário sobre Vida e morte de M. J. Gonzaga de Sá, obra da lista 2027. Vídeo de 2024; identidade/data/obra conferidas, mas não foi avaliado integralmente e não conta como cobertura pedagógica recente. Não endossa interpretação nem substitui a leitura. Acessibilidade/transcrição não verificadas. Somente link e metadados; sem reutilização."},
+      "reason": "Embora anterior ao recorte temporal de cobertura recente, os metadados confirmam referência legítima a obra da lista vigente. Publica-se apenas como índice de descoberta bibliográfica, não como conteúdo de ensino ou evidência de cobertura atual.",
+      "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro videoId _kFQZtbd8Sc confirma canal TV Unicamp, título, data 2024-05-29 e associação à obra Vida e morte de M.J. Gonzaga de Sá da lista oficial 2027."}, {"locator": "https://www.youtube.com/watch?v=_kFQZtbd8Sc", "detail": "Link individual preservado como referência externa; vídeo não assistido nesta revisão."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 346},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação é somente de metadados e hyperlink bibliográfico. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "A associação bibliográfica do vídeo não concede direitos de reutilização.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=fObv7-lZx4c", "detail": "Vídeo externo da TV Unicamp; nenhum direito de redistribuição foi confirmado."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 347},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação é somente de metadados e hyperlink bibliográfico. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "A associação bibliográfica do vídeo não concede direitos de reutilização.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=reZorOzMFCo", "detail": "Vídeo externo da TV Unicamp; nenhum direito de redistribuição foi confirmado."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 350},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação é somente de metadados e hyperlink bibliográfico. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "A associação bibliográfica do vídeo não concede direitos de reutilização.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=Llb6DrI4wj0", "detail": "Vídeo externo da TV Unicamp; nenhum direito de redistribuição foi confirmado."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 351},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação é somente de metadados e hyperlink bibliográfico. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "A associação bibliográfica do vídeo não concede direitos de reutilização.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=__xISnb_2mA", "detail": "Vídeo externo da TV Unicamp; nenhum direito de redistribuição foi confirmado."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 354},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação é somente de metadados e hyperlink bibliográfico. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "A associação bibliográfica do vídeo não concede direitos de reutilização.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=_kFQZtbd8Sc", "detail": "Vídeo externo da TV Unicamp; nenhum direito de redistribuição foi confirmado."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 344},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação editorial é apenas de metadados e uso por hyperlink. Não copiar, embutir, baixar, adaptar ou redistribuir vídeos, transcrições, legendas, miniaturas ou imagens."},
+      "reason": "O índice de vídeos é publicamente consultável, mas acesso público não concede direito de reprodução; preservar o uso estritamente como link.",
+      "evidence": [{"locator": "https://www.youtube.com/@tvunicamp/playlists", "detail": "Canal/playlist externos; nenhum termo de licença de redistribuição foi confirmado."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 348},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação editorial é apenas de metadados e uso por hyperlink. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "Metadados editoriais podem ser citados para identificar o link; direitos de reutilização do vídeo não foram concedidos.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=2JJaydN_u0Q", "detail": "Vídeo externo da TV Unicamp; acesso por URL não demonstra licença de reutilização."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 349},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação editorial é apenas de metadados e uso por hyperlink. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "Metadados editoriais podem ser citados para identificar o link; direitos de reutilização do vídeo não foram concedidos.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=HCrXbXF88rA", "detail": "Vídeo externo da TV Unicamp; acesso por URL não demonstra licença de reutilização."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 352},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação editorial é apenas de metadados e uso por hyperlink. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "Metadados editoriais podem ser citados para identificar o link; direitos de reutilização do vídeo não foram concedidos.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=-YXW3ZgDi-w", "detail": "Vídeo externo da TV Unicamp; acesso por URL não demonstra licença de reutilização."}]
+    },
+    {
+      "table": "source_documents",
+      "key": {"id": 353},
+      "expected": {"reuse_status": "unknown", "rights_note": null},
+      "changes": {"reuse_status": "link_only", "rights_note": "Permissão de redistribuição não verificada; aprovação editorial é apenas de metadados e uso por hyperlink. Não copiar, embutir, baixar, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens."},
+      "reason": "Metadados editoriais podem ser citados para identificar o link; direitos de reutilização do vídeo não foram concedidos.",
+      "evidence": [{"locator": "https://www.youtube.com/watch?v=Dlb8ODJqXdE", "detail": "Vídeo externo da TV Unicamp; acesso por URL não demonstra licença de reutilização."}]
+    }
+  ],
+  "blocked": [
+    {"table": "resources", "key": {"id": 185}, "reason": "Curso amplo em inglês; adequação ao currículo em português e ao nível de preparação ainda não foi demonstrada. Mantido em review.", "evidence": [{"locator": "https://www.khanacademy.org/science/mechanics-essentials", "detail": "Página intitulada Mechanics (Essentials), conteúdo em inglês."}]},
+    {"table": "resources", "key": {"id": 186}, "reason": "Exercício em inglês; sem revisão das questões, gabarito, semântica acessível e adequação ao tópico brasileiro. Não promover a practice por título/HTTP.", "evidence": [{"locator": "https://www.khanacademy.org/science/physics-i/forces-and-motion", "detail": "Página Forces and motion (practice), conteúdo em inglês; itens e acessibilidade não revisados neste lote."}]},
+    {"table": "resources", "key": {"id": 255}, "reason": "A página direta não foi acessível na inspeção disponível; não confirmado texto atual, estrutura ou escopo. Manter review em vez de validar somente título/prévia.", "evidence": [{"locator": "https://brasilescola.uol.com.br/redacao/elementos-da-narrativa.htm", "detail": "Tentativa de abrir a página não retornou conteúdo verificável nesta revisão."}]},
+    {"table": "resources", "key": {"id": 257}, "reason": "Exercício interativo não foi conferido item a item nem quanto a alternativas/gabarito e acessibilidade; renderização do endereço não basta para aprovar practice.", "evidence": [{"locator": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Aestrategias-de-leitura/e/lp-o-que-sao-generos-textuais", "detail": "Página identificada como exercício de gêneros textuais; conteúdo das questões e acessibilidade assistiva não validados."}]},
+    {"table": "resources", "key": {"id": 258}, "reason": "Vídeo de orações/períodos não foi assistido nem teve transcrição integral revisada; só título/identidade não sustenta publicação como aprendizagem. Deixar em review até validar conteúdo e acessibilidade.", "evidence": [{"locator": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa%3Alp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa%3Alp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos", "detail": "Página identificada como vídeo sobre orações e períodos; conteúdo integral/transcrição não conferidos."}]},
+    {"table": "resources", "key": {"id": 277}, "reason": "Título e associação à obra são verificáveis, mas o vídeo é de 2024 e fora do recorte ativo 2025–2027 definido no audit; não publicar neste lote atual.", "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro marca publishedAt 2024-04-24 e activeScope false."}]},
+    {"table": "resources", "key": {"id": 278}, "reason": "Título e associação à obra são verificáveis, mas o vídeo é de 2023 e fora do recorte ativo 2025–2027 definido no audit; não publicar neste lote atual.", "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro marca publishedAt 2023-06-21 e activeScope false."}]},
+    {"table": "resources", "key": {"id": 281}, "reason": "Vídeo legado de 2024, fora do recorte ativo 2025–2027; não publicar como recurso atual.", "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro marca publishedAt 2024-04-10 e activeScope false."}]},
+    {"table": "resources", "key": {"id": 282}, "reason": "Vídeo legado de 2024, fora do recorte ativo 2025–2027; não publicar como recurso atual.", "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro marca publishedAt 2024-05-15 e activeScope false."}]},
+    {"table": "resources", "key": {"id": 285}, "reason": "Vídeo legado de 2024, fora do recorte ativo 2025–2027; não publicar como recurso atual.", "evidence": [{"locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl", "detail": "Registro marca publishedAt 2024-05-29 e activeScope false."}]}
+  ]
+}

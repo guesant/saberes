@@ -1,0 +1,94 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:11:05.030433+00:00",
+  "database_before_sha256": "2d68fb5e8e344c0c1bac0d5b144e61e0cdd371fcc765d9236ee23d590fc0b7cf",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 578
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Open Resources for Community College Algebra",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/open-resources-for-community-college-algebra",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; College developmental-algebra scope; English; exercises answers/solution navigation has reviewer-noted limitations; accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied."
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Revisado em 2026-10-09 como referência complementar de consulta para álgebra, funções/gráficos e polinômios; não é cobertura integral do programa nem material da Unicamp. A ficha OTL oferece leitura online e PDF gratuitos em inglês; capítulos incluem equações, polinômios, equações quadráticas, funções e gráficos, com exemplos trabalhados e exercícios/checkpoints. O texto pode apoiar estudo individual e planejamento docente, mas tem nível de álgebra de desenvolvimento universitário e há observações de revisão sobre localização de algumas respostas. Acessibilidade não foi auditada por teclado/leitor de tela. Metadados registram CC BY 4.0 no item, sem resolver direitos de mídia de terceiros; nesta proposta usar somente link e metadados (link_only), sem copiar/republicar. Os três vínculos resource_topics existentes (tópicos 2479, 2545 e 2565) continuam em review: esta decisão não publica nem altera relações curriculares."
+      },
+      "reason": "É um livro identificado, não um portal: a página do item informa autoria do Portland Community College Faculty, edição 2018, inglês, leitura online/PDF gratuitos e CC BY. O índice e a descrição editorial discriminam conteúdo diretamente útil a funções, gráficos e álgebra polinomial, mas a adequação é de apoio/consulta, não de correspondência integral ao vestibular. A origem possui material online direto do autor, não apenas um hub. Aprovar o cadastro do recurso como referência consultável; manter os vínculos tópicos ainda em revisão e restringir o uso a link-out até eventual análise de componentes/figuras.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/open-resources-for-community-college-algebra",
+          "detail": "Ficha específica do livro: autoria Portland Community College Faculty, copyright 2018, idioma inglês, formatos Online/PDF e condições de uso CC BY; índice/avaliações descrevem capítulos de polinômios, quadráticas, funções e gráficos, exemplos e exercícios."
+        },
+        {
+          "locator": "https://spot.pcc.edu/math/orcca/ed2/html/",
+          "detail": "Leitura HTML online do próprio Portland Community College, alcançada pelo botão Online da ficha do livro; destino do recurso é conteúdo didático, não catálogo/hub."
+        },
+        {
+          "locator": "https://creativecommons.org/licenses/by/4.0/",
+          "detail": "Licença CC BY 4.0 indicada na ficha individual OTL; a decisão ainda é link_only e não autoriza copiar mídias/componentes de terceiros sem verificar seus avisos."
+        },
+        {
+          "locator": ".local/content/content.sqlite#resources/578",
+          "detail": "Leitura somente readonly: estado atual review, source_document_id 556; vínculos legados a Funções e gráficos (2479), Polinômios, equações e inequações (2545) e Interpretação/elaboração de tabelas e gráficos (2565) estão todos review/relevant. Nenhuma dessas relações é alterada nesta proposta.",
+          "sha256": "2d68fb5e8e344c0c1bac0d5b144e61e0cdd371fcc765d9236ee23d590fc0b7cf"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria item a item prévia registra formatos livres, tópicos dos capítulos, limitações de respostas e acessibilidade não auditada, além de recomendar somente link-out.",
+          "sha256": "4fa18b15da5b05fe00a4ce3a7402e054818066ac3162cd86c8271340875bf3cf"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 579
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Math in Society: Mathematics for Liberal Arts Majors",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/math-in-society-mathematics-for-liberal-arts-majors",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; For non-math majors; reviewer notes limited depth in probability/statistics and dated tax/government examples; English; accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied."
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Revisado em 2026-10-09 como referência complementar, em inglês, para consulta de probabilidade, estatística básica, raciocínio lógico e matemática cívica; não cobre integralmente contagem/probabilidade da Unicamp e não é material da Comvest. A ficha específica oferece leitura online/PDF gratuita e identifica CC BY-SA; a edição online do Portland Community College é conteúdo direto, modular, com definições, exemplos e exercícios. As avaliações de docentes elogiam exemplos e estrutura, mas registram profundidade limitada em probabilidade/estatística e lacunas de análise combinatória; usar como reforço seletivo, não como trilha completa. Acessibilidade de imagens/leitor de tela e teclado não foi auditada. Nesta proposta, apenas link e metadados (link_only), sem republicação. Os vínculos resource_topics atuais (2480 e 2565) permanecem em review; esta decisão não aprova classificação/mapeamento curricular."
+      },
+      "reason": "O item é um livro direto e específico, não um catálogo: a ficha da University of Minnesota identifica a autora Cara Lee, Portland Community College, versão 2018, inglês, formatos online/PDF e CC BY-SA. A edição online oferece material modular útil à consulta de probabilidade e tabelas de contingência; avaliações indicam exemplos e exercícios, mas também alertam que probabilidade/estatística e contagem têm profundidade limitada. Assim, o benefício para estudo individual/planejamento é real quando recortado como suplemento. Aprovar somente o cadastro do recurso com link-out; não promover relações temáticas que seguem em revisão.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/math-in-society-mathematics-for-liberal-arts-majors",
+          "detail": "Ficha do livro identifica autora, instituição, ano, idioma, formatos Online/PDF e CC BY-SA; avaliações de docentes descrevem lógica, finanças, probabilidade, estatística e apportionment e registram limites de profundidade em probabilidade/contagem."
+        },
+        {
+          "locator": "https://spot.pcc.edu/math/mathinsociety/",
+          "detail": "Edição online do próprio Portland Community College, alcançada pelo botão Online na ficha; destino contém o texto didático, não apenas o diretório OTL."
+        },
+        {
+          "locator": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "detail": "Licença CC BY-SA 4.0 indicada na ficha individual OTL; proposta conserva link_only e não copia materiais ou componentes."
+        },
+        {
+          "locator": ".local/content/content.sqlite#resources/579",
+          "detail": "Leitura somente readonly: estado atual review, source_document_id 557; vínculos para Contagem e probabilidade (2480) e Interpretação/elaboração de tabelas e gráficos (2565) permanecem review/relevant. Nenhuma relação é alterada.",
+          "sha256": "2d68fb5e8e344c0c1bac0d5b144e61e0cdd371fcc765d9236ee23d590fc0b7cf"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria prévia do item documenta acesso/formats, licença CC BY-SA, tópicos, profundidade limitada e a recomendação de manter associações em revisão e usar somente link-out.",
+          "sha256": "4fa18b15da5b05fe00a4ce3a7402e054818066ac3162cd86c8271340875bf3cf"
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T201105058820Z.sqlite",
+  "database_after_sha256": "78c2aa0b3fda6fd4011d125022f18c9ba2abf8be4a4825cc5a03f1c7b4f65e55"
+}

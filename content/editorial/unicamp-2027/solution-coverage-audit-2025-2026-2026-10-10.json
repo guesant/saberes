@@ -1,0 +1,135 @@
+{
+  "format": "unicamp-solution-coverage-audit/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "representative_booklets": [
+      {"edition": 2025, "stage": "1ª fase", "booklet": "QZ", "paper_version": "Modelos Q e Z"},
+      {"edition": 2026, "stage": "1ª fase", "booklet": "QX", "paper_version": "Modelos Q e X"}
+    ],
+    "database": ".local/content/content.sqlite",
+    "database_access": "read-only",
+    "database_modified": false,
+    "pdf_text_copied": false,
+    "assessment_note": "Coverage indicates a linked question_solutions row, not independent pedagogical approval of every explanation."
+  },
+  "method": {
+    "database": "Read-only SQLite joins across editions, stages, papers, paper_versions, question_occurrences, questions, question_solutions and source_documents; grouped by occurrence original_number.",
+    "pdf_batch_check": "Extracted text from each local PDF using pypdf, enumerated the sequential QUESTÃO headings, and compared solution text with the corresponding numbered section. No systematic number shift was detected. One lexical similarity flag for 2025 Q18 arose because its explanation refers to Q19; direct inspection confirmed the Q18 match.",
+    "visual_sample": [
+      {"edition": 2025, "pdf_page": 6, "check": "Q1 shows prompt, alternatives, objective, correct answer, rationale for options and candidate-performance chart."},
+      {"edition": 2026, "pdf_page": 7, "check": "Q1 visually shows the same official-commentary structure."},
+      {"edition": 2026, "pdf_page": 40, "check": "Visual check of the Zuzu Angel question and the following citizenship question confirms original numbering 33 and 34 respectively, consistent with the database rows."}
+    ],
+    "pdf_tooling": "pypdf batch extraction plus Poppler rendering and visual inspection of representative pages. Docling was not installed in the available runtime; no package was installed because numbering/provenance checks were adequately testable with this small reproducible method."
+  },
+  "documents": [
+    {
+      "edition": 2025,
+      "source_document_id": 5,
+      "database_title": "Vestibular Unicamp 2025 — 1ª fase, prova comentada",
+      "official_source": true,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+      "local_file": ".local/downloads/comvest-2025-2027/2025/commented/first-phase-commented-2025.pdf",
+      "pages": 63,
+      "pdf_metadata_tagged": true,
+      "sha256": "aeb82eba0837fe8662074302e7393acd6faf113304066de29044488aafc210a2",
+      "database_reuse_status": "unknown",
+      "finding": "The introductory text on PDF page 2 says the publication concerns Vestibular 2025 and describes the commentary fields for each question: objective, correct alternative, rationale for alternatives and candidate performance. The question sequence begins on PDF page 6 and reaches Q72 on page 63."
+    },
+    {
+      "edition": 2026,
+      "source_document_id": 4,
+      "database_title": "Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)",
+      "official_source": true,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+      "local_file": ".local/downloads/comvest-2025-2027/2026/commented/first-phase-commented-2026.pdf",
+      "pages": 71,
+      "pdf_metadata_tagged": true,
+      "sha256": "2d1d0d375fb8ee7ea84ebb11350ca30851a5c928db80ed6e2479aeeb1ba23284",
+      "database_reuse_status": "unknown",
+      "finding": "The cover and question pages identify the 2026 exam, but the introductory paragraph on PDF page 2 mistakenly says the publication is for Vestibular 2025. Page 3 and the cover identify 2026. The question sequence begins on PDF page 7 and Q72 is present near the end. Preserve this document-level discrepancy in provenance; do not infer permission to redistribute from official/public availability."
+    }
+  ],
+  "coverage": [
+    {
+      "edition": 2025,
+      "stage": "1ª fase",
+      "representative_booklet": "QZ",
+      "paper_version_id": 1,
+      "occurrences": 72,
+      "unique_canonical_questions": 72,
+      "question_solution_rows": 72,
+      "original_number_coverage": {"from": 1, "through": 72, "contiguous": true},
+      "missing_original_numbers": [],
+      "duplicate_solution_rows_for_number": [],
+      "number_field_alignment": "All 72 occurrences have original_number equal to number (1–72).",
+      "solution_titles": {"labelled_official": 72, "labelled_editorial": 0, "editorial_question_numbers": []},
+      "editorial_status_counts": {"published": 72},
+      "editorial_version_populated": 0,
+      "authorship_populated": 0,
+      "source_document_ids": [5],
+      "interpretation": "Complete row coverage for the selected QZ representative. All solution titles identify the text as official commentary and link source_document_id 5, which is the official Comvest PDF. The database does not populate per-solution authorship or editorial version, so the row-level provenance is not fully auditable from those fields alone."
+    },
+    {
+      "edition": 2026,
+      "stage": "1ª fase",
+      "representative_booklet": "QX",
+      "paper_version_id": 5,
+      "occurrences": 72,
+      "unique_canonical_questions": 72,
+      "question_solution_rows": 72,
+      "original_number_coverage": {"from": 1, "through": 72, "contiguous": true},
+      "missing_original_numbers": [],
+      "duplicate_solution_rows_for_number": [],
+      "number_field_alignment": "All 72 occurrences have original_number equal to number (1–72).",
+      "solution_titles": {
+        "labelled_official": 51,
+        "labelled_editorial": 21,
+        "editorial_question_number_ranges": [[33, 47], [66, 71]],
+        "editorial_question_numbers": [33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 66, 67, 68, 69, 70, 71]
+      },
+      "editorial_status_counts": {"published": 72},
+      "editorial_version_populated": 0,
+      "authorship_populated": 0,
+      "source_document_ids": [4],
+      "interpretation": "Complete row coverage for the selected QX representative. Titles explicitly mark 21 rows as editorial syntheses/editorial resolutions; the other 51 are labelled official. All 72 rows point to the same official PDF source document, including the editorially labelled rows. Because authorship and editorial_version are null for every solution, the database does not distinguish the official PDF as source material from the author/origin of each stored text. The official PDF itself contains commentary across the question sequence; the 21 editorial labels should not be recast as official wording."
+    }
+  ],
+  "consistency_checks": {
+    "sqlite_integrity_check": "Not run; outside the requested coverage comparison.",
+    "solution_per_original_number": "Exactly one question_solutions row was found for each representative original number in each edition.",
+    "pdf_number_sequence": {
+      "2025": "72 distinct question headings, complete sequence 1–72.",
+      "2026": "Distinct question headings form complete sequence 1–72. Text extraction yielded one repeated Q70 marker in page flow; the deduplicated sequential heading set still contains every original number exactly once."
+    },
+    "visual_numbering_check": "QX PDF page 40 shows the Q33 commentary and then the Q34 prompt; the database's Q33/Q34 solutions align with those subjects/numbers."
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Preserve the current 2026 title distinction: questions 33–47 and 66–71 are explicitly editorially synthesized; do not present their stored wording as verbatim Comvest commentary.",
+      "reason": "Their titles identify editorial syntheses, while all records currently point to the official PDF as source. Authorship and editorial_version are not populated."
+    },
+    {
+      "priority": "high",
+      "action": "For both years, add/maintain per-solution provenance in a later authorized database change: authorship class, editorial version, relevant PDF page(s), and whether the stored solution is verbatim official text, an excerpt, or an editorial synthesis based on the official commentary.",
+      "reason": "Every record is marked published, but the current row-level version and authorship fields are null; a source-document link alone does not establish the wording's authorship."
+    },
+    {
+      "priority": "medium",
+      "action": "Keep the 2026 introductory year discrepancy attached to the source record/release notes until corrected against an official replacement or erratum; do not silently amend the PDF's document identity.",
+      "reason": "PDF page 2 says 2025 while its cover and question pages identify 2026."
+    },
+    {
+      "priority": "medium",
+      "action": "Retain reuse_status unknown for both official PDFs unless a specific license/permission is documented; provide source links and attribution rather than copying the PDFs into new materials.",
+      "reason": "The local source_documents rows mark both as official but reuse_status unknown. Public official availability is not a reuse license."
+    }
+  ],
+  "limitations": [
+    "This audit covers only the QZ 2025 and QX 2026 representative booklet versions; it does not independently re-review equivalent orderings in other cadernos.",
+    "The 72/72 count measures linked solution rows and matching original numbers; it is not a full correctness or pedagogical review of every solution.",
+    "Visual inspection was sampled; complete booklet numbering/content alignment was checked in extracted text, not by manually viewing every page.",
+    "No SQLite writes, release changes, PDF copies, or solution text copies were made."
+  ]
+}

@@ -6,7 +6,8 @@ export class SqlJsGetQuestionAdapter implements GetQuestionPort {
 
   public execute(
     input: Parameters<GetQuestionPort["execute"]>[0],
+    scope?: Parameters<GetQuestionPort["execute"]>[1],
   ): ReturnType<GetQuestionPort["execute"]> {
-    return this.store.getQuestion(input);
+    return this.store.getQuestion(input, scope);
   }
 }

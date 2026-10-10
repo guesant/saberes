@@ -5,13 +5,13 @@ import type { ContentRow } from "./database/content-row.type";
 export function readQuestionAnswer(db: ContentDatabase, question: ContentRow): ContentRow {
   if (hasContentTable(db, "canonical_answer_keys")) {
     const canonical = db.get(
-      "SELECT ak.id, ak.occurrence_id, ak.status, ak.answer_value correct_answer, ak.is_automatically_gradable FROM canonical_answer_keys ak WHERE ak.question_id = ? AND ak.question_part_id IS NULL AND (ak.occurrence_id = ? OR ak.occurrence_id IS NULL) ORDER BY CASE WHEN ak.occurrence_id = ? THEN 0 ELSE 1 END, ak.version DESC LIMIT 1",
+      "SELECT ak.id, ak.occurrence_id, ak.version answer_key_version, ak.status, ak.answer_value correct_answer, ak.is_automatically_gradable FROM canonical_answer_keys ak WHERE ak.question_id = ? AND ak.question_part_id IS NULL AND (ak.occurrence_id = ? OR ak.occurrence_id IS NULL) ORDER BY CASE WHEN ak.occurrence_id = ? THEN 0 ELSE 1 END, ak.version DESC LIMIT 1",
       [question.question_id, question.occurrence_id || 0, question.occurrence_id || 0],
     );
 
     if (canonical) {
       if (canonical.status === "cancelled") {
-        return {};
+        return { answer_status: "cancelled", is_automatically_gradable: false };
       }
 
       const optionAnswer = db.get(
@@ -22,6 +22,7 @@ export function readQuestionAnswer(db: ContentDatabase, question: ContentRow): C
       const correctAnswer = String(canonical.correct_answer || optionAnswer?.correct_answer || "");
 
       return {
+        answer_status: canonical.status,
         correct_answer: correctAnswer,
         is_automatically_gradable: canonical.status === "definitive" && Number(canonical.is_automatically_gradable) === 1 && Boolean(correctAnswer),
       };

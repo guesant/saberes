@@ -1,0 +1,484 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T19:55:18.662836+00:00",
+  "database_before_sha256": "e28af81ea6cb5cb3eaed91fd03e897784dd3b4898111ef2535674b7e47659f25",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "questions",
+      "key": {
+        "id": 3
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após conferência visual integral da questão, gráfico e alternativas na fonte, conferência do asset associado (question_assets: asset 470, hash registrado na evidência) e comparação com a chave canônica 3 (definitive, single_choice A) e gabarito oficial QZ 2025 (A). A exceção de parser é apenas sinalização de revisão visual; não fundamenta a decisão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-03.png",
+          "detail": "QZ 2025, p. impressa 3: enunciado, gráfico completo dos dez maiores produtores de cacau, título, escala, fonte e alternativas A–D conferidos visualmente.",
+          "sha256": "d8faa1e55cabc2d2d147049abb42c49b8e8790e1e71bfad18187d599b75a9fa6"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q03-cocoa-producers-chart.png",
+          "detail": "Asset associado; gráfico está íntegro, com título, rótulos, escala e fonte FAOSTAT legíveis. SHA-256 f49320d2c409269d529de1ed3ad951796d79fa8e37ec3d914ededd71a84dc5ed.",
+          "sha256": "f49320d2c409269d529de1ed3ad951796d79fa8e37ec3d914ededd71a84dc5ed"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 3: alternativa A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 3
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 3,
+        "number": 3,
+        "source_page": 3
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "A ocorrência aponta para a questão e página de origem conferidas visualmente; propor publicação junto à questão 3 após aprovação individual pelo importador.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-03.png",
+          "detail": "QZ 2025, p. impressa 3, ocorrência 3: questão completa e opções A–D verificadas.",
+          "sha256": "d8faa1e55cabc2d2d147049abb42c49b8e8790e1e71bfad18187d599b75a9fa6"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 3: alternativa A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 17
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após conferência visual integral do texto em inglês, dos dois painéis do gráfico, de todas as opções e do asset vinculado (question_assets: asset 449, hash registrado na evidência). A chave canônica 17 é definitive, single_choice C; software developer e housekeeper concordam com a fonte e com o gabarito oficial. A falha de extração de opções foi superada pela inspeção da página, não presumida como resolvida pelo parser.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-08.png",
+          "detail": "QZ 2025, p. impressa 8: texto, gráfico completo dos dois painéis, rótulos e opções A–D conferidos visualmente.",
+          "sha256": "6681508905d845c9da71ccdfb04731657ea0716b83e4356811b44db9dfa5d935"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q17-amplified-stereotypes.png",
+          "detail": "Asset associado; título, legenda, escalas e séries dos dois painéis estão íntegros e legíveis. SHA-256 ba02ee4cde6733cef5d89268e92b100573717e9531d870230749e72e0af5711f.",
+          "sha256": "ba02ee4cde6733cef5d89268e92b100573717e9531d870230749e72e0af5711f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 17: alternativa C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 17
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 17,
+        "number": 17,
+        "source_page": 8
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência da questão 17 na p. 8 conferida junto ao texto, opções e imagem da fonte; proposta condicionada à aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-08.png",
+          "detail": "QZ 2025, p. impressa 8, ocorrência 17: enunciado e opções A–D integralmente visíveis.",
+          "sha256": "6681508905d845c9da71ccdfb04731657ea0716b83e4356811b44db9dfa5d935"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 17: alternativa C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 36
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após conferir visualmente o texto comum das questões 35/36, o mural, a transcrição impressa, a canção e todas as alternativas. A chave canônica 36 é definitive, single_choice C. Asset compartilhado já vinculado (question_assets: asset 454; hash registrado na evidência), conferido visualmente; nenhuma alteração textual ou de asset proposta.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-14.png",
+          "detail": "QZ 2025, p. impressa 14: texto de apoio, referência e alternativas A–D da questão 36 conferidos visualmente.",
+          "sha256": "c0db502ebd2e84b1809617d61faaae8ce33200a5e1cb9c0ca8bc3219f0b11d34"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q35-simone-siss-mural.png",
+          "detail": "Asset compartilhado do texto comum: mural e reprodução textual legíveis; crédito Simone Siss/2024 presente. SHA-256 7ef54edc2786807b464854614cdec25bd82435edf0157b472cda8d7c98d93ca7.",
+          "sha256": "7ef54edc2786807b464854614cdec25bd82435edf0157b472cda8d7c98d93ca7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 36: alternativa C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 36
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 36,
+        "number": 36,
+        "source_page": 14
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 36, vinculada ao texto comum e à página visualmente conferidos; publicação deve acompanhar a decisão aprovada para a questão 36.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-14.png",
+          "detail": "QZ 2025, p. impressa 14, questão 36: comando, referência do texto e alternativas completos.",
+          "sha256": "c0db502ebd2e84b1809617d61faaae8ce33200a5e1cb9c0ca8bc3219f0b11d34"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q35-simone-siss-mural.png",
+          "detail": "Imagem do texto comum 35/36 conferida: mural, transcrição e crédito aparecem no recorte.",
+          "sha256": "7ef54edc2786807b464854614cdec25bd82435edf0157b472cda8d7c98d93ca7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 36: alternativa C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 49
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após revisar conjuntamente as páginas contíguas 17–18, incluindo enunciado, todas as alternativas e continuação de C/D. A chave canônica 49 é definitive, single_choice B; o cálculo com reajustes sucessivos (2000 × 1,1 × 1,1 × 0,8 = 1936) coincide com a alternativa B e o gabarito oficial. Sem asset ligado à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-17.png",
+          "detail": "QZ 2025, p. impressa 17: início e dados do enunciado, alternativas A/B e início das opções seguintes conferidos.",
+          "sha256": "a21c3abde694201c3a3681387f10c90d4a2b277fefd720a5effe61b41051b584"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-18.png",
+          "detail": "QZ 2025, p. impressa 18: continuação e alternativas C/D conferidas visualmente; leitura completa da questão 49 entre páginas.",
+          "sha256": "4559840fd0b6a3d8d8eab1f8b866d35b495262da7fb0f3b398f5569c533d83e5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 49: alternativa B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 49
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 49,
+        "number": 49,
+        "source_page": 17
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 49 começa na p. 17 e continua na p. 18; ambas foram verificadas. Proposta de publicação acompanha a questão 49 após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-17.png",
+          "detail": "QZ 2025, p. impressa 17, início da ocorrência 49 e alternativas A/B.",
+          "sha256": "a21c3abde694201c3a3681387f10c90d4a2b277fefd720a5effe61b41051b584"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-18.png",
+          "detail": "QZ 2025, p. impressa 18, continuação e alternativas C/D da ocorrência 49.",
+          "sha256": "4559840fd0b6a3d8d8eab1f8b866d35b495262da7fb0f3b398f5569c533d83e5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 49: alternativa B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 50
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após conferir visualmente a fórmula trigonométrica impressa e todas as alternativas com radicais na p. 18; a chave canônica 50 é definitive, single_choice A, equivalente a sen(π/12) e coincidente com o gabarito. Sem asset ligado à questão. Falha de extração de opção não foi tomada como evidência de conteúdo correto.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-18.png",
+          "detail": "QZ 2025, p. impressa 18: identidade cos(x/2)=√((1+cos x)/2), comando e opções A–D com radicais conferidos visualmente.",
+          "sha256": "4559840fd0b6a3d8d8eab1f8b866d35b495262da7fb0f3b398f5569c533d83e5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 50: alternativa A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 50
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 50,
+        "number": 50,
+        "source_page": 18
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 50 e sua fórmula/opções foram conferidas na p. 18; propor publicação somente com aprovação individual da questão correspondente.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-18.png",
+          "detail": "QZ 2025, p. impressa 18, questão 50 completa: fórmula e alternativas A–D visíveis.",
+          "sha256": "4559840fd0b6a3d8d8eab1f8b866d35b495262da7fb0f3b398f5569c533d83e5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 50: alternativa A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 58
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após verificar a expressão Q(t)=20+2 sen(t)−4 cos(t), os quatro gráficos de alternativa e o asset completo já vinculado (question_assets: asset 461, hash registrado na evidência). A chave canônica 58 é definitive, single_choice A; o gráfico A começa em 16 e cresce inicialmente, como a expressão, e coincide com o gabarito oficial.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-19.png",
+          "detail": "QZ 2025, p. impressa 19: enunciado, função e alternativas gráficas A–D conferidos na página completa.",
+          "sha256": "56ab31805dd4eb207152c180f9c7e5957e66f26feda8d04ae0e5ff527f684e65"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q58-pollution-graph-options.png",
+          "detail": "Asset associado: quatro gráficos A–D estão presentes, sem corte dos eixos/curvas. SHA-256 b71f2bf18f23f3db81717cbd70ce7f301a5e9b0ae31155496c67cb6f732e151f.",
+          "sha256": "b71f2bf18f23f3db81717cbd70ce7f301a5e9b0ae31155496c67cb6f732e151f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 58: alternativa A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 58
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 58,
+        "number": 58,
+        "source_page": 19
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 58, função e figuras de resposta conferidas visualmente na p. 19; proposta condicionada à aprovação da questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-19.png",
+          "detail": "QZ 2025, p. impressa 19, questão 58: função e opções gráficas A–D inteiras.",
+          "sha256": "56ab31805dd4eb207152c180f9c7e5957e66f26feda8d04ae0e5ff527f684e65"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q58-pollution-graph-options.png",
+          "detail": "Asset de opções gráficas conferido visualmente, sem corte aparente; SHA-256 b71f2bf18f23f3db81717cbd70ce7f301a5e9b0ae31155496c67cb6f732e151f.",
+          "sha256": "b71f2bf18f23f3db81717cbd70ce7f301a5e9b0ae31155496c67cb6f732e151f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 58: alternativa A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 67
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após conferir visualmente enunciado e quatro alternativas, inclusive a disposição entre colunas. A chave canônica 67 é definitive, single_choice C; conteúdo sobre homologia parcial X/Y, inativação no corpúsculo de Barr e controle epigenético confere com o gabarito oficial. Sem asset ligado à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-22.png",
+          "detail": "QZ 2025, p. impressa 22: enunciado e alternativas A–D, incluindo opções no topo da coluna direita, lidos na página completa.",
+          "sha256": "3f4573780fe1f64970222f87385ed032124d2d3925c16c1e55b922799d349f5c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 67: alternativa C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 67
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 67,
+        "number": 67,
+        "source_page": 22
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 67 e suas opções em duas colunas conferidas visualmente; propor publicação após aprovação individual da questão 67.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-22.png",
+          "detail": "QZ 2025, p. impressa 22, questão 67 completa, incluindo as alternativas posicionadas na segunda coluna.",
+          "sha256": "3f4573780fe1f64970222f87385ed032124d2d3925c16c1e55b922799d349f5c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 67: alternativa C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 72
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Propor publicação após conferir a página completa, a figura de oito classes de gametas e as alternativas. A chave canônica 72 é definitive, single_choice D; asset já vinculado (question_assets: asset 468, hash registrado na evidência). As classes parentais 3453/3453, recombinantes 476/476 e 6/6, 134/134 sustentam a relação entre os intervalos e a alternativa D, de acordo com o gabarito. A extração de rótulos duplicados não foi usada como prova de correção.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-23.png",
+          "detail": "QZ 2025, p. impressa 23: enunciado, diagrama, contagens e alternativas A–D conferidos visualmente.",
+          "sha256": "c247c570bf67a739043db17e9608d7f8a55590c906d216ea91bc2ebdad769655"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q72-recombinant-gametes.png",
+          "detail": "Asset associado: quatro pares de cromossomos e as oito contagens (3453, 3453, 476, 476, 6, 6, 134, 134) visíveis; SHA-256 1f2f38ed4098efc077bf48eeab3ef1edf98157923694882a3ea4941eb72b597f.",
+          "sha256": "1f2f38ed4098efc077bf48eeab3ef1edf98157923694882a3ea4941eb72b597f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 72: alternativa D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 72
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 72,
+        "number": 72,
+        "source_page": 23
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 72, figura e todas as opções verificadas na p. 23; propor publicação somente após aprovação individual da questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025/QZ-page-23.png",
+          "detail": "QZ 2025, p. impressa 23, questão 72 e opções A–D completas.",
+          "sha256": "c247c570bf67a739043db17e9608d7f8a55590c906d216ea91bc2ebdad769655"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q72-recombinant-gametes.png",
+          "detail": "Diagrama de gametas conferido visualmente e sem cortes aparentes; SHA-256 1f2f38ed4098efc077bf48eeab3ef1edf98157923694882a3ea4941eb72b597f.",
+          "sha256": "1f2f38ed4098efc077bf48eeab3ef1edf98157923694882a3ea4941eb72b597f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial Q/Z 2025, p. 1, questão 72: alternativa D."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T195518703117Z.sqlite",
+  "database_after_sha256": "f3076030cc8c987689a1b9fb9a18e7e23d3922f7f6b640d49d43c17ebf6d4c8c"
+}

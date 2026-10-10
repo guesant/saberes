@@ -1,0 +1,164 @@
+{
+  "format": "question-pdf-editorial-audit/v1",
+  "created_at": "2026-10-10",
+  "scope": "Auditoria somente leitura de fidelidade editorial dos cadernos representantes QZ/2025, QX/2026 e QT/simulado preparatório 2027. Não reavalia equivalência entre cadernos nem gabaritos além das verificações estruturais do QA.",
+  "non_mutation": {
+    "sqlite_open_mode": "read-only; PRAGMA query_only=ON",
+    "database_modified": false,
+    "existing_files_modified": false,
+    "new_repository_file": "content/editorial/unicamp-2027/question-pdf-backlog-luna-2026-10-10.json",
+    "database_sha256_observed": "e72bf826d1175a0fd895b2b785e3ad110ef96a6e86acc2fd206a2c9de04729f0"
+  },
+  "sources": [
+    {
+      "edition": 2025,
+      "booklet": "QZ",
+      "source_document_id": 36,
+      "pdf": ".local/downloads/comvest-2025-2027/2025/exams/first-phase-QZ.pdf",
+      "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710",
+      "sqlite_asset": "official-pdfs/2025/QZ.pdf",
+      "asset_checksum_matches_pdf": true
+    },
+    {
+      "edition": 2026,
+      "booklet": "QX",
+      "source_document_id": 44,
+      "pdf": ".local/downloads/comvest-2025-2027/2026/exams/first-phase-QX.pdf",
+      "sha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+      "sqlite_asset": "official-pdfs/2026/QX.pdf",
+      "asset_checksum_matches_pdf": true
+    },
+    {
+      "edition": 2027,
+      "booklet": "QT",
+      "kind": "simulado oficial preparatório para Vestibular 2027",
+      "source_document_id": 335,
+      "pdf": ".local/downloads/comvest-2025-2027/2027/simulations/prep-simulation-2027-booklet-QT.pdf",
+      "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d",
+      "sqlite_asset": "official-pdfs/2027-simulation/simulado_Q_T.pdf",
+      "asset_checksum_matches_pdf": true
+    }
+  ],
+  "method_and_results": {
+    "qa_script": "tools/editorial/pdf/pdf_qa_import.py",
+    "qa_mode": "validate() read-only; no extractor command, no --apply; current report generated in memory against the current database",
+    "current_database_sha256_used_by_validation": "e72bf826d1175a0fd895b2b785e3ad110ef96a6e86acc2fd206a2c9de04729f0",
+    "candidate_occurrences": 216,
+    "per_booklet": {
+      "2025-QZ": {"database_occurrences": 72, "extracted_questions": 72, "nonempty_statements_over_80_chars": 72, "four_options_A_to_D": 72, "occurrences_without_source_page": 0, "structural_issues": [], "parser_question_issue_count": 4},
+      "2026-QX": {"database_occurrences": 72, "extracted_questions": 72, "nonempty_statements_over_80_chars": 72, "four_options_A_to_D": 72, "occurrences_without_source_page": 0, "structural_issues": [], "parser_question_issue_count": 9},
+      "2027-QT": {"database_occurrences": 72, "extracted_questions": 72, "nonempty_statements_over_80_chars": 72, "four_options_A_to_D": 72, "occurrences_without_source_page": 0, "structural_issues": [], "parser_question_issue_count": 2}
+    },
+    "visually_inspected_high_risk_pages": [
+      {"booklet": "QZ-2025", "pdf_pages": [19, 23], "printed_pages": [17, 21], "evidence_files": ["tools/editorial/review-closure/evidence/qz-2025/QZ-page-19.png", "tools/editorial/review-closure/evidence/qz-2025/QZ-page-23.png"]},
+      {"booklet": "QX-2026", "pdf_pages": [6, 17, 19], "printed_pages": [4, 15, 17], "evidence_files": ["tools/editorial/review-closure/evidence/questions-recent/qx-2026-physical-06.png", "tools/editorial/review-closure/evidence/questions-recent/qx-2026-physical-17.png", "tools/editorial/review-closure/evidence/questions-recent/qx-2026-physical-19.png"]},
+      {"booklet": "QT-2027", "pdf_pages": [21], "printed_pages": [19], "evidence_files": ["tools/editorial/review-closure/evidence/simulado-2027-qt-physical-page-21.png"]}
+    ],
+    "current_asset_model": "There are zero question_assets links for questions from these three source documents. The principal database stores each whole official booklet as one content_assets PDF linked to its source_document; all 216 question_occurrences have a physical source_page. Thus the old finding that full-page PNGs are attached to individual questions is not reproducible in the current database. The PDF is the page-level visual source; page/figure descriptions are separate accessibility content and are not implied by a PDF asset's document-level alt_text.",
+    "historical_qa_caveat": "tools/editorial/pdf/bulk-qa-report.json was generated at 2026-10-10T10:21:13Z with database SHA-256 3361d87bf55f3ac324e6f7a9875e7c5df975180058702c35d40bc46496ebe3ba. The existing content/editorial/unicamp-2027/pdf-qa-issues-audit-2026-10-10.json records a different observed database hash (b54bdb4546d89d7f4450374dbbaa094c4040bb068b912889411ac48f4eee2cad). Both differ from the current database hash above. Their observations were used as leads, not treated as proof of current SQLite state. A fresh read-only validation found no missing pages, missing A-D options, or source/manifest structural failures; it still emits parser/layout alerts which must not be applied as corrections without page-level evidence.",
+    "text_fidelity_conclusion": "No concrete enunciado or option transcription/order divergence was confirmed in the visually inspected high-risk pages. The visually checked A-D content matched the stored question options. This is a risk-focused audit, not a visual re-proof of every line on all 216 occurrences."
+  },
+  "findings": [
+    {
+      "id": "qz-2025-q58-option-visual-descriptions-missing",
+      "severity": "high",
+      "status": "confirmed_current_database_gap",
+      "record": {"source_document_id": 36, "occurrence_id": 58, "question_id": 58, "booklet_number": 58, "pdf_page": 19, "printed_page": 17},
+      "evidence": "The official page shows four distinct Q(t) graphs as alternatives A-D. SQLite stores the option texts only as 'Gráfico da alternativa A/B/C/D.' The question has no question_stimuli or question_assets association. The PDF is present and its checksum matches, but the document-level PDF alt_text does not describe these four graphs. The prompt's formula Q(t)=20+2 sen(t)-4 cos(t) does not make the placeholder option descriptions accessible.",
+      "safe_correction": "Add an accessible, option-specific description for each graph, preserving the printed A-D order. Describe axes, initial value/trend, extrema and relative curve shape directly from the official page; do not infer extra exact coordinates from the raster. Keep the original PDF page as visual source and leave the option labels unchanged.",
+      "blockers": ["Transcribe distinctions among all four curves from the official PDF page before approval; there is no current per-option alt text to reuse."],
+      "evidence_path": "tools/editorial/review-closure/evidence/qz-2025/QZ-page-19.png"
+    },
+    {
+      "id": "qz-2025-q72-genetic-counts-no-accessible-stimulus",
+      "severity": "high",
+      "status": "confirmed_current_database_gap",
+      "record": {"source_document_id": 36, "occurrence_id": 72, "question_id": 72, "booklet_number": 72, "pdf_page": 23, "printed_page": 21},
+      "evidence": "The stored statement says the quantities of gametes are 'shown in the following figure', but no stimulus/figure description is linked. The official page contains the eight haplotypes and counts needed to interpret recombination: ABC 3453; abc 3453; ABc 476; abC 476; AbC 6; aBc 6; Abc 134; aBC 134. The four alternatives are textual and present, but they do not supply these missing figure data.",
+      "safe_correction": "Add a structured accessible description listing the eight allele combinations with their printed counts and the stated gene order A/a, B/b, C/c. Preserve the official figure/page and existing question text/options; verify the sequence against the PDF before approval.",
+      "blockers": [],
+      "evidence_path": "tools/editorial/review-closure/evidence/qz-2025/QZ-page-23.png"
+    },
+    {
+      "id": "qx-2026-q42-conclave-chart-no-accessible-data-description",
+      "severity": "high",
+      "status": "confirmed_current_database_gap",
+      "record": {"source_document_id": 44, "occurrence_id": 330, "question_id": 330, "booklet_number": 42, "pdf_page": 17, "printed_page": 15},
+      "evidence": "The prompt asks the reader to interpret the graph 'Distribuição dos cardeais votantes, por região, em cada conclave desde 2005'. The database stores the heading and question but has no linked stimulus/figure description. The official page's graph is essential to evaluate the four regional-percentage comparisons; the source PDF alone is visual content, not a database text alternative.",
+      "safe_correction": "Add a text alternative stating the axes, the years 2005/2013/2025, each region/series and its plotted values (including the printed 2025 labels), after transcribing values from the source PDF. Do not derive or round unlabelled historical points from the screenshot.",
+      "blockers": ["The earlier asset audit uses a nonmatching database hash; recheck this question against the current source PDF and current record when entering exact series values."],
+      "evidence_path": "tools/editorial/review-closure/evidence/questions-recent/qx-2026-physical-17.png"
+    },
+    {
+      "id": "qx-2026-q44-composite-function-graph-no-accessible-description",
+      "severity": "high",
+      "status": "confirmed_current_database_gap",
+      "record": {"source_document_id": 44, "occurrence_id": 332, "question_id": 332, "booklet_number": 44, "pdf_page": 17, "printed_page": 15},
+      "evidence": "The stored statement refers to a figure showing a segment of f(g(x)) but has no linked stimulus/figure description. The official graph marks the point (1,5), which is the relevant visual datum; the four stored options are the text values -2, -3, -4 and -5 in the same order as the page. The PDF page is clear and not cropped.",
+      "safe_correction": "Add an accessible graph description noting the axes, the marked point (1,5), and the horizontal/vertical guides shown. Do not change the four textual options or infer any other point from the curve.",
+      "blockers": [],
+      "evidence_path": "tools/editorial/review-closure/evidence/questions-recent/qx-2026-physical-17.png"
+    },
+    {
+      "id": "qt-2027-q72-editorial-note-stale",
+      "severity": "medium",
+      "status": "confirmed_metadata_inconsistency",
+      "record": {"source_document_id": 335, "occurrence_id": 2879, "question_id": 2808, "booklet_number": 72, "pdf_page": 21, "printed_page": 19},
+      "evidence": "The occurrence note says 'Gráficos das alternativas precisam de descrição acessível; consultar a página completa vinculada.' Current SQLite options A-D already contain distinct textual descriptions of the curves (different/equal final plateaus, relative rates and crossing behavior), and those distinctions match the inspected official page. There is no question_assets link; the whole PDF remains linked to the source document and the occurrence points to page 21.",
+      "safe_correction": "Update only the stale editorial note to record that option descriptions exist and were visually checked; retain the detailed option texts and PDF page source. Do not replace them with OCR output or add a redundant crop.",
+      "blockers": ["Confirm the four option descriptions remain exposed to assistive technology in the current question UI; database presence alone does not prove rendered accessibility."],
+      "evidence_path": "tools/editorial/review-closure/evidence/simulado-2027-qt-physical-page-21.png"
+    },
+    {
+      "id": "qz-qx-stale-not-imported-notes",
+      "severity": "medium",
+      "status": "confirmed_metadata_inconsistency",
+      "record": {"source_document_ids": [36, 44], "question_id_ranges": {"QZ-2025": [1, 72], "QX-2026": [289, 360]}, "occurrence_number_range": [1, 72]},
+      "evidence": "Every QZ/2025 occurrence (72/72) and 68 QX/2026 occurrences still has the note 'Enunciado e alternativas não importados'. In the current principal SQLite, all 144 questions have populated statements and four A-D options; all source pages are present. This note contradicts the current record state. Four QX notes have already been replaced with more specific provenance/review notes.",
+      "safe_correction": "Remove or replace the stale boilerplate note for the affected occurrences with a concise, truthful provenance/review note. Preserve each source_document_id, source_page, answer key, IDs and substantive statement/options.",
+      "blockers": ["Do not interpret note cleanup as editorial approval: separately retain any actual visual/OCR review status, especially for graph-dependent content."],
+      "evidence_path": ".local/content/content.sqlite (read-only query: question_occurrences.notes, questions.statement, question_options)"
+    },
+    {
+      "id": "historical-full-page-question-asset-findings-not-current",
+      "severity": "informational",
+      "status": "not_reproduced_current_state",
+      "record": {"source_document_ids": [36, 44, 335]},
+      "evidence": "The earlier qx-qt asset visual audit documented full-page PNGs linked to multiple questions, including QX and QT. In the current principal SQLite there are zero question_assets links for all 216 questions in scope; source PDF content_assets remain checksum-matched, and each occurrence has a physical source_page. Therefore those old per-question full-page-image associations are not present now and should not be reintroduced as question assets.",
+      "safe_correction": "No database correction indicated. Keep the full booklet as a source-document/PDF asset and use the occurrence's source_page for page viewing. Preserve any source PDF page/figure references required by the UI.",
+      "blockers": ["The stored source-PDF alt_text names the booklet but does not describe individual figures; separate text alternatives are still required for essential visual data."],
+      "evidence_path": "content/editorial/unicamp-2027/qx-qt-asset-visual-audit-2026-10-10.json; current question_assets/content_assets/question_occurrences queries"
+    },
+    {
+      "id": "current-qa-parser-alerts-not-approved-as-corrections",
+      "severity": "review_gate",
+      "status": "open_visual_triage",
+      "records": [
+        {"booklet": "QZ-2025", "question_id": 17, "pdf_page": 8, "alert": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+        {"booklet": "QZ-2025", "question_id": 72, "pdf_page": 23, "alert": ["duplicate_or_spill_option_label_groups", "options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+        {"booklet": "QX-2026", "question_id": 301, "pdf_page": 6, "alert": ["image_only_alternatives_require_visual_review"]},
+        {"booklet": "QX-2026", "question_id": 306, "pdf_page": 8, "alert": ["image_only_alternatives_require_visual_review"]},
+        {"booklet": "QX-2026", "question_id": 307, "pdf_page": 8, "alert": ["spill_option_labels_before_or_outside_table:ABC"]},
+        {"booklet": "QX-2026", "question_id": 315, "pdf_page": 11, "alert": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+        {"booklet": "QX-2026", "question_id": 321, "pdf_page": 13, "alert": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+        {"booklet": "QX-2026", "question_id": 332, "pdf_page": 17, "alert": ["image_only_alternatives_require_visual_review"]},
+        {"booklet": "QX-2026", "question_id": 338, "pdf_page": 19, "alert": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+        {"booklet": "QX-2026", "question_id": 353, "pdf_page": 24, "alert": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+        {"booklet": "QX-2026", "question_id": 359, "pdf_page": 26, "alert": ["duplicate_or_spill_option_label_groups"]},
+        {"booklet": "QT-2027", "question_id": 2743, "pdf_page": 4, "alert": ["duplicate_or_spill_option_label_groups", "options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+        {"booklet": "QT-2027", "question_id": 2808, "pdf_page": 21, "alert": ["image_only_alternatives_require_visual_review"]}
+      ],
+      "evidence": "Fresh validation against the current database finds no booklet-level occurrence/page or A-D structural failure, but these extraction/parser alerts persist. Existing visual audit notes several OCR/layout false positives, but its stored database hash does not match the current database. The QZ Q72, QX Q13/Q44, and QT Q72 pages/options were visually inspected in this audit and their A-D content/order agrees with the database; the other alerts remain candidates, not confirmed divergences.",
+      "safe_correction": "Do not import Docling candidate text or modify options from these alerts alone. For each remaining alert, compare the current question ID and option texts against the cited official PDF page; mark false positives only after evidence is attached.",
+      "blockers": ["Visual recheck against the current database state is required for alerts not inspected in this audit; historical conclusions cannot be carried forward solely by matching question number."],
+      "reusable_command": "python3 tools/editorial/pdf/pdf_qa_import.py --dry-run --booklets 2025:QZ,2026:QX,2027:QT --output /tmp/unicamp-firstphase-pdf-qa-2026-10-10.jsonl",
+      "command_note": "The script refuses to overwrite an existing report path. Use a new /tmp output name on reruns. The command is read-only for SQLite but writes its QA report to the specified output path; do not pass --apply or --apply-repairs during audit."
+    }
+  ],
+  "remaining_blockers": [
+    "Create and review accessible text alternatives for QZ/2025 Q58, QZ/2025 Q72, QX/2026 Q42 and QX/2026 Q44.",
+    "Reconcile the stale QZ/QX 'not imported' occurrence notes and QT/Q72 note without changing question text, keys or provenance.",
+    "Re-run the batch command to a fresh output path after any future edits; complete page-level visual triage for the parser alerts not inspected here.",
+    "Verify in the application that source_page opens the correct physical PDF page offline and that text alternatives/options are exposed to assistive technology."
+  ]
+}

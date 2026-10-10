@@ -1,0 +1,122 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": { "id": 221 },
+      "expected": { "editorial_status": "review" },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "practice",
+        "editorial_note": "Aprovado como prática complementar e parcial de geometria, não como cobertura completa do tópico nem conteúdo da Comvest. A página apresenta 12 questões com respostas e explicações sobre figuras planas/espaciais, polígonos, poliedros, corpos redondos e planificações; as respostas e explicações foram conferidas e são coerentes. Várias questões dependem de imagens cujos textos alternativos não distinguem os elementos necessários (incluindo Q2, Q4, Q7, Q10 e Q11); manter essa limitação visível e não declarar conformidade WCAG. Direitos incertos para reprodução: somente link; nenhum conteúdo copiado. Revisão em 2026-10-09."
+      },
+      "reason": "A revisão direta da lista e das 12 respostas encontrou prática suplementar útil e respostas coerentes; os itens textuais continuam utilizáveis. Aprovação limitada com ressalva explícita para questões dependentes de imagens e cobertura parcial.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-formas-geometricas.htm",
+          "detail": "Página e questões/resoluções conferidas: apresenta 12 exercícios de classificação de formas planas e espaciais, polígonos, poliedros e planificações; Q1 e Q3, por exemplo, têm enunciados textuais e justificativas. Q2, Q4, Q7, Q10 e Q11 dependem de figuras com descrições genéricas ou necessárias à resolução."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-audits-practice-linguistics-2026-10-09.jsonl",
+          "detail": "Registro resource_id 221: revisão interativa das 12 questões e explicações, coerência pedagógica para prática suplementar, limitações de descrição de imagens e licença link_only."
+        },
+        {
+          "locator": "https://brasilescola.uol.com.br/termos-de-uso",
+          "detail": "Termos da Rede Omnia indicam restrição à reprodução sem autorização; manter apenas metadados e link externo."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": { "resource_id": 221, "topic_id": 2481, "curriculum_topic_id": null },
+      "expected": { "review_status": "review", "relevance_status": "unknown" },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Relação aprovada com o tópico canônico Geometria (topics.id=2481), não com namespace curricular anual. A página oferece questões complementares de figuras planas/espaciais, polígonos e poliedros; não cobre todo o tópico. Várias questões requerem imagens com alternativas textuais insuficientes (incluindo Q2, Q4, Q7, Q10 e Q11); sinalizar a limitação e não afirmar conformidade WCAG. Revisão 2026-10-09."
+      },
+      "reason": "O conteúdo efetivamente cobre conceitos introdutórios de geometria, mas sua descrição visual incompleta deve permanecer registrada como necessidade de melhoria de acessibilidade.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-formas-geometricas.htm",
+          "detail": "Questões e explicações verificadas para formas planas/espaciais, polígonos, poliedros e planificações; imagens essenciais em parte dos itens (incluindo Q2, Q4, Q7, Q10 e Q11) têm descrição genérica."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-audits-practice-linguistics-2026-10-09.jsonl",
+          "detail": "Registro resource_id 221 documenta pertinência suplementar, revisão das 12 respostas e ressalvas de acessibilidade e direitos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 248 },
+      "expected": { "editorial_status": "review" },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "editorial_note": "Aprovado como unidade suplementar de aprendizagem sobre evolução e genética de populações, não como cobertura completa de Genética e evolução nem material da Comvest. A inspeção da unidade em português encontrou quatro habilidades, vídeos/artigos e exercícios sobre Hardy–Weinberg, seleção e deriva genética, além de teste da unidade; acesso sem solicitação de login na revisão. Acessibilidade não foi auditada formalmente; manter somente link, sem copiar conteúdo, e não inferir licença de reutilização a partir do acesso gratuito. Revisão 2026-10-08."
+      },
+      "reason": "A página foi inspecionada além do HTTP: unidade em português com conteúdos e atividades diretamente pertinentes a evolução e genética de populações. A aprovação é delimitada a suplemento e não concede direitos de reprodução.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/biology/her/heredity-and-genetics",
+          "detail": "Unidade em português inspecionada no navegador: quatro habilidades, vídeos/artigos sobre evolução e genética de populações, Hardy–Weinberg, seleção e deriva genética, exercícios e teste de unidade."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/published-learning-resources-audit-2026-10-08.jsonl",
+          "detail": "Registro resource_id 248 preserva auditoria de acesso/licença; a inspeção interativa complementar registrada no editorial_note confirmou a unidade e seus componentes pedagógicos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": { "resource_id": 248, "topic_id": 2491, "curriculum_topic_id": null },
+      "expected": { "review_status": "review", "relevance_status": "relevant" },
+      "changes": {
+        "review_status": "published",
+        "accessibility_status": "unknown",
+        "review_note": "Relação aprovada com o tópico canônico Genética e evolução (topics.id=2491). A unidade trata evolução, genética de populações, Hardy–Weinberg, seleção e deriva; é suplemento, não cobertura integral. Acessibilidade permanece não auditada formalmente; link-only e sem alegação de reutilização."
+      },
+      "reason": "O escopo substantivo da unidade corresponde ao tópico canônico; relevância já registrada como relevant. Acessibilidade é desconhecida, sem impedir suplemento, e fica explicitamente sinalizada.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/biology/her/heredity-and-genetics",
+          "detail": "Unidade em português inspecionada com material e exercícios sobre evolução e genética de populações, Hardy–Weinberg, seleção e deriva genética."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/published-learning-resources-audit-2026-10-08.jsonl",
+          "detail": "Registro resource_id 248 mantém a checagem de acesso e a restrição de não presumir direitos a partir de acesso gratuito."
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    { "table": "resources", "key": { "id": 218 }, "reason": "Q1 exige símbolos de heredograma ausentes da representação acessível; conteúdo incompleto para prática independente." },
+    { "table": "resources", "key": { "id": 219 }, "reason": "Q1 depende de circuito cuja descrição acessível não informa a topologia necessária para verificar a resposta." },
+    { "table": "resources", "key": { "id": 220 }, "reason": "Classificação de Q1(c) omite estados físicos; questão fica subdeterminada, e Q4 ainda tem notação cuja renderização não foi reconciliada." },
+    { "table": "resources", "key": { "id": 223 }, "reason": "Q6(i) contém reação incorreta de cobre com ácido sulfúrico e Q6(j) tem subscrito de bromo não verificável." },
+    { "table": "resources", "key": { "id": 224 }, "reason": "Prévia não permitiu revisar enunciados e gabaritos; sem confirmação substantiva do conteúdo." },
+    { "table": "resources", "key": { "id": 225 }, "reason": "Explicação de Q1 erra o intercepto de c (c=f(0), intercepto em y); gráfico não tem alternativa textual adequada." },
+    { "table": "resources", "key": { "id": 227 }, "reason": "Índice amplo de História do Brasil sem revisão direta das listas/itens; prova de carregamento não basta para aprovação." },
+    { "table": "resources", "key": { "id": 228 }, "reason": "Índice de Literatura sem revisão direta de conteúdo/gabaritos nesta rodada." },
+    { "table": "resources", "key": { "id": 229 }, "reason": "Sete estímulos dependem de imagens sem transcrição completa; Q14 simplifica poema e Q15 traz glossário histórico impreciso." },
+    { "table": "resources", "key": { "id": 230 }, "reason": "Lista de Química básica não teve questões e explicações revisadas diretamente nesta rodada." },
+    { "table": "resources", "key": { "id": 231 }, "reason": "Hub de Biologia sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 232 }, "reason": "Hub de Física sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 233 }, "reason": "Hub de Matemática sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 234 }, "reason": "Artigo de interpretação não teve os exercícios/gabaritos revisados diretamente nesta rodada." },
+    { "table": "resources", "key": { "id": 235 }, "reason": "Hub de História sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 236 }, "reason": "Hub de Geografia sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 237 }, "reason": "Hub de Inglês sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 238 }, "reason": "Hub de Filosofia sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 239 }, "reason": "Hub de Sociologia sem inspeção substantiva das listas; falta identificar conteúdo e escopo efetivamente disponíveis." },
+    { "table": "resources", "key": { "id": 240 }, "reason": "Q19 tem conflito no enquadramento do Estatuto do Índio de 1973 e Q14 depende de imagem sem descrição suficiente." },
+    { "table": "resources", "key": { "id": 247 }, "reason": "O registro local de inspeção encontrou Client Challenge e não conteúdo curricular; o título/descrição da base não substitui leitura verificável da unidade." },
+    { "table": "resources", "key": { "id": 249 }, "reason": "O índice de Geometria Analítica não pôde ser lido na inspeção; não há evidência primária acessível suficiente para validar escopo e unidade." },
+    { "table": "resources", "key": { "id": 250 }, "reason": "Hub geral de Física retornou Client Challenge na auditoria; falta inspeção de unidades concretas antes de aprová-lo como referência." },
+    { "table": "resources", "key": { "id": 251 }, "reason": "Página de carga/campo/potencial não expôs conteúdo na auditoria, que registrou Client Challenge; título sozinho não valida o material." },
+    { "table": "resources", "key": { "id": 252 }, "reason": "Página de equilíbrio químico não expôs conteúdo na auditoria, que registrou Client Challenge; título sozinho não valida os conceitos/atividades." },
+    { "table": "resources", "key": { "id": 253 }, "reason": "Página de reações/estequiometria não expôs conteúdo na auditoria, que registrou Client Challenge; título sozinho não valida os conceitos/atividades." }
+  ],
+  "summary": "Lote restrito aos recursos em revisão 218–240 e Khan Academy 247–253. Duas aprovações limitadas: recurso 221 (prática complementar com limitações de imagens) e 248 (unidade suplementar de genética/evolução, link-only). Relações resource_topics aprovadas apenas para topic_id canônico 2481 e 2491. Demais candidatos permanecem bloqueados por erro substantivo, dependência visual sem descrição ou falta de inspeção do conteúdo; recursos já publicados não foram tocados. SQLite não foi alterado."
+}

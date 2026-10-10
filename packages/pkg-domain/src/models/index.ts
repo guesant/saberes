@@ -17,6 +17,7 @@ export * from "./calculation-rounding.model";
 export * from "./calculation-rule-version.model";
 export * from "./catalog-card.interface";
 export * from "./catalog-filters.interface";
+export * from "./training-scope.interface";
 export * from "./content-key.type";
 export * from "./create-content-key.function";
 export * from "./create-content-reference.function";

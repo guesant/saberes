@@ -1,0 +1,45 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:13:55.466157+00:00",
+  "database_before_sha256": "ff2bc7ec0c692e90daa294f28f96c976d0684f79f5f4b8c15a8d6d811948f108",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 332,
+        "canonical_topic_id": 2479
+      },
+      "expected": {
+        "question_id": 332,
+        "canonical_topic_id": 2479,
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "source_document_id": 44,
+        "source_page": 17,
+        "source_excerpt": "Questão 44 do caderno Q/X: o enunciado define f(g(x)) e o gráfico marca (1,5), sustentando o vínculo primário com Funções e gráficos.",
+        "review_status": "published"
+      },
+      "reason": "A questão 332 exige composição de funções e leitura de gráfico; o vínculo primário com o tópico publicado Funções e gráficos (canonical_topic_id 2479) é sustentado diretamente pelo enunciado e pela figura. Aprovar somente o vínculo que está em review; não alterar outras relações.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "Questão 44, PDF p. 17 (fólio 15): enunciado apresenta f(g(x)) e gráfico com ponto (1,5), evidência direta de composição de funções e interpretação gráfica."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Prova comentada oficial, PDF p. 47 (fólio 46): objetivo explicitamente trata de composição de funções e análise gráfica; solução oficial confirma D."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T201355475813Z.sqlite",
+  "database_after_sha256": "5cf62290c2ad22d73a115cfbdd0f7ad7361267156a1cd5572d723f47e9d14add"
+}

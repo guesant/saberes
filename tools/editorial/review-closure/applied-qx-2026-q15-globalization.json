@@ -1,0 +1,46 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T00:49:10.306552+00:00",
+  "database_before_sha256": "db6815071893944e913b6dfd9db6863d5adb59027de45ad57660fdd48554a88a",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 303,
+        "canonical_topic_id": 2509
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 303,
+        "canonical_topic_id": 2509,
+        "relation_type": "secondary",
+        "confidence": 0.9,
+        "source_document_id": 44,
+        "source_page": 6,
+        "source_excerpt": "O enunciado relaciona a circulação global de alimentos ultraprocessados à homogeneização dos hábitos alimentares.",
+        "review_status": "published"
+      },
+      "reason": "A relação é secundária e editorial: a questão trata diretamente da circulação globalizada de produtos alimentares e da homogeneização dos hábitos, além do enquadramento geográfico já registrado. Não é uma classificação oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=6",
+          "detail": "Prova oficial da primeira fase de 2026, caderno Q/X, questão 15. O enunciado menciona alimentos ultraprocessados globalizados, circulação por longas distâncias e homogeneização dos hábitos alimentares."
+        },
+        {
+          "locator": "sqlite://question_occurrences/303",
+          "detail": "A ocorrência confirma questão canônica 303, prova da primeira fase de 2026, número 15, documento oficial 44 e página física indicada como 6."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2509",
+          "detail": "O tópico canônico 2509 é ‘Globalização, economia e trabalho’; a associação foi registrada como secundária, não principal."
+        }
+      ],
+      "action": "insert"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T004910316901Z.sqlite",
+  "database_after_sha256": "47a16d38085f93edb43ea16ca45674e89269b54a7a8a15f9aeb72fc9b339a93d"
+}

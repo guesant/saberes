@@ -11,19 +11,14 @@ export function getNextCourseItemHref(input: GetNextCourseItemHrefInput): string
       attempts: input.attempts,
       item,
       lessonProgress: input.lessonProgress,
+      assessmentItemsById: input.assessmentItemsById,
     });
 
-    const href = getCourseItemHref(item);
+    const href = getCourseItemHref(item, input.courseSlug);
 
     if (!isCompleted && href) {
       return href;
     }
-  }
-
-  const firstItem = items[0];
-
-  if (firstItem) {
-    return getCourseItemHref(firstItem);
   }
 
   return null;

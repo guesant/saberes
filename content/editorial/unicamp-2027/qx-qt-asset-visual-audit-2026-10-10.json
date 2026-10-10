@@ -1,0 +1,299 @@
+{
+  "format": "qx-qt-asset-visual-audit/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "booklets": [
+      {
+        "key": "QX-2026",
+        "paper_version_id": 5,
+        "source_pdf": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf",
+        "pdf_page_range_reviewed": [3, 26],
+        "unique_question_assets_reviewed": 53,
+        "question_asset_associations": 59
+      },
+      {
+        "key": "QT-2027-simulation",
+        "paper_version_id": 37,
+        "source_pdf": ".local/content/staging/unicamp-2027-v1/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+        "pdf_page_range_reviewed": [4, 21],
+        "unique_question_assets_reviewed": 18,
+        "question_asset_associations": 67
+      }
+    ],
+    "database": ".local/content/content.sqlite",
+    "database_access": "read-only",
+    "files_modified_other_than_this_audit": false
+  },
+  "method": {
+    "visual_review": "Reviewed contact sheets of all unique QX image assets and QT page images, then opened representative assets and source-page images at high resolution. Checked that figure content corresponds to the labeled question and whether a question-level attachment contains unrelated neighboring questions.",
+    "source_comparison": "Compared stored page images with the corresponding official PDF page layout. The page images visibly contain the printed page number, multiple question headings, body text and alternatives; this distinguishes them from individual figure crops.",
+    "limitations": [
+      "This is an asset-scope and visual correspondence audit, not a complete transcription/OCR audit of all 144 questions or answer keys.",
+      "The contact-sheet review can identify wrong-question, page-level and obvious legibility issues; it does not certify every small label at full reading size."
+    ],
+    "tooling_note": "Docling was not available as a local executable during this review; no extraction was rerun."
+  },
+  "summary": {
+    "visual_correspondence_of_question_specific_assets": "No obvious wrong-question assignment was seen in the reviewed QX question-specific figures and single-question image assets.",
+    "confirmed_scope_exceptions": 21,
+    "qx_page_assets_reused_across_multiple_questions": 3,
+    "qt_page_assets_reused_across_multiple_questions": 18,
+    "confirmed_missing_or_truncated_figure": [],
+    "database_or_source_files_changed": false,
+    "recommended_handling": "Keep full-page facsimiles as document/page references rather than question_assets. For question display, retain only question-specific figure/image assets; do not delete source page images."
+  },
+  "exceptions": [
+    {
+      "booklet": "QX-2026",
+      "asset_id": 265,
+      "asset_path": "official-pdfs/2026/page-images/qx-page-03.png",
+      "image_dimensions_px": [1241, 1754],
+      "pdf_page": 3,
+      "printed_page": 1,
+      "question_numbers_linked": [1, 2, 3],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The image is a complete portrait page: it shows the Q1 heading and material, Q2 text and three film frames, and the beginning of Q3 with its comic strip. The same Q1–3 page is linked to all three question records. Individual Q1–3 image assets are also present, so displaying the page asset per question duplicates neighboring content.",
+      "action": "Remove this page image from question-level asset associations while preserving the page image as a source-document page reference."
+    },
+    {
+      "booklet": "QX-2026",
+      "asset_id": 266,
+      "asset_path": "official-pdfs/2026/page-images/qx-page-04.png",
+      "image_dimensions_px": [1241, 1754],
+      "pdf_page": 4,
+      "printed_page": 2,
+      "question_numbers_linked": [4, 5, 6, 7],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The image is a complete printed page containing the end of Q5, Q6 and Q7, with unrelated question text and alternatives in addition to figures. It is linked to each of Q4–7; single-question image assets exist for Q4–7.",
+      "action": "Remove this page image from question-level asset associations while preserving the page image as a source-document page reference."
+    },
+    {
+      "booklet": "QX-2026",
+      "asset_id": 267,
+      "asset_path": "official-pdfs/2026/page-images/qx-page-05.png",
+      "image_dimensions_px": [1241, 1754],
+      "pdf_page": 5,
+      "printed_page": 3,
+      "question_numbers_linked": [8, 9],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The image is a complete printed page containing Q8, the shared text for Q9–11, Q9 and the beginning of Q10, including unrelated text and alternatives. The page image is linked to Q8 and Q9; question-specific images for Q8 and Q9 also exist.",
+      "action": "Remove this page image from question-level asset associations while preserving the page image as a source-document page reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 242,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-04.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 4,
+      "printed_page": 2,
+      "question_numbers_linked": [6, 7, 8],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "Full portrait page image, visibly containing multiple question blocks (Q6–8), page typography and alternatives; one asset is associated with all three question records.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 243,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-05.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 5,
+      "printed_page": 3,
+      "question_numbers_linked": [9, 10, 11, 12, 13, 14],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The full page contains six question numbers and both the graph on water density and the electrical circuit, plus surrounding text and alternatives; linked to all Q9–14.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 244,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-06.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 6,
+      "printed_page": 4,
+      "question_numbers_linked": [15, 16],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The full page includes two question blocks, including a map and a table, and their alternatives; linked to both Q15 and Q16.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 245,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-07.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 7,
+      "printed_page": 5,
+      "question_numbers_linked": [17, 18, 19, 20],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The image is a complete page with Q17–20 and multiple unrelated text/choice blocks; linked to all four questions.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 246,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-08.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 8,
+      "printed_page": 6,
+      "question_numbers_linked": [21, 22, 23],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The complete page contains Q21–23 and the page's full text/alternatives; the same page image is linked to all three questions.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 247,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-09.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 9,
+      "printed_page": 7,
+      "question_numbers_linked": [24, 25, 26, 27],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The complete page contains four numbered question blocks and surrounding alternatives, rather than an isolated figure; linked to Q24–27.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 248,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-10.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 10,
+      "printed_page": 8,
+      "question_numbers_linked": [28, 29, 30],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The page image includes Q28–30 and multiple text/alternative regions; it is reused across all three question records.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 249,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-11.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 11,
+      "printed_page": 9,
+      "question_numbers_linked": [31, 32, 33],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The complete printed page contains Q31–33 and their text/alternatives; one full-page image is attached to all three questions.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 250,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-12.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 12,
+      "printed_page": 10,
+      "question_numbers_linked": [34, 35, 36, 37],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "Full page with Q34–37, including their neighboring text and alternatives; the same page image is linked to all four questions.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 251,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-13.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 13,
+      "printed_page": 11,
+      "question_numbers_linked": [38, 39, 40, 41],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The complete page contains four numbered questions and their alternatives; Q40's meme and unrelated neighboring content share this page image linked to Q38–41.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 252,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-14.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 14,
+      "printed_page": 12,
+      "question_numbers_linked": [42, 43, 44, 45, 46, 47, 48],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The entire page includes Q42–48, textual prompts, alternatives, and the diagram for Q45; this page is linked as an asset to all seven questions.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 253,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-15.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 15,
+      "printed_page": 13,
+      "question_numbers_linked": [49, 50, 51, 52, 53, 54],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The image shows the full page with six question blocks and alternatives and is reused for Q49–54.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 254,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-16.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 16,
+      "printed_page": 14,
+      "question_numbers_linked": [55, 56],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The complete page contains both Q55 and Q56 and their text/alternatives; the same page image is linked to each.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 255,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-17.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 17,
+      "printed_page": 15,
+      "question_numbers_linked": [57, 58, 59],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The complete page includes Q57–59, including the three-panel image in Q59 and neighboring question text/alternatives; it is attached to all three questions.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 256,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-18.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 18,
+      "printed_page": 16,
+      "question_numbers_linked": [60, 61, 62, 63],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The whole printed page contains four question blocks and unrelated alternatives, and is linked to Q60–63.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 257,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-19.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 19,
+      "printed_page": 17,
+      "question_numbers_linked": [64, 65, 66, 67],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The image is a full page containing Q64–67 and their surrounding text/alternatives; linked to all four records.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 258,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-20.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 20,
+      "printed_page": 18,
+      "question_numbers_linked": [68, 69, 70],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "Full page showing questions 68–70, including the two charts in Q68, plus adjacent prompt and options; the same page image is linked to all three questions.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    },
+    {
+      "booklet": "QT-2027-simulation",
+      "asset_id": 259,
+      "asset_path": "official-pdfs/2027-simulation/page-images/qt-page-21.png",
+      "image_dimensions_px": [1191, 1684],
+      "pdf_page": 21,
+      "printed_page": 19,
+      "question_numbers_linked": [71, 72],
+      "issue": "whole_page_image_associated_as_question_asset",
+      "evidence": "The entire final question page, including Q71–72 and the four graphical alternatives for Q72, is linked to both questions as one asset.",
+      "action": "Replace question-level page-image associations with appropriate question-specific figures/crops where needed; retain this image only as a page/source reference."
+    }
+  ]
+}

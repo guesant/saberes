@@ -1,0 +1,738 @@
+{
+  "version": 1,
+  "revisions": [
+    {
+      "curriculum_topic_id": 2469,
+      "editorial_version": "1.0.2",
+      "review_status": "review",
+      "sections": [
+        {"type": "example", "content": "Leia: “A cidade inaugurou mais uma ciclovia; agora só falta os carros descobrirem que ela existe.” A primeira oração informa uma inauguração. A personificação dos carros e a expressão “agora só falta” constroem uma ironia, mas, sem contexto adicional, não permitem concluir se a crítica é à baixa adesão, à falta de visibilidade ou à segurança. A leitura responsável identifica o efeito de crítica e mantém em aberto seu alvo específico."},
+        {"type": "summary", "content": "Marque conectivos, referentes e palavras avaliativas. Separe informação explícita de inferência e justifique cada inferência com pistas linguísticas e contextuais.\n\n**Autochecagem**\n\nA frase sobre carros “descobrirem” a ciclovia prova desrespeito dos motoristas? Não; sugere ironia, mas o alvo exato depende de contexto não fornecido."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2471,
+      "editorial_version": "1.0.2",
+      "review_status": "review",
+      "sections": [
+        {"type": "example", "content": "Compare “Apenas os estudantes leram o relatório” e “Os estudantes leram apenas o relatório”. Na primeira, “apenas” restringe quem leu; na segunda, restringe o que foi lido. O deslocamento do advérbio muda o foco e a interpretação, embora as palavras sejam quase as mesmas. Para analisar ordem e sentido, localize o constituinte associado ao operador e considere o contexto."},
+        {"type": "summary", "content": "Localize núcleos e dependências, acompanhe concordância e interprete conectivos pelo contexto. A ordem pode destacar elementos diferentes: explicite o escopo de palavras como “apenas” e explique o efeito.\n\n**Autochecagem**\n\nEm “Apenas os estudantes leram o relatório”, o que é restringido? Quem leu: somente os estudantes."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "editorial_version": "1.0.2",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "content": "A leitura literária combina atenção à linguagem e interpretação histórica. Em prosa, observe narrador, focalização, personagens, tempo, espaço e conflito; narrador não é automaticamente o autor. Na poesia, examine voz lírica, imagens, ritmo, sonoridade, versos e quebras. Metro descreve a organização das sílabas poéticas, que não coincide necessariamente com a contagem gramatical; pausas e acentos também produzem ritmo. No teatro, falas, rubricas e conflito cênico constroem sentido: atos organizam grandes partes da ação, cenas marcam recortes da representação e diálogos fazem avançar relações e conflitos. Gêneros se misturam e convenções mudam ao longo do tempo. Para obras da lista anual, a leitura integral permite reconhecer recorrências, contradições e escolhas formais.\n\n**Erros comuns**\n\nNão atribua automaticamente opiniões do narrador ao autor. Não use época literária como molde que determina cada passagem. Evite classificar poema apenas pelo número de versos ou contar sílabas como em prosa. Em teatro, não confunda rubrica (indicação cênica) com fala de personagem. Sustente interpretações em evidências textuais e na forma da obra."},
+        {"type": "example", "content": "Em um poema, a repetição de “volta” no fim de três versos cria um refrão; ao escandir um verso, contam-se sílabas poéticas até a última sílaba tônica, observando sinalefa e pausas, sem supor que a grafia determina sozinha a pronúncia. Em uma peça, uma rubrica como “[afasta-se da porta]” orienta a ação sem ser pronunciada; a mudança de cena pode alterar espaço ou foco, enquanto o diálogo explicita ou oculta o conflito. Em ambos os gêneros, explique o efeito com base no trecho, não por fórmula automática."},
+        {"type": "summary", "content": "Pergunte quem fala, como a obra organiza a experiência e que tensões formais ou históricas aparecem. Na poesia, observe metro, ritmo, som e imagem; no teatro, diferencie ato, cena, diálogo e rubrica. Leia trechos como parte da obra e sustente a interpretação em evidências."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 18,
+      "sections": [
+        {"type": "theory", "content": "Os naturais servem à contagem, os inteiros incluem negativos, os racionais são quocientes de inteiros com denominador não nulo e os reais também incluem irracionais como √2; cada conjunto amplia o anterior. Conjuntos podem ser descritos por propriedades, listados ou representados em diagramas. A⊂B significa que todo elemento de A pertence a B; união reúne elementos de A ou B, e interseção reúne os que pertencem a ambos. Operações obedecem a propriedades, mas divisão por zero não existe. Divisibilidade, fatoração, máximo divisor comum e mínimo múltiplo comum ajudam a simplificar frações e organizar ciclos.\n\nRazão compara grandezas; proporção iguala razões. Em proporcionalidade direta, y/x é constante; na inversa, xy é constante, desde que o modelo e as unidades sustentem essa relação. Porcentagem é razão por cem. Sequências podem ser recursivas ou definidas por termo geral: numa PA soma-se a razão d a cada passo; numa PG multiplica-se pela razão q. Juros simples incidem sobre o capital inicial, enquanto compostos incidem sobre o saldo acumulado.\n\n**Erros comuns**\n\nNão some porcentagens sucessivas como se tivessem a mesma base. Não confunda união com interseção, nem proporcionalidade inversa com uma simples diminuição simultânea. Ao dividir frações, multiplique pela inversa apenas com denominador não nulo. Em progressões, confira vários termos e distinga diferença constante de razão constante. Não arredonde no meio do cálculo sem necessidade."},
+        {"type": "example", "content": "Se A={1,2,3} e B={3,4}, então A∪B={1,2,3,4} e A∩B={3}. Para uma escala de receita em que 3 cadernos custam R$ 24, o preço unitário é R$ 8 e 5 custam R$ 40, se não houver taxa fixa ou desconto. Já um produto de R$ 200 com desconto de 15% recebe abatimento de R$ 30 e custa R$ 170; um aumento posterior de 15% é calculado sobre R$ 170 e resulta R$ 195,50. A base percentual mudou."},
+        {"type": "summary", "content": "Identifique o conjunto e as restrições; represente conjuntos e operações com clareza; declare a relação entre grandezas antes de usar proporção. Em sequências, verifique se a regra é aditiva ou multiplicativa. Em percentuais, explicite a base e confira unidades.\n\n**Autochecagem**\n\nPara A={1,2,3} e B={3,4}, A∩B={3} e A∪B={1,2,3,4}."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "Uma função associa a cada entrada permitida exatamente uma saída. Em f:D→C, D é o domínio, C o contradomínio e a imagem contém os valores de C efetivamente assumidos. Uma reta vertical intercepta o gráfico de uma função de x no máximo uma vez. Os zeros são os pontos em que o gráfico intersecta o eixo x; pode apenas tocar esse eixo, como x² em x=0. O intercepto vertical é (0,f(0)) somente quando 0 pertence ao domínio.\n\nFunções constantes e afins têm gráficos horizontais ou retos; em ax²+bx+c, o gráfico é uma parábola, com eixo x=−b/(2a) e vértice que representa mínimo se a>0 ou máximo se a<0. Modelos k/x (k≠0) têm domínio x≠0 e hipérboles; |x| forma um “V”. Somar k a f desloca o gráfico verticalmente; trocar x por x−h desloca-o horizontalmente; −f reflete-o no eixo x. Operações entre funções exigem domínios compatíveis; em f/g, também g(x)≠0. Na composição (f∘g)(x), aplica-se g primeiro; uma inversa desfaz a correspondência quando f é injetiva no domínio escolhido.\n\nTaxa média de variação entre a e b é [f(b)−f(a)]/(b−a), com a≠b. Tabelas, fórmulas e gráficos destacam aspectos diferentes do mesmo modelo. Associação observada não prova causalidade.\n\n**Erros comuns**\n\nNão confunda f(x) com f vezes x nem inverta a ordem da composição. Verifique domínio antes de calcular f(0), raiz, logaritmo ou quociente. Não diga que o gráfico sempre “cruza” o eixo x: zeros podem ser pontos de tangência. Restrinja o domínio pelo contexto e não extrapole dados sem hipótese."},
+        {"type": "example", "content": "Considere q(x)=(x−2)²−1. O vértice é (2,−1), a parábola abre para cima e os zeros satisfazem (x−2)²=1, logo x=1 e x=3; o gráfico intersecta o eixo x em ambos. A função |x| é o gráfico em V de x, refletido para cima quando x<0. Para f(x)=2x+3, resolver y=2x+3 para x dá f⁻¹(y)=(y−3)/2; portanto f⁻¹(x)=(x−3)/2. Para k/x, é obrigatório excluir x=0."},
+        {"type": "summary", "content": "Antes de calcular, declare domínio, significado das variáveis, unidades e escala. Leia zeros como interseções (inclusive tangências), vértices e intervalos; reconheça parábola, k/x e |x|. Para transformações, identifique o que muda em x ou em f(x); para inversas, verifique se a função é invertível no domínio adotado. Em composição, calcule a função interna primeiro."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2477,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "Um polinômio é uma soma finita de potências inteiras não negativas da variável com coeficientes. Podem-se somar termos semelhantes, multiplicar por distributividade e dividir por outro polinômio obtendo quociente e resto de grau menor que o divisor. Para P(x), o resto da divisão por x−a é P(a); assim, P(a)=0 implica fator (x−a). Briot–Ruffini organiza essa divisão quando o divisor é linear. Uma raiz pode ter multiplicidade maior que um; multiplicidade par costuma tocar o eixo sem mudar o sinal, enquanto multiplicidade ímpar muda o sinal.\n\nNas relações de Girard, para ax²+bx+c, a soma das raízes é −b/a e o produto é c/a. Em equações quadráticas, o discriminante indica raízes reais e a parábola abre para cima se a>0, para baixo se a<0. Inequações pedem intervalos: marque raízes e restrições e teste o sinal em cada intervalo. Ao multiplicar ou dividir por número negativo, inverta o sentido da desigualdade.\n\n**Erros comuns**\n\nNão divida por expressão variável sem tratar zeros e sinais. Uma raiz pode violar o domínio da expressão original. Não confunda multiplicidade com número de raízes distintas; discriminante zero produz raiz dupla na quadrática. Briot–Ruffini não substitui a verificação do resto."},
+        {"type": "example", "content": "Se P(x)=x³−2x²−5x+6, então P(1)=0 e (x−1) é fator. A divisão sintética fornece x²−x−6=(x−3)(x+2), logo as raízes são 1, 3 e −2. A soma é 2=−(−2)/1 e o produto é −6=6/1, conferindo Girard. Já x²−5x+6<0 tem raízes 2 e 3; como o coeficiente líder é positivo, a expressão é negativa apenas entre elas: 2<x<3."},
+        {"type": "summary", "content": "Organize operações polinomiais, teste raízes pelo teorema do resto e use divisão/Briot–Ruffini para fatorar. Registre multiplicidades e confira soma/produto por Girard. Em inequações, use raízes e restrições para dividir a reta em intervalos e testar sinais."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2478,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "O princípio multiplicativo conta escolhas sucessivas; arranjos consideram ordem, combinações não e permutações ordenam todos os elementos. O princípio da casa dos pombos garante que, ao distribuir n+1 objetos em n caixas, ao menos uma caixa contém dois ou mais. O binômio de Newton expande (a+b)^n com coeficientes binomiais: o termo geral escolhe k fatores b e n−k fatores a. Inclusão-exclusão evita dupla contagem: |A∪B|=|A|+|B|−|A∩B|.\n\nProbabilidade clássica é casos favoráveis/casos possíveis quando há equiprobabilidade. P(A|B)=P(A∩B)/P(B), com P(B)>0; a condição atualiza o espaço amostral. Eventos independentes satisfazem P(A∩B)=P(A)P(B), mas isso deve ser justificado. Se A e B forem disjuntos, a interseção é zero.\n\n**Erros comuns**\n\nNão use combinação se ordem altera o resultado, nem independência sem evidência. Em “A ou B”, subtraia a interseção. A razão simples entre contagens só vale em resultados equiprováveis. A casa dos pombos prova existência, não identifica necessariamente qual caixa tem mais objetos."},
+        {"type": "example", "content": "Num dado justo, A={resultado par}={2,4,6} e B={resultado maior que 4}={5,6}. Logo P(A∪B)=3/6+2/6−1/6=4/6=2/3. Sabendo que saiu número par, o espaço possível é {2,4,6}; dois dos três resultados são maiores que 3, então essa probabilidade condicional é 2/3. Para o binômio, (x+2)³=x³+6x²+12x+8. Ao distribuir 13 livros em 12 caixas, pelo menos uma recebe dois livros."},
+        {"type": "summary", "content": "Defina resultados, ordem e hipótese de equiprobabilidade. Use inclusão-exclusão para eventos que se sobrepõem; em condicionais, atualize o espaço amostral; só use produto sob independência. A casa dos pombos dá um limite de existência, e o binômio fornece coeficientes de expansões."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2479,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "Um sistema linear reúne equações satisfeitas simultaneamente. Eliminação combina equações para reduzir incógnitas; geometricamente, duas retas podem cruzar-se numa solução, ser paralelas sem solução ou coincidir com infinitas soluções. Uma matriz organiza dados em linhas e colunas. Soma e multiplicação por escalar exigem dimensões compatíveis; transpor troca linhas por colunas. O produto AB só é definido quando o número de colunas de A iguala o número de linhas de B, e em geral AB≠BA.\n\nPara matriz quadrada 2×2, det([[a,b],[c,d]])=ad−bc. Determinante não nulo equivale a matriz inversível e, para sistema quadrado associado, solução única; se for zero, ainda é preciso verificar compatibilidade. Quando A é inversível, Ax=b implica x=A⁻¹b. Em aplicações, quantidades podem ter restrições adicionais, como não negatividade ou valores inteiros.\n\n**Erros comuns**\n\nOperações de linha aplicam-se à linha toda, inclusive termos independentes. Matriz quadrada não garante solução única; confira posto/determinante e compatibilidade. Não troque AB por BA nem some matrizes de dimensões diferentes. Verifique que as unidades e as incógnitas correspondam ao enunciado."},
+        {"type": "example", "content": "Se A=[[1,2],[0,1]] e B=[[2,0],[3,1]], então AB=[[8,2],[3,1]], pois cada entrada é produto linha-coluna. A transposta de A é Aᵀ=[[1,0],[2,1]]. Como det(A)=1, A é inversível; sua inversa é [[1,−2],[0,1]], e A·A⁻¹=I. Para a cantina, 2s+j=19 e s+2j=17 dão j=5 e s=7; substituir nas duas equações confirma a solução."},
+        {"type": "summary", "content": "Modele o sistema, resolva preservando equivalência e interprete a solução. Em matrizes, confira dimensões antes de somar ou multiplicar; diferencie transposta de inversa e calcule o determinante. Verifique uma inversa pelo produto com a identidade e teste a solução no sistema original."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2480,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "Geometria plana relaciona ângulos, comprimentos, perímetros e áreas. Triângulos congruentes têm lados e ângulos correspondentes iguais; critérios usuais incluem lado-lado-lado, lado-ângulo-lado e ângulo-lado-ângulo. Em triângulo retângulo, Pitágoras vale para hipotenusa c e catetos a,b: c²=a²+b²; com altura à hipotenusa, surgem relações entre projeções e catetos. Triângulos semelhantes têm ângulos correspondentes iguais e lados proporcionais.\n\nParalelogramos têm lados opostos paralelos; retângulos têm quatro ângulos retos; losangos têm quatro lados iguais; quadrados reúnem as duas propriedades. Trapézios têm ao menos um par de lados paralelos segundo a convenção adotada. Em polígono de n lados, a soma dos ângulos internos é (n−2)·180°. Num regular, cada ângulo externo mede 360°/n. Figuras inscritas têm vértices na circunferência; circunscritas tocam seus lados, como um círculo inscrito tangente aos lados do polígono. Comprimento da circunferência é 2πr e área do círculo é πr².\n\n**Erros comuns**\n\nPitágoras só vale em triângulo retângulo; congruência não é apenas semelhança. Desenhos podem não estar em escala. Em figuras compostas, área mede superfície e perímetro mede contorno. Ao comparar polígonos inscritos/circunscritos, verifique qual objeto toca vértices e qual toca lados."},
+        {"type": "example", "content": "Num triângulo retângulo 3-4-5, a altura relativa à hipotenusa de 5 pode ser obtida pela igualdade de áreas: (3·4)/2=(5·h)/2, então h=2,4. Para um hexágono regular, cada ângulo externo é 360°/6=60° e a soma interna é 4·180°=720°. Se dois triângulos têm dois lados e o ângulo compreendido iguais, o critério LAL garante congruência, sem depender da aparência do desenho."},
+        {"type": "summary", "content": "Identifique correspondências e critérios antes de calcular. Diferencie congruência de semelhança, use relações métricas somente sob suas hipóteses e acompanhe unidades. Em polígonos regulares, use simetria e ângulos; em inscrição/circunscrição, diga explicitamente quais vértices ou lados tocam a circunferência."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "Sólidos ocupam volume e têm superfícies planas, curvas ou ambas. Em prisma reto, área lateral é perímetro da base vezes altura; em cilindro, A_l=2πrh e A_total=2πr(h+r). Em cone reto, a geratriz g é a altura inclinada da lateral, A_l=πrg e A_total=πr(g+r). Volumes: prisma/cilindro V=A_bh; pirâmide/cone V=A_bh/3; esfera V=4πr³/3 e A=4πr². Para tronco de cone, A_l=π(R+r)g e V=πh(R²+Rr+r²)/3.\n\nReta paralela a plano não o intercepta; reta perpendicular forma ângulo reto com toda direção do plano através do ponto de interseção. Planos paralelos não se encontram; perpendiculares formam diedro de 90°. Desenhos e planificações ajudam a identificar faces, mas devem preservar incidências. Unidades quadradas medem área, cúbicas medem volume; 1 L=1 dm³.\n\n**Erros comuns**\n\nUse altura perpendicular no volume e geratriz apenas em áreas laterais de cones/troncos. Some superfícies externas uma vez. Não confunda área da base com perímetro. Confira se o desenho representa uma projeção e se segmentos realmente se encontram."},
+        {"type": "example", "content": "Um cilindro de r=3 cm e h=10 cm tem V=90π cm³, área lateral 60π cm² e área total 78π cm². Um tronco de cone com R=4 cm, r=1 cm, h=4 cm e geratriz g=5 cm tem A_l=π(4+1)·5=25π cm² e V=π·4(16+4+1)/3=28π cm³. A checagem g²=h²+(R−r)² confirma 25=16+9."},
+        {"type": "summary", "content": "Desenhe o sólido e identifique base, altura perpendicular, raio e geratriz. Separe área lateral, total e volume; escolha a fórmula pela forma e confira dimensões. Em geometria de posição, declare quais objetos são paralelos ou perpendiculares e o que o desenho permite concluir."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2482,
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "Num triângulo retângulo, sen θ=oposto/hipotenusa, cos θ=adjacente/hipotenusa e tg θ=oposto/adjacente. No círculo unitário, (cos θ,sen θ) dá as coordenadas do ponto; sinais dependem do quadrante. Uma volta é 360°=2π rad e sen²θ+cos²θ=1. Para qualquer triângulo, a lei dos senos relaciona lados aos ângulos opostos; a lei dos cossenos generaliza Pitágoras.\n\nSeno e cosseno são periódicos: sen(x+2π)=sen x, cos(x+2π)=cos x. Deslocar x por φ desloca o gráfico horizontalmente; usar kx altera período para 2π/|k|; somar constante desloca verticalmente e multiplicar por a altera escala/reflete se a<0. Identidades como sen(x+π/2)=cos x ajudam a transformar expressões. Para resolver equações, encontre ângulos de referência e quadrantes; inequações correspondem a arcos em que a função cumpre a condição. Respeite intervalo e unidade angular.\n\n**Erros comuns**\n\nNão retenha apenas a solução principal se há outras no intervalo. Confirme graus ou radianos, quadrante, periodicidade e domínio; não aplique lei dos senos/cossenos sem identificar lados e ângulos correspondentes."},
+        {"type": "example", "content": "Resolva sen x=1/2 em [0,2π). O ângulo de referência é π/6; o seno é positivo nos quadrantes I e II, então x=π/6 ou 5π/6. Para cos x≥0 no mesmo intervalo, o círculo unitário dá x∈[0,π/2]∪[3π/2,2π), lembrando que 2π foi excluído pelo intervalo. A transformação sen(2x) comprime o período de 2π para π."},
+        {"type": "summary", "content": "Desenhe e marque o ângulo; escolha relações de triângulo ou círculo. Para equações/inequações, determine período, quadrantes e intervalo, liste todas as soluções e verifique extremos incluídos. Em transformações, acompanhe amplitude, período, deslocamentos e reflexões."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2483,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 18,
+      "sections": [
+        {"type": "theory", "content": "O plano cartesiano associa pares ordenados a pontos. Distância entre dois pontos decorre de Pitágoras; ponto médio calcula médias das coordenadas. Para reta não vertical, m=Δy/Δx; retas paralelas não verticais distintas têm mesmo m, enquanto retas verticais são paralelas entre si e não têm coeficiente angular definido. Retas não verticais perpendiculares têm produto dos coeficientes −1; a vertical é perpendicular a uma horizontal.\n\nA distância do ponto (x₀,y₀) à reta ax+by+c=0 é |ax₀+by₀+c|/√(a²+b²). Circunferência de centro (h,k) e raio r satisfaz (x−h)²+(y−k)²=r². Para comparar reta e circunferência, calcule a distância d do centro à reta: d<r indica duas interseções, d=r tangência e d>r nenhuma interseção. Sistemas de equações também localizam interseções entre retas ou curvas.\n\n**Erros comuns**\n\nReta vertical não tem inclinação numérica definida. Mantenha ordem consistente nas diferenças e use valor absoluto na distância. Um sistema pode ter 0, 1 ou mais interseções conforme as equações; confira substituindo as coordenadas."},
+        {"type": "example", "content": "Para P(3,0) e reta x=0 (eixo y), a distância é 3. Uma circunferência de centro (0,0) e raio 5 é cortada pela reta x=3 em dois pontos, pois a distância do centro à reta é 3<5; x²+y²=25 com x=3 dá y=±4. Se a reta fosse x=5, haveria tangência; se x=6, não haveria interseção."},
+        {"type": "summary", "content": "Traduza figuras em equações, calcule distância e inclinação somente quando definidos. Para posições relativas, resolva o sistema ou compare a distância do centro à reta com o raio; interprete o número de interseções e confira os pontos nas equações."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 18,
+      "sections": [
+        {"type": "theory", "content": "Exponencial a^x exige a>0 e cresce se a>1, decresce se 0<a<1. O logaritmo log_a(b) pergunta qual expoente gera b e exige a>0, a≠1 e b>0. Para argumentos positivos, log(ab)=log a+log b, log(a/b)=log a−log b e log(a^r)=r log a; não existe regra que transforme log(a+b) em soma. Gráficos de exponencial e logaritmo se refletem em y=x; o gráfico logarítmico tem domínio x>0 e assíntota vertical x=0.\n\nAs funções inversas permitem resolver equações. Ao aplicar logaritmo ou exponencial a uma inequação, observe monotonicidade: base maior que 1 preserva a ordem; entre 0 e 1 inverte. Em modelos de crescimento, declarar o passo temporal importa: “dobra a cada hora” pode ser descrito em horas inteiras; permitir t fracionário supõe interpolação exponencial contínua.\n\n**Erros comuns**\n\nNão aceitar argumento não positivo, nem esquecer a≠1. Confira soluções na expressão original. Crescimento exponencial aumenta por fator, não por quantidade fixa. Declare se o modelo admite tempos fracionários e se a base cresce ou decresce."},
+        {"type": "example", "content": "Resolva log₂(x−1)+log₂(x+1)=3. O domínio exige x>1. Somando logaritmos, log₂(x²−1)=3, então x²−1=8; as raízes algébricas são ±3, mas somente x=3 respeita o domínio. Num modelo contínuo N(t)=500·2^t, com t em horas, N>10 000 quando t>log₂20≈4,32 h. Se o enunciado só permitir contar horas inteiras e a duplicação ocorrer uma vez por hora, a primeira leitura acima de 10 000 é após 5 horas."},
+        {"type": "summary", "content": "Traduza logaritmo para expoente, aplique propriedades apenas a argumentos positivos e declare domínio antes de resolver. Use gráficos, assíntota e monotonicidade; em inequações verifique se a função inverte a ordem. Explique a hipótese temporal do modelo exponencial."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2485,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "A Geografia analisa como sociedade e natureza se relacionam no espaço. Paisagem é o conjunto de formas percebidas num recorte; lugar envolve experiência e pertencimento; território destaca relações de poder e controle; região reúne áreas segundo critérios explicitados; espaço geográfico é produzido historicamente por objetos, ações, técnicas e relações. “Meio geográfico” designa a configuração histórica dessas relações sociedade-natureza e dos sistemas técnicos: pode-se comparar meios mais diretamente organizados por ritmos naturais a meios cada vez mais transformados por técnicas e redes, sem supor que um substituiu completamente o outro. Escala, redes, fronteiras e agentes mudam o que se torna visível.\n\n**Erros comuns**\n\nNão use paisagem como sinônimo de espaço inteiro nem trate território apenas como área física. Região depende do critério de regionalização. “Meio” não significa simplesmente natureza intocada: a análise considera a combinação histórica de condições naturais, técnicas e práticas sociais."},
+        {"type": "example", "content": "Uma bacia com rio, barragem, captação, bairros e regras de distribuição pode ser descrita como paisagem pelas formas visíveis; como território pelas disputas e decisões de uso; como lugar pelas experiências dos moradores; como região quando delimitada por uma característica comum; e como meio geográfico pela articulação histórica entre água, relevo, técnicas e vida social. Os conceitos são lentes diferentes, não rótulos excludentes."},
+        {"type": "summary", "content": "Declare o conceito e a escala que orientam a leitura. Relacione formas, agentes, fluxos, técnicas e poder para explicar como o espaço é produzido. Ao usar “meio”, explicite as relações sociedade-natureza e a configuração técnica considerada."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2486,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 17,
+      "sections": [
+        {"type": "theory", "content": "Mapas selecionam informações por escala, projeção, símbolos, orientação, legenda, fonte e data. Latitude mede posição ao norte/sul do Equador; longitude, a leste/oeste de Greenwich. Projeções planas sempre distorcem alguma propriedade. A Terra gira em torno do eixo e orbita o Sol; a inclinação do eixo combinada à translação causa estações opostas nos hemisférios, não a simples distância ao Sol.\n\nA diferença de longitude permite estimar diferença de hora solar média: 15° correspondem a cerca de uma hora, e localidades a leste têm hora solar adiantada em relação às do oeste. Fusos civis são convenções políticas e não seguem perfeitamente meridianos. Geotecnologias como GPS e sensoriamento remoto geram dados cuja resolução, data e método devem ser considerados.\n\n**Erros comuns**\n\nNão atribua estações à maior proximidade do Sol; não confunda hora solar com fuso legal. Escala maior significa mais detalhe e área representada menor. Longitude não determina hemisfério norte/sul e latitude não determina leste/oeste. Confira legenda e classes antes de comparar cores."},
+        {"type": "example", "content": "Dois locais separados por 60° de longitude têm diferença aproximada de 60°÷15° por hora=4 horas de hora solar média. O ponto mais a leste está adiantado. Isso não basta para afirmar o horário civil atual: fusos e horário de verão, quando adotado, dependem de legislação e data. Num mapa 1:250 000, 4 cm representam 10 km; a conversão exige unidades iguais."},
+        {"type": "summary", "content": "Leia título, legenda, escala, orientação, fonte e data. Para estações, conecte inclinação axial e translação; para horários, use longitude como aproximação da hora solar e depois verifique as regras civis. Identifique projeções e distorções antes de inferir padrões."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "Litosfera, atmosfera, hidrosfera, criosfera e biosfera interagem no sistema terrestre. Biosfera compreende a vida e suas relações com os demais componentes, não uma camada isolada: organismos dependem de água, gases, nutrientes, clima e substratos e também transformam esses meios. Intemperismo altera rochas; erosão, transporte e deposição redistribuem materiais. A água circula por evaporação, condensação, precipitação, infiltração e escoamento. Circulações atmosférica e oceânica redistribuem energia e umidade. Biomas refletem clima, solo, relevo e comunidades, mas não são unidades homogêneas. A ação humana pode intensificar ou redirecionar processos por desmatamento, barragens, mineração e urbanização.\n\n**Erros comuns**\n\nTempo atmosférico é condição de curto prazo; clima descreve padrões de longo prazo. Bioma não equivale a clima. Não atribua evento extremo específico à mudança climática sem evidência e escala adequadas; observe fatores naturais, uso do solo e vulnerabilidade social."},
+        {"type": "example", "content": "Desmatamento em encosta reduz interceptação da chuva pela vegetação; solo exposto e compactado pode elevar escoamento e erosão. Sedimentos chegam ao rio, alterando turbidez e habitats aquáticos. A sequência envolve biosfera, solo/litosfera e hidrosfera, e sua intensidade depende de declividade, tipo de solo e regime de chuva. Recuperar cobertura vegetal pode reduzir alguns desses fluxos, embora não reverta toda alteração."},
+        {"type": "summary", "content": "Siga fluxos de matéria e energia entre as esferas, incluindo a biosfera. Identifique condições, intervenção humana, escala temporal e efeitos em cadeia; evite explicações monocausais."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "O território brasileiro se organiza politicamente como República Federativa: União, estados, Distrito Federal e municípios são entes autônomos conforme a Constituição, com competências distintas. Essa organização convive com divisões regionais usadas para análise, que não são níveis federativos. Redes urbanas, transportes, atividades econômicas e políticas conectam escalas locais, estaduais e nacionais. Urbanização ampliou metrópoles, cidades médias e periferias com acesso desigual a moradia, saneamento, mobilidade e emprego. Migrações respondem a oportunidades, redes familiares, conflitos e condições ambientais. Agricultura, indústria, serviços e extração formam fluxos interdependentes, enquanto infraestrutura e poder decisório se concentram. Conflitos fundiários e socioambientais envolvem direitos e modos de vida diversos.\n\n**Erros comuns**\n\nNão confunda divisão regional com ente federativo, nem suponha que municípios, estados e União tenham competências idênticas. Região não é homogênea; crescimento populacional não equivale a migração; a fronteira agrícola não é vazia nem sem direitos preexistentes."},
+        {"type": "example", "content": "Uma produção agrícola municipal pode depender de crédito e políticas federais, estradas estaduais, transporte municipal, armazéns e portos; trabalhadores e bens circulam entre municípios e estados. Ao mapear a cadeia, separe as fronteiras administrativas das regiões de análise e pergunte quem decide, financia e recebe os benefícios, além dos impactos locais. Uma política pública pode atravessar níveis de governo sem apagar sua autonomia e competência legal."},
+        {"type": "summary", "content": "Conecte escalas locais, estaduais, regionais e nacionais. Diferencie federação de regionalização; analise redes, população, economia, ambiente e políticas identificando fluxos, competências, beneficiários, custos e conflitos."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2491,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "Entre os séculos XV e XVIII, processos distintos transformaram poderes, economias e formas de conhecimento. A formação do Estado moderno envolveu, em diferentes ritmos, concentração de autoridade, administração fiscal e jurídica, forças armadas, diplomacia e controle territorial. Isso não criou Estados nacionais iguais aos atuais nem eliminou poderes locais; negociações e conflitos continuaram. Renascimento não foi simples abandono da religião; Reformas cristãs fragmentaram autoridades e reorganizaram instituições. Expansão marítima conectou continentes por comércio, conquista e escravização. Na América, colonização ibérica reorganizou terras e trabalho, mas povos indígenas mantiveram agência por negociação, alianças, fuga e resistência. Africanos escravizados e descendentes construíram culturas e resistiram a sistemas violentos.\n\n**Erros comuns**\n\nNão trate o Estado moderno como produto de um único decreto ou como processo simultâneo. Não suponha passagem uniforme do feudalismo ao capitalismo; não descreva colonização como encontro pacífico nem apresente povos submetidos sem agência."},
+        {"type": "example", "content": "Uma monarquia pode fortalecer arrecadação e tribunais para financiar guerras e fazer valer decisões em áreas mais amplas, enquanto negocia com elites locais e enfrenta resistências. A centralização é, portanto, processo desigual, não poder absoluto instantâneo. Na produção açucareira colonial, conecte Estado, terra, crédito, comércio atlântico e trabalho compulsório, sem reduzir o sistema a troca comercial."},
+        {"type": "summary", "content": "Explique como autoridades construíram capacidades administrativas e controle territorial, situando negociações e limites. Relacione Estado, religião, comércio, conquista e trabalho; mostre que ritmos variaram e que resistência coexistiu com dominação."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2492,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "A história contemporânea reúne revoluções políticas e industriais, imperialismo, guerras, revoluções socialistas, descolonização, ditaduras, democratizações e globalização. Movimentos sociais são formas coletivas de ação que articulam participantes, demandas, repertórios e organização para disputar direitos, políticas ou reconhecimento; não são homogêneos e seus resultados dependem de contexto, alianças e repressão. Cidadania e participação foram ampliadas por mobilização e também restringidas por violência estatal, racismo, colonialismo e autoritarismo. História do tempo presente trabalha com fontes e memórias concorrentes, distinguindo evidência, interpretação e disputa pública.\n\n**Erros comuns**\n\nNão chamar todo conflito de movimento social nem supor que uma pauta represente todos os participantes. Uma linha do tempo organiza datas, mas não explica causalidade. Compare regimes por instituições, pluralismo, repressão e direitos, e não apenas pelo nome oficial."},
+        {"type": "example", "content": "A campanha Diretas Já, em 1983–1984, mobilizou atores diversos em defesa de eleições diretas para a Presidência durante a transição da ditadura. Para analisá-la, identifique a demanda, os repertórios públicos de mobilização, os grupos participantes e os limites políticos daquele momento. A campanha ampliou pressão por democratização, mas não produziu imediatamente a eleição presidencial direta pretendida. O exemplo mostra que movimento social pode influenciar a agenda sem alcançar de imediato todo seu objetivo."},
+        {"type": "summary", "content": "Analise movimentos sociais por atores, demandas, formas de ação, contexto, respostas do poder público e efeitos. Explique causalidade múltipla e preserve diferenças entre objetivo reivindicado e resultado efetivo."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2493,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "Indivíduos se formam em relações sociais: família, escola, trabalho, grupos, instituições e mídia participam da socialização. Cultura reúne práticas, valores, conhecimentos e símbolos aprendidos e disputados; não é característica biológica fixa. Poder opera em instituições e interações, distribuindo recursos e definindo normas. Desigualdades de classe, raça e gênero podem se combinar sem determinar mecanicamente cada vida. Violência pode envolver uso ou ameaça de força física ou poder, causando ou arriscando danos; análises sociológicas também distinguem dimensões institucionais, estruturais e simbólicas, sem confundi-las automaticamente com a definição jurídica ou sanitária. Trabalho, segurança e reconhecimento variam conforme relações e instituições.\n\n**Erros comuns**\n\nNão explique desigualdade como resultado natural sem examinar história e instituições. Cultura não é imutável. Não reduza violência a agressão física individual, mas também não use o termo para qualquer conflito sem definir o mecanismo e a evidência."},
+        {"type": "example", "content": "Se uma escola registra agressões repetidas contra estudantes de um grupo e as denúncias não recebem resposta, a análise deve separar atos observados, ameaças, padrão institucional e impactos. Dados de frequência, relatos e procedimentos podem sustentar hipóteses sobre desigualdade de proteção; não permitem atribuir intenção a todas as pessoas nem generalizar a partir de um caso. A violência interpessoal e a resposta institucional são fenômenos relacionados, mas distintos."},
+        {"type": "summary", "content": "Observe práticas e instituições, quem define normas e como recursos, segurança e direitos são distribuídos. Ao analisar violência, defina o tipo, identifique evidências, agentes, mecanismos, danos e respostas institucionais; evite generalizações."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2494,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "Ética pergunta como justificar ações e normas; política trata da organização do poder e de decisões coletivas. Éticas da virtude avaliam caráter e hábitos; teorias do dever enfatizam princípios e obrigações; abordagens consequencialistas consideram efeitos. Justiça pode envolver igualdade de direitos, distribuição, reconhecimento e reparação. Direitos humanos partem da dignidade e da igualdade de todas as pessoas e incluem direitos civis, políticos, econômicos, sociais e culturais; protegem indivíduos e grupos e estabelecem limites ao poder, inclusive ao da maioria. Democracia exige participação, competição, direitos, pluralismo e prestação de contas. Liberdade convive com deveres e limites necessários à proteção de outras pessoas.\n\n**Erros comuns**\n\nNão confunda opinião com argumento justificado. “A maioria decidiu” não resolve automaticamente a proteção de direitos; tampouco invoque direito sem explicar o conflito e a regra aplicável. Um efeito desejável não torna irrelevante o modo de alcançá-lo."},
+        {"type": "example", "content": "Se uma maioria propõe impedir que um grupo participe de uma reunião pública, a votação por si só não torna a exclusão legítima. Uma análise ética considera dignidade, igualdade e liberdade de expressão; a análise política examina regras, participação e proteção de minorias. Direitos podem exigir limites à decisão majoritária, que devem ser justificados publicamente e aplicados com garantias."},
+        {"type": "summary", "content": "Nomeie o princípio em jogo; examine consequências, direitos e distribuição; identifique quem é afetado e avalie legitimidade do processo. Relacione direitos humanos à dignidade, igualdade, liberdade, justiça e limites democráticos do poder."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2496,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 17,
+      "sections": [
+        {"type": "theory", "content": "Células procarióticas não têm núcleo delimitado por membrana; eucarióticas têm núcleo e organelas membranosas. Membrana controla trocas; ribossomos sintetizam proteínas; núcleo e organelas distribuem funções. DNA é replicado antes da divisão. Na mitose, cromossomos duplicados são separados e, em geral, formam-se células-filhas geneticamente semelhantes; meiose reduz pela metade o número cromossômico e gera variabilidade por recombinação e segregação.\n\nA hipótese endossimbiótica explica a origem de mitocôndrias e cloroplastos como descendentes de procariontes incorporados por uma célula ancestral. DNA próprio circular, ribossomos semelhantes aos bacterianos e divisão por fissão são evidências convergentes, não prova de que toda a célula eucariótica veio de uma bactéria. Diferencie reprodução celular, crescimento de tecidos e formação de gametas.\n\n**Erros comuns**\n\nNão confunda mitose com meiose nem número de cromossomos com quantidade de DNA. Organelas não funcionam isoladamente; explique fluxo de matéria e energia e limites das evidências sobre a origem evolutiva."},
+        {"type": "example", "content": "Uma célula com 2n=6 inicia mitose após duplicar o DNA: cada cromossomo tem duas cromátides-irmãs, mas a célula ainda conta seis cromossomos duplicados. Na separação, as cromátides passam a polos opostos; cada célula-filha recebe seis cromossomos. Em meiose, duas divisões após uma replicação produzem quatro células haploides, com variabilidade. DNA circular e divisão própria de mitocôndrias são compatíveis com a hipótese endossimbiótica."},
+        {"type": "summary", "content": "Compare procariontes/eucariontes e mitose/meiose por estrutura, função e resultado cromossômico. Relacione organelas em redes funcionais e use evidências convergentes para explicar endossimbiose, sem transformar hipótese evolutiva em observação direta."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2497,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 17,
+      "sections": [
+        {"type": "theory", "content": "Genes são segmentos de DNA cuja informação pode contribuir para produtos funcionais; variantes podem alterar proteínas ou regulação. Alelos segregam na formação de gametas, mas muitos fenótipos dependem de vários genes e do ambiente. Uma doença genética pode ser monogênica, cromossômica ou multifatorial; predisposição não significa destino inevitável. PCR amplifica regiões de DNA; sequenciamento identifica bases; edição genética pode alterar sequências, mas apresenta limites técnicos, riscos e questões éticas. Manipulação genética também é usada em diagnóstico, pesquisa e produção de moléculas terapêuticas.\n\n**Erros comuns**\n\nNão trate todas as doenças como mendelianas nem generalize um pedigree para toda a população. Probabilidades descrevem chances em cada gestação, não uma sequência garantida. Teste genético exige consentimento, interpretação adequada, privacidade e avaliação de consequências."},
+        {"type": "example", "content": "Se ambos os pais são heterozigotos Aa para uma condição autossômica recessiva, cada gestação tem probabilidade 1/4 de produzir genótipo aa, 1/2 Aa e 1/4 AA, supondo segregação mendeliana e penetrância completa. O resultado de uma gestação não altera a probabilidade da próxima. Essa conta não se aplica automaticamente a doenças multifatoriais ou a variantes com penetrância variável."},
+        {"type": "summary", "content": "Distinga DNA, gene, alelo, genótipo e fenótipo. Identifique o padrão de herança antes de calcular probabilidades e explicite hipóteses. Relacione diagnóstico/edição genética a benefício, risco, consentimento e privacidade."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2498,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 17,
+      "sections": [
+        {"type": "theory", "content": "Evolução descreve mudanças herdáveis em populações ao longo das gerações. Mutação e recombinação geram variação; seleção natural altera frequências quando variantes afetam sobrevivência/reprodução em determinado ambiente; deriva genética muda frequências ao acaso, especialmente em populações pequenas; fluxo gênico move alelos entre populações. Adaptação é resultado populacional de gerações, não decisão individual. Especiação pode surgir quando isolamento e divergência reduzem fluxo gênico.\n\nA origem da vida é investigada por hipóteses sobre processos químicos pré-bióticos; não deve ser confundida com a evolução biológica das populações já existentes. A história da diversificação é reconstruída com fósseis, anatomia comparada, biogeografia e dados moleculares. Árvores filogenéticas representam hipóteses de parentesco: nós indicam ancestrais comuns inferidos e não uma escala de progresso. Extinções e radiações produziram padrões ramificados.\n\n**Erros comuns**\n\nIndivíduos não evoluem geneticamente durante a vida por necessidade. Seleção não tem objetivo futuro. Semelhança não prova parentesco por si só; reúna evidências e contexto. Não apresente hipótese sobre origem da vida como fato observado diretamente."},
+        {"type": "example", "content": "Se uma população de insetos contém variantes de cor e aves capturam mais facilmente uma delas em certo ambiente, a variante menos predada pode aumentar de frequência em gerações seguintes, se a característica for herdável. Se poucos indivíduos colonizam uma ilha, deriva também pode alterar frequências ao acaso. Uma barreira que interrompe fluxo gênico pode favorecer divergência, mas não garante especiação imediata."},
+        {"type": "summary", "content": "Explique evolução em nível populacional e por mecanismos distintos: variação, seleção, deriva e fluxo gênico. Separe origem da vida de diversificação evolutiva; leia árvores como hipóteses de parentesco sustentadas por evidências."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2499,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 17,
+      "sections": [
+        {"type": "theory", "content": "Ecossistema reúne organismos e componentes físicos em interação; energia flui principalmente da luz capturada por produtores a consumidores e decompositores, enquanto matéria circula em ciclos. Relações ecológicas podem envolver competição, predação, mutualismo e parasitismo. Biomas são grandes conjuntos de ecossistemas associados a condições climáticas e comunidades características, com variação interna e transições. Desmatamento, fragmentação, poluição, espécies invasoras e mudança climática afetam processos de modos diferentes. Conservação pode combinar áreas protegidas, restauração, corredores ecológicos, manejo sustentável e participação de comunidades; cada medida tem limites e precisa considerar escala e direitos.\n\n**Erros comuns**\n\nEnergia não é reciclada como matéria; cadeias alimentares são simplificações de redes. Bioma não é sinônimo de clima nem homogêneo. Conservação não significa sempre excluir moradores: práticas e direitos locais importam. Não atribua efeito ecológico a uma única causa sem evidência."},
+        {"type": "example", "content": "Quando uma estrada fragmenta uma floresta, populações podem ficar isoladas e o fluxo de organismos diminuir. Corredores de vegetação podem reconectar áreas, mas sua eficácia depende de largura, espécies, localização e pressões no entorno. Para avaliar a proposta, compare conectividade e dados de biodiversidade antes/depois, além de custos e participação das comunidades."},
+        {"type": "summary", "content": "Mapeie energia, ciclos de matéria, relações ecológicas e escala. Identifique ameaça, mecanismo, indicador de impacto e medida de conservação; trate biomas como sistemas heterogêneos."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 19,
+      "sections": [
+        {"type": "theory", "content": "Classificar organismos ajuda a comparar características e hipóteses de parentesco. Bactérias são procariontes; protistas incluem eucariontes muito diversos; fungos são heterotróficos por absorção e têm parede celular com quitina; plantas têm embriões e, em geral, fazem fotossíntese; “algas” reúne linhagens diversas, não um único grupo evolutivo; animais são eucariontes heterotróficos por ingestão. Cnidários possuem células urticantes; artrópodes têm exoesqueleto e apêndices articulados; crustáceos formam um grupo diverso. Características devem ser comparadas sem transformar exceções em regra.\n\nBiodiversidade inclui diversidade genética, de espécies e de ecossistemas. Ela sustenta alimentos, moléculas medicinais, polinização, qualidade da água e regulação de processos, mas a relação com saúde humana é complexa: perda de habitat, comércio de animais, mudanças climáticas, saneamento e mobilidade podem alterar riscos de doenças; nenhuma causa isolada determina um surto. Conservação e saúde pública compartilham vigilância ambiental, prevenção e abordagem integrada, sem substituir evidência epidemiológica.\n\n**Erros comuns**\n\n“Protista” e “algas” são agrupamentos amplos e historicamente variáveis. Não confunda presença de biodiversidade com benefício automático em qualquer contexto; explique mecanismo e evidência. Endemismo significa distribuição naturalmente restrita, não raridade por si só."},
+        {"type": "example", "content": "Ao comparar dois animais marinhos, observe simetria, tecidos, apêndices e modo de vida para identificar grupos; uma questão sobre cnidários e crustáceos pode praticar diversidade e classificação, mas não necessariamente saúde humana. Para discutir saúde, construa uma cadeia causal explícita: alteração de habitat pode mudar contato entre hospedeiros, vetores e pessoas, elevando ou reduzindo risco conforme espécie, clima, saneamento e vigilância. A hipótese precisa de dados, não apenas da palavra “biodiversidade”."},
+        {"type": "summary", "content": "Compare grupos por características observáveis e relações evolutivas, distinguindo agrupamentos informais. Separe biodiversidade genética, específica e ecossistêmica. Ao ligar biodiversidade e saúde, nomeie o mecanismo, os fatores concorrentes e a evidência; não trate contextualização como demonstração de causalidade."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 18,
+      "sections": [
+        {"type": "theory", "content": "Descreva movimento por posição, deslocamento, velocidade e aceleração; gráficos posição-tempo e velocidade-tempo permitem interpretar taxas e áreas com unidades. As leis de Newton relacionam força resultante e mudança de movimento; trabalho transfere energia, e energia mecânica pode se conservar quando forças dissipativas são desprezíveis. Quantidade de movimento é p=mv e impulso corresponde à variação de p.\n\nMomento de uma força em relação a um eixo é τ=rF sen θ, em que r é distância ao eixo e θ o ângulo entre posição e força. Para equilíbrio estático, resultante das forças e soma dos torques devem ser nulas. Escolher eixo conveniente simplifica a conta.\n\n**Erros comuns**\n\nDistância percorrida não é deslocamento; massa não é peso. Em torque, use braço perpendicular e sinal/sentido consistente. Equilíbrio translacional sozinho não garante equilíbrio rotacional."},
+        {"type": "example", "content": "Uma barra está apoiada no centro. Uma força vertical de 100 N atua a 0,50 m à esquerda; para equilibrar o torque, uma força vertical para baixo de 50 N deve atuar a 1,0 m à direita: os módulos dos torques são 100·0,50=50 N·m e 50·1,0=50 N·m, em sentidos opostos. As forças verticais não se equilibram nesse arranjo sem outra reação do apoio; o apoio precisa fornecer a resultante restante. Isso mostra por que se verificam separadamente Στ=0 e ΣF=0."},
+        {"type": "summary", "content": "Desenhe forças e escolha o eixo. Calcule braço perpendicular e sentido de cada torque; verifique separadamente equilíbrio translacional e rotacional. Em movimento, leia gráficos e mantenha distinção entre posição, deslocamento, velocidade e aceleração."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2502,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 17,
+      "sections": [
+        {"type": "theory", "content": "O Sistema Solar inclui o Sol, oito planetas, planetas anões, satélites naturais, asteroides, cometas e pequenos corpos, organizados por gravidade e órbitas. A Terra é um planeta rochoso; gigantes gasosos e de gelo ocupam regiões externas, com diferenças de composição e estrutura. O Sistema Solar está na galáxia Via Láctea, uma entre bilhões de galáxias do Universo observável. Distâncias astronômicas são grandes: a unidade astronômica é baseada na distância média Terra-Sol, e a luz leva cerca de 8 minutos para percorrê-la.\n\nFases da Lua decorrem da porção iluminada visível da Terra; eclipses exigem alinhamento e não ocorrem todo mês porque a órbita lunar é inclinada. Estrelas produzem energia por fusão nuclear; cor e luminosidade ajudam a inferir propriedades, mas dependem de distância e evolução.\n\n**Erros comuns**\n\nFases lunares não são causadas pela sombra da Terra; isso ocorre em eclipse lunar. Escalas de ilustração do Sistema Solar raramente são proporcionais. Não confunda galáxia, sistema planetário e Universo."},
+        {"type": "example", "content": "Um modelo com uma bola para o Sol e planetas em trilhas pode representar ordem e órbitas, mas não tamanho e distância simultaneamente sem grande distorção. Ao comparar dois planetas, declare se fala de diâmetro, distância orbital ou composição. A luz do Sol chega à Terra em aproximadamente 8 minutos, enquanto a luz das estrelas distantes viaja muito mais tempo; observar o céu também é olhar para diferentes momentos do passado."},
+        {"type": "summary", "content": "Organize escalas: planeta, Sistema Solar, galáxia e Universo. Relacione composição e órbita; explique fases por geometria de iluminação e eclipses por alinhamento. Declare limites de modelos e escalas desenhadas."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2503,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 18,
+      "sections": [
+        {"type": "theory", "content": "Temperatura relaciona-se à energia microscópica média, calor é energia transferida por diferença de temperatura e energia interna agrega contribuições microscópicas. A Lei Zero estabelece transitividade do equilíbrio térmico e fundamenta termômetros. A primeira lei pode ser escrita ΔU=Q−W quando W é o trabalho realizado pelo sistema; declare a convenção. Em expansão contra pressão externa constante, o trabalho feito pelo gás é W=p_extΔV.\n\nO modelo de gás ideal satisfaz PV=nRT; gases reais aproximam esse comportamento sobretudo em baixas pressões e temperaturas suficientemente acima da condensação. Mudanças de estado envolvem calor latente e dependem da pressão. Condução, convecção e radiação transferem energia por mecanismos distintos.\n\n**Erros comuns**\n\nNão use “calor” como propriedade armazenada no corpo; calor é transferência. Não diga que gases reais obedecem exatamente à equação ideal. Mantenha temperatura em kelvin em cálculos da equação de estado e explicite o sinal do trabalho."},
+        {"type": "example", "content": "Um gás ideal em quantidade n e temperatura T satisfaz PV=nRT no modelo. Se 1 mol se expande a pressão externa constante de 100 kPa de 2 L para 3 L, então W=pΔV=100 000 Pa×0,001 m³=100 J de trabalho realizado pelo gás. Com convenção ΔU=Q−W, esse trabalho reduz ΔU se não houver transferência de calor. A situação é uma aproximação macroscópica; para gás real, desvios podem ser relevantes."},
+        {"type": "summary", "content": "Separe temperatura, calor e energia interna; aplique a Lei Zero e a primeira lei declarando a convenção. Use PV=nRT para o modelo ideal, temperatura absoluta e unidades SI. Em mudanças de estado e propagação térmica, identifique mecanismo e condições."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 18,
+      "sections": [
+        {"type": "theory", "content": "Ondas transportam energia; v=λf relaciona velocidade, comprimento de onda e frequência. Refração muda velocidade e comprimento de onda, mas a frequência da fonte se mantém. Reflexão obedece ângulos iguais em relação à normal; difração é relevante quando abertura/obstáculo tem dimensão comparável ao comprimento de onda. Polarização seleciona direção de oscilação de onda transversal.\n\nNa passagem de meio mais refringente para menos refringente, acima do ângulo crítico ocorre reflexão interna total; abaixo dele há raio refratado. Dispersão separa componentes por dependência do índice com a frequência, como num prisma. Lentes convergentes/divergentes e espelhos formam imagens segundo posição do objeto; instrumentos como lupa, câmera e telescópio combinam elementos ópticos. O olho forma imagem na retina; alterações de foco podem ser corrigidas com lentes apropriadas.\n\n**Erros comuns**\n\nÂngulo de incidência é medido à normal, não à superfície. Reflexão total requer propagação do meio de maior índice para o menor. Não confunda dispersão com difração; raios são aproximação geométrica e não descrevem todos os efeitos ondulatórios."},
+        {"type": "example", "content": "Uma fibra óptica mantém luz no núcleo quando o raio chega à interface núcleo-revestimento pelo meio de maior índice com ângulo acima do crítico; ocorre reflexão interna total sucessiva. Num prisma, diferentes comprimentos de onda sofrem refração distinta e se separam. Em uma lupa, objeto dentro da distância focal de lente convergente produz imagem virtual ampliada; no olho, a acomodação ajusta o foco para projetar imagem nítida na retina."},
+        {"type": "summary", "content": "Use v=λf e acompanhe o que muda em cada meio. Desenhe a normal, verifique índices e ângulo crítico; diferencie reflexão, refração, difração, polarização e dispersão. Em instrumentos e visão, identifique lentes, posição do objeto e tipo de imagem."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2505,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 20,
+      "sections": [
+        {"type": "theory", "content": "Cargas produzem campos elétricos e magnéticos; diferença de potencial é energia transferida por carga. Em resistor ôhmico a temperatura aproximadamente constante, V=RI; leis de Kirchhoff expressam conservação de carga em nós e energia em malhas. Corrente também gera campo magnético; uma carga q em velocidade v perpendicular a B sofre força de módulo |q|vB, cuja direção depende do sinal e da regra vetorial.\n\nCapacitor armazena carga e energia no campo elétrico: C=Q/V; inserir dielétrico aumenta a capacitância, e a consequência para tensão/carga depende de a fonte permanecer conectada ou não. A lei de Faraday relaciona força eletromotriz induzida à variação do fluxo magnético; a lei de Lenz determina sentido que se opõe à variação que a produz.\n\n**Erros comuns**\n\nCorrente não é consumida pelo resistor. Indução exige variação de fluxo, não apenas campo presente. Não aplique força magnética quando v é paralelo a B. Ao analisar dielétrico, declare se capacitor está isolado ou ligado à fonte."},
+        {"type": "example", "content": "Uma carga de módulo 2 μC move-se a 3×10⁴ m/s perpendicularmente a um campo de 0,5 T. A força magnética tem módulo F=|q|vB=2×10⁻⁶·3×10⁴·0,5=0,03 N; se v for paralela ao campo, o módulo é zero. Numa bobina, aproximar um ímã aumenta o fluxo; a corrente induzida cria campo que se opõe a esse aumento. O sentido depende da orientação real do circuito."},
+        {"type": "summary", "content": "Aplique conservação em circuitos, identifique direção relativa entre v e B e trate capacitor com condições declaradas. Para indução, acompanhe variação de fluxo e use Lenz para determinar a oposição à mudança."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 19,
+      "sections": [
+        {"type": "theory", "content": "Estados físicos e mudanças dependem de temperatura, pressão e interações entre partículas. Misturas homogêneas têm uma fase visível; heterogêneas, duas ou mais. Em soluções, concentração relaciona soluto e quantidade/volume da solução; separações exploram propriedades físicas. Para gases, leis empíricas relacionam P, V e T: a equação de estado ideal PV=nRT é aproximação para gases reais em condições apropriadas. Em mistura ideal, pressão parcial de i é x_i P_total, pela fração molar x_i. Difusão é espalhamento por movimento molecular; liquefação ocorre por resfriamento e/ou compressão.\n\nPressão de vapor é a pressão do vapor em equilíbrio com fase condensada; soluto não volátil reduz a pressão de vapor e pode elevar ponto de ebulição, reduzir ponto de congelamento e gerar pressão osmótica. Em soluções eletrolíticas, íons móveis conduzem corrente; dissociação e concentração determinam a condução. Coloides têm partículas dispersas que podem espalhar luz.\n\n**Erros comuns**\n\nNão confunda massa do soluto com massa da solução. Gás real não segue exatamente modelo ideal em qualquer condição. Pressão parcial não é porcentagem em massa. Eletrólito sólido pode não conduzir como solução, pois mobilidade dos íons importa."},
+        {"type": "example", "content": "Uma mistura gasosa ideal tem 2 mol de N₂ e 1 mol de O₂, total 3 mol, a pressão total 0,90 atm. A fração molar de O₂ é 1/3 e sua pressão parcial é (1/3)·0,90=0,30 atm. Dissolver eletrólito aumenta partículas móveis em solução; os efeitos coligativos dependem do número efetivo de partículas e podem divergir em soluções reais concentradas."},
+        {"type": "summary", "content": "Identifique fases e composição, escolha a lei de gás e declare aproximação. Em misturas, diferencie fração molar, pressão parcial e concentração. Relacione propriedades coligativas à quantidade de partículas e condução à presença e mobilidade de íons."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "editorial_version": "1.0.3",
+      "review_status": "review",
+      "estimated_minutes": 18,
+      "source_document_ids": [649],
+      "sections": [
+        {"type": "theory", "content": "Número atômico Z é o número de prótons; número de massa A é prótons+nêutrons. Em átomo neutro, elétrons=Z; distribuição eletrônica por níveis/subníveis ajuda a explicar valência e periodicidade. Na tabela, raio atômico tende a aumentar para baixo e para a esquerda; energia de ionização e eletronegatividade tendem a aumentar para cima e para a direita, com exceções. Isótopos têm mesmo Z e diferente número de nêutrons; radioatividade é transformação de núcleo instável, não da eletrosfera.\n\nLigações iônicas formam redes de atração entre íons, covalentes compartilham pares e metálicas têm elétrons deslocalizados. Polaridade depende de diferença de eletronegatividade e geometria molecular. Forças intermoleculares incluem dispersão de London, dipolo-dipolo e ligação de hidrogênio quando H está ligado a N, O ou F; influenciam ebulição, viscosidade e solubilidade.\n\n**Erros comuns**\n\nLigação iônica não se resume a “metal+ametal”; composto iônico sólido geralmente não conduz por falta de íons móveis. Molécula com ligações polares pode ser apolar por simetria. Tendências periódicas são tendências, não regras sem exceção."},
+        {"type": "example", "content": "Para ²³₁₁Na⁺, Z=11, A=23, nêutrons=12 e elétrons=10. NaCl sólido é uma rede iônica; em água, íons hidratados podem mover-se e transportar carga. CO₂ tem ligações C=O polares, mas geometria linear simétrica cancela os dipolos e a molécula é apolar. Água forma ligações de hidrogênio, contribuindo para ponto de ebulição maior que moléculas comparáveis sem essa interação."},
+        {"type": "summary", "content": "Calcule prótons, nêutrons e elétrons com Z, A e carga. Use configuração e tendências para explicar propriedades, considerando exceções. Diferencie ligação química, polaridade molecular e força intermolecular; relacione estrutura à condução e às propriedades físicas."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2508,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 17,
+      "sections": [
+        {"type": "example", "content": "Na reação H₂(g)+Cl₂(g)→2HCl(g), os coeficientes indicam proporção 1:1:2. Nas mesmas temperatura e pressão, volumes gasosos são proporcionais aos coeficientes: 3 L de H₂ com Cl₂ em excesso podem formar 6 L de HCl, se a reação for completa e os gases forem tratados como ideais. Se dados forem massa, converta para mol antes de usar a proporção; não compare gramas diretamente com coeficientes."},
+        {"type": "summary", "content": "Balanceie a equação e converta dados para mol. Use razões de coeficientes para massa, quantidade de matéria e, sob mesmas condições, volumes gasosos. Identifique limitante, rendimento e hipótese de completude; confira conservação e unidades."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2509,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 19,
+      "sections": [
+        {"type": "theory", "content": "Cinética estuda velocidade; concentração, temperatura, superfície, pressão em gases e catalisador podem alterá-la conforme o mecanismo. Catalisador reduz energia de ativação, sem mudar a variação de energia global nem a constante de equilíbrio à temperatura fixa. Entalpia de reação pode ser calculada por lei de Hess somando etapas; energias médias de ligação estimam ΔH como ligações rompidas menos formadas.\n\nNo equilíbrio dinâmico, velocidades direta e inversa são iguais. Q e K comparam concentrações segundo a equação balanceada; alterações de pressão, concentração e temperatura podem deslocar o sistema. Ácidos e bases transferem prótons no modelo de Brønsted; pH≈−log[H₃O⁺] em soluções diluídas ideais. Sais podem sofrer hidrólise. Produto de solubilidade relaciona íons em equilíbrio com sólido pouco solúvel; precipitação depende de comparar Q com Ksp.\n\n**Erros comuns**\n\nEquilíbrio não significa reação parada nem concentrações iguais. Calor de reação não é energia de ativação. Catalisador acelera ambos os sentidos. pH é logarítmico: diferença de uma unidade corresponde a fator dez em concentração aproximada. Não use Ksp sem escrever a estequiometria da dissolução."},
+        {"type": "example", "content": "Uma solução diluída tem [H₃O⁺]=10⁻³ mol/L; na aproximação usual, pH=3. Para H₂(g)+I₂(g)⇌2HI(g), variar pressão total sem alterar composição não desloca o equilíbrio porque há 2 mol gasosos em cada lado. Se dissolução de um sal produz A⁺ e B⁻, calcule Qsp com as concentrações e compare a Ksp: Qsp>Ksp indica supersaturação e possibilidade de precipitado. Em cálculo de entalpia por ligações, conte apenas ligações rompidas/formadas na reação balanceada."},
+        {"type": "summary", "content": "Separe rapidez, energia e posição de equilíbrio. Balanceie antes de calcular ΔH ou K. Em ácido-base declare aproximações e temperatura; para sais, identifique hidrólise. Em solubilidade, escreva a dissociação e compare Qsp com Ksp."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 22,
+      "sections": [
+        {"type": "theory", "content": "Em oxirredução, oxidação aumenta número de oxidação e perde elétrons; redução diminui N.O. e ganha elétrons. Balanceie semirreações conservando átomos e carga. Em pilha galvânica, reação espontânea converte energia química em elétrica: oxidação ocorre no ânodo, redução no cátodo. Com potenciais padrão de redução, E°cel=E°red(cátodo)−E°red(ânodo); E°cel positivo indica espontaneidade nas condições padrão. Eletrólise usa fonte externa para conduzir reação não espontânea. Carga Q=It e a lei de Faraday relaciona carga à quantidade de elétrons, com F≈96 500 C/mol.\n\nEm química orgânica, reconheça cadeia carbônica, saturação, ramificação e funções por seus grupos: hidrocarbonetos, álcoois, fenóis, éteres, aldeídos, cetonas, ácidos carboxílicos, ésteres, aminas e amidas, entre outras. Nomenclatura combina cadeia principal, insaturações, substituintes e função prioritária segundo regras. Isomeria constitucional e espacial pode dar propriedades distintas. Polaridade e forças intermoleculares influenciam solubilidade e ebulição. Carboidratos, lipídios, proteínas e ácidos nucleicos são biomoléculas orgânicas com estruturas e funções variadas.\n\n**Erros comuns**\n\nÂnodo é sempre local de oxidação e cátodo de redução; o sinal elétrico muda entre pilha e eletrólise. Não some potenciais de redução sem considerar qual semirreação se inverte. Na eletrólise, use Q=It e estequiometria eletrônica. Em orgânica, identifique conectividade e grupo funcional; fórmula molecular sozinha não determina estrutura ou propriedade."},
+        {"type": "example", "content": "Para a pilha Zn|Zn²⁺||Cu²⁺|Cu, E°red(Cu²⁺/Cu)=+0,34 V e E°red(Zn²⁺/Zn)=−0,76 V; logo E°cel=0,34−(−0,76)=+1,10 V. Zinco oxida no ânodo e Cu²⁺ reduz no cátodo. Na eletrólise de Cu²⁺+2e⁻→Cu, corrente de 2,0 A durante 10 min fornece Q=It=1200 C e n(e⁻)=1200/96500≈0,0124 mol; deposita cerca de 0,0062 mol de Cu, ou 0,39 g, usando M(Cu)≈63,5 g/mol e supondo rendimento de 100%. Em CH₃COCH₃, o grupo C=O entre carbonos caracteriza cetona; em CH₃COOH, –COOH é ácido carboxílico."},
+        {"type": "summary", "content": "Para redox, atribua N.O., balanceie elétrons, identifique ânodo/cátodo e calcule potencial ou carga com hipóteses claras. Para orgânica, desenhe a estrutura, identifique cadeia, função e isomeria, depois relacione estrutura a propriedades e biomoléculas. A questão QT Q71 sobre polímero cobre uma parte orgânica, mas não prova cobertura de eletroquímica; a questão externa de pilhas aprovada permanece restrita ao item 1."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2511,
+      "editorial_version": "1.1.0",
+      "review_status": "review",
+      "estimated_minutes": 16,
+      "sections": [
+        {"type": "theory", "content": "Tabelas e gráficos condensam dados; leia título, fonte, período, população, unidades, legenda e escalas. Linhas enfatizam mudança temporal/contínua; barras comparam categorias; setores representam partes exclusivas que somam o todo. Eixos truncados podem exagerar diferenças. Média, mediana e proporção respondem perguntas distintas; associação não prova causalidade. Para construir representação, escolha a variável e escala adequadas, rotule e mantenha intervalos consistentes.\n\n**Erros comuns**\n\nNão compare escalas ou períodos incompatíveis. Percentual de aumento usa valor inicial; participação usa total. Categorias sobrepostas não podem ser mostradas como partes exclusivas de um círculo. Em gráfico de linha, não conecte categorias sem ordem ou continuidade justificável."},
+        {"type": "example", "content": "Vendas foram 120 unidades em janeiro e 150 em fevereiro: aumento de 30, ou 25% sobre janeiro. Para construir gráfico de barras, coloque os meses no eixo horizontal, unidades no vertical, escolha intervalos regulares (por exemplo, 0 a 160 de 20 em 20), trace barras de alturas 120 e 150 e rotule título e unidade. Se o eixo começar em 100, a diferença visual será ampliada; declarar essa escolha é essencial."},
+        {"type": "summary", "content": "Leia metadados e escalas antes de interpretar. Ao construir, escolha representação compatível, rotule e use intervalos coerentes. Calcule variação absoluta e relativa separadamente e não infira causalidade apenas de associação."}
+      ]
+    }
+  ],
+  "followups": [
+    {
+      "curriculum_topic_id": 2474,
+      "supersedes_version": "1.0.2",
+      "editorial_version": "1.0.3",
+      "review_status": "review",
+      "sections": [
+        {"type": "example", "replace_text": "Em um poema, a repetição de “volta” no fim de três versos cria um refrão;", "replacement": "Num poema, uma estrofe inteira se repete ao fim de cada seção, funcionando como refrão;"},
+        {"type": "theory", "append": "Na análise temática, relacione forma e contexto: narrador, imagens, silêncios, ritmo e escolhas de linguagem podem construir efeitos sociais, morais e políticos, mas a interpretação deve partir da obra. Para as leituras obrigatórias, acompanhe a obra integral e compare recorrências, conflitos e posições; resumo não substitui evidência textual."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Módulo n reúne números com o mesmo resto na divisão por n; a≡b (mod n) quando n divide a−b. Desigualdades delimitam intervalos, e representação decimal de racional termina quando, na forma irredutível, o denominador só tem fatores 2 e 5; caso contrário, repete. Se N= p^a q^b, com p e q primos distintos, seu número de divisores positivos é (a+1)(b+1). Em PA, a_n=a_1+(n−1)d; em PG, a_n=a_1q^(n−1). Juros compostos seguem M=C(1+i)^t, enquanto simples usam M=C(1+it)."},
+        {"type": "example", "append": "Além disso, 36=2²·3² tem (2+1)(2+1)=9 divisores positivos. Na PA 4,7,10,…, o décimo termo é 4+9·3=31; na PG 3,6,12,…, o sexto é 3·2⁵=96. R$ 1.000 a 10% ao ano por dois anos gera R$ 1.200 em juros simples e R$ 1.210 em compostos, sem aportes e com taxa constante."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "supersedes_version": "1.2.0",
+      "editorial_version": "1.3.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Funções radicais, como √x, têm domínio condicionado à expressão sob raiz (em reais, √x exige x≥0). Funções racionais p(x)/q(x) excluem zeros de q(x), mesmo quando há fator cancelável na expressão simplificada. Homotetias no plano vertical, y=a f(x), multiplicam todas as ordenadas por a; para a>1 há alongamento, para 0<a<1 compressão e para a<0 também reflexão. Em f(ax), o efeito horizontal é inverso ao fator: |a|>1 comprime o gráfico. Sempre verifique domínio e escala."},
+        {"type": "example", "append": "Em r(x)=1/(x−2), x=2 é excluído. A curva √(x−1) começa em x=1. Se o gráfico de f for transformado em y=2f(x), as ordenadas dobram; y=f(2x) comprime horizontalmente por fator 1/2."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2477,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "No conjunto complexo, todo polinômio não constante de grau n tem n raízes complexas contando multiplicidades (Teorema Fundamental da Álgebra). Para coeficientes reais, raízes não reais aparecem em pares conjugados. O discriminante da quadrática pode ser negativo e então as duas raízes são complexas; isso não elimina o polinômio nem as raízes no conjunto complexo."},
+        {"type": "example", "append": "A equação x²+1=0 não tem raiz real, mas no conjunto complexo suas raízes são i e −i, pois i²=−1. São duas raízes contando multiplicidade e formam par conjugado."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2479,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Sistemas de inequações lineares/afins descrevem interseções de semiplanos. Cada desigualdade define uma região limitada por reta; a região-solução comum pode ser polígono, faixa ou conjunto ilimitado. Para fronteira pontilhada use desigualdade estrita; para fronteira incluída use ≤ ou ≥. Matrizes também representam transformações e dados, mas dimensão e significado das linhas/colunas devem ser declarados."},
+        {"type": "example", "append": "No plano, x≥0, y≥0 e x+y≤4 descrevem o triângulo fechado no primeiro quadrante com vértices (0,0), (4,0) e (0,4). Testar (1,1) confirma que é solução; (3,3) viola a terceira desigualdade."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2480,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Quando paralelas são cortadas por transversais, segmentos correspondentes são proporcionais (Teorema de Tales), sob as hipóteses geométricas do desenho. Em triângulo retângulo, traçar altura à hipotenusa c divide-a em projeções m e n; então h²=mn e os quadrados dos catetos são c vezes suas projeções. Semelhança justifica essas relações; não as aplique a triângulo arbitrário."},
+        {"type": "example", "append": "Duas paralelas interceptam transversais e formam segmentos correspondentes 2 e 3 numa transversal, 4 e x na outra: 2/3=4/x, então x=6. Num triângulo retângulo cuja altura à hipotenusa forma projeções m=4 e n=9, h²=36 e h=6, com comprimentos positivos."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Em pirâmide regular, área lateral é (perímetro da base × apótema lateral)/2; a total soma área da base. Para tronco de pirâmide com bases semelhantes de áreas B₁ e B₂ e altura h, V=h(B₁+B₂+√(B₁B₂))/3. A fórmula decorre da diferença de volumes de pirâmides semelhantes; em troncos oblíquos ou bases não semelhantes, não a aplique sem verificar as condições."},
+        {"type": "example", "append": "Uma pirâmide quadrada regular de lado 6 e apótema lateral 5 tem área lateral 24·5/2=60, área total 96 e, com altura perpendicular 4, volume 36·4/3=48. Um tronco com áreas de base 16 e 4 e altura 3 tem V=3(16+4+8)/3=28 unidades cúbicas."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2483,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Três pontos distintos são colineares quando os vetores entre eles são proporcionais, equivalentemente quando a área do triângulo que formam é zero. Duas retas são coincidentes se compartilham todos os pontos, paralelas distintas se não se intersectam e concorrentes se têm um ponto comum. Para duas circunferências de raios r₁,r₂ e distância entre centros d: há duas interseções se |r₁−r₂|<d<r₁+r₂; tangência ocorre nas igualdades; fora desse intervalo não há interseção; centros iguais exigem comparar raios."},
+        {"type": "example", "append": "Os pontos (0,0), (1,1) e (2,2) estão alinhados na reta y=x. Círculos de raios 5 e 3 com centros a distância 8 são tangentes externamente; se a distância for 6, cruzam-se em dois pontos; se for 9, não se tocam."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2485,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Formação socioespacial examina como relações econômicas, técnicas, políticas e culturais se materializam em formas e usos do espaço, articulando permanências e mudanças. Estado-Nação combina instituições estatais, território, população e projetos de identidade nacional, sem que nação e Estado coincidam sempre. Soberania é autoridade política sobre território e população, exercida sob relações e limites internos/externos. Paisagem inclui dimensões percebidas e não apenas o que se vê: sons, cheiros e experiências também participam da leitura."},
+        {"type": "summary", "append": "Ao interpretar território, inclua soberania e agentes estatais; ao interpretar paisagem, declare o recorte sensorial e histórico. Use formação socioespacial para relacionar estruturas herdadas, agentes e transformações."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2486,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Para orientar-se, combine pontos cardeais, bússola, referências do terreno e azimute, conferindo declinação magnética quando a precisão exigir. Coordenadas são pares de latitude e longitude: no ponto 23°S, 46°W, o local está ao sul do Equador e a oeste de Greenwich. Mapas temáticos precisam de variável, unidade, classes e fonte explícitas; sensoriamento remoto registra energia refletida/emitida e GPS estima posição por sinais de satélites, com erros e resolução próprios. Projeções preservam algumas propriedades ao custo de distorcer outras; Mercator, por exemplo, amplia áreas em altas latitudes."},
+        {"type": "summary", "append": "Ao ler mapa temático, compare classes e denominadores; ao usar coordenadas, interprete sinais e hemisférios. Não confunda escala cartográfica com resolução de imagem nem precisão do GPS com exatidão absoluta."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "A tectônica de placas explica deslocamentos da litosfera, formação de cadeias, vulcanismo e terremotos; forças internas e intemperismo/erosão externos interagem na construção do relevo. Solos resultam de material de origem, clima, organismos, relevo e tempo, e podem degradar-se por erosão/contaminação. Classificações climáticas usam critérios definidos, como temperatura e precipitação; bacias hidrográficas organizam drenagem até um exutório. Oceanos armazenam e redistribuem calor, carbono e nutrientes. Gestão da água considera quantidade, qualidade, usos concorrentes, saneamento, aquíferos e governança, não apenas disponibilidade física."},
+        {"type": "example", "append": "Numa bacia, chuva em áreas altas escoa por afluentes até o rio principal e o exutório; desmatamento, impermeabilização e captação alteram vazões e sedimentos. Uma política de gestão compara usos a montante/jusante, qualidade da água, demanda humana e ecossistemas, incluindo monitoramento e participação dos usuários."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "A formação territorial envolve ocupação, tratados, conflitos, fronteiras e diferentes projetos de Estado; a questão agrária relaciona propriedade, trabalho, produção, concentração fundiária e lutas sociais. Redes de transporte e energia conectam regiões de forma desigual. Metropolização concentra funções e fluxos numa área urbana ampliada; segregação socioespacial distribui desigualmente moradia, serviços, mobilidade e riscos. Partidos e eleições organizam representação política, mas não esgotam a ação coletiva. “Concentração” deve ser demonstrada por indicador, região e período, nunca presumida sem recorte."},
+        {"type": "example", "append": "Para estudar uma região metropolitana, compare tempo de deslocamento, acesso a saneamento e localização de empregos entre municípios e grupos sociais. Relacione transporte e preço da terra à segregação; registre o período e os dados usados. Movimentos pelo direito à cidade podem reivindicar moradia, mobilidade e participação no planejamento."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2491,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "O absolutismo e as monarquias confessionais foram configurações diversas de autoridade, religião e administração, não um modelo uniforme. Renascimento e Reformas combinaram disputas religiosas, transformações artísticas, circulação de conhecimentos e mudanças políticas. O Iluminismo debateu razão, autoridade e direitos; suas ideias dialogaram com crises fiscais e sociais do Antigo Regime e com revoluções atlânticas, incluindo conflitos de independência e projetos de cidadania com exclusões. Esses processos tiveram agentes e resultados distintos nas Américas e na Europa."},
+        {"type": "summary", "append": "Compare absolutismos, Reformas e revoluções por agentes, instituições, ideias, conflitos e grupos incluídos/excluídos. Evite narrativa linear que trate Iluminismo como causa única ou liberdade como conquista universal imediata."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2492,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Para comparar história contemporânea no Brasil e na América Latina, acompanhe industrialização, revoluções, regimes autoritários, Guerra Fria, descolonização, democratizações e integração global com fontes e escalas próprias. Guerras mundiais, revoluções do século XX e lutas anticoloniais tiveram causas, atores e consequências diferentes; “globalização” não apaga assimetrias. A transição brasileira da ditadura ocorreu por disputas e mobilização; processos de memória e justiça continuam debatidos."},
+        {"type": "example", "append": "Nas Diretas Já, a mobilização de 1983–84 exigiu eleições presidenciais diretas. A emenda não obteve os votos necessários em 1984; a sucessão de 1985 foi indireta. Distinguir a demanda do resultado evita dizer que a campanha “conquistou” imediatamente o voto direto, embora tenha ampliado pressão e participação pública."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2493,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "source_document_ids": [650],
+      "sections": [
+        {"type": "theory", "replace_text": "Violência pode envolver uso ou ameaça de força física ou poder, causando ou arriscando danos; análises sociológicas também distinguem dimensões institucionais, estruturais e simbólicas, sem confundi-las automaticamente com a definição jurídica ou sanitária.", "replacement": "Na definição de saúde pública da OMS, violência é uso intencional de força física ou poder, ameaçado ou efetivo, contra si, outra pessoa ou grupo/comunidade, com probabilidade de resultar em lesão, morte, dano psicológico, prejuízo ao desenvolvimento ou privação. Em Sociologia, “violência institucional”, “estrutural” e “simbólica” são lentes analíticas distintas; defina cada uma e indique evidências em vez de tratá-las como uma classificação única."},
+        {"type": "theory", "append": "A análise social também relaciona trabalho, renda, tecnologia e natureza: mudanças técnicas reorganizam ocupações e acesso a recursos; comunicação e cultura moldam circulação de sentidos e representação política. Indicadores devem ser lidos por grupo, instituição e período para não transformar desigualdade estrutural em estereótipo individual."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2494,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "source_document_ids": [651],
+      "sections": [
+        {"type": "theory", "append": "Autonomia envolve capacidade de deliberar; consciência e juízo moral avaliam razões e responsabilidades. Felicidade e vida boa recebem respostas filosóficas diferentes: virtude, prazer, dever e cuidado não são sinônimos. Solidariedade orienta relações de responsabilidade; contrato social investiga legitimidade e limites do poder. Liberalismo enfatiza liberdades e garantias, republicanismo liberdade como não dominação e participação, marxismo analisa classes e relações materiais; cada tradição contém debates internos. Cidadania, reconhecimento, soberania e representação ajudam a examinar quem participa, quem é reconhecido e como decisões coletivas são autorizadas."},
+        {"type": "example", "append": "Uma política de saúde pode ser avaliada por autonomia e consentimento, distribuição justa, cuidado de grupos vulneráveis e legitimidade da representação. Um argumento deve dizer qual tradição ou princípio usa, reconhecer conflitos entre valores e justificar a conclusão, em vez de atribuí-la genericamente a “a maioria”."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2496,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Além de núcleo e membrana, mitocôndrias participam da respiração celular; cloroplastos realizam fotossíntese em células vegetais e algas; retículo endoplasmático, complexo golgiense, lisossomos, vacúolos, parede celular e citoesqueleto têm funções relacionadas ao tipo celular. Células vegetais possuem parede de celulose e plastídios, animais não possuem parede celular. DNA é transcrito em RNA e traduzido em proteína nos ribossomos, com processamento e regulação. Células-tronco têm autorrenovação e potencial de diferenciação variável; aplicações exigem considerar origem, risco e contexto."},
+        {"type": "summary", "append": "Relacione cada estrutura à função sem dizer que a organela atua isoladamente; compare células animais e vegetais e siga o fluxo DNA→RNA→proteína. Diferencie potência de diferenciação de promessa terapêutica."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2497,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "DNA armazena informação; RNA participa de sua expressão. Na transcrição forma-se RNA a partir de molde de DNA; na tradução, códons do RNA orientam a sequência de aminoácidos conforme o código genético, com início, término e leitura em quadro. Herança pode ser dominante/recessiva, ligada ao sexo, codominante ou poligênica, e ambiente pode alterar fenótipo. Doenças genéticas têm impactos variáveis em saúde, diagnóstico, tratamento, família e acesso a serviços; evite determinismo."},
+        {"type": "example", "append": "Uma variante que altera um códon pode não mudar o aminoácido, mudar um aminoácido ou criar parada precoce; o efeito depende da posição e da proteína. Em condição multifatorial, risco resulta da combinação de variantes e ambiente e não se calcula pelo quadro Aa×Aa. Aconselhamento genético comunica probabilidades, limites e escolhas sem coerção."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2498,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "replace_text": "Mutação e recombinação geram variação; seleção natural altera frequências quando variantes afetam sobrevivência/reprodução em determinado ambiente", "replacement": "Mutações podem criar novos alelos; recombinação reorganiza combinações existentes. Seleção natural altera frequências quando variantes herdáveis afetam sobrevivência/reprodução em determinado ambiente"},
+        {"type": "theory", "append": "A ação humana pode modificar pressões seletivas e trajetórias evolutivas: antibióticos selecionam variantes resistentes em populações microbianas, pesticidas podem selecionar resistência em pragas e seleção artificial altera frequências em organismos domesticados. O agente não cria deliberadamente a mutação necessária; a pressão diferencial favorece variantes já presentes ou surgidas ao acaso."},
+        {"type": "example", "append": "Com uso repetido de um antibiótico, bactérias suscetíveis tendem a deixar menos descendentes que variantes resistentes; a frequência de resistência pode aumentar. O medicamento seleciona a população, não “ensina” uma bactéria individual a se adaptar."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2499,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Dinâmica populacional acompanha tamanho, estrutura etária, natalidade, mortalidade, imigração e emigração; crescimento depende de recursos, interações e capacidade de suporte, que não é um limite fixo independente do ambiente. Comunidades mudam por competição, predação, mutualismo, sucessão e perturbações. Um problema contemporâneo como eutrofização pode resultar de excesso de nutrientes, provocar proliferação de algas e redução de oxigênio; saneamento, controle de efluentes e recuperação de margens são medidas possíveis cuja eficácia se mede por dados de água e biodiversidade."},
+        {"type": "summary", "append": "Em população, diferencie crescimento, densidade e distribuição; em comunidade, identifique interações e sucessão. Para um problema ambiental, descreva fonte, mecanismo, indicador, grupos afetados e medida de conservação, reconhecendo incerteza e escala."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Para estudar saúde humana, relacione sistemas do corpo sem reduzi-los a listas: sistemas digestório, respiratório, circulatório, excretor, nervoso e endócrino mantêm trocas e homeostase. Reprodução humana envolve anatomia, ciclo reprodutivo e consentimento; métodos contraceptivos têm mecanismos e eficácias distintos, e prevenção de ISTs inclui barreiras, testagem, vacinação quando disponível e acesso a cuidado. Saneamento, água segura, vacinação, vigilância epidemiológica e atenção à saúde modificam riscos populacionais. Biodiversidade pode fornecer alimentos, fármacos e serviços ecossistêmicos, mas também participa de redes de hospedeiros/vetores; risco depende de ecologia, condições sociais, clima e saúde pública."},
+        {"type": "example", "append": "Ao discutir uma doença transmitida por vetor, identifique agente infeccioso, vetor, hospedeiro, ambiente e prevenção. Mudanças de habitat podem alterar contato entre espécies, mas saneamento, moradia, clima e vigilância também importam. Para contracepção ou IST, compare mecanismo, prevenção e limites sem culpabilizar indivíduos."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Equilíbrio mecânico pode ser estático (repouso) ou dinâmico (velocidade constante), quando aceleração translacional é nula; equilíbrio rotacional exige aceleração angular nula. Atrito estático ajusta-se até um máximo μ_sN; cinético atua durante deslizamento, aproximadamente μ_kN em modelo simples. Gravitação universal F=Gm₁m₂/r²; perto da superfície terrestre, energia potencial gravitacional varia aproximadamente mgh. Mola ideal armazena U_e=kx²/2 e potência média é trabalho/tempo.\n\nEm fluidos em repouso, pressão aumenta com profundidade: p=p₀+ρgh. Empuxo equivale ao peso do fluido deslocado; princípio de Pascal descreve transmissão de variação de pressão em fluido confinado. Leis de Kepler descrevem órbitas: áreas iguais em tempos iguais e T² proporcional a a³ para corpos que orbitam o mesmo centro; a primeira lei estabelece órbitas elípticas com o corpo central num foco."},
+        {"type": "example", "replace_text": "Uma força vertical de 100 N atua a 0,50 m à esquerda; para equilibrar o torque, uma força vertical para baixo de 50 N deve atuar a 1,0 m à direita: os módulos dos torques são 100·0,50=50 N·m e 50·1,0=50 N·m, em sentidos opostos. As forças verticais não se equilibram nesse arranjo sem outra reação do apoio; o apoio precisa fornecer a resultante restante.", "replacement": "Uma força vertical para cima de 100 N atua a 0,50 m à esquerda do eixo; uma força para cima de 50 N atua a 1,0 m à direita. Os torques têm módulos 50 N·m e sentidos opostos, então a soma de torques é zero. As duas forças somam 150 N para cima; para equilíbrio translacional, o apoio deve exercer 150 N para baixo. Assim, verificam-se separadamente Στ=0 e ΣF=0."},
+        {"type": "example", "append": "Uma mola de constante k=100 N/m alongada 0,10 m armazena U_e=½·100·0,10²=0,5 J. Em água de densidade 1000 kg/m³ a 2 m de profundidade, o acréscimo de pressão é ρgh≈1000·9,8·2=19,6 kPa. Um objeto submerso recebe empuxo igual ao peso do volume de água deslocado, não necessariamente ao próprio peso."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2502,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "replace_text": "cor e luminosidade ajudam a inferir propriedades, mas dependem de distância e evolução", "replacement": "cor relaciona-se à temperatura superficial e luminosidade intrínseca à energia emitida por unidade de tempo; distância altera fluxo/brilho aparente observado, não a luminosidade"},
+        {"type": "theory", "append": "A rotação terrestre produz alternância de dia e noite; a translação anual combinada à inclinação axial está ligada às estações e à variação da duração do dia. Planetas orbitam o Sol e obedecem a relações descritas por Kepler; a atração gravitacional organiza o sistema. O Sol é uma estrela em evolução: atualmente está na sequência principal, fundindo hidrogênio; estrelas mudam de estrutura e destino conforme massa e estágio, podendo terminar como anãs brancas, estrelas de nêutrons ou buracos negros em cenários de grande massa."},
+        {"type": "example", "append": "Duas estrelas podem ter a mesma luminosidade intrínseca e brilho aparente diferente porque estão a distâncias distintas. Não infira que uma emite mais energia apenas por parecer mais brilhante; é preciso estimar distância e fluxo observado."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2503,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "replace_text": "Temperatura relaciona-se à energia microscópica média, calor é energia transferida por diferença de temperatura e energia interna agrega contribuições microscópicas.", "replacement": "Para um gás ideal, a temperatura absoluta é proporcional à energia cinética translacional média das partículas; energia interna também pode incluir outros graus de liberdade e interações conforme o sistema. Calor é energia transferida por diferença de temperatura, e não propriedade armazenada no corpo."},
+        {"type": "theory", "append": "Capacidade térmica C é calor por variação de temperatura do corpo; calor específico c é por unidade de massa, com Q=mcΔT quando não há mudança de fase e c pode ser tratado constante. Na transição de fase, Q=mL e a temperatura permanece constante no modelo de substância pura em equilíbrio. Condução, convecção e radiação transferem energia por mecanismos diferentes."},
+        {"type": "example", "append": "Para a rocha lunar de 0,5 kg, c=700 J/(kg·°C) e queda de 215 °C para −185 °C, ΔT=−400 °C; Q=mcΔT=−140 000 J. O sinal negativo indica perda pela rocha; a quantidade de calor extraído tem módulo 140 kJ."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Ondas em cordas dependem de tensão e densidade linear; ondas sonoras são mecânicas e longitudinais no ar. Fontes puntiformes podem gerar frentes aproximadamente esféricas. Interferência soma amplitudes: coerência e diferença de caminho definem reforço ou cancelamento. O espectro eletromagnético inclui rádio, micro-ondas, infravermelho, visível, ultravioleta, raios X e gama; todos propagam-se no vácuo à velocidade da luz, com frequências e energias distintas. A natureza ondulatória da luz aparece em interferência e difração.\n\nEspelhos esféricos côncavos/convexos formam imagens conforme posição do objeto; em aproximação paraxial, 1/f=1/p+1/p'. Sinais e natureza real/virtual dependem da convenção adotada. Instrumentos ópticos combinam espelhos/lentes e podem ampliar, inverter ou formar imagem real."},
+        {"type": "example", "append": "Duas fontes sonoras coerentes em fase produzem reforço num ponto se a diferença de caminho for múltiplo inteiro de λ e cancelamento se for meio-inteiro ímpar, sob amplitudes comparáveis. Um eco é reflexão do som; uma antena recebe ondas de rádio, enquanto raios X têm frequência/energia muito maiores. Num espelho côncavo, objeto além do centro de curvatura gera imagem real invertida entre foco e centro, na aproximação geométrica."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2505,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "replace_text": "Cargas produzem campos elétricos e magnéticos; diferença de potencial é energia transferida por carga.", "replacement": "Cargas elétricas produzem campos elétricos; cargas em movimento/correntes e ímãs estão associados a campos magnéticos. Diferença de potencial é energia transferida por carga."},
+        {"type": "theory", "append": "Em resistores em série, corrente é comum e tensões se somam; em paralelo, tensão é comum e correntes se somam. Potência pode ser escrita P=VI=I²R=V²/R em resistor ôhmico. Potencial elétrico é energia potencial por carga. Capacitores em paralelo somam capacitâncias; em série, somam-se os inversos. Corrente em fio cria campo magnético circular ao redor do condutor; o sentido segue a regra da mão direita."},
+        {"type": "example", "append": "Dois resistores de 4 Ω em série equivalem a 8 Ω; sob 12 V passam 1,5 A e a potência total é 18 W. Em paralelo, equivalem a 2 Ω, passam 6 A no total e dissipam 72 W. O campo ao redor de fio longo cresce com a corrente e diminui com a distância; ímãs permanentes também produzem campo sem corrente no circuito externo."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "A temperatura absoluta é proporcional à energia cinética translacional média no modelo ideal. A temperatura constante, Boyle: PV constante para quantidade fixa; volume constante, Gay-Lussac: P/T constante; pressão constante, Charles: V/T constante. Avogadro relaciona V e n a P,T fixas. Concentração pode ser expressa em quantidade por volume (mol/L), massa por volume (g/L), porcentagem ou fração molar; declare qual. As leis são aproximações para gases reais em condições apropriadas. Efeitos coligativos são aproximados por soluções diluídas ideais; eletrólitos e concentrações altas podem exigir correções."},
+        {"type": "example", "append": "Uma amostra gasosa ocupa 2 L a 1 atm e temperatura fixa; comprimida para 1 L, Boyle prevê P₂=2 atm se n e T não mudarem. Uma solução com 0,20 mol de soluto em 0,50 L tem concentração 0,40 mol/L; 10 g em 0,25 L equivalem a 40 g/L. Em mistura ideal, some pressões parciais para obter pressão total."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "supersedes_version": "1.0.3",
+      "editorial_version": "1.0.4",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Afinidade eletrônica descreve variação de energia associada à adição de elétron a espécie gasosa; convenções de sinal variam, então compare a definição usada na fonte. Ligação de hidrogênio requer H covalentemente ligado a doador eletronegativo (tipicamente N, O ou F) e interação com par eletrônico de outra região/molécula; a ligação doadora isolada não basta para definir a interação intermolecular."},
+        {"type": "example", "append": "Na água, o H ligado ao O de uma molécula interage com par eletrônico do O de outra, formando ligação de hidrogênio. Já HCl não forma a mesma rede forte típica de água sob condições usuais; polaridade não basta para classificar toda interação como ligação de hidrogênio."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2508,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "example", "append": "Para 2H₂+O₂→2H₂O, 4 g de H₂ correspondem a 2 mol; 32 g de O₂ correspondem a 1 mol. A proporção requer 2 mol de H₂ por 1 mol de O₂, então formam-se 2 mol (36 g) de água e nenhum reagente sobra. Conferir massas antes/depois mostra conservação: 4+32=36 g. Se houver menos O₂, ele limita o produto."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2509,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Modelos ácido-base respondem perguntas diferentes. Arrhenius: ácido aumenta H₃O⁺ (tradicionalmente H⁺) em água e base aumenta OH⁻; Brønsted–Lowry: ácido doa próton e base o aceita; Lewis: ácido aceita par eletrônico e base doa par. O mesmo processo pode ser descrito por mais de um modelo, mas explicite qual está usando."},
+        {"type": "example", "append": "HCl em água é ácido de Arrhenius e Brønsted; NH₃ aceita H⁺ e atua como base de Brønsted, embora não tenha OH⁻ na fórmula. Em BF₃+NH₃, BF₃ aceita o par eletrônico e é ácido de Lewis; NH₃ o doa e é base de Lewis."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "supersedes_version": "1.1.0",
+      "editorial_version": "1.2.0",
+      "review_status": "review",
+      "sections": [
+        {"type": "theory", "append": "Compostos orgânicos halogenados contêm F, Cl, Br ou I ligados à cadeia e podem ter propriedades e riscos distintos. Enzimas são catalisadores biológicos, em geral proteínas, com especificidade dependente de estrutura e condições. Na eletrólise de sal fundido, os íons do composto são reduzidos/oxidados nos eletrodos; em solução aquosa, água também pode competir nas semirreações, dependendo de potenciais, concentração e eletrodos. Não presuma produtos apenas pela fórmula do sal."},
+        {"type": "example", "append": "Balanceie Zn→Zn²⁺+2e⁻ e Cu²⁺+2e⁻→Cu; somando, Zn+Cu²⁺→Zn²⁺+Cu, com átomos e carga conservados. Na eletrólise de NaCl fundido, forma-se Na no cátodo e Cl₂ no ânodo; em solução aquosa, a redução de água pode competir com Na⁺, por isso os produtos podem diferir. Para resposta de prova, use as condições e os dados fornecidos."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "supersedes_version": "1.2.0",
+      "editorial_version": "1.2.1",
+      "review_status": "review",
+      "sections": [
+        {
+          "type": "example",
+          "replace_text": "Uma força vertical para cima de 100 N atua a 0,50 m à esquerda do eixo; uma força para cima de 50 N atua a 1,0 m à direita. Os torques têm módulos 50 N·m e sentidos opostos, então a soma de torques é zero. As duas forças somam 150 N para cima; para equilíbrio translacional, o apoio deve exercer 150 N para baixo. Assim, verificam-se separadamente Στ=0 e ΣF=0.",
+          "replacement": "Uma barra está presa a uma estrutura rígida pelo eixo central. Uma força vertical para cima de 100 N atua a 0,50 m à esquerda do eixo; outra força para cima de 50 N atua a 1,0 m à direita. Os torques têm módulos 50 N·m e sentidos opostos, então a soma de torques é zero. As duas forças somam 150 N para cima; a fixação rígida exerce 150 N para baixo. Como a barra está presa — e não apenas apoiada por contato — essa reação é possível. Verificam-se separadamente Στ=0 e ΣF=0."
+        }
+      ]
+    }
+  ]
+}

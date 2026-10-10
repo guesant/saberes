@@ -2,11 +2,15 @@ import { UIAlert } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
 
 export type CourseProgressErrorProps = {
-  error: Error;
+  error: Error | null;
 };
 
 export function CourseProgressError(props: CourseProgressErrorProps) {
   const { t } = useTranslation();
+
+  if (!props.error) {
+    return null;
+  }
 
   return (
     <UIAlert severity="warning">

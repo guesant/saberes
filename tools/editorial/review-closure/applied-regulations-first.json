@@ -1,0 +1,378 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T19:58:09.114880+00:00",
+  "database_before_sha256": "f3076030cc8c987689a1b9fb9a18e7e23d3922f7f6b640d49d43c17ebf6d4c8c",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 1
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O Vestibular Unicamp 2027 tem duas fases; a primeira ocorre em 18/10/2026 e a segunda em 29 e 30/11/2026."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Datas normativas da edição confirmadas na resolução consolidada e reconfirmadas pela Comvest em 02/10/2026; publicação proposta como informação daquela edição, sem confundir com simulados.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Resolução GR-022/2026 consolidada, art. 16, §1º: 1ª fase em 18/10/2026 e 2ª fase em 29 e 30/11/2026."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibular-unicamp-2027-liberada-a-consulta-aos-locais-de-prova-da-primeira-fase/",
+          "detail": "Comunicado oficial de 02/10/2026, seção Calendário: repete as datas das fases e anuncia a consulta aos locais da 1ª fase."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 2
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "Prova única de Conhecimentos Gerais, com 72 questões objetivas sobre áreas do Ensino Médio, inclusive interdisciplinares; cada questão vale 1 ponto."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Formato e valor por questão constam expressamente na norma e no Manual; a Comvest atual também informa quatro alternativas por questão.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 19, caput e §2º: uma prova de Conhecimentos Gerais, 72 questões objetivas, áreas do Ensino Médio, questões interdisciplinares, 1 ponto por questão."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seções da 1ª fase e Prova: comunicado atual informa 72 questões, quatro alternativas e um ponto por questão."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, p. 22, conferida visualmente: descrição da prova única, 72 questões, pontuação e distribuição."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 3
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A distribuição prevista é: 12 Matemática; 12 Língua Portuguesa e Literaturas; 7 de cada uma de Inglês, Biologia, Química, Física, História e Geografia; 3 Filosofia e 3 Sociologia."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A soma é 72 e a distribuição foi conferida disciplina por disciplina na fonte operacional atual e no Manual; conserva os nomes e quantitativos oficiais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção Prova: enumera 12 Português/Literaturas, 12 Matemática, 7 em cada uma de seis disciplinas e 3 em Filosofia e Sociologia."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, p. 22, conferida visualmente: quadro Distribuição das questões apresenta a mesma alocação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 4
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O Anexo II da Resolução contém o programa que serve de base às provas da primeira e da segunda fases; o documento não declara uma lista separada de tópicos exclusiva da primeira fase."
+      },
+      "changes": {
+        "editorial_status": "published",
+        "statement": "O programa do Anexo II da Resolução GR-022/2026 serve de base às questões das provas da primeira e da segunda fases; não há, nesse anexo, um programa separado e exclusivo para a primeira fase."
+      },
+      "reason": "A norma define o Anexo II como base das duas fases. A redação foi ajustada para atribuir a afirmação de ausência de lista separada ao escopo do anexo, sem sugerir que o banco de questões seja exaustivo.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 18 e Anexo II: os programas que servem de base às provas de 1ª e 2ª fases constam do mesmo anexo."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+          "detail": "Programa oficial, pp. 1–14: documento único de Programa das Provas, também disponível a partir da página de Vestibular 2027 da Comvest."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 5
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A prova começa às 9h (horário de Brasília), permite permanência máxima de 5 horas e saída após 2 horas; os portões/acessos fecham às 9h sem admissão de retardatários. A Comvest recomenda chegada às 8h."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Horário, duração máxima e mínima, fechamento e orientação de chegada foram conferidos em páginas independentes do Manual e reafirmados no comunicado de locais.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 19, §1º: duração de até 5 horas e mínimo de 2 horas para a 1ª fase."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, p. 24, conferida visualmente: horário de Brasília, acesso a partir das 8h, fechamento às 9h, sem retardatários; saída após 2h e máximo de 5h."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibular-unicamp-2027-liberada-a-consulta-aos-locais-de-prova-da-primeira-fase/",
+          "detail": "Comunicado de 02/10/2026, seção inicial: prova às 9h e orientação de estar no local às 8h."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 6
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "Ausência, nota zero ou pontuação obtida exclusivamente por anulação de questões elimina o candidato; a nota bruta corresponde à soma de pontos e é padronizada para a nota final conforme a Resolução."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Regras de eliminação, definição de N e padronização estão nos arts. 19–20; a redação é um resumo e remete a fórmula detalhada, sem substituir a norma.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 19, §§2º–4º, e art. 20: nota N da prova, hipóteses de eliminação, NPF1 e composição da NF1."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, pp. 22 e 26: página 22 resume eliminações; página 26 apresenta escala, NPF1 e regras de pontuação das anuladas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 7
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "É obrigatório levar o documento original com foto indicado na inscrição; a prova só pode ser realizada no local e sala designados."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "As duas obrigações são expressas no art. 13 e nas orientações operacionais do Manual; não foi ampliada a lista de documentos aceitos.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 13, §§6º–7º e 15º–19º: documento indicado na inscrição e alocação operacional pela Comvest."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, pp. 19 e 24: documento original indicado na inscrição; realização somente no local e sala designados."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 8
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "São permitidos: caneta preta em material transparente, lápis preto e borracha; régua transparente e compasso. Água, sucos, chocolates e alimentos leves também são permitidos."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Lista confirmada na seção de materiais do Manual e na orientação atual da Comvest. Mantida como resumo; não extrapola para embalagens não descritas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção O que levar: documento indicado, caneta preta transparente, lápis, borracha, régua e compasso; água, sucos, chocolates e alimentos leves."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, p. 24, conferida visualmente: materiais permitidos e lista de bebidas/alimentos leves."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 9
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "São vedados celulares, relógios de qualquer tipo e outros equipamentos eletrônicos, corretivo líquido, lapiseira, marca-texto, boné, chapéu e materiais estranhos à prova; óculos inteligentes e armações com componentes eletrônicos integrados também são proibidos durante toda a prova."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A lista foi conferida visualmente no Manual e coincide com a orientação atual da Comvest, inclusive a vedação expressa a óculos inteligentes durante toda a prova.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção O que levar: lista de itens vedados e proibição de óculos inteligentes/armações eletrônicas durante toda a prova."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, p. 24, conferida visualmente: proibições, inclusive relógios de qualquer tipo, eletrônicos e óculos inteligentes."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 10
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "Candidatos que necessitam de recursos específicos devem declarar a necessidade no formulário e enviar a documentação prevista; recursos deferidos incluem, conforme o caso, caderno ampliado, transcrição, ledor e tempo adicional de até 20%."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "O resumo cita exemplos efetivamente previstos; a concessão segue análise individual e não é apresentada como automática.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 14 e Anexo VI: declaração no formulário, documentação e recursos específicos para realização das provas."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, pp. 20–21: laudo e pedido, análise por subcomissão, exemplos de recursos e limite de tempo extra de até 20%."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 11
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O local é designado pela Comvest conforme disponibilidade; indicar região preferencial em São Paulo não garante alocação. Locais individuais devem ser consultados na área do candidato."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A regra de alocação está na Resolução; o comunicado oficial comprova a liberação efetiva em 02/10. O calendário impresso no Manual previa 05/10, portanto foi tratado como previsão superada, não como data efetiva.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 13, §§15º–19º: preferência de cidade/região não garante prédio/bairro/local; alocação conforme capacidade e divulgação exclusiva pela Comvest."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibular-unicamp-2027-liberada-a-consulta-aos-locais-de-prova-da-primeira-fase/",
+          "detail": "Comunicado publicado em 02/10/2026: locais da 1ª fase já disponíveis na página/área do candidato."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, pp. 10 e 25: calendário previa divulgação em 05/10; a seção de locais remete à consulta oficial individual. A data efetiva anterior foi confirmada pelo comunicado de 02/10."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 12
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O prazo inicialmente divulgado de 31/08/2026 foi prorrogado: inscrição e pagamento puderam ser feitos até 08/09/2026 às 17h."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A extensão foi verificada no comunicado oficial datado de 31/08 e na página atual do Vestibular; o prazo encerrado fica explicitamente situado na edição 2027.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/unicamp-prorroga-inscricoes-para-o-vestibular-2027-ate-o-dia-8-de-setembro/",
+          "detail": "Comunicado oficial de 31/08/2026: inscrição prorrogada até 08/09 às 17h; pagamento também até 08/09."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Calendário da edição registra a prorrogação para 08/09/2026 e distingue o prazo inicial de 31/08."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 13, caput e §1º: período inicialmente previsto e prazo de pagamento até 08/09/2026; comunicado posterior prorrogou também a inscrição."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 13
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "Não há vista ou revisão das provas; objeções a questões devem ser enviadas à Comvest por e-mail, identificadas, fundamentadas e em até três dias após a aplicação."
+      },
+      "changes": {
+        "editorial_status": "published",
+        "statement": "Não há vista ou revisão das provas. Objeções a questões devem ser encaminhadas à Comvest por e-mail, por remetente identificado, devidamente fundamentadas e em até três dias após a realização de cada prova; a resposta é comunicada apenas ao interessado."
+      },
+      "reason": "O texto atual omite que o prazo se conta após cada prova e não explicita o retorno individual; a proposta recupera os limites do art. 28 e do Manual sem prometer revisão individual da prova.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 28: sem vista/revisão; objeções por correio eletrônico, identificadas e fundamentadas, até 3 dias após cada prova; resposta exclusivamente ao interessado."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, p. 23: mesma orientação sobre vista, objeções por e-mail e prazo contado de cada prova."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 14
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A Nota Padronizada da 1ª fase (NPF1) é calculada por NPF1 = 500 + (N − M) × 100 / DP. N é a nota bruta do candidato; M é a média e DP o desvio padrão das notas dos candidatos presentes, excluídas as notas iguais a zero. M e DP são arredondados para uma casa decimal em incrementos de 0,5; NPF1 é arredondada para uma casa decimal com precisão de 0,1."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Fórmula, população usada em M/DP e precisões foram conferidas na resolução e na página visual do Manual. A expressão normativa ‘uma casa decimal com precisão de 0,5’ foi preservada sem reinterpretar o arredondamento.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 19, §4º, incisos I–IV: fórmula NPF1, exclusão das notas zero para M/DP e precisões de arredondamento."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "PDF oficial, p. 26, conferida visualmente: fórmula, definição de N/M/DP e regras de arredondamento; confirmei ainda no texto extraído da página."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T195809125965Z.sqlite",
+  "database_after_sha256": "cd3a629bca84e35a74669d94a184370713b19969fb1bffa47eed9409a39f1044"
+}

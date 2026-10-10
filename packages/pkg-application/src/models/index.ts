@@ -13,6 +13,7 @@ export * from "./topic-navigation-read-model.interface";
 export * from "./topic-question-read-model.interface";
 export * from "./topic-lesson-read-model.interface";
 export * from "./topic-resource-read-model.interface";
+export * from "./topic-curriculum-coverage.interface";
 export * from "./add-study-points-input.interface";
 export * from "./add-study-points-result.interface";
 export * from "./attempt.type";

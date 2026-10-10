@@ -1,0 +1,67 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:06:29.501736+00:00",
+  "database_before_sha256": "0e8cdaa7afd4cb490cf46273136876b46218f65ea692ae2d019a5e57c3690ca7",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "questions",
+      "key": {
+        "id": 53
+      },
+      "expected": {
+        "status": "draft",
+        "editorial_version": "1.0.0",
+        "explanation": null
+      },
+      "changes": {
+        "status": "published",
+        "editorial_version": "1.0.1",
+        "explanation": "Questão oficialmente anulada no gabarito definitivo do caderno Q/Z de 2025. A fonte atribui o ponto a todos os candidatos presentes. Não existe alternativa correta definitiva para correção automática deste item. O enunciado e a figura foram conferidos para consulta histórica; a anulação é preservada e o item não entra em treino individual nem nas métricas de acerto."
+      },
+      "reason": "Anulação é um resultado oficial, não uma extração incompleta. Aprovar a fidelidade editorial para consulta, preservando a chave cancelled, sem inventar resposta nem habilitar correção automática.",
+      "evidence": [
+        {
+          "locator": "tools/editorial/review-closure/evidence/qz-upper/QZ-page-18.png",
+          "detail": "Página original renderizada cotejada visualmente: questão 53, arruela, diâmetros 60/40 cm, área por lata e quatro alternativas estão completos.",
+          "sha256": "e10e5e5837cdb78b5f153902cb47a968597b613f58f2cbd6536f6cae2ea56e6b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo Q/Z: questão 53 anulada, ponto atribuído a todos os presentes; chave canônica existente 53 cancelled, não gradável, mantida."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 53
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 53,
+        "number": 53,
+        "source_page": 18
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência original íntegra de um item oficialmente anulado. Publicação para consulta não altera a chave nem permite treino gradável.",
+      "evidence": [
+        {
+          "locator": "tools/editorial/review-closure/evidence/qz-upper/QZ-page-18.png",
+          "detail": "Ordem e número original 53 preservados; cotejo visual da questão e figura.",
+          "sha256": "e10e5e5837cdb78b5f153902cb47a968597b613f58f2cbd6536f6cae2ea56e6b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Anulação oficial preservada na chave canônica de ocorrência 53."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T200629525802Z.sqlite",
+  "database_after_sha256": "5efd2032fcfe10fc5470bb2ad41252006820cdf9cdd48a2b4985da15fb5f746c"
+}

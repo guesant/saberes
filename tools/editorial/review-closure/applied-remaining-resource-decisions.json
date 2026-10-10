@@ -1,0 +1,1538 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T00:28:51.995254+00:00",
+  "database_before_sha256": "78ab3e9a73d82280d924db461ccc157d483dbf2e72c72963bef61a7cd2d6d881",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 185
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.khanacademy.org/science/mechanics-essentials",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The listed English-language mechanics course remains a consultation candidate; the full course was not pedagogically audited for this Portuguese high-school syllabus. Link-only; do not treat its listing as an approved lesson."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/science/mechanics-essentials",
+          "detail": "Direct destination recorded for Mechanics (Essentials); review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/185",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 186
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.khanacademy.org/science/physics-i/forces-and-motion",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The English-language practice page was not audited question by question or for accessibility. Consultation only; no exercise or answer key is endorsed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/science/physics-i/forces-and-motion",
+          "detail": "Direct destination recorded for Forces and motion (practice); review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/186",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 255
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://brasilescola.uol.com.br/redacao/elementos-da-narrativa.htm",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The destination content could not be substantively inspected in this review. The record remains visible for source inspection; title alone does not approve it as a lesson."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/redacao/elementos-da-narrativa.htm",
+          "detail": "Direct destination recorded for Elementos da narrativa; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/255",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 257
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Aestrategias-de-leitura/e/lp-o-que-sao-generos-textuais",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The interactive exercise and its answer feedback were not validated question by question. Consultation only; not an approved practice resource."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Aestrategias-de-leitura/e/lp-o-que-sao-generos-textuais",
+          "detail": "Direct destination recorded for O que são gêneros textuais? — prática; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/257",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 258
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa%3Alp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa%3Alp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The linked video was not watched and no full transcript was checked. Consultation only; do not present it as a reviewed lesson."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa%3Alp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa%3Alp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos",
+          "detail": "Direct destination recorded for O que são orações e períodos?; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/258",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 277
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.youtube.com/watch?v=fObv7-lZx4c",
+        "source_document_id": 346,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Official TV Unicamp/CRIA metadata identifies this commentary on Morangos Mofados. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=fObv7-lZx4c",
+          "detail": "Direct destination recorded for A análise de Morangos Mofados, de Caio Fernando Abreu; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/277",
+          "detail": "Current resource record and status checked read-only; source_document_id=346 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 278
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.youtube.com/watch?v=reZorOzMFCo",
+        "source_document_id": 347,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Official TV Unicamp/CRIA metadata identifies this commentary on Olhos d’água. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=reZorOzMFCo",
+          "detail": "Direct destination recorded for Como interpretar o livro ‘Olhos d’água’, de Conceição Evaristo?; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/278",
+          "detail": "Current resource record and status checked read-only; source_document_id=347 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 281
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.youtube.com/watch?v=Llb6DrI4wj0",
+        "source_document_id": 350,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Official Unicamp metadata identifies a 2024 CRIA talk about A vida não é útil. Published as a historical reference to the work; the talk itself and accessibility were not reviewed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=Llb6DrI4wj0",
+          "detail": "Direct destination recorded for Palestra sobre ‘A vida não é útil’, do imortal Krenak, abre edição 2024 do Cria Unicamp; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/281",
+          "detail": "Current resource record and status checked read-only; source_document_id=350 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 282
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.youtube.com/watch?v=__xISnb_2mA",
+        "source_document_id": 351,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Official TV Unicamp/CRIA metadata identifies this commentary on José Paulo Paes. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=__xISnb_2mA",
+          "detail": "Direct destination recorded for A sensibilidade, a ironia e o humor dos escritos de José Paulo Paes; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/282",
+          "detail": "Current resource record and status checked read-only; source_document_id=351 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 285
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.youtube.com/watch?v=_kFQZtbd8Sc",
+        "source_document_id": 354,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Official TV Unicamp/CRIA metadata identifies this commentary on Lima Barreto. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=_kFQZtbd8Sc",
+          "detail": "Direct destination recorded for Racionalidade e ironia em obra de Lima Barreto; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/285",
+          "detail": "Current resource record and status checked read-only; source_document_id=354 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 479
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.wikipedia.org/wiki/Conjunto_(matem%C3%A1tica)",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "The direct encyclopedia entry is retained only as a general reference on sets. Its breadth and collaborative nature do not establish a complete lesson for the canonical topic."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Conjunto_(matem%C3%A1tica)",
+          "detail": "Direct destination recorded for Conjunto (matemática); review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/479",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 480
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.khanacademy.org/search?page_search_query=conjuntos+num%C3%A9ricos+opera%C3%A7%C3%B5es+exerc%C3%ADcios",
+        "source_document_id": null,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "This is a dynamic Khan Academy search, not a fixed exercise. Publish as a discovery link only; results and answers are not individually endorsed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=conjuntos+num%C3%A9ricos+opera%C3%A7%C3%B5es+exerc%C3%ADcios",
+          "detail": "Direct destination recorded for Buscar prática: conjuntos numéricos; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/480",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 482
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86%3Aquadratics-multiplying-factoring/x2f8bb11595b61c86%3Amultiply-monomial-polynomial/e/polynomials-intro",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The exercise presents a single-choice item with checkbox controls in the inspected interface. Keep the URL visible for source inspection, but do not recommend it as usable practice until the provider fixes the interaction."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86%3Aquadratics-multiplying-factoring/x2f8bb11595b61c86%3Amultiply-monomial-polynomial/e/polynomials-intro",
+          "detail": "Direct destination recorded for Introdução aos polinômios — prática; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/482",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 491
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.wikipedia.org/wiki/Geometria_anal%C3%ADtica",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "The direct encyclopedia entry is retained only as a general reference to analytic geometry; it is not a sequenced lesson or complete syllabus coverage."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Geometria_anal%C3%ADtica",
+          "detail": "Direct destination recorded for Geometria analítica; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/491",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 492
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.khanacademy.org/search?page_search_query=geometria+anal%C3%ADtica+plano+cartesiano+exerc%C3%ADcios",
+        "source_document_id": null,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "This is a dynamic Khan Academy search, not a fixed exercise. Publish as a discovery link only; results and answers are not individually endorsed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=geometria+anal%C3%ADtica+plano+cartesiano+exerc%C3%ADcios",
+          "detail": "Direct destination recorded for Buscar prática: geometria analítica; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/492",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 493
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.wikipedia.org/wiki/Geografia_f%C3%ADsica",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "The direct encyclopedia entry is retained only as a broad reference to physical geography. It does not establish Portuguese high-school alignment or complete coverage."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Geografia_f%C3%ADsica",
+          "detail": "Direct destination recorded for Geografia física; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/493",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 494
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.khanacademy.org/search?page_search_query=geografia+f%C3%ADsica+relevo+clima+hidrografia+exerc%C3%ADcios",
+        "source_document_id": null,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "This is a dynamic Khan Academy search, not a fixed exercise. Publish as a discovery link only; results and answers are not individually endorsed."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=geografia+f%C3%ADsica+relevo+clima+hidrografia+exerc%C3%ADcios",
+          "detail": "Direct destination recorded for Buscar prática: geografia física; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/494",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 498
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-idade-antiga.htm",
+        "source_document_id": 597,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audited list contains an ambiguous answer in Q8 and text defects in Q10–Q11 that cannot be excluded at the provider page. Keep visible for consultation; do not recommend the list as practice."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-idade-antiga.htm",
+          "detail": "Direct destination recorded for Exercícios de História: Idade Antiga; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/498",
+          "detail": "Current resource record and status checked read-only; source_document_id=597 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 500
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-idade-moderna.htm",
+        "source_document_id": 581,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audited list contains a duplicated/missing alternative in Q11 that cannot be excluded at the provider page. Keep visible for consultation; do not recommend the list as practice."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-idade-moderna.htm",
+          "detail": "Direct destination recorded for Exercícios sobre Idade Moderna; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/500",
+          "detail": "Current resource record and status checked read-only; source_document_id=581 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 507
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.wikipedia.org/wiki/Termodin%C3%A2mica",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "The direct encyclopedia entry is retained only as a general reference to thermodynamics. The cited references do not cover the full subject; this is not a vetted lesson."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Termodin%C3%A2mica",
+          "detail": "Direct destination recorded for Termodinâmica; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/507",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 512
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-os-estados-fisicos-materia.htm",
+        "source_document_id": 602,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audited list contains substantive errors in several statements/answers, including states-of-matter classification. Keep visible for consultation; do not use as practice until corrected by the publisher."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-os-estados-fisicos-materia.htm",
+          "detail": "Direct destination recorded for Exercícios sobre os estados físicos da matéria; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/512",
+          "detail": "Current resource record and status checked read-only; source_document_id=602 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 516
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-ou-celulas-eletroquimicas.htm",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audit found an incorrect answer/calculation and an item dependent on an essential figure. Keep visible for consultation; do not recommend this list as practice."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-ou-celulas-eletroquimicas.htm",
+          "detail": "Direct destination recorded for Exercícios sobre eletroquímica; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/516",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 518
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-funcoes-organicas.htm",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The questions depend on molecular structures in images without adequate text equivalents. Keep visible for consultation; do not recommend as accessible or usable practice."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-funcoes-organicas.htm",
+          "detail": "Direct destination recorded for Exercícios sobre funções orgânicas; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/518",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 522
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-areas-de-figuras-planas.htm",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audit found unit errors and visual prompts without recoverable geometry/dimensions. Keep visible for consultation; do not recommend the current answer key."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-areas-de-figuras-planas.htm",
+          "detail": "Direct destination recorded for Exercícios sobre áreas de figuras planas; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/522",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 524
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-geometria-analitica.htm",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The solutions are image-only and the mathematical answers were not verified. Keep visible for consultation; do not recommend the solution set as validated practice."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-geometria-analitica.htm",
+          "detail": "Direct destination recorded for Exercícios sobre Geometria Analítica; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/524",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 525
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-geografia-fisica.htm",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "Several questions depend on maps/images whose necessary information was not transcribed or visually verified. Keep visible for consultation; do not recommend as validated practice."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-geografia-fisica.htm",
+          "detail": "Direct destination recorded for Exercícios sobre geografia física; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/525",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 526
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-recifes-corais.htm",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audit found an overgeneralized claim about coral survival after bleaching. Keep visible for consultation; do not recommend the current answer key."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-recifes-corais.htm",
+          "detail": "Direct destination recorded for Exercícios sobre recifes de corais; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/526",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 527
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-sistema-solar.htm",
+        "source_document_id": 599,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audit found material errors in several answers. Keep visible for consultation; do not recommend the list as practice until corrected."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-sistema-solar.htm",
+          "detail": "Direct destination recorded for Exercícios sobre Sistema Solar; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/527",
+          "detail": "Current resource record and status checked read-only; source_document_id=599 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 528
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-termodinamica.htm",
+        "source_document_id": null,
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The audit found a heat-flow direction inconsistent with a refrigerator/COP and a claim assigning joules as the unit of efficiency. Keep visible for consultation; do not recommend the current answer key."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-termodinamica.htm",
+          "detail": "Direct destination recorded for Exercícios sobre termodinâmica; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/528",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 529
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.unicamp.br/noticias/2026/06/01/comvest-divulga-locais-de-prova-do-simulado-presencial-do-vestibular-unicamp/",
+        "source_document_id": 443,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Official Unicamp notice documents the locations for the June 2026 preparatory simulation. The event is historical and the notice is operational, not study content."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/06/01/comvest-divulga-locais-de-prova-do-simulado-presencial-do-vestibular-unicamp/",
+          "detail": "Direct destination recorded for Comvest divulga locais de prova do simulado presencial do vestibular Unicamp; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/529",
+          "detail": "Current resource record and status checked read-only; source_document_id=443 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 530
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://www.unicamp.br/noticias/2026/06/11/unicamp-aplica-simulado-presencial-no-proximo-domingo-14-6/",
+        "source_document_id": 444,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Official Unicamp notice documents the June 2026 simulation date. The event is historical and the notice is operational, not study content."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/06/11/unicamp-aplica-simulado-presencial-no-proximo-domingo-14-6/",
+          "detail": "Direct destination recorded for Unicamp aplica simulado presencial no domingo (14/6); review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/530",
+          "detail": "Current resource record and status checked read-only; source_document_id=444 and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 531
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://pt.khanacademy.org/math/pt-9-ano/probabilidade-e-estistica-9ano/graficos-e-tabelas-9ano/v/analise-de-graficos",
+        "source_document_id": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "The recorded Khan Academy page did not expose inspectable lesson content during review. Keep the record visible for source inspection; do not recommend it as a reviewed lesson."
+      },
+      "reason": "Publish an accurately scoped bibliographic/consultation record based on the direct URL and the per-item audit; the chosen availability mode prevents this record from being misrepresented as an approved lesson or practice when content quality is unresolved.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/pt-9-ano/probabilidade-e-estistica-9ano/graficos-e-tabelas-9ano/v/analise-de-graficos",
+          "detail": "Direct destination recorded for Análise de gráficos; review note documents the observed function or the specific defect and the limits of this status."
+        },
+        {
+          "locator": "sqlite://resources/531",
+          "detail": "Current resource record and status checked read-only; source_document_id=None and original URL are preserved."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 185,
+        "topic_id": 2486,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 185; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/185",
+          "detail": "Resource 185 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 186,
+        "topic_id": 2486,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 186; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/186",
+          "detail": "Resource 186 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 255,
+        "topic_id": 2484,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 255; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/255",
+          "detail": "Resource 255 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 257,
+        "topic_id": 2482,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 257; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/257",
+          "detail": "Resource 257 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 258,
+        "topic_id": 2483,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 258; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/258",
+          "detail": "Resource 258 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 479,
+        "topic_id": 2544,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 479; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/479",
+          "detail": "Resource 479 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 480,
+        "topic_id": 2544,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 480; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/480",
+          "detail": "Resource 480 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 482,
+        "topic_id": 2545,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 482; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/482",
+          "detail": "Resource 482 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 491,
+        "topic_id": 2550,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 491; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/491",
+          "detail": "Resource 491 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 492,
+        "topic_id": 2550,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 492; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/492",
+          "detail": "Resource 492 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 493,
+        "topic_id": 2551,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 493; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/493",
+          "detail": "Resource 493 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 494,
+        "topic_id": 2551,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 494; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/494",
+          "detail": "Resource 494 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 498,
+        "topic_id": 2553,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 498; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/498",
+          "detail": "Resource 498 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 507,
+        "topic_id": 2558,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 507; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/507",
+          "detail": "Resource 507 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 512,
+        "topic_id": 2560,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 512; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/512",
+          "detail": "Resource 512 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 516,
+        "topic_id": 2562,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 516; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/516",
+          "detail": "Resource 516 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 518,
+        "topic_id": 2563,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 518; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/518",
+          "detail": "Resource 518 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 522,
+        "topic_id": 2547,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 522; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/522",
+          "detail": "Resource 522 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 524,
+        "topic_id": 2550,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 524; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/524",
+          "detail": "Resource 524 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 525,
+        "topic_id": 2551,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 525; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/525",
+          "detail": "Resource 525 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 526,
+        "topic_id": 2556,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 526; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/526",
+          "detail": "Resource 526 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 527,
+        "topic_id": 2557,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 527; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/527",
+          "detail": "Resource 527 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 528,
+        "topic_id": 2558,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 528; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/528",
+          "detail": "Resource 528 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 531,
+        "topic_id": 2565,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "A relação com o tópico é preservada como correspondência temática da ficha 531; a disponibilidade e as limitações de uso estão explícitas no registro do recurso. Esta relação não certifica acessibilidade assistiva nem transforma uma referência/consulta em atividade de treino."
+      },
+      "reason": "The destination title/type and current topic identifier agree; the resource record itself carries the limits on use and quality.",
+      "evidence": [
+        {
+          "locator": "sqlite://resources/531",
+          "detail": "Resource 531 title and destination preserved; this topic link is informational and does not count as study/practice approval."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T002852006463Z.sqlite",
+  "database_after_sha256": "0bee4e0abc636cef6671f4ba92c4bc01b76ed2c8e9a12dd46837f6e244ac4245"
+}

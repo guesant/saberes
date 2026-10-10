@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppServices } from "../../composition/use-app-services.hook";
+import { getAssessmentPracticeQuestionKeys } from "./get-assessment-practice-question-keys.function";
 import { getAssessmentQuestionKeys } from "./get-assessment-question-keys.function";
 import { startAssessmentSession } from "./start-assessment-session.function";
 import type { AssessmentSessionLauncherProps } from "./assessment-session-launcher-props.interface";
@@ -25,9 +26,21 @@ export function useAssessmentSessionLauncher(
     setError(null);
 
     try {
-      await startAssessmentSession({ ...props, questionKeys, services, navigate, mode });
+      let sessionQuestionKeys = questionKeys;
+
+      if (mode === "practice") {
+        sessionQuestionKeys = getAssessmentPracticeQuestionKeys(props.assessment, questionKeys);
+      }
+
+      await startAssessmentSession({ ...props, questionKeys: sessionQuestionKeys, services, navigate, mode });
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Não foi possível iniciar a sessão.");
+      let message = "Não foi possível iniciar a sessão.";
+
+      if (cause instanceof Error) {
+        message = cause.message;
+      }
+
+      setError(message);
     } finally {
       setPending(false);
     }

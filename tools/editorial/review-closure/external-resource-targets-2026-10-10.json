@@ -1,0 +1,5 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "summary": "Vínculos de escopo para recursos externos auditados, sem duplicar recursos.",
+  "decisions": []
+}

@@ -1,6 +1,6 @@
 import { UIListItemButton, UIListItemText } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
-import { getTopicResourceAvailabilityKey } from "./get-topic-resource-availability-key.function";
+import { getTopicResourceDescription } from "./get-topic-resource-description.function";
 import type { TopicResourceReadModel } from "@guesant/saberes-application";
 
 export interface TopicResourceLinkProps {
@@ -12,10 +12,7 @@ export function TopicResourceLink(props: TopicResourceLinkProps) {
 
   const { resource } = props;
 
-  const availability = t(getTopicResourceAvailabilityKey(resource.isExternal));
-
-  const description = [resource.description, resource.kind, resource.provider, availability].filter(Boolean)
-    .join(" · ");
+  const description = getTopicResourceDescription(resource, t);
 
   return (
     <UIListItemButton component="a" href={resource.url}>

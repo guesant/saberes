@@ -11,19 +11,23 @@ export function UIPageSurface(props: UIPageSurfaceProps): ReactElement {
       gap="none"
       inset="none"
       layout="native"
+      data-testid="page-surface"
       sx={{
         display: "grid",
         height: "100vh",
-        inset: 0,
+        left: "50%",
+        maxWidth: "500px",
         overflow: "hidden",
         position: "fixed",
-        gridTemplateColumns: "minmax(0, 1fr) minmax(0, 500px) minmax(0, 1fr)",
+        transform: "translateX(-50%)",
+        gridTemplateColumns: "minmax(0, 1fr)",
         gridTemplateRows: "auto minmax(0, 1fr)",
         minHeight: 0,
         minWidth: 0,
         width: "100%",
         "@supports (height: 100dvh)": { height: "100dvh" },
         bgcolor: "background.default",
+        "@media (max-width: 500px)": { left: 0, transform: "none" },
       }}
     >
       {props.children}

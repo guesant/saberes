@@ -1,0 +1,76 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": { "id": 4 },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — 1ª fase, prova comentada",
+        "url": "/data/official-commentaries/2026/4.pdf",
+        "kind": "official_commented_exam_pdf",
+        "description": "Documento de 71 páginas; índice oficial aponta ‘Questões – múltipla escolha’ na seção Provas Comentadas 2026 | O PDF contém prova comentada, alternativa correta e justificativas por alternativa; revisar licença antes de importar conteúdo integral. | Consultado em 2026-10-06",
+        "source_document_id": 4,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "title": "Vestibular Unicamp 2026 — 1ª fase, prova comentada (introdução interna menciona 2025)",
+        "editorial_note": "Identidade qualificada para consulta: capa do PDF e índice oficial identificam Vestibular 2026, mas a introdução do próprio PDF diz que a publicação se refere ao Vestibular 2025. A divergência permanece explícita; este registro não afirma que o erro da fonte original foi resolvido. ‘published’ aprova apenas os metadados qualificados e a consulta do item, não a consistência interna, a exatidão dos comentários/respostas ou a frase conflitante. Manter availability_mode=consultation_only e as permissões atuais; esta decisão não autoriza reproduzir o PDF."
+      },
+      "reason": "A ficha pode ser publicada como referência qualificada se a contradição entre capa/índice e introdução estiver visível no título e na nota, sem declarar corrigido o documento-fonte.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibulares-anteriores/1a-fase-2a-fase-comentadas/",
+          "detail": "Índice oficial lista o PDF sob ‘Provas comentadas 2026’ > ‘1ª Fase’ > ‘Questões – múltipla escolha’; comprova a classificação/catalogação institucional, não resolve a divergência interna."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "PDF oficial: capa identifica ‘Vestibular Unicamp 2026 — Prova Comentada — 1ª fase’; introdução (p. 1 impressa) declara que a publicação se refere ao Vestibular 2025. Ambas as páginas foram renderizadas e conferidas visualmente."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-commentaries/2026/4.pdf",
+          "detail": "Cópia de consulta do source_document_id 4; inspeção visual das páginas de capa e introdução, sem edição do PDF."
+        }
+      ]
+    }
+  ],
+  "verified_no_change": [
+    {
+      "table": "source_documents",
+      "key": { "id": 147 },
+      "expected": {
+        "title": "Resolução GR-026/2026 — alteração da Resolução GR-022/2026",
+        "url": "https://www.pg.unicamp.br/norma/32405/0",
+        "provider": "Procuradoria Geral da Unicamp",
+        "kind": "regulation_amendment",
+        "published_at": "2026-08-03",
+        "checksum": null,
+        "is_official": 1,
+        "reuse_status": "unknown",
+        "license_name": null,
+        "license_url": null,
+        "attribution": null,
+        "rights_note": null
+      },
+      "changes": {},
+      "disposition": "reviewed_no_change",
+      "reason": "source_document_id 147 já tem URL direta da GR-026/2026, não o índice geral. Resources 244 e 287 compartilham este source document; a ficha 244 pode trocar seu próprio URL para a mesma entrada direta, preservando o índice antigo em sua descrição. Não é necessário UPDATE nem INSERT no registro-fonte 147.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32405/0",
+          "detail": "URL direta da Resolução GR-026/2026 já armazenada no source document 147 e usada pelo resource 287."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/normas",
+          "detail": "Índice oficial de normas; resource 244 conserva esta URL antiga como navegação histórica, mas ela não é o URL do source document 147."
+        },
+        {
+          "locator": ".local/content/content.sqlite (consulta SQLite readonly)",
+          "detail": "Leitura das linhas 244 e 287 confirma que ambas referenciam source_document_id 147; leitura da linha 147 confirma que o URL do source document já é https://www.pg.unicamp.br/norma/32405/0. Sem escrita no banco."
+        }
+      ]
+    }
+  ],
+  "blocked": [],
+  "summary": "Dry-run editorial separado: uma proposta de metadados para resource 4, mantendo visível o conflito entre a capa/índice 2026 e a introdução 2025, sem alegar que a fonte original foi corrigida; e verificação sem mudança de source_document 147, cuja URL já é a entrada direta da GR-026/2026. A proposta da ficha 4 conserva consultation_only. Nenhum PDF ou SQLite foi alterado; nenhum campo de direitos/licença/reuso foi mudado."
+}

@@ -5,14 +5,20 @@ import type { ReactElement } from "react";
 export function UIToast(props: UIToastProps): ReactElement {
   let role = "status";
 
+  let autoHideDuration: number | null = 3500;
+
   if (props.severity === "error") {
     role = "alert";
+  }
+
+  if (props.autoHideDuration !== undefined) {
+    autoHideDuration = props.autoHideDuration;
   }
 
   return (
     <Snackbar
       anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
-      autoHideDuration={props.autoHideDuration ?? 3500}
+      autoHideDuration={autoHideDuration}
       onClose={props.onClose}
       open={props.open}
       sx={{

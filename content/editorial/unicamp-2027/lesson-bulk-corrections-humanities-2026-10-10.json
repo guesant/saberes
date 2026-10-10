@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "package_id": "unicamp-2027-humanities-holds-bulk-corrections-v1",
+  "scope": "Propostas de revisão para microaulas da primeira fase do Vestibular Unicamp 2027; não constituem aprovação nem publicação.",
+  "method": "Patches localizados sobre as lições atuais do SQLite. Preservar o conteúdo existente e manter review_status=review; validar automaticamente e conferir apenas amostras representativas antes de qualquer decisão editorial.",
+  "revisions": [
+    {
+      "curriculum_topic_id": 2472,
+      "supersedes_version": "1.0.3",
+      "editorial_version": "1.0.4",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "hold_resolution": "Remove a pergunta de autochecagem cujo artigo definido não tinha antecedente textual. A resposta passa a identificar a substantivação sem pedir que o estudante adivinhe o referente contextual.",
+      "sections": [
+        {
+          "type": "summary",
+          "replace_text": "**Autochecagem:** em “o novo destaca a acessibilidade”, “novo” continua apenas qualificando um substantivo expresso? **Resposta:** não; com o artigo “o”, o adjetivo está substantivado e funciona como núcleo de uma expressão nominal. O referente exato depende do contexto anterior.",
+          "replacement": "**Autochecagem:** em “O novo foi anunciado hoje”, qual é a função de “novo”? **Resposta:** acompanhado pelo artigo “o” e sem substantivo expresso, o adjetivo está substantivado e funciona como núcleo da expressão nominal. A frase isolada não permite identificar a que novidade o texto se refere; isso dependeria do contexto anterior."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "supersedes_version": "1.0.5",
+      "editorial_version": "1.0.6",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "hold_resolution": "Corrige a pontuação que invalidava a transição da lista oficial e acrescenta uma leitura guiada de obra obrigatória, com evidência, procedimento e limite interpretativo. Não afirma analisar a lista inteira nem substitui a leitura das obras.",
+      "sections": [
+        {
+          "type": "theory",
+          "replace_text": "Confira a grafia e a seleção na relação oficial de livros da edição.; **Os funerais",
+          "replacement": "Confira a grafia e a seleção na relação oficial de livros da edição. **Os funerais"
+        },
+        {
+          "type": "example",
+          "append": "**Leitura guiada de obra obrigatória — *Memórias Póstumas de Brás Cubas*, “Ao leitor”:** (1) observe que Brás Cubas se apresenta como narrador depois da morte e se dirige diretamente a quem lê; (2) note como essa posição e a conversa sobre a própria narrativa quebram a expectativa de um relato impessoal; (3) a solução de leitura é reconhecer a moldura metanarrativa e o tom irônico como efeitos sustentados pela forma; (4) essa abertura, sozinha, não prova uma tese única sobre toda a sociedade ou sobre a opinião pessoal de Machado de Assis. Confirme cada passo no texto da obra e use outras passagens antes de ampliar a interpretação."
+        },
+        {
+          "type": "summary",
+          "append": "**Autochecagem da leitura guiada:** em “Ao leitor”, o narrador fala de uma posição convencional de observador externo? **Resposta:** não; Brás Cubas se apresenta como autor-narrador já morto e interpela o leitor. Isso sustenta uma análise da moldura narrativa e de seus efeitos, mas não autoriza, sem outras passagens, concluir qual é a posição do romance sobre toda a sociedade."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "supersedes_version": "1.2.2",
+      "editorial_version": "1.2.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "hold_resolution": "Explicita subconjunto e a diferença entre pertinência de elemento (∈) e inclusão de conjuntos (⊆), com exemplo resolvido e autochecagem correspondentes.",
+      "sections": [
+        {
+          "type": "theory",
+          "append": "**Pertinência e inclusão:** x∈A afirma que o objeto x é elemento de A; A⊆B afirma que todo elemento de A também pertence a B. Se A⊆B e A≠B, A é subconjunto próprio de B. Portanto, a relação compara objetos de tipos distintos: elemento com conjunto em ∈, conjunto com conjunto em ⊆."
+        },
+        {
+          "type": "example",
+          "append": "**Exemplo resolvido — elemento ou subconjunto:** sejam A={1,2} e B={1,2,3}. Como 2 é um elemento de A, escrevemos 2∈A. Como os dois elementos de A também estão em B e A≠B, escrevemos A⊂B (subconjunto próprio). Já {2}⊆A é verdadeiro, mas {2}∈A é falso: os elementos listados em A são 1 e 2, não o conjunto {2}."
+        },
+        {
+          "type": "summary",
+          "append": "**Autochecagem:** para A={1,2} e B={1,2,3}, são verdadeiras 2∈A e A⊂B; {2}∈A é falsa, enquanto {2}⊆A é verdadeira. Explique: 2 é elemento de A, mas {2} é um conjunto cujos elementos estão todos em A."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "supersedes_version": "1.3.2",
+      "editorial_version": "1.3.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "hold_resolution": "Acrescenta cobertura didática explícita para funções quadráticas e trigonométricas, inversas e resolução de equações/inequações; exemplos e autochecagem mostram como obter soluções e interpretar intervalos. A lição continua em revisão até conferência de escopo.",
+      "sections": [
+        {
+          "type": "theory",
+          "append": "**Famílias e operações ainda cobradas:** numa função quadrática ax²+bx+c (a≠0), o gráfico é uma parábola; zeros resolvem f(x)=0 e o sinal pode ser estudado pelas raízes e pela concavidade. Funções trigonométricas modelam fenômenos periódicos; para seno e cosseno, o período básico é 2π quando o argumento é x. Uma função inversa troca entrada e saída e só existe como função no domínio considerado quando a correspondência é injetiva (ou após restringir o domínio). Equações pedem os valores que tornam duas expressões iguais; inequações pedem os intervalos em que uma comparação é verdadeira. Sempre respeite domínio e intervalo solicitado."
+        },
+        {
+          "type": "example",
+          "append": "**Quadrática e inequação:** para q(x)=x²−4, q(x)=0 implica (x−2)(x+2)=0, logo x=−2 ou x=2; como a parábola abre para cima, q(x)≤0 entre as raízes: x∈[−2,2]. **Trigonometria em intervalo:** em 0≤x≤2π, sin(x)=1/2 em x=π/6 e 5π/6; sin(x)≥1/2 no intervalo fechado [π/6,5π/6]. **Inversa:** se f(x)=3x−2, escreva y=3x−2, troque x e y e isole y: f⁻¹(x)=(x+2)/3; a composição f(f⁻¹(x))=x confirma o resultado."
+        },
+        {
+          "type": "summary",
+          "append": "**Autochecagem:** para x²−4≤0, a solução é [−2,2], não apenas os zeros; em 0≤x≤2π, sin(x)=1/2 tem duas soluções, π/6 e 5π/6; para f(x)=3x−2, f⁻¹(x)=(x+2)/3. Confira cada resposta substituindo-a na expressão original e verifique domínio e intervalo."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "supersedes_version": "1.2.2",
+      "editorial_version": "1.2.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "hold_resolution": "Torna explícitas as fórmulas de área lateral e total de cilindro e cone, além do tronco, e inclui cálculos resolvidos independentes do exemplo já existente. Mantém alturas, geratrizes, unidades e distinção entre área e volume em destaque.",
+      "sections": [
+        {
+          "type": "theory",
+          "append": "**Áreas que não devem ser confundidas:** no cilindro reto, A_l=2πrh e A_t=2πr(h+r); no cone reto, A_l=πrg e A_t=πr(g+r), com g²=h²+r²; no tronco de cone, A_l=π(R+r)g. Área é medida em unidades quadradas, e volume em unidades cúbicas. A geratriz aparece na área lateral; a altura perpendicular aparece no volume."
+        },
+        {
+          "type": "example",
+          "append": "**Áreas resolvidas:** num cilindro com r=2 cm e h=6 cm, A_l=2π·2·6=24π cm² e A_t=24π+2π·2²=32π cm². Num cone com r=3 cm e h=4 cm, primeiro g=√(3²+4²)=5 cm; então A_l=π·3·5=15π cm² e A_t=15π+π·3²=24π cm². A conferência das unidades confirma que os resultados são áreas, não volumes."
+        },
+        {
+          "type": "summary",
+          "append": "**Autochecagem:** no cone de raio 3 cm e altura 4 cm, g=5 cm; a área lateral é 15π cm² e a total é 24π cm². Se o resultado vier em cm³, foi calculado volume em vez de área. Para cilindro e tronco, identifique os dois raios quando existirem e use a geratriz apenas na superfície lateral."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "supersedes_version": "1.2.2",
+      "editorial_version": "1.2.3",
+      "review_status": "review",
+      "source_document_ids": [148],
+      "hold_resolution": "Acrescenta clima, hidrologia, relevo brasileiro, criosfera e conservação, conectando-os às interações já ensinadas entre solo, água, atmosfera e vegetação. Inclui um estudo de caso hipotético para não apresentar dados locais inventados como fatos.",
+      "sections": [
+        {
+          "type": "theory",
+          "append": "**Componentes e processos a integrar:** clima descreve padrões atmosféricos de longo prazo, enquanto tempo indica condições de curto prazo; ambos influenciam evapotranspiração, disponibilidade hídrica e regimes de rios. A hidrologia acompanha precipitação, infiltração, escoamento, armazenamento e circulação da água. Relevo, rochas, solos e cobertura vegetal condicionam esses fluxos; no Brasil, compare formas e processos regionais sem tratar o território como homogêneo. A criosfera reúne água congelada, cuja variação afeta armazenamento e disponibilidade de água em escala global e regional. Conservação considera essas conexões e busca manter processos e biodiversidade, avaliando usos, impactos, escalas e alternativas de manejo."
+        },
+        {
+          "type": "example",
+          "append": "**Exemplo resolvido — bacia hipotética:** após uma chuva intensa, a água pode infiltrar-se ou escoar pela encosta. Solo pouco permeável, declividade e retirada da vegetação tendem a elevar o escoamento superficial e o transporte de sedimentos; cobertura vegetal e infiltração podem reduzir esses fluxos, conforme as condições locais. A chuva é um episódio de tempo atmosférico; comparar muitos anos de chuva e vazão permite discutir clima e regime hidrológico. A conclusão adequada relaciona fatores e escala, sem atribuir a erosão a uma única causa nem inventar medidas para uma bacia real. Em regiões dependentes de neve ou gelo sazonal, mudanças na criosfera também alteram o momento e a quantidade de água disponível."
+        },
+        {
+          "type": "summary",
+          "append": "**Autochecagem:** diferencie clima de tempo; ordene precipitação, infiltração/escoamento e transporte na bacia; explique como relevo, solo e vegetação interferem; identifique a criosfera como água congelada e associe conservação à manutenção dos processos e da biodiversidade. Em qualquer resposta, indique escala e evite uma causa única quando há interação entre componentes."
+        }
+      ]
+    }
+  ],
+  "followups": []
+}

@@ -1,0 +1,25 @@
+{
+  "decisions": [
+    {
+      "table": "content_assets",
+      "key": { "id": 471 },
+      "expected": {
+        "alt_text": "Mapa-múndi em projeção equivalente modificada de Goode. Escudos cristalinos em roxo aparecem no leste da América do Norte, norte da América do Sul, norte da Europa e Ásia, grande parte da África, Índia, Austrália e partes da Antártida. Outras estruturas geológicas estão em cinza e oceanos em azul-claro; legenda, linhas da projeção e indicação do norte visíveis."
+      },
+      "changes": {
+        "alt_text": "Mapa-múndi em projeção equivalente modificada de Goode. Áreas roxas, identificadas na legenda como escudos cristalinos, aparecem em partes das Américas, da África, da Europa e da Ásia, além da Austrália. Outras estruturas geológicas estão em cinza e os oceanos em azul-claro. A legenda, as linhas da projeção e a indicação do norte estão visíveis."
+      },
+      "reason": "Corrige uma localização não confirmada no mapa e evita especificidade superior ao que a figura permite identificar.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/qz-2025-alt-text-correction-2026-10-10.json",
+          "detail": "Proposta editorial registra comparação visual do asset 471 com a página impressa 2 do caderno Q/Z e explica a remoção da referência não confirmada à Antártida."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/QZ.pdf#page=4",
+          "detail": "Página física 4 do PDF (página impressa 2): conferência da imagem, legenda e recorte do mapa de escudos cristalinos."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T10:59:33.322803+00:00",
+  "database_before_sha256": "b54710a15da5edf70f931e6112b7b171ed567ea410a8fdc1fff9612bc8e16291",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 650
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 650,
+        "title": "WHO EMRO — Violence",
+        "url": "https://www.emro.who.int/violence-injuries-disabilities/violence/",
+        "provider": "World Health Organization, Regional Office for the Eastern Mediterranean",
+        "kind": "scientific_reference",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "rights_note": "Referência institucional para a definição de saúde pública de violência; manter somente link e metadados, sem copiar conteúdo."
+      },
+      "reason": "Registrar a fonte institucional que sustenta a definição de violência usada na microaula de Sociologia, distinguindo-a de categorias analíticas sociológicas.",
+      "evidence": [
+        {
+          "locator": "https://www.emro.who.int/violence-injuries-disabilities/violence/",
+          "detail": "Página oficial da OMS/EMRO define violência como uso intencional de força física ou poder, real ou ameaçado, e explicita danos possíveis. A página foi localizada pela busca oficial e consultada em 2026-10-10; o acesso direto retornou 502 nesta sessão, então sua disponibilidade deve ser revalidada."
+        },
+        {
+          "locator": "https://iris.who.int/bitstream/10665/43876/1/9789241596589_eng.pdf",
+          "detail": "Publicação oficial da OMS repete a definição e esclarece que ela inclui dano psicológico, desenvolvimento prejudicado e privação, não apenas lesão ou morte."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 651
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 651,
+        "title": "Universal Declaration of Human Rights",
+        "url": "https://www.un.org/about-us/universal-declaration-of-human-rights",
+        "provider": "United Nations",
+        "kind": "primary_source",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "rights_note": "Documento de referência da ONU; conservar origem e link. Não presumir licença para redistribuir a página, traduções ou elementos gráficos."
+      },
+      "reason": "Registrar a fonte primária usada para fundamentar dignidade, igualdade e direitos humanos na microaula de Filosofia.",
+      "evidence": [
+        {
+          "locator": "https://www.un.org/about-us/universal-declaration-of-human-rights",
+          "detail": "Página oficial da ONU identifica a Declaração Universal, sua adoção em 1948 e os artigos sobre dignidade, igualdade e não discriminação; consultada via busca em 2026-10-10."
+        }
+      ],
+      "action": "insert"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T105933332221Z.sqlite",
+  "database_after_sha256": "6e618032c7c4d65da99f65833411780fd366b1a86b0ac80fcab1df1cd96d9e02"
+}

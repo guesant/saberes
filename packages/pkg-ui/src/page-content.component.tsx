@@ -17,7 +17,7 @@ export function UIPageContent(props: UIPageContentProps): ReactElement {
         boxSizing: "border-box",
         bgcolor: "background.default",
         display: "grid",
-        gridColumn: "2",
+        gridColumn: "1",
         gridRow: 2,
         gridTemplateColumns: "minmax(0, 1fr)",
         gridTemplateRows: "minmax(0, 1fr)",

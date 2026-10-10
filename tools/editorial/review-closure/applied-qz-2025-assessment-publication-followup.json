@@ -1,0 +1,37 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T00:31:54.080711+00:00",
+  "database_before_sha256": "04fb15093dd9cf4fffa588bbee8558c7ad94a38e786c0e4897d4271ace724b03",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "assessment_sets",
+      "key": {
+        "id": 50
+      },
+      "expected": {
+        "is_published": 1,
+        "editorial_version": "1.0.1",
+        "description": "Caderno oficial importado em ordem original; rascunho não publicado. Gabaritos mantêm a versão e o status da fonte; revisão editorial pendente. Regra oficial: a questão anulada 53 atribui um ponto a todos os presentes; ela não exige resposta e não é corrigida como acerto."
+      },
+      "changes": {
+        "editorial_version": "1.0.2",
+        "description": "Prova oficial Q/Z da primeira fase do Vestibular Unicamp 2025, com os itens na ordem do caderno e o gabarito definitivo. A questão 53 foi anulada; pela regra oficial, vale um ponto para todos os presentes e não requer resposta."
+      },
+      "reason": "Remover da descrição publicada as mensagens obsoletas de rascunho e revisão, mantendo a regra oficial da questão anulada.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo Q/Z de 2025 confirma a anulação da questão 53."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/31879/0",
+          "detail": "Resolução GR-29/2024, art. 27, define a pontuação máxima para questão anulada da primeira fase."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": ".local/content/backups/before-editorial-review-20261010T003154090232Z.sqlite",
+  "database_after_sha256": "4b604f2da35d2d2d430b9fbf5d1d119ff0479089f43f93994e9c70a44139c787"
+}

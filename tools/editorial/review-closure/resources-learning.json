@@ -1,0 +1,226 @@
+{
+  "decisions": [
+    {
+      "table": "resources", "key": {"id": 475},
+      "expected": {"editorial_status": "review", "title": "Morfologia (linguística)", "url": "https://pt.wikipedia.org/wiki/Morfologia_(lingu%C3%ADstica)", "source_document_id": null},
+      "changes": {"title": "Formação de palavras: derivação e composição", "url": "https://pt.khanacademy.org/v/lp-6ano-video-formacao-de-palavras-derivacao-e-composicao", "provider": "Khan Academy", "kind": "video", "description": "Vídeo introdutório sobre formação de palavras por derivação e composição, com exemplos em português; suplemento parcial de morfologia.", "availability_mode": "learning", "editorial_status": "published", "editorial_note": "Substitui a referência genérica anterior por um vídeo diretamente focado em derivação e composição, com exemplos em português. Suplemento parcial; não cobre toda a morfologia. Link-only: licença de republicação não presumida. Acessibilidade de vídeo, teclado/leitor de tela e WCAG não auditados."},
+      "reason": "A página direta apresenta o conteúdo específico de formação de palavras em português, adequado como introdução complementar; não é apresentado como cobertura integral.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/v/lp-6ano-video-formacao-de-palavras-derivacao-e-composicao", "detail": "Página direta de vídeo Khan Academy sobre formação de palavras por derivação e composição; transcript e exemplos em português conferidos na auditoria de conteúdo."}, {"locator": "sqlite://resources/475", "detail": "Estado atual lido em modo somente leitura; URL anterior e source_document_id null ficam registrados em expected para auditoria."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 475, "topic_id": 2542, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Relação suplementar: vídeo em português sobre derivação e composição, subtema de morfologia/formação de palavras. Não cobre toda a morfologia. Acessibilidade assistiva/WCAG não auditada; link-only."},
+      "reason": "Aderência temática direta ao tópico 2542; confiança alta para o subtema explicitamente nomeado, sem alegação de cobertura completa.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/v/lp-6ano-video-formacao-de-palavras-derivacao-e-composicao", "detail": "Vídeo específico de derivação e composição com exemplos em português."}, {"locator": "sqlite://topics/2542", "detail": "FK topic_id confirmada pela metadata de resource_topics; topics.id 2542 = Morfologia e formação de palavras."}]
+    },
+    {
+      "table": "resources", "key": {"id": 476},
+      "expected": {"editorial_status": "review", "title": "Buscar prática: morfologia e formação de palavras", "url": "https://www.khanacademy.org/search?page_search_query=morfologia+forma%C3%A7%C3%A3o+de+palavras+portugu%C3%AAs", "source_document_id": null},
+      "changes": {"title": "Formação de palavras — prática", "url": "https://pt.khanacademy.org/humanities/lp-5-ano/x74ff86116a8ca3f5%3Alp-5ano-pesquisa-e-estudo/x74ff86116a8ca3f5%3Alp-5ano-lesson-formacao-de-palavras/e/lp-5ano-exercicios-formacao-de-palavras", "provider": "Khan Academy", "kind": "exercise", "description": "Exercício direto de formação de palavras: identifica derivação a partir de palavra-base; prática curta e parcial.", "availability_mode": "practice", "editorial_status": "published", "editorial_note": "Substitui busca genérica por exercício específico de formação de palavras. Prática introdutória curta, não avaliação integral de morfologia. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "O destino é um exercício direto, não uma busca: o enunciado pede reconhecer formação derivada a partir de palavra-base e fornece resposta interativa.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/lp-5-ano/x74ff86116a8ca3f5%3Alp-5ano-pesquisa-e-estudo/x74ff86116a8ca3f5%3Alp-5ano-lesson-formacao-de-palavras/e/lp-5ano-exercicios-formacao-de-palavras", "detail": "Exercício direto de formação de palavras; item observado trabalha derivação de pedreiro a partir de pedra."}, {"locator": "sqlite://resources/476", "detail": "URL antiga de busca e estado review confirmados em leitura somente leitura; preserved no expected para trilha de auditoria."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 476, "topic_id": 2542, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Exercício introdutório direto sobre formação derivada de palavras; relação parcial com morfologia e formação de palavras. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "O exercício pratica especificamente formação de palavras, correspondendo ao escopo do tópico canônico.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/lp-5-ano/x74ff86116a8ca3f5%3Alp-5ano-pesquisa-e-estudo/x74ff86116a8ca3f5%3Alp-5ano-lesson-formacao-de-palavras/e/lp-5ano-exercicios-formacao-de-palavras", "detail": "Exercício temático direto com resposta sobre derivação."}, {"locator": "sqlite://topics/2542", "detail": "topics.id 2542 = Morfologia e formação de palavras; confirmado por FK de resource_topics."}]
+    },
+    {
+      "table": "resources", "key": {"id": 477},
+      "expected": {"editorial_status": "review", "title": "Fonologia", "url": "https://pt.wikipedia.org/wiki/Fonologia", "source_document_id": null},
+      "changes": {"title": "Uma letra, um som — ortografia", "url": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-cotidiana/x00fd8bb90bd44377%3Alp-4ano-ortografia/v/lp-4ano-video-ortografia-uma-letra-um-som", "provider": "Khan Academy", "kind": "video", "description": "Vídeo introdutório sobre correspondência regular entre letra e som em português; recorte básico de oralidade e escrita.", "availability_mode": "learning", "editorial_status": "published", "editorial_note": "Substitui artigo geral por vídeo introdutório em português sobre correspondências letra-som. Escopo básico e parcial: não explica todo o sistema fonológico nem as exceções ortográficas. Link-only; vídeo/acessibilidade assistiva/WCAG não auditados."},
+      "reason": "O vídeo tem foco escolar explícito na relação letra-som; aprovado apenas como suplemento introdutório do tópico, não como descrição completa de fonologia.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-cotidiana/x00fd8bb90bd44377%3Alp-4ano-ortografia/v/lp-4ano-video-ortografia-uma-letra-um-som", "detail": "Página direta Khan Academy do vídeo Uma letra, um som; transcript aborda correspondências regulares letra-som."}, {"locator": "sqlite://resources/477", "detail": "Estado anterior em leitura somente leitura; o URL de referência genérica permanece preservado em expected."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 477, "topic_id": 2543, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Relação parcial: correspondência letra-som e ortografia como recorte introdutório de oralidade/escrita; não cobre fonologia integralmente. Acessibilidade assistiva/WCAG não auditada; link-only."},
+      "reason": "O subtema do vídeo coincide com a relação entre oralidade e escrita; escopo delimitado para evitar generalização.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-cotidiana/x00fd8bb90bd44377%3Alp-4ano-ortografia/v/lp-4ano-video-ortografia-uma-letra-um-som", "detail": "Vídeo sobre correspondência letra-som em português."}, {"locator": "sqlite://topics/2543", "detail": "topics.id 2543 = Fonologia e relações entre oralidade e escrita; FK confirma namespace topics."}]
+    },
+    {
+      "table": "resources", "key": {"id": 478},
+      "expected": {"editorial_status": "review", "title": "Buscar prática: fonologia e escrita", "url": "https://www.khanacademy.org/search?page_search_query=fonologia+portugu%C3%AAs+ortografia+exerc%C3%ADcios", "source_document_id": null},
+      "changes": {"title": "Uso de LH, NH e CH — prática", "url": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-publica/x00fd8bb90bd44377%3Alp-4ano-vidapublica-ortografia/e/lp-4ano-uso-de-lh-nh-ch", "provider": "Khan Academy", "kind": "exercise", "description": "Exercício direto de identificação e uso dos dígrafos LH, NH e CH em português; prática de ortografia/representação sonora.", "availability_mode": "practice", "editorial_status": "published", "editorial_note": "Substitui a busca exploratória por exercício direto de dígrafos. Prática restrita a LH/NH/CH, não cobre fonologia geral. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "Página específica de exercícios, com itens de escolha simples sobre dígrafos; é uma prática utilizável no recorte letra-som/escrita.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-publica/x00fd8bb90bd44377%3Alp-4ano-vidapublica-ortografia/e/lp-4ano-uso-de-lh-nh-ch", "detail": "Exercício direto sobre uso de LH, NH e CH, com questões de resposta única."}, {"locator": "sqlite://resources/478", "detail": "Busca anterior e estado review verificados em modo somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 478, "topic_id": 2543, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Prática parcial de dígrafos e escrita em português; não equivale a cobertura ampla de fonologia. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "O foco em dígrafos e sua escrita tem aderência ao recorte de relações entre sons e escrita.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-publica/x00fd8bb90bd44377%3Alp-4ano-vidapublica-ortografia/e/lp-4ano-uso-de-lh-nh-ch", "detail": "Lista direta de questões sobre dígrafos em português."}, {"locator": "sqlite://topics/2543", "detail": "topics.id 2543 = Fonologia e relações entre oralidade e escrita, FK confirmada."}]
+    },
+    {
+      "table": "resources", "key": {"id": 481},
+      "expected": {"editorial_status": "review", "title": "Expressões quadráticas e polinômios", "url": "https://pt.khanacademy.org/math/algebra-home/algebra-basics/quadratics-polynomials-topic", "source_document_id": null},
+      "changes": {"editorial_status": "published", "editorial_note": "Aprovado como unidade complementar sobre operações e fatoração de polinômios, com conteúdo e prática por habilidade. Não cobre sozinho todo o tópico (equações/inequações); priorize as habilidades explicitamente alinhadas. Link-only; acessibilidade assistiva/WCAG e licença de republicação não auditadas."},
+      "reason": "A unidade direta da Khan Academy lista habilidades de soma/subtração, multiplicação e fatoração de polinômios, com organização Aprender/Praticar; aderência alta, mas parcial.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/algebra-home/algebra-basics/quadratics-polynomials-topic", "detail": "Página direta da unidade; índice lista habilidades de polinômios e práticas correspondentes."}, {"locator": "sqlite://resources/481", "detail": "Registro atual e associação temática lidos sem escrita."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 481, "topic_id": 2545, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Unidade suplementar de operações/fatoração de polinômios; não cobre sozinha equações e inequações. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "O conteúdo da unidade corresponde diretamente ao componente polinomial do tópico; escopo incompleto descrito na nota.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/algebra-home/algebra-basics/quadratics-polynomials-topic", "detail": "Unidade direta de polinômios com conteúdo e prática por habilidade."}, {"locator": "sqlite://topics/2545", "detail": "topics.id 2545 = Polinômios, equações e inequações; confirmado via FK."}]
+    },
+    {
+      "table": "resources", "key": {"id": 483},
+      "expected": {"editorial_status": "review", "title": "Matrizes — Álgebra", "url": "https://pt.khanacademy.org/math/algebra-home/alg-matrices", "source_document_id": null},
+      "changes": {"editorial_status": "published", "editorial_note": "Aprovado como unidade complementar de matrizes: operações, representação matricial de sistemas e exercícios por habilidade. Não é curso completo do tópico nem material Comvest. Link-only; acessibilidade assistiva/WCAG e licença de republicação não auditadas."},
+      "reason": "A página direta organiza explicação e prática em operações matriciais e representação/resolução de sistemas, com aderência ao tópico.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/algebra-home/alg-matrices", "detail": "Unidade direta de matrizes, com operações, sistemas e atividades Aprender/Praticar."}, {"locator": "sqlite://resources/483", "detail": "Registro atual e destino em português conferidos em leitura somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 483, "topic_id": 2546, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Unidade complementar diretamente sobre matrizes e usos em sistemas lineares; cobertura parcial do tópico. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "Correspondência explícita entre foco da unidade e conteúdo do tópico canônico.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/algebra-home/alg-matrices", "detail": "Índice direto lista operações matriciais e matrizes associadas a sistemas."}, {"locator": "sqlite://topics/2546", "detail": "topics.id 2546 = Sistemas lineares e matrizes; FK confirmada."}]
+    },
+    {
+      "table": "resources", "key": {"id": 484},
+      "expected": {"editorial_status": "review", "title": "Matrizes associadas a sistema linear — prática", "url": "https://pt.khanacademy.org/math/em-mat-algebra/x34e9dd8107ca5eda%3Asistemas-de-equacoes-lineares/x34e9dd8107ca5eda%3Amatrizes/e/matrizes-associadas-a-um-sistema-linear", "source_document_id": null},
+      "changes": {"editorial_status": "published", "editorial_note": "Aprovado como prática específica de associação entre sistema linear e matriz incompleta. É um recorte de representação matricial, não prática geral de todas as operações. Link-only; acessibilidade assistiva/WCAG e licença de republicação não auditadas."},
+      "reason": "O exercício direto trabalha a representação matricial de sistemas, conteúdo pertinente e explicitamente delimitado.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/em-mat-algebra/x34e9dd8107ca5eda%3Asistemas-de-equacoes-lineares/x34e9dd8107ca5eda%3Amatrizes/e/matrizes-associadas-a-um-sistema-linear", "detail": "Exercício direto solicita identificar a matriz incompleta que representa um sistema linear; conjunto de itens de resposta única."}, {"locator": "sqlite://resources/484", "detail": "Estado atual lido em modo somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 484, "topic_id": 2546, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Prática do recorte matrizes associadas a sistemas lineares; não cobre todas as operações matriciais. Acessibilidade assistiva/WCAG não auditada; link-only."},
+      "reason": "A atividade corresponde diretamente ao subtema sistemas lineares e matrizes.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/em-mat-algebra/x34e9dd8107ca5eda%3Asistemas-de-equacoes-lineares/x34e9dd8107ca5eda%3Amatrizes/e/matrizes-associadas-a-um-sistema-linear", "detail": "Prática direta de representar sistema por matriz."}, {"locator": "sqlite://topics/2546", "detail": "topics.id 2546 = Sistemas lineares e matrizes."}]
+    },
+    {
+      "table": "resources", "key": {"id": 485},
+      "expected": {"editorial_status": "review", "title": "Geometria plana", "url": "https://pt.wikipedia.org/wiki/Geometria_plana", "source_document_id": null},
+      "changes": {"title": "Ângulos e polígonos — geometria", "url": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano", "provider": "Khan Academy", "kind": "course", "description": "Unidade complementar sobre ângulos, polígonos e relações geométricas; recorte de geometria plana.", "availability_mode": "learning", "editorial_status": "published", "editorial_note": "Substitui referência geral por unidade didática focada em ângulos e polígonos, subtemas de geometria plana. Não cobre toda geometria plana. Parte das atividades usa diagramas; alternativas textuais e acessibilidade assistiva não foram auditadas. Link-only."},
+      "reason": "A unidade direta oferece conteúdo e prática em ângulos/polígonos, recorte apropriado do tópico de geometria plana.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano", "detail": "Unidade direta lista habilidades de ângulos e polígonos com explicação e prática."}, {"locator": "sqlite://resources/485", "detail": "URL e estado review anteriores confirmados em leitura somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 485, "topic_id": 2547, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Unidade parcial de ângulos e polígonos, subtemas de geometria plana. Atividades podem depender de diagramas; acessibilidade não auditada. Link-only."},
+      "reason": "A unidade corresponde a subtemas geométricos planares definidos, não à cobertura total do tópico.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano", "detail": "Índice direto de geometria com ângulos e polígonos."}, {"locator": "sqlite://topics/2547", "detail": "topics.id 2547 = Geometria plana."}]
+    },
+    {
+      "table": "resources", "key": {"id": 486},
+      "expected": {"editorial_status": "review", "title": "Buscar prática: geometria plana", "url": "https://www.khanacademy.org/search?page_search_query=geometria+plana+tri%C3%A2ngulos+%C3%A1reas+exerc%C3%ADcios", "source_document_id": null},
+      "changes": {"title": "Ângulos de um polígono — prática", "url": "https://pt.khanacademy.org/math/geometry-home/geometry-shapes/angles-with-polygons/e/angles_of_a_polygon", "provider": "Khan Academy", "kind": "exercise", "description": "Exercício direto sobre ângulos internos de polígonos; prática de um subtema de geometria plana.", "availability_mode": "practice", "editorial_status": "published", "editorial_note": "Substitui busca genérica por prática específica de ângulos de polígonos. Questões incluem diagramas; acessibilidade de imagens/alternativas não auditada. Não representa cobertura total de geometria plana. Link-only."},
+      "reason": "O exercício tem foco claro em ângulos de polígonos, como prática específica e delimitada.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/geometry-home/geometry-shapes/angles-with-polygons/e/angles_of_a_polygon", "detail": "Página direta de exercício com problemas de ângulos internos de polígonos; conteúdo pode incluir figuras geométricas."}, {"locator": "sqlite://resources/486", "detail": "URL de busca anterior conferida em leitura somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 486, "topic_id": 2547, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Prática específica de ângulos de polígonos, subtema de geometria plana; questões com diagramas não auditadas quanto a equivalentes acessíveis. Link-only."},
+      "reason": "Aderência direta ao subtema de polígonos; limitações visuais explicitadas.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/geometry-home/geometry-shapes/angles-with-polygons/e/angles_of_a_polygon", "detail": "Exercício direto sobre ângulos de polígonos."}, {"locator": "sqlite://topics/2547", "detail": "topics.id 2547 = Geometria plana."}]
+    },
+    {
+      "table": "resources", "key": {"id": 487},
+      "expected": {"editorial_status": "review", "title": "Geometria básica e medidas — volume", "url": "https://pt.khanacademy.org/math/basic-geo/basic-geo-volume-sa", "source_document_id": null},
+      "changes": {"editorial_status": "published", "editorial_note": "Aprovado como unidade complementar de volume e área de superfície de sólidos (prismas, cilindros, cones e esferas), com prática. Não cobre toda geometria espacial. Exercícios podem incluir diagramas; acessibilidade assistiva/WCAG não auditadas. Link-only."},
+      "reason": "A unidade direta trata de volume e área de superfície de sólidos, com habilidades de aprendizagem e prática, em aderência parcial ao tópico.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/basic-geo/basic-geo-volume-sa", "detail": "Unidade direta de volume/área de superfície inclui prismas, cilindros, cones e esferas e exercícios."}, {"locator": "sqlite://resources/487", "detail": "Estado review e associação topic_id 2548 confirmados em leitura somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 487, "topic_id": 2548, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Unidade suplementar de volume/área de superfície de sólidos; não cobre todo o tópico de geometria espacial. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "O foco declarado e as habilidades da unidade pertencem diretamente à geometria espacial.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/basic-geo/basic-geo-volume-sa", "detail": "Conteúdo direto de volume e área de superfície de sólidos."}, {"locator": "sqlite://topics/2548", "detail": "topics.id 2548 = Geometria espacial."}]
+    },
+    {
+      "table": "resources", "key": {"id": 489},
+      "expected": {"editorial_status": "review", "title": "Trigonometria — Matemática", "url": "https://pt.khanacademy.org/math/high-school-math/trigonometry", "source_document_id": null},
+      "changes": {"title": "Trigonometria — unidade de Matemática", "url": "https://pt.khanacademy.org/math/trigonometry", "description": "Unidade de trigonometria com subunidades sobre triângulos retângulos, funções trigonométricas, triângulos oblíquos e identidades; selecione habilidades pertinentes ao curso.", "availability_mode": "learning", "editorial_status": "published", "editorial_note": "Aprovada como biblioteca complementar de trigonometria, não como trilha obrigatória integral: inclui triângulos retângulos, funções, triângulos oblíquos e identidades, com conteúdo/prática. Selecionar conforme o programa. Link-only; acessibilidade assistiva/WCAG não auditadas."},
+      "reason": "A unidade direta de trigonometria lista subtemas de triângulos retângulos e funções com prática; aderência temática alta, com escopo acima do necessário explicitamente sinalizado.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/trigonometry", "detail": "Índice direto da unidade de trigonometria lista quatro blocos e habilidades de triângulos, funções e identidades."}, {"locator": "sqlite://resources/489", "detail": "URL anterior, título e status conferidos em leitura somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 489, "topic_id": 2549, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Biblioteca de trigonometria com subtemas relevantes e conteúdo adicional; usar seletivamente, sem inferir que todas as unidades sejam requeridas. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "Aderência direta ao tópico de trigonometria; note recomenda seleção, pois o destino é mais amplo.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/trigonometry", "detail": "Unidade direta inclui trigonometria de triângulos retângulos e outros subtemas."}, {"locator": "sqlite://topics/2549", "detail": "topics.id 2549 = Trigonometria."}]
+    },
+    {
+      "table": "resources", "key": {"id": 490},
+      "expected": {"editorial_status": "review", "title": "Buscar exercícios de trigonometria", "url": "https://www.khanacademy.org/search?page_search_query=trigonometria+exerc%C3%ADcios+tri%C3%A2ngulos", "source_document_id": null},
+      "changes": {"title": "Trigonometria em triângulo retângulo — prática", "url": "https://pt.khanacademy.org/e/trigonometry_1", "provider": "Khan Academy", "kind": "exercise", "description": "Exercício direto de razões trigonométricas em triângulo retângulo; uma habilidade de prática, não cobertura geral do tema.", "availability_mode": "practice", "editorial_status": "published", "editorial_note": "Substitui busca genérica por exercício direto de trigonometria em triângulo retângulo. A questão apresenta diagrama; acessibilidade de imagem/alternativa textual não auditada. Escopo muito específico. Link-only."},
+      "reason": "O destino é exercício específico de trigonometria em triângulo retângulo, com entrada de resposta e enunciado correspondente; a dependência de figura é assinalada.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/e/trigonometry_1", "detail": "Página direta de exercício sobre razões trigonométricas em triângulo retângulo; questão inclui triângulo ilustrado."}, {"locator": "sqlite://resources/490", "detail": "Busca anterior e estado review verificados em modo somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 490, "topic_id": 2549, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Prática de razões trigonométricas em triângulo retângulo, recorte do tópico; inclui figura cuja acessibilidade não foi verificada. Link-only."},
+      "reason": "Correspondência direta ao conteúdo de trigonometria em triângulos; limitações visuais permanecem explícitas.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/e/trigonometry_1", "detail": "Exercício direto sobre trigonometria de triângulo retângulo."}, {"locator": "sqlite://topics/2549", "detail": "topics.id 2549 = Trigonometria."}]
+    },
+    {
+      "table": "resources", "key": {"id": 495},
+      "expected": {"editorial_status": "review", "title": "Mundialização e globalização", "url": "https://brasilescola.uol.com.br/geografia/mundializacao.htm", "source_document_id": null},
+      "changes": {"editorial_status": "published", "editorial_note": "Aprovado como texto suplementar de geografia sobre integração cultural/econômica, fluxos, redes e divisão internacional do trabalho. O próprio artigo ressalva que mundialização/globalização são conceitos tratados de modo divergente por autores; discutir essa variação, não impor uma definição única. Link-only; acessibilidade assistiva/WCAG e direitos de republicação não auditados."},
+      "reason": "Conteúdo direto e estruturado em português cobre dimensões culturais e econômicas, redes, fluxos e DIT; as divergências conceituais são explicitadas pelo próprio texto.",
+      "evidence": [{"locator": "https://brasilescola.uol.com.br/geografia/mundializacao.htm", "detail": "Artigo direto; seções definem mundialização, fluxos/redes, economia/cultura e registram que a equivalência/distinção com globalização varia entre pesquisadores."}, {"locator": "sqlite://resources/495", "detail": "Registro e vínculo temático conferidos em leitura somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 495, "topic_id": 2552, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Texto complementar aborda mundialização/globalização, fluxos, redes, integração cultural/econômica e divisão internacional do trabalho. A terminologia é apresentada como debatida, não consensual. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "Aderência direta aos conteúdos de globalização, economia e trabalho, com ressalva conceitual alinhada ao próprio texto.",
+      "evidence": [{"locator": "https://brasilescola.uol.com.br/geografia/mundializacao.htm", "detail": "Artigo trata integração, fluxos, redes, empresas transnacionais e divisão internacional do trabalho."}, {"locator": "sqlite://topics/2552", "detail": "topics.id 2552 = Globalização, economia e trabalho."}]
+    },
+    {
+      "table": "resources", "key": {"id": 497},
+      "expected": {"editorial_status": "review", "title": "História Geral: Antiguidade e Idade Média", "url": "https://brasilescola.uol.com.br/historiag", "source_document_id": null},
+      "changes": {"title": "História Geral — índice de referência", "kind": "platform", "description": "Portal/índice de descoberta de artigos de História Geral, incluindo conteúdos de Antiguidade e Idade Média; não é uma aula ou cobertura curricular por capítulo.", "availability_mode": "reference", "editorial_status": "published", "editorial_note": "Aprovado apenas como índice de referência/descoberta de conteúdos de História Geral. Não classificar como aula, trilha de aprendizagem ou cobertura das sociedades antigas e medievais; os artigos devem ser avaliados individualmente. Link-only; acessibilidade assistiva/WCAG não auditada."},
+      "reason": "A página é um índice de História Geral com categorias e links a artigos, utilizável para descoberta, mas não corresponde a um recurso individual de aprendizagem.",
+      "evidence": [{"locator": "https://brasilescola.uol.com.br/historiag", "detail": "Página direta identifica História Geral e oferece navegação/indexação de artigos; não é material de aula único."}, {"locator": "sqlite://resources/497", "detail": "Registro, URL e estado anterior conferidos em modo somente leitura."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 497, "topic_id": 2553, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Vínculo somente de descoberta: índice de História Geral inclui links de história antiga/medieval, mas não equivale a conteúdo didático nem cobre topicariamente o item. Avaliar artigos individuais. Link-only."},
+      "reason": "Relação útil para descobrir fontes sobre o domínio amplo, sem apresentar o portal como aprendizagem validada.",
+      "evidence": [{"locator": "https://brasilescola.uol.com.br/historiag", "detail": "Índice direto de História Geral com links de navegação por conteúdos."}, {"locator": "sqlite://topics/2553", "detail": "topics.id 2553 = Antiguidade clássica e sociedades medievais; FK confirmada."}]
+    },
+    {
+      "table": "resources", "key": {"id": 499},
+      "expected": {"editorial_status": "review", "title": "O que é Idade Moderna?", "url": "https://brasilescola.uol.com.br/o-que-e/historia/o-que-e-idade-moderna.htm", "source_document_id": null},
+      "changes": {"url": "https://brasilescola.uol.com.br/historiag/idade-moderna.htm", "title": "Idade Moderna: resumo, características e acontecimentos", "description": "Artigo introdutório sobre periodização e acontecimentos associados à Idade Moderna, com ressalva de que a divisão em períodos é eurocêntrica.", "availability_mode": "learning", "editorial_status": "published", "editorial_note": "Substitui o link de formato genérico por artigo de História Geral com discussão explícita de periodização eurocêntrica e acontecimentos do período. Usar como suplemento, contrapondo experiências de outras regiões; não é cobertura completa da história moderna global. Link-only; acessibilidade assistiva/WCAG e direitos de republicação não auditados."},
+      "reason": "O destino alternativo é artigo histórico direto e contextualiza a periodização como eurocêntrica, mitigando uma limitação importante do ensino do tema.",
+      "evidence": [{"locator": "https://brasilescola.uol.com.br/historiag/idade-moderna.htm", "detail": "Artigo direto sobre Idade Moderna; apresenta periodização/acontecimentos e reconhece o recorte eurocêntrico."}, {"locator": "sqlite://resources/499", "detail": "URL anterior e estado review conferidos em leitura somente leitura; valor antigo preservado em expected para auditoria."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 499, "topic_id": 2554, "curriculum_topic_id": null},
+      "expected": {"review_status": "review", "relevance_status": "unknown", "accessibility_status": "unknown"},
+      "changes": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown", "review_note": "Artigo introdutório sobre Idade Moderna e sua periodização; explicita recorte eurocêntrico. Suplemento, não história global completa; complementar com perspectivas de outras regiões. Link-only; acessibilidade não auditada."},
+      "reason": "Aderência direta ao período moderno, com limitação de perspectiva registrada em destaque.",
+      "evidence": [{"locator": "https://brasilescola.uol.com.br/historiag/idade-moderna.htm", "detail": "Artigo trata Idade Moderna e adverte que a divisão histórica adotada é eurocêntrica."}, {"locator": "sqlite://topics/2554", "detail": "topics.id 2554 = História do período moderno."}]
+    }
+  ],
+  "blocked": [
+    {"table": "resources", "key": {"id": 479}, "reason": "O candidato antigo é artigo enciclopédico genérico e o destino KH pesquisado trata operações gerais de conjuntos, não há evidência direta suficiente de aderência a conjuntos numéricos/operacoes do tópico. Não aprovar como prática/curso sem destino diretamente alinhado."},
+    {"table": "resources", "key": {"id": 480}, "reason": "URL é busca genérica e nenhuma lista específica de exercícios de conjuntos numéricos foi confirmada nesta revisão."},
+    {"table": "resources", "key": {"id": 482}, "reason": "Auditoria local encontrou item anunciado como escolha única exposto com checkboxes; sem correção do provedor ou verificação assistiva, manter recurso e vínculo em review."},
+    {"table": "resources", "key": {"id": 491}, "reason": "Artigo enciclopédico amplo não foi substituído por um destino de geometria analítica conferido em detalhe nesta revisão."},
+    {"table": "resources", "key": {"id": 492}, "reason": "URL é busca genérica; exercício direto de geometria analítica não confirmado."},
+    {"table": "resources", "key": {"id": 493}, "reason": "A alternativa IBGE identificada tem página direta, mas a leitura web retornou 403; não foi possível confirmar conteúdo e utilidade pedagógica diretamente nesta revisão. Manter URL/registro sem aprovação."},
+    {"table": "resources", "key": {"id": 494}, "reason": "Busca genérica sem atividade específica confirmada; a alternativa IBGE identificada também retornou 403 na leitura direta. Manter em review."},
+    {"table": "resources", "key": {"id": 498}, "reason": "Auditoria detalhada registrou ambiguidade de alternativa em Q8 e defeitos textuais em Q10/Q11; não há como excluir esses itens no destino. Não aprovar a lista inteira."},
+    {"table": "resources", "key": {"id": 500}, "reason": "Auditoria confirmou alternativa duplicada/missing em Q11. Sem correção do provedor ou modo de excluir esse item do recurso, manter a lista em review."}
+  ],
+  "summary": "Lote 475–501: 15 recursos em review aprovados/substituídos como suplementos específicos ou, no ID 497, índice de referência; 15 associações resource_topics correspondentes aprovadas. IDs 488, 496 e 501 já estavam published e não são alterados. Nove recursos permanecem bloqueados (479, 480, 482, 491, 492, 493, 494, 498 e 500), pelos motivos por ID abaixo. FK metadata de resource_topics confirma topic_id → topics.id e curriculum_topic_id → curriculum_topics.id; não foram alteradas as chaves dos vínculos. Links externos ficam link-only; não se presume licença, WCAG nem cobertura integral. Nenhuma escrita SQLite foi feita."
+}

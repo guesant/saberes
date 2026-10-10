@@ -3,13 +3,13 @@ import { PerformanceSummaryPrimaryMetrics } from "./performance-summary-primary-
 import type { PerformanceSummary } from "./performance-summary.interface";
 
 export type PerformanceSummaryGridProps = {
-  summary: PerformanceSummary;
+    summary: PerformanceSummary;
 };
 
 export function PerformanceSummaryGrid(props: PerformanceSummaryGridProps) {
-  return (
-    <UIMetricGrid>
-      <PerformanceSummaryPrimaryMetrics summary={props.summary} />
-    </UIMetricGrid>
-  );
+    return (
+        <UIMetricGrid columns={1}>
+            <PerformanceSummaryPrimaryMetrics summary={props.summary} />
+        </UIMetricGrid>
+    );
 }

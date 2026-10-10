@@ -1,0 +1,1207 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 1
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Provas Comentadas por Ano",
+        "url": "https://www.comvest.unicamp.br/vestibulares-anteriores/1a-fase-2a-fase-comentadas/",
+        "kind": "official_exam_archive",
+        "source_document_id": 1,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Índice oficial de provas comentadas 2017–2026; inclui seções de 1ª fase para 2025 e 2026. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "Aprovação somente do índice institucional como ponto de navegação histórico; não aprova individualmente comentários, respostas ou questões.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibulares-anteriores/1a-fase-2a-fase-comentadas/",
+          "detail": "Página oficial lista ‘Provas comentadas 2026’ e ‘2025’, cada qual com subseção ‘1ª Fase’ e link próprio para questões múltipla escolha."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 2
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Anos anteriores",
+        "url": "https://www.comvest.unicamp.br/vestibulares-anteriores/",
+        "kind": "official_archive_index",
+        "source_document_id": 2,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Índice oficial de ingressos passados, incluindo 2025 e 2026. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "Aprovação da página de arquivo como referência de navegação para edições anteriores, não como validação de conteúdo de cada item.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibulares-anteriores/",
+          "detail": "Página oficial ‘Anos anteriores’ oferece acesso às informações dos ingressos 2026 e 2025 e às páginas específicas de cada edição."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 126
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — página do processo",
+        "url": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+        "kind": "official_web_page",
+        "source_document_id": 126,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Página institucional específica do Vestibular 2025; calendário e documentos históricos. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página oficial identifica a edição 2025 e organiza seu manual, programa, edital e provas/gabaritos. Aprovação apenas da identidade/edição da página.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Cabeçalho ‘Vestibular 2025’; a página lista Manual do Ingresso 2025, Edital, Programa das Provas 2025 e links de prova/gabarito da primeira fase."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 127
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Manual do Ingresso — Vestibular Unicamp 2025",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/07/MANUAL-2025.pdf",
+        "kind": "official_candidate_manual",
+        "source_document_id": 127,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Manual identificado pela página institucional da edição 2025; arquivo histórico. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página oficial 2025 vincula este manual pelo título. Publicação proposta só como referência do manual daquela edição, não como instrução vigente para edições posteriores.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Seção de informações principais apresenta o link ‘Manual do Ingresso 2025’; a seção inferior também identifica o mesmo documento como ‘manual do ingresso 2025’."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/07/MANUAL-2025.pdf",
+          "detail": "URL direta oficial Comvest com nome de arquivo MANUAL-2025.pdf, consistente com a edição indicada no portal; metadados, sem avaliação do conteúdo."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 128
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Programa das provas — Vestibular Unicamp 2025",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/06/Programa_provas_VU2025.pdf",
+        "kind": "official_exam_program",
+        "source_document_id": 128,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Programa oficial que a página da edição denomina ‘Programa das Provas – Vestibular 2025’. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "Publicação limitada à identidade e edição do programa apontado pela Comvest; não projeta seu escopo para 2026/2027.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "A página anual apresenta link explícito ‘Programa das Provas – Vestibular 2025’."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/06/Programa_provas_VU2025.pdf",
+          "detail": "Documento primário no domínio Comvest, URL identificando VU2025; referência de programa da edição 2025."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 129
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Resolução GR-29/2024 — Vestibular Unicamp 2025",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/07/Resolucao-Vestibular-2025.pdf",
+        "kind": "official_regulation",
+        "source_document_id": 129,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Resolução/edital de regras do Vestibular 2025, publicada em 2024. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O portal anual de 2025 aponta este edital como documento da edição. Registrar como fonte normativa histórica da edição 2025, não como regra para outros anos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "A página oficial do Vestibular 2025 lista ‘Edital – Vestibular 2025’."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/07/Resolucao-Vestibular-2025.pdf",
+          "detail": "PDF oficial direto associado ao edital 2025; metadata reference only, sem decisão sobre validade atual fora daquela edição."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 130
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — página do processo",
+        "url": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+        "kind": "official_web_page",
+        "source_document_id": 130,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Página institucional específica do Vestibular 2026; calendário e documentos históricos. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página separa Vestibular 2026 de 2025/2027 e conduz às referências específicas de manual, programa, edital retificado, provas e gabaritos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+          "detail": "Página oficial intitula a edição ‘Vestibular 2026’, lista o Manual do Ingresso 2026, Programa das Provas 2026, edital retificado e links de provas/gabaritos da primeira fase."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 131
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Manual do Ingresso — Vestibular Unicamp 2026",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/11/Manual-do-Ingresso-2026.pdf",
+        "kind": "official_candidate_manual",
+        "source_document_id": 131,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Manual de 66 páginas identificado como Manual do Ingresso 2026; publicado em novembro de 2025. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "Conferência limita-se à identidade, edição, paginação e status histórico; o manual é referência daquela edição encerrada.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/11/Manual-do-Ingresso-2026.pdf",
+          "detail": "PDF direto Comvest; extração da página inicial identifica ‘Manual do Ingresso 2026’, edição da prova e ligação à Resolução retificada GR-25/2025; documento de 66 páginas."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+          "detail": "A página anual do Vestibular 2026 encaminha explicitamente ao Manual do Ingresso 2026."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 132
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — provas e gabaritos da primeira fase",
+        "url": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+        "kind": "official_exam_and_answer_key_index",
+        "source_document_id": 132,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Índice oficial de cadernos e gabaritos da 1ª fase do Vestibular 2026. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "Índice e modelos foram conferidos; publicação significa referência de consulta para os arquivos oficiais listados, não validação das respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Seções distintas ‘Primeira fase — Gabaritos’ e ‘Provas’ listam Q/X, R/Y, S/Z e T/W; o cabeçalho identifica Vestibular 2026."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+          "detail": "Página anual de 2026 aponta para a página de provas/gabaritos da edição."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 133
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Manual e Programa das Provas — Vestibular Unicamp 2026",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/Manual-Programa_provas_VU2026.pdf",
+        "kind": "official_exam_program_and_guidance",
+        "source_document_id": 133,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: PDF oficial combinado Manual/Programa da edição 2026; documento de 14 páginas. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A Comvest o vincula à edição 2026 como programa e orientações; publicar apenas identidade, edição e uso como referência histórica.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/Manual-Programa_provas_VU2026.pdf",
+          "detail": "PDF oficial direto com nome VU2026 e 14 páginas; identidade de edição conferida na página oficial da edição."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+          "detail": "A página do Vestibular 2026 liga o documento de programa e as orientações da edição."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 134
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Resolução GR-25/2025 — Vestibular Unicamp 2026, texto consolidado",
+        "url": "https://www.pg.unicamp.br/norma/32142/1",
+        "kind": "official_regulation_consolidated",
+        "source_document_id": 134,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Redação consolidada da Resolução GR-025/2025, referente ao Vestibular 2026, com retificação GR-028/2025 incorporada. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "Página oficial da Procuradoria apresenta a edição normativa e consolida as alterações; referência normativa histórica, não transcrição nem avaliação jurídica de cada artigo.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32142/1",
+          "detail": "Página da Procuradoria identifica Resolução GR-025/2025, de 10/07/2025, dispõe sobre Vestibular Unicamp 2026 e exibe redação retificada (inclui GR-028/2025)."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+          "detail": "A página oficial de 2026 indica que o edital disponibilizado é a versão retificada."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 274
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Diretrizes de avaliação da redação",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/05/Diretrizes-de-Avaliacao-da-Redacao-site.pdf",
+        "kind": "official_writing_guidelines",
+        "source_document_id": 342,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: diretrizes oficiais de avaliação da redação, PDF de uma página publicado em maio de 2025 e ligado pela página do Vestibular 2026. A página do Vestibular 2025 aponta uma versão diferente (2023); não confundir versões nem tratar este PDF como documento exclusivo da edição 2025. Aprovação somente de identidade, data e vínculo de referência; não endossa toda aplicação pedagógica, não altera availability_mode=reference nem source_documents/licença."
+      },
+      "reason": "A ficha passa a identificar com precisão a versão consultada (PDF de maio/2025) como referência vinculada à edição 2026. Não chamar de diretriz específica de 2025: a página do Vestibular 2025 liga um PDF anterior, de 2023.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/05/Diretrizes-de-Avaliacao-da-Redacao-site.pdf",
+          "detail": "PDF primário de uma página; primeira linha identifica ‘Diretrizes de Avaliação da Redação’; URL no domínio Comvest sob uploads/2025/05."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+          "detail": "A página oficial do Vestibular 2026 inclui link direto ‘Diretrizes de avaliação da Redação’ para esta versão de maio de 2025."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "A página 2025 aponta outro PDF de diretrizes, com URL em uploads/2023/08; por isso esta referência não é rotulada como específica do Vestibular 2025."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 36
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — prova da 1ª fase, modelos Q e Z",
+        "url": "/data/official-pdfs/2025/QZ.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 36,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2025, modelo Q e Z. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2025, 1ª fase e modelo Q e Z. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página institucional da Comvest para edição 2025; seção 1ª fase > Provas associa modelo Q e Z ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2025/F1/f12025Q_Z.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2025, 1ª fase e modelo Q e Z."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=36, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 37
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — gabarito da 1ª fase, modelos Q e Z",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 37,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2025, modelos Q e Z. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos Q e Z. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos Q e Z."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=37; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 38
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — prova da 1ª fase, modelos R e W",
+        "url": "/data/official-pdfs/2025/RW.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 38,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2025, modelo R e W. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2025, 1ª fase e modelo R e W. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página institucional da Comvest para edição 2025; seção 1ª fase > Provas associa modelo R e W ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2025/F1/f12025R_W.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2025, 1ª fase e modelo R e W."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/RW.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=38, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 39
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — gabarito da 1ª fase, modelos R e W",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/RW_gabarito_2025_FINAL_site.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 39,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2025, modelos R e W. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos R e W. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos R e W."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/RW_gabarito_2025_FINAL_site.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=39; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 40
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — prova da 1ª fase, modelos S e X",
+        "url": "/data/official-pdfs/2025/SX.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 40,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2025, modelo S e X. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2025, 1ª fase e modelo S e X. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página institucional da Comvest para edição 2025; seção 1ª fase > Provas associa modelo S e X ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2025/F1/f12025S_X.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2025, 1ª fase e modelo S e X."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/SX.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=40, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 41
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — gabarito da 1ª fase, modelos S e X",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/SX_gabarito_2025_FINAL_site.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 41,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2025, modelos S e X. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos S e X. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos S e X."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/SX_gabarito_2025_FINAL_site.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=41; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 42
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — prova da 1ª fase, modelos T e Y",
+        "url": "/data/official-pdfs/2025/TY.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 42,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2025, modelo T e Y. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2025, 1ª fase e modelo T e Y. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página institucional da Comvest para edição 2025; seção 1ª fase > Provas associa modelo T e Y ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2025/F1/f12025T_Y.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2025, 1ª fase e modelo T e Y."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/TY.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=42, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 43
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — gabarito da 1ª fase, modelos T e Y",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/TY_gabarito_2025_FINAL_site.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 43,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2025, modelos T e Y. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos T e Y. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2025/vestibular-2025/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos T e Y."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/TY_gabarito_2025_FINAL_site.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=43; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 44
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — prova da 1ª fase, modelos Q e X",
+        "url": "/data/official-pdfs/2026/QX.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 44,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2026, modelo Q e X. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2026, 1ª fase e modelo Q e X. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página institucional da Comvest para edição 2026; seção 1ª fase > Provas associa modelo Q e X ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2026, 1ª fase e modelo Q e X."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2026/QX.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=44, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 45
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — gabarito da 1ª fase, modelos Q e X",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 45,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2026, modelos Q e X. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos Q e X. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos Q e X."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=45; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 46
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — prova da 1ª fase, modelos R e Y",
+        "url": "/data/official-pdfs/2026/RY.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 46,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2026, modelo R e Y. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2026, 1ª fase e modelo R e Y. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página institucional da Comvest para edição 2026; seção 1ª fase > Provas associa modelo R e Y ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026R_Y.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2026, 1ª fase e modelo R e Y."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2026/RY.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=46, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 47
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — gabarito da 1ª fase, modelos R e Y",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/R_Y-gabarito.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 47,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2026, modelos R e Y. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos R e Y. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos R e Y."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/R_Y-gabarito.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=47; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 48
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — prova da 1ª fase, modelos S e Z",
+        "url": "/data/official-pdfs/2026/SZ.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 48,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2026, modelo S e Z. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2026, 1ª fase e modelo S e Z. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página institucional da Comvest para edição 2026; seção 1ª fase > Provas associa modelo S e Z ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026S_Z.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2026, 1ª fase e modelo S e Z."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2026/SZ.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=48, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 49
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — gabarito da 1ª fase, modelos S e Z",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/S_Z-gabarito.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 49,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2026, modelos S e Z. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos S e Z. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos S e Z."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/S_Z-gabarito.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=49; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 50
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — prova da 1ª fase, modelos T e W",
+        "url": "/data/official-pdfs/2026/TW.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 50,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno oficial da 1ª fase de 2026, modelo T e W. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "O índice anual oficial liga o caderno correspondente; a capa da cópia em staging foi conferida visualmente e identifica Vestibular 2026, 1ª fase e modelo T e W. Mantém-se para consulta, não como comentário/gabarito nem como conteúdo aprovado pedagogicamente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página institucional da Comvest para edição 2026; seção 1ª fase > Provas associa modelo T e W ao caderno oficial."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026T_W.pdf",
+          "detail": "PDF primário direto da Comvest. Página 1/capa conferida visualmente: Vestibular Unicamp 2026, 1ª fase e modelo T e W."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2026/TW.pdf",
+          "detail": "Cópia local de consulta; capa renderizada e conferida visualmente. Inventário .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl registra sourceDocumentId=50, URL oficial e hash da cópia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 51
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — gabarito da 1ª fase, modelos T e W",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/T_W-gabarito.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 51,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial da 1ª fase de 2026, modelos T e W. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção de gabaritos da página anual liga este PDF para os modelos T e W. A decisão atesta apenas identidade e associação documental; não foi auditoria de cada uma das 72 respostas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/provas-e-gabaritos-vestibular-2026/",
+          "detail": "Página oficial da Comvest, seção 1ª fase > Gabaritos, link rotulado modelos T e W."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/T_W-gabarito.pdf",
+          "detail": "Arquivo PDF de gabarito servido diretamente no domínio Comvest e correspondente ao modelo indicado no link oficial; referência de consulta, sem verificação resposta a resposta."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+          "detail": "Manifesto de ativos liga a cópia ao sourceDocumentId=51; é evidência de associação do arquivo em staging, não de exatidão das alternativas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 246
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Simulado presencial — Vestibular 2027",
+        "url": "https://www.comvest.unicamp.br/eventos/simuladopresencial/",
+        "kind": "official_simulation_page",
+        "source_document_id": 149,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: Página oficial do evento de simulado presencial aplicado em 14/06/2026 para preparação do Vestibular 2027; evento histórico encerrado. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "Fontes institucionais da Unicamp confirmam que a página pertence ao simulado presencial de preparação, distinto do vestibular regular e sem promessa de vaga/pontos. A página é referência histórica; não endossa desempenho individual ou resultados privados.",
+      "evidence": [
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Notícia institucional de 13/04/2026 identifica simulado presencial como preparação para ingresso 2027, aplicação 14/06/2026 e esclarece que não garante pontos ou vagas."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/06/11/unicamp-aplica-simulado-presencial-no-proximo-domingo-14-6/",
+          "detail": "Comunicado de 11/06/2026 confirma data de aplicação e formato do evento; refere à página da Comvest para o regulamento."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/eventos/simuladopresencial/",
+          "detail": "URL oficial Comvest identificada nos comunicados como página do evento; o recurso permanece marcado como referência, não inscrição ou resultado atual."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 267
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Simulado Unicamp 2026 — caderno Q/T (preparação para o Vestibular 2027)",
+        "url": "/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 335,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno Q/T do simulado presencial de 2026, preparação para o Vestibular 2027. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página 1 do documento original foi conferida visualmente e, quando há PDF local, o SHA-256 coincide com o source document arquivado. O registro fica explicitamente delimitado ao simulado/consulta; não é material do vestibular regular nem aprovação de conteúdo/gabarito.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf",
+          "detail": "Documento primário publicado no domínio Comvest; URL direta identifica caderno Q/T do simulado presencial de 2026, preparação para o Vestibular 2027."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF local de consulta; página 1 conferida visualmente para identidade/título/modelo. SHA-256 43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d, igual ao checksum registrado para o source document 335."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Comunicado institucional caracteriza a atividade como simulado presencial em preparação ao ingresso 2027, e não como o exame regular."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 268
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Simulado Unicamp 2026 — caderno R/S (preparação para o Vestibular 2027)",
+        "url": "/data/official-pdfs/2027-simulation/simulado_R_S.pdf",
+        "kind": "official_exam_paper",
+        "source_document_id": 336,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: caderno R/S do simulado presencial de 2026, preparação para o Vestibular 2027. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página 1 do documento original foi conferida visualmente e, quando há PDF local, o SHA-256 coincide com o source document arquivado. O registro fica explicitamente delimitado ao simulado/consulta; não é material do vestibular regular nem aprovação de conteúdo/gabarito.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_R_S.pdf",
+          "detail": "Documento primário publicado no domínio Comvest; URL direta identifica caderno R/S do simulado presencial de 2026, preparação para o Vestibular 2027."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/simulado_R_S.pdf",
+          "detail": "PDF local de consulta; página 1 conferida visualmente para identidade/título/modelo. SHA-256 65a1231f33681a297e61a4f2d7c68739e4267bf6f1674b30dd9109971d597d17, igual ao checksum registrado para o source document 336."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Comunicado institucional caracteriza a atividade como simulado presencial em preparação ao ingresso 2027, e não como o exame regular."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 269
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Gabarito do simulado presencial 2026 — Q/T",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/gabarito_2026_Q_T.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 337,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial do simulado 2026, caderno Q/T. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página 1 do documento original foi conferida visualmente e, quando há PDF local, o SHA-256 coincide com o source document arquivado. O registro fica explicitamente delimitado ao simulado/consulta; não é material do vestibular regular nem aprovação de conteúdo/gabarito.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/gabarito_2026_Q_T.pdf",
+          "detail": "Documento primário publicado no domínio Comvest; URL direta identifica gabarito oficial do simulado 2026, caderno Q/T."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/gabarito_2026_Q_T.pdf",
+          "detail": "PDF local de consulta; página 1 conferida visualmente para identidade/título/modelo. SHA-256 074039c4a415c3b979366ce3a9c719308de611261b637eb38555671b02d4b7d4, igual ao checksum registrado para o source document 337."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Comunicado institucional caracteriza a atividade como simulado presencial em preparação ao ingresso 2027, e não como o exame regular."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 270
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Gabarito do simulado presencial 2026 — R/S",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/gabarito_2026_R_S.pdf",
+        "kind": "official_answer_key",
+        "source_document_id": 338,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: gabarito oficial do simulado 2026, caderno R/S. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=consultation_only; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página 1 do documento original foi conferida visualmente e, quando há PDF local, o SHA-256 coincide com o source document arquivado. O registro fica explicitamente delimitado ao simulado/consulta; não é material do vestibular regular nem aprovação de conteúdo/gabarito.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/gabarito_2026_R_S.pdf",
+          "detail": "Documento primário publicado no domínio Comvest; URL direta identifica gabarito oficial do simulado 2026, caderno R/S."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/gabarito_2026_R_S.pdf",
+          "detail": "PDF local de consulta; página 1 conferida visualmente para identidade/título/modelo. SHA-256 1ea663857f48b8b14091e7a30f4fb3088d0005c1faf482d409431379f50a7000, igual ao checksum registrado para o source document 338."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Comunicado institucional caracteriza a atividade como simulado presencial em preparação ao ingresso 2027, e não como o exame regular."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 271
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Regulamento do Simulado do Vestibular Unicamp 2027",
+        "url": "/data/official-pdfs/2027-simulation/regulamento-simulado-2027.pdf",
+        "kind": "official_simulation_regulation",
+        "source_document_id": 339,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de referência conferidos em 09/10/2026: regulamento do simulado de 1ª fase aplicado em 2026 como preparação para 2027; não é a resolução/edital do Vestibular regular. Escopo desta aprovação: identidade, edição, etapa e versão/estado de publicação quando aplicável; não é endosso da correção/conteúdo de questões ou comentários. Mantém-se availability_mode=reference; consulta somente pelo link/cópia de consulta já cadastrada. Não altera source_documents nem licença/reuso."
+      },
+      "reason": "A página 1 do documento original foi conferida visualmente e, quando há PDF local, o SHA-256 coincide com o source document arquivado. O registro fica explicitamente delimitado ao simulado/consulta; não é material do vestibular regular nem aprovação de conteúdo/gabarito.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/04/REGULAMENTO-DO-SIMULADO-DO-VESTIBULAR-UNICAMP-2027_-Final-1.pdf",
+          "detail": "Documento primário publicado no domínio Comvest; URL direta identifica regulamento do simulado de 1ª fase aplicado em 2026 como preparação para 2027; não é a resolução/edital do Vestibular regular."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/regulamento-simulado-2027.pdf",
+          "detail": "PDF local de consulta; página 1 conferida visualmente para identidade/título/modelo. SHA-256 f1096f4fb2062526a41b88f45cde9c50ba8843660a1bc8085cf093739b6803c5, igual ao checksum registrado para o source document 339."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Comunicado institucional caracteriza a atividade como simulado presencial em preparação ao ingresso 2027, e não como o exame regular."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": { "id": 5 },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2025 — 1ª fase, prova comentada",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+        "kind": "official_commented_exam_pdf",
+        "source_document_id": 5,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Metadados de consulta conferidos em 09/10/2026: prova comentada da 1ª fase do Vestibular Unicamp 2025, identificada na página oficial de provas comentadas e na capa do PDF. É material histórico de consulta, não orientação para edição atual. Esta aprovação atesta somente identidade/edição/fase, não valida cada comentário ou resposta e preserva availability_mode=consultation_only; não altera source_documents nem licença/reuso."
+      },
+      "reason": "A seção oficial Provas Comentadas 2025 > 1ª Fase liga exatamente este PDF; a capa local e a página introdutória confirmam Vestibular 2025 e prova comentada. A edição é coerente entre ficha, fonte e PDF.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibulares-anteriores/1a-fase-2a-fase-comentadas/",
+          "detail": "A página oficial lista ‘Provas comentadas 2025’, seção ‘1ª Fase’, com link ‘Questões – múltipla escolha’ para o PDF."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/F1_2025.pdf",
+          "detail": "PDF primário oficial, 63 páginas; capa renderizada identifica Vestibular 2025, Prova Comentada, 1ª fase/Conhecimentos Gerais; p. 2 descreve que a publicação se refere ao vestibular 2025."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-commentaries/2025/5.pdf",
+          "detail": "Cópia local de consulta conferida visualmente nas pp. 1–2; identificação consistente com o PDF primário e com resource id 5."
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "table": "resources",
+      "key": { "id": 4 },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — 1ª fase, prova comentada",
+        "url": "/data/official-commentaries/2026/4.pdf",
+        "kind": "official_commented_exam_pdf",
+        "source_document_id": 4,
+        "availability_mode": "consultation_only"
+      },
+      "reason": "Não publicar até resolver uma contradição de edição dentro do próprio PDF: capa e identidade do documento dizem Vestibular 2026, mas a introdução da banca, na página seguinte, afirma que a prova comentada se refere ao Vestibular 2025. O índice oficial liga o PDF sob 2026, mas isso não corrige a inconsistência do documento-fonte.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibulares-anteriores/1a-fase-2a-fase-comentadas/",
+          "detail": "A página oficial lista o PDF em ‘Provas comentadas 2026’ > ‘1ª Fase’ > ‘Questões – múltipla escolha’."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "PDF oficial de 71 páginas; capa identifica ‘Vestibular Unicamp 2026 — Prova Comentada — 1ª fase’. Na página introdutória seguinte, a frase diz ‘esta referente ao vestibular 2025’. Ambas foram conferidas visualmente; o conflito impede aprovação de metadados limpos."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-commentaries/2026/4.pdf",
+          "detail": "Páginas 1–2 renderizadas e inspecionadas: capa 2026, mas introdução interna 2025. Não se trata de bloqueio por licença; é inconsistência explícita de edição."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 272
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Programa da prova do Simulado Unicamp 2026",
+        "url": "/data/official-pdfs/2027-simulation/programa-simulado-2027.pdf",
+        "source_document_id": 340,
+        "kind": "official_simulation_program"
+      },
+      "reason": "Não publicar a ficha com a identidade atual. A capa do arquivo local diz ‘Vestibular Unicamp 2027 — Programa das Provas’, sem identificar-se como um programa autônomo do Simulado 2026. O arquivo aparenta corresponder ao programa regular já referenciado pelo recurso 245; há conflito entre título cadastrado, nome/URL de staging e documento primário.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/programa-simulado-2027.pdf",
+          "detail": "Página 1 renderizada e inspecionada: título ‘Vestibular Unicamp 2027 — Programa das Provas’; o documento descreve as provas das duas fases, sem capa de programa exclusivo do Simulado 2026."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/04/Programa_Simulado27.pdf",
+          "detail": "URL oficial registrada no source document; identidade deve ser reconciliada com a capa e com o Programa regular 2027 antes de publicar uma ficha específica do simulado."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/programa-provas-2027.pdf",
+          "detail": "Programa oficial regular 2027 cadastrado separadamente (resource 245, já published), fonte potencialmente duplicada; não fundir nem relabelar sem confirmação de identidade."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 135
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Retificação da Resolução GR-25/2025 — Vestibular Unicamp 2026",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/09/RESOLUCAO-GR-25-Retificacao.pdf",
+        "source_document_id": 135,
+        "kind": "official_regulation_amendment"
+      },
+      "reason": "Não publicar com o título/tipo atuais: o PDF direto é a Resolução GR nº 25/2025 integral, de 10/07/2025, sobre Vestibular 2026, com alterações da GR-028/2025 riscadas e texto substituto. Não é uma peça autônoma de retificação; o recurso 134 já aponta à redação consolidada oficial da Procuradoria. A ficha exige correção de metadados antes da publicação.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/09/RESOLUCAO-GR-25-Retificacao.pdf",
+          "detail": "PDF baixado da URL oficial e primeira página renderizada: identifica ‘Resolução GR nº 25/2025, de 10/07/2025’ e dispõe sobre Vestibular 2026; a página contém redação original riscada e texto marcado como retificado pela GR-028/2025."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32142/1",
+          "detail": "Página oficial da Procuradoria apresenta a GR-025/2025 consolidada com os valores posteriores; é a referência consolidada distinta da cópia Comvest com marcações."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2026/vestibular-2026/",
+          "detail": "Portal 2026 nomeia o link normativo como ‘Edital do Vestibular Unicamp 2026 – Versão Retificada’, confirmando a necessidade de não chamar a cópia marcada simplesmente de retificação autônoma sem corrigir o cadastro."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 244
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Resolução GR-026/2026 — alteração da Resolução GR-022/2026",
+        "url": "https://www.pg.unicamp.br/normas",
+        "source_document_id": 147,
+        "kind": "amendment_index_entry"
+      },
+      "reason": "Não publicar: a ficha aponta ao índice geral, não ao documento direto da Resolução GR-026/2026. A página normativa direta já consta em outra ficha (resource 287, published).",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/normas",
+          "detail": "Índice geral da Procuradoria, não a página direta identificadora da GR-026/2026."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32405/0",
+          "detail": "URL direta da Resolução GR-026/2026, disponível na ficha resource 287."
+        }
+      ]
+    }
+  ],
+  "summary": "Lote de metadados oficiais de consulta, 09/10/2026: 35 propostas de publicação restritas à identidade documental, edição, fase, modelos, versão e vigência histórica: índices e documentos oficiais de 2025/2026, cadernos e gabaritos da 1ª fase de 2025/2026, página do simulado preparatório 2027 e seus cadernos/gabaritos/regulamento. Os cadernos 2025/2026 e documentos de simulado foram conferidos visualmente nas páginas de identificação; as cópias do simulado têm SHA-256 igual ao source document. Quatro fichas ficam bloqueadas por conflito específico: 4 comentário 2026 cuja introdução diz 2025, 272 programa com identidade conflitante, 135 resolução retificada vs. PDF integral marcado, e 244 link genérico. Não se bloqueou por incerteza de licença. Os recursos regulares 2027 já publicados anteriormente (p. ex. Manual, Programa e Resolução) foram excluídos para evitar decisões duplicadas. Nenhum source_documents, rights/license, disponibilidade ou SQLite foi alterado; manter apenas links/consulta. Todas as propostas aguardam aplicação individual."
+}

@@ -1,0 +1,66 @@
+{
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 328, "canonical_topic_id": 2473},
+      "expected": {"relation_type": "primary", "review_status": "review", "source_document_id": null, "source_page": null, "source_excerpt": null},
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.82,
+        "source_document_id": 44,
+        "source_page": 16,
+        "source_excerpt": "O item exige classificar animais como artrópodes e distinguir aracnídeos de insetos; associa-se secundariamente a Biologia geral.",
+        "review_status": "published"
+      },
+      "reason": "Preservar a relação com Biologia geral como secundária, liberando a classificação principal específica que corresponde ao conteúdo cobrado.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "Caderno oficial Q/X 2026, p. 16, questão 40: o enunciado e as alternativas classificam carrapatos, escorpiões, mosquitos e abelhas em grupos de artrópodes."
+        }
+      ]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 327, "canonical_topic_id": 2513},
+      "expected": {"relation_type": "primary", "review_status": "published"},
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.76,
+        "source_document_id": 44,
+        "source_page": 16,
+        "source_excerpt": "A questão contextualiza invasão biológica e perda de biodiversidade, mas o comando exige analisar a dinâmica presa–predador e a invasão; o vínculo com biodiversidade é contextual/secundário, não a habilidade central cobrada.",
+        "review_status": "published"
+      },
+      "reason": "Evitar contar menção contextual a biodiversidade como questão que avalia diretamente o tópico; preservar uma associação secundária útil, mas não principal.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "Caderno oficial Q/X 2026, p. 16, questão 39: o comando e os cenários I/II pedem análise do sistema nativo presa–predador após chegada de predador exótico; biodiversidade aparece no contexto da invasão."
+        }
+      ]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 328, "canonical_topic_id": 2513},
+      "expected": {"exists": false},
+      "changes": {
+        "question_id": 328,
+        "canonical_topic_id": 2513,
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "source_document_id": 44,
+        "source_page": 16,
+        "source_excerpt": "A questão avalia a classificação de carrapatos, escorpiões, mosquitos e abelhas como artrópodes e distingue aracnídeos de insetos.",
+        "review_status": "published"
+      },
+      "reason": "Associar a questão ao conteúdo de classificação da diversidade dos seres vivos explicitamente previsto no tópico anual de biodiversidade e saúde humana.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "Caderno oficial Q/X 2026, p. 16, questão 40: o enunciado apresenta aviso sobre artrópodes e pergunta se a informação está correta; a alternativa D distingue corretamente aracnídeos de insetos."
+        }
+      ]
+    }
+  ]
+}

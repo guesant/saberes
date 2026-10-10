@@ -1,3 +1,5 @@
+import type { CurriculumCoverageReport } from "./curriculum-coverage-report.interface";
+
 export interface ContentSnapshotValidationSummary {
   tableCount: number;
   questionCount: number;
@@ -5,4 +7,5 @@ export interface ContentSnapshotValidationSummary {
   publishedCourseCount: number;
   assessmentSetCount: number;
   issueCount: number;
+  curriculumCoverage?: CurriculumCoverageReport[];
 }

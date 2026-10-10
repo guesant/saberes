@@ -1,0 +1,43 @@
+{
+  "schema": "saberes.editorial.alt-text-proposal/v1",
+  "created_at": "2026-10-10",
+  "status": "proposta; não aplicada",
+  "scope": "Correção de precisão da descrição alternativa do mapa de escudos cristalinos da questão 4 do caderno Q/Z 2025.",
+  "source": {
+    "database": ".local/content/content.sqlite",
+    "database_access": "somente leitura; consulta ao asset e ocorrência; PRAGMA integrity_check retornou ok",
+    "source_document_id": 36,
+    "source_document": "Vestibular Unicamp 2025 — caderno Q/Z",
+    "source_pdf": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/QZ.pdf",
+    "source_pdf_sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd071f",
+    "occurrence_id": 4,
+    "canonical_question_id": 4,
+    "booklet": "QZ",
+    "question_number": 4,
+    "printed_page": 2,
+    "pdf_page": 4,
+    "page_convention": "pdf_page é a página física contando a capa e páginas preliminares; printed_page é o número impresso no caderno."
+  },
+  "asset": {
+    "asset_id": 471,
+    "path": "official-pdfs/2025/question-assets/qz-q04-crystalline-shields-map.png",
+    "sha256": "f740c713689a511d373387653fd18ac6c1cf112c011466b849b3bcc794f44f04",
+    "pixel_dimensions": "1635x1560",
+    "inspection": "O recorte coincide com o mapa e sua legenda na página; mostra a projeção de Goode, escudos em roxo, outras estruturas em cinza, oceanos em azul-claro e seta norte. Não há Antártida identificável no mapa reproduzido."
+  },
+  "alt_text": {
+    "current": "Mapa-múndi em projeção equivalente modificada de Goode. Escudos cristalinos em roxo aparecem no leste da América do Norte, norte da América do Sul, norte da Europa e Ásia, grande parte da África, Índia, Austrália e partes da Antártida. Outras estruturas geológicas estão em cinza e oceanos em azul-claro; legenda, linhas da projeção e indicação do norte visíveis.",
+    "proposed": "Mapa-múndi em projeção equivalente modificada de Goode. Áreas roxas, identificadas na legenda como escudos cristalinos, aparecem em partes das Américas, da África, da Europa e da Ásia, além da Austrália. Outras estruturas geológicas estão em cinza e os oceanos em azul-claro. A legenda, as linhas da projeção e a indicação do norte estão visíveis.",
+    "rationale": "Remove a afirmação não confirmada sobre a Antártida e evita detalhar localizações com precisão maior do que o recorte permite. Mantém os elementos visuais necessários para identificar a figura."
+  },
+  "legibility_caveats": [
+    "O PDF apresenta o mapa em tamanho relativamente pequeno na página; contornos e linhas da projeção podem exigir ampliação para inspeção visual.",
+    "O texto da legenda é discernível no asset em resolução original, mas sua legibilidade em dispositivos/tamanhos menores não foi testada no app.",
+    "A proposta de texto alternativo complementa a imagem; não certifica conformidade WCAG nem substitui teste com leitor de tela."
+  ],
+  "changes_made": {
+    "sqlite": false,
+    "asset": false,
+    "other_files": false
+  }
+}

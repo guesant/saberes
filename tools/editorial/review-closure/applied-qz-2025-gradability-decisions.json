@@ -1,0 +1,2424 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T00:37:06.612644+00:00",
+  "database_before_sha256": "6fb0d45e2a0d347394ae445e40c9f7f1425089e5404404bbbabb79006eb91a00",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 1
+      },
+      "expected": {
+        "occurrence_id": 1,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 1."
+        },
+        {
+          "locator": "sqlite://question_occurrences/1",
+          "detail": "Ocorrência 1 na posição 1 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/1",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 2
+      },
+      "expected": {
+        "occurrence_id": 2,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 2."
+        },
+        {
+          "locator": "sqlite://question_occurrences/2",
+          "detail": "Ocorrência 2 na posição 2 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/2",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 3
+      },
+      "expected": {
+        "occurrence_id": 3,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 3."
+        },
+        {
+          "locator": "sqlite://question_occurrences/3",
+          "detail": "Ocorrência 3 na posição 3 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/3",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 4
+      },
+      "expected": {
+        "occurrence_id": 4,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 4."
+        },
+        {
+          "locator": "sqlite://question_occurrences/4",
+          "detail": "Ocorrência 4 na posição 4 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/4",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 5
+      },
+      "expected": {
+        "occurrence_id": 5,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 5."
+        },
+        {
+          "locator": "sqlite://question_occurrences/5",
+          "detail": "Ocorrência 5 na posição 5 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/5",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 6
+      },
+      "expected": {
+        "occurrence_id": 6,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 6."
+        },
+        {
+          "locator": "sqlite://question_occurrences/6",
+          "detail": "Ocorrência 6 na posição 6 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/6",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 7
+      },
+      "expected": {
+        "occurrence_id": 7,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 7."
+        },
+        {
+          "locator": "sqlite://question_occurrences/7",
+          "detail": "Ocorrência 7 na posição 7 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/7",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 8
+      },
+      "expected": {
+        "occurrence_id": 8,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 8."
+        },
+        {
+          "locator": "sqlite://question_occurrences/8",
+          "detail": "Ocorrência 8 na posição 8 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/8",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 9
+      },
+      "expected": {
+        "occurrence_id": 9,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 9."
+        },
+        {
+          "locator": "sqlite://question_occurrences/9",
+          "detail": "Ocorrência 9 na posição 9 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/9",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 10
+      },
+      "expected": {
+        "occurrence_id": 10,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 10."
+        },
+        {
+          "locator": "sqlite://question_occurrences/10",
+          "detail": "Ocorrência 10 na posição 10 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/10",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 11
+      },
+      "expected": {
+        "occurrence_id": 11,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 11."
+        },
+        {
+          "locator": "sqlite://question_occurrences/11",
+          "detail": "Ocorrência 11 na posição 11 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/11",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 12
+      },
+      "expected": {
+        "occurrence_id": 12,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 12."
+        },
+        {
+          "locator": "sqlite://question_occurrences/12",
+          "detail": "Ocorrência 12 na posição 12 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/12",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 13
+      },
+      "expected": {
+        "occurrence_id": 13,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 13."
+        },
+        {
+          "locator": "sqlite://question_occurrences/13",
+          "detail": "Ocorrência 13 na posição 13 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/13",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 14
+      },
+      "expected": {
+        "occurrence_id": 14,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 14."
+        },
+        {
+          "locator": "sqlite://question_occurrences/14",
+          "detail": "Ocorrência 14 na posição 14 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/14",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 15
+      },
+      "expected": {
+        "occurrence_id": 15,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 15."
+        },
+        {
+          "locator": "sqlite://question_occurrences/15",
+          "detail": "Ocorrência 15 na posição 15 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/15",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 16
+      },
+      "expected": {
+        "occurrence_id": 16,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 16."
+        },
+        {
+          "locator": "sqlite://question_occurrences/16",
+          "detail": "Ocorrência 16 na posição 16 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/16",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 17
+      },
+      "expected": {
+        "occurrence_id": 17,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 17."
+        },
+        {
+          "locator": "sqlite://question_occurrences/17",
+          "detail": "Ocorrência 17 na posição 17 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/17",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 18
+      },
+      "expected": {
+        "occurrence_id": 18,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 18."
+        },
+        {
+          "locator": "sqlite://question_occurrences/18",
+          "detail": "Ocorrência 18 na posição 18 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/18",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 19
+      },
+      "expected": {
+        "occurrence_id": 19,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 19."
+        },
+        {
+          "locator": "sqlite://question_occurrences/19",
+          "detail": "Ocorrência 19 na posição 19 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/19",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 20
+      },
+      "expected": {
+        "occurrence_id": 20,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 20."
+        },
+        {
+          "locator": "sqlite://question_occurrences/20",
+          "detail": "Ocorrência 20 na posição 20 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/20",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 21
+      },
+      "expected": {
+        "occurrence_id": 21,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 21."
+        },
+        {
+          "locator": "sqlite://question_occurrences/21",
+          "detail": "Ocorrência 21 na posição 21 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/21",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 22
+      },
+      "expected": {
+        "occurrence_id": 22,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 22."
+        },
+        {
+          "locator": "sqlite://question_occurrences/22",
+          "detail": "Ocorrência 22 na posição 22 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/22",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 23
+      },
+      "expected": {
+        "occurrence_id": 23,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 23."
+        },
+        {
+          "locator": "sqlite://question_occurrences/23",
+          "detail": "Ocorrência 23 na posição 23 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/23",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 24
+      },
+      "expected": {
+        "occurrence_id": 24,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 24."
+        },
+        {
+          "locator": "sqlite://question_occurrences/24",
+          "detail": "Ocorrência 24 na posição 24 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/24",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 25
+      },
+      "expected": {
+        "occurrence_id": 25,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 25."
+        },
+        {
+          "locator": "sqlite://question_occurrences/25",
+          "detail": "Ocorrência 25 na posição 25 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/25",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 26
+      },
+      "expected": {
+        "occurrence_id": 26,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 26."
+        },
+        {
+          "locator": "sqlite://question_occurrences/26",
+          "detail": "Ocorrência 26 na posição 26 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/26",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 27
+      },
+      "expected": {
+        "occurrence_id": 27,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 27."
+        },
+        {
+          "locator": "sqlite://question_occurrences/27",
+          "detail": "Ocorrência 27 na posição 27 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/27",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 28
+      },
+      "expected": {
+        "occurrence_id": 28,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 28."
+        },
+        {
+          "locator": "sqlite://question_occurrences/28",
+          "detail": "Ocorrência 28 na posição 28 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/28",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 29
+      },
+      "expected": {
+        "occurrence_id": 29,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 29."
+        },
+        {
+          "locator": "sqlite://question_occurrences/29",
+          "detail": "Ocorrência 29 na posição 29 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/29",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 30
+      },
+      "expected": {
+        "occurrence_id": 30,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 30."
+        },
+        {
+          "locator": "sqlite://question_occurrences/30",
+          "detail": "Ocorrência 30 na posição 30 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/30",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 31
+      },
+      "expected": {
+        "occurrence_id": 31,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 31."
+        },
+        {
+          "locator": "sqlite://question_occurrences/31",
+          "detail": "Ocorrência 31 na posição 31 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/31",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 32
+      },
+      "expected": {
+        "occurrence_id": 32,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 32."
+        },
+        {
+          "locator": "sqlite://question_occurrences/32",
+          "detail": "Ocorrência 32 na posição 32 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/32",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 33
+      },
+      "expected": {
+        "occurrence_id": 33,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 33."
+        },
+        {
+          "locator": "sqlite://question_occurrences/33",
+          "detail": "Ocorrência 33 na posição 33 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/33",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 34
+      },
+      "expected": {
+        "occurrence_id": 34,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 34."
+        },
+        {
+          "locator": "sqlite://question_occurrences/34",
+          "detail": "Ocorrência 34 na posição 34 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/34",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 35
+      },
+      "expected": {
+        "occurrence_id": 35,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 35."
+        },
+        {
+          "locator": "sqlite://question_occurrences/35",
+          "detail": "Ocorrência 35 na posição 35 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/35",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 36
+      },
+      "expected": {
+        "occurrence_id": 36,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 36."
+        },
+        {
+          "locator": "sqlite://question_occurrences/36",
+          "detail": "Ocorrência 36 na posição 36 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/36",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 37
+      },
+      "expected": {
+        "occurrence_id": 37,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 37."
+        },
+        {
+          "locator": "sqlite://question_occurrences/37",
+          "detail": "Ocorrência 37 na posição 37 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/37",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 38
+      },
+      "expected": {
+        "occurrence_id": 38,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 38."
+        },
+        {
+          "locator": "sqlite://question_occurrences/38",
+          "detail": "Ocorrência 38 na posição 38 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/38",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 39
+      },
+      "expected": {
+        "occurrence_id": 39,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 39."
+        },
+        {
+          "locator": "sqlite://question_occurrences/39",
+          "detail": "Ocorrência 39 na posição 39 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/39",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 40
+      },
+      "expected": {
+        "occurrence_id": 40,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 40."
+        },
+        {
+          "locator": "sqlite://question_occurrences/40",
+          "detail": "Ocorrência 40 na posição 40 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/40",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 41
+      },
+      "expected": {
+        "occurrence_id": 41,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 41."
+        },
+        {
+          "locator": "sqlite://question_occurrences/41",
+          "detail": "Ocorrência 41 na posição 41 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/41",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 42
+      },
+      "expected": {
+        "occurrence_id": 42,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 42."
+        },
+        {
+          "locator": "sqlite://question_occurrences/42",
+          "detail": "Ocorrência 42 na posição 42 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/42",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 43
+      },
+      "expected": {
+        "occurrence_id": 43,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 43."
+        },
+        {
+          "locator": "sqlite://question_occurrences/43",
+          "detail": "Ocorrência 43 na posição 43 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/43",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 44
+      },
+      "expected": {
+        "occurrence_id": 44,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 44."
+        },
+        {
+          "locator": "sqlite://question_occurrences/44",
+          "detail": "Ocorrência 44 na posição 44 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/44",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 45
+      },
+      "expected": {
+        "occurrence_id": 45,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 45."
+        },
+        {
+          "locator": "sqlite://question_occurrences/45",
+          "detail": "Ocorrência 45 na posição 45 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/45",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 46
+      },
+      "expected": {
+        "occurrence_id": 46,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 46."
+        },
+        {
+          "locator": "sqlite://question_occurrences/46",
+          "detail": "Ocorrência 46 na posição 46 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/46",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 47
+      },
+      "expected": {
+        "occurrence_id": 47,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 47."
+        },
+        {
+          "locator": "sqlite://question_occurrences/47",
+          "detail": "Ocorrência 47 na posição 47 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/47",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 48
+      },
+      "expected": {
+        "occurrence_id": 48,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 48."
+        },
+        {
+          "locator": "sqlite://question_occurrences/48",
+          "detail": "Ocorrência 48 na posição 48 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/48",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 49
+      },
+      "expected": {
+        "occurrence_id": 49,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 49."
+        },
+        {
+          "locator": "sqlite://question_occurrences/49",
+          "detail": "Ocorrência 49 na posição 49 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/49",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 50
+      },
+      "expected": {
+        "occurrence_id": 50,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 50."
+        },
+        {
+          "locator": "sqlite://question_occurrences/50",
+          "detail": "Ocorrência 50 na posição 50 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/50",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 51
+      },
+      "expected": {
+        "occurrence_id": 51,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 51."
+        },
+        {
+          "locator": "sqlite://question_occurrences/51",
+          "detail": "Ocorrência 51 na posição 51 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/51",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 52
+      },
+      "expected": {
+        "occurrence_id": 52,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 52."
+        },
+        {
+          "locator": "sqlite://question_occurrences/52",
+          "detail": "Ocorrência 52 na posição 52 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/52",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 54
+      },
+      "expected": {
+        "occurrence_id": 54,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 54."
+        },
+        {
+          "locator": "sqlite://question_occurrences/54",
+          "detail": "Ocorrência 54 na posição 54 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/54",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 55
+      },
+      "expected": {
+        "occurrence_id": 55,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 55."
+        },
+        {
+          "locator": "sqlite://question_occurrences/55",
+          "detail": "Ocorrência 55 na posição 55 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/55",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 56
+      },
+      "expected": {
+        "occurrence_id": 56,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 56."
+        },
+        {
+          "locator": "sqlite://question_occurrences/56",
+          "detail": "Ocorrência 56 na posição 56 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/56",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 57
+      },
+      "expected": {
+        "occurrence_id": 57,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 57."
+        },
+        {
+          "locator": "sqlite://question_occurrences/57",
+          "detail": "Ocorrência 57 na posição 57 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/57",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 58
+      },
+      "expected": {
+        "occurrence_id": 58,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 58."
+        },
+        {
+          "locator": "sqlite://question_occurrences/58",
+          "detail": "Ocorrência 58 na posição 58 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/58",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 59
+      },
+      "expected": {
+        "occurrence_id": 59,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 59."
+        },
+        {
+          "locator": "sqlite://question_occurrences/59",
+          "detail": "Ocorrência 59 na posição 59 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/59",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 60
+      },
+      "expected": {
+        "occurrence_id": 60,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 60."
+        },
+        {
+          "locator": "sqlite://question_occurrences/60",
+          "detail": "Ocorrência 60 na posição 60 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/60",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 61
+      },
+      "expected": {
+        "occurrence_id": 61,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 61."
+        },
+        {
+          "locator": "sqlite://question_occurrences/61",
+          "detail": "Ocorrência 61 na posição 61 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/61",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 62
+      },
+      "expected": {
+        "occurrence_id": 62,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 62."
+        },
+        {
+          "locator": "sqlite://question_occurrences/62",
+          "detail": "Ocorrência 62 na posição 62 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/62",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 63
+      },
+      "expected": {
+        "occurrence_id": 63,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 63."
+        },
+        {
+          "locator": "sqlite://question_occurrences/63",
+          "detail": "Ocorrência 63 na posição 63 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/63",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 64
+      },
+      "expected": {
+        "occurrence_id": 64,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 64."
+        },
+        {
+          "locator": "sqlite://question_occurrences/64",
+          "detail": "Ocorrência 64 na posição 64 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/64",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 65
+      },
+      "expected": {
+        "occurrence_id": 65,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 65."
+        },
+        {
+          "locator": "sqlite://question_occurrences/65",
+          "detail": "Ocorrência 65 na posição 65 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/65",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 66
+      },
+      "expected": {
+        "occurrence_id": 66,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 66."
+        },
+        {
+          "locator": "sqlite://question_occurrences/66",
+          "detail": "Ocorrência 66 na posição 66 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/66",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 67
+      },
+      "expected": {
+        "occurrence_id": 67,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 67."
+        },
+        {
+          "locator": "sqlite://question_occurrences/67",
+          "detail": "Ocorrência 67 na posição 67 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/67",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 68
+      },
+      "expected": {
+        "occurrence_id": 68,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "C",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa C na posição 68."
+        },
+        {
+          "locator": "sqlite://question_occurrences/68",
+          "detail": "Ocorrência 68 na posição 68 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção C, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/68",
+          "detail": "Versão 1 da chave permanece definitiva, resposta C e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 69
+      },
+      "expected": {
+        "occurrence_id": 69,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa A na posição 69."
+        },
+        {
+          "locator": "sqlite://question_occurrences/69",
+          "detail": "Ocorrência 69 na posição 69 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção A, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/69",
+          "detail": "Versão 1 da chave permanece definitiva, resposta A e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 70
+      },
+      "expected": {
+        "occurrence_id": 70,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 70."
+        },
+        {
+          "locator": "sqlite://question_occurrences/70",
+          "detail": "Ocorrência 70 na posição 70 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/70",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 71
+      },
+      "expected": {
+        "occurrence_id": 71,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "B",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa B na posição 71."
+        },
+        {
+          "locator": "sqlite://question_occurrences/71",
+          "detail": "Ocorrência 71 na posição 71 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção B, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/71",
+          "detail": "Versão 1 da chave permanece definitiva, resposta B e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "canonical_answer_keys",
+      "key": {
+        "id": 72
+      },
+      "expected": {
+        "occurrence_id": 72,
+        "version": 1,
+        "status": "definitive",
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "is_automatically_gradable": 0,
+        "max_points": 1
+      },
+      "changes": {
+        "is_automatically_gradable": 1
+      },
+      "reason": "A correção automática estava desativada por metadado, apesar de a ocorrência ter gabarito definitivo oficial, exatamente quatro alternativas e vínculo único entre a alternativa marcada e a opção canônica. Habilitar somente a verificação mecânica não altera resposta, versão, pontuação nem conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito definitivo oficial Q/Z confirma a alternativa D na posição 72."
+        },
+        {
+          "locator": "sqlite://question_occurrences/72",
+          "detail": "Ocorrência 72 na posição 72 do Q/Z; a questão tem quatro alternativas e o vínculo canônico aponta uma única opção D, pertencente à mesma questão."
+        },
+        {
+          "locator": "sqlite://canonical_answer_keys/72",
+          "detail": "Versão 1 da chave permanece definitiva, resposta D e peso máximo de um ponto; somente o indicador técnico de gradabilidade é corrigido."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T003706624001Z.sqlite",
+  "database_after_sha256": "a26785051f4343eeb777c07a963b0c91ce8b61cbdf6311365211ad076c0cffee"
+}

@@ -1,0 +1,45 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:15:22.916311+00:00",
+  "database_before_sha256": "9cf951108c4f6eab9d9b52d3ce958d16fce9b47e491a8240f254a6b72cd1ad69",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1025
+      },
+      "expected": {
+        "id": 1025,
+        "question_id": 332,
+        "title": "Resolução oficial comentada — Vestibular Unicamp 2026 — questão 44",
+        "content": "## Objetivo da questão\nA questão trata de funções e exige composição de funções e análise gráfica.\n\n## Alternativa correta: D\nO ponto marcado no gráfico indica que f(g(1)) = 5. Como g(1) = 3 − 1 = 2, temos f(2) = 5. Substituindo x = 2 em f(x) = x³ + 2x² + ax − 1:\n\n5 = 2³ + 2(2²) + 2a − 1 = 15 + 2a.\n\nLogo, a = −5, alternativa D.\n\n## Desempenho dos candidatos\nO gráfico oficial registra: A 20,55%; B 23,13%; C 14,66%; D 41,42%; em branco 0,24%. A Comvest relata que o desempenho ficou dentro do esperado, embora os candidatos tenham demonstrado alguma dificuldade com composição de funções.\n\n## Comentários gerais\nAs bancas elaboradora e revisora classificaram a questão como de nível médio. O desempenho foi compatível com o esperado e o índice de discriminação foi classificado como excelente.",
+        "content_format": "markdown",
+        "position": 0,
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4,
+        "title": "Síntese editorial da resolução oficial — Vestibular Unicamp 2026 — questão 44"
+      },
+      "reason": "Corrigir a proveniência para a prova comentada oficial (source_document_id=4); 45 identifica apenas o gabarito. A comparação visual independente confirma resolução, percentuais e conclusões da página 47. Como objetivo e comentários gerais são parafraseados, o título passa a identificar uma síntese editorial, não uma transcrição literal oficial. Conteúdo, ID, questão, posição e gabarito permanecem intactos.",
+      "content_assessment": {
+        "literal_verbatim": false,
+        "assessment": "Fidelidade factual confirmada, mas não texto literal: há paráfrases no objetivo e comentários gerais e transcrição dos percentuais do gráfico. A resolução matemática e as conclusões correspondem ao comentário oficial da página 47."
+      },
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "PDF oficial da prova comentada, p. 47 do arquivo (fólio impresso 46), questão 44. A seção Objetivo descreve composição e análise gráfica; Alternativa Correta confirma D e apresenta f(g(1))=5, f(2)=15+2a e a=−5; Desempenho/Comentários Gerais trazem os dados e classificações sintetizados no campo content. Página renderizada e lida integralmente."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf",
+          "detail": "Gabarito oficial, página única: questão 44 = D. Esta fonte confirma somente a alternativa e não é a origem do texto de resolução."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T201522928104Z.sqlite",
+  "database_after_sha256": "2df17afe15dc335ce05d81dffb2cb6741e10e2d27aa0b038baf6f970b8285733"
+}

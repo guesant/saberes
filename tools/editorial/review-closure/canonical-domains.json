@@ -1,0 +1,29 @@
+{
+  "decisions": [
+    {
+      "table": "canonical_topics",
+      "key": {"id": 2476},
+      "expected": {"status": "review", "slug": "ingles"},
+      "changes": {"status": "published"},
+      "reason": "O conceito global corresponde à leitura reflexiva e crítica em língua inglesa; a descrição não o torna específico de uma edição.",
+      "evidence": [{"locator": "https://www.pg.unicamp.br/norma/32393/0", "detail": "Anexo II, Língua Inglesa: leitura como prática social, leitura crítica e mobilização de conhecimento sistêmico; conteúdo consultado em 09/10/2026."}]
+    },
+    {
+      "table": "canonical_topics",
+      "key": {"id": 2477},
+      "expected": {"status": "review", "slug": "filosofia"},
+      "changes": {"status": "published"},
+      "reason": "A descrição global corresponde a análise de textos, teses, argumentos e contextos filosóficos; é conceito disciplinar estável.",
+      "evidence": [{"locator": "https://www.pg.unicamp.br/norma/32393/0", "detail": "Anexo II, Filosofia, habilidades 1–3: contextos, teses, argumentos e comparação crítica de abordagens; conteúdo consultado em 09/10/2026."}]
+    },
+    {
+      "table": "canonical_topics",
+      "key": {"id": 2478},
+      "expected": {"status": "review", "slug": "sociologia"},
+      "changes": {"status": "published"},
+      "reason": "A descrição global contempla indivíduo, sociedade, cultura, desigualdades e mudanças sociais, sem confundir conceito com norma anual.",
+      "evidence": [{"locator": "https://www.pg.unicamp.br/norma/32393/0", "detail": "Anexo II, Sociologia: conceitos fundamentais e dimensões sociais incluem socialização, cultura, relações de trabalho e desigualdade; conteúdo consultado em 09/10/2026."}]
+    }
+  ],
+  "blocked": []
+}

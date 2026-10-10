@@ -1,0 +1,205 @@
+{
+  "schema": "lesson-audit-second-review/v1",
+  "created_at": "2026-10-10",
+  "reviewer": "Codex — segunda revisão independente",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "primeira fase",
+    "curriculum_topic_ids": [2468, 2469, 2470, 2471, 2472, 2473, 2474],
+    "reviewed_files": [
+      "content/editorial/unicamp-2027/lesson-audit-portuguese-2026-10-10.json",
+      "content/editorial/unicamp-2027/lesson-revisions.json",
+      "content/unicamp-2027/lessons.json"
+    ],
+    "sqlite_modified": false,
+    "source_files_modified": false
+  },
+  "official_source": {
+    "source_document_id": 148,
+    "title": "Programa das Provas — Vestibular 2027",
+    "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+    "local_path": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+    "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+    "database_checksum_match": true,
+    "pages_visually_reviewed": [3, 4, 5],
+    "page_convention": "páginas impressas no documento"
+  },
+  "decisions": [
+    {
+      "curriculum_topic_id": 2468,
+      "official_label": "O texto e seu funcionamento",
+      "reviewed_version": "1.0.1",
+      "decision": "publish",
+      "rationale": "A teoria cobre gênero, produção e circulação, coesão e articulação verbal/não verbal. O cartaz fictício funciona como exemplo aplicado: relaciona imperativo, imagem, justificativa e contexto, sem alegar intenção não demonstrada. A síntese retoma os passos de leitura. Compatível com o item 1 do programa (p. 3). Aprovação limitada a esta lição introdutória; não significa cobertura integral de Língua Portuguesa.",
+      "problems": [],
+      "evidence": [
+        {"source_document_id": 148, "page": 3, "location": "Índice de conteúdos programáticos gerais, item 1", "supports": "Gêneros, recursos coesivos e interação entre texto verbal e não verbal."},
+        {"file": "content/unicamp-2027/lessons.json", "topic_id": 2468, "supports": "Teoria, exemplo resolvido e síntese da versão-base."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2469,
+      "official_label": "Processos de significação",
+      "reviewed_version": "proposta 1.0.3; base/revisão 1.0.2",
+      "decision": "revise",
+      "rationale": "A proposta melhora a distinção conceitual entre intertextualidade e interdiscursividade, mas o exemplo resolvido demonstra somente concessão. A interdiscursividade fica em um cenário condicional sem enunciado concreto, e não há caso efetivamente analisado de intertextualidade. Logo, a explicação não ensina o leitor a reconhecer as duas relações expressamente exigidas no item 2.",
+      "problems": [
+        {
+          "problem": "O exemplo não demonstra intertextualidade nem interdiscursividade em um texto observável; a frase hipotética sobre imitar uma manchete não permite verificar as marcas nem o efeito.",
+          "exact_correction": {
+            "replace_section_type": "example",
+            "title": "Exemplo resolvido: concessão e diálogo entre discursos",
+            "text": "Considere este cartaz fictício de uma campanha ambiental: “Água mole em pedra dura, tanto bate até que fura: leve sua garrafa reutilizável.” A expressão inicial retoma um provérbio conhecido e o reaplica a uma campanha; essa retomada reconhecível é uma relação intertextual. O tom proverbial convive com o imperativo típico de uma campanha de mobilização, aproximando dois modos de dizer; esse diálogo entre discursos caracteriza interdiscursividade, mesmo sem citar uma notícia ou campanha específica.\n\nAgora leia: “Embora o número de garrafas descartáveis tenha caído, ainda há resíduos no campus.” “Embora” introduz uma concessão: a queda poderia levar à expectativa de que o problema terminou, mas a oração principal informa que ele persiste. O período não explica por que ainda há resíduos; atribuir a causa a um grupo seria uma hipótese sem apoio no enunciado."
+          }
+        },
+        {
+          "problem": "O item oficial inclui relações lógico-discursivas no plural, mas a proposta modela apenas concessão; estudantes não veem como resolver ao menos outra relação frequente sem tratar conectivos como rótulos automáticos.",
+          "exact_correction": {
+            "append_to_section_type": "example",
+            "text": "Compare também: “A campanha ampliou os pontos de coleta porque muitos moradores pediram essa opção.” Neste contexto, “porque” introduz a razão apresentada para a ampliação. O conectivo é uma pista; a relação de causa/justificativa é confirmada pelo vínculo entre as duas informações."
+          }
+        }
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 3, "location": "Índice de conteúdos programáticos gerais, item 2", "supports": "Relações lógico-discursivas; intertextualidade e interdiscursividade; efeitos expressivos."},
+        {"file": "content/editorial/unicamp-2027/lesson-revisions.json", "topic_id": 2469, "revision": "1.0.2", "supports": "Follow-up limita corretamente a inferência sobre o alvo da ironia, mas não amplia os dois tipos de relação ausentes."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-portuguese-2026-10-10.json", "topic_id": 2469, "supports": "A proposta 1.0.3 distingue os conceitos na teoria, mas deixa o exemplo sem demonstração concreta deles."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2470,
+      "official_label": "Funcionamento social da língua",
+      "reviewed_version": "1.0.1",
+      "decision": "revise",
+      "rationale": "A lição trata bem variação, adequação e preconceito, mas substitui o conceito específico do programa — norma urbana culta — por “norma-padrão” e não explica a relação entre norma, prestígio e poder. A diferença importa para não confundir uma variedade efetivamente usada com uma norma abstrata/prescritiva. O exemplo de mudança de registro é útil e não estigmatizante; a correção necessária é conceitual e deve preservar esse exemplo.",
+      "problems": [
+        {
+          "problem": "A teoria não apresenta nem distingue a norma urbana culta da norma-padrão e omite explicitamente como prestígio e poder afetam seus usos sociais.",
+          "exact_correction": {
+            "replace_sentence": "A norma-padrão é uma convenção valorizada em certos contextos formais, útil para determinadas práticas institucionais, mas não mede inteligência nem valor humano.",
+            "with_text": "A norma urbana culta corresponde a usos linguísticos associados a falantes escolarizados de meios urbanos e aparece em práticas sociais específicas; não é uma forma única usada por todas as pessoas nem se confunde automaticamente com uma norma-padrão idealizada. Certos usos recebem maior prestígio e poder institucional, enquanto outras variedades também têm padrões e funcionalidade. Essa hierarquia social não mede a capacidade ou o valor dos falantes."
+          }
+        },
+        {
+          "problem": "O texto enumera região, grupo, época e modalidade, mas a formulação não situa a circulação dos discursos nem mostra que a avaliação social da variedade depende de contexto histórico e geopolítico, como estabelece a apresentação oficial de Língua Portuguesa.",
+          "exact_correction": {
+            "append_to_section_type": "concept",
+            "text": "As variedades e os valores atribuídos a elas se relacionam a contextos históricos e geopolíticos e aos espaços em que os discursos circulam. Ao analisar uma escolha linguística, descreva a forma e a situação de uso antes de avaliar seu prestígio; não transforme uma convenção de determinado contexto em medida universal de correção."
+          }
+        }
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 3, "location": "Língua Portuguesa e índice geral, item 3", "supports": "Fenômeno sociocultural, histórico e geopolítico; norma urbana culta e outras variedades; registros e estilos."},
+        {"file": "content/unicamp-2027/lessons.json", "topic_id": 2470, "supports": "A versão-base usa “norma-padrão” sem explicar a norma urbana culta ou a relação explícita com poder/prestígio."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2471,
+      "official_label": "Sintaxe da língua portuguesa",
+      "reviewed_version": "proposta 1.0.3; base/revisão 1.0.2",
+      "decision": "publish",
+      "rationale": "A proposta de teoria evita erros comuns de análise e distingue estrutura sintática de efeito contextual. O exemplo novo “Apenas os estudantes leram o relatório”/“Os estudantes leram apenas o relatório” demonstra com clareza como o escopo e a posição de “apenas” alteram o foco; os exemplos de porque/mas também são coerentes. A autochecagem resolve o escopo sem ambiguidade. A proposta fecha a lacuna que motivou a revisão e corresponde ao item 4 do programa (p. 3–4). Publicar a proposta 1.0.3, não manter somente a base 1.0.1.",
+      "problems": [],
+      "evidence": [
+        {"source_document_id": 148, "page": 3, "location": "Índice geral, item 4; continuação no topo da p. 4", "supports": "Elementos sintáticos, efeitos de sentido da ordem dos constituintes, coordenação e subordinação."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-portuguese-2026-10-10.json", "topic_id": 2471, "supports": "Exemplo contrastivo de foco/escopo e autochecagem da proposta 1.0.3."},
+        {"file": "content/editorial/unicamp-2027/lesson-revisions.json", "topic_id": 2471, "revision": "1.0.2", "supports": "Histórico da lacuna anterior; a proposta subsequente a corrige."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2472,
+      "official_label": "Morfologia da língua portuguesa",
+      "reviewed_version": "proposta 1.0.2; base 1.0.1",
+      "decision": "revise",
+      "rationale": "A proposta melhora a abrangência e inclui um exemplo de adjetivo substantivado, mas “o novo destaca a acessibilidade” tem referente insuficientemente determinado: pode significar o cartaz novo, uma versão nova ou “aquilo que é novo”. Isso prejudica justamente a demonstração de classe/função. O conceito está correto em termos gerais; substitua o exemplo por um contraste mínimo cujo uso e efeito semântico sejam verificáveis.",
+      "problems": [
+        {
+          "problem": "O antecedente de “o novo” não é inequívoco, então o estudante não consegue separar com segurança substantivação, elipse nominal e retomada referencial.",
+          "exact_correction": {
+            "replace_section_type": "example",
+            "title": "Exemplo resolvido: formação e efeito de classe",
+            "text": "Considere: “A turma fez uma releitura do poema. Os jovens organizaram a mostra; os estudantes jovens também participaram.”\n\n1. Em “releitura”, reconhecemos a base “leitura” e o prefixo “re-”; no contexto, a palavra nomeia uma nova leitura do poema. O prefixo não tem um único sentido mecânico em todas as palavras.\n2. Em “os jovens”, “jovens” é um adjetivo substantivado pelo artigo “os”: a expressão nomeia o grupo por uma característica. Em “os estudantes jovens”, “jovens” modifica o substantivo expresso “estudantes” e caracteriza esse grupo.\n3. O contraste muda o modo de apresentar os participantes: primeiro, a juventude é o traço que identifica o grupo; depois, “estudantes” é o núcleo e “jovens” acrescenta uma característica. O efeito decorre da construção e do contexto, não de uma regra fixa sobre todo adjetivo."
+          }
+        }
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 4, "location": "Índice de conteúdos programáticos gerais, item 5", "supports": "Estrutura do vocábulo, formação de palavras e efeitos semânticos/expressivos das classes morfológicas."},
+        {"file": "content/unicamp-2027/lessons.json", "topic_id": 2472, "supports": "Base 1.0.1 exemplifica formação, mas não dá contraste claro de efeito de classe."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-portuguese-2026-10-10.json", "topic_id": 2472, "supports": "A proposta 1.0.2 cobre classes, mas usa o referente ambíguo “o novo”."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2473,
+      "official_label": "Elementos de fonologia da língua portuguesa",
+      "reviewed_version": "1.0.1",
+      "decision": "revise",
+      "rationale": "A lição explica de modo correto contraste fonêmico, grafema/letra, dígrafo, tonicidade e variação de pronúncia. Porém, o único exemplo de efeito expressivo é uma possibilidade abstrata (“repetir sons sibilantes pode sugerir...”), sem trecho, identificação do recurso ou resolução demonstrada. Como o item 6 exige efeitos de sentido produzidos por recursos fonético-fonológicos, inclua um exemplo curto e explicitamente didático, sem universalizar a interpretação.",
+      "problems": [
+        {
+          "problem": "Falta exemplo resolvido que mostre evidência sonora, nomeie o recurso e justifique um efeito possível com ressalva contextual.",
+          "exact_correction": {
+            "replace_section_type": "example",
+            "title": "Exemplo resolvido: contraste e repetição sonora",
+            "text": "Em “casa” e “caça”, a oposição entre /z/ e /s/ distingue palavras na pronúncia de referência considerada; as letras “s” e “ç” representam essa diferença. Em “chave”, duas letras (“ch”) representam um único fonema inicial: há um dígrafo.\n\nAgora observe o verso didático inventado “Sopro suave sacode as folhas.” O fonema /s/ se repete no início de “sopro”, “suave” e “sacode”, criando uma aliteração perceptível. A recorrência pode reforçar uma impressão de sopro ou fricção se as imagens e o contexto do texto também apontarem nessa direção; não é um significado automático do fonema. O exemplo é inventado para análise e não é citação de obra literária."
+          }
+        }
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 4, "location": "Índice de conteúdos programáticos gerais, item 6", "supports": "Efeitos de sentido de recursos fonético-fonológicos e relação entre oralidade e escrita."},
+        {"file": "content/unicamp-2027/lessons.json", "topic_id": 2473, "supports": "Exemplo cobre contraste/dígrafo, mas apresenta o efeito sonoro apenas como hipótese não aplicada a um trecho."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "official_label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "reviewed_version": "proposta 1.0.4; base/revisões 1.0.2–1.0.3",
+      "decision": "revise",
+      "rationale": "Conferi visualmente o conteúdo programático da p. 4 e a tabela da p. 5. As nove entradas de obras da proposta correspondem à relação oficial, e os seis contos de Morangos mofados estão transcritos corretamente. A lista, porém, resume Canções escolhidas sem enumerar seus textos exigidos; assim não é possível conferir cobertura das leituras. Além disso, o exemplo é assumidamente inventado e não aplica o método a nenhuma obra obrigatória. Ele é válido como exercício metodológico, mas não sustenta a alegação de preparação literária das obras listadas. A correção deve explicitar a lista completa de canções e delimitar honestamente a aula até que existam leituras guiadas por obra/texto.",
+      "problems": [
+        {
+          "problem": "“As canções enumeradas no programa” não enumera os textos de Canções escolhidas; os títulos precisam ser transcritos para tornar verificável a cobertura e orientar o estudo.",
+          "exact_correction": {
+            "replace_text": "**Canções escolhidas**, Paulo César Pinheiro (as canções enumeradas no programa)",
+            "with_text": "**Canções escolhidas**, Paulo César Pinheiro: “Canto das três raças”; “Cordilheira”; “Desenredo”; “Estrela da terra”; “Evangelho”; “Mordaça”; “Na volta que o mundo dá”; “Navio fantasma”; “O dia em que o morro descer e não for carnaval”; “Pesadelo”; “Velho arvoredo”; “Vento bravo”; “Viagem”; e “Vontade de chorar”. Confira a grafia e a seleção na relação oficial de livros da edição."
+          }
+        },
+        {
+          "problem": "O exemplo resolvido não é retirado nem analisado a partir de uma leitura obrigatória; portanto, não verifica aplicação do método a prosa, poesia ou teatro da lista. Não se deve apresentar essa introdução como cobertura integral das obras.",
+          "exact_correction": {
+            "append_to_section_type": "theory",
+            "text": "Esta lição apresenta um método de leitura; ela não substitui a leitura das obras nem constitui, sozinha, análise de cada título obrigatório. Para cada obra ou conjunto de textos indicado, registre uma passagem efetivamente lida, sua localização (conto, poema, capítulo ou cena), as escolhas formais observáveis e a interpretação que essas evidências sustentam. Não atribua à lista uma análise que ainda não foi feita."
+          }
+        },
+        {
+          "problem": "A lista e o exemplo hipotético não demonstram a habilidade oficial de relacionar a composição literária a dimensões sociais, morais e políticas sem reduzir a obra a resumo ou opinião externa.",
+          "exact_correction": {
+            "append_to_section_type": "summary",
+            "text": "Ao concluir uma leitura guiada, acrescente uma evidência textual localizada e explique como um recurso de composição contribui para uma questão social, moral ou política da obra. Diferencie o que o texto mostra, a interpretação sustentada por essa evidência e o que permanece hipótese. Até que esse percurso seja feito para as obras da relação, mantenha esta lição marcada como introdutória e em revisão."
+          }
+        }
+      ],
+      "verified_required_readings": [
+        {"title": "Prosas seguidas de odes mínimas", "author": "José Paulo Paes", "extent": "obra completa"},
+        {"title": "Canções escolhidas", "author": "Paulo César Pinheiro", "extent": "14 canções enumeradas no texto de correção"},
+        {"title": "Os funerais da Mamãe Grande", "author": "Gabriel García Márquez", "extent": "obra completa"},
+        {"title": "Morangos mofados", "author": "Caio Fernando Abreu", "extent": "seis contos: Diálogo; Além do Ponto; Terça-Feira Gorda; Pêra, uva ou maçã?; O dia em que Júpiter encontrou Saturno; Aqueles dois"},
+        {"title": "Olhos d’água", "author": "Conceição Evaristo", "extent": "obra completa"},
+        {"title": "No seu pescoço", "author": "Chimamanda Ngozi Adichie", "extent": "obra completa"},
+        {"title": "Vida e morte de M.J. Gonzaga de Sá", "author": "Lima Barreto", "extent": "obra completa"},
+        {"title": "Memórias Póstumas de Brás Cubas", "author": "Machado de Assis", "extent": "obra completa"},
+        {"title": "A vida não é útil", "author": "Ailton Krenak", "extent": "obra completa; categoria indicada no programa como entrevistas/palestras"}
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 4, "location": "Literaturas de Língua Portuguesa, conjunto de habilidades e conteúdos programáticos", "supports": "Leitura analítica e crítica de tradições em língua portuguesa; prosa, poesia e teatro; composição; relações com dimensões sociais, morais e políticas."},
+        {"source_document_id": 148, "page": 5, "location": "Relação de Livros, tabela completa", "supports": "Títulos, autores, seis contos e extensão exigida; leitura visual conferiu as 14 canções de Paulo César Pinheiro."},
+        {"file": "content/editorial/unicamp-2027/lesson-revisions.json", "topic_id": 2474, "revisions": ["1.0.2", "1.0.3"], "supports": "A revisão ajusta conceitos de poesia/teatro e orienta leitura integral, mas não inclui obra analisada."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-portuguese-2026-10-10.json", "topic_id": 2474, "supports": "A proposta 1.0.4 enumera as obras, mas deixa a coletânea de canções sem títulos e usa exemplo explicitamente inventado."}
+      ]
+    }
+  ],
+  "review_limits": [
+    "A verificação bibliográfica aqui confirma títulos, autoria e extensão conforme a tabela oficial; não equivale a leitura integral ou análise crítica independente de cada obra.",
+    "As decisões publish são avaliações deste lote de lições introdutórias, não afirmações de cobertura exaustiva do programa ou das obras obrigatórias.",
+    "Nenhuma associação ou conteúdo foi promovido no SQLite; este arquivo é somente um parecer editorial independente."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "format": "lesson-audit-second-review/v1",
+  "audit_date": "2026-10-10",
+  "scope": "Registro no fluxo reexecutável da aprovação independente da trilha de Materiais, gases, líquidos e sólidos.",
+  "decisions": [
+    {
+      "curriculum_topic_id": 2506,
+      "reviewed_version": "1.3.1",
+      "decision": "publish",
+      "proposed_status": "published",
+      "reason": "A revisão independente aprovou as três seções após conferir relações dos gases, concentração e cálculos; não encontrou omissão ou erro bloqueante.",
+      "source_document_ids": [148],
+      "evidence": [
+        { "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json", "supports": "Decisão publish para o tópico 2506, versão-base 1.3.1, com verificações conceituais e numéricas." },
+        { "source_document_id": 148, "page": 13, "location": "Química — Materiais e Gases", "supports": "Conteúdo e escopo oficiais da edição 2027." }
+      ]
+    }
+  ]
+}

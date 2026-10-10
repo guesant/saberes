@@ -1,0 +1,48 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T13:45:19.042019+00:00",
+  "database_before_sha256": "6101ff6d4edfd39de8b39ebb75616cf5b131fd80c9fb38f26fe26f452e27e4fd",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 62,
+        "canonical_topic_id": 2519
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 62,
+        "canonical_topic_id": 2519,
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "source_document_id": 36,
+        "source_page": 20,
+        "source_excerpt": "A questão pede como gerar oxigênio em submarino e inclui eletrólise da água purificada entre as alternativas.",
+        "review_status": "published"
+      },
+      "reason": "A habilidade química central avaliada é a eletrólise da água para produzir oxigênio; a absorção de CO₂ é contexto adicional. A associação é uma classificação editorial sustentada pelo enunciado e pelo programa, não uma tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/docling-exam-review-2025-2027/2025/QZ/extracted.md#QUESTAO-62",
+          "detail": "O texto da questão 62 apresenta a eletrólise da água purificada como uma das opções para gerar O₂ a bordo de um submarino.",
+          "sha256": "979394f09a82ae7df53ae077e6c77966da590cbccd7dff28bc3e81844fa32559"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/programa-provas-2027.pdf#page=14",
+          "detail": "Programa oficial de Química, página impressa 14, inclui oxidação/redução, pilhas e eletrólise no tópico Eletroquímica.",
+          "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254"
+        },
+        {
+          "locator": "sqlite://question_occurrences/2025-QZ-62",
+          "detail": "Ocorrência da questão 62 no caderno oficial QZ 2025; o PDF de origem é o documento 36, página física 20."
+        }
+      ],
+      "action": "insert"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T134519052941Z.sqlite",
+  "database_after_sha256": "79d02e5831079a3e36375c34baa8263fe71d8909bd0627ae1dd1a2e76848674c"
+}

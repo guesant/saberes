@@ -6,7 +6,7 @@ import type { SimulationResultItemProps } from "./simulation-result-item-props.i
 export function SimulationResultItem(props: SimulationResultItemProps) {
   const { t } = useTranslation();
 
-  const answerStatus = getSimulationAnswerStatus(props.result.isCorrect, t);
+  const answerStatus = getSimulationAnswerStatus(props.result.isCorrect, t, props.result.answerStatus);
 
   const earned = props.result.earnedPoints ?? "—";
 

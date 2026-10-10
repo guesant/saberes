@@ -1,0 +1,45 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T13:35:20.779319+00:00",
+  "database_before_sha256": "32e9872739104fefac7e00b2b6b9a14646969f3938205198bf70df95acb47b12",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 485
+      },
+      "expected": {
+        "title": "Ângulos e polígonos — geometria",
+        "url": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": null,
+        "editorial_status": "review",
+        "editorial_note": "A URL cadastrada para a unidade de ângulos e polígonos retornou uma página explicitamente inexistente na inspeção em navegador de 10/10/2026. Manter o registro visível para consulta, mas não tratá-lo como material de aprendizagem aprovado até corrigir o destino. A licença de reutilização não foi confirmada; somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "availability_mode": "consultation_only"
+      },
+      "reason": "A inspeção visual documentada confirma que a URL não entrega o recurso. O próprio estado editorial atual manda mantê-lo visível, mas não tratá-lo como aprendizagem aprovada; consultation_only implementa essa restrição sem apagar o registro, ocultá-lo, alterar sua URL ou promovê-lo.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/resource-browser-followup-2468-2489-2026-10-10.json",
+          "detail": "Entrada do resource_id 485: título observado ‘Página não encontrada | Khan Academy’; corpo da página diz que o endereço não existe; decisão registrada needs_replacement. A classificação proposta restringe o modo de uso, não afirma adequação nem substitui o destino.",
+          "sha256": "c250a6acccfbc246430cc2aba3d4a88ee798c09bdb543ac55204cfbd7124212f"
+        },
+        {
+          "locator": "tools/editorial/review-closure/khan-geometry-resource-485-review.json",
+          "detail": "Decisão editorial anterior documenta a mudança de published para review devido à página inexistente e orienta manter o registro visível sem recomendá-lo como aprendizagem até haver substituição verificada.",
+          "sha256": "311b94c5663e07ad196d4f9a1e983a980173f912d3fe908309e1d507472f2717"
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T133520790538Z.sqlite",
+  "database_after_sha256": "aff7fb7f59015305ad9aa979c8ade41f19c53267c876a22e3850853e7806967c"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "simulado-2027-qt-solutions-corrections-second-review/v1",
+  "review_date": "2026-10-10",
+  "scope": "Revisão independente das correções finais das questões 4, 17, 32 e 34 do simulado presencial Unicamp 2027, caderno Q/T.",
+  "correction_package": "simulado-2027-qt-solutions-01-36-corrections.json",
+  "method": "Conferência visual das páginas integrais citadas do caderno oficial (source_document_id 335) e do gabarito definitivo (source_document_id 337); comparação com os problemas e correções da primeira revisão; conferência das figuras pertinentes. pdf_page é a página física do PDF, não o número impresso no rodapé.",
+  "items": [
+    {
+      "number": 4,
+      "question_id": 2740,
+      "occurrence_id": 2743,
+      "decision": "publish",
+      "answer": "B",
+      "first_review_correction_incorporated": true,
+      "first_review_issue_resolved": "A explicação não infere mais analfabetismo a partir de ‘didn’t know to spell it’; distingue a dificuldade de soletrar da incapacidade de ler e escrever e qualifica B como a melhor resposta disponível no gabarito.",
+      "assessment": "A transcrição do poema e as alternativas A–D conferem com o caderno. A alternativa B é mais ampla que o que o poema afirma, e a resolução corrigida explicita essa limitação em vez de tratá-la como fato. A chave B confere com o gabarito definitivo. Não há figura associada à questão; as imagens de Q1–Q3 na mesma página não são pertinentes a Q4.",
+      "evidence": [
+        {"source_document_id": 335, "pdf_page": 3, "printed_page": 1, "detail": "Poema de James Joyce, enunciado e alternativas A–D de Q4."},
+        {"source_document_id": 337, "pdf_page": 1, "detail": "Gabarito definitivo: Q4=B."}
+      ]
+    },
+    {
+      "number": 17,
+      "question_id": 2753,
+      "occurrence_id": 2769,
+      "decision": "publish",
+      "answer": "D",
+      "first_review_correction_incorporated": true,
+      "first_review_issue_resolved": "A resolução deixou de atribuir à alternativa D uma afirmação de aumento da demanda por água. Agora identifica energia hidráulica e despejo de efluentes, e explica por que A, B e C não correspondem ao texto/opções.",
+      "assessment": "O excerto sobre disponibilidade hídrica, o comando e as alternativas A–D conferem com o caderno. A nova redação descreve D com precisão e suas rejeições das demais opções correspondem ao texto e à formulação impressa. A chave D confere com o gabarito. Q17 não tem figura; os mapas na mesma página pertencem a Q18 e não foram usados para justificar esta resposta.",
+      "evidence": [
+        {"source_document_id": 335, "pdf_page": 7, "printed_page": 5, "detail": "Excerto, comando e alternativas A–D de Q17; mapa adjacente identificado como pertencente a Q18."},
+        {"source_document_id": 337, "pdf_page": 1, "detail": "Gabarito definitivo: Q17=D."}
+      ]
+    },
+    {
+      "number": 32,
+      "question_id": 2768,
+      "occurrence_id": 2799,
+      "decision": "publish",
+      "answer": "C",
+      "first_review_correction_incorporated": true,
+      "first_review_issue_resolved": "A redação corrigida não diz que as integrantes do Partido Republicano Feminino lutariam na frente de batalha. Distingue a oferta condicional para atuar como força policial no Brasil dos exercícios de resgate e primeiros socorros da Cruz Vermelha, ressalvando a formulação ‘força do combate’ da alternativa C.",
+      "assessment": "O texto de Q32 continua entre colunas/páginas visuais da mesma página física; a leitura integral confirma a condição sobre o envio do Exército ao exterior e as atividades distintas da Cruz Vermelha. As alternativas A–D conferem. A resolução preserva a ressalva necessária à expressão imprecisa de C, sem transformar a oferta policial em participação comprovada no combate. A chave C confere com o gabarito. Não há figura pertinente a Q32 nessa página.",
+      "evidence": [
+        {"source_document_id": 335, "pdf_page": 11, "printed_page": 9, "detail": "Texto de Q32 e alternativas A–D, incluindo continuação do excerto na coluna da direita."},
+        {"source_document_id": 337, "pdf_page": 1, "detail": "Gabarito definitivo: Q32=C."}
+      ]
+    },
+    {
+      "number": 34,
+      "question_id": 2770,
+      "occurrence_id": 2803,
+      "decision": "publish",
+      "answer": "C",
+      "first_review_correction_incorporated": true,
+      "first_review_issue_resolved": "A resolução agora sinaliza que 21/03/1994 é a entrada em vigor da Convenção-Quadro, não a data da primeira COP; informa que COP 1 ocorreu em Berlim em 1995. A ressalva não altera silenciosamente o texto oficial nem a letra do gabarito.",
+      "assessment": "O enunciado e as alternativas A–D conferem com o caderno. A nota factual da resolução corrige a confusão histórica sem ocultar que o próprio enunciado oficial contém essa data incorreta; a alternativa C permanece a melhor resposta entre as opções e coincide com o gabarito. Não há figura associada a Q34.",
+      "evidence": [
+        {"source_document_id": 335, "pdf_page": 12, "printed_page": 10, "detail": "Enunciado de Q34 com a data indicada e alternativas A–D."},
+        {"source_document_id": 337, "pdf_page": 1, "detail": "Gabarito definitivo: Q34=C."},
+        {"title": "UNFCCC — United Nations Framework Convention on Climate Change", "url": "https://unfccc.int/process-and-meetings/united-nations-framework-convention-on-climate-change", "detail": "A Convenção entrou em vigor em 21 de março de 1994."},
+        {"title": "UNFCCC — COP 1, Berlin, 28 March–7 April 1995", "url": "https://unfccc.int/cop3/resource/docs/cop1/inf02.htm", "detail": "A primeira Conferência das Partes ocorreu em Berlim em 1995."}
+      ]
+    }
+  ]
+}

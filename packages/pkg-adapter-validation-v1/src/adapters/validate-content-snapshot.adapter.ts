@@ -20,6 +20,10 @@ export class ValidateContentSnapshotAdapter implements ValidateContentSnapshotPo
     "campuses",
     "admission_modalities",
     "course_stage_requirements",
+    "exam_components",
+    "course_exam_criteria",
+    "course_offering_thresholds",
+    "course_vacancy_allocations",
     "assessment_areas",
     "paper_subjects",
     "questions",
@@ -199,6 +203,7 @@ export class ValidateContentSnapshotAdapter implements ValidateContentSnapshotPo
       publishedCourseCount: input.publishedCourseCount,
       assessmentSetCount: input.assessmentSetCount,
       issueCount: issues.length,
+      ...(input.curriculumCoverage ? { curriculumCoverage: input.curriculumCoverage } : {}),
     };
 
     return {

@@ -1,6 +1,10 @@
 import type { TFunction } from "i18next";
 
-export function getSimulationAnswerStatus(isCorrect: boolean | null, translate: TFunction): string {
+export function getSimulationAnswerStatus(isCorrect: boolean | null, translate: TFunction, answerStatus?: "cancelled"): string {
+  if (answerStatus === "cancelled") {
+    return String(translate("simulator.cancelledQuestionResult"));
+  }
+
   if (isCorrect === null) {
     return String(translate("simulator.discursive"));
   }

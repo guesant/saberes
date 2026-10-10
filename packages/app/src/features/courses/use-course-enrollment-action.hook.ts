@@ -20,6 +20,7 @@ export function useCourseEnrollmentAction(
     attempts: input.attempts,
     course: input.course,
     lessonProgress: input.lessonProgress,
+    assessmentItemsById: input.assessmentItemsById,
   });
 
   return { error: startAction.error, start, state: startAction.state };

@@ -1,15 +1,12 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
-import { getCourseItems } from "./get-course-items.function";
-import { getCourseProgress } from "./get-course-progress.function";
-import { getCourseStarted } from "./get-course-started.function";
-import { useCourseContentQuery } from "./use-course-content-query.hook";
+import { getCourseViewProgress } from "./get-course-view-progress.function";
+import { useCourseContentProgressQueries } from "./use-course-content-progress-queries.hook";
 import { useCourseEnrollmentAction } from "./use-course-enrollment-action.hook";
-import { useCourseProgressQueries } from "./use-course-progress-queries.hook";
 import type { CourseProgress } from "./course-progress.interface";
 import type { ActionState } from "../../types/action-state.type";
-import type { CourseReadModel } from "@guesant/saberes-application";
+import type { Attempt, CourseReadModel, StudyRecord } from "@guesant/saberes-application";
 
 export type CourseViewModelState = "loading" | "error" | "ready";
 
@@ -18,6 +15,9 @@ export interface CourseViewModel {
   data: CourseReadModel | null | undefined;
   started: boolean;
   progress: CourseProgress;
+  attempts: Attempt[] | undefined;
+  lessonProgress: StudyRecord[] | undefined;
+  assessmentItemsById: Record<string, Array<Record<string, unknown>> | undefined>;
   error: Error | null;
   progressError: Error | null;
   startError: Error | null;
@@ -32,14 +32,16 @@ export function useCourseViewModel(slug: string | undefined): CourseViewModel {
 
   const queryClient = useQueryClient();
 
-  const query = useCourseContentQuery({ services, slug });
+  const { contentQuery: query, items: courseItems, progressQueries } =
+    useCourseContentProgressQueries(services, slug);
 
-  const progressQueries = useCourseProgressQueries(services);
+  const courseProgress = getCourseViewProgress(slug, progressQueries, courseItems);
 
   const startAction = useCourseEnrollmentAction({
     attempts: progressQueries.attempts,
     course: query.data,
     lessonProgress: progressQueries.lessonProgress,
+    assessmentItemsById: progressQueries.assessmentItemsById,
     queryClient,
     services,
   });
@@ -47,12 +49,10 @@ export function useCourseViewModel(slug: string | undefined): CourseViewModel {
   return {
     state: getQueryViewState(query),
     data: query.data,
-    started: getCourseStarted({ records: progressQueries.enrollments, slug }),
-    progress: getCourseProgress({
-      attempts: progressQueries.attempts,
-      items: getCourseItems(query.data),
-      lessonProgress: progressQueries.lessonProgress,
-    }),
+    ...courseProgress,
+    attempts: progressQueries.attempts,
+    lessonProgress: progressQueries.lessonProgress,
+    assessmentItemsById: progressQueries.assessmentItemsById,
     error: query.error,
     progressError: progressQueries.error,
     startError: startAction.error,

@@ -1,0 +1,268 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:18:33.776679+00:00",
+  "database_before_sha256": "871e75443b004a41f91a24d60d2eaef94acd4d9a0384802e2137bf931383deb0",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 4
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Vestibular Unicamp 2026 — 1ª fase, prova comentada",
+        "url": "/data/official-commentaries/2026/4.pdf",
+        "kind": "official_commented_exam_pdf",
+        "description": "Documento de 71 páginas; índice oficial aponta ‘Questões – múltipla escolha’ na seção Provas Comentadas 2026 | O PDF contém prova comentada, alternativa correta e justificativas por alternativa; revisar licença antes de importar conteúdo integral. | Consultado em 2026-10-06",
+        "source_document_id": 4,
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "title": "Vestibular Unicamp 2026 — 1ª fase, prova comentada (introdução interna menciona 2025)",
+        "editorial_note": "Metadados qualificados para consulta: capa do PDF e índice oficial identificam Vestibular 2026, mas a introdução do próprio PDF diz que a publicação se refere ao Vestibular 2025. A divergência permanece explícita e não foi corrigida no documento; conferir edição antes de atribuir conteúdo a 2026. ‘published’ aprova apenas identidade qualificada e consulta do item, não a exatidão de comentários/respostas nem o parágrafo conflitante. Manter availability_mode=consultation_only e as permissões existentes; não reproduzir o PDF por esta decisão."
+      },
+      "reason": "É possível aprovar uma ficha de consulta que declare a contradição no título e na nota, sem apresentar o PDF como fonte internamente consistente ou certificar seus comentários.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibulares-anteriores/1a-fase-2a-fase-comentadas/",
+          "detail": "Índice oficial lista o item na seção ‘Provas comentadas 2026’ > ‘1ª Fase’ > ‘Questões – múltipla escolha’; confirma apenas como o item é catalogado pela Comvest."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "PDF oficial, pp. não numerada de capa e p. 1 impressa: a capa diz Vestibular Unicamp 2026, Prova Comentada, 1ª fase; a introdução na p. 1 impressa afirma que a publicação se refere ao vestibular 2025. As duas páginas foram renderizadas e comparadas visualmente."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-commentaries/2026/4.pdf",
+          "detail": "Cópia de consulta correspondente ao source_document_id 4; páginas da capa e introdução inspecionadas visualmente, sem editar o arquivo.",
+          "sha256": "2d1d0d375fb8ee7ea84ebb11350ca30851a5c928db80ed6e2479aeeb1ba23284"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 4
+      },
+      "expected": {
+        "title": "Prova comentada oficial — Vestibular Unicamp 2026, primeira fase",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+        "provider": "Comvest / Unicamp",
+        "kind": "official_commented_exam_material",
+        "published_at": "2026-06",
+        "checksum": "2d1d0d375fb8ee7ea84ebb11350ca30851a5c928db80ed6e2479aeeb1ba23284",
+        "is_official": 1,
+        "reuse_status": "unknown",
+        "license_name": null,
+        "license_url": null,
+        "attribution": null,
+        "rights_note": null
+      },
+      "changes": {
+        "title": "Prova comentada oficial — Vestibular Unicamp 2026, primeira fase (introdução interna menciona 2025)"
+      },
+      "reason": "Atualizar somente o título do registro-fonte para que consumidores da fonte direta vejam a divergência de edição já verificada. URL, checksum e campos de direitos permanecem intactos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Capa identifica Vestibular 2026; introdução p. 1 impressa identifica 2025. Conferência visual das páginas renderizadas; arquivo não alterado."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 135
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Retificação da Resolução GR-25/2025 — Vestibular Unicamp 2026",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/09/RESOLUCAO-GR-25-Retificacao.pdf",
+        "kind": "official_regulation_amendment",
+        "description": "PDF oficial de retificação relacionado à Resolução GR-025/2025.",
+        "source_document_id": 135,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "title": "Resolução GR nº 25/2025 — Vestibular 2026 (texto integral com alterações da GR-028/2025 marcadas)",
+        "kind": "official_regulation",
+        "description": "PDF da Resolução GR nº 25/2025 integral, de 10/07/2025, sobre o Vestibular Unicamp 2026. O próprio documento mostra redação anterior riscada e redação retificada identificada como alteração da GR-028/2025; não é uma peça autônoma de retificação. Para texto consolidado, consulte a página normativa da Procuradoria (resource 134).",
+        "editorial_note": "Referência oficial histórica, com identidade corrigida: Resolução GR nº 25/2025 integral, contendo alterações da GR-028/2025 assinaladas no texto. ‘published’ aprova somente estes metadados de consulta, não a vigência atual fora da edição 2026 nem licença de reprodução. Manter availability_mode=reference e todos os campos de direitos/reuso existentes."
+      },
+      "reason": "A capa e o corpo da fonte primária mostram a resolução integral e as marcações de retificação. O título/tipo antigos davam a impressão incorreta de uma peça autônoma.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/09/RESOLUCAO-GR-25-Retificacao.pdf",
+          "detail": "Página 1 renderizada: cabeçalho ‘Resolução GR nº 25/2025, de 10/07/2025’, objeto Vestibular Unicamp 2026; artigos exibem texto riscado e redação substitutiva marcada ‘Retificado pela Resolução GR-028/2025’."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32142/1",
+          "detail": "Página oficial da Procuradoria identifica a GR-025/2025 em versão consolidada; é a referência distinta indicada na descrição corrigida (resource 134)."
+        },
+        {
+          "locator": "tools/editorial/review-closure/evidence/gr25-pdf-p1.png",
+          "detail": "Renderização visual da página 1 da cópia local do PDF oficial; mostra a identificação da resolução e as marcações. Nenhum byte do PDF foi editado.",
+          "sha256": "0b2f85d74f34cf43d5d92190bfa1ccf6273da08020095c7815f8a7b3c1f317b8"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 135
+      },
+      "expected": {
+        "title": "Retificação da Resolução GR-25/2025 — Vestibular Unicamp 2026",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/09/RESOLUCAO-GR-25-Retificacao.pdf",
+        "provider": "Comvest / Unicamp",
+        "kind": "official_regulation_amendment",
+        "published_at": "2025-09",
+        "checksum": null,
+        "is_official": 1,
+        "reuse_status": "unknown",
+        "license_name": null,
+        "license_url": null,
+        "attribution": null,
+        "rights_note": null
+      },
+      "changes": {
+        "title": "Resolução GR nº 25/2025 — Vestibular 2026 (texto integral com alterações da GR-028/2025 marcadas)",
+        "kind": "official_regulation"
+      },
+      "reason": "Corrigir somente identidade e classificação do registro-fonte; preservar URL, data cadastrada, checksum ausente, oficialidade e todos os campos de direitos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/09/RESOLUCAO-GR-25-Retificacao.pdf",
+          "detail": "Página 1 visualmente conferida: a fonte é a resolução integral com redações marcadas, não uma folha autônoma de retificação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 272
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Programa da prova do Simulado Unicamp 2026",
+        "url": "/data/official-pdfs/2027-simulation/programa-simulado-2027.pdf",
+        "kind": "official_simulation_program",
+        "description": "Programa disciplinar divulgado para o simulado presencial de preparação; confrontar com o programa da edição regular 2027 antes de assumir equivalência completa.",
+        "source_document_id": 340,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "title": "Programa das Provas — Vestibular Unicamp 2027 (divulgado no contexto do Simulado presencial)",
+        "kind": "official_program_pdf",
+        "description": "A capa identifica ‘Vestibular Unicamp 2027 — Programa das Provas’. O documento foi divulgado no contexto do Simulado presencial preparatório, mas não se identifica como programa exclusivo do simulado. Há um recurso separado para o programa regular (resource 245); esta ficha não presume que os dois arquivos sejam idênticos ou equivalentes em extensão.",
+        "editorial_note": "Referência documental oficial com identidade corrigida para Vestibular 2027 e contexto de divulgação explicitado, sem afirmar exclusividade nem equivalência integral com o recurso 245. ‘published’ aprova metadados e consulta, não endossa abrangência curricular ou conteúdo. Manter availability_mode=reference e permissões existentes; não altera o PDF nem direitos/reuso."
+      },
+      "reason": "A capa documenta um programa do Vestibular 2027; a proveniência no contexto do simulado pode ser preservada sem rotular o documento como programa exclusivo do Simulado 2026.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/04/Programa_Simulado27.pdf",
+          "detail": "Capa visualmente conferida: ‘Vestibular Unicamp 2027 — Programa das Provas’; não traz identificação de programa exclusivo de um simulado."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Notícia institucional de 13/04/2026 identifica a ação como simulado presencial do Vestibular Unicamp, no formato de 1ª fase, e a apresenta como preparação para a edição 2027."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/programa-simulado-2027.pdf",
+          "detail": "Página de capa renderizada e inspecionada; arquivo não alterado.",
+          "sha256": "1f10fdb63684ceb402f55c42560517d71ae79a48eeea3db6b6b20be2ad707b7f"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2027-simulation/programa-provas-2027.pdf",
+          "detail": "Arquivo que dá suporte ao resource 245, referência separada do programa regular; não se presume identidade ou equivalência com o arquivo id 340.",
+          "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 340
+      },
+      "expected": {
+        "title": "Programa da prova do Simulado Unicamp 2026",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/04/Programa_Simulado27.pdf",
+        "provider": "Comvest / Unicamp",
+        "kind": "official_simulation_program",
+        "published_at": "2026-04",
+        "checksum": "1f10fdb63684ceb402f55c42560517d71ae79a48eeea3db6b6b20be2ad707b7f",
+        "is_official": 1,
+        "reuse_status": "unknown",
+        "license_name": null,
+        "license_url": null,
+        "attribution": null,
+        "rights_note": null
+      },
+      "changes": {
+        "title": "Programa das Provas — Vestibular Unicamp 2027 (divulgado no contexto do Simulado presencial)",
+        "kind": "official_program_pdf"
+      },
+      "reason": "Ajustar a identidade da fonte conforme a capa, mantendo a URL direta, data, checksum e todos os campos de licenciamento/reuso inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/04/Programa_Simulado27.pdf",
+          "detail": "Capa identifica Vestibular Unicamp 2027 — Programa das Provas. A associação com a ação de simulado é registrada como contexto de divulgação, não como exclusividade do arquivo."
+        },
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Fonte institucional enquadra o simulado como preparação para o Vestibular 2027."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 244
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Resolução GR-026/2026 — alteração da Resolução GR-022/2026",
+        "url": "https://www.pg.unicamp.br/normas",
+        "kind": "amendment_index_entry",
+        "description": "O índice informa que altera dispositivos da Resolução GR-022/2026; URL direta da norma alteradora ainda precisa ser resolvida.",
+        "source_document_id": 147,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "title": "Índice de normas da Unicamp — acesso à GR-026/2026",
+        "url": "https://www.pg.unicamp.br/normas",
+        "kind": "regulation_index_entry",
+        "description": "Índice oficial de normas da Procuradoria Geral da Unicamp. A página lista a Resolução GR-026/2026, que altera a GR-022/2026 (Vestibular 2027); para a entrada direta da norma, consulte o resource 287 (https://www.pg.unicamp.br/norma/32405/0). Esta ficha representa o índice, não a norma individual.",
+        "editorial_note": "Metadados aprovados somente como índice oficial de referência. Mantém o URL original de navegação; identifica o acesso à GR-026/2026 sem se apresentar como ficha da resolução. O conteúdo direto da norma está catalogado separadamente no resource 287, sem remover nem substituir nenhum ID. Manter availability_mode=reference e campos de direitos/reuso; não presume licença de reprodução."
+      },
+      "reason": "A ficha representa o índice de normas e deve continuar em seu URL original, sem colidir com a URL única da norma específica já cadastrada no resource 287. A referência à entrada direta é mantida na descrição; nenhum dos dois IDs é removido.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/normas",
+          "detail": "Índice oficial da Procuradoria; fonte do link histórico preservado na descrição."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32405/0",
+          "detail": "Entrada direta identificada como Resolução GR-026/2026. Resource 287 já aponta para este endereço; resource 244 compartilha o mesmo source_document_id=147, cuja URL no SQLite já é esta página direta."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/normas",
+          "detail": "Índice institucional lista ‘Resolução GR-026/2026’ e informa que altera dispositivos da Resolução GR-022/2026, Vestibular Unicamp 2027."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T201833794942Z.sqlite",
+  "database_after_sha256": "71da04cef4e02d570ae9b0e0ae956f7375b28539557b5cdc3c0c31b79a6fdbec"
+}

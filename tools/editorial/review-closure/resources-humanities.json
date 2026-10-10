@@ -1,0 +1,1478 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 194
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Equilíbrio e pH",
+        "url": "https://www.khanacademy.org/search?page_search_query=Equil%C3%ADbrio+e+pH+Qu%C3%ADmica",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado somente como atalho de descoberta na busca oficial da Khan Academy para “Equilíbrio e pH / Química”. Não é exercício ou aula validado: os resultados são dinâmicos e devem ser conferidos individualmente quanto a aderência, resposta e acessibilidade antes de recomendar. Não representa cobertura integral do programa; link apenas, sem copiar conteúdo."
+      },
+      "reason": "A URL é uma consulta temática no domínio oficial da plataforma, útil como ponto de descoberta. Como a busca não fixa nem valida resultados, aprovo somente a função de referência/descoberta — não como conteúdo didático nem prática recomendada.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Equil%C3%ADbrio+e+pH+Qu%C3%ADmica",
+          "detail": "Endpoint de busca da Khan Academy; o parâmetro de consulta está delimitado a equilíbrio e pH em Química. A ficha cadastrada identifica explicitamente o destino como busca, não como atividade verificada; nenhum resultado individual é endossado."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 194,
+        "topic_id": 2489,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado somente como atalho de descoberta na busca oficial da Khan Academy para “Equilíbrio e pH / Química”. Não é exercício ou aula validado: os resultados são dinâmicos e devem ser conferidos individualmente quanto a aderência, resposta e acessibilidade antes de recomendar. Não representa cobertura integral do programa; link apenas, sem copiar conteúdo."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Equil%C3%ADbrio+e+pH+Qu%C3%ADmica",
+          "detail": "Endpoint de busca da Khan Academy; o parâmetro de consulta está delimitado a equilíbrio e pH em Química. A ficha cadastrada identifica explicitamente o destino como busca, não como atividade verificada; nenhum resultado individual é endossado."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 195
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Ecologia",
+        "url": "https://pt.wikipedia.org/wiki/Ecologia",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência enciclopédica introdutória para consulta de conceitos e relações ecológicas, não como aula validada nem cobertura do tópico. A página consultada organiza níveis de organização, biodiversidade, nicho, populações, comunidades, teias/dinâmica trófica e biomas; cruzar definições e afirmações com fontes didáticas/científicas. Não se copiou conteúdo; acessibilidade e qualidade de cada mídia não foram auditadas.",
+        "availability_mode": "reference"
+      },
+      "reason": "O artigo direto cobre conceitos centrais do tópico Ecologia e apresenta seções identificáveis de população, comunidade e dinâmica trófica. A natureza colaborativa e a amplitude enciclopédica justificam limitar a aprovação a consulta, com verificação cruzada, em vez de endossá-lo como material de aprendizagem suficiente.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Ecologia",
+          "detail": "Página direta: título Ecologia e índice de seções de biodiversidade, nicho ecológico, ecologia de populações e comunidades, teias alimentares, dinâmica trófica e biomas/biosfera; a introdução define o campo pelas interações entre organismos e ambiente."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 195,
+        "topic_id": 2490,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência enciclopédica introdutória para consulta de conceitos e relações ecológicas, não como aula validada nem cobertura do tópico. A página consultada organiza níveis de organização, biodiversidade, nicho, populações, comunidades, teias/dinâmica trófica e biomas; cruzar definições e afirmações com fontes didáticas/científicas. Não se copiou conteúdo; acessibilidade e qualidade de cada mídia não foram auditadas."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Ecologia",
+          "detail": "Página direta: título Ecologia e índice de seções de biodiversidade, nicho ecológico, ecologia de populações e comunidades, teias alimentares, dinâmica trófica e biomas/biosfera; a introdução define o campo pelas interações entre organismos e ambiente."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 196
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Ecologia",
+        "url": "https://www.khanacademy.org/search?page_search_query=Ecologia+Biologia",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta da busca oficial da Khan Academy para Ecologia/Biologia; não é uma lista curada nem prova de que os resultados cobrem o tópico. Cada aula/exercício deverá ser verificado antes de recomendação. Link de referência apenas; sem cópia, endosso de resultado ou alegação de cobertura."
+      },
+      "reason": "A busca temática é um ponto de partida útil de navegação, mas não valida as atividades retornadas. A aprovação fica restrita a referência/descoberta e não a prática ou aprendizagem individual.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Ecologia+Biologia",
+          "detail": "Endpoint oficial de busca da Khan Academy com consulta textual “Ecologia Biologia”; a URL identifica uma pesquisa temática, não um curso ou exercício específico."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 196,
+        "topic_id": 2490,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta da busca oficial da Khan Academy para Ecologia/Biologia; não é uma lista curada nem prova de que os resultados cobrem o tópico. Cada aula/exercício deverá ser verificado antes de recomendação. Link de referência apenas; sem cópia, endosso de resultado ou alegação de cobertura."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Ecologia+Biologia",
+          "detail": "Endpoint oficial de busca da Khan Academy com consulta textual “Ecologia Biologia”; a URL identifica uma pesquisa temática, não um curso ou exercício específico."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 197
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Genética",
+        "url": "https://pt.wikipedia.org/wiki/Gen%C3%A9tica",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado somente como referência enciclopédica introdutória para consulta de genética/hereditariedade; não é curso nem cobertura do programa. O artigo contém tratamento histórico de Mendel e conceitos de hereditariedade/alelos, além de tópicos moleculares amplos. Confirmar terminologia e afirmações em fontes didáticas/científicas; não copiar. Acessibilidade de mídia e WCAG não foram auditadas.",
+        "availability_mode": "reference"
+      },
+      "reason": "O artigo aborda hereditariedade e genética mendeliana em seção textual diretamente pertinente ao tópico, mas sua amplitude e natureza colaborativa não justificam endosso como trilha de aprendizagem. O modo reference explicita esse limite.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Gen%C3%A9tica",
+          "detail": "Página direta Genética; a seção histórica relata os padrões mendelianos de hereditariedade e diferencia o uso atual de alelo como variante de gene."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 197,
+        "topic_id": 2491,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado somente como referência enciclopédica introdutória para consulta de genética/hereditariedade; não é curso nem cobertura do programa. O artigo contém tratamento histórico de Mendel e conceitos de hereditariedade/alelos, além de tópicos moleculares amplos. Confirmar terminologia e afirmações em fontes didáticas/científicas; não copiar. Acessibilidade de mídia e WCAG não foram auditadas."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Gen%C3%A9tica",
+          "detail": "Página direta Genética; a seção histórica relata os padrões mendelianos de hereditariedade e diferencia o uso atual de alelo como variante de gene."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 198
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Genética e evolução",
+        "url": "https://www.khanacademy.org/search?page_search_query=Gen%C3%A9tica+e+evolu%C3%A7%C3%A3o+Biologia",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta da busca oficial da Khan Academy para Genética e evolução. Resultados de busca variam e não foram validados como aulas ou exercícios; confira o conteúdo, nível e acessibilidade de cada resultado. Referência/descoberta apenas, não cobertura do tópico; nenhum conteúdo copiado."
+      },
+      "reason": "A consulta é coerente com a classificação de Genética e evolução e pode ajudar a localizar materiais, mas, sem validar os resultados individuais, não deve aparecer como prática aprovada.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Gen%C3%A9tica+e+evolu%C3%A7%C3%A3o+Biologia",
+          "detail": "Endpoint oficial de busca com consulta textual “Genética e evolução Biologia”; o recurso não fixa um item de aprendizagem específico."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 198,
+        "topic_id": 2491,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta da busca oficial da Khan Academy para Genética e evolução. Resultados de busca variam e não foram validados como aulas ou exercícios; confira o conteúdo, nível e acessibilidade de cada resultado. Referência/descoberta apenas, não cobertura do tópico; nenhum conteúdo copiado."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Gen%C3%A9tica+e+evolu%C3%A7%C3%A3o+Biologia",
+          "detail": "Endpoint oficial de busca com consulta textual “Genética e evolução Biologia”; o recurso não fixa um item de aprendizagem específico."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 199
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "História do Brasil: resumo, períodos, eventos",
+        "url": "https://brasilescola.uol.com.br/historiab",
+        "provider": "Brasil Escola",
+        "kind": "course",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como portal de descoberta e consulta para História do Brasil, não como curso organizado ou capítulo que cubra o programa. A página apresenta uma síntese de períodos (pré-cabralino, pré-colonial, colonial, imperial e republicano) e índice de textos/temas e videoaulas. Use o índice para localizar fontes e complemente o estudo por recortes do programa. Conteúdo externo em link-only conforme termos da Rede Omnia; não copiar. Acessibilidade não auditada.",
+        "availability_mode": "reference"
+      },
+      "reason": "A página é um hub temático: oferece uma síntese de periodização e navegação para artigos e vídeos, mas não constitui por si só uma trilha sequenciada ou cobertura integral. Por isso, corrijo o modo de uso para reference e não endosso como curso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiab",
+          "detail": "Página direta História do Brasil: a apresentação separa períodos Pré-Cabralino, Pré-Colonial, Colonial, Imperial e Republicano e lista subseções e artigos temáticos, além de videoaulas; evidência de hub, não de curso fechado."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 199,
+        "topic_id": 2492,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como portal de descoberta e consulta para História do Brasil, não como curso organizado ou capítulo que cubra o programa. A página apresenta uma síntese de períodos (pré-cabralino, pré-colonial, colonial, imperial e republicano) e índice de textos/temas e videoaulas. Use o índice para localizar fontes e complemente o estudo por recortes do programa. Conteúdo externo em link-only conforme termos da Rede Omnia; não copiar. Acessibilidade não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiab",
+          "detail": "Página direta História do Brasil: a apresentação separa períodos Pré-Cabralino, Pré-Colonial, Colonial, Imperial e Republicano e lista subseções e artigos temáticos, além de videoaulas; evidência de hub, não de curso fechado."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 200
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "História do Brasil",
+        "url": "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_Brasil",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência enciclopédica de navegação cronológica, não como narrativa definitiva nem cobertura integral da História do Brasil. O índice separa períodos e bibliografia e a página inclui seção do Período Colonial; conferir interpretações, datas e recortes com bibliografia e material didático. Link apenas, sem cópia; acessibilidade não auditada.",
+        "availability_mode": "reference"
+      },
+      "reason": "A página direta contém uma estrutura cronológica relevante ao tópico e explicita período colonial, império e república. Dada a natureza colaborativa e os enquadramentos interpretativos possíveis, a aprovação é restrita a referência complementar com checagem cruzada.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_Brasil",
+          "detail": "Página História do Brasil; o índice e a bibliografia organizam pré-descobrimento, período colonial, império e república; a seção colonial delimita o período e registra diferenças de periodização."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 200,
+        "topic_id": 2492,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência enciclopédica de navegação cronológica, não como narrativa definitiva nem cobertura integral da História do Brasil. O índice separa períodos e bibliografia e a página inclui seção do Período Colonial; conferir interpretações, datas e recortes com bibliografia e material didático. Link apenas, sem cópia; acessibilidade não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_Brasil",
+          "detail": "Página História do Brasil; o índice e a bibliografia organizam pré-descobrimento, período colonial, império e república; a seção colonial delimita o período e registra diferenças de periodização."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 201
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: História do Brasil",
+        "url": "https://www.khanacademy.org/search?page_search_query=Hist%C3%B3ria+do+Brasil+Hist%C3%B3ria",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta da busca oficial da Khan Academy para História do Brasil. Não é material individual verificado, nem garante resultados que cubram recortes brasileiros do programa; examine cada resultado antes de recomendar. Apenas referência/descoberta, sem cópia ou alegação de cobertura."
+      },
+      "reason": "A pesquisa temática no domínio oficial é um hub de navegação útil. Aprovação não se estende aos resultados, que não foram inspecionados nem curados.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Hist%C3%B3ria+do+Brasil+Hist%C3%B3ria",
+          "detail": "Endpoint da Khan Academy identificado pela consulta “História do Brasil História”; a URL é uma página de busca, não uma aula específica."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 201,
+        "topic_id": 2492,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta da busca oficial da Khan Academy para História do Brasil. Não é material individual verificado, nem garante resultados que cubram recortes brasileiros do programa; examine cada resultado antes de recomendar. Apenas referência/descoberta, sem cópia ou alegação de cobertura."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Hist%C3%B3ria+do+Brasil+Hist%C3%B3ria",
+          "detail": "Endpoint da Khan Academy identificado pela consulta “História do Brasil História”; a URL é uma página de busca, não uma aula específica."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 203
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Idade Contemporânea",
+        "url": "https://pt.wikipedia.org/wiki/Idade_Contempor%C3%A2nea",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência geral para situar a Idade Contemporânea, não como material suficiente nem recorte exato do programa de História. O artigo menciona guerras mundiais e mudanças na ideia de progresso, entre outros temas; conferir periodização e interpretações em bibliografia confiável. Link apenas; mídia/acessibilidade não auditadas.",
+        "availability_mode": "reference"
+      },
+      "reason": "O conteúdo tem relação direta com o tema de mundo contemporâneo e inclui contextualização das guerras mundiais e seus efeitos intelectuais. Por ser enciclopédia colaborativa e cobrir recortes amplos, fica como referência secundária, sem prometer cobertura curricular.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Idade_Contempor%C3%A2nea",
+          "detail": "Página direta Idade Contemporânea; seção textual discute o impacto das duas guerras mundiais sobre a crença iluminista no progresso e o uso de categorias de desenvolvimento."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 203,
+        "topic_id": 2493,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência geral para situar a Idade Contemporânea, não como material suficiente nem recorte exato do programa de História. O artigo menciona guerras mundiais e mudanças na ideia de progresso, entre outros temas; conferir periodização e interpretações em bibliografia confiável. Link apenas; mídia/acessibilidade não auditadas."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Idade_Contempor%C3%A2nea",
+          "detail": "Página direta Idade Contemporânea; seção textual discute o impacto das duas guerras mundiais sobre a crença iluminista no progresso e o uso de categorias de desenvolvimento."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 204
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Mundo contemporâneo",
+        "url": "https://www.khanacademy.org/search?page_search_query=Mundo+contempor%C3%A2neo+Hist%C3%B3ria",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta da busca oficial da Khan Academy para História/Mundo contemporâneo. Resultados dinâmicos não foram validados como aderentes a todos os recortes do programa; verifique cada item antes de usá-lo. Referência/descoberta apenas, não material de aprendizagem endossado."
+      },
+      "reason": "A URL funciona como ponto de busca oficial com termos temáticos relacionados. Como não identifica conteúdo fixo, aprovo apenas sua utilidade de descoberta e não as páginas de resultado.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Mundo+contempor%C3%A2neo+Hist%C3%B3ria",
+          "detail": "Endpoint oficial da Khan Academy com consulta “Mundo contemporâneo História”; trata-se de pesquisa, sem seleção de aula ou exercício verificado."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 204,
+        "topic_id": 2493,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta da busca oficial da Khan Academy para História/Mundo contemporâneo. Resultados dinâmicos não foram validados como aderentes a todos os recortes do programa; verifique cada item antes de usá-lo. Referência/descoberta apenas, não material de aprendizagem endossado."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Mundo+contempor%C3%A2neo+Hist%C3%B3ria",
+          "detail": "Endpoint oficial da Khan Academy com consulta “Mundo contemporâneo História”; trata-se de pesquisa, sem seleção de aula ou exercício verificado."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 206
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Cartografia",
+        "url": "https://pt.wikipedia.org/wiki/Cartografia",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência enciclopédica para conceitos cartográficos, não como material instrucional validado ou cobertura integral de geotecnologias. A página conecta cartografia a mapas, coordenadas, escala e projeções; conferir convenções, fórmulas e mapas em fonte didática/geográfica confiável. Nenhum texto/imagem foi copiado; acessibilidade não auditada.",
+        "availability_mode": "reference"
+      },
+      "reason": "O conteúdo e as referências cruzadas são diretamente relacionados a mapas, coordenadas, escala e projeções. A natureza geral e colaborativa do verbete recomenda consulta complementar, não endosso como aprendizagem estruturada.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Cartografia",
+          "detail": "Página Cartografia; o artigo relaciona o tema a coordenadas, longitude, escala cartográfica e projeções e situa a cartografia como representação espacial."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 206,
+        "topic_id": 2494,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência enciclopédica para conceitos cartográficos, não como material instrucional validado ou cobertura integral de geotecnologias. A página conecta cartografia a mapas, coordenadas, escala e projeções; conferir convenções, fórmulas e mapas em fonte didática/geográfica confiável. Nenhum texto/imagem foi copiado; acessibilidade não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Cartografia",
+          "detail": "Página Cartografia; o artigo relaciona o tema a coordenadas, longitude, escala cartográfica e projeções e situa a cartografia como representação espacial."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 207
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Cartografia e geotecnologias",
+        "url": "https://www.khanacademy.org/search?page_search_query=Cartografia+e+geotecnologias+Geografia",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta na busca oficial da Khan Academy para Cartografia/geotecnologias. A busca não é uma atividade validada e os resultados podem não cobrir escala, coordenadas ou projeções; revisar cada destino antes de recomendar. Somente referência/descoberta; nenhuma cópia."
+      },
+      "reason": "É uma consulta temática no domínio da plataforma e pode servir para descoberta, mas não há validação dos resultados como recurso de cartografia; o status não os endossa.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Cartografia+e+geotecnologias+Geografia",
+          "detail": "Endpoint de busca oficial com consulta “Cartografia e geotecnologias Geografia”; não aponta para unidade, aula ou exercício específico."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 207,
+        "topic_id": 2494,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta na busca oficial da Khan Academy para Cartografia/geotecnologias. A busca não é uma atividade validada e os resultados podem não cobrir escala, coordenadas ou projeções; revisar cada destino antes de recomendar. Somente referência/descoberta; nenhuma cópia."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Cartografia+e+geotecnologias+Geografia",
+          "detail": "Endpoint de busca oficial com consulta “Cartografia e geotecnologias Geografia”; não aponta para unidade, aula ou exercício específico."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 209
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Geopolítica",
+        "url": "https://pt.wikipedia.org/wiki/Geopol%C3%ADtica",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência enciclopédica introdutória para consulta de relações entre poder e espaço, não como síntese neutra/definitiva nem cobertura de território e geopolítica. O artigo apresenta tradições geopolíticas clássicas e seus conceitos; ler criticamente o contexto histórico e conferir com fontes atuais e especializadas. Não copiar; acessibilidade de mídia não auditada.",
+        "availability_mode": "reference"
+      },
+      "reason": "A página trata diretamente de geopolítica e de como autores clássicos conceituaram poder terrestre/naval. É útil para localizar conceitos, mas precisa de leitura crítica e não constitui material instrucional exaustivo.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Geopol%C3%ADtica",
+          "detail": "Página Geopolítica; o artigo inclui discussão de vertentes clássicas de poder naval e terrestre associadas a Mahan e Mackinder."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 209,
+        "topic_id": 2495,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência enciclopédica introdutória para consulta de relações entre poder e espaço, não como síntese neutra/definitiva nem cobertura de território e geopolítica. O artigo apresenta tradições geopolíticas clássicas e seus conceitos; ler criticamente o contexto histórico e conferir com fontes atuais e especializadas. Não copiar; acessibilidade de mídia não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Geopol%C3%ADtica",
+          "detail": "Página Geopolítica; o artigo inclui discussão de vertentes clássicas de poder naval e terrestre associadas a Mahan e Mackinder."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 210
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Território e geopolítica",
+        "url": "https://www.khanacademy.org/search?page_search_query=Territ%C3%B3rio+e+geopol%C3%ADtica+Geografia",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta da busca oficial da Khan Academy sobre Território/geopolítica. A consulta não comprova que existam resultados pertinentes para todos os conceitos e não endossa nenhum resultado. Use apenas para localizar materiais e valide cada página antes de recomendar."
+      },
+      "reason": "A URL é uma pesquisa oficial com termos coerentes ao tópico, mas não permite confirmar material específico; a publicação é limitada à função de hub de descoberta.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Territ%C3%B3rio+e+geopol%C3%ADtica+Geografia",
+          "detail": "Endpoint oficial de busca da Khan Academy com consulta “Território e geopolítica Geografia”; não é página de aula/exercício individual."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 210,
+        "topic_id": 2495,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta da busca oficial da Khan Academy sobre Território/geopolítica. A consulta não comprova que existam resultados pertinentes para todos os conceitos e não endossa nenhum resultado. Use apenas para localizar materiais e valide cada página antes de recomendar."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Territ%C3%B3rio+e+geopol%C3%ADtica+Geografia",
+          "detail": "Endpoint oficial de busca da Khan Academy com consulta “Território e geopolítica Geografia”; não é página de aula/exercício individual."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 211
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Leitura",
+        "url": "https://pt.wikipedia.org/wiki/Leitura",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência conceitual complementar sobre leitura e construção de sentidos; não como curso de leitura em inglês nem prática para textos de prova. A página descreve a leitura como interação leitor–autor e articulação entre informação textual e conhecimentos do leitor. Para preparação, usar textos em inglês e estratégias de inferência/contexto; conferir teorias com fontes especializadas. Link apenas; acessibilidade não auditada.",
+        "availability_mode": "reference"
+      },
+      "reason": "Há correspondência substantiva, porém parcial, com a ideia de construção de sentidos: o artigo descreve leitura como interação e mobilização de conhecimentos do leitor. Ele não ensina leitura em inglês nem substitui prática com textos; a nota limita o uso a referência conceitual.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Leitura",
+          "detail": "Página Leitura; seção de concepções do ato de ler descreve interação leitor-autor e processamento ascendente/descendente com informações que o leitor traz ao texto."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 211,
+        "topic_id": 2496,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência conceitual complementar sobre leitura e construção de sentidos; não como curso de leitura em inglês nem prática para textos de prova. A página descreve a leitura como interação leitor–autor e articulação entre informação textual e conhecimentos do leitor. Para preparação, usar textos em inglês e estratégias de inferência/contexto; conferir teorias com fontes especializadas. Link apenas; acessibilidade não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Leitura",
+          "detail": "Página Leitura; seção de concepções do ato de ler descreve interação leitor-autor e processamento ascendente/descendente com informações que o leitor traz ao texto."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 212
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Leitura e construção de sentidos",
+        "url": "https://www.khanacademy.org/search?page_search_query=Leitura+e+constru%C3%A7%C3%A3o+de+sentidos+Ingl%C3%AAs",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta da busca oficial para leitura/construção de sentidos em Inglês. Resultados não foram verificados como exercícios de compreensão de texto em inglês e não são endossados pela aprovação deste hub; inspecione individualmente cada destino. Referência/descoberta apenas, sem cópia."
+      },
+      "reason": "A pesquisa tem relação temática com leitura em inglês, mas a página de busca não comprova a pertinência dos resultados. A aprovação se limita à navegação/descoberta.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Leitura+e+constru%C3%A7%C3%A3o+de+sentidos+Ingl%C3%AAs",
+          "detail": "Endpoint de busca oficial da Khan Academy com consulta “Leitura e construção de sentidos Inglês”; não designa atividade ou texto específico."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 212,
+        "topic_id": 2496,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta da busca oficial para leitura/construção de sentidos em Inglês. Resultados não foram verificados como exercícios de compreensão de texto em inglês e não são endossados pela aprovação deste hub; inspecione individualmente cada destino. Referência/descoberta apenas, sem cópia."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Leitura+e+constru%C3%A7%C3%A3o+de+sentidos+Ingl%C3%AAs",
+          "detail": "Endpoint de busca oficial da Khan Academy com consulta “Leitura e construção de sentidos Inglês”; não designa atividade ou texto específico."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 213
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Ética",
+        "url": "https://pt.wikipedia.org/wiki/%C3%89tica",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência enciclopédica para consulta de conceitos de ética; não como fonte filosófica definitiva nem cobertura de justiça, democracia e política. O verbete diferencia metaética, ética normativa, aplicada e descritiva. Compare posições e argumentos em textos filosóficos/fonte primária; link apenas, sem copiar. Acessibilidade não auditada.",
+        "availability_mode": "reference"
+      },
+      "reason": "A organização do verbete inclui distinções conceituais centrais para ética e reflexão moral, o que é pertinente ao tópico. Por ser uma visão enciclopédica plural e não um curso, mantenho uso limitado a referência.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/%C3%89tica",
+          "detail": "Página Ética; a seção de teorias distingue metaética, ética normativa e ética aplicada, incluindo ética descritiva."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 213,
+        "topic_id": 2497,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência enciclopédica para consulta de conceitos de ética; não como fonte filosófica definitiva nem cobertura de justiça, democracia e política. O verbete diferencia metaética, ética normativa, aplicada e descritiva. Compare posições e argumentos em textos filosóficos/fonte primária; link apenas, sem copiar. Acessibilidade não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/%C3%89tica",
+          "detail": "Página Ética; a seção de teorias distingue metaética, ética normativa e ética aplicada, incluindo ética descritiva."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 214
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Ética, justiça e política",
+        "url": "https://www.khanacademy.org/search?page_search_query=%C3%89tica%2C+justi%C3%A7a+e+pol%C3%ADtica+Filosofia",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta na busca oficial da Khan Academy para ética/justiça/política. Como a página é uma pesquisa dinâmica e não atividade examinada, não endossa a qualidade ou aderência dos resultados. Usar somente para encontrar material que depois será conferido individualmente."
+      },
+      "reason": "A consulta contém conceitos relevantes ao tópico, mas não identifica conteúdo pedagógico fixo. Aprovo apenas como referência/descoberta, com explicitação de que os resultados não foram validados.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=%C3%89tica%2C+justi%C3%A7a+e+pol%C3%ADtica+Filosofia",
+          "detail": "Endpoint de busca oficial com consulta “Ética, justiça e política Filosofia”; não é aula nem exercício específico."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 214,
+        "topic_id": 2497,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta na busca oficial da Khan Academy para ética/justiça/política. Como a página é uma pesquisa dinâmica e não atividade examinada, não endossa a qualidade ou aderência dos resultados. Usar somente para encontrar material que depois será conferido individualmente."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=%C3%89tica%2C+justi%C3%A7a+e+pol%C3%ADtica+Filosofia",
+          "detail": "Endpoint de busca oficial com consulta “Ética, justiça e política Filosofia”; não é aula nem exercício específico."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 215
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Cultura",
+        "url": "https://pt.wikipedia.org/wiki/Cultura",
+        "provider": "Wikipédia",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência enciclopédica sobre cultura material/simbólica e perspectivas antropológicas/sociológicas, não como unidade didática validada ou cobertura integral de cultura e sociedade. O verbete apresenta definições e correntes diversas; comparar abordagens e evitar tratar uma definição como universal. Link apenas; acessibilidade de imagens não auditada.",
+        "availability_mode": "reference"
+      },
+      "reason": "A página trata diretamente de cultura em perspectivas antropológica e sociológica e distingue cultura material e imaterial. A amplitude e pluralidade de definições exigem leitura crítica; o modo reference não promete ensino sequenciado.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Cultura",
+          "detail": "Página Cultura; o artigo apresenta cultura como conceito da antropologia e sociologia e distingue cultura material e imaterial."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 215,
+        "topic_id": 2498,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como referência enciclopédica sobre cultura material/simbólica e perspectivas antropológicas/sociológicas, não como unidade didática validada ou cobertura integral de cultura e sociedade. O verbete apresenta definições e correntes diversas; comparar abordagens e evitar tratar uma definição como universal. Link apenas; acessibilidade de imagens não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Cultura",
+          "detail": "Página Cultura; o artigo apresenta cultura como conceito da antropologia e sociologia e distingue cultura material e imaterial."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 216
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Buscar aulas e exercícios: Cultura e sociedade",
+        "url": "https://www.khanacademy.org/search?page_search_query=Cultura+e+sociedade+Sociologia",
+        "provider": "Khan Academy",
+        "kind": "practice_discovery",
+        "availability_mode": "reference",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Atalho de descoberta da busca oficial da Khan Academy para Cultura e sociedade. Resultados dinâmicos não foram conferidos como material de Sociologia pertinente ao programa; validar cada recurso antes de recomendar. Somente referência/descoberta, não aula nem prática endossada."
+      },
+      "reason": "A consulta é tematicamente coerente e a fonte é a plataforma oficial, mas os resultados não foram validados. Aprovação limitada ao uso de navegação.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Cultura+e+sociedade+Sociologia",
+          "detail": "Endpoint de busca oficial da Khan Academy para “Cultura e sociedade Sociologia”; não identifica conteúdo específico."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 216,
+        "topic_id": 2498,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Atalho de descoberta da busca oficial da Khan Academy para Cultura e sociedade. Resultados dinâmicos não foram conferidos como material de Sociologia pertinente ao programa; validar cada recurso antes de recomendar. Somente referência/descoberta, não aula nem prática endossada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=Cultura+e+sociedade+Sociologia",
+          "detail": "Endpoint de busca oficial da Khan Academy para “Cultura e sociedade Sociologia”; não identifica conteúdo específico."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 259
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Cartografia: o que é, para que serve, tipos, mapas",
+        "url": "https://brasilescola.uol.com.br/geografia/cartografia.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como leitura complementar introdutória de cartografia, não como capítulo completo de geotecnologias. A página discute escala, coordenadas, elementos de mapas e diferentes projeções (incluindo Mercator, Mollweide e Peters) e oferece links a questões/vídeos; escolher os recortes pertinentes e confrontar convenções cartográficas com o material do curso. Link-only: termos da Rede Omnia protegem textos, questões e imagens e restringem reprodução; nenhum conteúdo copiado. Acessibilidade básica/WCAG não auditada."
+      },
+      "reason": "A leitura direta confirma conteúdo explicativo nos subtemas centrais do tópico (elementos do mapa, escala, coordenadas e projeções), suficiente como suplemento textual com escopo delimitado. A aprovação não endossa automaticamente exercícios, mídia ou afirmações de cada seção.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/cartografia.htm",
+          "detail": "Artigo direto: seção/definições lista elementos de mapa e escala, coordenadas geográficas, e apresenta explicações de projeções como Mercator e Mollweide; o índice ainda oferece recursos externos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 259,
+        "topic_id": 2494,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como leitura complementar introdutória de cartografia, não como capítulo completo de geotecnologias. A página discute escala, coordenadas, elementos de mapas e diferentes projeções (incluindo Mercator, Mollweide e Peters) e oferece links a questões/vídeos; escolher os recortes pertinentes e confrontar convenções cartográficas com o material do curso. Link-only: termos da Rede Omnia protegem textos, questões e imagens e restringem reprodução; nenhum conteúdo copiado. Acessibilidade básica/WCAG não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/cartografia.htm",
+          "detail": "Artigo direto: seção/definições lista elementos de mapa e escala, coordenadas geográficas, e apresenta explicações de projeções como Mercator e Mollweide; o índice ainda oferece recursos externos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 261
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Idade Contemporânea: resumo, fatos, linha do tempo",
+        "url": "https://brasilescola.uol.com.br/historiag/idade-contemporanea.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como resumo complementar introdutório de mundo contemporâneo, não como cobertura integral nem material da Comvest. A página organiza acontecimentos como imperialismo, guerras mundiais, Guerra Fria e globalização e oferece itens de revisão; estudar também processos/atores e perspectivas não contemplados pelo resumo. Link-only conforme termos da Rede Omnia; não copiar. A página contém mídia; sua acessibilidade não foi auditada."
+      },
+      "reason": "O conteúdo direto cobre processos amplos claramente ligados ao tópico e pode servir como mapa inicial de estudo. A aprovação é de um suplemento, não de todos os itens ou explicações como fonte definitiva; a limitação de escopo está registrada.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/idade-contemporanea.htm",
+          "detail": "Página direta: o resumo enumera unificações, Revolução Russa, guerras mundiais e Guerra Fria, além de imperialismo, globalização e transformações do século XX."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 261,
+        "topic_id": 2493,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como resumo complementar introdutório de mundo contemporâneo, não como cobertura integral nem material da Comvest. A página organiza acontecimentos como imperialismo, guerras mundiais, Guerra Fria e globalização e oferece itens de revisão; estudar também processos/atores e perspectivas não contemplados pelo resumo. Link-only conforme termos da Rede Omnia; não copiar. A página contém mídia; sua acessibilidade não foi auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/idade-contemporanea.htm",
+          "detail": "Página direta: o resumo enumera unificações, Revolução Russa, guerras mundiais e Guerra Fria, além de imperialismo, globalização e transformações do século XX."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 262
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Filosofia política: o que é, história, pensadores",
+        "url": "https://brasilescola.uol.com.br/filosofia/filosofia-politica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como leitura introdutória complementar de filosofia política, com recorte em Estado, governo e pensadores; não substitui fontes filosóficas nem cobre por si só justiça, democracia e participação política. A página articula definições de Estado/governo e tradições filosóficas; comparar definições com textos de autores primários. Link-only conforme termos da Rede Omnia, sem cópia; acessibilidade não auditada."
+      },
+      "reason": "O texto direto trata de questões de Estado, governo e organização política e as situa na tradição filosófica, aderência substantiva ao eixo ética/justiça/política. Limito a aprovação a leitura complementar e registro as lacunas.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/filosofia/filosofia-politica.htm",
+          "detail": "Artigo direto; índice possui seções “O que é filosofia política?”, “Governo e Estado” e “Principais pensadores”; o corpo explica os conceitos de Estado e governo."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 262,
+        "topic_id": 2497,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como leitura introdutória complementar de filosofia política, com recorte em Estado, governo e pensadores; não substitui fontes filosóficas nem cobre por si só justiça, democracia e participação política. A página articula definições de Estado/governo e tradições filosóficas; comparar definições com textos de autores primários. Link-only conforme termos da Rede Omnia, sem cópia; acessibilidade não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/filosofia/filosofia-politica.htm",
+          "detail": "Artigo direto; índice possui seções “O que é filosofia política?”, “Governo e Estado” e “Principais pensadores”; o corpo explica os conceitos de Estado e governo."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 263
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Ética: o que é, diferença de moral, importância",
+        "url": "https://brasilescola.uol.com.br/sociologia/o-que-etica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como introdução complementar a ética/moral, não como exposição filosófica definitiva nem cobertura do eixo de justiça e política. O artigo contrasta costumes/moral e reflexão ética e remete a tradições antigas; a dicotomia apresentada é simplificação didática, então comparar com abordagens filosóficas variadas. Link-only conforme termos da Rede Omnia; não copiar. Acessibilidade não auditada."
+      },
+      "reason": "A página contém exposição textual diretamente sobre o problema ético e sua relação com moral, com contextualização filosófica. A distinção é simplificada, mas adequada a um primeiro contato se identificada como tal e confrontada com outras abordagens.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/sociologia/o-que-etica.htm",
+          "detail": "Artigo direto: seção sobre diferença entre ética e moral distingue costumes/práticas de reflexão sobre a moral e situa a ética na filosofia antiga; a própria página encaminha a aprofundamento."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 263,
+        "topic_id": 2497,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como introdução complementar a ética/moral, não como exposição filosófica definitiva nem cobertura do eixo de justiça e política. O artigo contrasta costumes/moral e reflexão ética e remete a tradições antigas; a dicotomia apresentada é simplificação didática, então comparar com abordagens filosóficas variadas. Link-only conforme termos da Rede Omnia; não copiar. Acessibilidade não auditada."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/sociologia/o-que-etica.htm",
+          "detail": "Artigo direto: seção sobre diferença entre ética e moral distingue costumes/práticas de reflexão sobre a moral e situa a ética na filosofia antiga; a própria página encaminha a aprofundamento."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 264
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Identidade cultural: conceito, elementos, no Brasil",
+        "url": "https://brasilescola.uol.com.br/sociologia/identidade-cultural.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como leitura complementar introdutória sobre identidade cultural, construção social e exemplos brasileiros; não esgota cultura, diferença e desigualdade. A página ressalta identidade como processo não fixo e inclui seções sobre formação, manifestações e Brasil. Link-only conforme termos da Rede Omnia; não copiar; as mídias da página e WCAG não foram auditadas."
+      },
+      "reason": "A página direta aborda identidade cultural como processo relacional e mutável e organiza seções de formação, manifestações e contexto brasileiro; é uma correspondência substantiva para um recorte do tópico Cultura e sociedade.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/sociologia/identidade-cultural.htm",
+          "detail": "Artigo direto: o índice inclui definição, características, elementos, formação, manifestação e identidade cultural no Brasil; o resumo caracteriza identidade como processo em transformação e relação com o outro."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 264,
+        "topic_id": 2498,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como leitura complementar introdutória sobre identidade cultural, construção social e exemplos brasileiros; não esgota cultura, diferença e desigualdade. A página ressalta identidade como processo não fixo e inclui seções sobre formação, manifestações e Brasil. Link-only conforme termos da Rede Omnia; não copiar; as mídias da página e WCAG não foram auditadas."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/sociologia/identidade-cultural.htm",
+          "detail": "Artigo direto: o índice inclui definição, características, elementos, formação, manifestação e identidade cultural no Brasil; o resumo caracteriza identidade como processo em transformação e relação com o outro."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 265
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Videoaula: o que é cultura?",
+        "url": "https://brasilescola.uol.com.br/videos/o-que-cultura.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado somente como referência textual introdutória, não como videoaula necessária nem cobertura de Cultura e sociedade. A página oferece resumo escrito: conceito de cultura, diversidade, tipos e abordagem antropológica. Esta aprovação cobre esse resumo e os links textuais, não o conteúdo do player; transcrição/legendas do vídeo não foram confirmadas. Acessibilidade audiovisual e WCAG não auditadas. Link-only conforme termos da Rede Omnia; não copiar nem redistribuir."
+      },
+      "reason": "A inspeção direta encontrou resumo textual explícito com os conceitos centrais anunciados, suficiente para consulta suplementar mesmo sem confirmação de acessibilidade do vídeo. A limitação de aprovação ao texto da página e o modo reference evitam exigir o player ou endossar material audiovisual não verificado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/videos/o-que-cultura.htm",
+          "detail": "Página direta, título ‘Videoaula: o que é cultura?’; sob ‘Resumo’, o texto declara abordar conceito de cultura, diversidade cultural, tipos de cultura e estudo pela Antropologia. O player é um link incorporado e não foi validado como acessível."
+        },
+        {
+          "locator": "https://brasilescola.uol.com.br/termos-de-uso",
+          "detail": "Seção 11.1 identifica textos, questões, imagens, vídeos e outros conteúdos como protegidos; esta proposta mantém apenas link e metadados, sem reprodução."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 265,
+        "topic_id": 2498,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Pertinência limitada ao resumo textual da página, que aborda conceito, diversidade, tipos de cultura e perspectiva antropológica; referência complementar, não curso nem cobertura integral. Player sem transcrição/legendas confirmadas e acessibilidade audiovisual não auditada; não exigir o vídeo. Link-only conforme termos da Rede Omnia; nenhum conteúdo reproduzido. curriculum_topic_id permanece NULL; topic_id é FK de topics.id."
+      },
+      "reason": "O resumo escrito trata diretamente de cultura, diversidade e abordagem antropológica, sendo substantivamente pertinente ao tópico. Aprovação apenas da associação ao resumo textual; accessibility_status fica unknown, sem alegação de acesso assistivo ao player.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/videos/o-que-cultura.htm",
+          "detail": "Resumo textual da página especifica conceito de cultura, diversidade cultural, tipos de cultura e abordagem da Antropologia; não se presume transcrição do vídeo."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 266
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Definição de território",
+        "url": "https://brasilescola.uol.com.br/geografia/definicao-territorio.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning",
+        "source_document_id": null
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como leitura complementar focal sobre conceito geográfico de território e relações de poder; não é cobertura de geopolítica, fronteiras e conflitos. A página explica que o conceito excede a divisão Estado-nação e apresenta delimitações por relações de poder. Link-only conforme termos da Rede Omnia; não copiar. Acessibilidade e WCAG não auditadas."
+      },
+      "reason": "A página trata diretamente de território como conceito geográfico construído por relações de poder, correspondência substantiva ao tópico. O texto é focal e não deve ser confundido com um material completo de geopolítica.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/definicao-territorio.htm",
+          "detail": "Artigo direto; afirma que a análise do território privilegia relações de poder no espaço e discute divisões administrativas e territórios para além do Estado-nação."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 266,
+        "topic_id": 2495,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como leitura complementar focal sobre conceito geográfico de território e relações de poder; não é cobertura de geopolítica, fronteiras e conflitos. A página explica que o conceito excede a divisão Estado-nação e apresenta delimitações por relações de poder. Link-only conforme termos da Rede Omnia; não copiar. Acessibilidade e WCAG não auditadas."
+      },
+      "reason": "O vínculo usa resource_topics.topic_id como FK para topics.id e corresponde ao tema explícito do conteúdo examinado. curriculum_topic_id permanece NULL: não converto nem misturo o namespace de tópicos legados com o currículo anual. A pertinência aprovada é suplementar e delimitada pela nota do recurso.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/definicao-territorio.htm",
+          "detail": "Artigo direto; afirma que a análise do território privilegia relações de poder no espaço e discute divisões administrativas e territórios para além do Estado-nação."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 474
+      },
+      "expected": {
+        "editorial_status": "review",
+        "title": "Comvest lança simulado presencial do Vestibular Unicamp, no formato de 1ª fase",
+        "url": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+        "provider": "Unicamp / Comvest",
+        "kind": "official_simulation_announcement",
+        "availability_mode": "reference",
+        "source_document_id": 442
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Aprovado como referência institucional histórica, não como material de estudo nem aviso de evento futuro. A notícia oficial de 13/04/2026 confirma que o simulado presencial preparatório para ingresso 2027 ocorreu em 14/06/2026, com 72 questões inéditas e cinco horas; a seção sobre Simulado Online o distingue como banco de questões de edições anteriores (2017–2026). Evento já passado; consultar apenas para contexto/proveniência. A publicação não concede licença para reproduzir."
+      },
+      "reason": "A própria Unicamp/Comvest é a fonte primária e confirma identidade, vínculo com o ingresso 2027 e formato do simulado, distinguindo-o do simulador online histórico. A aprovação é estritamente como referência oficial de contexto, pois o evento já ocorreu.",
+      "evidence": [
+        {
+          "locator": "https://www.unicamp.br/noticias/2026/04/13/comvest-lanca-simulado-presencial-do-vestibular-unicamp-no-formato-de-1a-fase/",
+          "detail": "Notícia oficial publicada em 13/04/2026; informa a data do evento, 72 questões inéditas e duração de cinco horas e separa a seção Simulado online gratuito, que disponibiliza questões anteriores de 2017 a 2026."
+        }
+      ]
+    }
+  ],
+  "blocked": [],
+  "summary": "Propostas para recursos 194–217 ainda em review (sem tocar 202, 205, 208 ou 217 já publicados), artigos humanos 259–266 que existem e permanecem em review (260 não existe no inventário SQLite), e recurso oficial 474. As relações aprovadas usam topic_id→topics.id; curriculum_topic_id fica NULL. Buscas Khan são aprovadas estritamente como hubs de descoberta; enciclopédias como referência complementar; artigos didáticos como leitura suplementar com escopo limitado. O recurso 265 é aprovado apenas pelo resumo textual da página, sem endosso do player. Só links/metadados, sem reprodução. Manifesto é proposta editorial, não foi aplicado ao banco."
+}

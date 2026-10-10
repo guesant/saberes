@@ -1,0 +1,4413 @@
+{
+  "format": "target-question-coverage/v1",
+  "generated_at": "2026-10-10T15:49:11.118292+00:00",
+  "database_sha256": "01014a8ca906a3fab91a7ef645b1427f304637193472e009a997f97f4b8dba11",
+  "target": "unicamp-2027/primeira-fase",
+  "qualification": "Selected course practice is the curated representative currently in the guided course. Approved canonical question records are candidate associations, not every relevant question. Relations are editorial, not official Comvest tags. This report does not prove full PDF transcription, image accessibility, or complete subtopic coverage.",
+  "topics": [
+    {
+      "curriculum_topic_id": 2468,
+      "label": "O texto e seu funcionamento",
+      "program_source": {
+        "document_id": 148,
+        "page": 3
+      },
+      "selected_course_practice": {
+        "question_id": 2790,
+        "question_slug": "vu2027-simulado-presencial-q54",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 54,
+        "source_document_id": 335,
+        "source_page": 15,
+        "selection_note": "Unicamp 2027 · QT · questão 54. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 342,
+          "slug": "vu-2026-qx-q54",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 343,
+          "slug": "vu-2026-qx-q55",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 344,
+          "slug": "vu-2026-qx-q56",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 346,
+          "slug": "vu-2026-qx-q58",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 347,
+          "slug": "vu-2026-qx-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 374,
+          "slug": "vu-2026-ry-q14",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 375,
+          "slug": "vu-2026-ry-q15",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 376,
+          "slug": "vu-2026-ry-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 378,
+          "slug": "vu-2026-ry-q18",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 379,
+          "slug": "vu-2026-ry-q19",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 433,
+          "slug": "vu-2026-sz-q01",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 434,
+          "slug": "vu-2026-sz-q02",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 435,
+          "slug": "vu-2026-sz-q03",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 437,
+          "slug": "vu-2026-sz-q05",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 438,
+          "slug": "vu-2026-sz-q06",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 524,
+          "slug": "vu-2026-tw-q20",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 525,
+          "slug": "vu-2026-tw-q21",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 526,
+          "slug": "vu-2026-tw-q22",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 528,
+          "slug": "vu-2026-tw-q24",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 529,
+          "slug": "vu-2026-tw-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2790,
+          "slug": "vu2027-simulado-presencial-q54",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2791,
+          "slug": "vu2027-simulado-presencial-q55",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2793,
+          "slug": "vu2027-simulado-presencial-q57",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2794,
+          "slug": "vu2027-simulado-presencial-q58",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2795,
+          "slug": "vu2027-simulado-presencial-q59",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2469,
+      "label": "Processos de significação",
+      "program_source": {
+        "document_id": 148,
+        "page": 3
+      },
+      "selected_course_practice": {
+        "question_id": 2791,
+        "question_slug": "vu2027-simulado-presencial-q55",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 55,
+        "source_document_id": 335,
+        "source_page": 16,
+        "selection_note": "Unicamp 2027 · QT · questão 55. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 342,
+          "slug": "vu-2026-qx-q54",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 343,
+          "slug": "vu-2026-qx-q55",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 344,
+          "slug": "vu-2026-qx-q56",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 346,
+          "slug": "vu-2026-qx-q58",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 347,
+          "slug": "vu-2026-qx-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 374,
+          "slug": "vu-2026-ry-q14",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 375,
+          "slug": "vu-2026-ry-q15",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 376,
+          "slug": "vu-2026-ry-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 378,
+          "slug": "vu-2026-ry-q18",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 379,
+          "slug": "vu-2026-ry-q19",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 433,
+          "slug": "vu-2026-sz-q01",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 434,
+          "slug": "vu-2026-sz-q02",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 435,
+          "slug": "vu-2026-sz-q03",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 437,
+          "slug": "vu-2026-sz-q05",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 438,
+          "slug": "vu-2026-sz-q06",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 524,
+          "slug": "vu-2026-tw-q20",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 525,
+          "slug": "vu-2026-tw-q21",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 526,
+          "slug": "vu-2026-tw-q22",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 528,
+          "slug": "vu-2026-tw-q24",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 529,
+          "slug": "vu-2026-tw-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2790,
+          "slug": "vu2027-simulado-presencial-q54",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2791,
+          "slug": "vu2027-simulado-presencial-q55",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2793,
+          "slug": "vu2027-simulado-presencial-q57",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2794,
+          "slug": "vu2027-simulado-presencial-q58",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2795,
+          "slug": "vu2027-simulado-presencial-q59",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2470,
+      "label": "Funcionamento social da língua",
+      "program_source": {
+        "document_id": 148,
+        "page": 3
+      },
+      "selected_course_practice": {
+        "question_id": 2793,
+        "question_slug": "vu2027-simulado-presencial-q57",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 57,
+        "source_document_id": 335,
+        "source_page": 17,
+        "selection_note": "Unicamp 2027 · QT · questão 57. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 342,
+          "slug": "vu-2026-qx-q54",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 343,
+          "slug": "vu-2026-qx-q55",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 344,
+          "slug": "vu-2026-qx-q56",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 346,
+          "slug": "vu-2026-qx-q58",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 347,
+          "slug": "vu-2026-qx-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 374,
+          "slug": "vu-2026-ry-q14",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 375,
+          "slug": "vu-2026-ry-q15",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 376,
+          "slug": "vu-2026-ry-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 378,
+          "slug": "vu-2026-ry-q18",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 379,
+          "slug": "vu-2026-ry-q19",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 433,
+          "slug": "vu-2026-sz-q01",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 434,
+          "slug": "vu-2026-sz-q02",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 435,
+          "slug": "vu-2026-sz-q03",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 437,
+          "slug": "vu-2026-sz-q05",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 438,
+          "slug": "vu-2026-sz-q06",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 524,
+          "slug": "vu-2026-tw-q20",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 525,
+          "slug": "vu-2026-tw-q21",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 526,
+          "slug": "vu-2026-tw-q22",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 528,
+          "slug": "vu-2026-tw-q24",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 529,
+          "slug": "vu-2026-tw-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2790,
+          "slug": "vu2027-simulado-presencial-q54",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2791,
+          "slug": "vu2027-simulado-presencial-q55",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2793,
+          "slug": "vu2027-simulado-presencial-q57",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2794,
+          "slug": "vu2027-simulado-presencial-q58",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2795,
+          "slug": "vu2027-simulado-presencial-q59",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2471,
+      "label": "Sintaxe da língua portuguesa",
+      "program_source": {
+        "document_id": 148,
+        "page": 3
+      },
+      "selected_course_practice": {
+        "question_id": 345,
+        "question_slug": "vu-2026-qx-q57",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 57,
+        "source_document_id": 44,
+        "source_page": 21,
+        "selection_note": "Unicamp 2026 · QX · questão 57. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 345,
+          "slug": "vu-2026-qx-q57",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 377,
+          "slug": "vu-2026-ry-q17",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 436,
+          "slug": "vu-2026-sz-q04",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 527,
+          "slug": "vu-2026-tw-q23",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2472,
+      "label": "Morfologia da língua portuguesa",
+      "program_source": {
+        "document_id": 148,
+        "page": 4
+      },
+      "selected_course_practice": {
+        "question_id": 2792,
+        "question_slug": "vu2027-simulado-presencial-q56",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 56,
+        "source_document_id": 335,
+        "source_page": 16,
+        "selection_note": "Unicamp 2027 · QT · questão 56. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 885,
+          "slug": "unicamp-2023-qz-q06",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 952,
+          "slug": "unicamp-2023-ry-q58",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 1029,
+          "slug": "unicamp-2023-sx-q06",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 1094,
+          "slug": "unicamp-2023-tw-q22",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2792,
+          "slug": "vu2027-simulado-presencial-q56",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2473,
+      "label": "Elementos de fonologia da língua portuguesa",
+      "program_source": {
+        "document_id": 148,
+        "page": 4
+      },
+      "selected_course_practice": {
+        "question_id": 342,
+        "question_slug": "vu-2026-qx-q54",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 54,
+        "source_document_id": 44,
+        "source_page": 20,
+        "selection_note": "Unicamp 2026 · QX · questão 54. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 342,
+          "slug": "vu-2026-qx-q54",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 374,
+          "slug": "vu-2026-ry-q14",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 433,
+          "slug": "vu-2026-sz-q01",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 524,
+          "slug": "vu-2026-tw-q20",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "program_source": {
+        "document_id": 148,
+        "page": 4
+      },
+      "selected_course_practice": {
+        "question_id": 2799,
+        "question_slug": "vu2027-simulado-presencial-q63",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 63,
+        "source_document_id": 335,
+        "source_page": 18,
+        "selection_note": "Unicamp 2027 · QT · questão 63. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 41,
+          "slug": "vu-2025-qz-q41",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 348,
+          "slug": "vu-2026-qx-q60",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 349,
+          "slug": "vu-2026-qx-q61",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 350,
+          "slug": "vu-2026-qx-q62",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 351,
+          "slug": "vu-2026-qx-q63",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 352,
+          "slug": "vu-2026-qx-q64",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 353,
+          "slug": "vu-2026-qx-q65",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 380,
+          "slug": "vu-2026-ry-q20",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 381,
+          "slug": "vu-2026-ry-q21",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 382,
+          "slug": "vu-2026-ry-q22",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 383,
+          "slug": "vu-2026-ry-q23",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 384,
+          "slug": "vu-2026-ry-q24",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 385,
+          "slug": "vu-2026-ry-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 439,
+          "slug": "vu-2026-sz-q07",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 440,
+          "slug": "vu-2026-sz-q08",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 441,
+          "slug": "vu-2026-sz-q09",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 442,
+          "slug": "vu-2026-sz-q10",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 443,
+          "slug": "vu-2026-sz-q11",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 444,
+          "slug": "vu-2026-sz-q12",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 530,
+          "slug": "vu-2026-tw-q26",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 531,
+          "slug": "vu-2026-tw-q27",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 532,
+          "slug": "vu-2026-tw-q28",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 533,
+          "slug": "vu-2026-tw-q29",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 534,
+          "slug": "vu-2026-tw-q30",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 535,
+          "slug": "vu-2026-tw-q31",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2796,
+          "slug": "vu2027-simulado-presencial-q60",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2797,
+          "slug": "vu2027-simulado-presencial-q61",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2798,
+          "slug": "vu2027-simulado-presencial-q62",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2799,
+          "slug": "vu2027-simulado-presencial-q63",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2800,
+          "slug": "vu2027-simulado-presencial-q64",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2801,
+          "slug": "vu2027-simulado-presencial-q65",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "label": "Conjuntos numéricos",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 339,
+        "question_slug": "vu-2026-qx-q51",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 51,
+        "source_document_id": 44,
+        "source_page": 19,
+        "selection_note": "Unicamp 2026 · QX · questão 51. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 339,
+          "slug": "vu-2026-qx-q51",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2778,
+          "slug": "vu2027-simulado-presencial-q42",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2784,
+          "slug": "vu2027-simulado-presencial-q48",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2786,
+          "slug": "vu2027-simulado-presencial-q50",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2787,
+          "slug": "vu2027-simulado-presencial-q51",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "label": "Funções",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 2789,
+        "question_slug": "vu2027-simulado-presencial-q53",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 53,
+        "source_document_id": 335,
+        "source_page": 15,
+        "selection_note": "Unicamp 2027 · QT · questão 53. Associação editorial aprovada; responder não implica domínio. Seleção editorial: Composição de funções; é prática mais direta do tópico Funções do que a questão de logaritmos selecionada antes."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 331,
+          "slug": "vu-2026-qx-q43",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 332,
+          "slug": "vu-2026-qx-q44",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 336,
+          "slug": "vu-2026-qx-q48",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 401,
+          "slug": "vu-2026-ry-q41",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 460,
+          "slug": "vu-2026-sz-q28",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 513,
+          "slug": "vu-2026-tw-q09",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2779,
+          "slug": "vu2027-simulado-presencial-q43",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2789,
+          "slug": "vu2027-simulado-presencial-q53",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2477,
+      "label": "Polinômios, equações e inequações",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 2783,
+        "question_slug": "vu2027-simulado-presencial-q47",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 47,
+        "source_document_id": 335,
+        "source_page": 14,
+        "selection_note": "Unicamp 2027 · QT · questão 47. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 331,
+          "slug": "vu-2026-qx-q43",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 332,
+          "slug": "vu-2026-qx-q44",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 336,
+          "slug": "vu-2026-qx-q48",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 401,
+          "slug": "vu-2026-ry-q41",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 460,
+          "slug": "vu-2026-sz-q28",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 513,
+          "slug": "vu-2026-tw-q09",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2779,
+          "slug": "vu2027-simulado-presencial-q43",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2783,
+          "slug": "vu2027-simulado-presencial-q47",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2786,
+          "slug": "vu2027-simulado-presencial-q50",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2788,
+          "slug": "vu2027-simulado-presencial-q52",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2789,
+          "slug": "vu2027-simulado-presencial-q53",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2478,
+      "label": "Princípios de contagem e probabilidade",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 2780,
+        "question_slug": "vu2027-simulado-presencial-q44",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 44,
+        "source_document_id": 335,
+        "source_page": 14,
+        "selection_note": "Unicamp 2027 · QT · questão 44. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 337,
+          "slug": "vu-2026-qx-q49",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 407,
+          "slug": "vu-2026-ry-q47",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 466,
+          "slug": "vu-2026-sz-q34",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 519,
+          "slug": "vu-2026-tw-q15",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2780,
+          "slug": "vu2027-simulado-presencial-q44",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2479,
+      "label": "Sistemas lineares e matrizes",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 2787,
+        "question_slug": "vu2027-simulado-presencial-q51",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 51,
+        "source_document_id": 335,
+        "source_page": 15,
+        "selection_note": "Unicamp 2027 · QT · questão 51. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 2778,
+          "slug": "vu2027-simulado-presencial-q42",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2784,
+          "slug": "vu2027-simulado-presencial-q48",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2786,
+          "slug": "vu2027-simulado-presencial-q50",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2787,
+          "slug": "vu2027-simulado-presencial-q51",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2480,
+      "label": "Geometria plana",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 2781,
+        "question_slug": "vu2027-simulado-presencial-q45",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 45,
+        "source_document_id": 335,
+        "source_page": 14,
+        "selection_note": "Unicamp 2027 · QT · questão 45. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 2781,
+          "slug": "vu2027-simulado-presencial-q45",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2782,
+          "slug": "vu2027-simulado-presencial-q46",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2785,
+          "slug": "vu2027-simulado-presencial-q49",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "label": "Geometria espacial",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 2785,
+        "question_slug": "vu2027-simulado-presencial-q49",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 49,
+        "source_document_id": 335,
+        "source_page": 15,
+        "selection_note": "Unicamp 2027 · QT · questão 49. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 2781,
+          "slug": "vu2027-simulado-presencial-q45",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2782,
+          "slug": "vu2027-simulado-presencial-q46",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2785,
+          "slug": "vu2027-simulado-presencial-q49",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2482,
+      "label": "Trigonometria",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 338,
+        "question_slug": "vu-2026-qx-q50",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 50,
+        "source_document_id": 44,
+        "source_page": 19,
+        "selection_note": "Unicamp 2026 · QX · questão 50. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 338,
+          "slug": "vu-2026-qx-q50",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 408,
+          "slug": "vu-2026-ry-q48",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 467,
+          "slug": "vu-2026-sz-q35",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 520,
+          "slug": "vu-2026-tw-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2781,
+          "slug": "vu2027-simulado-presencial-q45",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2782,
+          "slug": "vu2027-simulado-presencial-q46",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2785,
+          "slug": "vu2027-simulado-presencial-q49",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2483,
+      "label": "Geometria analítica",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 334,
+        "question_slug": "vu-2026-qx-q46",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 46,
+        "source_document_id": 44,
+        "source_page": 18,
+        "selection_note": "Unicamp 2026 · QX · questão 46. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 334,
+          "slug": "vu-2026-qx-q46",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 404,
+          "slug": "vu-2026-ry-q44",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 463,
+          "slug": "vu-2026-sz-q31",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 516,
+          "slug": "vu-2026-tw-q12",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2781,
+          "slug": "vu2027-simulado-presencial-q45",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2782,
+          "slug": "vu2027-simulado-presencial-q46",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2785,
+          "slug": "vu2027-simulado-presencial-q49",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "label": "Logaritmos e exponenciais",
+      "program_source": {
+        "document_id": 148,
+        "page": 6
+      },
+      "selected_course_practice": {
+        "question_id": 2779,
+        "question_slug": "vu2027-simulado-presencial-q43",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 43,
+        "source_document_id": 335,
+        "source_page": 14,
+        "selection_note": "Unicamp 2027 · QT · questão 43. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão calcula um logaritmo de uma sequência exponencial; corresponde diretamente ao tópico Logaritmos e exponenciais."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 331,
+          "slug": "vu-2026-qx-q43",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 332,
+          "slug": "vu-2026-qx-q44",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 336,
+          "slug": "vu-2026-qx-q48",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 401,
+          "slug": "vu-2026-ry-q41",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 460,
+          "slug": "vu-2026-sz-q28",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 513,
+          "slug": "vu-2026-tw-q09",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2779,
+          "slug": "vu2027-simulado-presencial-q43",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2789,
+          "slug": "vu2027-simulado-presencial-q53",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2485,
+      "label": "Conceitos fundamentais da Geografia",
+      "program_source": {
+        "document_id": 148,
+        "page": 6
+      },
+      "selected_course_practice": {
+        "question_id": 304,
+        "question_slug": "vu-2026-qx-q16",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 16,
+        "source_document_id": 44,
+        "source_page": 7,
+        "selection_note": "Unicamp 2026 · QX · questão 16. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A leitura da divisão Norte/Sul Global no mapa aborda regionalização e conceitos geográficos com aderência maior que a questão puramente cartográfica escolhida antes."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 1,
+          "slug": "vu-2025-qz-q01",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 304,
+          "slug": "vu-2026-qx-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 427,
+          "slug": "vu-2026-ry-q67",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 486,
+          "slug": "vu-2026-sz-q54",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 571,
+          "slug": "vu-2026-tw-q67",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2751,
+          "slug": "vu2027-simulado-presencial-q15",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2486,
+      "label": "Linguagem cartográfica e geotecnologias",
+      "program_source": {
+        "document_id": 148,
+        "page": 6
+      },
+      "selected_course_practice": {
+        "question_id": 2754,
+        "question_slug": "vu2027-simulado-presencial-q18",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 18,
+        "source_document_id": 335,
+        "source_page": 7,
+        "selection_note": "Unicamp 2027 · QT · questão 18. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 304,
+          "slug": "vu-2026-qx-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 335,
+          "slug": "vu-2026-qx-q47",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2754,
+          "slug": "vu2027-simulado-presencial-q18",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "label": "Componentes físico-naturais do espaço geográfico",
+      "program_source": {
+        "document_id": 148,
+        "page": 6
+      },
+      "selected_course_practice": {
+        "question_id": 2751,
+        "question_slug": "vu2027-simulado-presencial-q15",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 15,
+        "source_document_id": 335,
+        "source_page": 6,
+        "selection_note": "Unicamp 2027 · QT · questão 15. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 2751,
+          "slug": "vu2027-simulado-presencial-q15",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2752,
+          "slug": "vu2027-simulado-presencial-q16",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2753,
+          "slug": "vu2027-simulado-presencial-q17",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2756,
+          "slug": "vu2027-simulado-presencial-q20",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2488,
+      "label": "Globalização, economia e trabalho",
+      "program_source": {
+        "document_id": 148,
+        "page": 7
+      },
+      "selected_course_practice": {
+        "question_id": 303,
+        "question_slug": "vu-2026-qx-q15",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 15,
+        "source_document_id": 44,
+        "source_page": 6,
+        "selection_note": "Unicamp 2026 · QX · questão 15. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão articula sistemas alimentares, produtos ultraprocessados globalizados e fluxos mundiais de produção e consumo; é mais específica para Globalização, economia e trabalho do que a questão sobre adesão à OTAN."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 3,
+          "slug": "vu-2025-qz-q03",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 303,
+          "slug": "vu-2026-qx-q15",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 304,
+          "slug": "vu-2026-qx-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 306,
+          "slug": "vu-2026-qx-q18",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 307,
+          "slug": "vu-2026-qx-q19",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 308,
+          "slug": "vu-2026-qx-q20",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 309,
+          "slug": "vu-2026-qx-q21",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 431,
+          "slug": "vu-2026-ry-q71",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 490,
+          "slug": "vu-2026-sz-q58",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 575,
+          "slug": "vu-2026-tw-q71",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2755,
+          "slug": "vu2027-simulado-presencial-q19",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2757,
+          "slug": "vu2027-simulado-presencial-q21",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "label": "Brasil: dinâmica territorial",
+      "program_source": {
+        "document_id": 148,
+        "page": 7
+      },
+      "selected_course_practice": {
+        "question_id": 308,
+        "question_slug": "vu-2026-qx-q20",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 20,
+        "source_document_id": 44,
+        "source_page": 9,
+        "selection_note": "Unicamp 2026 · QX · questão 20. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão trata de políticas territoriais e circuitos produtivos na Bahia; é mais diretamente ligada à dinâmica territorial brasileira que a questão genérica escolhida antes."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 304,
+          "slug": "vu-2026-qx-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 306,
+          "slug": "vu-2026-qx-q18",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 307,
+          "slug": "vu-2026-qx-q19",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 308,
+          "slug": "vu-2026-qx-q20",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 309,
+          "slug": "vu-2026-qx-q21",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2755,
+          "slug": "vu2027-simulado-presencial-q19",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2757,
+          "slug": "vu2027-simulado-presencial-q21",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2490,
+      "label": "Antiguidade clássica e período medieval",
+      "program_source": {
+        "document_id": 148,
+        "page": 8
+      },
+      "selected_course_practice": {
+        "question_id": 2764,
+        "question_slug": "vu2027-simulado-presencial-q28",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 28,
+        "source_document_id": 335,
+        "source_page": 10,
+        "selection_note": "Unicamp 2027 · QT · questão 28. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 317,
+          "slug": "vu-2026-qx-q29",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2764,
+          "slug": "vu2027-simulado-presencial-q28",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2766,
+          "slug": "vu2027-simulado-presencial-q30",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2767,
+          "slug": "vu2027-simulado-presencial-q31",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2770,
+          "slug": "vu2027-simulado-presencial-q34",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2491,
+      "label": "Período moderno",
+      "program_source": {
+        "document_id": 148,
+        "page": 8
+      },
+      "selected_course_practice": {
+        "question_id": 2765,
+        "question_slug": "vu2027-simulado-presencial-q29",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 29,
+        "source_document_id": 335,
+        "source_page": 10,
+        "selection_note": "Unicamp 2027 · QT · questão 29. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 316,
+          "slug": "vu-2026-qx-q28",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 317,
+          "slug": "vu-2026-qx-q29",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 319,
+          "slug": "vu-2026-qx-q31",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 321,
+          "slug": "vu-2026-qx-q33",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 367,
+          "slug": "vu-2026-ry-q07",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 370,
+          "slug": "vu-2026-ry-q10",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 498,
+          "slug": "vu-2026-sz-q66",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 501,
+          "slug": "vu-2026-sz-q69",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 549,
+          "slug": "vu-2026-tw-q45",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 552,
+          "slug": "vu-2026-tw-q48",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2764,
+          "slug": "vu2027-simulado-presencial-q28",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2765,
+          "slug": "vu2027-simulado-presencial-q29",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2766,
+          "slug": "vu2027-simulado-presencial-q30",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2767,
+          "slug": "vu2027-simulado-presencial-q31",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2768,
+          "slug": "vu2027-simulado-presencial-q32",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2769,
+          "slug": "vu2027-simulado-presencial-q33",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2770,
+          "slug": "vu2027-simulado-presencial-q34",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2492,
+      "label": "Período contemporâneo e história do tempo presente",
+      "program_source": {
+        "document_id": 148,
+        "page": 8
+      },
+      "selected_course_practice": {
+        "question_id": 2768,
+        "question_slug": "vu2027-simulado-presencial-q32",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 32,
+        "source_document_id": 335,
+        "source_page": 11,
+        "selection_note": "Unicamp 2027 · QT · questão 32. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 316,
+          "slug": "vu-2026-qx-q28",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 319,
+          "slug": "vu-2026-qx-q31",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 320,
+          "slug": "vu-2026-qx-q32",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 321,
+          "slug": "vu-2026-qx-q33",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 367,
+          "slug": "vu-2026-ry-q07",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 370,
+          "slug": "vu-2026-ry-q10",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 371,
+          "slug": "vu-2026-ry-q11",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 498,
+          "slug": "vu-2026-sz-q66",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 501,
+          "slug": "vu-2026-sz-q69",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 502,
+          "slug": "vu-2026-sz-q70",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 549,
+          "slug": "vu-2026-tw-q45",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 552,
+          "slug": "vu-2026-tw-q48",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 553,
+          "slug": "vu-2026-tw-q49",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2765,
+          "slug": "vu2027-simulado-presencial-q29",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2768,
+          "slug": "vu2027-simulado-presencial-q32",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2769,
+          "slug": "vu2027-simulado-presencial-q33",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2770,
+          "slug": "vu2027-simulado-presencial-q34",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2493,
+      "label": "Conceitos fundamentais e dimensões sociais",
+      "program_source": {
+        "document_id": 148,
+        "page": 9
+      },
+      "selected_course_practice": {
+        "question_id": 2758,
+        "question_slug": "vu2027-simulado-presencial-q22",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 22,
+        "source_document_id": 335,
+        "source_page": 8,
+        "selection_note": "Unicamp 2027 · QT · questão 22. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 310,
+          "slug": "vu-2026-qx-q22",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 311,
+          "slug": "vu-2026-qx-q23",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 312,
+          "slug": "vu-2026-qx-q24",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 313,
+          "slug": "vu-2026-qx-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 343,
+          "slug": "vu-2026-qx-q55",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 344,
+          "slug": "vu-2026-qx-q56",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 350,
+          "slug": "vu-2026-qx-q62",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 362,
+          "slug": "vu-2026-ry-q02",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 364,
+          "slug": "vu-2026-ry-q04",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 375,
+          "slug": "vu-2026-ry-q15",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 376,
+          "slug": "vu-2026-ry-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 382,
+          "slug": "vu-2026-ry-q22",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 434,
+          "slug": "vu-2026-sz-q02",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 435,
+          "slug": "vu-2026-sz-q03",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 441,
+          "slug": "vu-2026-sz-q09",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 493,
+          "slug": "vu-2026-sz-q61",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 495,
+          "slug": "vu-2026-sz-q63",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 525,
+          "slug": "vu-2026-tw-q21",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 526,
+          "slug": "vu-2026-tw-q22",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 532,
+          "slug": "vu-2026-tw-q28",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 544,
+          "slug": "vu-2026-tw-q40",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 546,
+          "slug": "vu-2026-tw-q42",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2758,
+          "slug": "vu2027-simulado-presencial-q22",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2759,
+          "slug": "vu2027-simulado-presencial-q23",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2760,
+          "slug": "vu2027-simulado-presencial-q24",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2494,
+      "label": "Ética e política",
+      "program_source": {
+        "document_id": 148,
+        "page": 10
+      },
+      "selected_course_practice": {
+        "question_id": 2761,
+        "question_slug": "vu2027-simulado-presencial-q25",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 25,
+        "source_document_id": 335,
+        "source_page": 9,
+        "selection_note": "Unicamp 2027 · QT · questão 25. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 313,
+          "slug": "vu-2026-qx-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 314,
+          "slug": "vu-2026-qx-q26",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 315,
+          "slug": "vu-2026-qx-q27",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 318,
+          "slug": "vu-2026-qx-q30",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 364,
+          "slug": "vu-2026-ry-q04",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 365,
+          "slug": "vu-2026-ry-q05",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 495,
+          "slug": "vu-2026-sz-q63",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 496,
+          "slug": "vu-2026-sz-q64",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 546,
+          "slug": "vu-2026-tw-q42",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 547,
+          "slug": "vu-2026-tw-q43",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2761,
+          "slug": "vu2027-simulado-presencial-q25",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2762,
+          "slug": "vu2027-simulado-presencial-q26",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2763,
+          "slug": "vu2027-simulado-presencial-q27",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2495,
+      "label": "Leitura crítica em língua inglesa",
+      "program_source": {
+        "document_id": 148,
+        "page": 10
+      },
+      "selected_course_practice": {
+        "question_id": 2737,
+        "question_slug": "vu2027-simulado-presencial-q01",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 1,
+        "source_document_id": 335,
+        "source_page": 3,
+        "selection_note": "Unicamp 2027 · QT · questão 1. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 289,
+          "slug": "vu-2026-qx-q01",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 290,
+          "slug": "vu-2026-qx-q02",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 291,
+          "slug": "vu-2026-qx-q03",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 292,
+          "slug": "vu-2026-qx-q04",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 293,
+          "slug": "vu-2026-qx-q05",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 294,
+          "slug": "vu-2026-qx-q06",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 295,
+          "slug": "vu-2026-qx-q07",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 412,
+          "slug": "vu-2026-ry-q52",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 413,
+          "slug": "vu-2026-ry-q53",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 415,
+          "slug": "vu-2026-ry-q55",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 416,
+          "slug": "vu-2026-ry-q56",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 417,
+          "slug": "vu-2026-ry-q57",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 471,
+          "slug": "vu-2026-sz-q39",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 472,
+          "slug": "vu-2026-sz-q40",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 474,
+          "slug": "vu-2026-sz-q42",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 475,
+          "slug": "vu-2026-sz-q43",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 476,
+          "slug": "vu-2026-sz-q44",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 556,
+          "slug": "vu-2026-tw-q52",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 557,
+          "slug": "vu-2026-tw-q53",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 559,
+          "slug": "vu-2026-tw-q55",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 560,
+          "slug": "vu-2026-tw-q56",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 561,
+          "slug": "vu-2026-tw-q57",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2737,
+          "slug": "vu2027-simulado-presencial-q01",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2738,
+          "slug": "vu2027-simulado-presencial-q02",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2739,
+          "slug": "vu2027-simulado-presencial-q03",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2740,
+          "slug": "vu2027-simulado-presencial-q04",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2741,
+          "slug": "vu2027-simulado-presencial-q05",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2742,
+          "slug": "vu2027-simulado-presencial-q06",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2743,
+          "slug": "vu2027-simulado-presencial-q07",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2496,
+      "label": "Bases moleculares e celulares da vida",
+      "program_source": {
+        "document_id": 148,
+        "page": 11
+      },
+      "selected_course_practice": {
+        "question_id": 2772,
+        "question_slug": "vu2027-simulado-presencial-q36",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 36,
+        "source_document_id": 335,
+        "source_page": 12,
+        "selection_note": "Unicamp 2027 · QT · questão 36. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 68,
+          "slug": "vu-2025-qz-q68",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 69,
+          "slug": "vu-2025-qz-q69",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 71,
+          "slug": "vu-2025-qz-q71",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 328,
+          "slug": "vu-2026-qx-q40",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 398,
+          "slug": "vu-2026-ry-q38",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 457,
+          "slug": "vu-2026-sz-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 510,
+          "slug": "vu-2026-tw-q06",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2771,
+          "slug": "vu2027-simulado-presencial-q35",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2772,
+          "slug": "vu2027-simulado-presencial-q36",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2773,
+          "slug": "vu2027-simulado-presencial-q37",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2774,
+          "slug": "vu2027-simulado-presencial-q38",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2777,
+          "slug": "vu2027-simulado-presencial-q41",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2497,
+      "label": "Hereditariedade",
+      "program_source": {
+        "document_id": 148,
+        "page": 11
+      },
+      "selected_course_practice": {
+        "question_id": 2775,
+        "question_slug": "vu2027-simulado-presencial-q39",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 39,
+        "source_document_id": 335,
+        "source_page": 13,
+        "selection_note": "Unicamp 2027 · QT · questão 39. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 67,
+          "slug": "vu-2025-qz-q67",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 70,
+          "slug": "vu-2025-qz-q70",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 325,
+          "slug": "vu-2026-qx-q37",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 329,
+          "slug": "vu-2026-qx-q41",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2775,
+          "slug": "vu2027-simulado-presencial-q39",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2776,
+          "slug": "vu2027-simulado-presencial-q40",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2498,
+      "label": "Origem e evolução da vida",
+      "program_source": {
+        "document_id": 148,
+        "page": 11
+      },
+      "selected_course_practice": {
+        "question_id": 2776,
+        "question_slug": "vu2027-simulado-presencial-q40",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 40,
+        "source_document_id": 335,
+        "source_page": 13,
+        "selection_note": "Unicamp 2027 · QT · questão 40. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 67,
+          "slug": "vu-2025-qz-q67",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 70,
+          "slug": "vu-2025-qz-q70",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 325,
+          "slug": "vu-2026-qx-q37",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 329,
+          "slug": "vu-2026-qx-q41",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2775,
+          "slug": "vu2027-simulado-presencial-q39",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2776,
+          "slug": "vu2027-simulado-presencial-q40",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2499,
+      "label": "O ambiente e a vida",
+      "program_source": {
+        "document_id": 148,
+        "page": 11
+      },
+      "selected_course_practice": {
+        "question_id": 2774,
+        "question_slug": "vu2027-simulado-presencial-q38",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 38,
+        "source_document_id": 335,
+        "source_page": 13,
+        "selection_note": "Unicamp 2027 · QT · questão 38. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 66,
+          "slug": "vu-2025-qz-q66",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 69,
+          "slug": "vu-2025-qz-q69",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 305,
+          "slug": "vu-2026-qx-q17",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 327,
+          "slug": "vu-2026-qx-q39",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2774,
+          "slug": "vu2027-simulado-presencial-q38",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "label": "Biodiversidade e saúde humana",
+      "program_source": {
+        "document_id": 148,
+        "page": 12
+      },
+      "selected_course_practice": {
+        "question_id": 328,
+        "question_slug": "vu-2026-qx-q40",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 40,
+        "source_document_id": 44,
+        "source_page": 16,
+        "selection_note": "Unicamp 2026 · QX · questão 40. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 68,
+          "slug": "vu-2025-qz-q68",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 69,
+          "slug": "vu-2025-qz-q69",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 70,
+          "slug": "vu-2025-qz-q70",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 71,
+          "slug": "vu-2025-qz-q71",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 327,
+          "slug": "vu-2026-qx-q39",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 328,
+          "slug": "vu-2026-qx-q40",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 398,
+          "slug": "vu-2026-ry-q38",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 457,
+          "slug": "vu-2026-sz-q25",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 510,
+          "slug": "vu-2026-tw-q06",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2771,
+          "slug": "vu2027-simulado-presencial-q35",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2772,
+          "slug": "vu2027-simulado-presencial-q36",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2773,
+          "slug": "vu2027-simulado-presencial-q37",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2774,
+          "slug": "vu2027-simulado-presencial-q38",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2777,
+          "slug": "vu2027-simulado-presencial-q41",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "label": "Fundamentos da Física e Mecânica",
+      "program_source": {
+        "document_id": 148,
+        "page": 12
+      },
+      "selected_course_practice": {
+        "question_id": 2744,
+        "question_slug": "vu2027-simulado-presencial-q08",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 8,
+        "source_document_id": 335,
+        "source_page": 4,
+        "selection_note": "Unicamp 2027 · QT · questão 8. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 299,
+          "slug": "vu-2026-qx-q11",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 301,
+          "slug": "vu-2026-qx-q13",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 302,
+          "slug": "vu-2026-qx-q14",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 422,
+          "slug": "vu-2026-ry-q62",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 425,
+          "slug": "vu-2026-ry-q65",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 481,
+          "slug": "vu-2026-sz-q49",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 484,
+          "slug": "vu-2026-sz-q52",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 566,
+          "slug": "vu-2026-tw-q62",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 569,
+          "slug": "vu-2026-tw-q65",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2744,
+          "slug": "vu2027-simulado-presencial-q08",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2746,
+          "slug": "vu2027-simulado-presencial-q10",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2747,
+          "slug": "vu2027-simulado-presencial-q11",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2502,
+      "label": "Astronomia",
+      "program_source": {
+        "document_id": 148,
+        "page": 12
+      },
+      "selected_course_practice": {
+        "question_id": 926,
+        "question_slug": "unicamp-2023-qz-q34",
+        "year": 2023,
+        "paper_code": "QZ",
+        "number": 34,
+        "source_document_id": 65,
+        "source_page": 13,
+        "selection_note": "Unicamp 2023 · QZ · questão 34. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 10,
+          "slug": "vu-2025-qz-q10",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 296,
+          "slug": "vu-2026-qx-q08",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 300,
+          "slug": "vu-2026-qx-q12",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 419,
+          "slug": "vu-2026-ry-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 478,
+          "slug": "vu-2026-sz-q46",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 563,
+          "slug": "vu-2026-tw-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 926,
+          "slug": "unicamp-2023-qz-q34",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 989,
+          "slug": "unicamp-2023-ry-q14",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 1070,
+          "slug": "unicamp-2023-sx-q34",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 1144,
+          "slug": "unicamp-2023-tw-q70",
+          "source_years": [
+            2023
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2745,
+          "slug": "vu2027-simulado-presencial-q09",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2748,
+          "slug": "vu2027-simulado-presencial-q12",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2749,
+          "slug": "vu2027-simulado-presencial-q13",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2503,
+      "label": "Calorimetria e termodinâmica",
+      "program_source": {
+        "document_id": 148,
+        "page": 12
+      },
+      "selected_course_practice": {
+        "question_id": 2745,
+        "question_slug": "vu2027-simulado-presencial-q09",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 9,
+        "source_document_id": 335,
+        "source_page": 5,
+        "selection_note": "Unicamp 2027 · QT · questão 9. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 296,
+          "slug": "vu-2026-qx-q08",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 300,
+          "slug": "vu-2026-qx-q12",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 419,
+          "slug": "vu-2026-ry-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 478,
+          "slug": "vu-2026-sz-q46",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 563,
+          "slug": "vu-2026-tw-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2745,
+          "slug": "vu2027-simulado-presencial-q09",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2748,
+          "slug": "vu2027-simulado-presencial-q12",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2749,
+          "slug": "vu2027-simulado-presencial-q13",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "label": "Óptica e ondas",
+      "program_source": {
+        "document_id": 148,
+        "page": 13
+      },
+      "selected_course_practice": {
+        "question_id": 2748,
+        "question_slug": "vu2027-simulado-presencial-q12",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 12,
+        "source_document_id": 335,
+        "source_page": 5,
+        "selection_note": "Unicamp 2027 · QT · questão 12. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 296,
+          "slug": "vu-2026-qx-q08",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 300,
+          "slug": "vu-2026-qx-q12",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 419,
+          "slug": "vu-2026-ry-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 478,
+          "slug": "vu-2026-sz-q46",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 563,
+          "slug": "vu-2026-tw-q59",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2745,
+          "slug": "vu2027-simulado-presencial-q09",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2748,
+          "slug": "vu2027-simulado-presencial-q12",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2749,
+          "slug": "vu2027-simulado-presencial-q13",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2505,
+      "label": "Eletricidade e magnetismo",
+      "program_source": {
+        "document_id": 148,
+        "page": 13
+      },
+      "selected_course_practice": {
+        "question_id": 2750,
+        "question_slug": "vu2027-simulado-presencial-q14",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 14,
+        "source_document_id": 335,
+        "source_page": 5,
+        "selection_note": "Unicamp 2027 · QT · questão 14. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 297,
+          "slug": "vu-2026-qx-q09",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 298,
+          "slug": "vu-2026-qx-q10",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 420,
+          "slug": "vu-2026-ry-q60",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 479,
+          "slug": "vu-2026-sz-q47",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 564,
+          "slug": "vu-2026-tw-q60",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2750,
+          "slug": "vu2027-simulado-presencial-q14",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "label": "Materiais, gases, líquidos e sólidos",
+      "program_source": {
+        "document_id": 148,
+        "page": 14
+      },
+      "selected_course_practice": {
+        "question_id": 359,
+        "question_slug": "vu-2026-qx-q71",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 71,
+        "source_document_id": 44,
+        "source_page": 26,
+        "selection_note": "Unicamp 2026 · QX · questão 71. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 359,
+          "slug": "vu-2026-qx-q71",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2749,
+          "slug": "vu2027-simulado-presencial-q13",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "label": "Estrutura atômica, classificação periódica e ligação química",
+      "program_source": {
+        "document_id": 148,
+        "page": 14
+      },
+      "selected_course_practice": {
+        "question_id": 2803,
+        "question_slug": "vu2027-simulado-presencial-q67",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 67,
+        "source_document_id": 335,
+        "source_page": 19,
+        "selection_note": "Unicamp 2027 · QT · questão 67. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 64,
+          "slug": "vu-2025-qz-q64",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2803,
+          "slug": "vu2027-simulado-presencial-q67",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2508,
+      "label": "Transformações dos materiais e estequiometria",
+      "program_source": {
+        "document_id": 148,
+        "page": 14
+      },
+      "selected_course_practice": {
+        "question_id": 2805,
+        "question_slug": "vu2027-simulado-presencial-q69",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 69,
+        "source_document_id": 335,
+        "source_page": 20,
+        "selection_note": "Unicamp 2027 · QT · questão 69. Associação editorial aprovada; responder não implica domínio. Seleção editorial: A questão exige cálculo estequiométrico dos produtos da combustão da glicose; é prática mais direta de estequiometria que a questão qualitativa escolhida antes."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 63,
+          "slug": "vu-2025-qz-q63",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 357,
+          "slug": "vu-2026-qx-q69",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 358,
+          "slug": "vu-2026-qx-q70",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 360,
+          "slug": "vu-2026-qx-q72",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 389,
+          "slug": "vu-2026-ry-q29",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 390,
+          "slug": "vu-2026-ry-q30",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 448,
+          "slug": "vu-2026-sz-q16",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 449,
+          "slug": "vu-2026-sz-q17",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 539,
+          "slug": "vu-2026-tw-q35",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 540,
+          "slug": "vu-2026-tw-q36",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2802,
+          "slug": "vu2027-simulado-presencial-q66",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2803,
+          "slug": "vu2027-simulado-presencial-q67",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2805,
+          "slug": "vu2027-simulado-presencial-q69",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2806,
+          "slug": "vu2027-simulado-presencial-q70",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2808,
+          "slug": "vu2027-simulado-presencial-q72",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2509,
+      "label": "Cinética, energia e equilíbrio químico",
+      "program_source": {
+        "document_id": 148,
+        "page": 14
+      },
+      "selected_course_practice": {
+        "question_id": 355,
+        "question_slug": "vu-2026-qx-q67",
+        "year": 2026,
+        "paper_code": "QX",
+        "number": 67,
+        "source_document_id": 44,
+        "source_page": 25,
+        "selection_note": "Unicamp 2026 · QX · questão 67. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 355,
+          "slug": "vu-2026-qx-q67",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 387,
+          "slug": "vu-2026-ry-q27",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 446,
+          "slug": "vu-2026-sz-q14",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 537,
+          "slug": "vu-2026-tw-q33",
+          "source_years": [
+            2026
+          ],
+          "published_occurrences": 1
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "label": "Eletroquímica e compostos orgânicos",
+      "program_source": {
+        "document_id": 148,
+        "page": 14
+      },
+      "selected_course_practice": {
+        "question_id": 2807,
+        "question_slug": "vu2027-simulado-presencial-q71",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 71,
+        "source_document_id": 335,
+        "source_page": 21,
+        "selection_note": "Unicamp 2027 · QT · questão 71. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 62,
+          "slug": "vu-2025-qz-q62",
+          "source_years": [
+            2025
+          ],
+          "published_occurrences": 1
+        },
+        {
+          "question_id": 2807,
+          "slug": "vu2027-simulado-presencial-q71",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    },
+    {
+      "curriculum_topic_id": 2511,
+      "label": "Interpretação e elaboração de tabelas e gráficos",
+      "program_source": {
+        "document_id": 148,
+        "page": 5
+      },
+      "selected_course_practice": {
+        "question_id": 2784,
+        "question_slug": "vu2027-simulado-presencial-q48",
+        "year": 2027,
+        "paper_code": "QT",
+        "number": 48,
+        "source_document_id": 335,
+        "source_page": 14,
+        "selection_note": "Unicamp 2027 · QT · questão 48. Associação editorial aprovada; responder não implica domínio."
+      },
+      "approved_question_records": [
+        {
+          "question_id": 2784,
+          "slug": "vu2027-simulado-presencial-q48",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        },
+        {
+          "question_id": 2804,
+          "slug": "vu2027-simulado-presencial-q68",
+          "source_years": [
+            2027
+          ],
+          "published_occurrences": 2
+        }
+      ],
+      "has_at_least_one_usable_question": true
+    }
+  ]
+}

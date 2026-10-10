@@ -10,7 +10,7 @@ export interface ResponsiveGridTracks {
 const mediumMinimumColumns = { compact: 2, comfortable: 1 } as const;
 
 export function getResponsiveGridTracks(
-  columns: UIGridProps["columns"],
+  columns: number | undefined,
   minItemWidth: UIGridProps["minItemWidth"],
 ): string | ResponsiveGridTracks {
   const maxColumns = Math.min(columns ?? 2, 2);

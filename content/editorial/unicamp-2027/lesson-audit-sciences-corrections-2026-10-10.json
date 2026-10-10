@@ -1,0 +1,465 @@
+{
+  "format": "lesson-post-review-corrections/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "primeira fase",
+    "purpose": "Correções pós-segunda revisão, em review até validação independente."
+  },
+  "source_document_ids": [
+    148
+  ],
+  "independent_review": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+  "decisions": [
+    {
+      "curriculum_topic_id": 2496,
+      "official_label": "Bases moleculares e celulares da vida",
+      "decision": "revise",
+      "current_version": "1.3.0",
+      "proposed_version": "1.3.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "A célula contém água, íons e moléculas orgânicas. Carboidratos podem fornecer energia e compor estruturas; lipídios formam membranas e armazenam energia; proteínas atuam como enzimas, transportadores e componentes estruturais; DNA e RNA participam do armazenamento e da expressão da informação. Enzimas aceleram reações ao reduzir a energia de ativação, sem serem consumidas na reação. ATP transfere energia utilizável entre processos celulares; respiração celular converte energia química de moléculas orgânicas em ATP, enquanto a fotossíntese armazena energia luminosa em moléculas orgânicas. Membranas regulam trocas. Procariotos não têm núcleo delimitado por membrana; eucariotos têm núcleo e organelas. Mitocôndrias e cloroplastos têm evidências de origem endossimbiótica. Mitose conserva, em geral, o número cromossômico; meiose o reduz e contribui para variabilidade. Células-tronco combinam autorrenovação e potencial de diferenciação variável.\n\n**Erros comuns**\n\nNão confunda energia com matéria: ATP transfere energia química, não é uma “bateria” que cria energia. Enzimas não alteram o equilíbrio final de uma reação. Nem toda célula tem núcleo ou mitocôndria. DNA duplicado aumenta a quantidade de DNA antes da divisão, mas não duplica imediatamente o número de cromossomos contado por centrômeros.\n\nRibossomos sintetizam proteínas; retículo rugoso participa da síntese/transporte de proteínas e o liso da síntese de lipídios e desintoxicação; Golgi modifica e direciona moléculas; lisossomos fazem digestão; vacúolos armazenam substâncias e ajudam no equilíbrio osmótico vegetal. Parede de celulose e cloroplastos ocorrem em células vegetais; células animais não têm parede nem cloroplastos. Água é solvente e participa de reações; íons contribuem para equilíbrio osmótico e processos celulares.",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Uma célula muscular consome glicose e oxigênio na respiração celular e transfere parte da energia química para ATP; a energia restante é dissipada como calor. Se uma enzima mitocondrial for inibida, a produção de ATP por essa via pode diminuir, mas a célula pode recorrer parcialmente a outras vias. Na divisão mitótica de uma célula 2n=6, após replicação há seis cromossomos duplicados; na separação, cada célula-filha recebe seis cromossomos. O primeiro caso conecta metabolismo e função; o segundo separa número de cromossomos e quantidade de DNA.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Relacione biomolécula à função, acompanhe matéria e transferência de energia, conecte organelas em sistemas e compare mitose/meiose por número cromossômico e resultado. Autochecagem: qual molécula transfere energia entre reações celulares? ATP. Uma enzima é consumida? Não. Uma célula 2n=6 após mitose mantém quantos cromossomos em cada filha? Seis, em condições usuais.",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2499,
+      "official_label": "O ambiente e a vida",
+      "decision": "revise",
+      "current_version": "1.2.0",
+      "proposed_version": "1.2.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Conceito e pontos de atenção",
+          "content": "Ecossistema reúne organismos e componentes físicos em interação; energia flui principalmente da luz capturada por produtores a consumidores e decompositores, enquanto matéria circula em ciclos. Relações ecológicas podem envolver competição, predação, mutualismo e parasitismo. Biomas são grandes conjuntos de ecossistemas associados a condições climáticas e comunidades características, com variação interna e transições. Desmatamento, fragmentação, poluição, espécies invasoras e mudança climática afetam processos de modos diferentes. Conservação pode combinar áreas protegidas, restauração, corredores ecológicos, manejo sustentável e participação de comunidades; cada medida tem limites e precisa considerar escala e direitos.\n\n**Erros comuns**\n\nEnergia não é reciclada como matéria; cadeias alimentares são simplificações de redes. Bioma não é sinônimo de clima nem homogêneo. Conservação não significa sempre excluir moradores: práticas e direitos locais importam. Não atribua efeito ecológico a uma única causa sem evidência.\n\nDinâmica populacional acompanha tamanho, estrutura etária, natalidade, mortalidade, imigração e emigração; crescimento depende de recursos, interações e capacidade de suporte, que não é um limite fixo independente do ambiente. Comunidades mudam por competição, predação, mutualismo, sucessão e perturbações. Um problema contemporâneo como eutrofização pode resultar de excesso de nutrientes, provocar proliferação de algas e redução de oxigênio; saneamento, controle de efluentes e recuperação de margens são medidas possíveis cuja eficácia se mede por dados de água e biodiversidade.",
+          "content_format": "markdown"
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido",
+          "content": "Exemplo hipotético: antes de fertilizantes, nitrato 1 mg/L, oxigênio dissolvido 8 mg/L e sem floração intensa; depois, 5 mg/L, 3 mg/L e floração. Nutrientes favorecem algas e a decomposição consome oxigênio, padrão compatível com eutrofização. Não prova causalidade: verifique outras fontes, período, vazão e controles. Responda com mecanismo, indicador, limite inferencial e ação como reduzir nutrientes e monitorar água/biodiversidade.",
+          "content_format": "markdown"
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese",
+          "content": "Mapeie energia, ciclos de matéria, relações ecológicas e escala. Identifique ameaça, mecanismo, indicador de impacto e medida de conservação; trate biomas como sistemas heterogêneos.\n\nEm população, diferencie crescimento, densidade e distribuição; em comunidade, identifique interações e sucessão. Para um problema ambiental, descreva fonte, mecanismo, indicador, grupos afetados e medida de conservação, reconhecendo incerteza e escala.",
+          "content_format": "markdown"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "official_label": "Biodiversidade e saúde humana",
+      "decision": "revise",
+      "current_version": "1.3.0",
+      "proposed_version": "1.3.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "Biodiversidade inclui variação genética, diversidade de espécies e de ecossistemas. Classificação biológica organiza hipóteses de parentesco com características e evidências. Vírus não têm organização celular e dependem de células para replicar; bactérias são procariontes; protistas são eucariontes diversos; fungos absorvem nutrientes e têm parede com quitina; plantas e algas incluem linhagens fotossintéticas diversas; animais são heterotróficos por ingestão e incluem grupos com planos corporais distintos. Na saúde humana, células, órgãos e sistemas mantêm funções integradas. Concepção envolve encontro de gametas e desenvolvimento embrionário; hormônios participam do ciclo reprodutivo, com variação individual. Métodos contraceptivos atuam por mecanismos diferentes; preservativos também reduzem risco de muitas ISTs. Saúde coletiva depende de saneamento, água segura, vacinação, vigilância, serviços acessíveis e condições sociais. Doenças podem ser causadas por microrganismos ou transmitidas por vetores; agente, hospedeiro, via e ambiente orientam prevenção.\n\n**Erros comuns**\n\nAntibióticos não tratam vírus. “Protistas” e “algas” não são grupos evolutivos únicos e homogêneos. Não confunda contracepção com prevenção de todas as ISTs. Um vetor transmite um agente, mas não é necessariamente o agente causador. Biodiversidade ou mudança ambiental, isoladamente, não provam a causa de um surto.\n\nBactérias são procariontes; vírus só se replicam em células; protozoários são eucariontes unicelulares; fungos absorvem nutrientes; plantas e algas fotossintetizam em diferentes linhagens; animais ingerem alimento. FSH/LH regulam o ciclo ovariano; estrogênio e progesterona variam, e a fecundação pode ocorrer pelo encontro de espermatozoide e ovócito. Há métodos contraceptivos de barreira, hormonais e DIU; preservativos reduzem, sem eliminar, riscos de muitas ISTs.",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Uma pessoa é exposta a um vírus respiratório. O vírus precisa entrar em células para se replicar; ventilação reduz concentração de partículas no ar, vacinação pode reduzir risco de doença grave e, conforme o agente, transmissão, e serviço de saúde orienta diagnóstico e cuidado. A cadeia causal deve distinguir agente, via de transmissão, hospedeiro e fatores sociais. Em outro contexto, o preservativo funciona como barreira e reduz risco de muitas ISTs e gravidez, mas nenhum método deve ser descrito como proteção absoluta; o mecanismo específico importa.\n\nSe uma infecção viral se transmite por gotículas/aerossóis, antibiótico não age no vírus; ventilação reduz partículas, vacinação pode reduzir doença grave e preservativo não corresponde a essa via. Identifique agente, via e intervenção; diagnóstico e cuidado dependem de serviço de saúde.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Compare grupos por organização celular, nutrição e características; relacione sistema corporal à função; para reprodução, separe concepção, hormônios, contracepção e prevenção de IST; para saúde coletiva, identifique agente, via, condições e serviço de prevenção. Autochecagem: vírus é célula? Não. Preservativo atua como barreira e reduz, mas não zera, riscos de IST/gravidez; a resposta depende do método e do uso correto.",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "official_label": "Fundamentos da Física e Mecânica",
+      "decision": "revise",
+      "current_version": "1.3.0",
+      "proposed_version": "1.3.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "Uma medida física deve indicar valor e unidade; converta unidades antes de operar e confira dimensões. Grandezas escalares têm módulo; vetores também têm direção e sentido. Em gráficos posição-tempo, a inclinação representa velocidade; em velocidade-tempo, a área representa deslocamento. Cinemática descreve movimento: v_m=Δs/Δt e, sob aceleração constante, v=v₀+at e Δs=v₀t+at²/2. Dinâmica relaciona força resultante e aceleração, ΣF=ma; peso próximo à Terra é P=mg. Torque é força vezes braço perpendicular; equilíbrio exige ΣF=0 e Στ=0. Trabalho transfere energia; energia cinética é mv²/2, potencial gravitacional perto da superfície é mgh e elástica é kx²/2. Potência é trabalho por tempo. Impulso é variação de quantidade de movimento p=mv; p se conserva em sistema isolado. Gravitação universal varia com o inverso do quadrado da distância; em fluidos, p=p₀+ρgh e empuxo é o peso do fluido deslocado.\n\n**Erros comuns**\n\nNão some vetores apenas por seus módulos quando direções diferem. Inclinação e área de gráfico dependem dos eixos. Use equações de aceleração constante somente quando a hipótese vale. Ação e reação atuam em corpos distintos. Conservação mecânica não significa conservação de cada forma de energia; a energia total se conserva. Em hidrostática, use profundidade vertical e volume de fluido deslocado.\n\nQuantidade de movimento vetorial p=mv. Impulso J=∫Fdt=Δp; para força constante J=FΔt. Em duas dimensões, decomponha grandezas nos eixos; no lançamento horizontal ideal v_x é constante e a_y=−g.",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Um carrinho de 2 kg parte do repouso e percorre 9 m em 3 s com aceleração constante. De Δs=at²/2, a=2·9/9=2 m/s²; a velocidade final é v=at=6 m/s. Se a força resultante horizontal é 4 N, isso confirma ΣF=ma. A energia cinética final é ½·2·6²=36 J; o trabalho resultante também é 4·9=36 J, verificando o teorema trabalho–energia. Como estimativa, 6 m/s equivale a cerca de 22 km/h, ordem de grandeza plausível para um carrinho rápido. Em água, a 2 m de profundidade, Δp≈ρgh=1000·9,8·2=19,6 kPa.\n\nUma bola de 0,20 kg muda de +10 para −5 m/s em 0,10 s: Δp=0,20(−5−10)=−3,0 kg·m/s; F média=Δp/Δt=−30 N. O sinal indica sentido oposto ao eixo positivo; módulo 30 N.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Desenhe a situação, escolha referencial/eixos, registre dados com unidades e identifique hipóteses. Use gráficos e leis compatíveis; confira dimensões, sinais e conservação. Autochecagem: carrinho de 2 kg com resultante 4 N tem aceleração 2 m/s²; a 2 m em água, o acréscimo de pressão é aproximadamente 20 kPa.",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "official_label": "Óptica e ondas",
+      "decision": "revise",
+      "current_version": "1.2.0",
+      "proposed_version": "1.2.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Conceito e pontos de atenção",
+          "content": "Ondas transportam energia; v=λf relaciona velocidade, comprimento de onda e frequência. Refração muda velocidade e comprimento de onda, mas a frequência da fonte se mantém. Reflexão obedece ângulos iguais em relação à normal; difração é relevante quando abertura/obstáculo tem dimensão comparável ao comprimento de onda. Polarização seleciona direção de oscilação de onda transversal.\n\nNa passagem de meio mais refringente para menos refringente, acima do ângulo crítico ocorre reflexão interna total; abaixo dele há raio refratado. Dispersão separa componentes por dependência do índice com a frequência, como num prisma. Lentes convergentes/divergentes e espelhos formam imagens segundo posição do objeto; instrumentos como lupa, câmera e telescópio combinam elementos ópticos. O olho forma imagem na retina; alterações de foco podem ser corrigidas com lentes apropriadas.\n\n**Erros comuns**\n\nÂngulo de incidência é medido à normal, não à superfície. Reflexão total requer propagação do meio de maior índice para o menor. Não confunda dispersão com difração; raios são aproximação geométrica e não descrevem todos os efeitos ondulatórios.\n\nOndas em cordas dependem de tensão e densidade linear; ondas sonoras são mecânicas e longitudinais no ar. Fontes puntiformes podem gerar frentes aproximadamente esféricas. Interferência soma amplitudes: coerência e diferença de caminho definem reforço ou cancelamento. O espectro eletromagnético inclui rádio, micro-ondas, infravermelho, visível, ultravioleta, raios X e gama; todos propagam-se no vácuo à velocidade da luz, com frequências e energias distintas. A natureza ondulatória da luz aparece em interferência e difração.\n\nEspelhos esféricos côncavos/convexos formam imagens conforme posição do objeto; em aproximação paraxial, 1/f=1/p+1/p'. Sinais e natureza real/virtual dependem da convenção adotada. Instrumentos ópticos combinam espelhos/lentes e podem ampliar, inverter ou formar imagem real.",
+          "content_format": "markdown"
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido",
+          "content": "Uma fibra óptica mantém luz no núcleo quando o raio chega à interface núcleo-revestimento pelo meio de maior índice com ângulo acima do crítico; ocorre reflexão interna total sucessiva. Num prisma, diferentes comprimentos de onda sofrem refração distinta e se separam. Em uma lupa, objeto dentro da distância focal de lente convergente produz imagem virtual ampliada; no olho, a acomodação ajusta o foco para projetar imagem nítida na retina.\n\nDuas fontes sonoras coerentes em fase produzem reforço num ponto se a diferença de caminho for múltiplo inteiro de λ e cancelamento se for meio-inteiro ímpar, sob amplitudes comparáveis. Um eco é reflexão do som; uma antena recebe ondas de rádio, enquanto raios X têm frequência/energia muito maiores. Num espelho côncavo, objeto além do centro de curvatura gera imagem real invertida entre foco e centro, na aproximação geométrica.\n\nConvenção: objeto real p>0; lente convergente f>0; imagem real p′>0; m=−p′/p. Onda no ar: f=500 Hz, v=340 m/s, λ=0,68 m. Lente f=10 cm, p=30 cm: 1/p′=1/10−1/30=1/15 cm⁻¹, p′=15 cm. Imagem real, m=−0,5: invertida e metade da altura.",
+          "content_format": "markdown"
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese",
+          "content": "Use v=λf e acompanhe o que muda em cada meio. Desenhe a normal, verifique índices e ângulo crítico; diferencie reflexão, refração, difração, polarização e dispersão. Em instrumentos e visão, identifique lentes, posição do objeto e tipo de imagem.",
+          "content_format": "markdown"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2505,
+      "official_label": "Eletricidade e magnetismo",
+      "decision": "revise",
+      "current_version": "1.3.0",
+      "proposed_version": "1.3.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "Campo elétrico descreve força por carga de prova; potencial elétrico é energia potencial por carga, e diferença de potencial corresponde à energia transferida por carga. Em resistor ôhmico, V=RI. Em série, corrente é comum; em paralelo, tensão é comum. Leis de Kirchhoff expressam conservação: soma algébrica das correntes num nó é zero e soma das variações de potencial numa malha fechada é zero. Força eletromotriz caracteriza energia fornecida por unidade de carga por uma fonte; não é uma força mecânica. Capacitores armazenam carga e energia U=CV²/2. Em paralelo, capacitâncias somam; em série, somam-se os inversos. Dielétrico altera C; o efeito sobre Q e V depende de fonte conectada ou capacitor isolado. Correntes e ímãs produzem campos magnéticos; carga em movimento sofre força qv×B. Variação do fluxo magnético induz fem; pela lei de Lenz, o efeito se opõe à variação do fluxo.\n\n**Erros comuns**\n\nCorrente não é consumida; energia é transferida. Não confunda fem com força. Ao escrever Kirchhoff, escolha sentidos de corrente e percurso e mantenha sinais. Força magnética é nula se v é paralela a B. Indução requer mudança de fluxo, não apenas campo presente. Em capacitor com dielétrico, declare se a bateria permanece conectada.\n\nEm resistor ôhmico, P=VI=I²R=V²/R. Capacitores em paralelo: C_eq=ΣC_i; em série: 1/C_eq=Σ(1/C_i).",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Uma fonte ideal de 12 V alimenta dois resistores de 6 Ω em série. A resistência total é 12 Ω e a corrente é I=12/12=1 A. Percorrendo a malha: +12−6·1−6·1=0, como exige Kirchhoff; as quedas são 6 V cada. Um capacitor de 2 μF ligado a 12 V armazena Q=CV=24 μC e U=½CV²=144 μJ. Se for isolado e um dielétrico duplicar C, Q permanece 24 μC e V cai à metade; ligado à bateria, V permanece 12 V e Q dobra. Para uma carga positiva, a direção de qv×B pode ser obtida pela regra da mão direita; carga negativa inverte o sentido.\n\nDois capacitores 6 μF em série: C_eq=3 μF; a 12 V, Q=36 μC, cada um recebe 6 V e U=216 μJ. Dois resistores 6 Ω em paralelo a 12 V: 2 A por ramo, 4 A total, P=48 W.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Modele primeiro nós e componentes; escolha sentidos, aplique Ohm e Kirchhoff, confira a soma de quedas. Para capacitor, identifique associação e condição da fonte; para magnetismo, use direção de v, B e sinal de q; para indução, determine a variação do fluxo. Autochecagem: dois resistores de 6 Ω em série sob 12 V conduzem 1 A; capacitor 2 μF a 12 V tem Q=24 μC.",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "official_label": "Materiais, estados físicos e soluções",
+      "decision": "revise",
+      "current_version": "1.3.0",
+      "proposed_version": "1.3.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "Uma substância é identificada por propriedades características e composição; purificação pode usar filtração, destilação, cristalização ou cromatografia conforme tamanho, volatilidade, solubilidade e afinidade. Fórmulas representam átomos/íons/moléculas; quantidade de matéria n=m/M. Sólidos têm forma própria, líquidos escoam e gases são compressíveis; mudanças de estado dependem de temperatura e pressão. Pressão de vapor descreve equilíbrio entre vapor e líquido. Para quantidade fixa de gás ideal, PV=nRT; a volume constante P/T é constante, a pressão constante V/T é constante e, a temperatura constante, PV é constante. Em misturas ideais, p_i=x_iP. Difusão decorre do movimento molecular; gases reais desviam do modelo ideal e podem liquefazer por resfriamento/compressão. Soluções são misturas homogêneas; concentração pode ser mol/L, g/L, fração em massa/mol ou mol/kg. Eletrólitos formam íons móveis e conduzem em solução. Soluto não volátil pode reduzir pressão de vapor e alterar temperaturas de ebulição/congelamento. Coloides têm partículas dispersas que espalham luz sem se comportar como solução molecular simples.\n\n**Erros comuns**\n\nVolume final da solução não é necessariamente volume do solvente. Não misture concentração molar e molal. Pressão parcial usa fração molar, não fração em massa. O modelo ideal é aproximação. Filtração não remove sal dissolvido; decantação não separa líquidos miscíveis. Em mudanças de estado, pressão também importa.\n\nGás ideal, quantidade fixa: Boyle P₁V₁=P₂V₂ (T constante); Gay-Lussac P₁/T₁=P₂/T₂ (V constante); Charles V₁/T₁=V₂/T₂ (P constante). Avogadro: V/n constante a P,T constantes. Use kelvin; são limites do modelo ideal e gases reais podem liquefazer. Concentração pode ser g/L, porcentagem ou fração molar; coloides espalham luz; pressão de vapor corresponde ao equilíbrio líquido-vapor.",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Para separar areia e sal de uma mistura com água, primeiro filtre: a areia fica retida; o sal dissolvido atravessa. Depois destile ou evapore a água para recuperar sal, escolhendo destilação se também for necessário recolher o solvente. Para 5,85 g de NaCl (M≈58,5 g/mol) em volume final de 0,50 L, n=0,10 mol e concentração=0,20 mol/L. Uma mistura ideal com x_N2=0,75 e P_total=0,80 atm tem p_N2=0,60 atm. Cada passo usa uma propriedade diferente e unidades explícitas.\n\nA 300 K, 2 mol ocupam 10 L; a P,T constantes, 3 mol ocupam 10·3/2=15 L.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Identifique substância/fases e propriedade explorada; selecione técnica de separação; converta massa em mol por massa molar; declare qual concentração está calculando; use leis de gases apenas com as variáveis mantidas constantes indicadas. Autochecagem: 5,85 g de NaCl em 0,50 L correspondem a 0,20 mol/L; fração molar 0,75 em 0,80 atm dá pressão parcial 0,60 atm.",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "official_label": "Estrutura atômica e classificação periódica",
+      "decision": "revise",
+      "current_version": "1.1.0",
+      "proposed_version": "1.1.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "Número atômico Z é o número de prótons; número de massa A é prótons+nêutrons. Em átomo neutro, elétrons=Z; em íon, ajuste pela carga. Elétrons ocupam níveis/subníveis; a configuração eletrônica ajuda a identificar camada de valência e posição na tabela. Raio tende a crescer para baixo e para a esquerda; energia de ionização e eletronegatividade tendem a crescer para cima e para a direita, com exceções. Afinidade eletrônica descreve a variação de energia na adição de elétron e sua convenção de sinal deve ser explicitada. Isótopos têm mesmo Z e diferentes nêutrons. Núcleos instáveis emitem partículas/radiação; em decaimento alfa, A diminui 4 e Z diminui 2; em beta menos, A não muda e Z aumenta 1. Ligações iônicas formam redes de atração entre íons; covalentes compartilham pares; metálicas têm elétrons deslocalizados. Geometria determina se dipolos se cancelam; forças intermoleculares afetam propriedades.\n\n**Erros comuns**\n\nNão confunda A com Z nem altere Z numa emissão alfa como se fosse beta. Tendências periódicas admitem exceções. Molécula com ligações polares pode ser apolar por simetria. Ligação de hidrogênio exige doador apropriado e interação com par eletrônico; não é sinônimo de qualquer força entre moléculas polares.\n\nAufbau, Pauli e Hund orientam subníveis; Na (Z=11): 1s² 2s² 2p⁶ 3s¹. Afinidade eletrônica é variação de energia na adição de elétron a espécie gasosa; declare a convenção de sinal.",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Para ²³₁₁Na⁺, prótons=11, nêutrons=23−11=12 e elétrons=10. Em decaimento ²²²₈₆Rn→²⁰⁶₈₂Pb, a diferença de A é 16, portanto ocorrem quatro emissões alfa; elas reduzem Z de 86 para 78. Para chegar a 82, são necessárias quatro emissões beta menos, cada uma elevando Z em 1 sem alterar A. A equação global balanceada é ²²²₈₆Rn→²⁰⁶₈₂Pb+4 ⁴₂He+4 ⁰₋₁e, omitindo neutrinos e energia no esquema simplificado. Na água, as ligações O–H são polares, mas a molécula é polar por sua geometria angular; em CO₂ linear, os dipolos se cancelam.\n\nAmostra de 80 mg, meia-vida 6 h: após 12 h, 80(1/2)²=20 mg. Alfa: ΔA=−4, ΔZ=−2; beta menos: ΔA=0, ΔZ=+1; inclua antineutrino quando a equação completa o exigir.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Calcule prótons, nêutrons e elétrons com Z, A e carga; use configuração/tendências como padrões, não leis sem exceção; balanceie A e Z em decaimentos; diferencie ligação, polaridade molecular e interação intermolecular. Autochecagem: Rn-222→Pb-206 exige quatro alfa e quatro beta menos; Na⁺ de A=23 tem 10 elétrons.",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2509,
+      "official_label": "Cinética, energia e equilíbrio químico",
+      "decision": "revise",
+      "current_version": "1.3.0",
+      "proposed_version": "1.3.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "Velocidade de reação mede mudança de concentração por tempo. Colisões precisam de orientação/energia adequadas; temperatura, concentração, pressão em gases, superfície e catalisador podem alterar a velocidade conforme o mecanismo. Catalisador reduz a energia de ativação sem mudar ΔH nem K a temperatura fixa. Reações exotérmicas liberam calor (ΔH<0); endotérmicas absorvem (ΔH>0). A Lei de Hess soma etapas: ΔH global é a soma dos ΔH das etapas; pela energia de ligação, estima-se ΔH≈ligações rompidas−ligações formadas. Equilíbrio é dinâmico: velocidades direta/inversa iguais. K é calculada com atividades/concentrações de equilíbrio conforme a equação; Q indica a composição instantânea. Concentração, pressão e temperatura podem deslocar o equilíbrio; apenas temperatura muda K. Ácidos/bases podem ser descritos por Arrhenius, Brønsted ou Lewis. Sais podem hidrolisar; solubilidade compara Qsp a Ksp. Em soluções diluídas, pH≈−log[H₃O⁺].\n\n**Erros comuns**\n\nEquilíbrio não significa reação parada ou concentrações iguais. Catalisador não desloca equilíbrio. Não inverta o sinal de ΔH ao inverter reação sem explicar; na Lei de Hess, multiplique ΔH junto ao multiplicar a equação. Em Qsp/Ksp, escreva a dissociação e os expoentes. pH é logarítmico e a aproximação de concentração não vale sem condições compatíveis.",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Para uma reação, etapas A→B com ΔH=+40 kJ/mol e B→C com ΔH=−90 kJ/mol somam A→C com ΔH=−50 kJ/mol. Se a reação direta libera calor, aumentar T favorece o sentido endotérmico, isto é, o inverso. Para HCl 10⁻³ mol/L em solução diluída, pH≈3. Para um sal pouco solúvel cuja dissolução seja MX₂(s)⇌M²⁺+2X⁻, Qsp=[M²⁺][X⁻]²; se Qsp>Ksp, a solução está supersaturada e pode precipitar até retornar ao equilíbrio. Em sal de ácido fraco e base forte, o ânion pode aceitar próton da água, formando OH⁻; escreva a reação de hidrólise antes de prever pH.\n\nAcetato 0,10 mol/L a 25 °C: CH₃COO⁻+H₂O⇌CH₃COOH+OH⁻. K_b=K_w/K_a=1,0×10⁻¹⁴/1,8×10⁻⁵=5,6×10⁻¹⁰; [OH⁻]≈√(K_bC)=7,5×10⁻⁶, pOH=5,12, pH=8,88 (x≪C). Para N₂+3H₂⇌2NH₃, K_c=[NH₃]²/([N₂][H₂]³); Q<K favorece produtos, Q>K reagentes.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Separe cinética, entalpia e equilíbrio. Balanceie antes de usar Hess; identifique o sentido endotérmico; calcule K/Q com a estequiometria correta; declare o modelo ácido-base e escreva a hidrólise. Autochecagem: +40+(−90)=−50 kJ/mol; catalisador não muda K; para MX₂, Qsp=[M²⁺][X⁻]².",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "official_label": "Eletroquímica e química de compostos orgânicos",
+      "decision": "revise",
+      "current_version": "1.3.0",
+      "proposed_version": "1.3.1",
+      "proposed_status": "review",
+      "source_document_ids": [
+        148
+      ],
+      "rationale": "Correções da segunda revisão incorporadas às seções completas, preservando o conteúdo correto e mantendo review; sem publicação. Parecer: content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "detail": "Programa das Provas — Vestibular 2027."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+          "detail": "Segunda revisão independente; exact_correction incorporado."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "title": "Conceito e pontos de atenção",
+          "content": "Oxidação aumenta número de oxidação e libera elétrons; redução diminui N.O. e consome elétrons. Agente redutor doa elétrons e se oxida; agente oxidante recebe elétrons e se reduz. Em pilha espontânea, oxidação ocorre no ânodo e redução no cátodo; E°cel=E°red(cátodo)−E°red(ânodo). Eletrólise usa fonte externa; Q=It e a estequiometria eletrônica determina produto. Em solução aquosa, água pode competir nas semirreações; condições e eletrodos importam. Em orgânica, fórmula molecular informa contagem de átomos; estrutural mostra conectividade; Lewis mostra pares eletrônicos. Classifique cadeia (aberta/fechada, saturada/insaturada, ramificada) e função por grupo característico: hidrocarboneto, haleto, álcool, fenol, éter, aldeído, cetona, ácido, éster, amina ou amida. Nomenclatura depende da cadeia principal, insaturação, substituintes e função prioritária. Isômeros têm mesma fórmula molecular e estruturas diferentes. Carboidratos, lipídios, proteínas e enzimas têm funções distintas; polímeros são macromoléculas de unidades repetidas, naturais ou sintéticas. Estrutura e polaridade ajudam a prever propriedades, sem substituir dados experimentais.\n\n**Erros comuns**\n\nÂnodo é oxidação e cátodo redução em pilhas e eletrólise; o sinal dos eletrodos muda conforme o sistema. Não confunda agente oxidante com espécie oxidada. Não classifique função só pela fórmula molecular; localize a conectividade e o grupo. Polímero não é necessariamente plástico sintético. Enzimas aceleram reações específicas, mas não alteram o equilíbrio final.\n\nCH₃CH₂Cl: haleto; CH₃CH₂OH: álcool; CH₃OCH₃: éter; CH₃CHO: aldeído; CH₃COCH₃: cetona; CH₃COOH: ácido carboxílico; CH₃COOCH₂CH₃: éster; CH₃NH₂: amina; CH₃CONH₂: amida; C₆H₅OH: fenol.",
+          "content_format": "markdown",
+          "pedagogical_role": "formalization"
+        },
+        {
+          "type": "example",
+          "title": "Exemplo resolvido",
+          "content": "Na pilha Zn|Zn²⁺||Cu²⁺|Cu, Zn→Zn²⁺+2e⁻ é oxidação e Cu²⁺+2e⁻→Cu é redução; o zinco é agente redutor e Cu²⁺ agente oxidante. Com potenciais padrão +0,34 V para Cu²⁺/Cu e −0,76 V para Zn²⁺/Zn, E°cel=1,10 V. Em eletrólise, 2,0 A por 600 s fornecem Q=1200 C; n(e⁻)=Q/F≈0,0124 mol, então depositam 0,0062 mol de Cu, cerca de 0,39 g, a 100% de rendimento. Em CH₃CH₂OH, o grupo –OH ligado a carbono saturado identifica álcool; em CH₃COCH₃, carbonila interna identifica cetona. Propeno pode formar polipropileno por adição; a unidade repetitiva conserva os átomos do monômero, com abertura da ligação dupla.\n\nCH₂=CH₂ (C₂H₄) por adição forma n CH₂=CH₂→(–CH₂–CH₂–)ₙ, conservando átomos. CH₃COOCH₂CH₃ é éster, não ácido. Proteínas são polímeros de aminoácidos; enzimas são catalisadores, em geral proteínas; carboidratos/lipídios diferem em estrutura/função. Lewis H—Cl(:)(:)(:) mostra três pares livres no Cl; Lewis mostra ligações/pares, fórmula molecular apenas composição.",
+          "content_format": "markdown",
+          "pedagogical_role": "example"
+        },
+        {
+          "type": "summary",
+          "title": "Síntese",
+          "content": "Balanceie semirreações e conserve massa/carga; identifique quem doa/recebe elétrons e calcule Q antes de usar Faraday. Em orgânica, desenhe conectividade, identifique cadeia e função, depois nomeie e relacione estrutura/propriedade. Autochecagem: em Zn/Cu, Zn oxida e Cu²⁺ reduz; 1200 C depositam aproximadamente 0,39 g Cu sob as hipóteses do exemplo; CH₃COCH₃ é cetona, não aldeído.",
+          "content_format": "markdown",
+          "pedagogical_role": "review"
+        }
+      ]
+    }
+  ]
+}

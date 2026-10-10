@@ -1,0 +1,108 @@
+{
+  "format": "lesson-independent-final-review/v1",
+  "review_date": "2026-10-10",
+  "target_file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json",
+  "overall_decision": "reconcile_versions_and_revise_before_merge",
+  "automatic_approval": false,
+  "method": {
+    "scope": "Independent editorial review of the six proposed lesson updates, their theory/example/summary sections, self-checks and stated coverage boundaries.",
+    "official_program": "Visually checked the corresponding pages of the official 2027 program PDF, then compared the package's declared base and proposed versions with the current SQLite lesson rows and section text using read-only queries.",
+    "limits": "This is not approval for publication or a substitute for a specialist review of every cited literary interpretation. The package cannot be merged as-is because its base versions are stale and each proposed version is already present in SQLite with different section content."
+  },
+  "sources": [
+    {
+      "source_document_id": 148,
+      "title": "Programa Vestibular Unicamp 2027 — versão vigente consultada",
+      "path": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+      "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+      "pages_consulted": [4, 5, 6, 7, 8]
+    },
+    {
+      "title": "Machado de Assis, Memórias Póstumas de Brás Cubas, capítulo ‘Ao leitor’",
+      "url": "https://pt.wikisource.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas/1",
+      "use": "Cross-check of the literary example's description of the narrator's address to the reader; not treated as the official program source."
+    },
+    {
+      "title": "Current local SQLite content database (read only)",
+      "path": ".local/content/content.sqlite",
+      "sha256": "7465c04196461e4c9cd3629e5ffa246a78d326794940e36351f8961276d161aa"
+    }
+  ],
+  "database_reconciliation": {
+    "result": "blocking_version_content_collision",
+    "details": "For all six lesson IDs, the correction package declares a base version older than the current SQLite version. Its proposed version is already occupied by a current SQLite lesson row, and the proposed theory, example and summary text do not match the text stored for that version. All current SQLite rows inspected are in review status. Do not apply the package as an update or infer that the package text is already approved.",
+    "required_action": "Rebase each proposal against the actual SQLite content, decide which text is intended to survive, and assign a new unused version only after resolving the differences. Keep the rows in review until that reconciliation and editorial approval are complete."
+  },
+  "topic_decisions": [
+    {
+      "lesson_id": 2472,
+      "topic": "Morfologia: estrutura, formação e escolhas de palavras",
+      "decision": "revise_before_merge",
+      "editorial_assessment": "The proposed explanation and worked analysis are coherent for a bounded lesson on word structure, formation and expressive effect. The example correctly distinguishes the prefix in ‘reorganizar’ and discusses ‘jovens’ used with a substantivized-adjective analysis. No substantive morphology error was identified.",
+      "official_evidence": [{"source_document_id": 148, "pages": [4], "relevance": "The program calls for word structure and formation and for semantic/expressive effects associated with morphological classes."}],
+      "issues": [
+        "The term ‘adjetivo substantivado’ follows a traditional school-grammar analysis; retain the explicit qualification that this is the adopted terminology/framework, since analyses may describe the construction differently.",
+        "Merge is blocked by the package/SQLite version and content collision described above."
+      ],
+      "sqlite": {"package_base_version": "1.0.2", "package_proposed_version": "1.0.3", "current_version": "1.0.3", "current_status": "review", "proposed_section_text_matches_current_sqlite": false}
+    },
+    {
+      "lesson_id": 2474,
+      "topic": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "decision": "revise_before_merge",
+      "editorial_assessment": "The listed works and the description of the ‘Ao leitor’ example are consistent with the consulted official list and source text. The interpretive distinction between the narrator's framing and an author's direct statement is useful. However, the worked example does not yet demonstrate the program's requested connection between literary effects and social, moral or political dimensions; the package acknowledges that this connection requires further reading, so it is a transparent scope limitation rather than a false completeness claim.",
+      "official_evidence": [
+        {"source_document_id": 148, "pages": [4], "relevance": "Requires analytical/critical reading of literary texts and interpretation connected to social, moral and political dimensions."},
+        {"source_document_id": 148, "pages": [4, 5], "relevance": "The pages identify the required literary works and selections used to frame the lesson."}
+      ],
+      "issues": [
+        "Add a short, source-grounded worked reading that actually models a social/moral/political connection, or explicitly label this lesson as an introductory step and link the next lesson that supplies that analysis.",
+        "Merge is blocked by the package/SQLite version and content collision described above."
+      ],
+      "sqlite": {"package_base_version": "1.0.4", "package_proposed_version": "1.0.5", "current_version": "1.0.5", "current_status": "review", "proposed_section_text_matches_current_sqlite": false}
+    },
+    {
+      "lesson_id": 2475,
+      "topic": "Conjuntos numéricos",
+      "decision": "revise_before_merge",
+      "editorial_assessment": "The calculations and definitions checked are correct: union/intersection, MDC/MMC, divisor count and the supplied examples are internally consistent. The convention that natural numbers include zero and the proper-subset notation are stated. The coverage note appropriately routes sequences, percentages and interest to other steps instead of claiming this lesson is exhaustive.",
+      "official_evidence": [{"source_document_id": 148, "pages": [5, 6], "relevance": "The program includes sets/subsets and operations on natural, integer and real numbers, including divisibility, primes, factorization, divisors, MDC/MMC, modulus, inequalities and decimal representation; it separately lists sequences/progressions and financial mathematics."}],
+      "issues": ["No arithmetic or conceptual error was found in the checked material. Preserve its explicit scope boundary. Merge is blocked by the package/SQLite version and content collision described above."],
+      "sqlite": {"package_base_version": "1.2.1", "package_proposed_version": "1.2.2", "current_version": "1.2.2", "current_status": "review", "proposed_section_text_matches_current_sqlite": false}
+    },
+    {
+      "lesson_id": 2476,
+      "topic": "Funções",
+      "decision": "revise_before_merge",
+      "editorial_assessment": "The checked mathematics is correct: the radical/rational domain [1,2) ∪ (2,∞), quadratic roots and vertex, absolute-value piecewise form, horizontal versus vertical transformation, composition, and the need to restrict a quadratic domain before defining an inverse. The coverage note identifies trigonometric, inverse, rational and equation-family material as later steps, avoiding a claim of full coverage.",
+      "official_evidence": [{"source_document_id": 148, "pages": [5, 6, 7], "relevance": "The program lists affine/quadratic, inverse and direct variation, absolute value, trigonometric and inverse trigonometric functions, equations/inequalities, operations/composition, transformations, root and rational functions, and inverse functions."}],
+      "issues": ["No mathematical error was found in the checked examples. Keep the lesson marked as a bounded step, not complete coverage of the official function program. Merge is blocked by the package/SQLite version and content collision described above."],
+      "sqlite": {"package_base_version": "1.3.1", "package_proposed_version": "1.3.2", "current_version": "1.3.2", "current_status": "review", "proposed_section_text_matches_current_sqlite": false}
+    },
+    {
+      "lesson_id": 2481,
+      "topic": "Geometria espacial",
+      "decision": "revise_before_merge",
+      "editorial_assessment": "The checked prism/cylinder, pyramid/cone, sphere and cone-frustum formulas and all supplied numerical results are correct. The convention for parallelism is disclosed. The lesson's own coverage note appropriately says it does not cover every polyhedron and that nets/contextual problems require further practice.",
+      "official_evidence": [{"source_document_id": 148, "pages": [6], "relevance": "The program includes relative positions of lines/planes; polyhedra, prisms and pyramids; cylinders, cones and spheres; areas, volumes and frustums."}],
+      "issues": [
+        "For precision, consider defining a line perpendicular to a plane using perpendicularity to every line of the plane through the intersection (or the plane's normal direction), rather than only saying it forms 90° with ‘the directions of the plane.’ This is a clarity improvement, not a detected formula error.",
+        "Keep the stated boundary around polyhedra and contextual practice. Merge is blocked by the package/SQLite version and content collision described above."
+      ],
+      "sqlite": {"package_base_version": "1.2.1", "package_proposed_version": "1.2.2", "current_version": "1.2.2", "current_status": "review", "proposed_section_text_matches_current_sqlite": false}
+    },
+    {
+      "lesson_id": 2487,
+      "topic": "Componentes físico-naturais e suas interações",
+      "decision": "revise_before_merge",
+      "editorial_assessment": "The overview is coherent and correctly presents the physical-natural components as interacting systems. The water-balance example is arithmetically correct (2 km² × 0.05 m = 100,000 m³; 30% = 30,000 m³) and explicitly avoids claiming that all runoff reaches the outlet at once. The proposed package marks this as an overview and routes substantial subtopics to subsequent lessons.",
+      "official_evidence": [{"source_document_id": 148, "pages": [7, 8], "relevance": "The program includes lithosphere, hydrosphere, atmosphere and cryosphere interactions; tectonics and relief; soils; climate and Brazilian/South American climate; water cycle/basins/ocean; biomes/conservation; resources, risks/disasters, climate change and environmental planning."}],
+      "issues": [
+        "This overview does not itself teach the full official scope (including tectonics, climate classifications, biomes/hotspots, environmental risks and planning); preserve its introductory status and explicit roadmap, and do not mark the topic fully covered on this lesson alone.",
+        "Merge is blocked by the package/SQLite version and content collision described above."
+      ],
+      "sqlite": {"package_base_version": "1.2.1", "package_proposed_version": "1.2.2", "current_version": "1.2.2", "current_status": "review", "proposed_section_text_matches_current_sqlite": false}
+    }
+  ],
+  "final_note": "No topic is approved by this report. Five lesson contents appear sound as bounded steps, with stated scope limitations; literature needs a stronger worked link to a social/moral/political dimension. All six require version/content reconciliation before any merge because their proposed version numbers already exist in SQLite with different text."
+}

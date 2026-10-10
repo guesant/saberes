@@ -1,0 +1,1330 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 218
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "practice",
+        "editorial_note": "Prática complementar curta: três questões; Q2 ABO e Q3 haplodiploidia conferem. Q1 exige imagem de símbolos de heredograma sem descrição acessível suficiente. Não cobre o tópico completo; sinalizar limitação assistiva. Link-only, sem cópia."
+      },
+      "reason": "Revisão editorial direta: Prática complementar curta: três questões; Q2 ABO e Q3 haplodiploidia conferem. Q1 exige imagem de símbolos de heredograma sem descrição acessível suficiente. Não cobre o tópico completo; sinalizar limitação assistiva. Link-only, sem cópia.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-genetica.htm",
+          "detail": "A página tem três questões; as respostas de ABO e haplodiploidia são coerentes; Q1 depende da figura."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 218,
+        "topic_id": 2491,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Prática complementar curta: três questões; Q2 ABO e Q3 haplodiploidia conferem. Q1 exige imagem de símbolos de heredograma sem descrição acessível suficiente. Não cobre o tópico completo; sinalizar limitação assistiva. Link-only, sem cópia."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2491; Prática complementar curta: três questões; Q2 ABO e Q3 haplodiploidia conferem. Q1 exige imagem de símbolos de heredograma sem descrição acessível suficiente. Não cobre o tópico completo; sinalizar limitação assistiva. Link-only, sem cópia.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-genetica.htm",
+          "detail": "A página tem três questões; as respostas de ABO e haplodiploidia são coerentes; Q1 depende da figura."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 219
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "practice",
+        "editorial_note": "Prática complementar curta: quatro questões e resoluções coerentes sobre circuito, carga, consumo e indução. Q1 traz diagrama com texto alternativo genérico, embora a solução explique a topologia R1/R2 em série e ramo em paralelo com R3. Não é auditoria WCAG; link-only."
+      },
+      "reason": "Revisão editorial direta: Prática complementar curta: quatro questões e resoluções coerentes sobre circuito, carga, consumo e indução. Q1 traz diagrama com texto alternativo genérico, embora a solução explique a topologia R1/R2 em série e ramo em paralelo com R3. Não é auditoria WCAG; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-eletricidade.htm",
+          "detail": "Conteúdo contém quatro questões e solução explicita circuito e cálculo de 4 W; as outras cobrem carga, kWh e indução."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 219,
+        "topic_id": 2487,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Prática complementar curta: quatro questões e resoluções coerentes sobre circuito, carga, consumo e indução. Q1 traz diagrama com texto alternativo genérico, embora a solução explique a topologia R1/R2 em série e ramo em paralelo com R3. Não é auditoria WCAG; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2487; Prática complementar curta: quatro questões e resoluções coerentes sobre circuito, carga, consumo e indução. Q1 traz diagrama com texto alternativo genérico, embora a solução explique a topologia R1/R2 em série e ramo em paralelo com R3. Não é auditoria WCAG; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-eletricidade.htm",
+          "detail": "Conteúdo contém quatro questões e solução explicita circuito e cálculo de 4 W; as outras cobrem carga, kWh e indução."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 220
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "Somente consulta, não treino até errata na fonte. Q1(c) omite fases: só se pode classificá-la como homogênea sob hipótese de fase única. Q4 tem fórmula Kc fragmentada; para FeSO4(aq)+2NaOH(aq)⇌Na2SO4(aq)+Fe(OH)2(s), sólidos não entram e Kc=[Na2SO4]/([FeSO4][NaOH]^2). Q2–3 coerentes. URL original preservada; link-only."
+      },
+      "reason": "Revisão editorial direta: Somente consulta, não treino até errata na fonte. Q1(c) omite fases: só se pode classificá-la como homogênea sob hipótese de fase única. Q4 tem fórmula Kc fragmentada; para FeSO4(aq)+2NaOH(aq)⇌Na2SO4(aq)+Fe(OH)2(s), sólidos não entram e Kc=[Na2SO4]/([FeSO4][NaOH]^2). Q2–3 coerentes. URL original preservada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-equilibrios-homogeneos-heterogeneos.htm",
+          "detail": "A fonte mostra Q1(c) sem estados físicos e Q4 com fórmula ilegível; Q2 e Q3 têm gabaritos consistentes."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 220,
+        "topic_id": 2489,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Somente consulta, não treino até errata na fonte. Q1(c) omite fases: só se pode classificá-la como homogênea sob hipótese de fase única. Q4 tem fórmula Kc fragmentada; para FeSO4(aq)+2NaOH(aq)⇌Na2SO4(aq)+Fe(OH)2(s), sólidos não entram e Kc=[Na2SO4]/([FeSO4][NaOH]^2). Q2–3 coerentes. URL original preservada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2489; Somente consulta, não treino até errata na fonte. Q1(c) omite fases: só se pode classificá-la como homogênea sob hipótese de fase única. Q4 tem fórmula Kc fragmentada; para FeSO4(aq)+2NaOH(aq)⇌Na2SO4(aq)+Fe(OH)2(s), sólidos não entram e Kc=[Na2SO4]/([FeSO4][NaOH]^2). Q2–3 coerentes. URL original preservada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-equilibrios-homogeneos-heterogeneos.htm",
+          "detail": "A fonte mostra Q1(c) sem estados físicos e Q4 com fórmula ilegível; Q2 e Q3 têm gabaritos consistentes."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 223
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "Somente consulta, não treino até corrigir Q6. Errata: Cu não desloca H2 de H2SO4 diluído; ácido sulfúrico quente/concentrado oxida Cu a CuSO4, SO2 e água (Cu+2H2SO4→CuSO4+SO2+2H2O). Q6(j) deve balancear como 2AgBr→2Ag+Br2, não Br atômico. Q1–5 coerentes. Link-only; sem cópia."
+      },
+      "reason": "Revisão editorial direta: Somente consulta, não treino até corrigir Q6. Errata: Cu não desloca H2 de H2SO4 diluído; ácido sulfúrico quente/concentrado oxida Cu a CuSO4, SO2 e água (Cu+2H2SO4→CuSO4+SO2+2H2O). Q6(j) deve balancear como 2AgBr→2Ag+Br2, não Br atômico. Q1–5 coerentes. Link-only; sem cópia.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-tipos-reacoes-reacoes-no-cotidiano.htm",
+          "detail": "A página atribui produto H2 à reação Cu/H2SO4 e escreve Br como produto atômico; ambos requerem correção química."
+        },
+        {
+          "locator": "https://chem.libretexts.org/Bookshelves/General_Chemistry",
+          "detail": "Referência didática de química geral para série de reatividade, reação de metais com ácidos e balanceamento de produtos diatômicos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 223,
+        "topic_id": 2488,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Somente consulta, não treino até corrigir Q6. Errata: Cu não desloca H2 de H2SO4 diluído; ácido sulfúrico quente/concentrado oxida Cu a CuSO4, SO2 e água (Cu+2H2SO4→CuSO4+SO2+2H2O). Q6(j) deve balancear como 2AgBr→2Ag+Br2, não Br atômico. Q1–5 coerentes. Link-only; sem cópia."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2488; Somente consulta, não treino até corrigir Q6. Errata: Cu não desloca H2 de H2SO4 diluído; ácido sulfúrico quente/concentrado oxida Cu a CuSO4, SO2 e água (Cu+2H2SO4→CuSO4+SO2+2H2O). Q6(j) deve balancear como 2AgBr→2Ag+Br2, não Br atômico. Q1–5 coerentes. Link-only; sem cópia.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-tipos-reacoes-reacoes-no-cotidiano.htm",
+          "detail": "A página atribui produto H2 à reação Cu/H2SO4 e escreve Br como produto atômico; ambos requerem correção química."
+        },
+        {
+          "locator": "https://chem.libretexts.org/Bookshelves/General_Chemistry",
+          "detail": "Referência didática de química geral para série de reatividade, reação de metais com ácidos e balanceamento de produtos diatômicos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 224
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "practice",
+        "editorial_note": "Prática complementar de ética e filosofia política, não cobertura completa nem conteúdo Comvest. Lista contém questões de vestibulares/Enem com alternativas e justificativas; amostragem de preconceito, contratualismo, Maquiavel e Habermas é conceitualmente coerente. Evitar apresentar interpretações como únicas; acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Prática complementar de ética e filosofia política, não cobertura completa nem conteúdo Comvest. Lista contém questões de vestibulares/Enem com alternativas e justificativas; amostragem de preconceito, contratualismo, Maquiavel e Habermas é conceitualmente coerente. Evitar apresentar interpretações como únicas; acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-filosofia/enem-lista-de-exercicios-sobre-etica-e-filosofia-politica.htm",
+          "detail": "Enunciados e justificativas incluem preconceito, Hobbes/Locke, Maquiavel e Habermas; respostas amostradas correspondem aos conceitos discutidos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 224,
+        "topic_id": 2497,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Prática complementar de ética e filosofia política, não cobertura completa nem conteúdo Comvest. Lista contém questões de vestibulares/Enem com alternativas e justificativas; amostragem de preconceito, contratualismo, Maquiavel e Habermas é conceitualmente coerente. Evitar apresentar interpretações como únicas; acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2497; Prática complementar de ética e filosofia política, não cobertura completa nem conteúdo Comvest. Lista contém questões de vestibulares/Enem com alternativas e justificativas; amostragem de preconceito, contratualismo, Maquiavel e Habermas é conceitualmente coerente. Evitar apresentar interpretações como únicas; acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-filosofia/enem-lista-de-exercicios-sobre-etica-e-filosofia-politica.htm",
+          "detail": "Enunciados e justificativas incluem preconceito, Hobbes/Locke, Maquiavel e Habermas; respostas amostradas correspondem aos conceitos discutidos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 225
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "Somente consulta até corrigir Q1. Errata: em f(x)=ax²+bx+c, c=f(0), ordenada/intercepto em y, não intercepto em x. Gráfico sustenta c=9, mas a explicação publicada erra. Q2–4 coerentes; gráficos precisam de descrição equivalente. URL original preservada; link-only."
+      },
+      "reason": "Revisão editorial direta: Somente consulta até corrigir Q1. Errata: em f(x)=ax²+bx+c, c=f(0), ordenada/intercepto em y, não intercepto em x. Gráfico sustenta c=9, mas a explicação publicada erra. Q2–4 coerentes; gráficos precisam de descrição equivalente. URL original preservada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-grafico-funcao-segundo-grau.htm",
+          "detail": "A explicação de Q1 chama c de intercepto em x; substituindo x=0 resulta f(0)=c, ponto no eixo y."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 225,
+        "topic_id": 2479,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Somente consulta até corrigir Q1. Errata: em f(x)=ax²+bx+c, c=f(0), ordenada/intercepto em y, não intercepto em x. Gráfico sustenta c=9, mas a explicação publicada erra. Q2–4 coerentes; gráficos precisam de descrição equivalente. URL original preservada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2479; Somente consulta até corrigir Q1. Errata: em f(x)=ax²+bx+c, c=f(0), ordenada/intercepto em y, não intercepto em x. Gráfico sustenta c=9, mas a explicação publicada erra. Q2–4 coerentes; gráficos precisam de descrição equivalente. URL original preservada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-grafico-funcao-segundo-grau.htm",
+          "detail": "A explicação de Q1 chama c de intercepto em x; substituindo x=0 resulta f(0)=c, ponto no eixo y."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 227
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado somente como índice de descoberta de listas de História do Brasil por tema/período; não é aula, sequência, nem cobertura de capítulo. Abrir cada lista e conferir recorte/fonte. Acessibilidade da coleção não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado somente como índice de descoberta de listas de História do Brasil por tema/período; não é aula, sequência, nem cobertura de capítulo. Abrir cada lista e conferir recorte/fonte. Acessibilidade da coleção não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia-do-brasil",
+          "detail": "Índice oferece listas de períodos e temas da história brasileira; serve para localizar materiais, não para afirmar cobertura completa."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 227,
+        "topic_id": 2492,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado somente como índice de descoberta de listas de História do Brasil por tema/período; não é aula, sequência, nem cobertura de capítulo. Abrir cada lista e conferir recorte/fonte. Acessibilidade da coleção não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2492; Aprovado somente como índice de descoberta de listas de História do Brasil por tema/período; não é aula, sequência, nem cobertura de capítulo. Abrir cada lista e conferir recorte/fonte. Acessibilidade da coleção não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia-do-brasil",
+          "detail": "Índice oferece listas de períodos e temas da história brasileira; serve para localizar materiais, não para afirmar cobertura completa."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 228
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como hub de descoberta, não curso nem cobertura integral de Literaturas de Língua Portuguesa. Categoriza interpretação, gêneros, intertextualidade, movimentos, autores e obras. Avaliar cada lista individualmente; acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como hub de descoberta, não curso nem cobertura integral de Literaturas de Língua Portuguesa. Categoriza interpretação, gêneros, intertextualidade, movimentos, autores e obras. Avaliar cada lista individualmente; acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-literatura",
+          "detail": "Índice lista exercícios separados de interpretação, gêneros, intertextualidade, poesia, autores e movimentos literários."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 228,
+        "topic_id": 2470,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como hub de descoberta, não curso nem cobertura integral de Literaturas de Língua Portuguesa. Categoriza interpretação, gêneros, intertextualidade, movimentos, autores e obras. Avaliar cada lista individualmente; acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2470; Aprovado como hub de descoberta, não curso nem cobertura integral de Literaturas de Língua Portuguesa. Categoriza interpretação, gêneros, intertextualidade, movimentos, autores e obras. Avaliar cada lista individualmente; acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-literatura",
+          "detail": "Índice lista exercícios separados de interpretação, gêneros, intertextualidade, poesia, autores e movimentos literários."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 229
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "Somente consulta até errata: sete estímulos dependem de imagens sem transcrição completa; Q14 explica como ousadia uma leitura contestável de The Road Not Taken, cuja ambiguidade é documentada; Q15 informa 1932 para I, Too, mas Poetry Foundation situa o poema em 1926. Não usar como prática sem correção/aviso. Link-only."
+      },
+      "reason": "Revisão editorial direta: Somente consulta até errata: sete estímulos dependem de imagens sem transcrição completa; Q14 explica como ousadia uma leitura contestável de The Road Not Taken, cuja ambiguidade é documentada; Q15 informa 1932 para I, Too, mas Poetry Foundation situa o poema em 1926. Não usar como prática sem correção/aviso. Link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-ingles/enem-lista-de-exercicios-sobre-interpretacao-de-texto-em-ingles.htm",
+          "detail": "A lista contém estímulos visuais sem transcrição; Q14 força leitura de Frost e Q15 data I, Too em 1932."
+        },
+        {
+          "locator": "https://www.poetryfoundation.org/articles/89511/robert-frost-the-road-not-taken",
+          "detail": "A análise especializada registra que as duas estradas são descritas como igualmente percorridas e que a leitura do poema é ambígua; não sustenta a explicação categórica de ousadia."
+        },
+        {
+          "locator": "https://www.poetryfoundation.org/articles/88972/langston-hughes-101",
+          "detail": "Bibliografia da Poetry Foundation situa I, Too em 1926, no primeiro livro The Weary Blues."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 229,
+        "topic_id": 2496,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Somente consulta até errata: sete estímulos dependem de imagens sem transcrição completa; Q14 explica como ousadia uma leitura contestável de The Road Not Taken, cuja ambiguidade é documentada; Q15 informa 1932 para I, Too, mas Poetry Foundation situa o poema em 1926. Não usar como prática sem correção/aviso. Link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2496; Somente consulta até errata: sete estímulos dependem de imagens sem transcrição completa; Q14 explica como ousadia uma leitura contestável de The Road Not Taken, cuja ambiguidade é documentada; Q15 informa 1932 para I, Too, mas Poetry Foundation situa o poema em 1926. Não usar como prática sem correção/aviso. Link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-ingles/enem-lista-de-exercicios-sobre-interpretacao-de-texto-em-ingles.htm",
+          "detail": "A lista contém estímulos visuais sem transcrição; Q14 força leitura de Frost e Q15 data I, Too em 1932."
+        },
+        {
+          "locator": "https://www.poetryfoundation.org/articles/89511/robert-frost-the-road-not-taken",
+          "detail": "A análise especializada registra que as duas estradas são descritas como igualmente percorridas e que a leitura do poema é ambígua; não sustenta a explicação categórica de ousadia."
+        },
+        {
+          "locator": "https://www.poetryfoundation.org/articles/88972/langston-hughes-101",
+          "detail": "Bibliografia da Poetry Foundation situa I, Too em 1926, no primeiro livro The Weary Blues."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 230
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "practice",
+        "editorial_note": "Aprovado como prática introdutória de fenômenos, misturas, substâncias e soluções; não cobre todo o currículo de Química. Conferidas questões sobre fenômenos físicos/químicos, soro fisiológico e substância pura: gabaritos e explicações coerentes. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como prática introdutória de fenômenos, misturas, substâncias e soluções; não cobre todo o currículo de Química. Conferidas questões sobre fenômenos físicos/químicos, soro fisiológico e substância pura: gabaritos e explicações coerentes. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-conceitos-basicos-quimica.htm",
+          "detail": "Lista de 12 itens; questões de fenômenos, solução salina homogênea e fio de cobre como substância pura têm respostas explicadas coerentes."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 230,
+        "topic_id": 2472,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como prática introdutória de fenômenos, misturas, substâncias e soluções; não cobre todo o currículo de Química. Conferidas questões sobre fenômenos físicos/químicos, soro fisiológico e substância pura: gabaritos e explicações coerentes. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2472; Aprovado como prática introdutória de fenômenos, misturas, substâncias e soluções; não cobre todo o currículo de Química. Conferidas questões sobre fenômenos físicos/químicos, soro fisiológico e substância pura: gabaritos e explicações coerentes. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-conceitos-basicos-quimica.htm",
+          "detail": "Lista de 12 itens; questões de fenômenos, solução salina homogênea e fio de cobre como substância pura têm respostas explicadas coerentes."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 231
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como hub de descoberta de listas, não aula/trilha ou cobertura integral. Índice nomeia listas de desequilíbrios ambientais, especiação, relações ecológicas, seleção natural e outros assuntos; revisar cada lista individualmente. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como hub de descoberta de listas, não aula/trilha ou cobertura integral. Índice nomeia listas de desequilíbrios ambientais, especiação, relações ecológicas, seleção natural e outros assuntos; revisar cada lista individualmente. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia",
+          "detail": "Índice expõe listas de ecologia/evolução, inclusive desequilíbrios ambientais, especiação, relações ecológicas e seleção natural."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 231,
+        "topic_id": 2473,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como hub de descoberta de listas, não aula/trilha ou cobertura integral. Índice nomeia listas de desequilíbrios ambientais, especiação, relações ecológicas, seleção natural e outros assuntos; revisar cada lista individualmente. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2473; Aprovado como hub de descoberta de listas, não aula/trilha ou cobertura integral. Índice nomeia listas de desequilíbrios ambientais, especiação, relações ecológicas, seleção natural e outros assuntos; revisar cada lista individualmente. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia",
+          "detail": "Índice expõe listas de ecologia/evolução, inclusive desequilíbrios ambientais, especiação, relações ecológicas e seleção natural."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 232
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como índice de descoberta de listas, não curso completo. Organiza listas de eletricidade/circuitos, ondas/acústica, óptica e trabalho/energia; abrir e conferir cada lista. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como índice de descoberta de listas, não curso completo. Organiza listas de eletricidade/circuitos, ondas/acústica, óptica e trabalho/energia; abrir e conferir cada lista. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica",
+          "detail": "Índice oferece listas específicas de eletricidade, ondas, óptica e trabalho/energia."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 232,
+        "topic_id": 2471,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como índice de descoberta de listas, não curso completo. Organiza listas de eletricidade/circuitos, ondas/acústica, óptica e trabalho/energia; abrir e conferir cada lista. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2471; Aprovado como índice de descoberta de listas, não curso completo. Organiza listas de eletricidade/circuitos, ondas/acústica, óptica e trabalho/energia; abrir e conferir cada lista. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica",
+          "detail": "Índice oferece listas específicas de eletricidade, ondas, óptica e trabalho/energia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 233
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como hub de descoberta, não sequência de aprendizagem ou cobertura integral. Inclui listas separadas de matemática básica, raciocínio lógico e problemas, além de outros tópicos. Acessibilidade da coleção não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como hub de descoberta, não sequência de aprendizagem ou cobertura integral. Inclui listas separadas de matemática básica, raciocínio lógico e problemas, além de outros tópicos. Acessibilidade da coleção não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica",
+          "detail": "Índice lista conjuntos temáticos, entre eles matemática básica, raciocínio lógico e problemas matemáticos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 233,
+        "topic_id": 2468,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como hub de descoberta, não sequência de aprendizagem ou cobertura integral. Inclui listas separadas de matemática básica, raciocínio lógico e problemas, além de outros tópicos. Acessibilidade da coleção não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2468; Aprovado como hub de descoberta, não sequência de aprendizagem ou cobertura integral. Inclui listas separadas de matemática básica, raciocínio lógico e problemas, além de outros tópicos. Acessibilidade da coleção não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica",
+          "detail": "Índice lista conjuntos temáticos, entre eles matemática básica, raciocínio lógico e problemas matemáticos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 234
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "editorial_note": "Aprovado como texto introdutório sobre interpretação textual (não lista de exercícios, apesar do rótulo cadastrado). Aborda definição, compreensão de explícitos/implícitos, estratégias e exemplos. Não é curso completo; acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como texto introdutório sobre interpretação textual (não lista de exercícios, apesar do rótulo cadastrado). Aborda definição, compreensão de explícitos/implícitos, estratégias e exemplos. Não é curso completo; acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/redacao/a-interpretacao-textual.htm",
+          "detail": "Artigo apresenta definição, dicas, exemplos e tópicos de leitura; classifica-se melhor como material introdutório, não prática resolvida."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 234,
+        "topic_id": 2469,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como texto introdutório sobre interpretação textual (não lista de exercícios, apesar do rótulo cadastrado). Aborda definição, compreensão de explícitos/implícitos, estratégias e exemplos. Não é curso completo; acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2469; Aprovado como texto introdutório sobre interpretação textual (não lista de exercícios, apesar do rótulo cadastrado). Aborda definição, compreensão de explícitos/implícitos, estratégias e exemplos. Não é curso completo; acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/redacao/a-interpretacao-textual.htm",
+          "detail": "Artigo apresenta definição, dicas, exemplos e tópicos de leitura; classifica-se melhor como material introdutório, não prática resolvida."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 235
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como índice de descoberta de listas de História Geral/Brasil, não curso ou cobertura completa. Lista temas/períodos independentes, como mundo antigo e Segunda Guerra; conferir fontes, recorte e data de cada lista. Link-only; acessibilidade global não auditada."
+      },
+      "reason": "Revisão editorial direta: Aprovado como índice de descoberta de listas de História Geral/Brasil, não curso ou cobertura completa. Lista temas/períodos independentes, como mundo antigo e Segunda Guerra; conferir fontes, recorte e data de cada lista. Link-only; acessibilidade global não auditada.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia",
+          "detail": "Página organiza exercícios por temas e períodos históricos; identifica, por exemplo, mundo antigo e história da Segunda Guerra."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 235,
+        "topic_id": 2474,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como índice de descoberta de listas de História Geral/Brasil, não curso ou cobertura completa. Lista temas/períodos independentes, como mundo antigo e Segunda Guerra; conferir fontes, recorte e data de cada lista. Link-only; acessibilidade global não auditada."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2474; Aprovado como índice de descoberta de listas de História Geral/Brasil, não curso ou cobertura completa. Lista temas/períodos independentes, como mundo antigo e Segunda Guerra; conferir fontes, recorte e data de cada lista. Link-only; acessibilidade global não auditada.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia",
+          "detail": "Página organiza exercícios por temas e períodos históricos; identifica, por exemplo, mundo antigo e história da Segunda Guerra."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 236
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como hub de descoberta, não curso/cobertura integral. O índice separa listas por geografia física, demografia, energia, urbanização, geopolítica e cartografia. Verificar cada lista e sua atualidade. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como hub de descoberta, não curso/cobertura integral. O índice separa listas por geografia física, demografia, energia, urbanização, geopolítica e cartografia. Verificar cada lista e sua atualidade. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia",
+          "detail": "Índice reúne listas por geografia física, população, energia, geografia urbana, geopolítica e cartografia."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 236,
+        "topic_id": 2475,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como hub de descoberta, não curso/cobertura integral. O índice separa listas por geografia física, demografia, energia, urbanização, geopolítica e cartografia. Verificar cada lista e sua atualidade. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2475; Aprovado como hub de descoberta, não curso/cobertura integral. O índice separa listas por geografia física, demografia, energia, urbanização, geopolítica e cartografia. Verificar cada lista e sua atualidade. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia",
+          "detail": "Índice reúne listas por geografia física, população, energia, geografia urbana, geopolítica e cartografia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 237
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como índice de descoberta de listas de Inglês, não curso nem garantia de cobertura. Conferir texto-base, gabarito e recursos visuais em cada lista. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como índice de descoberta de listas de Inglês, não curso nem garantia de cobertura. Conferir texto-base, gabarito e recursos visuais em cada lista. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-ingles",
+          "detail": "Página identificada como hub de exercícios de Inglês, com listas individuais selecionáveis."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 237,
+        "topic_id": 2476,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como índice de descoberta de listas de Inglês, não curso nem garantia de cobertura. Conferir texto-base, gabarito e recursos visuais em cada lista. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2476; Aprovado como índice de descoberta de listas de Inglês, não curso nem garantia de cobertura. Conferir texto-base, gabarito e recursos visuais em cada lista. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-ingles",
+          "detail": "Página identificada como hub de exercícios de Inglês, com listas individuais selecionáveis."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 238
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como hub de descoberta, não curso completo. Cataloga listas de ética/política, metafísica/conhecimento e autores; conferir texto-base e enquadramento em cada item. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como hub de descoberta, não curso completo. Cataloga listas de ética/política, metafísica/conhecimento e autores; conferir texto-base e enquadramento em cada item. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-filosofia",
+          "detail": "Índice lista temas de ética/política e conhecimento, além de exercícios de filósofos específicos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 238,
+        "topic_id": 2477,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como hub de descoberta, não curso completo. Cataloga listas de ética/política, metafísica/conhecimento e autores; conferir texto-base e enquadramento em cada item. Acessibilidade global não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2477; Aprovado como hub de descoberta, não curso completo. Cataloga listas de ética/política, metafísica/conhecimento e autores; conferir texto-base e enquadramento em cada item. Acessibilidade global não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-filosofia",
+          "detail": "Índice lista temas de ética/política e conhecimento, além de exercícios de filósofos específicos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 239
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como índice de descoberta, não aula/cobertura integral. Tem listas identificadas de patrimônio/diversidade, trabalho/tecnologia, contratualismo, desigualdade, mais-valia e materialismo histórico. Abrir cada lista para revisão específica; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como índice de descoberta, não aula/cobertura integral. Tem listas identificadas de patrimônio/diversidade, trabalho/tecnologia, contratualismo, desigualdade, mais-valia e materialismo histórico. Abrir cada lista para revisão específica; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia",
+          "detail": "Índice apresenta listas de patrimônio, trabalho, contratualismo, desigualdade, mais-valia e materialismo histórico."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 239,
+        "topic_id": 2478,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como índice de descoberta, não aula/cobertura integral. Tem listas identificadas de patrimônio/diversidade, trabalho/tecnologia, contratualismo, desigualdade, mais-valia e materialismo histórico. Abrir cada lista para revisão específica; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2478; Aprovado como índice de descoberta, não aula/cobertura integral. Tem listas identificadas de patrimônio/diversidade, trabalho/tecnologia, contratualismo, desigualdade, mais-valia e materialismo histórico. Abrir cada lista para revisão específica; link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia",
+          "detail": "Índice apresenta listas de patrimônio, trabalho, contratualismo, desigualdade, mais-valia e materialismo histórico."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 240
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "editorial_note": "Somente consulta até corrigir Q19: a Lei 6.001/1973 explicita integração progressiva à comunhão nacional, com enquadramento assimilacionista; a resolução confunde isso com proteção de conhecimentos tradicionais/Constituição de 1988 (art. 231). Q14 exige anúncio em imagem sem descrição suficiente. Não usar a lista como treino até errata. Manter URL e link-only."
+      },
+      "reason": "Revisão editorial direta: Somente consulta até corrigir Q19: a Lei 6.001/1973 explicita integração progressiva à comunhão nacional, com enquadramento assimilacionista; a resolução confunde isso com proteção de conhecimentos tradicionais/Constituição de 1988 (art. 231). Q14 exige anúncio em imagem sem descrição suficiente. Não usar a lista como treino até errata. Manter URL e link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm",
+          "detail": "Q19 reproduz objetivo integracionista da Lei 6.001/1973 e depois lhe atribui paradigma constitucional posterior; Q14 depende de anúncio visual."
+        },
+        {
+          "locator": "https://planalto.gov.br/ccivil_03/leis/l6001.htm",
+          "detail": "Art. 1º da Lei 6.001/1973 declara integração progressiva à comunhão nacional."
+        },
+        {
+          "locator": "https://www.planalto.gov.br/ccivil_03/Constituicao/Constituicao.htm",
+          "detail": "Art. 231 da Constituição de 1988 reconhece organização social, costumes, línguas, crenças, tradições e direitos territoriais indígenas; distingue-se do objetivo do estatuto de 1973."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 240,
+        "topic_id": 2498,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Somente consulta até corrigir Q19: a Lei 6.001/1973 explicita integração progressiva à comunhão nacional, com enquadramento assimilacionista; a resolução confunde isso com proteção de conhecimentos tradicionais/Constituição de 1988 (art. 231). Q14 exige anúncio em imagem sem descrição suficiente. Não usar a lista como treino até errata. Manter URL e link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2498; Somente consulta até corrigir Q19: a Lei 6.001/1973 explicita integração progressiva à comunhão nacional, com enquadramento assimilacionista; a resolução confunde isso com proteção de conhecimentos tradicionais/Constituição de 1988 (art. 231). Q14 exige anúncio em imagem sem descrição suficiente. Não usar a lista como treino até errata. Manter URL e link-only.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm",
+          "detail": "Q19 reproduz objetivo integracionista da Lei 6.001/1973 e depois lhe atribui paradigma constitucional posterior; Q14 depende de anúncio visual."
+        },
+        {
+          "locator": "https://planalto.gov.br/ccivil_03/leis/l6001.htm",
+          "detail": "Art. 1º da Lei 6.001/1973 declara integração progressiva à comunhão nacional."
+        },
+        {
+          "locator": "https://www.planalto.gov.br/ccivil_03/Constituicao/Constituicao.htm",
+          "detail": "Art. 231 da Constituição de 1988 reconhece organização social, costumes, línguas, crenças, tradições e direitos territoriais indígenas; distingue-se do objetivo do estatuto de 1973."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 247
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "editorial_note": "Aprovado como unidade suplementar específica: conteúdo aborda ecologia de populações, comunidades, ecossistemas, conservação e restauração, com vídeos/artigos/exercícios. Não é curso completo de Biologia ou cobertura integral do currículo. Acessibilidade não auditada; link-only, sem cópia."
+      },
+      "reason": "Revisão editorial direta: Aprovado como unidade suplementar específica: conteúdo aborda ecologia de populações, comunidades, ecossistemas, conservação e restauração, com vídeos/artigos/exercícios. Não é curso completo de Biologia ou cobertura integral do currículo. Acessibilidade não auditada; link-only, sem cópia.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/biology/crash-course-bio-ecology",
+          "detail": "Unidade descreve conteúdo de ecologia de populações, comunidades, ecossistemas, conservação/restauração e materiais para aprender/praticar."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 247,
+        "topic_id": 2490,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como unidade suplementar específica: conteúdo aborda ecologia de populações, comunidades, ecossistemas, conservação e restauração, com vídeos/artigos/exercícios. Não é curso completo de Biologia ou cobertura integral do currículo. Acessibilidade não auditada; link-only, sem cópia."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2490; Aprovado como unidade suplementar específica: conteúdo aborda ecologia de populações, comunidades, ecossistemas, conservação e restauração, com vídeos/artigos/exercícios. Não é curso completo de Biologia ou cobertura integral do currículo. Acessibilidade não auditada; link-only, sem cópia.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/biology/crash-course-bio-ecology",
+          "detail": "Unidade descreve conteúdo de ecologia de populações, comunidades, ecossistemas, conservação/restauração e materiais para aprender/praticar."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 249
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como biblioteca de descoberta/referência, não unidade única/cobertura total. Catálogo tem 17 unidades e 179 habilidades: retas, ângulos, polígonos, triângulos, quadriláteros, área/volume, trigonometria, círculos e geometria analítica com aulas, práticas e testes. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como biblioteca de descoberta/referência, não unidade única/cobertura total. Catálogo tem 17 unidades e 179 habilidades: retas, ângulos, polígonos, triângulos, quadriláteros, área/volume, trigonometria, círculos e geometria analítica com aulas, práticas e testes. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic",
+          "detail": "Catálogo informa 17 unidades/179 habilidades; a seção analítica inclui distância, ponto médio, retas, prática e teste de unidade."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 249,
+        "topic_id": 2481,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como biblioteca de descoberta/referência, não unidade única/cobertura total. Catálogo tem 17 unidades e 179 habilidades: retas, ângulos, polígonos, triângulos, quadriláteros, área/volume, trigonometria, círculos e geometria analítica com aulas, práticas e testes. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2481; Aprovado como biblioteca de descoberta/referência, não unidade única/cobertura total. Catálogo tem 17 unidades e 179 habilidades: retas, ângulos, polígonos, triângulos, quadriláteros, área/volume, trigonometria, círculos e geometria analítica com aulas, práticas e testes. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic",
+          "detail": "Catálogo informa 17 unidades/179 habilidades; a seção analítica inclui distância, ponto médio, retas, prática e teste de unidade."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 250
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Aprovado como biblioteca de descoberta, não plano de estudos completo. Unidades abrangem movimento, leis de Newton, energia, termodinâmica, carga/circuitos, magnetismo/Faraday, ondas e óptica. Abrir unidades para estudo individual; acessibilidade não auditada formalmente; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como biblioteca de descoberta, não plano de estudos completo. Unidades abrangem movimento, leis de Newton, energia, termodinâmica, carga/circuitos, magnetismo/Faraday, ondas e óptica. Abrir unidades para estudo individual; acessibilidade não auditada formalmente; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/physics",
+          "detail": "Catálogo organiza unidades de movimento, Newton, energia, termodinâmica, eletricidade, magnetismo, ondas e óptica."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 250,
+        "topic_id": 2471,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como biblioteca de descoberta, não plano de estudos completo. Unidades abrangem movimento, leis de Newton, energia, termodinâmica, carga/circuitos, magnetismo/Faraday, ondas e óptica. Abrir unidades para estudo individual; acessibilidade não auditada formalmente; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2471; Aprovado como biblioteca de descoberta, não plano de estudos completo. Unidades abrangem movimento, leis de Newton, energia, termodinâmica, carga/circuitos, magnetismo/Faraday, ondas e óptica. Abrir unidades para estudo individual; acessibilidade não auditada formalmente; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/physics",
+          "detail": "Catálogo organiza unidades de movimento, Newton, energia, termodinâmica, eletricidade, magnetismo, ondas e óptica."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 251
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "editorial_note": "Aprovado como unidade suplementar de eletrostática/potencial, não toda Eletricidade. Conteúdo inclui lei de Coulomb, campo elétrico, superposição, energia potencial, potencial e tensão, com lições/práticas. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como unidade suplementar de eletrostática/potencial, não toda Eletricidade. Conteúdo inclui lei de Coulomb, campo elétrico, superposição, energia potencial, potencial e tensão, com lições/práticas. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/physics/electric-charge-electric-force-and-voltage",
+          "detail": "Unidade detalha seções de lei de Coulomb, campo, potencial/tensão e práticas."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 251,
+        "topic_id": 2487,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como unidade suplementar de eletrostática/potencial, não toda Eletricidade. Conteúdo inclui lei de Coulomb, campo elétrico, superposição, energia potencial, potencial e tensão, com lições/práticas. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2487; Aprovado como unidade suplementar de eletrostática/potencial, não toda Eletricidade. Conteúdo inclui lei de Coulomb, campo elétrico, superposição, energia potencial, potencial e tensão, com lições/práticas. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/physics/electric-charge-electric-force-and-voltage",
+          "detail": "Unidade detalha seções de lei de Coulomb, campo, potencial/tensão e práticas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 252
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "editorial_note": "Aprovado como unidade suplementar de equilíbrio: K/Kp, expressões de constante, quociente Q, Le Chatelier e práticas. Não cobre necessariamente todo equilíbrio/pH do tópico. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como unidade suplementar de equilíbrio: K/Kp, expressões de constante, quociente Q, Le Chatelier e práticas. Não cobre necessariamente todo equilíbrio/pH do tópico. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/chemical-equilibrium",
+          "detail": "Unidade inclui constante K/Kp, quociente de reação, Le Chatelier e exercícios."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 252,
+        "topic_id": 2489,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como unidade suplementar de equilíbrio: K/Kp, expressões de constante, quociente Q, Le Chatelier e práticas. Não cobre necessariamente todo equilíbrio/pH do tópico. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2489; Aprovado como unidade suplementar de equilíbrio: K/Kp, expressões de constante, quociente Q, Le Chatelier e práticas. Não cobre necessariamente todo equilíbrio/pH do tópico. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/chemical-equilibrium",
+          "detail": "Unidade inclui constante K/Kp, quociente de reação, Le Chatelier e exercícios."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 253
+      },
+      "expected": {
+        "editorial_status": "review"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "editorial_note": "Aprovado como unidade suplementar de reações/estequiometria: balanceamento, conversões mol/massa, estequiometria e reagente limitante, com práticas/teste. Não é curso completo nem cobre todo tipo de reação. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Revisão editorial direta: Aprovado como unidade suplementar de reações/estequiometria: balanceamento, conversões mol/massa, estequiometria e reagente limitante, com práticas/teste. Não é curso completo nem cobre todo tipo de reação. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/chemical-reactions-stoichiome",
+          "detail": "Unidade apresenta balanceamento, conversões, estequiometria ideal, reagente limitante e teste."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 253,
+        "topic_id": 2488,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Aprovado como unidade suplementar de reações/estequiometria: balanceamento, conversões mol/massa, estequiometria e reagente limitante, com práticas/teste. Não é curso completo nem cobre todo tipo de reação. Acessibilidade não auditada; link-only."
+      },
+      "reason": "Relação temática canônica validada para topics.id=2488; Aprovado como unidade suplementar de reações/estequiometria: balanceamento, conversões mol/massa, estequiometria e reagente limitante, com práticas/teste. Não é curso completo nem cobre todo tipo de reação. Acessibilidade não auditada; link-only.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/chemical-reactions-stoichiome",
+          "detail": "Unidade apresenta balanceamento, conversões, estequiometria ideal, reagente limitante e teste."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 225,
+        "topic_id": null,
+        "curriculum_topic_id": 2476
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Q1 requer errata: c=f(0) é intercepto em y, não em x; gráficos precisam de descrição. Relação anual separada do tópico canônico; consulta apenas."
+      },
+      "reason": "Relação curricular anual curriculum_topic_id=2476 tratada separadamente da relação canônica. Q1 requer errata: c=f(0) é intercepto em y, não em x; gráficos precisam de descrição. Relação anual separada do tópico canônico; consulta apenas.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-grafico-funcao-segundo-grau.htm",
+          "detail": "Q1 requer errata: c=f(0) é intercepto em y, não em x; gráficos precisam de descrição. Relação anual separada do tópico canônico; consulta apenas."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 229,
+        "topic_id": null,
+        "curriculum_topic_id": 2495
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Q14 interpretação de Frost é ambígua; Q15 data I, Too em 1926, não 1932. Estímulos visuais sem transcrição; consulta apenas."
+      },
+      "reason": "Relação curricular anual curriculum_topic_id=2495 tratada separadamente da relação canônica. Q14 interpretação de Frost é ambígua; Q15 data I, Too em 1926, não 1932. Estímulos visuais sem transcrição; consulta apenas.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-ingles/enem-lista-de-exercicios-sobre-interpretacao-de-texto-em-ingles.htm",
+          "detail": "Q14 interpretação de Frost é ambígua; Q15 data I, Too em 1926, não 1932. Estímulos visuais sem transcrição; consulta apenas."
+        },
+        {
+          "locator": "https://www.poetryfoundation.org/articles/89511/robert-frost-the-road-not-taken",
+          "detail": "A análise especializada registra que as duas estradas são descritas como igualmente percorridas e que a leitura do poema é ambígua; não sustenta a explicação categórica de ousadia."
+        },
+        {
+          "locator": "https://www.poetryfoundation.org/articles/88972/langston-hughes-101",
+          "detail": "Bibliografia da Poetry Foundation situa I, Too em 1926, no primeiro livro The Weary Blues."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 240,
+        "topic_id": null,
+        "curriculum_topic_id": 2493
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Q19 confunde Lei 6.001/1973 com paradigma constitucional de 1988; Q14 depende de imagem. Relação curricular separada; consulta apenas."
+      },
+      "reason": "Relação curricular anual curriculum_topic_id=2493 tratada separadamente da relação canônica. Q19 confunde Lei 6.001/1973 com paradigma constitucional de 1988; Q14 depende de imagem. Relação curricular separada; consulta apenas.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm",
+          "detail": "Q19 confunde Lei 6.001/1973 com paradigma constitucional de 1988; Q14 depende de imagem. Relação curricular separada; consulta apenas."
+        },
+        {
+          "locator": "https://planalto.gov.br/ccivil_03/leis/l6001.htm",
+          "detail": "Art. 1º da Lei 6.001/1973 declara integração progressiva à comunhão nacional."
+        },
+        {
+          "locator": "https://www.planalto.gov.br/ccivil_03/Constituicao/Constituicao.htm",
+          "detail": "Art. 231 da Constituição de 1988 reconhece organização social, costumes, línguas, crenças, tradições e direitos territoriais indígenas; distingue-se do objetivo do estatuto de 1973."
+        }
+      ]
+    }
+  ],
+  "blocked": [],
+  "summary": "Revisão de follow-up dos 26 recursos pendentes autorizados (IDs 218–240, exceto já aprovados/publicados, e 247–253, exceto o 248 do lote anterior). Índices foram aprovados apenas como reference; páginas com erratas substantivas como consultation_only, impedindo uso como treino; materiais específicos foram delimitados como suplementos. Atualizações de topics.id canônico e curriculum_topic_id anual são decisões separadas. Nenhuma fonte foi copiada nem SQLite alterado."
+}

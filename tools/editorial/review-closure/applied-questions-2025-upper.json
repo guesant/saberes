@@ -1,0 +1,1790 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:04:53.289291+00:00",
+  "database_before_sha256": "21297e009b36f364405a30e74715ea81dcc57eac7a3399e2aec195be887eae69",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "questions",
+      "key": {
+        "id": 37
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q37"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi na página-fonte a tira, o comando e as quatro alternativas; a leitura da mudança de escala entre fala e estatura leva à alternativa D, coincidente com a chave definitiva e o gabarito oficial. O asset compartilhado com Q38 foi aberto e comparado; sem corte relevante.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-14.png",
+          "detail": "QZ 2025, PDF p. 14 (impressa 12): início da questão 37, tira integral e início das alternativas.",
+          "sha256": "fc7670c484b5591dabe7c872c65f944afdccdf9eda05fb48dea0fabde7b34e77"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q37-wesley-samp-strip.png",
+          "detail": "Asset atual 455, compartilhado com Q38, conferido contra o PDF: quatro quadros, falas e legenda completos; SHA-256 877b3f81026b2c0abbfc5ff785d10f9931d687ecf225bddb07b4ca458705faac.",
+          "sha256": "877b3f81026b2c0abbfc5ff785d10f9931d687ecf225bddb07b4ca458705faac"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q37 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 37
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 37,
+        "number": 37,
+        "source_document_id": 36,
+        "source_page": 14
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 37: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-14.png",
+          "detail": "PDF p. 14 (impressa 12), início da ocorrência 37; continuação das alternativas em PDF p. 15.",
+          "sha256": "fc7670c484b5591dabe7c872c65f944afdccdf9eda05fb48dea0fabde7b34e77"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q37 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 38
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q38"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o texto-base, a tira compartilhada e as quatro opções. A personagem do quadrinho é apresentada como alguém que se considera importante; a alternativa A coincide com a chave definitiva e o gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "QZ 2025, PDF p. 15 (impressa 13): texto da questão 38, alternativas A–D e quadro comum às questões 37/38 já visto por inteiro na página anterior.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q37-wesley-samp-strip.png",
+          "detail": "Asset atual 455, compartilhado com Q37, comparado com a tira no caderno: quadro final e legenda estão presentes; SHA-256 877b3f81026b2c0abbfc5ff785d10f9931d687ecf225bddb07b4ca458705faac.",
+          "sha256": "877b3f81026b2c0abbfc5ff785d10f9931d687ecf225bddb07b4ca458705faac"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q38 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 38
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 38,
+        "number": 38,
+        "source_document_id": 36,
+        "source_page": 15
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 38: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "PDF p. 15 (impressa 13), ocorrência 38 e opções completas; o estímulo comum começa na PDF p. 14.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q38 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 39
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q39"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi integralmente texto e alternativas. No refrão, o verbo transitivo aparece sem complemento expresso, mecanismo indicado pela alternativa D; chave definitiva e gabarito oficial também apontam D.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "QZ 2025, PDF p. 15 (impressa 13): enunciado, referência da matéria e alternativas A–D completos.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q39 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 39
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 39,
+        "number": 39,
+        "source_document_id": 36,
+        "source_page": 15
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 39: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "PDF p. 15 (impressa 13), questão 39 completa com todas as alternativas.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q39 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 40
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q40"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi a transcrição na página e o recorte visual do post: a repetição de “ligar” sustenta simultaneamente telefonar e importar-se, alternativa B. Asset íntegro; chave definitiva coincide com o gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "QZ 2025, PDF p. 15 (impressa 13): postagem, comando e alternativas A–D completos.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q40-renato-janine-facebook-post.png",
+          "detail": "Asset atual 456 comparado com o post impresso: texto integral e sinais visuais presentes; SHA-256 577d0ebad3445f4cf4e95819527c4a54a9deabff1eafc7c791a5c67f3d95a323.",
+          "sha256": "577d0ebad3445f4cf4e95819527c4a54a9deabff1eafc7c791a5c67f3d95a323"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q40 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 40
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 40,
+        "number": 40,
+        "source_document_id": 36,
+        "source_page": 15
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 40: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "PDF p. 15 (impressa 13), ocorrência 40, postagem e opções completas.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q40 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 41
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q41"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o trecho literário e as alternativas nas páginas de continuação. O diálogo evidencia que o sentido das palavras depende do interlocutor/contexto, alternativa D, de acordo com a chave definitiva e o gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "QZ 2025, PDF p. 15 (impressa 13): início do excerto e questão 41.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "PDF p. 16 (impressa 14): conclusão do diálogo e alternativas A–D da questão 41.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q41 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 41
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 41,
+        "number": 41,
+        "source_document_id": 36,
+        "source_page": 15
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 41: número e página inicial do texto foram conferidos; a ocorrência continua na PDF p. 16. Proposta acompanha a publicação editorial aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-15.png",
+          "detail": "PDF p. 15 (impressa 13), início da questão 41; conclusão e opções na PDF p. 16.",
+          "sha256": "5644a4ae2aeb189bd2fe0681d8115fb84400d65a11584f0c36a8e26406ae3fe5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q41 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 42
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q42"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi a citação, sua atribuição e as quatro alternativas. A personagem permite satirizar a burocracia sem reduzir Gonzaga de Sá a funcionário nocivo; a alternativa C coincide com a chave definitiva e o gabarito.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "QZ 2025, PDF p. 16 (impressa 14): citação, referência bibliográfica e opções A–D da questão 42 completas.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q42 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 42
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 42,
+        "number": 42,
+        "source_document_id": 36,
+        "source_page": 16
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 42: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "PDF p. 16 (impressa 14), ocorrência 42 e opções completas.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q42 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 43
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q43"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi os dois excertos literários, as referências e as alternativas. A relação entre água e lágrimas expressa desamparo em ambiente desigual, alternativa D, consistente com a chave definitiva e o gabarito oficial.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "QZ 2025, PDF p. 16 (impressa 14): dois trechos, referências e alternativas A–D da questão 43 completos.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q43 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 43
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 43,
+        "number": 43,
+        "source_document_id": 36,
+        "source_page": 16
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 43: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "PDF p. 16 (impressa 14), dois textos e opções completos.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q43 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 44
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q44"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o excerto completo e as opções. A oposição é construída pelas formas do imperfeito do indicativo para o estado do eu e do subjuntivo para o que ele imagina que o outro pense, alternativa A; chave e gabarito coincidem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "QZ 2025, PDF p. 16 (impressa 14): trecho de Caio Fernando Abreu, referência e alternativas A–D da questão 44 completos.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q44 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 44
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 44,
+        "number": 44,
+        "source_document_id": 36,
+        "source_page": 16
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 44: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "PDF p. 16 (impressa 14), excerto e alternativas completos.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q44 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 45
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q45"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi a citação de Krenak e todas as alternativas, incluindo continuação na página seguinte. O trecho contrapõe perspectivas sobre a relação humano-natureza e critica a perspectiva predatória, alternativa C, igual à chave e ao gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "QZ 2025, PDF p. 16 (impressa 14): citação e início da questão 45.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-17.png",
+          "detail": "PDF p. 17 (impressa 15): quatro opções completas da questão 45.",
+          "sha256": "cb26892d279938dc79471548599a88aa3a30183e03a55f34cce3d6253cc56a06"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q45 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 45
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 45,
+        "number": 45,
+        "source_document_id": 36,
+        "source_page": 16
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 45: página inicial do texto e continuação das opções foram conferidas; proposta acompanha a publicação editorial aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-16.png",
+          "detail": "PDF p. 16 (impressa 14), início da ocorrência 45; opções continuam na PDF p. 17.",
+          "sha256": "55a97b2160ca23a02795e177864b9db08214fc6a23f726c999b413af4f57f3c7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q45 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 46
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q46"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi todos os versos e alternativas. O eu lírico associa o pensamento à tristeza e à morte (cipreste/cruz), alternativa C; a resposta coincide com a chave definitiva e o gabarito oficial.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-17.png",
+          "detail": "QZ 2025, PDF p. 17 (impressa 15): versos, atribuição e alternativas A–D da questão 46 completos.",
+          "sha256": "cb26892d279938dc79471548599a88aa3a30183e03a55f34cce3d6253cc56a06"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q46 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 46
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 46,
+        "number": 46,
+        "source_document_id": 36,
+        "source_page": 17
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 46: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-17.png",
+          "detail": "PDF p. 17 (impressa 15), ocorrência 46 e opções completas.",
+          "sha256": "cb26892d279938dc79471548599a88aa3a30183e03a55f34cce3d6253cc56a06"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q46 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 47
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q47"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi texto, gráfico, legenda, percentuais e alternativas; 100% − 55% de baixo desempenho em Ciências = 45%, alternativa A. O asset atual reproduz o gráfico completo e legível; chave definitiva e gabarito coincidem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-17.png",
+          "detail": "QZ 2025, PDF p. 17 (impressa 15): texto, barras de Matemática/Leitura/Ciências e alternativas completos.",
+          "sha256": "cb26892d279938dc79471548599a88aa3a30183e03a55f34cce3d6253cc56a06"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q47-pisa-2022-chart.png",
+          "detail": "Asset atual 457 comparado com o PDF: seis barras, rótulos 73/31, 50/26 e 55/24, legendas e eixos legíveis; SHA-256 6a7e7f46351cb3f2be21b65cd88b510f94c0b66dcb33312e4a696aff7915d81f.",
+          "sha256": "6a7e7f46351cb3f2be21b65cd88b510f94c0b66dcb33312e4a696aff7915d81f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q47 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 47
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 47,
+        "number": 47,
+        "source_document_id": 36,
+        "source_page": 17
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 47: gráfico, número e página-fonte foram conferidos; proposta acompanha a publicação editorial aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-17.png",
+          "detail": "PDF p. 17 (impressa 15), ocorrência 47 com gráfico e opções completos.",
+          "sha256": "cb26892d279938dc79471548599a88aa3a30183e03a55f34cce3d6253cc56a06"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q47 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 48
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q48"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi enunciado e quatro frações. Inclusão-exclusão dá ⌊2025/3⌋ + ⌊2025/7⌋ − ⌊2025/21⌋ = 675 + 289 − 96 = 868 casos em 2025, alternativa A, consistente com a chave definitiva e o gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-17.png",
+          "detail": "QZ 2025, PDF p. 17 (impressa 15): questão 48 e frações A–D completas.",
+          "sha256": "cb26892d279938dc79471548599a88aa3a30183e03a55f34cce3d6253cc56a06"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q48 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 48
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 48,
+        "number": 48,
+        "source_document_id": 36,
+        "source_page": 17
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 48: chave estrangeira, número e página-fonte foram conferidos; proposta acompanha a publicação editorial da questão após aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-17.png",
+          "detail": "PDF p. 17 (impressa 15), ocorrência 48 e alternativas completas.",
+          "sha256": "cb26892d279938dc79471548599a88aa3a30183e03a55f34cce3d6253cc56a06"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q48 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 51
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q51"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o diagrama de Venn, total de 65 copos e alternativas; o asset associado corresponde ao diagrama impresso. As quantidades faltantes somam 19; copos com exatamente dois sabores somam 25, logo 25/65 = 5/13 (A), conforme chave e gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-18.png",
+          "detail": "QZ 2025, PDF p. 18 (impressa 16): início do diagrama e texto; as alternativas continuam na PDF p. 19.",
+          "sha256": "e10e5e5837cdb78b5f153902cb47a968597b613f58f2cbd6536f6cae2ea56e6b"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "PDF p. 19 (impressa 17): diagrama completo e alternativas A–D da questão 51.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q51-fruit-juice-venn-diagram.png",
+          "detail": "Asset atual 458 comparado com a figura: três conjuntos, números conhecidos e duas interrogações presentes; SHA-256 f7ba625afdaaea3ee61f04a5566ca11f7f6c6a191c22042be49560ebd9560f36.",
+          "sha256": "f7ba625afdaaea3ee61f04a5566ca11f7f6c6a191c22042be49560ebd9560f36"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q51 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 51
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 51,
+        "number": 51,
+        "source_document_id": 36,
+        "source_page": 18
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 51: início na PDF p. 18 e continuação na p. 19, diagrama e página-fonte conferidos; proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-18.png",
+          "detail": "PDF p. 18 (impressa 16), início da ocorrência 51.",
+          "sha256": "e10e5e5837cdb78b5f153902cb47a968597b613f58f2cbd6536f6cae2ea56e6b"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "PDF p. 19 (impressa 17), diagrama e alternativas da ocorrência 51 completos.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q51 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 52
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q52"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi as desigualdades e as quatro conclusões. Elas implicam x∈[0,4] e y∈[2,4], portanto x+y≤8; alternativa C, igual à chave definitiva e ao gabarito oficial.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "QZ 2025, PDF p. 19 (impressa 17): enunciado, símbolos de módulo e opções A–D da questão 52 completos.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q52 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 52
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 52,
+        "number": 52,
+        "source_document_id": 36,
+        "source_page": 18
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 52: número e página-fonte foram conferidos; página física PDF 19 contém questão e alternativas completas. Proposta acompanha aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "PDF p. 19 (impressa 17), ocorrência 52 e opções completas.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q52 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 54
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q54"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi as funções, a composição g(f(x)) e as quatro contagens. A desigualdade equivale a 0 < x−2 < 4, isto é, x∈{3,4,5}, total 3 (B), conforme chave definitiva e gabarito.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "QZ 2025, PDF p. 19 (impressa 17): funções e inequação legíveis, alternativas A–D completas.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q54 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 54
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 54,
+        "number": 54,
+        "source_document_id": 36,
+        "source_page": 18
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 54: número e página-fonte do banco conferem; a questão completa está na PDF p. 19. Proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "PDF p. 19 (impressa 17), questão 54 e opções completas.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q54 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 55
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q55"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o desenho geométrico, as medidas AG=4 e GH=3, o enunciado e todas as opções. O asset ligado preserva os pontos e segmentos necessários; resposta B (111/20), coincidente com chave definitiva e gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "QZ 2025, PDF p. 19 (impressa 17): início do item e figura; continuação do comando na PDF p. 20.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "PDF p. 20 (impressa 18): letras dos pontos, lados/segmentos e alternativas A–D visíveis.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q55-triangle-two-squares.png",
+          "detail": "Asset atual 460 comparado com a figura do caderno: triângulo, dois quadrados e rótulos A–H completos; SHA-256 4bedcaf2a7b59fcb00954d85b2824982a1fb12e33349e5c3033766ce34fb9d12.",
+          "sha256": "4bedcaf2a7b59fcb00954d85b2824982a1fb12e33349e5c3033766ce34fb9d12"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q55 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 55
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 55,
+        "number": 55,
+        "source_document_id": 36,
+        "source_page": 18
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 55: início na PDF p. 19, continuação na p. 20; figura, opções e página-fonte conferidas. Proposta acompanha aprovação individual.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-19.png",
+          "detail": "PDF p. 19 (impressa 17), início da questão 55 e figura.",
+          "sha256": "a4722902dbf10eca7e567f9ceb3799250b2852027e05ad05c51c65ca77061f0b"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "PDF p. 20 (impressa 18), comando e alternativas completos.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q55 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 56
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q56"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi definição das somas parciais, três termos consecutivos e alternativas. Diferenças entre somas sucessivas são termos consecutivos da PA; a diferença entre elas muda 59−52=7, alternativa B, igual à chave definitiva e ao gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "QZ 2025, PDF p. 20 (impressa 18): questão 56 e quatro alternativas completas.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q56 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 56
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 56,
+        "number": 56,
+        "source_document_id": 36,
+        "source_page": 19
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 56: número e página-fonte do banco foram conferidos; PDF p. 20 contém a ocorrência integral. Proposta acompanha publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "PDF p. 20 (impressa 18), ocorrência 56 e opções completas.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q56 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 57
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q57"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi os três pontos, alternativas e transcrição da função. Resolvendo o sistema, c=−4, a=3/2 e b=−3/2, então abc=9, alternativa D, em concordância com a chave definitiva e o gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "QZ 2025, PDF p. 20 (impressa 18): coordenadas P, Q, M, equação e opções A–D completos.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q57 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 57
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 57,
+        "number": 57,
+        "source_document_id": 36,
+        "source_page": 19
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 57: número e página-fonte conferidos; a questão e as quatro opções estão completas na PDF p. 20. Proposta acompanha publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "PDF p. 20 (impressa 18), ocorrência 57, sistema de pontos e opções.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q57 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 59
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q59"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o cartum, as convenções de cor explicitadas no enunciado e as alternativas; o asset atual reproduz a figura adaptada sem perder os elementos relevantes. A opção B distingue a aparência favorável da bicicleta da fonte energética desfavorável; chave e gabarito coincidem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "QZ 2025, PDF p. 20 (impressa 18): cartum, instrução sobre cores e início das opções.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19): conclusão das alternativas A–D da questão 59.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q59-energy-transition-cartoon.png",
+          "detail": "Asset atual 462 comparado com o caderno: termelétrica, linhas, bicicleta carregada e personagem aparecem sem corte relevante; SHA-256 c6144ce5491ec44ef4c2ca29f49595d7fcf7225b57075f8d4241fd9499008a1f0.",
+          "sha256": "c6144ce5491ec44efc2ca29f49595d7fcf7225b57075f8d4241fd9499008a1f0"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q59 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 59
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 59,
+        "number": 59,
+        "source_document_id": 36,
+        "source_page": 20
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 59: imagem e texto começam na PDF p. 20; opções continuam na p. 21. Página-fonte e asset foram conferidos. Proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "PDF p. 20 (impressa 18), início da ocorrência 59.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19), alternativas completas da ocorrência 59.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q59 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 60
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q60"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi a explicação energética, a tabela e opções. Para energia fixa, a fração em massa é proporcional à fração de energia dividida pela energia por grama: proteínas e carboidratos ficam acima de seus percentuais energéticos e gordura abaixo; alternativa A, igual à chave/gabarito.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "QZ 2025, PDF p. 20 (impressa 18): texto, tabela 5%/52%/43% e início das opções.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19): alternativas A–D completas.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q60 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 60
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 60,
+        "number": 60,
+        "source_document_id": 36,
+        "source_page": 20
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 60: tabela e opções em páginas-fonte consecutivas foram conferidas; proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "PDF p. 20 (impressa 18), início da ocorrência 60 e tabela.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19), opções completas da ocorrência 60.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q60 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 61
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q61"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o processo descrito e as quatro opções. Digestão anaeróbia gera biogás rico em metano e reduz matéria orgânica/degradação potencial, portanto reduz DBO: alternativa D, conforme chave definitiva e gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "QZ 2025, PDF p. 20 (impressa 18): dados do processo e enunciado da questão 61.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19): alternativas A–D completas da questão 61.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q61 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 61
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 61,
+        "number": 61,
+        "source_document_id": 36,
+        "source_page": 20
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 61: texto inicial e opções na página-fonte seguinte foram conferidos; proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-20.png",
+          "detail": "PDF p. 20 (impressa 18), início da ocorrência 61.",
+          "sha256": "781e61ff5b2f90e1b8496a9355d10c8f77421f315d205c50c28da525ef11fb0c"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19), conclusão e alternativas da questão 61.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q61 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 62
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q62"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o cenário e todas as alternativas. O₂ é obtido por eletrólise de água previamente purificada e CO₂ é absorvido por solução básica; alternativa B, consistente com chave definitiva e gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "QZ 2025, PDF p. 21 (impressa 19): enunciado e alternativas A–D da questão 62 completos.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q62 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 62
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 62,
+        "number": 62,
+        "source_document_id": 36,
+        "source_page": 20
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 62: número e página-fonte conferidos; questão completa na PDF p. 21. Proposta acompanha publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19), ocorrência 62 e opções completas.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q62 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 63
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q63"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o dado de massa, a relação sal/base e as quatro alternativas. 42,4/37,5≈1,1307 corresponde a (M+36,5)/M, logo M≈279 g/mol e associação 1:1, alternativa B. A chave definitiva e o gabarito coincidem; a questão permanece somente em draft editorial até esta proposta ser aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "QZ 2025, PDF p. 21 (impressa 19): enunciado, massa de HCl, alternativas A–D e disposição tipográfica conferidos.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q63 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 63
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 63,
+        "number": 63,
+        "source_document_id": 36,
+        "source_page": 21
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 63: número e página-fonte conferidos; enunciado e quatro opções completos na PDF p. 21. Proposta acompanha publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19), ocorrência 63 completa.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q63 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 64
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q64"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi gráfico, legenda das curvas e alternativas. A concentração da espécie farmacológica vermelha decai mais lentamente; a linha contínua representa o fármaco e a tracejada DMSO-d6 livre, alternativa D. Asset corresponde ao gráfico íntegro; chave/gabarito coincidem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "QZ 2025, PDF p. 21 (impressa 19): gráfico colorido, legenda e opções completos.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q64-platinum-dmso-exchange-graph.png",
+          "detail": "Asset atual 463 comparado com a figura da página: séries PtL1/PtL2/PtL3, cores, linha sólida/tracejada, eixos e unidades preservados; SHA-256 1b7f88ed8ec42c0efd7d92425fea4529cc4128aa9297bb170f3855bf6c0d397f.",
+          "sha256": "1b7f88ed8ec42c0efd7d92425fea4529cc4128aa9297bb170f3855bf6c0d397f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q64 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 64
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 64,
+        "number": 64,
+        "source_document_id": 36,
+        "source_page": 21
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 64: gráfico e opções na mesma página-fonte foram conferidos; proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19), ocorrência 64 e gráfico completos.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q64 = D."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 65
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q65"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi séries, legenda, escala e alternativas. As três substâncias têm efeito repelente no intervalo apresentado; somente a transflutrina mostra mortalidade após 24 h, alternativa C. Asset íntegro; chave definitiva e gabarito final coincidem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "QZ 2025, PDF p. 21 (impressa 19): gráfico de repelência/inseticida e opções A–D completos.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q65-repellents-concentration-effects-graph.png",
+          "detail": "Asset atual 464 comparado com o PDF: símbolos preenchidos/vazados, três séries, concentrações e dois eixos preservados; SHA-256 03b844078bc7f8758e2e901ea03ce6780e0fa96db5ffa0f1817bc61af1dfc1c9.",
+          "sha256": "03b844078bc7f8758e2e901ea03ce6780e0fa96db5ffa0f1817bc61af1dfc1c9"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q65 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 65
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 65,
+        "number": 65,
+        "source_document_id": 36,
+        "source_page": 21
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 65: número, gráfico e página-fonte foram conferidos; proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-21.png",
+          "detail": "PDF p. 21 (impressa 19), ocorrência 65, legenda/gráfico e opções completos.",
+          "sha256": "7f497dda3f3d489097edb23fd89aaae9c1e2141d1930e4fbf1ca7ee10e0b0cdf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q65 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 66
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q66"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi a obra reproduzida, seu crédito, o texto do item e opções. A imagem e o conteúdo descrevem manguezal, com vegetação halófita, solo alagado/salino e pobre em oxigênio; alternativa A, de acordo com a chave e o gabarito. Asset visualmente corresponde ao recorte.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-22.png",
+          "detail": "QZ 2025, PDF p. 22 (impressa 20): obra, crédito/adaptação e alternativas A–D da questão 66 completos.",
+          "sha256": "3c1e5518f0e5e2a915b2e1992ebb391c81360801baf6da22bd9e451ba4851c9a"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q66-rosana-paulino-mangrove-artwork.png",
+          "detail": "Asset atual 465 comparado com a reprodução da página: raízes aéreas, figura, animais e crédito da obra visíveis; SHA-256 c0e3b96b8ec2e6295e14f4963041b0a301721b079f01269472fa4d3a2cef9c8c.",
+          "sha256": "c0e3b96b8ec2e6295e14f4963041b0a301721b079f01269472fa4d3a2cef9c8c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q66 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 66
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 66,
+        "number": 66,
+        "source_document_id": 36,
+        "source_page": 22
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 66: obra, opções e página-fonte conferidas; proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-22.png",
+          "detail": "PDF p. 22 (impressa 20), ocorrência 66, obra e opções completos.",
+          "sha256": "3c1e5518f0e5e2a915b2e1992ebb391c81360801baf6da22bd9e451ba4851c9a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q66 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 68
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q68"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi as duas figuras epiteliais, as setas, os gráficos de amplitude e as opções. A infecção compromete a motilidade ciliar, reduzindo o transporte de muco; alternativa C. Asset reproduz as duas condições sem perda relevante; chave e gabarito coincidem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-22.png",
+          "detail": "QZ 2025, PDF p. 22 (impressa 20): diagrama, duas séries temporais, referência e alternativas A–D da questão 68 completos.",
+          "sha256": "3c1e5518f0e5e2a915b2e1992ebb391c81360801baf6da22bd9e451ba4851c9a"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q68-covid-cilia-epithelium-diagram.png",
+          "detail": "Asset atual 466 comparado com a figura: cílios, setas, epitélio normal/alterado e amplitudes preservados; SHA-256 97f9ab01f9030d9c674b652f6f2b381fc9fc01789a93b2fa259f3079d93adc22.",
+          "sha256": "97f9ab01f9030d9c674b652f6f2b381fc9fc01789a93b2fa259f3079d93adc22"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q68 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 68
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 68,
+        "number": 68,
+        "source_document_id": 36,
+        "source_page": 22
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 68: figuras, alternativas e página-fonte foram conferidas; proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-22.png",
+          "detail": "PDF p. 22 (impressa 20), ocorrência 68 completa com diagrama e opções.",
+          "sha256": "3c1e5518f0e5e2a915b2e1992ebb391c81360801baf6da22bd9e451ba4851c9a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q68 = C."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 69
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q69"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi as quatro condições de claro/escuro, inclusive a interrupção da noite em IV, e as alternativas. Planta de dia longo floresce em III e IV, alternativa A; asset, chave definitiva e gabarito final conferem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-22.png",
+          "detail": "QZ 2025, PDF p. 22 (impressa 20): enunciado e início da figura/questão 69.",
+          "sha256": "3c1e5518f0e5e2a915b2e1992ebb391c81360801baf6da22bd9e451ba4851c9a"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-23.png",
+          "detail": "PDF p. 23 (impressa 21): quatro diagramas de luminosidade e alternativas A–D completos.",
+          "sha256": "646e0ef5ad39e0fc8da6dda730b6775773d21296e23089f8d956be917b227869"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q69-photoperiod-conditions.png",
+          "detail": "Asset atual 467 comparado com a figura: barras de luz/escuro para I–IV e quebra do escuro em IV legíveis; SHA-256 db1cdb234b7249cdd41631ceb2700931a47520d8d95c8201373e4e1b5a85c96c.",
+          "sha256": "db1cdb234b7249cdd41631ceb2700931a47520d8d95c8201373e4e1b5a85c96c"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q69 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 69
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 69,
+        "number": 69,
+        "source_document_id": 36,
+        "source_page": 22
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 69: inicia na PDF p. 22 e continua na p. 23; esquema, opções e página-fonte foram conferidos. Proposta acompanha publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-22.png",
+          "detail": "PDF p. 22 (impressa 20), início da questão 69.",
+          "sha256": "3c1e5518f0e5e2a915b2e1992ebb391c81360801baf6da22bd9e451ba4851c9a"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-23.png",
+          "detail": "PDF p. 23 (impressa 21), condições I–IV e alternativas completas.",
+          "sha256": "646e0ef5ad39e0fc8da6dda730b6775773d21296e23089f8d956be917b227869"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q69 = A."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 70
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q70"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o texto introdutório e as quatro alternativas. A afirmação B reconhece a contribuição da seleção natural à adaptação com ou sem isolamento geográfico; chave definitiva e gabarito final coincidem.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-23.png",
+          "detail": "QZ 2025, PDF p. 23 (impressa 21): enunciado e opções A–D completos.",
+          "sha256": "646e0ef5ad39e0fc8da6dda730b6775773d21296e23089f8d956be917b227869"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q70 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 70
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 70,
+        "number": 70,
+        "source_document_id": 36,
+        "source_page": 23
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 70: número, página-fonte e opções completos na PDF p. 23. Proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-23.png",
+          "detail": "PDF p. 23 (impressa 21), ocorrência 70 completa.",
+          "sha256": "646e0ef5ad39e0fc8da6dda730b6775773d21296e23089f8d956be917b227869"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q70 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 71
+      },
+      "expected": {
+        "status": "draft",
+        "slug": "vu-2025-qz-q71"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Conferi o contexto da expedição, espécies e alternativas; o item relaciona endemismo/distribuição restrita e características de cnidários, alternativa B. A extração continua na mesma página-fonte e a chave definitiva coincide com o gabarito final.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-23.png",
+          "detail": "QZ 2025, PDF p. 23 (impressa 21): enunciado, referência da notícia e opções A–D da questão 71 completos.",
+          "sha256": "646e0ef5ad39e0fc8da6dda730b6775773d21296e23089f8d956be917b227869"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q71 = B."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 71
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 71,
+        "number": 71,
+        "source_document_id": 36,
+        "source_page": 23
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência QZ 71: número e página-fonte conferidos; enunciado e opções completos na PDF p. 23. Proposta acompanha a publicação aprovada.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-upper/QZ-page-23.png",
+          "detail": "PDF p. 23 (impressa 21), ocorrência 71 completa.",
+          "sha256": "646e0ef5ad39e0fc8da6dda730b6775773d21296e23089f8d956be917b227869"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito final oficial Q/Z, p. 1: Q71 = B."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T200453325066Z.sqlite",
+  "database_after_sha256": "0e8cdaa7afd4cb490cf46273136876b46218f65ea692ae2d019a5e57c3690ca7"
+}

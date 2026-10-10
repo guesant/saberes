@@ -1,0 +1,68 @@
+{
+  "decisions": [
+    {
+      "table": "questions",
+      "key": {"id": 2782},
+      "expected": {
+        "status": "published",
+        "editorial_version": "1.0.0",
+        "statement": "Dados os números reais 𝑞 e 𝑟, sabe-se que as medidas dos lados de um triângulo retângulo 𝐴𝐵𝐶 satisfazem à equação 𝑥(cid:2870)(cid:3397)𝑞𝑥(cid:3397)𝑟(cid:3404)0. A área de 𝐴𝐵𝐶 é: (cid:3045)(cid:3044)"
+      },
+      "changes": {
+        "statement": "Dados os números reais 𝑞 e 𝑟, sabe-se que as medidas dos lados de um triângulo retângulo 𝐴𝐵𝐶 satisfazem à equação 𝑥² + 𝑞𝑥 + 𝑟 = 0. A área de 𝐴𝐵𝐶 é:",
+        "editorial_version": "1.0.1"
+      },
+      "reason": "Reparo editorial urgente para remover CIDs que substituíram os glifos x², + e =, além do fragmento de fórmula de alternativa indevidamente anexado ao enunciado. Conferi dependências antes de limitar a proposta: question_id 2782 é compartilhada pelas ocorrências QT Q46 (2827, source_document_id 335, página física 14) e RS Q44 (2828, source_document_id 336, página física 15); ambas exibem a mesma fórmula, corpo e alternativas. A questão tem asset 252 (official-pdfs/2027-simulation/page-images/qt-page-14.png), imagem de página sem figura matemática própria na Q46; opções 11013–11016 e ambas as chaves definitivas C são preservadas. Não alterar assets, opções, ocorrências, chaves, status de publicação nem classificação de extração. Validação matemática: as três medidas são raízes de uma quadrática, logo há lados repetidos; num triângulo retângulo não degenerado isso força catetos iguais. Por Vieta r=a²√2, então área=a²/2=r√2/4 (alternativa C). A revisão não é aprovação de extração.",
+      "evidence": [
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/simulado-2027-qt-q46-crop.png", "detail": "Recorte renderizado da fonte oficial: QT, página física 14, questão 46; lê-se x² + qx + r = 0 e o enunciado termina em ‘A área de ABC é:’."},
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/simulado-2027-qt-physical-14.png", "detail": "PNG da página física 14 completa do caderno QT; alternativas A–D, incluindo C = r√2/4."},
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=14", "detail": "URL do PDF oficial Comvest QT, página 14: fórmula, enunciado e opções da questão 46."},
+        {"locator": "tools/editorial/review-closure/evidence/simulado-2027-qt-official-key-page-1.png", "detail": "PNG da página 1 do gabarito oficial QT: questão 46 = C."},
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/gabarito_2026_Q_T.pdf", "detail": "URL oficial do gabarito Q/T; página 1, questão 46 = C (conferida no PNG arquivado)."},
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/simulado-2027-rs-physical-15.png", "detail": "PNG da página física 15 do caderno RS, Q44; confirma fórmula e enunciado idênticos na outra ocorrência da questão canônica 2782."},
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/simulado-2027-rs-key.png", "detail": "PNG do gabarito oficial RS, página 1: questão 44 = C."},
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_R_S.pdf#page=15", "detail": "URL do PDF oficial Comvest RS, página 15: segunda ocorrência conferida."},
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/gabarito_2026_R_S.pdf", "detail": "URL oficial do gabarito R/S; página 1, questão 44 = C (conferida no PNG arquivado)."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/simulado_Q_T.pdf", "detail": "Cópia local da fonte oficial, SHA-256 43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/gabarito_2026_Q_T.pdf", "detail": "Cópia local do gabarito oficial QT, SHA-256 074039c4a415c3b979366ce3a9c719308de611261b637eb38555671b02d4b7d4."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/simulado_R_S.pdf", "detail": "Cópia local da fonte oficial RS, SHA-256 65a1231f33681a297e61a4f2d7c68739e4267bf6f1674b30dd9109971d597d17."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/gabarito_2026_R_S.pdf", "detail": "Cópia local do gabarito oficial RS, SHA-256 1ea663857f48b8b14091e7a30f4fb3088d0005c1faf482d409431379f50a7000."},
+        {"locator": "tools/editorial/review-closure/questions-recent.json", "detail": "Arquivo de auditoria relacionado: preserva lote visual/no-op separado. Metadados de fonte mantidos aqui: QT PDF SHA-256 43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d; gabarito QT 074039c4a415c3b979366ce3a9c719308de611261b637eb38555671b02d4b7d4; RS PDF 65a1231f33681a297e61a4f2d7c68739e4267bf6f1674b30dd9109971d597d17; gabarito RS 1ea663857f48b8b14091e7a30f4fb3088d0005c1faf482d409431379f50a7000; asset QX13 4216b7f147d4b54429a75553695d46075f132ad40d1cfe41de5788dc3c230b80."}
+      ]
+    },
+    {
+      "table": "question_options",
+      "key": {"id": 8306},
+      "expected": {
+        "question_id": 301,
+        "code": "B",
+        "text": "Ι\nΙΙ\nΙΙΙ\nΙV\n0 20 40 60 80 100 120\nt (s)\n0\n200\n400\n600\n800s(t) (m)\nΙ\nΙΙ\nΙΙΙ\nΙV\n0 20 40 60 80 100 120\nt (s)\n0\n200\n400\n600\n800s(t) (m)"
+      },
+      "changes": {"text": "Alternativa contém elemento visual; consulte o caderno oficial na página indicada."},
+      "reason": "Reparo independente já comprovado na mesma rodada: a opção B contém OCR duplicado de eixos/séries, mas o original é um gráfico. Asset global vinculado à questão: asset 301, official-simulator-images/2026/F1_26_FIS_Q13.jpg, checksum 4216b7f147d4b54429a75553695d46075f132ad40d1cfe41de5788dc3c230b80; inspeção confirma os quatro gráficos A–D. O placeholder é igual ao que as opções A/C/D já usam. Preservar identidade/ordem da opção, asset, enunciado, status e gabarito A.",
+      "evidence": [
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/qx-2026-physical-06.png", "detail": "PNG do PDF oficial QX, página física 6/impressa 4: Q13 e opções gráficas."},
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/qx-2026-q13-official-simulator.jpg", "detail": "Asset oficial já vinculado à questão, com os quatro gráficos; SHA-256 4216b7f147d4b54429a75553695d46075f132ad40d1cfe41de5788dc3c230b80."},
+        {"locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2026/QX.pdf", "detail": "PDF oficial QX, SHA-256 8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253."},
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf", "detail": "Gabarito oficial Q/X, página 1: Q13 = A."}
+      ]
+    },
+    {
+      "table": "questions",
+      "key": {"id": 301},
+      "expected": {
+        "status": "published",
+        "editorial_version": "1.0.0",
+        "statement": "Qual é o gráfico que representa a posição s(t) do motociclista em função do tempo t?"
+      },
+      "changes": {"editorial_version": "1.0.1"},
+      "reason": "Incrementar versão junto com a correção proposta da opção B; texto do enunciado e gabarito não mudam.",
+      "evidence": [
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/qx-2026-physical-06.png", "detail": "Página oficial confirma enunciado, alternativas gráficas e nenhuma alteração textual ao stem."},
+        {"locator": "tools/editorial/review-closure/evidence/questions-recent/qx-2026-q13-official-simulator.jpg", "detail": "Asset global já ligado à questão, usado para conferir a opção B visualmente."}
+      ]
+    }
+  ],
+  "blocked": [],
+  "summary": "Lote de aplicação restrita: decisão 1 corrige apenas o statement e a editorial_version de Q2782; decisão 2 corrige apenas o texto OCR da opção B de QX13; decisão 3 incrementa a versão de QX13. Expected usa colunas SQLite planas e literais atuais. Não foram feitas gravações no banco. Hashes de fontes/asset e PNGs de evidência permanecem no artefato de auditoria questions-recent.json e são referenciados aqui. Os no-ops revisados permanecem separados naquele arquivo; nenhuma aprovação de extração/publicação é proposta."
+}

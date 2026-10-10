@@ -5,13 +5,16 @@ import { ContentLoadingState } from "../../components/content-loading-state.comp
 import { ContentNotFoundState } from "../../components/content-not-found-state.component";
 import { QuestionReadyView } from "./question-ready-view.component";
 import { useQuestionViewModel } from "./question.view-model";
+import { StudyPathNavigation } from "../study-path/study-path-navigation.component";
 
 export function QuestionView() {
   const { t } = useTranslation();
 
   const { questionId, exerciseSlug } = useParams();
 
-  const viewModel = useQuestionViewModel(exerciseSlug ? `exercise:${exerciseSlug}` : `question:${questionId}`);
+  const viewModel = useQuestionViewModel(
+    exerciseSlug ? `exercise:${exerciseSlug}` : `question:${questionId}`,
+  );
 
   if (viewModel.state === "loading") {
     return <ContentLoadingState label={t("common.loadingQuestion")} />;
@@ -26,16 +29,19 @@ export function QuestionView() {
   }
 
   return (
-    <QuestionReadyView
-      bookmarkError={viewModel.bookmarkError}
-      bookmarked={viewModel.bookmarked}
-      bookmarkPending={viewModel.bookmarkPending}
-      data={viewModel.data}
-      onDiagnose={viewModel.saveDiagnosis}
-      onPriorKnowledge={viewModel.savePriorKnowledge}
-      onBookmark={viewModel.toggleBookmark}
-      onSubmit={viewModel.submit}
-      onRetryBookmark={viewModel.reload}
-    />
+    <>
+      <QuestionReadyView
+        bookmarkError={viewModel.bookmarkError}
+        bookmarked={viewModel.bookmarked}
+        bookmarkPending={viewModel.bookmarkPending}
+        data={viewModel.data}
+        onDiagnose={viewModel.saveDiagnosis}
+        onPriorKnowledge={viewModel.savePriorKnowledge}
+        onBookmark={viewModel.toggleBookmark}
+        onSubmit={viewModel.submit}
+        onRetryBookmark={viewModel.reload}
+      />
+      <StudyPathNavigation />
+    </>
   );
 }

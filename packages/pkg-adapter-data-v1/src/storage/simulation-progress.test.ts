@@ -27,6 +27,7 @@ describe("simulados salvos no banco de progresso local", () => {
       sessionId: activeSimulation.id,
       questionKey: "question:occurrence-1",
       answer: "B",
+      hintIdsUsed: [3],
       updatedAt: "2026-10-05T10:01:00.000Z",
     });
 
@@ -37,7 +38,18 @@ describe("simulados salvos no banco de progresso local", () => {
       .toEqual([expect.objectContaining({
         questionKey: "question:occurrence-1",
         value: "B",
+        hintIdsUsed: [3],
       })]);
+
+    const revised = await progressDb.updateSimulationSession({
+      sessionId: activeSimulation.id,
+      questionKey: "question:occurrence-1",
+      answer: "C",
+      updatedAt: "2026-10-05T10:02:00.000Z",
+    });
+
+    expect(revised.simulationAnswers?.[0].hintIdsUsed)
+      .toEqual([3]);
 
     await expect(progressDb.updateSimulationSession({
       sessionId: activeSimulation.id,

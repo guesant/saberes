@@ -1,5 +1,6 @@
 import { UIContentGroup, UITypography } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import { AssessmentConsultationNotice } from "./assessment-consultation-notice.component";
 import { AssessmentItemsView } from "./assessment-items-view.component";
 import { AssessmentProgressError } from "./assessment-progress-error.component";
 import { AssessmentProgressSummary } from "./assessment-progress-summary.component";
@@ -21,11 +22,17 @@ export function AssessmentReadyView(props: AssessmentReadyViewProps) {
         <UITypography color="text.secondary">{description}</UITypography>
       </UIContentGroup>
 
-      {props.progress ? <AssessmentProgressSummary progress={props.progress} /> : null}
+      <AssessmentConsultationNotice
+        canPractice={props.data.assessment.canPractice}
+        canSimulate={props.data.assessment.canSimulate}
+        hasCancelledQuestions={Boolean(props.data.assessment.cancelledQuestionCount)}
+      />
 
-      {props.progressError ? (
+      {props.progress && <AssessmentProgressSummary progress={props.progress} />}
+
+      {props.progressError && (
         <AssessmentProgressError error={props.progressError} onRetry={props.onReloadProgress} />
-      ) : null}
+      )}
 
       <AssessmentSessionLauncher assessmentKey={props.assessmentKey} assessment={props.data.assessment} items={props.data.items} />
 

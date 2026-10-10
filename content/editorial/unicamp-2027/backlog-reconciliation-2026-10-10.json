@@ -1,0 +1,188 @@
+{
+  "format": "unicamp-backlog-reconciliation/v1",
+  "created_at": "2026-10-10",
+  "scope": {
+    "backlog": "docs/backlog-preparacao-unicamp-2027.md",
+    "database": ".local/content/content.sqlite",
+    "release": "unicamp-2027-bulk-editorial-v36",
+    "mode": "read_only_reconciliation",
+    "constraints": [
+      "Não alterar SQLite nem aprovar conteúdo editorial.",
+      "Não apagar arquivos.",
+      "Propor fechamento/remoção de tarefas já concluídas e priorizar verificações em lote com poucas amostras."
+    ]
+  },
+  "baseline": {
+    "release_id": 293,
+    "schema_version": 20,
+    "database_sha256": "01014a8ca906a3fab91a7ef645b1427f304637193472e009a997f97f4b8dba11",
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "evidence": [
+      ".local/content/content.sqlite: content_releases order by id desc limit 3; PRAGMA integrity_check; PRAGMA foreign_key_check",
+      "tools/editorial/review-closure/target-question-coverage.json: database_sha256 matches v36; no target-topic practice gaps under the current approved-training filter",
+      "tools/editorial/review-closure/target-resource-coverage.json: database_sha256 matches v36; no learning/practice link gaps under its coverage definition",
+      "tools/editorial/review-closure/open-records.json: database_sha256 matches v36; inventory is database-wide and includes historical records, so it is not a task list for the active study path"
+    ]
+  },
+  "applied_journals": [
+    {
+      "path": "content/editorial/unicamp-2027/applied-regulations-rights-note-cleanup-2026-10-10.json",
+      "applied": true,
+      "decisions": 7,
+      "result": "Notas regulatórias foram atualizadas em lote com fonte e data de revisão; encerrar a tarefa de corrigir essas notas específicas. A revalidação futura de comunicados oficiais continua sendo manutenção temporal, não retrabalho do lote."
+    },
+    {
+      "path": "content/editorial/unicamp-2027/applied-external-source-provenance-2026-10-10.json",
+      "applied": true,
+      "decisions": 174,
+      "result": "Fontes externas e proveniência/direitos foram vinculados em lote. Encerrar a tarefa de preencher esses vínculos ausentes. O journal não aprova qualidade pedagógica, acessibilidade ou autorização para copiar conteúdo."
+    },
+    {
+      "path": "content/editorial/unicamp-2027/applied-equivalent-booklet-classifications-bulk-2026-10-10.json",
+      "applied": true,
+      "decisions": 72,
+      "result": "Classificações aprovadas foram propagadas entre ocorrências de cadernos equivalentes de 2026. Encerrar a propagação por equivalência já feita; conflitos e associações dependentes de estímulo continuam em revisão."
+    }
+  ],
+  "backlog_proposal": {
+    "close_or_remove_as_tasks": [
+      {
+        "item": "P0: repetir testes do fluxo principal, retomada de simulado, questão anulada e PDF.js offline",
+        "action": "Manter apenas como critério satisfeito/evidência; tirar da fila de execução. Reabrir somente diante de falha reproduzível ou mudança de código relevante.",
+        "evidence": [
+          "packages/app/tests/e2e/simulation-cancelled-official-scoring.spec.ts",
+          "packages/app/tests/e2e/offline-complete-pdf-preload.spec.ts",
+          "packages/app/tests/e2e/pdfjs-real-offline.spec.ts",
+          "docs/roteiro-unicamp-2027-implementacao.md"
+        ]
+      },
+      {
+        "item": "P0: reprocessar PDFs, recortar figuras, conferir cada página ou refazer equivalência entre cadernos",
+        "action": "Remover como trabalho corrente. A política atual usa páginas do PDF.js; o QA Docling é triagem em lote; equivalência/ordem dos representantes já tem auditorias. Preservar exceções detectadas sem substituição automática.",
+        "evidence": [
+          "content/editorial/unicamp-2027/question-pdf-backlog-luna-2026-10-10.json",
+          "content/editorial/unicamp-2027/2025-booklet-equivalence-audit-2026-10-10.json",
+          "content/editorial/unicamp-2027/pdf-qa-issues-audit-2026-10-10.json",
+          "content/editorial/unicamp-2027/pdf-qa-v32-similarity-2026-10-10.jsonl"
+        ],
+        "caveat": "A auditoria por amostra não certifica toda transcrição. Alertas automatizados continuam como exceções consultáveis, sem impor inspeção visual individual."
+      },
+      {
+        "item": "P0/P1: reaplicar limpeza regulatória, preenchimento de proveniência externa e propagação de classificações equivalentes de 2026",
+        "action": "Encerrar; os journals aplicados acima são a evidência. Não reaplicar manifestos antigos nem promover estados editoriais como efeito colateral."
+      },
+      {
+        "item": "P2: regenerar relatórios, validar release/build e repetir testes integrados já aprovados sem alteração no banco/app",
+        "action": "Tornar tarefa condicional ao próximo lote ou mudança de código, não uma pendência permanente. Executar uma única rodada de validação no fechamento do próximo lote."
+      },
+      {
+        "item": "P2: revisão de acessibilidade/alt text das imagens de questão",
+        "action": "Fora do escopo por decisão explícita do usuário; retirar da fila ativa e manter apenas a nota de escopo."
+      }
+    ],
+    "deduplicate_or_reclassify": [
+      {
+        "issue": "Itens de teste aparecem em P0, critério de aceite, release offline e seção de evidências.",
+        "proposal": "Um único item de execução condicional; referências restantes viram evidência concluída, não tarefas duplicadas."
+      },
+      {
+        "issue": "Classificações têm decisões concluídas, holds específicos e afirmações históricas repetidas em várias seções.",
+        "proposal": "Manter uma fila ativa baseada no SQLite atual e nos relatórios; registrar decisões fechadas no relatório de implementação. Não usar os 1.162 vínculos em estados não publicados do inventário geral como quantidade de trabalho ativo: o inventário contém histórico e todo o acervo, fora do recorte da trilha."
+      },
+      {
+        "issue": "Recursos estão com estado publicado/visíveis no SQLite, enquanto várias passagens do backlog usam 'aprovar/liberar' como se fossem a mesma coisa.",
+        "proposal": "Separar três dimensões: disponibilidade do link, pertinência pedagógica para o tópico e licença/direito de reprodução. Os registros atuais de recurso publicados não provam a aprovação das duas últimas dimensões."
+      },
+      {
+        "issue": "O inventário open-records é apresentado perto de pendências operacionais.",
+        "proposal": "Rotular explicitamente como inventário histórico/global. Filtrar a fila operacional pelos três cadernos representantes, fase-alvo, elegibilidade de treino e estado do vínculo."
+      },
+      {
+        "issue": "Revisar toda resolução de 2025/2026 mistura checagem de cobertura/proveniência com revisão pedagógica linha a linha.",
+        "proposal": "Manter como lacuna de proveniência/autoria e validação por exceção. Não transformar em conferência item a item; comentários não localizados não devem ser inventados."
+      }
+    ],
+    "active_quick_wins": [
+      {
+        "priority": 1,
+        "title": "Reconciliar e compactar o próprio backlog",
+        "batch": "Gerar lista operacional a partir dos journals aplicados e dos relatórios com SHA do v36; remover texto duplicado/concluído e deixar apenas itens ativos por pacote: classificações, aulas, materiais e proveniência de resoluções.",
+        "human_sampling": "Nenhuma nova conferência de conteúdo; revisão pontual somente dos itens/decisões que divergirem entre backlog e banco."
+      },
+      {
+        "priority": 2,
+        "title": "Fechar classificações por lote com recorte da trilha ativa",
+        "batch": "Usar active-question-classification-backlog-luna-2026-10-10.json como propostas, revalidar chaves contra o SQLite atual e aplicar somente decisões sem conflito; preservar holds e registrar justificativa/fonte. Excluir tarefas de propagação de 2026 já concluídas.",
+        "human_sampling": "Amostras curtas por tipo de decisão e inspeção dirigida apenas às divergências/baixa confiança; não revisar todos os itens."
+      },
+      {
+        "priority": 3,
+        "title": "Lotes de aulas com reconciliação de versão antes da aplicação",
+        "batch": "Comparar versão corrente do SQLite, versão-alvo e conteúdo dos manifests de humanities/sciences; descartar propostas obsoletas; aplicar em transação apenas patches compatíveis e sem hold. Deixar conflitos de conteúdo/parecer para o lote seguinte.",
+        "evidence": [
+          "content/editorial/unicamp-2027/lesson-backlog-luna-2026-10-10.json",
+          "content/editorial/unicamp-2027/lesson-batch-humanities-2026-10-10.json",
+          "content/editorial/unicamp-2027/lesson-batch-sciences-2026-10-10.json"
+        ],
+        "human_sampling": "Uma amostra por pacote/disciplina e revisão dirigida de casos em hold; nenhuma promoção automática."
+      },
+      {
+        "priority": 4,
+        "title": "Resolver lacunas e inconsistências de recursos por metadados em lote",
+        "batch": "Usar resource-backlog-luna-2026-10-10.json e target-resource-coverage.json; agrupar por causa (link inacessível, exercício visual, gabarito/unidade, escopo limitado, licença desconhecida). Corrigir estado/notas apenas com evidência existente; não abrir manualmente todos os 132 links de novo.",
+        "human_sampling": "Inspecionar poucas amostras de cada causa; encaminhar somente URLs anti-bot ou conteúdo cuja resposta altere elegibilidade de treino."
+      },
+      {
+        "priority": 5,
+        "title": "Revalidar regras apenas quando houver comunicado novo",
+        "batch": "Consultar a página oficial e comparar hash/data/título com as fontes vigentes; sem documento novo, fechar a rodada sem alterar conteúdo. Tratar alocações de vagas fora do caminho urgente de treino.",
+        "human_sampling": "Uma verificação da fonte oficial atual, sem reabrir todo o manual."
+      }
+    ]
+  },
+  "automated_batch_checks": [
+    {
+      "command": "python3 tools/editorial/review-closure/question_coverage.py",
+      "purpose": "Recalcular cobertura de questões elegíveis por tópico-alvo a partir do SQLite e gravar target-question-coverage.json.",
+      "observed_evidence": "Executado durante esta auditoria: tópicos com questão utilizável no filtro atual; nenhum gap reportado. O JSON gerado registra o SHA do banco v36.",
+      "caution": "Mede cobertura mínima no filtro editorial do treino, não profundidade por subtópico nem aprovação total das classificações."
+    },
+    {
+      "command": "python3 tools/editorial/review-closure/resource_coverage.py",
+      "purpose": "Recalcular links de aprendizagem/prática por tópico-alvo.",
+      "observed_evidence": "Executado durante esta auditoria: nenhum gap de aprendizagem/prática no critério do relatório; SHA corresponde a v36.",
+      "caution": "Não certifica qualidade pedagógica, acessibilidade, estabilidade futura de URL ou direito de reprodução."
+    },
+    {
+      "command": "python3 tools/editorial/review_inventory.py --database .local/content/content.sqlite --output /tmp/unicamp-2027-open-records-audit.json",
+      "purpose": "Gerar inventário efêmero de estados editoriais sem sobrescrever o relatório compartilhado.",
+      "caution": "O inventário global contém histórico e itens fora da trilha; filtrar antes de convertê-lo em backlog ativo."
+    },
+    {
+      "command": "python3 - <<'PY'\nimport sqlite3\np='.local/content/content.sqlite'\nc=sqlite3.connect(f'file:{p}?mode=ro', uri=True)\nprint(c.execute('PRAGMA integrity_check').fetchone()[0])\nprint(list(c.execute('PRAGMA foreign_key_check')))\nprint(list(c.execute('SELECT id,version,schema_version,generated_at FROM content_releases ORDER BY id DESC LIMIT 1')))\nPY",
+      "purpose": "Conferir release e integridade em modo somente leitura antes/depois dos próximos lotes.",
+      "observed_evidence": "integrity_check=ok; foreign_key_check vazio; release atual id 293 / v36 / schema 20."
+    },
+    {
+      "command": "sha256sum .local/content/content.sqlite dist/data/content.sqlite",
+      "purpose": "Verificar igualdade do banco fonte e do bundle local quando um lote exigir rebuild.",
+      "observed_evidence": "A igualdade banco/build consta no relatório de implementação v36; repetir apenas após novo release/build, não a cada inspeção editorial."
+    }
+  ],
+  "caveats": [
+    "Esta auditoria não altera o backlog mestre. Ela propõe uma edição posterior, sem executar aprovação editorial.",
+    "O banco v36 está íntegro, mas integridade técnica não prova correção semântica de questões, aulas ou links.",
+    "Os journals confirmam alterações aplicadas, mas alguns hashes intermediários não formam uma cadeia linear simples por causa de rebuilds/releases entre lotes; o hash autoritativo atual é o do release v36.",
+    "Não usar 'publicado' em resources como sinônimo de 'pedagogicamente aprovado'; não inferir permissão de cópia da gratuidade/acesso público.",
+    "Descrições acessíveis e revisão de alt text estão explicitamente fora do escopo vigente, por solicitação do usuário."
+  ],
+  "recommended_backlog_shape": [
+    "Baseline atual e regra de não retrabalho",
+    "Uma fila ativa curta, filtrada para a trilha 2027 e cadernos representantes",
+    "Pacotes em lote: classificações, aulas, materiais, proveniência de resoluções",
+    "Validação automática única após cada lote, mais poucas amostras por classe de risco",
+    "Manutenção temporal: novos comunicados da Comvest e chegada da prova real",
+    "Evidências concluídas fora da lista de tarefas abertas"
+  ]
+}

@@ -13,6 +13,7 @@ auth.json
 node_modules
 dist
 .cache/
+/tmp/
 .lighthouseci/
 .qlty/logs
 .qlty/out
@@ -38,3 +39,5 @@ public/storage
 vendor
 Thumbs.db
 .deno
+__pycache__/
+*.py[cod]

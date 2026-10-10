@@ -1,0 +1,686 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T10:15:45.334875+00:00",
+  "database_before_sha256": "fe68bfc06a47d41bfede583dfc714a7bdc549fb8be77d15363e1b20aef41b563",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 603,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 603,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+          "detail": "Fonte direta do recurso Coesão e coerência — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 604,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 604,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+          "detail": "Fonte direta do recurso Semântica — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 605,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 605,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+          "detail": "Fonte direta do recurso Variação linguística — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 606,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 606,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+          "detail": "Fonte direta do recurso Linguagem literária — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 607,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 607,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+          "detail": "Fonte direta do recurso Conjuntos numéricos — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 608,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 608,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+          "detail": "Fonte direta do recurso Área e perímetro — prática Khan Academy; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 609,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 609,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+          "detail": "Fonte direta do recurso Triângulos retângulos e trigonometria — Khan Academy; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 610,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 610,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+          "detail": "Fonte direta do recurso Fórmula da distância — Khan Academy; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 611,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 611,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+          "detail": "Fonte direta do recurso Distância entre ponto e reta — prática Khan Academy; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 612,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 612,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab",
+          "detail": "Fonte direta do recurso How to be a critical reader — OpenLearn; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 613,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 613,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+          "detail": "Fonte direta do recurso Geografia física — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 614,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 614,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+          "detail": "Fonte direta do recurso Hidrografia, clima e relevo — prática, questões 1–3; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 615,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 615,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/grecia-antiga.htm",
+          "detail": "Fonte direta do recurso Grécia Antiga — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 616,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 616,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/roma-antiga.htm",
+          "detail": "Fonte direta do recurso Roma Antiga — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 617,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 617,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/idade-media.htm",
+          "detail": "Fonte direta do recurso Idade Média — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 618,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 618,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+          "detail": "Fonte direta do recurso Vida e evolução: seres vivos na natureza — Khan Academy; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 619,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 619,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio",
+          "detail": "Fonte direta do recurso Física do Ensino Médio — Khan Academy; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 620,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 620,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio/x6443ccf4d35f6b36%3Aforcas-e-leis-de-newton/x6443ccf4d35f6b36%3A1-lei-de-newton/e/newtons-first-law-exercises-ap1",
+          "detail": "Fonte direta do recurso Primeira lei de Newton — prática Khan Academy; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 621,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 621,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/astronomia.htm",
+          "detail": "Fonte direta do recurso Astronomia — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 622,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 622,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/sistema-solar.htm",
+          "detail": "Fonte direta do recurso Sistema Solar — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 623,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 623,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lixo-espacial.htm",
+          "detail": "Fonte direta do recurso Lixo espacial — prática, questões 1–2; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 624,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 624,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/calorimetria-i.htm",
+          "detail": "Fonte direta do recurso Calorimetria — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 625,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 625,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/termodinamica.htm",
+          "detail": "Fonte direta do recurso Termodinâmica — Brasil Escola; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 626,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 626,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calorimetria.htm",
+          "detail": "Fonte direta do recurso Calorimetria — prática, questões 1–2 e 4–12; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 627,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 627,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+          "detail": "Fonte direta do recurso Estados da matéria — Khan Academy; modalidade learning, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 628,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 628,
+        "stage_id": 11
+      },
+      "reason": "Concluir o escopo de publicação do recurso, ligando-o apenas à primeira fase Unicamp 2027 já indicada pelo vínculo de tópico aprovado.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+          "detail": "Fonte direta do recurso Pilhas e baterias — prática, questão 1; modalidade practice, estado editorial published conforme auditoria aplicada."
+        },
+        {
+          "locator": "sqlite://stages/11",
+          "detail": "A identidade do stage 11 foi validada como unicamp-2027/primeira-fase pelo validador de resource_targets."
+        }
+      ],
+      "action": "insert"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T101545345424Z.sqlite",
+  "database_after_sha256": "bd80adc7385275221e210d531dcfc69154b3d9f3f7c9414526b7ee363fef20d7"
+}

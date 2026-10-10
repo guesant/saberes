@@ -1,0 +1,64 @@
+{
+  "summary": "Promove o vídeo da Khan Academy sobre orações e períodos a material introdutório de aprendizagem de Sintaxe após conferir a página, a transcrição e a licença indicada; mantém somente link e metadados, sem copiar o conteúdo.",
+  "decisions": [
+    {
+      "table": "source_documents",
+      "key": {"id": 612},
+      "expected": {"exists": false},
+      "changes": {
+        "id": 612,
+        "title": "O que são orações e períodos? — Khan Academy",
+        "url": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa:lp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa:lp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos",
+        "provider": "Khan Academy",
+        "kind": "web",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": "CC BY-NC-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+        "attribution": "Khan Academy Brasil, vídeo “O que são orações e períodos?”",
+        "rights_note": "A página identifica o recurso sob CC BY-NC-SA 4.0. O Saberes mantém somente o link e metadados; não copiar, embutir, traduzir, adaptar ou redistribuir vídeo, transcrição, legendas, miniatura ou imagens. Qualquer reutilização deve cumprir as condições não comerciais e ShareAlike e verificar componentes de terceiros."
+      },
+      "reason": "Registrar a fonte e as condições específicas de reutilização vistas na página do item; licença não comercial não autoriza incorporar o vídeo ou a transcrição ao produto.",
+      "evidence": [
+        {"locator": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa:lp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa:lp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos", "detail": "Página do item apresenta o aviso de que o conteúdo é gratuito, título e descrição do vídeo, transcrição integral acessível e link explícito para CC BY-NC-SA 4.0."},
+        {"locator": "https://www.youtube.com/watch?v=BqJGRYEW4Ok", "detail": "Identificador do player incorporado na própria página da Khan Academy; registrado apenas para rastreabilidade, sem baixar nem copiar o vídeo."}
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {"id": 258},
+      "expected": {
+        "kind": "article",
+        "editorial_status": "published",
+        "availability_mode": "consultation_only",
+        "source_document_id": null,
+        "editorial_note": "The linked video was not watched and no full transcript was checked. Consultation only; do not present it as a reviewed lesson."
+      },
+      "changes": {
+        "kind": "video",
+        "availability_mode": "learning",
+        "source_document_id": 612,
+        "editorial_note": "Auditoria editorial em 2026-10-09: a página pública indica acesso gratuito, identifica o item como vídeo de 3:06 e expõe transcrição. A transcrição foi lida: diferencia frase, oração e período simples/composto com exemplos. Recurso introdutório pertinente a Sintaxe; não cobre o tópico inteiro. Há legenda e transcrição; não foi feita auditoria formal de teclado, leitor de tela ou WCAG. Direitos: CC BY-NC-SA 4.0; o Saberes oferece apenas o hyperlink, sem copiar ou adaptar o conteúdo."
+      },
+      "reason": "A inspeção da página e leitura da transcrição confirma um conteúdo didático introdutório e diretamente alinhado a Sintaxe. Corrige o formato cadastrado e muda de consulta para aprendizagem, sem declarar cobertura integral ou acessibilidade formal.",
+      "evidence": [
+        {"locator": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa:lp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa:lp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos", "detail": "Página inspecionada no navegador: título, duração, indicação de gratuidade, seção Sobre este vídeo e transcrição, que explica frase, oração e períodos simples/compostos."}
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {"resource_id": 258, "topic_id": 2483, "curriculum_topic_id": null},
+      "expected": {"review_status": "published", "relevance_status": "relevant", "accessibility_status": "unknown"},
+      "changes": {
+        "accessibility_status": "checked",
+        "review_note": "Correspondência introdutória aprovada: o vídeo e a transcrição distinguem frase, oração e período e dão exemplos, alinhados ao tópico Sintaxe. Transcrição e controles de legenda foram localizados; keyboard, tecnologia assistiva e WCAG não foram formalmente testados. CC BY-NC-SA 4.0: somente hyperlink, sem cópia. Não é cobertura completa do tópico."
+      },
+      "reason": "A relação temática já era pertinente; registrar agora a auditoria básica do conteúdo e da transcrição sem exagerar a validação de acessibilidade.",
+      "evidence": [
+        {"locator": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa:lp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa:lp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos", "detail": "Transcrição da videoaula cobre frase, oração e período simples/composto; a página expõe controles de legenda e transcrição."},
+        {"locator": "sqlite://canonical_topics/2483", "detail": "O tópico canônico 2483 é Sintaxe; a relação aprovada descreve uso complementar e introdutório."}
+      ]
+    }
+  ],
+  "blocked": []
+}

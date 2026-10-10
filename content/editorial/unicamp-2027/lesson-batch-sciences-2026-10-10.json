@@ -1,0 +1,368 @@
+{
+  "schema": "saberes.editorial.lesson-review-recommendations/v1",
+  "created_at": "2026-10-10",
+  "edition": "Vestibular Unicamp 2027",
+  "stage": "primeira fase",
+  "purpose": "Reconciliar os estados de 2500 e 2506 e emitir recomendações editoriais por seção somente para 2501, 2504, 2507 e 2510.",
+  "editorial_notice": "Recomendações autorais para revisão. Não são conteúdo oficial da Comvest e não constituem aprovação das aulas em hold.",
+  "write_policy": {
+    "sqlite_modified": false,
+    "other_repository_files_modified": false,
+    "only_this_package_created": true,
+    "apply_ready": false
+  },
+  "database_snapshot": {
+    "path": ".local/content/content.sqlite",
+    "access": "read_only",
+    "sha256": "6f9f28511663f16987e04972edc7c7b9bf16210cf47e1e9c46bdd19d724cd1a8",
+    "note": "O status editorial é lido de lessons.review_status. is_published=1, isoladamente, não demonstra aprovação editorial."
+  },
+  "official_program": {
+    "source_document_id": 148,
+    "title": "Programa das Provas — Vestibular 2027",
+    "institution": "Comvest / Unicamp",
+    "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+    "local_copy": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+    "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+    "verification": "Checksum coincide com o documento local de staging; páginas impressas 11–14 renderizadas e conferidas visualmente.",
+    "scope_by_topic": [
+      {
+        "curriculum_topic_id": 2500,
+        "pages": [11, 12],
+        "official_scope": "Biologia: ambiente e vida, biodiversidade, classificação dos seres vivos, vírus, bactérias, protistas, fungos, plantas, algas e animais; saúde humana, sistemas, reprodução, contracepção, hormônios, ISTs, saneamento e doenças causadas por microrganismos e vetores."
+      },
+      {
+        "curriculum_topic_id": 2501,
+        "pages": [12],
+        "official_scope": "Fundamentos da Física e Mecânica: grandezas e medidas, relações escalares/vetoriais, gráficos e estimativas; cinemática em uma e duas dimensões, leis de Newton, atrito, peso e gravidade, torque/equilíbrio, gravitação universal, sistema solar e leis de Kepler, quantidade de movimento/conservação, trabalho/energia, potência e hidrostática."
+      },
+      {
+        "curriculum_topic_id": 2504,
+        "pages": [13],
+        "official_scope": "Óptica e ondas: ondas planas e esféricas, ondas em cordas e sonoras, polarização, interferência e difração; espelhos planos e esféricos; dispersão, refração e reflexão total; prismas, lentes e instrumentos ópticos; caráter ondulatório da luz, espectro eletromagnético e óptica da visão."
+      },
+      {
+        "curriculum_topic_id": 2506,
+        "pages": [13],
+        "official_scope": "Materiais e gases: estados físicos, leis dos gases ideais, Avogadro, energia cinética média, misturas e lei de Dalton, difusão, gases reais/liquefação, líquidos/sólidos, pressão de vapor, soluções, eletrólitos, concentrações e coloides."
+      },
+      {
+        "curriculum_topic_id": 2507,
+        "pages": [13, 14],
+        "official_scope": "Estrutura atômica e classificação periódica: subpartículas, níveis/distribuição eletrônica, Z/A, isótopos, propriedades periódicas e radioatividade/decaimento; ligação química: modelos iônico, covalente e metálico, relação entre ligação e propriedades, polaridade e interações intermoleculares, incluindo Van der Waals e ligação de hidrogênio."
+      },
+      {
+        "curriculum_topic_id": 2510,
+        "pages": [14],
+        "official_scope": "Eletroquímica: oxidação/redução, equações, NOX, agentes, potenciais padrão, pilhas, Faraday e eletrólise; compostos orgânicos: fórmulas molecular/estrutural/Lewis, cadeias, ligações/isomeria, funções, nomenclatura, obtenção/propriedades, biomoléculas/enzimas e polímeros."
+      }
+    ]
+  },
+  "backlog_reconciliation": [
+    {
+      "reference": "docs/backlog-preparacao-unicamp-2027.md:89,112,131",
+      "finding": "O backlog ainda descreve 2500 como conflito aberto e diz que a proposta v2 não foi aplicada. Essa descrição está desatualizada em relação ao SQLite e à revisão versionada mais recente.",
+      "recommendation": "Na próxima atualização autorizada do backlog, registrar 2500 como reconciliado em 1.3.2 e manter 2506 como conflito não resolvido por divergência de conteúdo/versão. Este pacote não edita o backlog."
+    },
+    {
+      "reference": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json",
+      "finding": "A revisão v2 recomenda publish para 2500 em 1.3.2 e hold para 2501, 2504, 2507 e 2510.",
+      "recommendation": "Usar as decisões por versão e seção abaixo; não inferir aprovação das quatro aulas em hold pelo fato de a proposta já estar no SQLite."
+    }
+  ],
+  "state_reconciliation": [
+    {
+      "curriculum_topic_id": 2500,
+      "label": "Biodiversidade e saúde humana",
+      "current_sqlite": {
+        "lesson_ids": [97, 98, 99],
+        "editorial_version": "1.3.2",
+        "review_status": "published",
+        "is_published": true
+      },
+      "proposal_comparison": {
+        "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json",
+        "version": "1.3.2",
+        "sqlite_sections_match_proposal_exactly": true,
+        "section_ids": [97, 98, 99]
+      },
+      "latest_review": {
+        "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json",
+        "decision": "publish",
+        "reviewed_version": "1.3.2",
+        "proposed_status": "published"
+      },
+      "reconciliation": "resolved",
+      "recommendation": "Manter publicado. O hold anterior referia-se à versão 1.3.1; a correção epidemiológica foi incorporada, a versão 1.3.2 no SQLite corresponde exatamente à proposta revisada e o parecer subsequente recomenda publicação."
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "label": "Materiais, gases, líquidos e sólidos",
+      "current_sqlite": {
+        "lesson_ids": [115, 116, 117],
+        "editorial_version": "1.3.1",
+        "review_status": "published",
+        "is_published": true,
+        "section_ids": [115, 116, 117],
+        "contains_mean_translational_kinetic_energy_equation": false,
+        "contains_example_of_temperature_doubling_and_mean_energy": false
+      },
+      "approval_record": {
+        "file": "content/editorial/unicamp-2027/lesson-audit-2506-final-approval-2026-10-10.json",
+        "reviewed_version": "1.3.1",
+        "decision": "publish",
+        "claims_verified": [
+          "⟨K⟩=3kBT/2 e a proporcionalidade da energia translacional média com T absoluta",
+          "exemplo de duplicação de T absoluta",
+          "relações de gases, Dalton e concentração de NaCl"
+        ]
+      },
+      "candidate_content": {
+        "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-2026-10-10.json",
+        "proposed_version": "1.3.2",
+        "contains_mean_energy_theory_example_and_self_check": true,
+        "sqlite_sections_match_candidate_exactly": false
+      },
+      "conflict": {
+        "status": "unresolved",
+        "detail": "O registro de aprovação declara ter verificado energia cinética translacional média e seu exemplo, mas o conteúdo efetivo das seções atuais 115–117, versionadas no SQLite como 1.3.1, não contém esses itens. O texto que os contém está na proposta 1.3.2, que não corresponde às seções publicadas. Logo, não é possível atribuir a aprovação ao conteúdo atual com evidência rastreável."
+      },
+      "recommendation": {
+        "decision": "do_not_approve_current_sqlite_content",
+        "target_status_for_next_database_change": "review",
+        "exact_next_step": "Manter o material acessível apenas com indicação editorial de revisão até que se escolha uma fonte de verdade: (a) integrar e revisar exatamente as três seções da proposta 1.3.2 que contêm a equação ⟨K⟩=3kBT/2, o exemplo 300 K→600 K e a autochecagem correspondente, depois registrar a aprovação contra essa versão; ou (b) revisar o conteúdo 1.3.1 atual e substituir o registro de aprovação por um parecer que cite exatamente esse texto. Não reutilizar a aprovação atual sem reconciliar a identidade do conteúdo."
+      }
+    }
+  ],
+  "lesson_recommendations": [
+    {
+      "curriculum_topic_id": 2501,
+      "label": "Fundamentos da Física e Mecânica",
+      "current_sqlite": {
+        "lesson_ids": [100, 101, 102],
+        "editorial_version": "1.3.2",
+        "review_status": "review",
+        "is_published": true,
+        "section_ids": [100, 101, 102]
+      },
+      "proposal": {
+        "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json",
+        "version": "1.3.2",
+        "sqlite_sections_match_proposal_exactly": true
+      },
+      "decision": "hold",
+      "reason": "A proposta corrigiu impulso e gravitação universal, mas as três seções ainda parecem substituir o tópico inteiro. O programa oficial inclui tópicos mecânicos que são apenas mencionados ou não são ensinados/praticados.",
+      "section_recommendations": [
+        {
+          "section_id": 100,
+          "type": "theory",
+          "title": "Vetores, mecânica e gravitação universal",
+          "action": "append_or_split_into_linked_steps",
+          "exact_recommendation": "Explicar, sem apenas listar: atrito estático (0≤fₑ≤μₑN) e cinético (fₖ≈μₖN, no modelo simples); torque τ=rF senθ e condições de equilíbrio translacional e rotacional; leis de Kepler (órbitas elípticas, áreas iguais em tempos iguais, T²∝a³ para o mesmo centro); trabalho W=Fd cosθ, energia cinética e potenciais elástica/gravitacional; potência média P=W/Δt; pressão hidrostática p=p₀+ρgh e empuxo igual ao peso do fluido deslocado. Se estes itens forem etapas separadas, identificar esta aula como parcial e apontar links reais para as etapas faltantes; não a apresentar como cobertura integral enquanto esses links não existirem."
+        },
+        {
+          "section_id": 101,
+          "type": "example",
+          "title": "Exemplo resolvido: impulso e força gravitacional",
+          "action": "append_worked_examples",
+          "exact_recommendation": "Manter os cálculos de impulso, gravitação e lançamento 2D já conferidos; acrescentar uma aplicação resolvida de cada bloco ausente: bloco em superfície horizontal para distinguir atrito estático/cinético; alavanca com soma de torques nula; comparação orbital usando T²/a³ constante; levantamento de uma carga para calcular trabalho e potência; e pressão/empuxo em fluido com p_rel=ρgh. Informar dados, unidades, hipótese e resultado numérico em cada mini-exemplo."
+        },
+        {
+          "section_id": 102,
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "action": "extend_self_check_and_scope_label",
+          "exact_recommendation": "Acrescentar uma autochecagem curta, com respostas, para: diferença entre atrito estático e cinético; condição Στ=0; razão entre períodos orbitais pela lei de Kepler; cálculo de trabalho/potência; e pressão manométrica/empuxo. Declarar no início ou no fim se a aula é parcial ou integral e indicar o próximo passo da trilha."
+        }
+      ],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "pages": [12],
+          "supports": "Programa de Mecânica inclui atrito, torque/equilíbrio, gravitação e leis de Kepler, trabalho/energia, potência e hidrostática."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json",
+          "supports": "Hold: faltam leis de Kepler, atrito, torque/equilíbrio, potência e tratamento explícito com explicação/prática de trabalho/energia e hidrostática."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json",
+          "supports": "Mantém hold até delimitar a aula como parcial e conectá-la às etapas restantes."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "label": "Óptica e ondas",
+      "current_sqlite": {
+        "lesson_ids": [109, 110, 111],
+        "editorial_version": "1.2.2",
+        "review_status": "review",
+        "is_published": true,
+        "section_ids": [109, 110, 111]
+      },
+      "proposal": {
+        "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json",
+        "version": "1.2.2",
+        "sqlite_sections_match_proposal_exactly": true
+      },
+      "decision": "hold",
+      "reason": "As contas de comprimento de onda, interferência e lente estão corretas, mas a proposta não cobre vários itens explícitos do programa e não delimita ser uma etapa parcial.",
+      "section_recommendations": [
+        {
+          "section_id": 109,
+          "type": "theory",
+          "title": "Ondas, interferência e imagens ópticas",
+          "action": "append_or_split_into_linked_steps",
+          "exact_recommendation": "Acrescentar explicação explícita de frentes planas e esféricas; ondas mecânicas em cordas e ondas sonoras (incluindo que som no ar é longitudinal); polarização e por que é característica de ondas transversais; espelhos planos e esféricos; dispersão em prismas; função básica de lentes/instrumentos; espectro eletromagnético; e formação de imagem no olho/óptica da visão. Definir quais sinais e equações de espelhos/lentes serão adotados, incluindo os casos usados, antes de generalizar para imagem virtual ou lente divergente. Se houver divisão em aulas, marcar esta como etapa parcial e ligar as demais."
+        },
+        {
+          "section_id": 110,
+          "type": "example",
+          "title": "Exemplo resolvido: comprimento de onda, interferência e lente",
+          "action": "append_complementary_examples",
+          "exact_recommendation": "Preservar os exemplos numéricos já conferidos. Acrescentar mini-aplicações que demonstrem: frente esférica de fonte puntiforme; polarização de uma onda transversal e impossibilidade de polarizar som no ar; imagem em espelho plano e em espelho esférico com convenção declarada; separação de cores por prisma; uso de lente/instrumento e acomodação do olho para focar na retina; localização qualitativa de rádio, visível e raios X no espectro. Não extrapolar a convenção de lentes atual para casos não definidos."
+        },
+        {
+          "section_id": 111,
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "action": "extend_self_check_and_scope_label",
+          "exact_recommendation": "Adicionar perguntas com respostas para: classificar som e luz como mecânicos/eletromagnéticos; explicar por que som no ar não é polarizado; identificar frentes planas/esféricas; prever a imagem em espelho plano; explicar dispersão no prisma; reconhecer o papel da lente/retina; e localizar rádio, luz visível e raios X no espectro. Indicar explicitamente as etapas restantes se a cobertura for dividida."
+        }
+      ],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "pages": [13],
+          "supports": "Lista oficial inclui ondas planas/esféricas, cordas/som, polarização, espelhos, prismas, instrumentos, espectro eletromagnético e óptica da visão."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json",
+          "supports": "Hold pelas lacunas de escopo e pela generalização incompleta de sinais para objetos virtuais/lentes divergentes."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json",
+          "supports": "Mantém hold até explicitar escopo parcial e definições para generalizar a convenção de lentes/ondas."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "label": "Estrutura atômica, classificação periódica e ligação química",
+      "current_sqlite": {
+        "lesson_ids": [118, 119, 120],
+        "editorial_version": "1.1.2",
+        "review_status": "review",
+        "is_published": true,
+        "section_ids": [118, 119, 120]
+      },
+      "proposal": {
+        "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json",
+        "version": "1.1.2",
+        "sqlite_sections_match_proposal_exactly": true
+      },
+      "decision": "hold",
+      "reason": "A versão atual corrige os cálculos e inclui os termos exigidos, mas os modelos de ligação permanecem declarativos; quase não há comparação aplicada entre estrutura e propriedades.",
+      "section_recommendations": [
+        {
+          "section_id": 118,
+          "type": "theory",
+          "title": "Estrutura atômica, periodicidade e ligações",
+          "action": "append_conceptual_comparison",
+          "exact_recommendation": "Depois de apresentar os modelos, comparar explicitamente: ligação iônica como atração em rede entre íons; covalente como compartilhamento localizado/deslocalizado de pares; metálica como cátions/rede com elétrons deslocalizados. Distinguir ligação intrapartícula de interação intermolecular. Relacionar estrutura a propriedades sem transformar tendências em regras absolutas: NaCl sólido tem rede iônica e não conduz como sólido, mas conduz fundido/em solução por íons móveis; Cu conduz no estado sólido pelo modelo metálico; H₂O tem ligações O–H polares e geometria angular, portanto molécula polar; CO₂ tem ligações C=O polares, mas geometria linear e dipolos que se cancelam. Explicar que forças de dispersão existem entre partículas e que ligação de hidrogênio requer H ligado a N/O/F e aceitador com par disponível."
+        },
+        {
+          "section_id": 119,
+          "type": "example",
+          "title": "Exemplo resolvido: afinidade eletrônica, Lewis e meia-vida",
+          "action": "append_comparative_examples",
+          "exact_recommendation": "Manter valores NIST, arredondamentos e equação beta já verificados. Acrescentar um quadro resolvido NaCl/Cu/H₂O/CO₂: identificar modelo predominante, prever condução no estado sólido ou em solução e decidir polaridade molecular a partir da geometria; explicar em uma linha qual característica estrutural sustenta cada resposta. Incluir uma comparação de substância molecular com e sem ligação de hidrogênio e relacioná-la qualitativamente a uma propriedade, explicitando que a propriedade também depende de massa/estrutura e não somente de uma força isolada."
+        },
+        {
+          "section_id": 120,
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "action": "add_applied_checks",
+          "exact_recommendation": "Acrescentar respostas comentadas para: por que NaCl sólido não conduz como solução aquosa; qual modelo explica a condução do Cu sólido; por que H₂O é polar e CO₂ apolar; e que condições definem uma ligação de hidrogênio. A autochecagem atual de Lewis/H–Cl deve permanecer, mas não substitui comparação dos três modelos de ligação e suas propriedades."
+        }
+      ],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "pages": [13, 14],
+          "supports": "Programa exige modelos iônico/covalente/metálico, propriedades das substâncias, polaridade de moléculas simples e interações intermoleculares."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json",
+          "supports": "Hold: modelos são listados, mas não explicados/comparados com exemplos nem ligados às propriedades previstas."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json",
+          "supports": "Pede exemplos breves para NaCl, CO₂/H₂O e substância metálica; cálculos e configuração foram conferidos."
+        }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "label": "Eletroquímica e compostos orgânicos",
+      "current_sqlite": {
+        "lesson_ids": [127, 128, 129],
+        "editorial_version": "1.3.2",
+        "review_status": "review",
+        "is_published": true,
+        "section_ids": [127, 128, 129]
+      },
+      "proposal": {
+        "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json",
+        "version": "1.3.2",
+        "sqlite_sections_match_proposal_exactly": true
+      },
+      "decision": "hold",
+      "reason": "As melhorias de fórmulas, funções, obtenção, propriedades, polimerização e eletrólise estão presentes, mas falta isomeria aplicada, atividade sobre biomoléculas/enzimas e exemplo numérico de pilha com potenciais padrão.",
+      "section_recommendations": [
+        {
+          "section_id": 127,
+          "type": "theory",
+          "title": "Eletroquímica e leitura de compostos orgânicos",
+          "action": "append_isomerism_and_biomolecule_applications",
+          "exact_recommendation": "Explicitar isomeria constitucional: mesma fórmula molecular, conectividades diferentes, como etanol e éter dimetílico (C₂H₆O), e propanal/propanona (C₃H₆O); indicar que diferenças estruturais podem alterar propriedades. Transformar a lista de biomoléculas em comparação funcional: carboidratos como fonte/reserva estrutural conforme o composto; lipídios em reserva energética e membranas; proteínas como polímeros de aminoácidos; enzimas como catalisadores específicos, em geral proteínas, que reduzem energia de ativação sem deslocar o equilíbrio. Distinguir isso de polímeros sintéticos e manter a ressalva de que há RNAs catalíticos."
+        },
+        {
+          "section_id": 128,
+          "type": "example",
+          "title": "Exemplo resolvido: Lewis, função, nomenclatura, polímero e eletrólise",
+          "action": "append_cell_and_isomerism_examples",
+          "exact_recommendation": "Manter a eletrólise de cobre, já conferida, e acrescentar uma pilha Zn/Cu: Zn→Zn²⁺+2e⁻ no ânodo; Cu²⁺+2e⁻→Cu no cátodo; usando E°red(Cu²⁺/Cu)=+0,34 V e E°red(Zn²⁺/Zn)=−0,76 V, E°cel=+1,10 V. Mostrar isomeria funcional com CH₃CH₂OH e CH₃OCH₃, mesma fórmula C₂H₆O, funções/propriedades diferentes. Incluir aplicação curta de amilase na hidrólise de amido e comparação entre carboidrato, lipídio e proteína; identificar substrato/resultado sem atribuir à enzima alteração do equilíbrio."
+        },
+        {
+          "section_id": 129,
+          "type": "summary",
+          "title": "Síntese e autochecagem",
+          "action": "add_isomerism_cell_and_biomolecule_checks",
+          "exact_recommendation": "Acrescentar autochecagem respondida: qual é a relação entre etanol e éter dimetílico (isômeros constitucionais de função); por que Zn oxida e Cu²⁺ reduz na pilha; qual é o valor de E°cel sob os dados fornecidos (+1,10 V); que papel desempenha uma enzima na reação; e uma diferença estrutural/funcional entre carboidrato, lipídio e proteína. Manter separadas as respostas de pilha galvânica e eletrólise."
+        }
+      ],
+      "evidence": [
+        {
+          "source_document_id": 148,
+          "pages": [14],
+          "supports": "Programa exige potenciais padrão/pilhas/Faraday/eletrólise e, em orgânica, isomeria, fórmulas, funções, propriedades, biomoléculas/enzimas e polímeros."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json",
+          "supports": "Hold: isomeria e aplicação de biomoléculas/enzimas faltantes; a seção de orgânica permanece declarativa nesses pontos."
+        },
+        {
+          "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json",
+          "supports": "Hold: incluir exemplo Zn/Cu e aplicações curtas de isomeria e biomoléculas/enzimas."
+        }
+      ]
+    }
+  ],
+  "publication_gate": {
+    "for_topics_2501_2504_2507_2510": "Manter review e não declarar cobertura integral aprovada até atender as recomendações por seção ou delimitar explicitamente cada aula como etapa parcial com próximos passos navegáveis e existentes.",
+    "for_topic_2500": "A versão 1.3.2 está reconciliada e pode permanecer published conforme o parecer versionado correspondente.",
+    "for_topic_2506": "Conflito não resolvido: não tratar a aula atual do SQLite como aprovada até reconciliar a identidade exata do conteúdo revisado."
+  }
+}

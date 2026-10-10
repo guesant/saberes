@@ -1,0 +1,2224 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:02:35.855035+00:00",
+  "database_before_sha256": "197e8a02444b1521f24e2fd602663fd02cd2344b2f9763bf6634197081d0936c",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "questions",
+      "key": {
+        "id": 1
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 1 já está definitive/single_choice B. Asset(s) associado(s) 469 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-03.png",
+          "detail": "Caderno QZ 2025, página física 3 (página impressa 1), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 1.",
+          "sha256": "d8faa1e55cabc2d2d147049abb42c49b8e8790e1e71bfad18187d599b75a9fa6"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q01-map-scale-generalization.png",
+          "detail": "Asset já vinculado em question_assets (ID 469), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 be77477916d198347ec1ee69421af333a3cfadb5927d1254b88ff2a2aeb6c20f.",
+          "sha256": "be77477916d198347ec1ee69421af333a3cfadb5927d1254b88ff2a2aeb6c20f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 1: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 3 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 1
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 1,
+        "number": 1,
+        "source_page": 3
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 1 (PK 1) vinculada à questão 1, página de início 3, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-03.png",
+          "detail": "Caderno QZ 2025, página física 3 (página impressa 1), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 1.",
+          "sha256": "d8faa1e55cabc2d2d147049abb42c49b8e8790e1e71bfad18187d599b75a9fa6"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 1: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 3 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 2
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 2 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-03.png",
+          "detail": "Caderno QZ 2025, página física 3 (página impressa 1), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 2.",
+          "sha256": "d8faa1e55cabc2d2d147049abb42c49b8e8790e1e71bfad18187d599b75a9fa6"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 2: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 3 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 2
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 2,
+        "number": 2,
+        "source_page": 3
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 2 (PK 2) vinculada à questão 2, página de início 3, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-03.png",
+          "detail": "Caderno QZ 2025, página física 3 (página impressa 1), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 2.",
+          "sha256": "d8faa1e55cabc2d2d147049abb42c49b8e8790e1e71bfad18187d599b75a9fa6"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 2: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 3 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 4
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 4 já está definitive/single_choice C. Asset(s) associado(s) 471 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-04.png",
+          "detail": "Caderno QZ 2025, página física 4 (página impressa 2), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 4.",
+          "sha256": "f65fc55313a5375444ebfda2a3f38601d33ee9b23da262d99ade73b506c19d29"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q04-crystalline-shields-map.png",
+          "detail": "Asset já vinculado em question_assets (ID 471), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 f740c713689a511d373387653fd18ac6c1cf112c011466b849b3bcc794f44f04.",
+          "sha256": "f740c713689a511d373387653fd18ac6c1cf112c011466b849b3bcc794f44f04"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 4: alternativa C. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 4 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 4
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 4,
+        "number": 4,
+        "source_page": 4
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 4 (PK 4) vinculada à questão 4, página de início 4, conferida com texto/opções e chave definitive C; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-04.png",
+          "detail": "Caderno QZ 2025, página física 4 (página impressa 2), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 4.",
+          "sha256": "f65fc55313a5375444ebfda2a3f38601d33ee9b23da262d99ade73b506c19d29"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 4: alternativa C. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 4 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 5
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 5 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-04.png",
+          "detail": "Caderno QZ 2025, página física 4 (página impressa 2), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 5.",
+          "sha256": "f65fc55313a5375444ebfda2a3f38601d33ee9b23da262d99ade73b506c19d29"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 5.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 5: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 4 e 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 5
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 5,
+        "number": 5,
+        "source_page": 4
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 5 (PK 5) vinculada à questão 5, página de início 4, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-04.png",
+          "detail": "Caderno QZ 2025, página física 4 (página impressa 2), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 5.",
+          "sha256": "f65fc55313a5375444ebfda2a3f38601d33ee9b23da262d99ade73b506c19d29"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 5.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 5: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 4 e 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 6
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 6 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-04.png",
+          "detail": "Caderno QZ 2025, página física 4 (página impressa 2), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 6.",
+          "sha256": "f65fc55313a5375444ebfda2a3f38601d33ee9b23da262d99ade73b506c19d29"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 6.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 6: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 4 e 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 6
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 6,
+        "number": 6,
+        "source_page": 4
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 6 (PK 6) vinculada à questão 6, página de início 4, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-04.png",
+          "detail": "Caderno QZ 2025, página física 4 (página impressa 2), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 6.",
+          "sha256": "f65fc55313a5375444ebfda2a3f38601d33ee9b23da262d99ade73b506c19d29"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 6.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 6: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 4 e 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 7
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 7 já está definitive/single_choice D. Asset(s) associado(s) 473 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 7.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q07-maritime-zones-map.png",
+          "detail": "Asset já vinculado em question_assets (ID 473), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 3cfe377dd13084855e1020d968cc860d6f29c8cff9dd226970e2b1de060c71cc.",
+          "sha256": "3cfe377dd13084855e1020d968cc860d6f29c8cff9dd226970e2b1de060c71cc"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 7: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 7
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 7,
+        "number": 7,
+        "source_page": 5
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 7 (PK 7) vinculada à questão 7, página de início 5, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 7.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 7: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 8
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 8 já está definitive/single_choice D. Asset(s) associado(s) 474 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 8.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q08-flight-wind-diagram.png",
+          "detail": "Asset já vinculado em question_assets (ID 474), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 c80d0684c75f402503f3a3e14044f0ca8725b6397521ac9d4885de2a57178e07.",
+          "sha256": "c80d0684c75f402503f3a3e14044f0ca8725b6397521ac9d4885de2a57178e07"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 8: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 8
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 8,
+        "number": 8,
+        "source_page": 5
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 8 (PK 8) vinculada à questão 8, página de início 5, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-05.png",
+          "detail": "Caderno QZ 2025, página física 5 (página impressa 3), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 8.",
+          "sha256": "9cef2caa4301cbff950c9145bb837f97b1fc43193e09acfca45b6f0cd548808a"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 8: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 5 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 9
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 9 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 9.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 9: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 9
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 9,
+        "number": 9,
+        "source_page": 6
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 9 (PK 9) vinculada à questão 9, página de início 6, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 9.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 9: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 10
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 10 já está definitive/single_choice A. Asset(s) associado(s) 475, 476 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 10.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q10-earth-moon-position-diagram.png",
+          "detail": "Asset já vinculado em question_assets (ID 475), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 4fa26c69a50f548f4622af087fb3f11f79bf70a823d7688b99be4fa1640b4a9b.",
+          "sha256": "4fa26c69a50f548f4622af087fb3f11f79bf70a823d7688b99be4fa1640b4a9b"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q10-gravitational-acceleration-graph.png",
+          "detail": "Asset já vinculado em question_assets (ID 476), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 5e0cea53f96d7d5db112265ff70feb8490d6c9cdb9d6ff04561411186e6c6bcd.",
+          "sha256": "5e0cea53f96d7d5db112265ff70feb8490d6c9cdb9d6ff04561411186e6c6bcd"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 10: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 10
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 10,
+        "number": 10,
+        "source_page": 6
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 10 (PK 10) vinculada à questão 10, página de início 6, conferida com texto/opções e chave definitive A; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 10.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 10: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 11
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 11 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 11.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 11: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 11
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 11,
+        "number": 11,
+        "source_page": 6
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 11 (PK 11) vinculada à questão 11, página de início 6, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 11.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 11: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 12
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 12 já está definitive/single_choice B. Asset(s) associado(s) 477 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 12.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q12-negative-thermal-expansion-graph.png",
+          "detail": "Asset já vinculado em question_assets (ID 477), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 0057d5b88fa6d71b176d5d823bf1c0d6def183e1ce8d935dca1b9c219340566e.",
+          "sha256": "0057d5b88fa6d71b176d5d823bf1c0d6def183e1ce8d935dca1b9c219340566e"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 12: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 12
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 12,
+        "number": 12,
+        "source_page": 6
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 12 (PK 12) vinculada à questão 12, página de início 6, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-06.png",
+          "detail": "Caderno QZ 2025, página física 6 (página impressa 4), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 12.",
+          "sha256": "d6a650ae730b85cb8c2f7b88aa3fa936bbf556a13fb1e6eda2ff5cc764a86547"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 12: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 6 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 13
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 13 já está definitive/single_choice A. Asset(s) associado(s) 478 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 13 e o texto compartilhado 13/14.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q13-solar-controller.png",
+          "detail": "Asset já vinculado em question_assets (ID 478), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 5e85dc04b13aea4e416a6caf28a280ac144462b80be9679bd4e589e5761aa2f3.",
+          "sha256": "5e85dc04b13aea4e416a6caf28a280ac144462b80be9679bd4e589e5761aa2f3"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 13: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 13
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 13,
+        "number": 13,
+        "source_page": 7
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 13 (PK 13) vinculada à questão 13, página de início 7, conferida com texto/opções e chave definitive A; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 13 e o texto compartilhado 13/14.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 13: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 14
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 14 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 14 e o texto compartilhado 13/14.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 14: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 14
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 14,
+        "number": 14,
+        "source_page": 7
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 14 (PK 14) vinculada à questão 14, página de início 7, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 14 e o texto compartilhado 13/14.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 14: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 15
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 15 já está definitive/single_choice B. Asset(s) associado(s) 479 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 15.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q15-telegraph-headline.png",
+          "detail": "Asset já vinculado em question_assets (ID 479), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 533df8dda4b9795e1016ae68a7c5968a586094dd1661c1d8d6a53f93ef1492fc.",
+          "sha256": "533df8dda4b9795e1016ae68a7c5968a586094dd1661c1d8d6a53f93ef1492fc"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 15: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 15
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 15,
+        "number": 15,
+        "source_page": 7
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 15 (PK 15) vinculada à questão 15, página de início 7, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 15.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 15: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 16
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 16 já está definitive/single_choice D. Asset(s) associado(s) 480 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 16.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q16-instagram-dialogue.png",
+          "detail": "Asset já vinculado em question_assets (ID 480), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 5eee18fb37909df81bbaf05a164007611a35fab7c04fbdd46c44c30e171e63e9.",
+          "sha256": "5eee18fb37909df81bbaf05a164007611a35fab7c04fbdd46c44c30e171e63e9"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 16: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 16
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 16,
+        "number": 16,
+        "source_page": 7
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 16 (PK 16) vinculada à questão 16, página de início 7, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-07.png",
+          "detail": "Caderno QZ 2025, página física 7 (página impressa 5), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 16.",
+          "sha256": "0bbcd40945fd2df5f84df7e4a6a7077f22beca3f24ebcae60b556326227068f7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 16: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 7 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 18
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 18 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-08.png",
+          "detail": "Caderno QZ 2025, página física 8 (página impressa 6), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 18 e o texto compartilhado 18/19.",
+          "sha256": "6681508905d845c9da71ccdfb04731657ea0716b83e4356811b44db9dfa5d935"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 18 e o texto compartilhado 18/19.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 18: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 8 e 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 18
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 18,
+        "number": 18,
+        "source_page": 8
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 18 (PK 18) vinculada à questão 18, página de início 8, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-08.png",
+          "detail": "Caderno QZ 2025, página física 8 (página impressa 6), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 18 e o texto compartilhado 18/19.",
+          "sha256": "6681508905d845c9da71ccdfb04731657ea0716b83e4356811b44db9dfa5d935"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 18 e o texto compartilhado 18/19.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 18: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 8 e 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 19
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 19 já está definitive/single_choice A. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-08.png",
+          "detail": "Caderno QZ 2025, página física 8 (página impressa 6), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 19 e o texto compartilhado 18/19.",
+          "sha256": "6681508905d845c9da71ccdfb04731657ea0716b83e4356811b44db9dfa5d935"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 19 e o texto compartilhado 18/19.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 19: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 8 e 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 19
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 19,
+        "number": 19,
+        "source_page": 8
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 19 (PK 19) vinculada à questão 19, página de início 8, conferida com texto/opções e chave definitive A; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-08.png",
+          "detail": "Caderno QZ 2025, página física 8 (página impressa 6), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 19 e o texto compartilhado 18/19.",
+          "sha256": "6681508905d845c9da71ccdfb04731657ea0716b83e4356811b44db9dfa5d935"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 19 e o texto compartilhado 18/19.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 19: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 8 e 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 20
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 20 já está definitive/single_choice B. Asset(s) associado(s) 450 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 20.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q20-alok-post.png",
+          "detail": "Asset já vinculado em question_assets (ID 450), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 59b08f95cab409a7b251904933ae6d6b4c7ef0edb8b099046700cf7cedfba414.",
+          "sha256": "59b08f95cab409a7b251904933ae6d6b4c7ef0edb8b099046700cf7cedfba414"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 20: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 20
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 20,
+        "number": 20,
+        "source_page": 9
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 20 (PK 20) vinculada à questão 20, página de início 9, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 20.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 20: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 21
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 21 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 21.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 21: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 21
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 21,
+        "number": 21,
+        "source_page": 9
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 21 (PK 21) vinculada à questão 21, página de início 9, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-09.png",
+          "detail": "Caderno QZ 2025, página física 9 (página impressa 7), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 21.",
+          "sha256": "0743ce85ada771c06920038c2556b25592dacdf71213be0db3e1852bbc31b3cf"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 21: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 9 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 22
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 22 já está definitive/single_choice C. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 22.",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 22: alternativa C. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 22
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 22,
+        "number": 22,
+        "source_page": 10
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 22 (PK 22) vinculada à questão 22, página de início 10, conferida com texto/opções e chave definitive C; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 22.",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 22: alternativa C. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 23
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 23 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 23.",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 23: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 23
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 23,
+        "number": 23,
+        "source_page": 10
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 23 (PK 23) vinculada à questão 23, página de início 10, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 23.",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 23: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 24
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 24 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 24.",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 24: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 24
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 24,
+        "number": 24,
+        "source_page": 10
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 24 (PK 24) vinculada à questão 24, página de início 10, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 24.",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 24: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 25
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 25 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 25 (continuação na página seguinte).",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 25 (continuação na página seguinte).",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 25: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 e 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 25
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 25,
+        "number": 25,
+        "source_page": 10
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 25 (PK 25) vinculada à questão 25, página de início 10, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-10.png",
+          "detail": "Caderno QZ 2025, página física 10 (página impressa 8), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 25 (continuação na página seguinte).",
+          "sha256": "637aa1a68526014a67f7e75a7cf162a7dfd87d3031d746596b49727e199d4209"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 25 (continuação na página seguinte).",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 25: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 10 e 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 26
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 26 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 26.",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 26: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 26
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 26,
+        "number": 26,
+        "source_page": 11
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 26 (PK 26) vinculada à questão 26, página de início 11, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 26.",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 26: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 27
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 27 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 27.",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 27: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 27
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 27,
+        "number": 27,
+        "source_page": 11
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 27 (PK 27) vinculada à questão 27, página de início 11, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 27.",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 27: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 28
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 28 já está definitive/single_choice D. Asset(s) associado(s) 451 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 28.",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q28-goya-three-may-1808.png",
+          "detail": "Asset já vinculado em question_assets (ID 451), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 9538366b8feaf67aa1b2ec61d51a78aaf745f0a3d6a3240c89efe46d3a0c3b6f.",
+          "sha256": "9538366b8feaf67aa1b2ec61d51a78aaf745f0a3d6a3240c89efe46d3a0c3b6f"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 28: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 28
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 28,
+        "number": 28,
+        "source_page": 11
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 28 (PK 28) vinculada à questão 28, página de início 11, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-11.png",
+          "detail": "Caderno QZ 2025, página física 11 (página impressa 9), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 28.",
+          "sha256": "20dd4b9d97bd6f58e7fd04b47de69c80f2d0cd714fd8a01694f7810f6fbe9fe1"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 28: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 11 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 29
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 29 já está definitive/single_choice A. Asset(s) associado(s) 452 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 29.",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q29-eugenia-bulletin-cover.png",
+          "detail": "Asset já vinculado em question_assets (ID 452), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 92fc20b76e43790b337317ad457effd45ef2b0ddb5798f12af8044107923328d.",
+          "sha256": "92fc20b76e43790b337317ad457effd45ef2b0ddb5798f12af8044107923328d"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 29: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 29
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 29,
+        "number": 29,
+        "source_page": 12
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 29 (PK 29) vinculada à questão 29, página de início 12, conferida com texto/opções e chave definitive A; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 29.",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 29: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 30
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 30 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 30.",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 30: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 30
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 30,
+        "number": 30,
+        "source_page": 12
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 30 (PK 30) vinculada à questão 30, página de início 12, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 30.",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 30: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 31
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 31 já está definitive/single_choice B. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 31.",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 31: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 31
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 31,
+        "number": 31,
+        "source_page": 12
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 31 (PK 31) vinculada à questão 31, página de início 12, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 31.",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 31: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 32
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 32 já está definitive/single_choice D. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 32 (continuação na página seguinte).",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-13.png",
+          "detail": "Caderno QZ 2025, página física 13 (página impressa 11), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 32 (continuação na página seguinte).",
+          "sha256": "eac35d1e7fb1c846ee92c2b8fef36046ab0a08e1fec57060f78e73afbea456a5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 32: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 e 13 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 32
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 32,
+        "number": 32,
+        "source_page": 12
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 32 (PK 32) vinculada à questão 32, página de início 12, conferida com texto/opções e chave definitive D; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-12.png",
+          "detail": "Caderno QZ 2025, página física 12 (página impressa 10), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 32 (continuação na página seguinte).",
+          "sha256": "5e1fd2d331f77f5968d4fdc88df47365b0374534e8a968fc875ea8a42cdfbc5e"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-13.png",
+          "detail": "Caderno QZ 2025, página física 13 (página impressa 11), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 32 (continuação na página seguinte).",
+          "sha256": "eac35d1e7fb1c846ee92c2b8fef36046ab0a08e1fec57060f78e73afbea456a5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 32: alternativa D. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 12 e 13 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 33
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 33 já está definitive/single_choice B. Asset(s) associado(s) 453 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-13.png",
+          "detail": "Caderno QZ 2025, página física 13 (página impressa 11), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 33.",
+          "sha256": "eac35d1e7fb1c846ee92c2b8fef36046ab0a08e1fec57060f78e73afbea456a5"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q33-henfil-constituint-assembly-cartoon.png",
+          "detail": "Asset já vinculado em question_assets (ID 453), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 8cf8d4f6c110aeea3f8d6b40092820a1462777dab14da209f52df52b8dd792ee.",
+          "sha256": "8cf8d4f6c110aeea3f8d6b40092820a1462777dab14da209f52df52b8dd792ee"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 33: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 13 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 33
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 33,
+        "number": 33,
+        "source_page": 13
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 33 (PK 33) vinculada à questão 33, página de início 13, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-13.png",
+          "detail": "Caderno QZ 2025, página física 13 (página impressa 11), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 33.",
+          "sha256": "eac35d1e7fb1c846ee92c2b8fef36046ab0a08e1fec57060f78e73afbea456a5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 33: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 13 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 34
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 34 já está definitive/single_choice A. Não há asset associado a esta questão. Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-13.png",
+          "detail": "Caderno QZ 2025, página física 13 (página impressa 11), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 34.",
+          "sha256": "eac35d1e7fb1c846ee92c2b8fef36046ab0a08e1fec57060f78e73afbea456a5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 34: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 13 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 34
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 34,
+        "number": 34,
+        "source_page": 13
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 34 (PK 34) vinculada à questão 34, página de início 13, conferida com texto/opções e chave definitive A; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-13.png",
+          "detail": "Caderno QZ 2025, página física 13 (página impressa 11), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 34.",
+          "sha256": "eac35d1e7fb1c846ee92c2b8fef36046ab0a08e1fec57060f78e73afbea456a5"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 34: alternativa A. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 13 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 35
+      },
+      "expected": {
+        "status": "draft"
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Revisão visual do conteúdo integral: texto do banco cotejado com o original, quatro alternativas A–D conferidas e resposta comparada ao gabarito oficial; chave canônica de ID 35 já está definitive/single_choice B. Asset(s) associado(s) 454 conferido(s) e mantido(s). Proposta somente de mudança de status; nada de conteúdo ou relações é alterado.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-14.png",
+          "detail": "Caderno QZ 2025, página física 14 (página impressa 12), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 35.",
+          "sha256": "c0db502ebd2e84b1809617d61faaae8ce33200a5e1cb9c0ca8bc3219f0b11d34"
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/question-assets/qz-q35-simone-siss-mural.png",
+          "detail": "Asset já vinculado em question_assets (ID 454), comparado visualmente com a figura da fonte, sem corte ou conteúdo divergente aparente. SHA-256 7ef54edc2786807b464854614cdec25bd82435edf0157b472cda8d7c98d93ca7.",
+          "sha256": "7ef54edc2786807b464854614cdec25bd82435edf0157b472cda8d7c98d93ca7"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 35: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 14 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_occurrences",
+      "key": {
+        "id": 35
+      },
+      "expected": {
+        "status": "draft",
+        "question_id": 35,
+        "number": 35,
+        "source_page": 14
+      },
+      "changes": {
+        "status": "published"
+      },
+      "reason": "Ocorrência 35 (PK 35) vinculada à questão 35, página de início 14, conferida com texto/opções e chave definitive B; propor publicação individual junto à questão.",
+      "evidence": [
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/tools/editorial/review-closure/evidence/qz-2025-followup/QZ-page-14.png",
+          "detail": "Caderno QZ 2025, página física 14 (página impressa 12), renderizada da fonte PDF. Conferidos visualmente enunciado/textos de apoio e alternativas A–D da questão 35.",
+          "sha256": "c0db502ebd2e84b1809617d61faaae8ce33200a5e1cb9c0ca8bc3219f0b11d34"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+          "detail": "Gabarito oficial das provas Q e Z 2025, p. 1, questão 35: alternativa B. A resposta coincide com a chave canônica definitive, single_choice, já vinculada à ocorrência."
+        },
+        {
+          "locator": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2025/QZ.pdf",
+          "detail": "PDF oficial QZ 2025, SHA-256 41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710; páginas físicas 14 verificadas visualmente.",
+          "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T200236101382Z.sqlite",
+  "database_after_sha256": "415e02fe439d27d58879a77cb6c789f24fd01fdd8ae200ca854d8a6e60633fb9"
+}

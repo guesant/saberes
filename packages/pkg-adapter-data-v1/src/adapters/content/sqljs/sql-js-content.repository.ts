@@ -1,6 +1,8 @@
 import { CatalogCardType } from "@guesant/saberes-domain";
+import { createTrainingQuestionFilter } from "./create-training-question-filter.function";
 import { getCatalogFilters } from "./get-catalog-filters.function";
 import { getContentIdentifier } from "./get-content-identifier.function";
+import { hasContentTable } from "./has-content-table.function";
 import { mapAssessmentCatalogCard } from "./map-assessment-catalog-card.function";
 import { mapLessonTopicReadModel } from "./map-lesson-topic-read-model.function";
 import { readContentAssessment } from "./read-content-assessment.function";
@@ -21,7 +23,9 @@ import type {
   StudyPlanReadModel,
   TopicReadModel,
   TopicMapReadModel,
+  TrainingScope,
 } from "@guesant/saberes-application";
+import type { CatalogCard } from "@guesant/saberes-domain";
 
 export class SqlJsContentRepository implements ContentRepositoryContract {
   public constructor(private readonly provider: ContentDatabaseProviderContract) {}
@@ -36,7 +40,8 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
     }
 
     if (!this.databasePromise) {
-      this.databasePromise = this.provider.execute()
+      this.databasePromise = this.provider
+        .execute()
         .then((database) => {
           this.databaseValue = database;
 
@@ -72,15 +77,49 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
     );
 
     const resources = db.query(
-      "SELECT id, title, description, provider, url FROM resources WHERE is_published = 1 ORDER BY title",
+      "SELECT r.id, r.title, r.description, r.provider, r.url, COALESCE((SELECT '/data/' || ltrim(a.path, '/') FROM content_assets a WHERE a.source_document_id = r.source_document_id AND lower(a.media_type) = 'application/pdf' ORDER BY a.id LIMIT 1), r.url) href, r.kind, r.editorial_status, r.editorial_note, r.availability_mode, MAX(e.year) year FROM resources r LEFT JOIN resource_targets rt ON rt.resource_id = r.id LEFT JOIN stages st ON st.id = rt.stage_id LEFT JOIN editions e ON e.id = st.edition_id WHERE r.is_published = 1 GROUP BY r.id ORDER BY r.title",
     );
 
-    const questions = db.query(
-      "SELECT qo.id, qo.number, e.year, ap.name process_name FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id JOIN papers p ON p.id = qo.paper_id JOIN stages st ON st.id = p.stage_id JOIN editions e ON e.id = st.edition_id JOIN admission_processes ap ON ap.id = e.admission_process_id WHERE q.status = 'published' ORDER BY e.year DESC, qo.number",
+    const sourceDocuments = db.query(
+      "SELECT sd.id, sd.title, sd.url, COALESCE((SELECT '/data/' || ltrim(a.path, '/') FROM content_assets a WHERE a.source_document_id = sd.id AND lower(a.media_type) = 'application/pdf' ORDER BY a.id LIMIT 1), sd.url) href, sd.provider, sd.kind, sd.is_official, sd.reuse_status, sd.license_name, sd.license_url FROM source_documents sd WHERE NOT EXISTS (SELECT 1 FROM resources r WHERE lower(trim(r.url)) = lower(trim(sd.url))) ORDER BY sd.title",
     );
+
+    const questionFilter =
+      normalizedFilters.trainingScope && hasContentTable(db, "curriculum_topic_stages")
+        ? createTrainingQuestionFilter(normalizedFilters.trainingScope, undefined, "qo")
+        : null;
+
+    const questions =
+      normalizedFilters.trainingScope && !questionFilter
+        ? []
+        : db.query(
+          `SELECT qo.id, q.slug question_slug, qo.number, e.year, ap.name process_name,
+            q.status question_status, qo.status occurrence_status
+           FROM question_occurrences qo JOIN questions q ON q.id = qo.question_id
+           JOIN papers p ON p.id = qo.paper_id JOIN stages st ON st.id = p.stage_id
+           JOIN editions e ON e.id = st.edition_id JOIN admission_processes ap ON ap.id = e.admission_process_id
+           WHERE ${questionFilter ? "q.status = 'published' AND qo.status = 'published'" : "q.status IN ('draft', 'review', 'published') AND qo.status IN ('draft', 'review', 'published')"}${questionFilter ? ` AND ${questionFilter.sql}` : ""}
+           ORDER BY e.year DESC, qo.number`,
+          questionFilter?.params,
+        );
+
+    const independentFilter = normalizedFilters.trainingScope && hasContentTable(db, "curriculum_topic_stages")
+      ? createTrainingQuestionFilter(normalizedFilters.trainingScope)
+      : null;
+
+    const independentQuestions = normalizedFilters.trainingScope && !independentFilter
+      ? []
+      : db.query(
+        `SELECT q.id, q.slug question_slug, q.statement, q.status question_status
+         FROM questions q
+         WHERE NOT EXISTS (SELECT 1 FROM question_occurrences qo WHERE qo.question_id = q.id)
+           AND q.status ${independentFilter ? "= 'published'" : "IN ('draft', 'review', 'published')"}${independentFilter ? ` AND ${independentFilter.sql}` : ""}
+         ORDER BY q.slug`,
+        independentFilter?.params,
+      );
 
     const assessments = db.query(
-      "SELECT a.id, a.slug, a.title, a.description, a.duration_minutes, e.year, ap.name process_name, COUNT(asi.position) question_count FROM assessment_sets a LEFT JOIN editions e ON e.id = a.edition_id LEFT JOIN admission_processes ap ON ap.id = COALESCE(a.admission_process_id, e.admission_process_id) LEFT JOIN assessment_set_items asi ON asi.assessment_set_id = a.id AND asi.item_type = 'question' WHERE a.is_published = 1 GROUP BY a.id ORDER BY e.year DESC, a.title",
+      "SELECT a.id, a.slug, a.title, a.description, a.duration_minutes, a.is_published, e.year, ap.name process_name, COUNT(asi.position) question_count FROM assessment_sets a LEFT JOIN editions e ON e.id = a.edition_id LEFT JOIN admission_processes ap ON ap.id = COALESCE(a.admission_process_id, e.admission_process_id) LEFT JOIN assessment_set_items asi ON asi.assessment_set_id = a.id AND asi.item_type = 'question' GROUP BY a.id ORDER BY e.year DESC, a.title",
     );
 
     const { search } = normalizedFilters;
@@ -202,20 +241,62 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
               title: String(item.title),
               type: CatalogCardType.Resource,
               description: String(item.description || ""),
-              href: String(item.url || ""),
+              href: String(item.href || item.url || ""),
               meta: String(item.provider || ""),
+              year: Number(item.year || 0),
+              resourceKind: String(item.kind || ""),
+              editorialStatus: String(
+                item.editorial_status || "review",
+              ) as CatalogCard["editorialStatus"],
+              editorialNote: String(item.editorial_note || ""),
+              availabilityMode: String(
+                item.availability_mode || "reference",
+              ) as CatalogCard["availabilityMode"],
+            };
+          }),
+        ...sourceDocuments
+          .filter((item) => {
+            return hasCatalogMatch(`${item.title} ${item.provider || ""} ${item.kind || ""} ${item.url || ""} ${item.license_name || ""}`);
+          })
+          .map((item) => {
+            return {
+              id: `source-document:${String(item.id)}`,
+              title: String(item.title || "Documento-fonte"),
+              type: CatalogCardType.Resource,
+              description: "Documento-fonte para consulta; não é material de treino.",
+              href: String(item.href || item.url || ""),
+              meta: [item.provider, item.kind, Number(item.is_official) === 1 ? "Fonte oficial" : "Documento-fonte"]
+                .filter(Boolean)
+                .map(String)
+                .join(" · "),
+              editorialNote: "Consulta da fonte original; sem aprovação para treino.",
+              availabilityMode: "consultation_only" as const,
+              reuseStatus: String(item.reuse_status || "unknown") as CatalogCard["reuseStatus"],
+              licenseName: String(item.license_name || "") || undefined,
+              licenseUrl: String(item.license_url || "") || undefined,
             };
           }),
         ...questions
           .map((item) => {
+            const isPublished = item.question_status === "published" && item.occurrence_status === "published";
+
             return {
               ...item,
               id: item.id as number,
+              slug: String(item.question_slug || ""),
               title: `${item.process_name} ${item.year} · questão ${item.number}`,
               type: CatalogCardType.Question,
+              href: `/questoes/${item.id}`,
               description: "Questão de prova",
               processName: String(item.process_name || ""),
               year: Number(item.year || 0),
+              ...(isPublished
+                ? { availabilityMode: "practice" as const }
+                : {
+                  editorialStatus: item.question_status === "draft" || item.occurrence_status === "draft" ? "draft" as const : "review" as const,
+                  editorialNote: "Consulta apenas; questão não liberada para treino.",
+                  availabilityMode: "consultation_only" as const,
+                }),
             };
           })
           .filter((item) => {
@@ -225,13 +306,48 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
               hasYearMatch(item.year)
             );
           }),
-        ...assessments
-          .map(mapAssessmentCatalogCard)
+        ...independentQuestions
+          .map((item) => {
+            const isPublished = item.question_status === "published";
+
+            return {
+              id: `exercise:${String(item.id)}`,
+              slug: String(item.question_slug || ""),
+              title: String(item.question_slug || "Exercício independente"),
+              type: CatalogCardType.Question,
+              href: `/exercicios/${encodeURIComponent(String(item.question_slug || ""))}`,
+              description: String(item.statement || "Exercício canônico independente"),
+              ...(isPublished
+                ? { availabilityMode: "practice" as const }
+                : {
+                  editorialStatus: item.question_status === "draft" ? "draft" as const : "review" as const,
+                  editorialNote: "Consulta apenas; questão não liberada para treino.",
+                  availabilityMode: "consultation_only" as const,
+                }),
+            };
+          })
+          .filter((item) => {
+            return hasCatalogMatch(`${item.title} ${item.description} ${item.slug}`);
+          }),
+        ...assessments.map((item) => {
+          const card = mapAssessmentCatalogCard(item);
+
+          if (Number(item.is_published) === 1) {
+            return card;
+          }
+
+          return {
+            ...card,
+            editorialStatus: "draft" as const,
+            editorialNote: "Consulta apenas; avaliação não liberada para treino.",
+            availabilityMode: "consultation_only" as const,
+          };
+        })
           .filter((item) => {
             return (
               hasCatalogMatch(`${item.title} ${item.description || ""} ${item.meta || ""}`) &&
-              hasProcessMatch(item.processName) &&
-              hasYearMatch(item.year)
+            hasProcessMatch(item.processName) &&
+            hasYearMatch(item.year)
             );
           }),
       ],
@@ -256,7 +372,7 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
         [course.id],
       ),
       items: db.query(
-        "SELECT i.*, l.slug lesson_slug FROM learning_course_items i LEFT JOIN lessons l ON l.id = i.lesson_id JOIN learning_course_modules m ON m.id = i.module_id WHERE m.learning_course_id = ? ORDER BY m.position, i.position",
+        "SELECT i.*, l.slug lesson_slug, q.slug question_slug FROM learning_course_items i LEFT JOIN lessons l ON l.id = i.lesson_id LEFT JOIN questions q ON q.id = i.question_id JOIN learning_course_modules m ON m.id = i.module_id WHERE m.learning_course_id = ? ORDER BY m.position, i.position",
         [course.id],
       ),
     };
@@ -285,18 +401,22 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
         "SELECT sd.title, sd.url, sd.provider, sd.kind FROM lesson_sources ls JOIN source_documents sd ON sd.id = ls.source_document_id WHERE ls.lesson_id = ? ORDER BY sd.title",
         [lesson.id],
       ),
-      topics: db.query(
-        "SELECT DISTINCT t.id, t.slug, t.name title, t.description FROM lesson_topics lt LEFT JOIN curriculum_topics ct ON ct.id = lt.curriculum_topic_id JOIN topics t ON t.id = COALESCE(lt.topic_id, ct.topic_id) WHERE lt.lesson_id = ? ORDER BY t.name",
-        [lesson.id],
-      )
+      topics: db
+        .query(
+          "SELECT DISTINCT t.id, t.slug, t.name title, t.description FROM lesson_topics lt LEFT JOIN curriculum_topics ct ON ct.id = lt.curriculum_topic_id JOIN topics t ON t.id = COALESCE(lt.topic_id, ct.topic_id) WHERE lt.lesson_id = ? ORDER BY t.name",
+          [lesson.id],
+        )
         .map(mapLessonTopicReadModel),
     };
   }
 
-  async getQuestion(key: ContentKey | string): Promise<QuestionReadModel | null> {
+  async getQuestion(
+    key: ContentKey | string,
+    scope?: TrainingScope,
+  ): Promise<QuestionReadModel | null> {
     const db = await this.database();
 
-    return readContentQuestion(db, key);
+    return readContentQuestion(db, key, scope);
   }
 
   async getAssessment(key: ContentKey | string): Promise<AssessmentReadModel | null> {
@@ -347,10 +467,10 @@ export class SqlJsContentRepository implements ContentRepositoryContract {
     };
   }
 
-  async getTopic(slug: string): Promise<TopicReadModel | null> {
+  async getTopic(slug: string, scope?: TrainingScope): Promise<TopicReadModel | null> {
     const db = await this.database();
 
-    return readContentTopic(db, slug);
+    return readContentTopic(db, slug, scope);
   }
 
   async getStudyPlan(slug = ""): Promise<StudyPlanReadModel> {

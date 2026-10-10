@@ -9,6 +9,7 @@ import type {
   QuestionReadModel,
   StudyPlanReadModel,
   TopicMapReadModel,
+  TrainingScope,
   TopicReadModel,
 } from "@guesant/saberes-application";
 
@@ -23,11 +24,11 @@ export interface ContentRepositoryContract {
 
   getLesson(key: ContentKey | string): Promise<LessonReadModel | null>;
 
-  getQuestion(key: ContentKey | string): Promise<QuestionReadModel | null>;
+  getQuestion(key: ContentKey | string, scope?: TrainingScope): Promise<QuestionReadModel | null>;
 
   getStudyPlan(slug?: string): Promise<StudyPlanReadModel>;
 
-  getTopic(slug: string): Promise<TopicReadModel | null>;
+  getTopic(slug: string, scope?: TrainingScope): Promise<TopicReadModel | null>;
 
   getTopicMap(mapKey: string): Promise<TopicMapReadModel | null>;
 }

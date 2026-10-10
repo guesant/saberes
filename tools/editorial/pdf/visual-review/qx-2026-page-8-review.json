@@ -1,0 +1,55 @@
+{
+  "format": "pdf-qa-visual-exception-review/v1",
+  "reviewer": "Codex visual review",
+  "source": {
+    "path": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2026/QX.pdf",
+    "sourceDocumentId": 44,
+    "sourcePdfSha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+    "pdfPhysicalPage": 8,
+    "printedPage": 6,
+    "renderedEvidence": "tools/editorial/pdf/visual-review/qx-2026-physical-page-08.png",
+    "renderSha256": "2dc71f51a0145ac5c98fa3a21ff0f434734b6344e42bc19e62d89ac2e1429440"
+  },
+  "qaSnapshot": {
+    "path": "tools/editorial/pdf/real-batch-qa-qx-visual-review.jsonl",
+    "databaseSha256": "8e9a35c28c5dc6815825d875327a867df07c868c34e6dada312ccffeac3ece49",
+    "readOnly": true
+  },
+  "reviews": [
+    {
+      "bookletNumber": 18,
+      "occurrenceId": 306,
+      "questionId": 306,
+      "sourcePage": 8,
+      "qaIssues": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"],
+      "visualFinding": "The source page shows Q18 choices A-C in the left column and choice D at the top of the right column. The Docling Markdown places the continued choices out of question order, so the parser did not associate the four visible choices with Q18.",
+      "databaseFinding": {
+        "status": "published",
+        "optionIdsByCode": {"A": 8325, "B": 8326, "C": 8327, "D": 8328},
+        "answerKeyId": 306,
+        "answerKey": "D",
+        "comparison": "The four stored option texts match the visible choices on the source page."
+      },
+      "conclusion": "false_positive_extraction_order; no SQLite correction evidenced"
+    },
+    {
+      "bookletNumber": 19,
+      "occurrenceId": 307,
+      "questionId": 307,
+      "sourcePage": 8,
+      "qaIssues": ["spill_option_labels_before_or_outside_table:ABC"],
+      "visualFinding": "The lower-right table visibly contains Q19 choices A-D. The A-C labels flagged as spill are Q18 choices continued elsewhere on the same two-column page, not duplicate Q19 alternatives.",
+      "databaseFinding": {
+        "status": "published",
+        "optionIdsByCode": {"A": 8329, "B": 8330, "C": 8331, "D": 8332},
+        "answerKeyId": 307,
+        "answerKey": "A",
+        "comparison": "All four stored alternatives match the corresponding Disputas/Alianças table rows on the source page."
+      },
+      "conclusion": "false_positive_column_order_and_cross_question_spill; no SQLite correction evidenced"
+    }
+  ],
+  "repairPlanPrepared": false,
+  "repairPlanReason": "Visual comparison and current SQLite values show no proven database error; creating a repair would be unjustified.",
+  "databaseApplied": false
+}

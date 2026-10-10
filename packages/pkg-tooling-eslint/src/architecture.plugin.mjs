@@ -539,6 +539,7 @@ export function startsWithPurposeVerb(name) {
     "delete",
     "define",
     "derive",
+    "download",
     "enroll",
     "execute",
     "export",

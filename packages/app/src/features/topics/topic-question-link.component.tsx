@@ -1,19 +1,12 @@
-import { UIListItemButton, UIListItemText } from "@guesant/saberes-ui";
-import { useTranslation } from "react-i18next";
+import { UIListItemButton } from "@guesant/saberes-ui";
 import { Link } from "react-router-dom";
+import { TopicQuestionProvenance } from "./topic-question-provenance.component";
 import type { TopicQuestionLinkProps } from "./topic-question-link-props.type";
 
 export function TopicQuestionLink(props: TopicQuestionLinkProps) {
-  const { t } = useTranslation();
-
   return (
     <UIListItemButton component={Link} to={props.question.href}>
-      <UIListItemText
-        primary={t("topics.questionLabel", {
-          number: String(props.question.number || props.question.id),
-        })}
-        secondary={String(props.question.statement || "")}
-      />
+      <TopicQuestionProvenance question={props.question} />
     </UIListItemButton>
   );
 }

@@ -1,0 +1,475 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T00:33:44.507885+00:00",
+  "database_before_sha256": "4b604f2da35d2d2d430b9fbf5d1d119ff0479089f43f93994e9c70a44139c787",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 488,
+        "topic_id": 2548,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Relação aprovada para Geometria espacial: exercício direto de aplicação do volume de sólidos. Quatro problemas foram resolvidos e a página confirmou as respostas. O enunciado traz as medidas necessárias; a ilustração suplementar tem rótulo genérico. Não houve auditoria formal de teclado/leitor de tela ou WCAG. Material complementar da Khan Academy; link_only, sem copiar conteúdo."
+      },
+      "reason": "Resolver a classificação da relação pelo destino real: aprovar a correspondência direta ou registrar explicitamente que é referência geral/sem relação curricular.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry/hs-geo-solids/hs-geo-solids-intro/e/apply-volume-of-solids",
+          "detail": "URL direta do exercício de volume de sólidos; a auditoria registrada na ficha descreve e valida os quatro itens gerados e suas respostas."
+        },
+        {
+          "locator": "sqlite://resources/488",
+          "detail": "Registro ‘Aplique o volume de sólidos — prática’ e vínculo atual com tópico 2548 / tópico de edição None conferidos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 541,
+        "topic_id": 2561,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "draft",
+        "relevance_status": "not_relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "not_relevant",
+        "review_note": "Vínculo incorreto com Estrutura atômica, classificação periódica e ligação química: a playlist trata de comentários sobre obras literárias. O registro do recurso permanece acessível como referência da lista de leituras, mas não deve aparecer como material de química."
+      },
+      "reason": "Resolver a classificação da relação pelo destino real: aprovar a correspondência direta ou registrar explicitamente que é referência geral/sem relação curricular.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/playlist?list=PLWYzeDRJEODO2m6mJCkb8VdZMIxxb2kDs",
+          "detail": "A ficha da playlist descreve comentários de obras literárias; não há relação com química. O recurso continua catalogado como referência de literatura."
+        },
+        {
+          "locator": "sqlite://resources/541",
+          "detail": "Registro ‘CRIA 2025 — aulas sobre obras obrigatórias’ e vínculo atual com tópico 2561 / tópico de edição None conferidos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 559,
+        "topic_id": 2565,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant"
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "not_relevant",
+        "review_note": "O vínculo direto com Interpretação e elaboração de tabelas e gráficos é amplo demais: o destino é a página inicial do Our World in Data, não um gráfico/dataset específico. Mantido como referência geral no catálogo; não contabilizar como material aprovado deste tópico."
+      },
+      "reason": "Resolver a classificação da relação pelo destino real: aprovar a correspondência direta ou registrar explicitamente que é referência geral/sem relação curricular.",
+      "evidence": [
+        {
+          "locator": "https://ourworldindata.org/",
+          "detail": "A URL abre a página inicial do provedor e não identifica um gráfico/dataset diretamente ligado ao tópico; por isso não fecha cobertura didática."
+        },
+        {
+          "locator": "sqlite://resources/559",
+          "detail": "Registro ‘Our World in Data’ e vínculo atual com tópico 2565 / tópico de edição None conferidos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 4,
+        "resource_id": 277,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "draft",
+        "source_document_id": 346
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=fObv7-lZx4c",
+          "detail": "O título do recurso identifica ‘Morangos mofados (contos escolhidos)’, de Caio Fernando Abreu; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Official TV Unicamp/CRIA metadata identifies this commentary on Morangos Mofados. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+        },
+        {
+          "locator": "sqlite://required_reading_works/4",
+          "detail": "Cadastro oficial da obra ‘Morangos mofados (contos escolhidos)’, de Caio Fernando Abreu, relacionado ao recurso 277 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 5,
+        "resource_id": 278,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "draft",
+        "source_document_id": 347
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=reZorOzMFCo",
+          "detail": "O título do recurso identifica ‘Olhos d’água’, de Conceição Evaristo; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Official TV Unicamp/CRIA metadata identifies this commentary on Olhos d’água. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+        },
+        {
+          "locator": "sqlite://required_reading_works/5",
+          "detail": "Cadastro oficial da obra ‘Olhos d’água’, de Conceição Evaristo, relacionado ao recurso 278 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 6,
+        "resource_id": 279,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 348
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=2JJaydN_u0Q",
+          "detail": "O título do recurso identifica ‘No seu pescoço’, de Chimamanda Ngozi Adichie; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre No seu pescoço, obra da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação, não substitui leitura da obra nem comprova cobertura de capítulo/tópico. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."
+        },
+        {
+          "locator": "sqlite://required_reading_works/6",
+          "detail": "Cadastro oficial da obra ‘No seu pescoço’, de Chimamanda Ngozi Adichie, relacionado ao recurso 279 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 8,
+        "resource_id": 280,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 349
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=HCrXbXF88rA",
+          "detail": "O título do recurso identifica ‘Memórias Póstumas de Brás Cubas’, de Machado de Assis; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre Memórias Póstumas de Brás Cubas, obra da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação, não substitui leitura da obra nem comprova cobertura de capítulo/tópico. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."
+        },
+        {
+          "locator": "sqlite://required_reading_works/8",
+          "detail": "Cadastro oficial da obra ‘Memórias Póstumas de Brás Cubas’, de Machado de Assis, relacionado ao recurso 280 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 9,
+        "resource_id": 281,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "draft",
+        "source_document_id": 350
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=Llb6DrI4wj0",
+          "detail": "O título do recurso identifica ‘A vida não é útil’, de Ailton Krenak; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Official Unicamp metadata identifies a 2024 CRIA talk about A vida não é útil. Published as a historical reference to the work; the talk itself and accessibility were not reviewed."
+        },
+        {
+          "locator": "sqlite://required_reading_works/9",
+          "detail": "Cadastro oficial da obra ‘A vida não é útil’, de Ailton Krenak, relacionado ao recurso 281 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 1,
+        "resource_id": 282,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "draft",
+        "source_document_id": 351
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=__xISnb_2mA",
+          "detail": "O título do recurso identifica ‘Prosas seguidas de odes mínimas’, de José Paulo Paes; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Official TV Unicamp/CRIA metadata identifies this commentary on José Paulo Paes. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+        },
+        {
+          "locator": "sqlite://required_reading_works/1",
+          "detail": "Cadastro oficial da obra ‘Prosas seguidas de odes mínimas’, de José Paulo Paes, relacionado ao recurso 282 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 2,
+        "resource_id": 283,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 352
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=-YXW3ZgDi-w",
+          "detail": "O título do recurso identifica ‘Canções escolhidas’, de Paulo César Pinheiro; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre Canções escolhidas, obra de poesia/canção da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação nem substitui leitura dos textos selecionados. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."
+        },
+        {
+          "locator": "sqlite://required_reading_works/2",
+          "detail": "Cadastro oficial da obra ‘Canções escolhidas’, de Paulo César Pinheiro, relacionado ao recurso 283 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 3,
+        "resource_id": 284,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 353
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=Dlb8ODJqXdE",
+          "detail": "O título do recurso identifica ‘Os funerais da Mamãe Grande’, de Gabriel García Márquez; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Referência audiovisual da TV Unicamp identificada pelo título/descrição como comentário sobre Os funerais da Mamãe Grande, obra da lista de leitura 2027. O vídeo não foi avaliado integralmente; não endossa interpretação nem substitui leitura da obra. Acessibilidade e transcrição não verificadas. Reutilização não concedida: somente link e metadados, sem copiar."
+        },
+        {
+          "locator": "sqlite://required_reading_works/3",
+          "detail": "Cadastro oficial da obra ‘Os funerais da Mamãe Grande’, de Gabriel García Márquez, relacionado ao recurso 284 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 7,
+        "resource_id": 285,
+        "relation_type": "official_lesson"
+      },
+      "expected": {
+        "editorial_status": "draft",
+        "source_document_id": 354
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/watch?v=_kFQZtbd8Sc",
+          "detail": "O título do recurso identifica ‘Vida e morte de M.J. Gonzaga de Sá’, de Lima Barreto; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Official TV Unicamp/CRIA metadata identifies this commentary on Lima Barreto. Published as a bibliographic reference to the work; the video itself, transcript and accessibility were not reviewed."
+        },
+        {
+          "locator": "sqlite://required_reading_works/7",
+          "detail": "Cadastro oficial da obra ‘Vida e morte de M.J. Gonzaga de Sá’, de Lima Barreto, relacionado ao recurso 285 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 4,
+        "resource_id": 533,
+        "relation_type": "study_material"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 445
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://portaleventos.uffs.edu.br/index.php/SEPE-UFFS/article/view/25108",
+          "detail": "O título do recurso identifica ‘Morangos mofados (contos escolhidos)’, de Caio Fernando Abreu; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Resumo acadêmico/anais de evento sobre Morangos Mofados, com recorte no conto Terça-Feira Gorda, que está entre os textos selecionados para 2027. Aprofundamento interpretativo, não resumo integral/guia de todos os contos; ler os textos da lista. Licença declarada CC BY-NC 4.0 na página, mas este catálogo mantém link_only e não copia o artigo. Acessibilidade do PDF não auditada."
+        },
+        {
+          "locator": "sqlite://required_reading_works/4",
+          "detail": "Cadastro oficial da obra ‘Morangos mofados (contos escolhidos)’, de Caio Fernando Abreu, relacionado ao recurso 533 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 5,
+        "resource_id": 534,
+        "relation_type": "study_material"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 446
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://guiadoestudante.abril.com.br/estudo/olhos-dagua-resumo-e-analise-da-obra-de-conceicao-evaristo/",
+          "detail": "O título do recurso identifica ‘Olhos d’água’, de Conceição Evaristo; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Guia secundário gratuito de Olhos d’água: discute contos, forma/narradores, linguagem e temas. Material de revisão complementar, não substitui a leitura integral da obra exigida em 2027. Direitos de reprodução não liberados: link_only, sem cópia; acessibilidade assistiva/WCAG não auditada."
+        },
+        {
+          "locator": "sqlite://required_reading_works/5",
+          "detail": "Cadastro oficial da obra ‘Olhos d’água’, de Conceição Evaristo, relacionado ao recurso 534 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 7,
+        "resource_id": 535,
+        "relation_type": "study_material"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 447
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://guiadoestudante.abril.com.br/estudo/leitura-obrigatoria-da-unicamp-este-livro-denunciou-o-racismo-em-1919/",
+          "detail": "O título do recurso identifica ‘Vida e morte de M.J. Gonzaga de Sá’, de Lima Barreto; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Análise secundária de Vida e morte de M.J. Gonzaga de Sá; útil como comentário literário, mas o título/enquadramento da página remete à lista Unicamp 2025, não à edição atual. A obra também consta na lista 2027 (confira a lista vigente); não usar esta página como fonte de atualidade ou substituto da leitura integral. Link_only; acessibilidade assistiva não auditada."
+        },
+        {
+          "locator": "sqlite://required_reading_works/7",
+          "detail": "Cadastro oficial da obra ‘Vida e morte de M.J. Gonzaga de Sá’, de Lima Barreto, relacionado ao recurso 535 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 9,
+        "resource_id": 536,
+        "relation_type": "study_material"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 448
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://guiadoestudante.abril.com.br/estudo/a-vida-nao-e-util-resumo-e-analise-da-obra-de-ailton-krenak/",
+          "detail": "O título do recurso identifica ‘A vida não é útil’, de Ailton Krenak; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Guia secundário gratuito sobre A vida não é útil: identifica os cinco ensaios e comenta temas, com entrevista complementar. Revisão para a obra integral da lista 2027; não substitui a leitura nem representa crítica acadêmica exaustiva. Direitos de reprodução não liberados: link_only, sem cópia; acessibilidade assistiva não auditada."
+        },
+        {
+          "locator": "sqlite://required_reading_works/9",
+          "detail": "Cadastro oficial da obra ‘A vida não é útil’, de Ailton Krenak, relacionado ao recurso 536 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "required_reading_resources",
+      "key": {
+        "required_reading_work_id": 1,
+        "resource_id": 537,
+        "relation_type": "study_material"
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 449
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Publicar uma associação de referência específica à obra; o estado do recurso e as notas continuam distinguindo metadados de revisão integral do conteúdo.",
+      "evidence": [
+        {
+          "locator": "https://escolaliteraria.com/2025/10/02/prosas-seguidas-de-odes/",
+          "detail": "O título do recurso identifica ‘Prosas seguidas de odes mínimas’, de José Paulo Paes; a associação é bibliográfica e específica à obra. Isso não substitui a leitura integral exigida pela Comvest. O registro permanece hyperlink; vídeo/texto não foi copiado. Limitações do recurso preservadas: Resenha independente de Prosas seguidas de odes mínimas, útil como leitura crítica suplementar sobre estrutura, concisão e ironia. A página menciona lista 2026, mas a obra completa permanece na lista 2027; não usar a chamada antiga como fonte de edição vigente nem substituir a obra. Fonte de autor/editor independente; link_only, sem cópia; acessibilidade não auditada."
+        },
+        {
+          "locator": "sqlite://required_reading_works/1",
+          "detail": "Cadastro oficial da obra ‘Prosas seguidas de odes mínimas’, de José Paulo Paes, relacionado ao recurso 537 por título/tema específico."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": ".local/content/backups/before-editorial-review-20261010T003344518360Z.sqlite",
+  "database_after_sha256": "da76b1cfbefd340dc3f33ed8c5a0586d881748d271c85be3cb754efc48277b51"
+}

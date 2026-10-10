@@ -1,0 +1,54 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "manifest_id": "lesson-2506-state-reconciliation-2026-10-10",
+  "scope": "Reconciliar o estado editorial do conteúdo atual da trilha; manter visível para consulta, mas não elegível para treino enquanto o conteúdo aprovado não estiver materializado.",
+  "database_baseline": {
+    "release": "unicamp-2027-editorial-classifications-v32",
+    "sha256": "6f9f28511663f16987e04972edc7c7b9bf16210cf47e1e9c46bdd19d724cd1a8"
+  },
+  "decisions": [
+    {
+      "table": "lessons",
+      "key": { "id": 115 },
+      "expected": { "editorial_version": "1.3.1", "review_status": "published", "is_published": 1 },
+      "changes": { "review_status": "review" },
+      "reason": "A aprovação registrada para 1.3.1 cita a explicação de energia cinética translacional média e seu exemplo, mas o conteúdo atual não os contém; a proposta 1.3.2 que contém esses itens não corresponde à versão gravada. Manter a aula visível, porém fora de treino, até reconciliar conteúdo e parecer.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-batch-sciences-2026-10-10.json",
+          "detail": "A reconciliação de versão registra que a versão atual 1.3.1 não contém energia cinética média nem exemplo; a aprovação cita esses elementos, presentes somente na proposta 1.3.2. Recomenda manter revisão até reconciliar o conteúdo efetivamente aprovado."
+        },
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-audit-2506-final-approval-2026-10-10.json",
+          "detail": "O parecer de aprovação declara ter verificado a equação da energia translacional média, a proporcionalidade com a temperatura absoluta e um exemplo de duplicação de temperatura."
+        }
+      ]
+    },
+    {
+      "table": "lessons",
+      "key": { "id": 116 },
+      "expected": { "editorial_version": "1.3.1", "review_status": "published", "is_published": 1 },
+      "changes": { "review_status": "review" },
+      "reason": "A aula integra a mesma versão 1.3.1 cujo conteúdo não coincide com o parecer de aprovação; manter visível para consulta e fora de treino até a reconciliação.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-batch-sciences-2026-10-10.json",
+          "detail": "A reconciliação identifica as três seções 115–117 como uma unidade editorial inconsistente com a identidade do conteúdo citado no parecer de aprovação."
+        }
+      ]
+    },
+    {
+      "table": "lessons",
+      "key": { "id": 117 },
+      "expected": { "editorial_version": "1.3.1", "review_status": "published", "is_published": 1 },
+      "changes": { "review_status": "review" },
+      "reason": "A aula integra a mesma versão 1.3.1 cujo conteúdo não coincide com o parecer de aprovação; manter visível para consulta e fora de treino até a reconciliação.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/lesson-batch-sciences-2026-10-10.json",
+          "detail": "A reconciliação identifica as três seções 115–117 como uma unidade editorial inconsistente com a identidade do conteúdo citado no parecer de aprovação."
+        }
+      ]
+    }
+  ]
+}

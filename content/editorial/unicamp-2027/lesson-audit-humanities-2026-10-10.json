@@ -1,0 +1,330 @@
+{
+  "format": "lesson-audit-batch/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "curriculum_topic_id_range": [2475, 2495],
+    "stage": "Unicamp 2027 — 1ª fase",
+    "rule": "O programa oficial é o critério de escopo; relações editoriais não são atribuições oficiais de questões. O texto proposto é original."
+  },
+  "sources_consulted": [
+    {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "institution": "Comvest / Unicamp",
+      "use": "Programa oficial, páginas 5–10; escopo por tópico registrado em curriculum_topic_stages."
+    },
+    {
+      "source_document_id": 650,
+      "title": "WHO EMRO — Violence",
+      "url": "https://www.emro.who.int/violence-injuries-disabilities/violence/",
+      "use": "Fonte associada à revisão da definição de violência no tópico 2493; não substitui o programa."
+    },
+    {
+      "source_document_id": 651,
+      "title": "Universal Declaration of Human Rights",
+      "url": "https://www.un.org/about-us/universal-declaration-of-human-rights",
+      "use": "Fonte associada ao tópico 2494 para direitos humanos."
+    }
+  ],
+  "method": "Comparação da lição-base e de todas as revisões/followups do intervalo com o trecho oficial da primeira fase e as fontes vinculadas no SQLite. O estado reportado é o do arquivo-base; revisões em review não foram tratadas como já incorporadas. 'published' só é recomendado quando o texto-base é preciso e cobre utilmente o rótulo no recorte pedido.",
+  "cross_item_findings": {
+    "accuracy": "Não encontrei erro conceitual que invalide as lições-base examinadas; os bloqueios são sobretudo de cobertura, e algumas afirmações foram qualificadas nas substituições propostas.",
+    "explanation_and_examples": "As lições-base têm explicação e exemplo resolvido, mas vários exemplos cobrem apenas uma fração do tópico oficial; as revisões/followups em review não podem ser presumidos incorporados.",
+    "common_errors_and_self_check": "As bases normalmente incluem erros comuns e autochecagem. Nas substituições, esses componentes foram mantidos e ligados aos procedimentos e limites do tópico, não apenas repetidos como checklist genérico.",
+    "publication": "Para cada revise, o estado published do arquivo-base não se justifica como lição suficiente para o rótulo da 1ª fase até substituir o texto e revisar o novo conteúdo. Approve_as_is se limita à introdução de leitura crítica em inglês; não declara cobertura exaustiva do programa."
+  },
+  "items": [
+    {
+      "curriculum_topic_id": 2475,
+      "official_label": "Conjuntos numéricos",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base explica conjuntos, porcentagem e juros corretamente, mas deixa sequências e fatoração sem método operacional; a revisão em review acrescenta divisores, PA/PG e juros, ainda sem explicar intervalos, módulo e decimais periódicos mencionados no programa. Publicação da base, portanto, não representa cobertura ensinável do rótulo.",
+      "evidence": [{"source_document_id": 148, "page": 5, "official_excerpt": "naturais, inteiros e reais; fatoração, divisores, sequências, progressões, porcentagem e juros"}, {"file": "lessons.json", "evidence": "teoria-base menciona sequências sem exemplo de PA/PG; exemplo trabalha apenas descontos"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 cobre divisores, PA/PG e juros, mas permanece review"}],
+      "replacement_sections": {
+        "theory": "Os naturais (ℕ) contam, os inteiros (ℤ) incluem negativos, os racionais (ℚ) são quocientes de inteiros com denominador não nulo, e os reais (ℝ) também incluem irracionais como √2. Intervalos descrevem conjuntos de valores; |x| é a distância de x a zero. Na forma irredutível, um racional tem decimal finito somente se o denominador tiver fatores primos 2 e/ou 5; caso contrário, a expansão é periódica. Fatorar em primos permite contar divisores: se N=p^a q^b, com p e q primos distintos, há (a+1)(b+1) divisores positivos. Em uma PA, a_n=a_1+(n−1)d; em uma PG, a_n=a_1q^(n−1). Porcentagens sucessivas usam bases sucessivas. Para capital C, taxa i por período e t períodos, juros simples dão M=C(1+it) e compostos M=C(1+i)^t, supondo taxa constante e sem aportes. **Erros comuns:** divisão por zero é indefinida; não confunda diferença da PA com razão da PG; não some percentuais sucessivos sem atualizar a base; alinhe unidade da taxa e do tempo.",
+        "example": "Para 36=2²·3², o número de divisores positivos é (2+1)(2+1)=9. Na PA 4, 7, 10, …, d=3 e a_10=4+9·3=31; na PG 3, 6, 12, …, q=2 e a_6=3·2⁵=96. R$ 1.000 a 10% ao ano por dois anos resulta em R$ 1.200 no regime simples e R$ 1.210 no composto. Um desconto de 15% seguido de aumento de 15% sobre o novo preço não restaura o original: 200×0,85×1,15=195,50.",
+        "summary": "Identifique o conjunto e as restrições; simplifique frações antes de decidir se o decimal termina; use fatoração para divisores; teste a diferença ou a razão em termos consecutivos; explicite base, taxa, período e regime dos juros. Autochecagem: 0,125 é racional e finito (1/8); 1/3 é periódico; a_10 da PA 4,7,10,… é 31; juros compostos de R$1.000 a 10% por dois períodos totalizam R$1.210."
+      }
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "official_label": "Funções",
+      "current": {"editorial_version": "1.1.0", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.3.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base ensina domínio, gráfico, taxa de variação e composição com precisão. A revisão acrescenta radicais, racionais e transformações gráficas, mas não há lição unificada nem exemplo de domínio após simplificação algébrica; a proposta ainda não deve ser chamada publicada.",
+      "evidence": [{"source_document_id": 148, "page": 5, "official_excerpt": "Funções e representações funcionais no índice oficial do programa"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.3.0 acrescenta domínios de funções radicais/racionais e transformações, em review"}],
+      "replacement_sections": {
+        "theory": "Uma função associa a cada entrada do domínio exatamente uma saída. Domínio, contradomínio e imagem são, respectivamente, entradas permitidas, conjunto de chegada e saídas efetivamente obtidas. Leia eixos, escala, unidade e intervalo; zeros satisfazem f(x)=0. A taxa média entre a e b é [f(b)−f(a)]/(b−a). Em f(g(x)), calcula-se g primeiro e a saída deve pertencer ao domínio de f. Para √g(x), exija g(x)≥0; para p(x)/q(x), exija q(x)≠0, mesmo que haja fator cancelável. Em y=af(x), as ordenadas são multiplicadas por a; em y=f(ax), a escala horizontal muda inversamente. Modelos devem respeitar o contexto e não autorizam extrapolação automática. **Erros comuns:** não confundir imagem e contradomínio, produto e composição, nem cancelar fator e reinserir ponto excluído; teste da reta vertical verifica se um gráfico define y como função de x.",
+        "example": "Se C(d)=6+2d é o custo em reais de uma corrida, d≥0; para 5 km, C=16 e, se C=20, então d=7 km. Para h(x)=√(x−1)/(x−2), é necessário x≥1 e x≠2, logo o domínio é [1,2)∪(2,∞). Embora a expressão tenha valor zero em x=1, x=2 continua excluído. Se f(x)=x², então 2f(x)=2x² dobra as ordenadas, enquanto f(2x)=4x² comprime horizontalmente o gráfico por fator 1/2.",
+        "summary": "Diga o significado de entrada e saída; determine o domínio antes de operar; leia escala/unidade; substitua valores para conferir; explique o resultado no contexto. Em composição, aplique primeiro a função interna. Autochecagem: para h acima, x=1 pertence e x=2 não; (f∘g)(2), com f(x)=x²−1 e g(x)=2x+1, vale 24."
+      }
+    },
+    {
+      "curriculum_topic_id": 2477,
+      "official_label": "Polinômios, equações e inequações",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base cobre fatoração, sinais e quadráticas reais, mas não raízes complexas, operações com polinômios nem multiplicidade. A revisão inclui uma observação correta sobre o Teorema Fundamental da Álgebra, mas não demonstra fatoração/raízes complexas em exemplo conectado ao método.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "polinômios com coeficientes reais; operações; raízes reais e complexas; fatoração e multiplicidade"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 acrescenta raízes complexas; estado review"}],
+      "replacement_sections": {
+        "theory": "Polinômio é soma finita de termos a_kx^k com expoentes inteiros não negativos; some termos semelhantes e use distributividade para operar. Resolver P(x)=0 significa encontrar raízes. Pelo Teorema Fundamental da Álgebra, polinômio de grau n tem n raízes complexas contando multiplicidades; com coeficientes reais, raízes não reais aparecem em pares conjugados. Em ax²+bx+c, a≠0, Δ=b²−4ac: Δ>0 dá duas raízes reais distintas, Δ=0 uma raiz dupla e Δ<0 um par complexo. Para inequações, raízes e pontos proibidos dividem a reta em intervalos; determine o sinal em cada intervalo. Ao multiplicar/dividir por número negativo, inverta o sinal da desigualdade. **Erros comuns:** não descarte raízes complexas se o conjunto pedido for ℂ; não conte raiz dupla como duas distintas; não divida por expressão variável sem analisar zeros e sinal; confira restrições da equação original.",
+        "example": "Expanda (x−2)(x+3)=x²+x−6; as raízes são 2 e −3, cada uma com multiplicidade 1. Para x²−5x+6<0, fatoramos (x−2)(x−3): como a parábola abre para cima, a expressão é negativa entre as raízes, 2<x<3; x=2,5 confirma o sinal. Já x²+1=0 não tem raiz real, mas em ℂ tem x=i e x=−i, pois i²=−1.",
+        "summary": "Simplifique ou fatore preservando equivalência; determine o conjunto numérico; registre multiplicidades e restrições; em inequações, construa os intervalos e teste um ponto de cada um. Autochecagem: Δ=0 indica raiz dupla; x²+1=0 tem duas raízes complexas conjugadas, não raízes reais."
+      }
+    },
+    {
+      "curriculum_topic_id": 2478,
+      "official_label": "Princípios de contagem e probabilidade",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.1.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base apresenta princípio multiplicativo e probabilidade condicional, mas não ensina arranjos, combinações, permutações ou inclusão-exclusão com exemplos. Esses itens constam expressamente do programa. A autochecagem de senha não substitui a explicação das distinções.",
+      "evidence": [{"source_document_id": 148, "page": 5, "official_excerpt": "inclusão-exclusão, princípio multiplicativo, arranjos, combinações, permutações e probabilidade condicional"}, {"file": "lessons.json", "evidence": "exemplo cobre apenas senha com ordem; fórmulas e escolha sem ordem ausentes"}],
+      "replacement_sections": {
+        "theory": "Comece definindo o que conta como resultado. Pelo princípio multiplicativo, etapas com m₁,…,m_k opções compatíveis produzem m₁⋯m_k resultados. Permutação ordena todos os n elementos: n!. Arranjo escolhe k dentre n e considera ordem: n!/(n−k)!. Combinação não considera ordem: n!/[k!(n−k)!]. Em conjuntos, |A∪B|=|A|+|B|−|A∩B| evita dupla contagem. Probabilidade clássica é favoráveis/possíveis somente quando resultados são equiprováveis; P(A|B)=P(A∩B)/P(B), P(B)>0. Independência exige P(A∩B)=P(A)P(B), não é sinônimo de “eventos diferentes”. **Erros comuns:** distinguir seleção e ordenação; não supor equiprobabilidade ou independência sem justificativa; atualizar o espaço amostral em retiradas sem reposição.",
+        "example": "De 5 estudantes, escolher presidente e vice dá 5·4=20 arranjos, pois trocar cargos muda o resultado. Escolher 2 representantes sem cargos dá C(5,2)=5!/(2!3!)=10 pares. Se 12 participam de A, 9 de B e 4 de ambos, |A∪B|=12+9−4=17. Num dado justo, sabendo que saiu número par, a probabilidade de sair 6 é 1/3: os resultados possíveis condicionais são {2,4,6}.",
+        "summary": "Escreva se a ordem importa, se há reposição e qual é o espaço amostral; escolha produto, arranjo, combinação ou permutação; subtraia interseções na união; explicite equiprobabilidade e independência. Autochecagem: os 10 pares de representantes são metade dos 20 pares ordenados de cargos; P(6|par)=1/3."
+      }
+    },
+    {
+      "curriculum_topic_id": 2479,
+      "official_label": "Sistemas lineares e matrizes",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base ensina eliminação e interpretação geométrica, mas não apresenta operações matriciais, inversa, determinante ou representação matricial efetiva. A revisão acrescenta sistemas de inequações, mas não preenche essas lacunas do rótulo oficial.",
+      "evidence": [{"source_document_id": 148, "page": 5, "official_excerpt": "representação algébrica, geométrica e matricial; operações, inversa e determinante"}, {"file": "lessons.json", "evidence": "matrizes são citadas como organização de coeficientes, sem cálculo matricial"}],
+      "replacement_sections": {
+        "theory": "Um sistema linear exige que todas as equações sejam satisfeitas simultaneamente. Eliminação combina linhas para reduzir incógnitas; geometricamente, duas retas podem cruzar (uma solução), ser paralelas distintas (nenhuma) ou coincidir (infinitas). A matriz aumentada registra coeficientes e termos independentes. Matrizes podem ser somadas de mesma dimensão; produto AB só existe quando colunas de A = linhas de B e, em geral, AB≠BA. Para matriz quadrada, det(A)≠0 equivale a inversibilidade e garante solução única de Ax=b; det(A)=0 não decide sozinho se o sistema é impossível ou indeterminado. A inversa, quando existe, satisfaz A⁻¹A=I. **Erros comuns:** operar a linha inteira na eliminação; não concluir “sem solução” apenas de determinante zero; verificar dimensões antes de multiplicar; interpretar incógnitas no contexto e suas restrições.",
+        "example": "Considere 2s+j=19 e s+2j=17. A matriz dos coeficientes é A=[[2,1],[1,2]], com det(A)=4−1=3, não nulo; há solução única. Subtraindo a primeira equação da segunda após multiplicar a segunda por 2, obtemos 3j=15, logo j=5 e s=7. Conferência: 2·7+5=19 e 7+2·5=17. A inversa de A é (1/3)[[2,−1],[−1,2]].",
+        "summary": "Modele condições como equações, escolha eliminação/substituição ou forma matricial, confira dimensões e determinante quando aplicável e substitua a solução em todas as equações. Autochecagem: det([[2,1],[1,2]])=3; os preços s=7 e j=5 satisfazem ambas."
+      }
+    },
+    {
+      "curriculum_topic_id": 2480,
+      "official_label": "Geometria plana",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base é correta, mas não ensina congruência nem Tales e contém apenas um exemplo de escala de área. A revisão inclui Tales e relações métricas, mas continua review e não apresenta congruência como critério de solução.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "congruência, semelhança, Tales, Pitágoras, polígonos, circunferências, áreas e perímetros"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 acrescenta Tales e altura à hipotenusa; não substitui a lição-base"}],
+      "replacement_sections": {
+        "theory": "Congruência significa mesma forma e tamanho; critérios como LLL, LAL e ALA permitem concluir que triângulos coincidem. Semelhança conserva ângulos e multiplica lados correspondentes por um fator k; perímetros variam por k e áreas por k². O teorema de Tales aplica proporcionalidade quando paralelas cortam transversais. Pitágoras, a²+b²=c², vale em triângulo retângulo. Em polígonos e círculos, distinga perímetro/comprimento de área; circunferência mede 2πr e círculo tem área πr². Em triângulo retângulo, altura à hipotenusa com projeções m,n satisfaz h²=mn e cateto²=c·projeção correspondente. Desenhos podem não estar em escala. **Erros comuns:** usar Pitágoras sem ângulo reto; comparar lados não correspondentes; escalar área por k em vez de k²; confundir raio e diâmetro.",
+        "example": "Duas paralelas cortam duas transversais. Se os segmentos correspondentes medem 2 e 3 numa transversal, e 4 e x na outra, 2/3=4/x, então x=6. Num triângulo retângulo com projeções 4 e 9 na hipotenusa, h²=4·9=36 e h=6. Ampliar um quadrado de lado 3 por fator 2 produz lado 6: perímetro dobra, de 12 para 24, e área quadruplica, de 9 para 36.",
+        "summary": "Primeiro identifique ângulos retos, paralelas e correspondências; decida entre congruência, semelhança, Tales ou Pitágoras; acompanhe unidades e fator de escala. Autochecagem: k=2 dobra comprimentos e quadruplica áreas; altura com projeções 4 e 9 mede 6."
+      }
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "official_label": "Geometria espacial",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base cobre sólidos e volumes básicos corretamente, mas o programa também pede relações entre retas e planos, poliedros e áreas. A revisão inclui área lateral e tronco de pirâmide, ainda sem exemplos de posição relativa ou planificação.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "retas e planos; poliedros, prismas, pirâmides, cilindros, cones e esferas; áreas e volumes"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 adiciona pirâmide regular e tronco; estado review"}],
+      "replacement_sections": {
+        "theory": "Em geometria espacial, retas podem ser paralelas, concorrentes ou reversas (não coplanares); reta e plano podem ser contidos, secantes ou paralelos. Poliedros têm faces planas; prismas e cilindros têm volume B·h, pirâmides e cones têm Bh/3, com h perpendicular à base. Esfera de raio r tem volume 4πr³/3 e área 4πr². Área total soma apenas superfícies externas; planificações ajudam a identificar faces, mas é preciso verificar quais arestas se unem. Em pirâmide regular, área lateral é perímetro da base vezes apótema lateral dividido por 2. Volume usa unidades cúbicas; 1 L=1 dm³=1000 cm³. **Erros comuns:** usar geratriz ou apótema como altura perpendicular; somar faces internas; misturar área e volume; aplicar fórmula de tronco sem bases paralelas e semelhantes.",
+        "example": "Uma pirâmide quadrada regular tem lado da base 6 e apótema lateral 5. A área lateral é (4·6·5)/2=60; a área da base é 36, então a área total é 96. Se a altura perpendicular é 4, o volume é 36·4/3=48 unidades cúbicas. Um cone com raio 3 e altura 10 tem volume π·9·10/3=30π; não se usa a geratriz no lugar da altura.",
+        "summary": "Classifique a posição relativa; identifique base, altura perpendicular e faces externas; escolha fórmula e unidade; converta capacidade ao final. Autochecagem: pirâmide de base 36 e altura 4 tem volume 48; o cone do exemplo tem 30π unidades cúbicas."
+      }
+    },
+    {
+      "curriculum_topic_id": 2482,
+      "official_label": "Trigonometria",
+      "current": {"editorial_version": "1.1.0", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base e o exemplo ensinam razões no triângulo, círculo e leis dos senos/cossenos, mas não equações, inequações nem transformações; a revisão em review acrescenta esses itens. O programa os nomeia explicitamente, então publicar apenas a base é prematuro.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "ângulos, identidades, equações, transformações, inequações, leis dos senos e cossenos"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 acrescenta soluções em intervalo e transformações sen(2x)"}],
+      "replacement_sections": {
+        "theory": "No triângulo retângulo, senθ=oposto/hipotenusa, cosθ=adjacente/hipotenusa e tgθ=oposto/adjacente. No círculo unitário, (cosθ,senθ) e sen²θ+cos²θ=1; 180°=π rad. Sinais dependem do quadrante. Para triângulos quaisquer, a/senA=b/senB=c/senC e c²=a²+b²−2ab cosC. Equações devem listar todas as soluções no intervalo: seno é positivo nos quadrantes I e II, cosseno em I e IV. Transformações y=A sen(Bx+C)+D alteram amplitude |A|, período 2π/|B|, fase e linha média; para cosseno o período também é 2π/|B|. Inequações selecionam arcos onde a condição vale, incluindo ou excluindo extremos conforme o sinal. **Erros comuns:** calculadora em modo angular errado; reter só solução principal; confundir ângulo e lado oposto; aplicar Pitágoras em triângulo qualquer.",
+        "example": "Resolva sen x=1/2 em [0,2π). O ângulo de referência é π/6; como o seno é positivo nos quadrantes I e II, x=π/6 ou 5π/6. Para cos x≥0, a solução no mesmo intervalo é [0,π/2]∪[3π/2,2π). Em y=2sen(3x), a amplitude é 2 e o período é 2π/3. Num triângulo com lados 5 e 7 e ângulo incluso de 60°, o terceiro lado c satisfaz c²=25+49−70·(1/2)=39, logo c=√39.",
+        "summary": "Desenhe o ângulo e identifique quadrante; converta unidades; escolha razão, identidade ou lei dos senos/cossenos; para equações e inequações, marque período e intervalo e confira extremos. Autochecagem: sen x=1/2 tem duas soluções em [0,2π); y=2sen(3x) tem período 2π/3."
+      }
+    },
+    {
+      "curriculum_topic_id": 2483,
+      "official_label": "Geometria analítica",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base cobre distância entre pontos, ponto médio, coeficiente angular e circunferência, mas não distância ponto-reta, colinearidade nem posições relativas de círculos, itens que a revisão tenta acrescentar. Essa extensão ainda não foi aprovada.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "coordenadas, distâncias, retas, círculos e alinhamento de pontos"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 acrescenta distância ponto-reta e círculos; estado review"}],
+      "replacement_sections": {
+        "theory": "No plano, distância entre P(x₁,y₁) e Q(x₂,y₂) é √[(x₂−x₁)²+(y₂−y₁)²]; ponto médio faz a média das coordenadas. Reta não vertical tem inclinação m=Δy/Δx; vertical não tem m definido. Paralelas distintas têm mesmo m; perpendiculares não verticais satisfazem m₁m₂=−1, e vertical é perpendicular à horizontal. Três pontos são colineares se a área do triângulo formado é zero. Para reta ax+by+c=0, distância de (x₀,y₀) é |ax₀+by₀+c|/√(a²+b²). Circunferência de centro (h,k), raio r: (x−h)²+(y−k)²=r². Para reta e círculo, compare distância do centro d com r; para dois círculos, compare distância entre centros com r₁+r₂ e |r₁−r₂|. **Erros comuns:** reta vertical sem inclinação; não usar módulo na distância; raio negativo; esquecer que tangência é uma interseção.",
+        "example": "A distância de P(3,0) à reta x=0 é 3. O círculo x²+y²=25, intersectado por x=3, dá y²=16, logo os pontos (3,4) e (3,−4). Com x=5 há tangência em (5,0); com x=6 não há interseção. Os pontos (0,0), (1,1) e (2,2) são colineares porque todos satisfazem y=x.",
+        "summary": "Traduza a figura para coordenadas/equações; verifique se coeficientes estão definidos; use distância para posição relativa e substitua pontos nas equações. Autochecagem: d=3<5 dá duas interseções; d=5 dá tangência; d=6 não cruza o círculo de raio 5."
+      }
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "official_label": "Logaritmos e exponenciais",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.1.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base explica definição, domínio, propriedades e uma equação logarítmica, porém não explicita comportamento gráfico nem inequações. A proposta 1.1.0 atende monotonicidade e hipótese temporal, mas permanece em revisão.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "potências, funções e gráficos exponenciais/logarítmicos, equações e inequações"}, {"file": "lesson-revisions.json", "evidence": "versão 1.1.0 acrescenta gráficos, monotonicidade e inequações; review"}],
+      "replacement_sections": {
+        "theory": "Para a>0, a≠1, a^x é exponencial: crescente se a>1 e decrescente se 0<a<1. log_a(b)=x equivale a^x=b e exige b>0. Exponencial tem imagem positiva; logaritmo tem domínio positivo; seus gráficos são inversos refletidos em y=x. log(ab)=log a+log b e log(a/b)=log a−log b; não há regra que transforme log(a+b) em soma. Em inequações, aplicar função crescente preserva ordem e decrescente inverte: isso depende da base. Em modelos, declare unidade temporal e se t pode ser fracionário. **Erros comuns:** argumento logarítmico não positivo; base 1; usar regra falsa para soma; não inverter desigualdade quando função é decrescente.",
+        "example": "Resolva log₂(x−1)+log₂(x+1)=3. O domínio é x>1. Com argumentos positivos, log₂(x²−1)=3, então x²−1=8; as raízes algébricas são ±3, mas só x=3 respeita o domínio. Para (1/2)^x>4=(1/2)^−2, como a função é decrescente, x<−2. No modelo N(t)=500·2^t, N>10.000 quando t>log₂20≈4,32; se só contam horas inteiras, a primeira é t=5.",
+        "summary": "Traduza logaritmo para expoente; declare domínio; determine crescimento/decrescimento pela base; em inequação, preserve ou inverta a ordem conforme monotonicidade; interprete gráficos e unidades. Autochecagem: log₂(8)=3; log₂(x−1) exige x>1; (1/2)^x>4 implica x<−2."
+      }
+    },
+    {
+      "curriculum_topic_id": 2485,
+      "official_label": "Conceitos fundamentais da Geografia",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A lição trata espaço, paisagem, lugar, território e região com exemplo útil; a revisão acrescenta formação socioespacial e Estado-Nação, mas fronteiras, redes e escalas do programa continuam sem aplicação. A definição de paisagem como apenas perceptível pode ficar mais precisa incluindo dimensões sensoriais e históricas.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "espaço geográfico, território, paisagem, meio, região, lugar, redes, escalas, fronteiras e Estado-Nação"}, {"resource_id": 585, "url": "https://brasilescola.uol.com.br/geografia/espaco-geografico.htm", "use": "recurso associado; não tomado como validação integral da lição"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 inclui formação socioespacial e Estado-Nação, em review"}],
+      "replacement_sections": {
+        "theory": "Espaço geográfico é produzido historicamente pelas relações entre sociedade e natureza. Paisagem é o recorte percebido dessas relações — formas, sons e experiências — em certo tempo; lugar envolve vivência e pertencimento; território destaca poder, controle e apropriação; região agrupa áreas segundo critério declarado; redes conectam pontos por fluxos; escala define o nível de análise. Fronteiras podem ser limites políticos e também zonas de contato. Estado-Nação articula instituições, território, população e projetos de identidade, que nem sempre coincidem. Formação socioespacial relaciona estruturas herdadas, agentes e mudanças. “Meio” deve ser explicado como configuração histórica das relações sociedade-natureza e técnicas, não sinônimo de natureza intocada. **Erros comuns:** tratar região como natural/homogênea; reduzir território à área física; confundir Estado com nação; mudar escala sem dizer; atribuir causalidade a um mapa isolado.",
+        "example": "Uma bacia com rio, barragem, bairros, captações e regras de distribuição pode ser paisagem pelo recorte percebido; território pelas decisões e disputas de controle; lugar pelas experiências dos moradores; região se delimitada pelo critério hidrográfico; espaço geográfico pela produção histórica de infraestrutura e usos. A rede de água conecta captação e domicílios; analisar escalas municipal e regional pode revelar quem decide e quem recebe o serviço. Nenhum conceito substitui a evidência do caso.",
+        "summary": "Antes de nomear um conceito, declare recorte, escala e evidência. Pergunte quais agentes, fluxos, técnicas e relações de poder produzem o espaço e quem fica incluído ou excluído. Autochecagem: “região” requer critério; “território” requer atenção a poder/controle; Estado e nação não são sinônimos automáticos."
+      }
+    },
+    {
+      "curriculum_topic_id": 2486,
+      "official_label": "Linguagem cartográfica e geotecnologias",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A revisão corrige a omissão de orientação, coordenadas, projeções e geotecnologias, mas falta um exemplo efetivamente cartográfico que combine legenda, escala, fonte e leitura de dado; a proposta está em review. A frase de escala maior/menor na base deve ser preservada com definição explícita de denominador.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "orientação, coordenadas, órbita terrestre, estações, fusos, elementos e projeções cartográficas, mapas temáticos e escalas"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 inclui azimute, coordenadas, Mercator, GPS e sensoriamento remoto; review"}],
+      "replacement_sections": {
+        "theory": "Todo mapa seleciona um fenômeno: leia título, legenda, unidade, escala, orientação, projeção, fonte e data. Latitude mede posição norte/sul do Equador; longitude, leste/oeste de Greenwich. Projeções planas distorcem alguma propriedade; Mercator preserva ângulos localmente e amplia áreas em altas latitudes. Escala 1:n relaciona medida no mapa à realidade: escala maior (denominador menor) mostra área menor com mais detalhe. A Terra gira e translada com eixo inclinado; isso produz ciclo diário e estações opostas entre hemisférios, não por simples distância ao Sol. Diferença de longitude aproxima hora solar a 15° por hora; fusos civis são convenções. GPS estima posição por sinais de satélite; sensoriamento remoto mede energia refletida/emitida e depende de resolução, data e método. **Erros comuns:** confundir latitude e longitude, escala cartográfica e resolução, hora solar e hora legal; comparar cores sem ler classes/denominadores.",
+        "example": "Num mapa 1:250.000, 4 cm representam 4×250.000=1.000.000 cm=10 km. Um ponto em 23°S, 46°W fica ao sul do Equador e a oeste de Greenwich. Dois locais separados por 60° de longitude diferem aproximadamente 4 horas de hora solar; o ponto a leste está adiantado, mas o horário civil exige verificar a regra vigente. Em mapa temático, uma classe de cor só permite comparação depois de conferir unidade, intervalo e data.",
+        "summary": "Leia metadados antes de inferir; faça conversão de escala com unidades iguais; interprete sinais das coordenadas; explique distorções e limites do dado; separe padrões astronômicos de convenções civis. Autochecagem: 4 cm em 1:250.000 são 10 km; Mercator não preserva áreas em altas latitudes."
+      }
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "official_label": "Componentes físico-naturais do espaço geográfico",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "Base e revisão tratam esferas, ciclo da água, relevo, solos e gestão, mas não articulam claramente clima, circulação atmosférica/oceânica, criosfera e dinâmica de biomas. O exemplo existente é adequado como cadeia causal, porém cobre somente desmatamento/erosão.",
+      "evidence": [{"source_document_id": 148, "page": 6, "official_excerpt": "interações entre litosfera, hidrosfera, atmosfera e criosfera e dinâmicas terrestres"}, {"resource_id": 623, "url": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm", "use": "recurso de aprendizagem associado; não valida sozinho a cobertura"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 acrescenta tectônica, solos, clima, bacias e oceanos; review"}],
+      "replacement_sections": {
+        "theory": "O sistema terrestre resulta de interações entre litosfera (rochas, relevo e solos), hidrosfera (água líquida), atmosfera, criosfera (gelo) e biosfera. Energia solar e interna move processos; água, carbono, sedimentos e nutrientes circulam entre componentes. Tectônica de placas forma relevo e está associada a vulcanismo/terremotos; intemperismo altera rochas, erosão transporta materiais e deposição os acumula. Clima envolve padrões duradouros de temperatura e precipitação; circulações atmosférica e oceânica redistribuem energia e umidade. Bacia hidrográfica organiza drenagem até um exutório. Biomas variam com clima, solo, relevo e comunidades; não são homogêneos. Atividades humanas alteram fluxos e riscos. **Erros comuns:** confundir tempo e clima; reduzir bioma ao clima; atribuir evento extremo a uma causa única sem evidência; tratar água disponível como igualmente acessível.",
+        "example": "Em uma bacia, chuva em encosta alimenta infiltração e escoamento; afluentes conduzem água e sedimentos ao rio principal e ao exutório. Desmatamento pode reduzir interceptação; impermeabilização aumenta escoamento rápido; captação altera vazão. O resultado depende de solo, declividade, chuva, infraestrutura e usos a montante/jusante. Para avaliar gestão, compare quantidade, qualidade, ecossistemas, saneamento e demanda dos usuários, sem presumir que uma intervenção produz sempre o mesmo efeito.",
+        "summary": "Explique fluxos de matéria/energia entre esferas; identifique processo, escala, condições e ação humana; evite causa única. Autochecagem: relevo e solo influenciam escoamento, mas chuva, cobertura e urbanização também; tempo atmosférico é episódio, clima é padrão de longo prazo."
+      }
+    },
+    {
+      "curriculum_topic_id": 2488,
+      "official_label": "Globalização, economia e trabalho",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": null,
+      "decision": "revise",
+      "justification": "O programa inclui circuitos de produção, divisão territorial do trabalho, gênero/raça, emprego e segurança alimentar; no arquivo-base a lição publicada trata principalmente globalização e comércio e não oferece explicação nem exemplo para trabalho e alimentação. A cobertura é insuficiente para o rótulo.",
+      "evidence": [{"source_document_id": 148, "page": 7, "official_excerpt": "circuitos de produção, comércio, divisão territorial do trabalho, redes, emprego, gênero/raça e segurança alimentar"}, {"resource_id": 592, "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-globalizacao.htm", "use": "prática associada; não supre os subtemas ausentes na teoria"}, {"file": "lessons.json", "evidence": "lição-base e exemplo não desenvolvem cadeia produtiva, divisão do trabalho, desigualdade laboral ou segurança alimentar"}],
+      "replacement_sections": {
+        "theory": "Globalização intensifica fluxos de mercadorias, capitais, pessoas, informação e decisões, mas de forma desigual. Um circuito produtivo inclui extração/insumos, fabricação, transporte, distribuição, consumo e descarte; etapas podem ocorrer em lugares diferentes. A divisão territorial do trabalho distribui funções conforme infraestrutura, tecnologia, custos, políticas e poder de negociação. Redes conectam lugares, mas não eliminam dependências nem fronteiras. No trabalho, examine emprego formal/informal, remuneração, segurança, gênero e raça usando recorte e dados; diferenças não devem ser naturalizadas nem inferidas de um caso isolado. Segurança alimentar envolve acesso regular a alimentos suficientes e adequados, não apenas produção total; preços, renda, terra, logística, ambiente e políticas importam. **Erros comuns:** chamar qualquer comércio de globalização recente; confundir produção alta com acesso universal; explicar desigualdade como preferência individual; ignorar quem controla etapas e assume riscos.",
+        "example": "Uma camiseta pode usar algodão de uma região, ser fiada e costurada em outras, receber marca e financiamento de empresas em outro país e chegar ao consumidor por plataformas e portos. Para analisar o circuito, mapeie etapas, transporte, trabalho, valor agregado e descarte; pergunte quem decide preços e quem suporta riscos. Se a região produtora também enfrenta insegurança alimentar, isso não prova falta de produção: investigue renda, acesso à terra, preços e distribuição.",
+        "summary": "Mapeie etapas e fluxos; identifique escala, agentes, infraestrutura e poder; use evidências para discutir emprego e desigualdades; diferencie disponibilidade de alimentos de acesso. Autochecagem: uma cadeia transnacional pode conectar lugares sem distribuir igualmente renda, decisão ou riscos."
+      }
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "official_label": "Brasil: dinâmica territorial",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base trata federação, urbanização, migração, economia e conflitos com precisão geral. A revisão adiciona questão agrária, metropolização e segregação, mas falta exemplo baseado em indicadores/recorte e o rótulo oficial exige questões socioambientais e organização político-territorial; não aprovar sem essa integração.",
+      "evidence": [{"source_document_id": 148, "page": 7, "official_excerpt": "organização político-territorial, economia e urbanização brasileiras, redes, população, conflitos e questões socioambientais"}, {"resource_id": 657, "url": "https://www.todamateria.com.br/exercicios-sobre-o-territorio-brasileiro-com-respostas-explicadas/", "use": "prática associada, não substitui cobertura dos subtemas"}, {"file": "lesson-revisions.json", "evidence": "versão 1.2.0 amplia questão agrária e segregação; review"}],
+      "replacement_sections": {
+        "theory": "O Brasil é uma federação formada por União, estados, Distrito Federal e municípios, com competências constitucionais; regiões de planejamento/análise não são entes federativos. A dinâmica territorial resulta de formação histórica, políticas, propriedade e trabalho, redes de transporte/energia, urbanização e fluxos populacionais. Migração depende de oportunidades, redes, conflitos e condições ambientais. Metropolização integra municípios por fluxos; segregação socioespacial distribui desigualmente moradia, serviços, emprego, mobilidade e riscos. Questão agrária relaciona concentração de terras, produção, trabalho, direitos e conflitos. Problemas socioambientais envolvem impactos e vulnerabilidades desiguais. **Erros comuns:** confundir divisão regional com federação; tratar fronteira agrícola como espaço vazio; deduzir migração de crescimento populacional sem dados; atribuir fenômeno nacional a uma região sem indicar período/escala.",
+        "example": "Para comparar dois municípios de uma região metropolitana, escolha período e indicadores: tempo de deslocamento, acesso a saneamento, localização de empregos e exposição a enchentes. Se o município periférico tem viagens mais longas e menor cobertura de saneamento, isso sustenta uma hipótese de desigualdade territorial, mas não prova sozinho sua causa. Relacione dados a preço da terra, transporte e decisões públicas; identifique quais níveis de governo têm competência e quem é afetado.",
+        "summary": "Declare escala e período; separe entes federativos de regiões; conecte redes, população, economia e ambiente; fundamente desigualdades com indicadores e considere agentes/conflitos. Autochecagem: região metropolitana pode atravessar limites municipais sem se tornar um ente federativo."
+      }
+    },
+    {
+      "curriculum_topic_id": 2490,
+      "official_label": "Antiguidade clássica e período medieval",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": null,
+      "decision": "revise",
+      "justification": "A base é cautelosa e correta, mas cobre Grécia e Roma em nível panorâmico; o único exemplo é democracia ateniense, sem explicar sociedades medievais nem crises do feudalismo, explicitamente cobradas. O estado published não é justificável para o escopo inteiro.",
+      "evidence": [{"source_document_id": 148, "page": 8, "official_excerpt": "Grécia e Roma; sociedades medievais; crises do feudalismo"}, {"file": "lessons.json", "evidence": "exemplo e autochecagem abordam apenas cidadania ateniense; não há exemplo medieval"}, {"resource_ids": [625, 626, 627], "use": "fontes educativas associadas a Grécia, Roma e Idade Média; não utilizadas como validação textual"}],
+      "replacement_sections": {
+        "theory": "Na Grécia antiga, pólis como Atenas e Esparta tinham instituições e formas de participação distintas; em Atenas, cidadania política excluía mulheres, escravizados e estrangeiros. Roma mudou de monarquia a república e império, expandiu-se por conquistas e integrou povos sob condições variadas; escravidão antiga não deve ser confundida com a escravidão racial atlântica moderna. Na Europa medieval, poderes locais, monarquias, Igreja, relações senhoriais, produção camponesa, cidades e comércio variaram no tempo e no espaço. A crise do feudalismo foi processo desigual, relacionado a transformações demográficas, conflitos, epidemias, expansão comercial e mudanças políticas; não significou desaparecimento imediato de todas as relações anteriores. **Erros comuns:** chamar a democracia ateniense de universal; tratar Idade Média como homogênea ou sem comércio; atribuir crise do feudalismo a uma causa única; projetar Estados nacionais atuais sobre pólis e impérios.",
+        "example": "Compare duas formas de organização sem presumir equivalência: na pólis ateniense, a participação direta cabia a uma parcela restrita dos habitantes; numa sociedade senhorial medieval, obrigações entre camponeses e senhores organizavam parte da produção e do poder local. Para explicar mudanças, considere comércio e crescimento urbano em algumas regiões, conflitos e transformações demográficas, perguntando quais grupos ganharam ou perderam poder. O exemplo não representa toda a Grécia nem toda a Europa medieval.",
+        "summary": "Situe sociedade, período e espaço; compare instituições, trabalho, cidadania e hierarquias; descreva continuidades e mudanças com mais de uma causa. Autochecagem: a democracia ateniense não incluía todos os residentes; a crise feudal foi processo longo e regionalmente desigual."
+      }
+    },
+    {
+      "curriculum_topic_id": 2491,
+      "official_label": "Período moderno",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base reconhece expansão, religião, colonização e agência de povos submetidos, mas não desenvolve Iluminismo, absolutismo nem crises/revoluções atlânticas. A revisão 1.2.0 os menciona sem exemplo resolvido; a cobertura oficial continua parcial.",
+      "evidence": [{"source_document_id": 148, "page": 8, "official_excerpt": "Renascimento, Reformas, Estado Moderno, expansão marítima e colonização das Américas; indígenas, africanos e resistências"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 acrescenta absolutismo, Iluminismo e revoluções atlânticas; review"}, {"resource_id": 643, "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-formacao-dos-estados-nacionais-modernos.htm", "use": "prática associada, não evidência suficiente para aprovação da lição"}],
+      "replacement_sections": {
+        "theory": "Entre os séculos XV e XVIII, processos diversos transformaram poderes, economias e conhecimentos. Estados modernos ampliaram administração fiscal, justiça, forças armadas e controle territorial, negociando com poderes locais; absolutismos não foram uniformes. Renascimento valorizou novas práticas artísticas e intelectuais sem simplesmente eliminar a religião. Reformas cristãs fragmentaram autoridades e provocaram conflitos e reorganizações. Expansão marítima conectou comércio, conquista e escravização. Nas Américas, colonização reorganizou terras e trabalho; povos indígenas e africanos escravizados resistiram, negociaram e criaram formas de vida. Iluminismos debateram razão, autoridade e direitos; revoluções atlânticas mobilizaram essas ideias em contextos próprios, mas cidadania e liberdade foram distribuídas de modo desigual. **Erros comuns:** narrativa linear de feudalismo para capitalismo; Estado moderno como criação instantânea; Iluminismo como causa única; colonização como encontro pacífico; presumir liberdade universal após revoluções.",
+        "example": "Uma monarquia que amplia impostos e tribunais para sustentar guerras pode fortalecer o centro, mas ainda negociar com elites e enfrentar resistências: centralização não equivale a poder absoluto sem limites. Compare esse processo com uma revolução atlântica perguntando quem formulou direitos, quem participou e quem permaneceu excluído. Na colonização, conecte terra, comércio, coerção do trabalho e resistência indígena/africana sem reduzir o processo a uma troca comercial.",
+        "summary": "Relacione instituições, religião, ideias, comércio, conquista e trabalho; compare agentes e grupos incluídos/excluídos; indique contexto e limites. Autochecagem: Estado moderno é processo desigual; ideias de direitos coexistiram com escravidão e exclusões políticas."
+      }
+    },
+    {
+      "curriculum_topic_id": 2492,
+      "official_label": "Período contemporâneo e história do tempo presente",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review"},
+      "decision": "revise",
+      "justification": "A base lista processos contemporâneos, mas não oferece quadro comparativo de guerras, revoluções, descolonização e ditaduras/democratizações. O exemplo Diretas Já é pertinente e corretamente distingue demanda e resultado, mas a revisão ampliadora segue em review.",
+      "evidence": [{"source_document_id": 148, "page": 8, "official_excerpt": "recortes temáticos do programa incluem cidadania, revoluções, guerras, ditaduras, globalização e movimentos sociais"}, {"file": "lessons.json", "evidence": "exemplo único sobre Diretas Já; revisão 1.2.0 complementa Brasil/América Latina, ainda review"}, {"resource_id": 590, "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-idade-contemporanea.htm", "use": "prática associada, sem validar toda a extensão do programa"}],
+      "replacement_sections": {
+        "theory": "A história contemporânea reúne revoluções políticas e industriais, imperialismo, guerras mundiais, revoluções socialistas, descolonização, Guerra Fria, ditaduras, democratizações e globalização. São processos conectados, mas não iguais: compare causas, agentes, instituições, escalas e efeitos. Movimentos sociais articulam participantes, demandas e formas de ação; podem pressionar agendas sem obter imediatamente todos os objetivos. Cidadania e direitos foram ampliados por mobilização e restringidos por colonialismo, racismo e autoritarismo. História do tempo presente examina fontes, memórias e disputas públicas, distinguindo evidência documentada de interpretação. **Erros comuns:** explicar acontecimentos por uma causa única; equiparar regimes pelo nome; confundir demanda com resultado; tratar memória ou testemunho como prova isolada sem contexto e confronto de fontes.",
+        "example": "A campanha Diretas Já, em 1983–84, reuniu atores diversos em defesa de eleições presidenciais diretas durante a transição da ditadura. A emenda não alcançou os votos necessários em 1984; a sucessão de 1985 foi indireta. Para interpretá-la, separe objetivo, participantes, repertórios de mobilização, resposta institucional e efeitos: ampliou pressão pública, mas não realizou imediatamente a eleição direta pretendida.",
+        "summary": "Compare processos por contexto, agentes, demandas, instituições, fontes e efeitos; mantenha escalas e cronologia; diferencie objetivo de resultado. Autochecagem: Diretas Já reivindicou voto direto, mas a sucessão de 1985 foi indireta."
+      }
+    },
+    {
+      "curriculum_topic_id": 2493,
+      "official_label": "Conceitos fundamentais e dimensões sociais",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review", "source_document_ids": [650]},
+      "decision": "revise",
+      "justification": "A lição e revisão abordam socialização, cultura, poder, desigualdade e violência; a revisão de violência é conceitualmente mais precisa e corretamente separa usos sociológicos da definição da OMS. Ainda falta exemplo que conecte indivíduo/grupo, natureza/cultura, trabalho, direitos e conflito, todos explicitados no programa.",
+      "evidence": [{"source_document_id": 148, "page": 9, "official_excerpt": "indivíduo, grupos, socialização, cultura e poder, trabalho, natureza/cultura, desigualdade, direitos, conflitos e violência"}, {"source_document_id": 650, "use": "a versão 1.2.0 cita a definição de violência da OMS e distingue lentes sociológicas"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 tem texto substituto da definição e complemento sobre trabalho; ambos review"}],
+      "replacement_sections": {
+        "theory": "Indivíduos se formam em relações com grupos e instituições; socialização transmite e também transforma normas e práticas. Cultura é aprendida, plural e disputada, não uma característica biológica fixa. Natureza e sociedade se relacionam por trabalho, técnicas e usos de recursos. Poder distribui recursos e define normas; desigualdades de classe, raça e gênero podem se combinar, sem determinar mecanicamente cada trajetória. Conflito pode expressar interesses e direitos em disputa. A definição de saúde pública da OMS trata violência como uso intencional de força física ou poder, ameaçado ou efetivo, contra si, outra pessoa ou grupo/comunidade, com probabilidade de causar lesão, morte, dano psicológico, prejuízo ao desenvolvimento ou privação. Em Sociologia, violência institucional, estrutural e simbólica são lentes analíticas distintas: defina o mecanismo e evidência; não as confunda automaticamente com a definição jurídica/sanitária. **Erros comuns:** naturalizar desigualdade; chamar qualquer desacordo de violência; generalizar de um caso; atribuir intenção sem evidência.",
+        "example": "Uma empresa altera tecnologia e turnos. Para analisar efeitos, identifique quem controla a decisão, quais tarefas mudam, como variam salários e segurança por grupo e que direitos/procedimentos existem. Se houver denúncias de agressão e resposta institucional desigual, separe atos observados, padrão documentado e hipótese explicativa; relatos, registros e comparação entre grupos podem sustentar a análise, mas um episódio não prova intenção de todos nem permite generalização automática.",
+        "summary": "Defina o conceito antes de aplicá-lo; identifique agentes, instituições, evidências, escala e grupos afetados; analise relações entre trabalho, cultura, poder e direitos sem naturalizar diferenças. Autochecagem: nem todo conflito é violência; para sustentar violência institucional, demonstre mecanismo e padrão, não apenas um resultado isolado."
+      }
+    },
+    {
+      "curriculum_topic_id": 2494,
+      "official_label": "Ética e política",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": {"editorial_version": "1.2.0", "review_status": "review", "source_document_ids": [651]},
+      "decision": "revise",
+      "justification": "A base apresenta virtude, dever, consequências, justiça, direitos humanos e democracia; a revisão amplia autonomia, consciência, contrato social e tradições políticas. Ainda falta explicitar soberania/representação e tornar o exemplo um procedimento de avaliação argumentativa, não apenas uma conclusão geral.",
+      "evidence": [{"source_document_id": 148, "page": 10, "official_excerpt": "virtude, dever, justiça, democracia, liberdade, direitos humanos, poder e participação"}, {"source_document_id": 651, "use": "fonte associada à Declaração Universal dos Direitos Humanos"}, {"file": "lesson-revisions.json", "evidence": "revisão 1.2.0 amplia correntes filosóficas, em review"}],
+      "replacement_sections": {
+        "theory": "Ética examina razões para agir e normas; política investiga poder, decisões coletivas e sua legitimidade. Ética das virtudes enfatiza caráter e hábitos; teorias do dever, princípios e obrigações; consequencialismos, efeitos. Justiça pode envolver igualdade de direitos, distribuição, reconhecimento e reparação. Direitos humanos afirmam dignidade e igualdade e limitam o poder. Democracia requer participação, pluralismo, competição política, garantias e prestação de contas; decisão majoritária não elimina direitos. Soberania trata da autoridade política e de seus limites; representação autoriza agentes a decidir sob regras e controle. Liberalismo, republicanismo e marxismo são tradições plurais, não fórmulas únicas. **Erros comuns:** confundir opinião com argumento; supor que maioria torna qualquer decisão justa; citar direito sem explicar o conflito; atribuir uma tese inteira a uma tradição sem qualificação.",
+        "example": "Uma maioria vota para impedir que um grupo use um espaço público. Avalie: (1) qual regra e direito estão em jogo; (2) quem é afetado e se houve participação; (3) quais razões e consequências são alegadas; (4) se a restrição é necessária, proporcional e contestável. A maioria pode decidir políticas, mas não torna automaticamente legítima a exclusão de direitos fundamentais. A conclusão deve citar princípio e evidência, além de reconhecer o conflito entre liberdade, igualdade e segurança se ele existir.",
+        "summary": "Nomeie princípio e conceito político; apresente razões e evidências; identifique afetados, distribuição de poder e salvaguardas; confronte consequências e direitos. Autochecagem: votação majoritária é procedimento, não justificativa suficiente para violar direitos; explique por que a regra é legítima e controlável."
+      }
+    },
+    {
+      "curriculum_topic_id": 2495,
+      "official_label": "Leitura crítica em língua inglesa",
+      "current": {"editorial_version": "1.0.1", "review_status": "published", "source_document_ids": [148]},
+      "latest_proposal": null,
+      "decision": "approve_as_is",
+      "justification": "A lição ensina leitura global, propósito, público, tese, evidências, conectores, referência pronominal, cognatos e análise crítica de interesses/vozes; o exemplo resolvido e a autochecagem aplicam contraste e referência com resposta demonstrável. É consistente com o escopo oficial da primeira fase e não contém alegação factual problemática. A aprovação vale para este conteúdo introdutório, não como cobertura exaustiva de todo gênero textual.",
+      "evidence": [{"source_document_id": 148, "page": 10, "official_excerpt": "leitura, interpretação e síntese; argumentos; interesses, poder e perspectivas de mundo em discursos"}, {"resource_id": 622, "url": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab", "use": "leitura crítica associada, sem copiar conteúdo"}, {"file": "lessons.json", "evidence": "exemplo de however/its resolvido corretamente; autochecagem distingue contraste"}],
+      "limitations": ["O exemplo é curto e não demonstra síntese de texto multimodal; ampliar em material posterior é melhoria, não bloqueio para aprovar esta lição introdutória."],
+      "replacement_sections": null
+    }
+  ]
+}

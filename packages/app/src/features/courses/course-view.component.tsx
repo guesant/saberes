@@ -29,10 +29,13 @@ export function CourseView() {
 
   return (
     <>
-      {viewModel.progressError ? <CourseProgressError error={viewModel.progressError} /> : null}
+      <CourseProgressError error={viewModel.progressError} />
       <CourseReadyView
         data={viewModel.data}
+        attempts={viewModel.attempts}
         progress={viewModel.progress}
+        lessonProgress={viewModel.lessonProgress}
+        assessmentItemsById={viewModel.assessmentItemsById}
         startError={viewModel.startError}
         startState={viewModel.startState}
         started={viewModel.started}

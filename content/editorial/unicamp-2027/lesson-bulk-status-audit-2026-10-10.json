@@ -1,0 +1,209 @@
+{
+  "format": "editorial-bulk-audit-proposals/v1",
+  "manifest_id": "unicamp-2027-lesson-bulk-status-audit-2026-10-10",
+  "created_at": "2026-10-10",
+  "scope": "Auditoria somente leitura das lições da preparação Unicamp 2027 em draft/review. Acessibilidade e descrições de imagens excluídas; nenhuma abertura individual de PDF ou imagem.",
+  "database_baseline": {
+    "path": ".local/content/content.sqlite",
+    "sha256": "c7196bf58e0f80696d49d92e1cd6ca254d6adeaca457a35f1e225d94befbb25a",
+    "access": "SQLite read-only"
+  },
+  "method": [
+    "Consultados os estados, versões, vínculos com tópicos, seções e fontes das lições diretamente no SQLite.",
+    "Comparadas as versões atuais com manifests de revisão, correções/propostas e pareceres independentes existentes no repositório.",
+    "Quando pareceres divergem, prevalece a evidência referente ao conteúdo/versão atual; divergências não resolvidas permanecem em review.",
+    "Nenhum conteúdo, autoria ou validação foi inferido; o banco não foi alterado."
+  ],
+  "summary": {
+    "safe_status_updates": 0,
+    "draft_records_in_database": 0,
+    "review_records_retained": 33,
+    "decision": "Nenhuma mudança de status é segura com as evidências disponíveis. As propostas abaixo são no-op deliberadas; changes vazio significa manter exatamente o status atual."
+  },
+  "decisions": [
+    {
+      "curriculum_topic_id": 2472,
+      "topic": "Morfologia da língua portuguesa",
+      "action": "retain_review",
+      "reason": "O parecer final mantém hold: a autochecagem ainda contém referente ambíguo. A existência de uma proposta corretiva não comprova que o texto corrigido esteja materializado e revisado na versão atual.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Parecer final para a versão 1.0.3: hold por referente ambíguo na autochecagem." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json", "detail": "Contém correção proposta, mas não substitui a confirmação de aplicação e revisão final da versão que está no SQLite." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/13,14,15", "detail": "SQLite read-only: três registros do tópico 2472, versão 1.0.3, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 13 }, "expected": { "editorial_version": "1.0.3", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 14 }, "expected": { "editorial_version": "1.0.3", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 15 }, "expected": { "editorial_version": "1.0.3", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "topic": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "action": "retain_review",
+      "reason": "O parecer final mantém hold por problemas editoriais e por ainda não ensinar a análise das obras obrigatórias. A proposta de correção existente não é aprovação da versão atualmente registrada.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Parecer final para a versão 1.0.5: hold por pontuação inválida, divergência de grafia e lacuna pedagógica." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json", "detail": "Proposta amplia a lista e o método, mas não registra aprovação final da versão atual." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/19,20,21", "detail": "SQLite read-only: três registros do tópico 2474, versão 1.0.5, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 19 }, "expected": { "editorial_version": "1.0.5", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 20 }, "expected": { "editorial_version": "1.0.5", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 21 }, "expected": { "editorial_version": "1.0.5", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "topic": "Conjuntos numéricos",
+      "action": "retain_review",
+      "reason": "O parecer final ainda aponta ausência do conceito de subconjunto, explícito no programa. A proposta de correção está disponível, mas não há parecer posterior que aprove o conteúdo atualmente gravado.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Hold para versão 1.2.2 por ausência de subconjunto." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json", "detail": "Propõe convenção para naturais, operações e uso de fatoração; não é aprovação independente da versão atual." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/22,23,24", "detail": "SQLite read-only: três registros do tópico 2475, versão 1.2.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 22 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 23 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 24 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "topic": "Funções",
+      "action": "retain_review",
+      "reason": "O parecer final mantém hold por lacunas em famílias de funções previstas. A correção tipográfica já registrada não resolve a cobertura; não promover por ter uma proposta parcialmente reconciliada.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Hold para versão 1.3.2 por cobertura insuficiente de funções quadráticas, trigonométricas, inversas e equações/inequações." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json", "detail": "A proposta corrige notação e adiciona exemplos; não há parecer final de aprovação para o texto SQLite." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/25,26,27", "detail": "SQLite read-only: três registros do tópico 2476, versão 1.3.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 25 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 26 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 27 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "topic": "Geometria espacial",
+      "action": "retain_review",
+      "reason": "O parecer final mantém hold por conteúdo do programa ainda ausente. A proposta de correção acrescenta itens, mas não há segunda aprovação que permita publicar a versão atual.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Hold para versão 1.2.2 por ausência de troncos e áreas de cilindros/cones." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json", "detail": "Propõe classificação espacial completa e fórmulas adicionais; não contém decisão final de aprovação do estado atual." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/40,41,42", "detail": "SQLite read-only: três registros do tópico 2481, versão 1.2.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 40 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 41 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 42 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "topic": "Componentes físico-naturais do espaço geográfico",
+      "action": "retain_review",
+      "reason": "O parecer final ainda lista lacunas programáticas em clima, hidrologia, relevo brasileiro, criosfera e conservação. A proposta de correção não equivale a aprovação do conteúdo atual.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Hold para versão 1.2.2 por lacunas de cobertura indicadas." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json", "detail": "Propõe ampliar a lição e corrigir a pedosfera; falta parecer independente posterior para a versão corrente." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/58,59,60", "detail": "SQLite read-only: três registros do tópico 2487, versão 1.2.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 58 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 59 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 60 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "topic": "Fundamentos da Física e Mecânica",
+      "action": "retain_review",
+      "reason": "A segunda revisão independente mantém hold: ainda falta explicitar que a aula é parcial e conectá-la às demais etapas do programa. A versão corrente coincide com a revisada, então a ressalva se aplica diretamente.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json", "detail": "Hold explícito para versão 1.3.2; falta delimitação de escopo e conexão com o restante do programa." },
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Parecer anterior também manteve hold por falta de aplicação resolvida de cinemática vetorial em duas dimensões." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/100,101,102", "detail": "SQLite read-only: três registros do tópico 2501, versão 1.3.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 100 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 101 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 102 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "topic": "Óptica e ondas",
+      "action": "retain_review",
+      "reason": "Há contradição entre um parecer preliminar approve_as_is e o parecer independente posterior, que mantém hold para a versão atual por limites de escopo e definições insuficientes. A decisão mais recente e específica prevalece; não publicar.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-sciences-2026-10-10.json", "detail": "Registro preliminar approve_as_is, anterior à revisão independente posterior." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json", "detail": "Parecer independente posterior mantém hold para versão 1.2.2 por generalização insuficientemente delimitada." },
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-final-review-corrections-2026-10-10.json", "detail": "Também registra hold por falta de aplicação numérica de interferência na versão avaliada." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/109,110,111", "detail": "SQLite read-only: três registros do tópico 2504, versão 1.2.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 109 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 110 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 111 }, "expected": { "editorial_version": "1.2.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "topic": "Materiais, gases, líquidos e sólidos",
+      "action": "retain_review",
+      "reason": "Os pareceres divergem: há aprovação que descreve energia cinética média e exemplo, mas a reconciliação editorial informa que esses elementos não pertencem à versão 1.3.1 atualmente gravada e estão apenas na proposta 1.3.2. A versão registrada não pode herdar a aprovação da proposta.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-2506-state-reconciliation-2026-10-10.json", "detail": "Manifest existente já registra exatamente a divergência de versão e a decisão de manter review para os IDs 115–117." },
+        { "locator": "content/editorial/unicamp-2027/lesson-audit-2506-final-approval-2026-10-10.json", "detail": "Parecer aprova conteúdo que inclui equação de energia cinética translacional média e exemplo de variação de temperatura." },
+        { "locator": "content/editorial/unicamp-2027/lesson-batch-sciences-2026-10-10.json", "detail": "Reconciliação identifica que o conteúdo citado na aprovação aparece na proposta 1.3.2, não na versão 1.3.1 do banco." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/115,116,117", "detail": "SQLite read-only: três registros do tópico 2506, versão 1.3.1, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 115 }, "expected": { "editorial_version": "1.3.1", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 116 }, "expected": { "editorial_version": "1.3.1", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 117 }, "expected": { "editorial_version": "1.3.1", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "topic": "Estrutura atômica, classificação periódica e ligação química",
+      "action": "retain_review",
+      "reason": "A segunda revisão mantém hold para a versão atual: faltam exemplos demonstrativos de ligações e propriedades previstas. As correções existentes são propostas, sem aprovação posterior do texto atual.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json", "detail": "Hold explícito para versão 1.1.2 por ausência de exemplos de ligações/propriedades." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json", "detail": "Pacote de correções propõe os exemplos faltantes, mas não contém liberação editorial final." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/118,119,120", "detail": "SQLite read-only: três registros do tópico 2507, versão 1.1.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 118 }, "expected": { "editorial_version": "1.1.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 119 }, "expected": { "editorial_version": "1.1.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 120 }, "expected": { "editorial_version": "1.1.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "topic": "Eletroquímica e compostos orgânicos",
+      "action": "retain_review",
+      "reason": "O parecer independente mais recente mantém hold para a versão atual: ainda faltam exemplos de célula Zn/Cu, isomeria e biomoléculas/enzimas. Não há proposta de aprovação reconciliada com o SQLite.",
+      "evidence": [
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-second-review-2026-10-10.json", "detail": "Hold explícito para versão 1.3.2 pelas lacunas listadas." },
+        { "locator": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json", "detail": "Pacote de correções não substitui a aprovação editorial final do conteúdo atual." },
+        { "locator": "sqlite://.local/content/content.sqlite#lessons/127,128,129", "detail": "SQLite read-only: três registros do tópico 2510, versão 1.3.2, review, is_published=1; nenhum foi alterado." }
+      ],
+      "targets": [
+        { "table": "lessons", "key": { "id": 127 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 128 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} },
+        { "table": "lessons", "key": { "id": 129 }, "expected": { "editorial_version": "1.3.2", "review_status": "review", "is_published": 1 }, "changes": {} }
+      ]
+    }
+  ],
+  "explicit_exclusions": [
+    "Não inclui lições já publicadas, mesmo quando existam pareceres históricos divergentes; o escopo pedido é draft/review.",
+    "Não altera texto, autoria, acessibilidade, descrição de imagem ou estado de publicação de ativos.",
+    "Não promove versões propostas sem evidência de que o conteúdo daquela versão está no SQLite e recebeu parecer final favorável.",
+    "Este artefato é uma auditoria/proposta, não um manifesto para aplicação automática; changes vazio registra decisão de não alterar o estado atual."
+  ]
+}

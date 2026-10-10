@@ -1,0 +1,37 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": { "id": 485 },
+      "expected": { "editorial_status": "published", "is_published": 1 },
+      "changes": {
+        "editorial_status": "review",
+        "editorial_note": "A URL cadastrada para a unidade de ângulos e polígonos retornou uma página explicitamente inexistente na inspeção em navegador de 10/10/2026. Manter o registro visível para consulta, mas não tratá-lo como material de aprendizagem aprovado até corrigir o destino. A licença de reutilização não foi confirmada; somente link e metadados."
+      },
+      "reason": "Retirar a aprovação editorial de um material cujo destino foi confirmado como inexistente, sem ocultar nem apagar o registro.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/resource-browser-followup-2468-2489-2026-10-10.json",
+          "detail": "A inspeção visual identifica o resource_id 485 e mostra a página 'Página não encontrada'; o registro deve permanecer consultável, mas não ser recomendado como aprendizagem até substituição."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": { "resource_id": 485, "topic_id": 2547, "curriculum_topic_id": null },
+      "expected": { "review_status": "published", "relevance_status": "relevant" },
+      "changes": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "review_note": "Inspeção em navegador em 10/10/2026 encontrou página inexistente na URL cadastrada. Relação conceitual plausível, mas o recurso não pode ser usado como aprendizagem até corrigir/verificar o destino. Manter visível com estado em revisão."
+      },
+      "reason": "A relação deixa de contar como material utilizável enquanto o destino não existir, sem remover o histórico nem o acesso ao registro.",
+      "evidence": [
+        {
+          "locator": "content/editorial/unicamp-2027/resource-browser-followup-2468-2489-2026-10-10.json",
+          "detail": "A inspeção registra explicitamente decision=needs_replacement para o resource_id 485 porque a URL retorna página não encontrada."
+        }
+      ]
+    }
+  ]
+}

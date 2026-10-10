@@ -1,0 +1,910 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T15:25:56.518708+00:00",
+  "database_before_sha256": "42e1d126f4b990b86339db83255bd23dec163a7be5df313007295f9262a71744",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 982
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 983
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 984
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 986
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 987
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 988
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 990
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 991
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 992
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 994
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 995
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 996
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 998
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 999
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1000
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.com/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1002
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1003
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1004
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1006
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1007
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1008
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1010
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1011
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1012
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1014
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1015
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1016
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1018
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1019
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1020
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1022
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1023
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1024
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1029
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1030
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1031
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1370
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1371
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1372
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1373
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1374
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1375
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1376
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1377
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_solutions",
+      "key": {
+        "id": 1378
+      },
+      "expected": {
+        "source_document_id": 45
+      },
+      "changes": {
+        "source_document_id": 4
+      },
+      "reason": "A resolução oficial comentada foi ligada ao PDF de gabarito, não ao material oficial de prova comentada. Corrige-se somente a referência da fonte; texto, título, autoria e estado permanecem inalterados.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "O documento oficial é cadastrado como material de prova comentada. A referência atual ao documento 45 identifica apenas o gabarito oficial dos modelos Q e X."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T152556529703Z.sqlite",
+  "database_after_sha256": "e5abc59d81e5933c4135d1850550d7bc83fa47c40d121ff1ec1f60ae81cd665d"
+}

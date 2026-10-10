@@ -1,0 +1,113 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {"id": 220},
+      "expected": {"url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-equilibrios-homogeneos-heterogeneos.htm", "editorial_status": "published", "availability_mode": "consultation_only", "source_document_id": 605},
+      "changes": {"title": "Constante de equilíbrio e quociente de reação (prática)", "url": "https://pt.khanacademy.org/science/quimica-ensino-medio/x57f96b935ba57f4b:equilibrio-quimico/x57f96b935ba57f4b:constante-de-equilibrio/e/reaction-quotient-and-equilibrium-constant", "provider": "Khan Academy", "kind": "exercise", "description": "Prática direta sobre expressões do quociente de reação e da constante de equilíbrio. Substitui a lista anterior, cuja classificação de fases e expressão de Kc tinham erros. Escopo restrito a constante/quociente; não cobre todo equilíbrio químico. Link para o material do provedor, sem cópia.", "source_document_id": null, "availability_mode": "practice", "editorial_note": "Substituição editorial: URL anterior preservada nesta decisão e no registro de aplicação para auditoria; a lista anterior continha erros em classificação de fases e fórmula de Kc. Novo recurso oficial Khan Academy é prática de constante de equilíbrio/quociente de reação; escopo parcial. Link-only."},
+      "reason": "Retirar do percurso de prática a lista com incorreções verificadas e apontar para atividade de prática pertinente e diretamente identificada sobre constante de equilíbrio e quociente de reação. A alternativa é complementar, não representa cobertura completa do tópico.",
+      "evidence": [
+        {"locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-equilibrios-homogeneos-heterogeneos.htm", "detail": "URL substituída. Auditoria anterior identificou enunciado sem indicação de fase na classificação de sistema homogêneo e fórmula de Kc fragmentada/incorreta na questão 4; não manter como prática."},
+        {"locator": "https://pt.khanacademy.org/science/quimica-ensino-medio/x57f96b935ba57f4b:equilibrio-quimico/x57f96b935ba57f4b:constante-de-equilibrio/e/reaction-quotient-and-equilibrium-constant", "detail": "Atividade oficial Khan Academy em português identificada como prática sobre expressões de quociente de reação e constante de equilíbrio; escopo diretamente relacionado, embora parcial."}
+      ]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 220, "topic_id": 2489, "curriculum_topic_id": null},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Vínculo canônico mantido para prática complementar de constante/quociente de equilíbrio; substituída a URL anterior por conter erros. Escopo parcial, não cobre classificação de sistemas homogêneos/heterogêneos em geral."},
+      "reason": "A alternativa pratica conceitos centrais de equilíbrio químico, mas o vínculo deve ser entendido como complementar e de escopo parcial.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/science/quimica-ensino-medio/x57f96b935ba57f4b:equilibrio-quimico/x57f96b935ba57f4b:constante-de-equilibrio/e/reaction-quotient-and-equilibrium-constant", "detail": "Prática Khan Academy de constante de equilíbrio/quociente de reação, relacionada ao tópico canônico 2489."}]
+    },
+    {
+      "table": "resources", "key": {"id": 223},
+      "expected": {"url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-tipos-reacoes-reacoes-no-cotidiano.htm", "editorial_status": "published", "availability_mode": "consultation_only", "source_document_id": 606},
+      "changes": {"title": "Reações e transformações químicas (prática)", "url": "https://pt.khanacademy.org/science/9-ano/fisico-e-quimica-atomica-e-molecular/reacoes-quimicas/e/reacoes-e-transformacoes-quimicas", "provider": "Khan Academy", "kind": "exercise", "description": "Atividade de prática em português sobre reações e transformações químicas. Substitui a lista anterior, cuja questão 6 continha afirmações incorretas sobre reação de cobre com ácido e balanceamento de AgBr. Complementar; não cobre toda a classificação de reações. Link-only.", "source_document_id": null, "availability_mode": "practice", "editorial_note": "Substituição editorial: URL anterior preservada nesta decisão e no registro de aplicação para auditoria; lista anterior tinha erros conceituais/balanceamento na questão 6. Alternativa Khan Academy oferece prática em reações e transformações químicas. Escopo complementar. Link-only."},
+      "reason": "Substituir prática com erros de química por exercício em português diretamente relacionado a reações e transformações, sem atribuir cobertura exaustiva.",
+      "evidence": [
+        {"locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-tipos-reacoes-reacoes-no-cotidiano.htm", "detail": "URL substituída. Auditoria anterior identificou erro sobre cobre reagindo com ácido sulfúrico diluído e produto de decomposição de AgBr não balanceado como Br2."},
+        {"locator": "https://pt.khanacademy.org/science/9-ano/fisico-e-quimica-atomica-e-molecular/reacoes-quimicas/e/reacoes-e-transformacoes-quimicas", "detail": "Atividade oficial Khan Academy em português identificada como prática de reações e transformações químicas; pertinente ao tópico e adequada como complemento."}
+      ]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 223, "topic_id": 2488, "curriculum_topic_id": null},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Vínculo canônico mantido para prática complementar de reações químicas; URL anterior substituída por erros conceituais e de balanceamento. Escopo parcial."},
+      "reason": "O exercício alternativo trata diretamente de reações/transformações químicas, como recurso complementar do tópico canônico 2488.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/science/9-ano/fisico-e-quimica-atomica-e-molecular/reacoes-quimicas/e/reacoes-e-transformacoes-quimicas", "detail": "Prática Khan Academy em reações e transformações químicas, pertinente ao tópico canônico 2488."}]
+    },
+    {
+      "table": "resources", "key": {"id": 225},
+      "expected": {"url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-grafico-funcao-segundo-grau.htm", "editorial_status": "published", "availability_mode": "consultation_only", "source_document_id": 584},
+      "changes": {"title": "Gráfico de equações do segundo grau na forma canônica (prática)", "url": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/e/graphing_parabolas_1", "provider": "Khan Academy", "kind": "exercise", "description": "Prática de construção de gráficos de funções quadráticas na forma canônica (vértice). Substitui lista cuja explicação confundia c=f(0), intercepto em y, com intercepto em x. Alternativa de escopo específico, não cobre todos os métodos de representação quadrática. Link-only.", "source_document_id": null, "availability_mode": "practice", "editorial_note": "Substituição editorial: URL anterior preservada nesta decisão e no registro de aplicação para auditoria; a explicação da questão 1 confundia intercepto em y (c=f(0)) com intercepto em x. Khan Academy oferece prática de gráfico de quadráticas na forma canônica; escopo específico. Link-only."},
+      "reason": "Trocar atividade cuja resolução contém erro conceitual por prática direta de gráfico de parábolas; descrever explicitamente que a alternativa foca forma canônica.",
+      "evidence": [
+        {"locator": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-grafico-funcao-segundo-grau.htm", "detail": "URL substituída. Auditoria anterior confirmou que c=f(0) corresponde ao intercepto/ordenada em y, não ao intercepto em x, como dizia a explicação da questão 1."},
+        {"locator": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/e/graphing_parabolas_1", "detail": "Atividade oficial Khan Academy identificada como prática de gráfico de equações quadráticas na forma canônica; exercício focado em traçar o gráfico, escopo restrito."}
+      ]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 225, "topic_id": 2479, "curriculum_topic_id": null},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Vínculo canônico mantido como prática complementar de gráfico de função quadrática; alternativa foca forma canônica/vértice e não substitui cobertura geral do tópico."},
+      "reason": "A prática alternativa aborda diretamente o gráfico de funções quadráticas, mas apenas na forma canônica.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/e/graphing_parabolas_1", "detail": "Prática de gráfico de equações do segundo grau na forma canônica, relacionada ao tópico canônico 2479."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 225, "topic_id": null, "curriculum_topic_id": 2476},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Relação curricular anual mantida como prática complementar; a alternativa aborda gráficos de quadráticas na forma canônica/vértice, não a totalidade do conteúdo anual."},
+      "reason": "A alternativa é pertinente ao recorte anual de funções quadráticas, com limite de escopo registrado.",
+      "evidence": [{"locator": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/e/graphing_parabolas_1", "detail": "Prática de gráfico de funções quadráticas na forma canônica; pertinência curricular complementar ao currículo_topic_id 2476."}]
+    },
+    {
+      "table": "resources", "key": {"id": 229},
+      "expected": {"url": "https://exercicios.brasilescola.uol.com.br/exercicios-ingles/enem-lista-de-exercicios-sobre-interpretacao-de-texto-em-ingles.htm", "editorial_status": "published", "availability_mode": "consultation_only", "source_document_id": 608},
+      "changes": {"title": "B2 Reading — reading skills and practice", "url": "https://learnenglish.britishcouncil.org/free-resources/reading/b2", "provider": "British Council LearnEnglish", "kind": "exercise", "description": "Coleção de leitura em inglês de nível B2: textos de gêneros variados acompanhados de tarefas de preparação e compreensão. Prática geral de leitura, não alinhada especificamente ao ENEM. Substitui lista anterior com estímulos sem transcrição e problemas de interpretação/datação. Link-only.", "source_document_id": null, "availability_mode": "practice", "editorial_note": "Substituição editorial: URL anterior preservada nesta decisão e no registro de aplicação para auditoria; tinha estímulos sem transcrição completa e inconsistências de interpretação/datação. British Council B2 oferece textos e tarefas de compreensão; nível B2, não especificamente ENEM. Link-only."},
+      "reason": "Substituir lista com problemas de acessibilidade textual e precisão por prática institucional de leitura com textos e exercícios; explicitar nível B2 e não alinhamento ao ENEM.",
+      "evidence": [
+        {"locator": "https://exercicios.brasilescola.uol.com.br/exercicios-ingles/enem-lista-de-exercicios-sobre-interpretacao-de-texto-em-ingles.htm", "detail": "URL substituída. Auditoria anterior identificou estímulos imagéticos sem transcrição, interpretação controversa de The Road Not Taken e data incorreta para I, Too."},
+        {"locator": "https://learnenglish.britishcouncil.org/free-resources/reading/b2", "detail": "Página oficial British Council LearnEnglish rotulada B2 Reading reúne textos de leitura e tarefas de compreensão/preparação; prática geral em nível B2, sem promessa de alinhamento ENEM."}
+      ]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 229, "topic_id": 2496, "curriculum_topic_id": null},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Vínculo canônico mantido para prática geral de leitura em inglês nível B2. A alternativa não é específica do ENEM; não afirmar alinhamento ao exame."},
+      "reason": "A coleção treina leitura/compreensão em inglês e é relevante como apoio geral ao tópico, com nível e limite de alinhamento explícitos.",
+      "evidence": [{"locator": "https://learnenglish.britishcouncil.org/free-resources/reading/b2", "detail": "Coleção oficial B2 Reading com textos e tarefas de compreensão em inglês, relacionada ao tópico canônico 2496 como prática geral."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 229, "topic_id": null, "curriculum_topic_id": 2495},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Relação curricular anual mantida para apoio geral à leitura em inglês nível B2; recurso não é específico do ENEM e não cobre por si só o currículo anual."},
+      "reason": "Prática de leitura em inglês pertinente como suplemento curricular, sem alegar preparação específica ou cobertura completa do ENEM.",
+      "evidence": [{"locator": "https://learnenglish.britishcouncil.org/free-resources/reading/b2", "detail": "Coleção B2 de leitura/compreensão em inglês; pertinência complementar ao currículo_topic_id 2495, não curso ENEM."}]
+    },
+    {
+      "table": "resources", "key": {"id": 240},
+      "expected": {"url": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm", "editorial_status": "published", "availability_mode": "consultation_only", "source_document_id": 611},
+      "changes": {"title": "Patrimônio imaterial — IPHAN", "url": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial", "provider": "IPHAN", "kind": "article", "description": "Texto institucional introdutório sobre patrimônio cultural imaterial brasileiro, referências culturais, diversidade e salvaguarda. Serve como fonte de estudo/consulta conceitual, não oferece lista de exercícios. Substitui material de prática com resolução conceitualmente inadequada. Link para fonte oficial; sem reprodução.", "source_document_id": null, "availability_mode": "learning", "editorial_note": "Substituição editorial por fonte primária institucional. URL antiga preservada nesta decisão e no registro de aplicação; lista antiga confundia o paradigma assimilacionista do Estatuto do Índio de 1973 com proteção constitucional de 1988. IPHAN apresenta patrimônio imaterial, diversidade cultural e salvaguarda; leitura introdutória, sem exercícios. Link-only."},
+      "reason": "A fonte antiga contém confusão conceitual em gabarito; substituição por explicação primária do órgão federal competente sobre patrimônio imaterial e diversidade. Não apresentar o texto como treino nem como cobertura exaustiva.",
+      "evidence": [
+        {"locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm", "detail": "URL substituída. Auditoria anterior identificou resolução que equiparava a orientação assimilacionista da Lei 6.001/1973 à proteção de conhecimentos tradicionais do marco constitucional de 1988; questão visual sem descrição suficiente."},
+        {"locator": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial", "detail": "Página institucional do IPHAN apresenta patrimônio imaterial como práticas/saberes/expressões e referências culturais de grupos formadores da sociedade brasileira, abordando diversidade e salvaguarda; recurso explicativo, não lista de prática."}
+      ]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 240, "topic_id": 2498, "curriculum_topic_id": null},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Vínculo canônico mantido para texto introdutório do IPHAN sobre patrimônio cultural imaterial, diversidade e salvaguarda; substitui lista com resolução conceitualmente inadequada. É leitura, não prática."},
+      "reason": "A fonte primária trata diretamente de patrimônio cultural e diversidade no Brasil, de modo introdutório e sem oferecer exercícios.",
+      "evidence": [{"locator": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial", "detail": "IPHAN descreve patrimônio imaterial, referências de grupos culturais brasileiros, diversidade e salvaguarda; pertinência direta ao tópico canônico 2498."}]
+    },
+    {
+      "table": "resource_topics", "key": {"resource_id": 240, "topic_id": null, "curriculum_topic_id": 2493},
+      "expected": {"review_status": "published", "relevance_status": "relevant"},
+      "changes": {"accessibility_status": "unknown", "review_note": "Relação curricular anual mantida como leitura introdutória sobre patrimônio imaterial e diversidade cultural; recurso não é exercício nem cobertura completa do currículo."},
+      "reason": "A fonte oficial fornece base conceitual pertinente ao recorte curricular anual, com escopo limitado e explícito.",
+      "evidence": [{"locator": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial", "detail": "Texto institucional do IPHAN sobre patrimônio cultural imaterial, diversidade e salvaguarda; relação complementar ao currículo_topic_id 2493."}]
+    }
+  ],
+  "blocked": [],
+  "summary": "Substituições editoriais propostas, sem escrita no banco, para os recursos 220, 223, 225, 229 e 240. As URLs antigas constam em expected/evidence e nas notas de substituição para auditoria; vínculos canônicos e anuais foram mantidos em decisões separadas."
+}

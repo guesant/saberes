@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "solutions": [
+    {
+      "qID": 332,
+      "occurrenceID": 332,
+      "question_reference": {
+        "paper": "Vestibular Unicamp 2026 — 1ª fase, caderno QX",
+        "number": 44,
+        "occurrence_key": "vu-2026-qx-f1-q44",
+        "question_type": "single_choice"
+      },
+      "topic_alignment": {
+        "canonical_topic_id": 2479,
+        "canonical_topic": "Funções e gráficos",
+        "relation_type": "primary",
+        "mapping_review_status": "review",
+        "basis": "A transcrição trata explicitamente da composição f(g(x)) e da leitura de um ponto do gráfico. A classificação canônica no banco ainda está em revisão."
+      },
+      "source_evidence": [
+        {
+          "source_document_id": 44,
+          "title": "Vestibular Unicamp 2026 — prova da 1ª fase, modelos Q e X",
+          "role": "question_transcription",
+          "evidence_note": "A transcrição pergunta o valor de a em f(g(x)), com f(x)=x³+2x²+ax−1 e g(x)=3−x; o gráfico citado contém o ponto usado na resolução comentada."
+        },
+        {
+          "source_document_id": 45,
+          "title": "Vestibular Unicamp 2026 — gabarito da 1ª fase, modelos Q e X",
+          "role": "official_answer_key",
+          "evidence_note": "A chave canônica definitiva do banco registra a alternativa D. A fonte 45 é o gabarito; ela não é identificada aqui como prova comentada."
+        }
+      ],
+      "answer_snapshot": {
+        "answer_type": "single_choice",
+        "answer_value": "D",
+        "answer_status": "definitive",
+        "source_document_id": 45
+      },
+      "candidate_solution": {
+        "title": "Composição de funções a partir do gráfico",
+        "content_format": "markdown",
+        "content": "O ponto destacado no gráfico fornece f(g(1))=5. Primeiro avaliamos a função interna: g(1)=3−1=2. Portanto, f(2)=5. Substituindo x=2 na expressão de f, obtemos 2³+2·2²+2a−1=5, isto é, 8+8−1+2a=5. Assim, 15+2a=5, 2a=−10 e a=−5. Isso corresponde à alternativa D no gabarito registrado.\n\nA ordem importa: na composição, calcula-se g(1) antes de usar esse resultado como entrada de f. Não precisamos reconstruir todo o gráfico; basta ler o par ordenado indicado e traduzir suas coordenadas para a função composta."
+      },
+      "original_authorship": {
+        "authorship_type": "original_editorial_draft",
+        "statement": "Texto de resolução redigido originalmente para este sidecar e conferido com a evidência citada; não reproduz o texto da resolução oficial."
+      },
+      "review_status": "approved",
+      "is_official": false,
+      "publication_status": "approved_sidecar_only_official_commentary_preserved"
+    },
+    {
+      "qID": 338,
+      "occurrenceID": 338,
+      "question_reference": {
+        "paper": "Vestibular Unicamp 2026 — 1ª fase, caderno QX",
+        "number": 50,
+        "occurrence_key": "vu-2026-qx-f1-q50",
+        "question_type": "single_choice"
+      },
+      "topic_alignment": {
+        "canonical_topic_id": 2506,
+        "canonical_topic": "Trigonometria",
+        "relation_type": "related",
+        "mapping_review_status": "published",
+        "basis": "A relação canônica publicada no banco classifica a questão como relacionada à Trigonometria; o vínculo principal é com Geometria."
+      },
+      "source_evidence": [
+        {
+          "source_document_id": 44,
+          "title": "Vestibular Unicamp 2026 — prova da 1ª fase, modelos Q e X",
+          "url": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "role": "question_transcription",
+          "evidence_note": "A transcrição fornece um quadrado de lado x, M como ponto médio de AB, P e Q em CD com PD=QC, cos(ângulo PMQ)=2/3 e pede a área de PMQ."
+        },
+        {
+          "source_document_id": 4,
+          "title": "Prova comentada oficial — Vestibular Unicamp 2026, primeira fase",
+          "role": "official_commentary",
+          "evidence_note": "O comentário oficial usa a simetria para obter um triângulo isósceles de altura x e confirma a alternativa A. Esta candidata apresenta uma derivação própria pela lei dos cossenos."
+        },
+        {
+          "source_document_id": 45,
+          "title": "Vestibular Unicamp 2026 — gabarito da 1ª fase, modelos Q e X",
+          "role": "official_answer_key",
+          "evidence_note": "A chave canônica definitiva do banco registra a alternativa A para esta ocorrência."
+        }
+      ],
+      "visual_evidence": {
+        "source_document_id": 44,
+        "source_url": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+        "pdf_page_number": 19,
+        "printed_page_number": 17,
+        "review_status": "visually_verified",
+        "observations": "A página renderizada mostra o quadrado ABCD, M no ponto médio de AB, P e Q sobre CD, PD=QC e θ no vértice M. Como AB e CD são paralelos e distam x, a altura relativa a PQ é x. A igualdade PD=QC coloca P e Q simetricamente em relação ao eixo vertical que passa por M, logo MP=MQ. A alternativa A impressa é √5·x²/5."
+      },
+      "answer_snapshot": {
+        "answer_type": "single_choice",
+        "answer_value": "A",
+        "answer_status": "definitive",
+        "source_document_id": 45
+      },
+      "candidate_solution": {
+        "title": "Área de um triângulo isósceles com ângulo conhecido",
+        "content_format": "markdown",
+        "content": "Defina l=PQ. Como M é o ponto médio de AB e PD=QC, P e Q ficam simétricos em relação à perpendicular que passa pelo centro do quadrado; logo MP=MQ. A altura do triângulo PMQ até a base PQ é a distância entre AB e CD, igual ao lado x do quadrado. Cada metade da base mede l/2, então, pelo teorema de Pitágoras, s²=MP²=x²+(l/2)².\n\nAplicando a lei dos cossenos ao ângulo θ no vértice M: l²=s²+s²−2s²cosθ=2s²(1−2/3)=2s²/3. Substituindo s²=x²+l²/4, resulta l²=(2/3)(x²+l²/4), portanto 5l²/6=2x²/3 e l²=4x²/5. Como x é comprimento positivo, l=2x/√5. A área pedida é (base·altura)/2=(2x/√5·x)/2=x²/√5=√5x²/5, alternativa A.\n\nA altura é x, não o lado inclinado MP. A simetria justifica MP=MQ; sem ela, a relação usada para o triângulo isósceles não estaria estabelecida."
+      },
+      "original_authorship": {
+        "authorship_type": "original_editorial_draft",
+        "statement": "Texto de resolução redigido originalmente para este sidecar e conferido com a evidência citada; não reproduz o texto da resolução oficial."
+      },
+      "review_status": "approved",
+      "is_official": false,
+      "publication_status": "approved_sidecar_only_official_commentary_preserved"
+    }
+  ]
+}

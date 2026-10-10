@@ -1,0 +1,100 @@
+{
+  "format": "pdf-published-repair-history/v1",
+  "history": [
+    {
+      "repairId": "f84059697a01751e7303a9803b989e161eba0fe0749951b96a773a903561e093",
+      "appliedAt": "2026-10-10T10:25:29.131351+00:00",
+      "record": {
+        "sourceDocumentId": 335,
+        "occurrenceId": 2823,
+        "questionId": 2780,
+        "sourcePdfSha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d",
+        "field": "statement",
+        "expectedCurrentValue": "Marcos produz peças de madeira no formato de letras. Ele recebeu uma encomenda de organizadores de uma festa de comemoração dos 50 anos do Independência Futebol Clube para produzir letras que escreveriam a palavra INDEPENDÊNCIA. O artesão colocou todas as letras numa sacola e foi retirando uma letra por vez e a colocando sobre a mesa para ver que palavra conseguiria montar. Qual a probabilidade de que Marcos consiga retirar as letras da sacola e de que elas formem a palavra correta? Considere que a peça que produz Ê é diferente da peça que produz E. (cid:2869)(cid:2871)!",
+        "expectedCurrentSha256": "a3a2565dc8aed8201538c6f749101de65aa7fd4f166f2552de82e75197816fb1",
+        "newValue": "Marcos produz peças de madeira no formato de letras. Ele recebeu uma encomenda de organizadores de uma festa de comemoração dos 50 anos do Independência Futebol Clube para produzir letras que escreveriam a palavra INDEPENDÊNCIA. O artesão colocou todas as letras numa sacola e foi retirando uma letra por vez e a colocando sobre a mesa para ver que palavra conseguiria montar. Qual a probabilidade de que Marcos consiga retirar as letras da sacola e de que elas formem a palavra correta? Considere que a peça que produz Ê é diferente da peça que produz E.",
+        "reason": "Conferi a página física 14 (página impressa 12) do PDF oficial do simulado QT 2027: o enunciado termina em '...a peça que produz E.'; o sufixo literal '(cid:2869)(cid:2871)!' não aparece na fonte e é artefato de OCR/Docling. As quatro alternativas no SQLite correspondem à página e o gabarito definitivo é A. Remover somente o resíduo final.",
+        "evidence": ".local/content/staging/unicamp-2027-v1/official-pdfs/2027-simulation/simulado_Q_T.pdf#physical-page=14; .local/content/staging/unicamp-2027-v1/docling-exam-review-2025-2027/2027/QT/extracted.md#QUESTAO-44; render visual conferida em /tmp/comvest-pdf-review.XMaC9f/qt-14-review.png",
+        "reviewer": "Codex visual review",
+        "approved": true
+      },
+      "backupPath": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/content.sqlite.pre-published-pdf-repair-20261010-072529-082659.bak"
+    },
+    {
+      "repairId": "dab18db5e5bee72fb306aa6e8658dda2e698d630333ca9b9f54360ca71759abb",
+      "appliedAt": "2026-10-10T10:29:34.888182+00:00",
+      "record": {
+        "sourceDocumentId": 44,
+        "occurrenceId": 301,
+        "questionId": 301,
+        "sourcePdfSha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+        "field": "option:A",
+        "expectedCurrentValue": "[Alternativa contém elemento visual; consulte o caderno oficial na página indicada.]",
+        "expectedCurrentSha256": "86ef27a2c3823d5fd2ad7b75e07a8b09d0cbbe94439518f5f82ac0f8afda75ef",
+        "newValue": "Gráfico A — eixo horizontal: tempo t, de 0 a 120 s; eixo vertical: posição s(t), de 0 a 800 m. De 0 a 30 s, a posição cresce linearmente até cerca de 300 m. De 30 a 50 s, continua crescendo com inclinação cada vez menor até cerca de 400 m. Permanece em 400 m de 50 a 80 s. De 80 a 95 s, cresce com inclinação cada vez maior até perto de 500 m; de 95 a 120 s, cresce linearmente até perto de 800 m.",
+        "reason": "Descrição acessível da alternativa gráfica A, confrontada com o PDF oficial QX 2026, p. física 6 (impressa 4), com o recorte Docling figure-019 e a imagem de questão 301. O gráfico mostra as quatro etapas I–IV e não contém texto que possa substituir o gráfico. O gabarito definitivo A permanece inalterado.",
+        "evidence": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#physical-page=6; .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-simulator-images/2026/F1_26_FIS_Q13.jpg; .local/content/staging/unicamp-2027-v1/docling-exam-review-2025-2027/2026/QX/figures/figure-019.png",
+        "reviewer": "Codex visual review",
+        "approved": true
+      },
+      "backupPath": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/content.sqlite.pre-published-pdf-repair-20261010-072934-848325.bak"
+    },
+    {
+      "repairId": "5d5a241528bf837a26c039f443801d1651eae14ff86e1ae0621e699a2c9ddf6e",
+      "appliedAt": "2026-10-10T10:29:34.888182+00:00",
+      "record": {
+        "sourceDocumentId": 44,
+        "occurrenceId": 301,
+        "questionId": 301,
+        "sourcePdfSha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+        "field": "option:B",
+        "expectedCurrentValue": "Alternativa contém elemento visual; consulte o caderno oficial na página indicada.",
+        "expectedCurrentSha256": "b33c484f84091841fe76543a5a34e52fea19f73d938d39cfff6799111a28f7c2",
+        "newValue": "Gráfico B — eixo horizontal: tempo t, de 0 a 120 s; eixo vertical: posição s(t), de 0 a 800 m. De 0 a 30 s, a posição cresce linearmente até cerca de 300 m. De 30 a 50 s, cresce com inclinação cada vez maior até aproximadamente 450 m. Permanece nesse nível de 50 a 80 s. A partir de 80 s, volta a crescer com curva côncava para cima até cerca de 95 s e depois segue em linha reta até perto de 800 m em 120 s.",
+        "reason": "Descrição acessível da alternativa gráfica B, confrontada com o PDF oficial QX 2026, p. física 6 (impressa 4), com o recorte Docling figure-020 e a imagem de questão 301. O gráfico mostra as quatro etapas I–IV. O gabarito definitivo A permanece inalterado.",
+        "evidence": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#physical-page=6; .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-simulator-images/2026/F1_26_FIS_Q13.jpg; .local/content/staging/unicamp-2027-v1/docling-exam-review-2025-2027/2026/QX/figures/figure-020.png",
+        "reviewer": "Codex visual review",
+        "approved": true
+      },
+      "backupPath": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/content.sqlite.pre-published-pdf-repair-20261010-072934-848325.bak"
+    },
+    {
+      "repairId": "e74c2f9e9d6ab903e7e26c9e598d9d883ebadea186ae1cd61cf6ea4676cb5337",
+      "appliedAt": "2026-10-10T10:29:34.888182+00:00",
+      "record": {
+        "sourceDocumentId": 44,
+        "occurrenceId": 301,
+        "questionId": 301,
+        "sourcePdfSha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+        "field": "option:C",
+        "expectedCurrentValue": "[Alternativa contém elemento visual; consulte o caderno oficial na página indicada.]",
+        "expectedCurrentSha256": "86ef27a2c3823d5fd2ad7b75e07a8b09d0cbbe94439518f5f82ac0f8afda75ef",
+        "newValue": "Gráfico C — eixo horizontal: tempo t, de 0 a 120 s; eixo vertical: posição s(t), de 0 a 800 m. De 0 a 30 s, a posição cresce linearmente até cerca de 300 m. De 30 a 50 s, continua crescendo com inclinação cada vez menor até cerca de 400 m. Fica constante nesse valor de 50 a 80 s. De 80 a aproximadamente 90 s, sobe com inclinação decrescente até perto de 500 m; fica constante por alguns segundos e depois cresce linearmente até perto de 800 m em 120 s.",
+        "reason": "Descrição acessível da alternativa gráfica C, confrontada com o PDF oficial QX 2026, p. física 6 (impressa 4), com o recorte Docling figure-022 e a imagem de questão 301. O gráfico mostra as quatro etapas I–IV. O gabarito definitivo A permanece inalterado.",
+        "evidence": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#physical-page=6; .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-simulator-images/2026/F1_26_FIS_Q13.jpg; .local/content/staging/unicamp-2027-v1/docling-exam-review-2025-2027/2026/QX/figures/figure-022.png",
+        "reviewer": "Codex visual review",
+        "approved": true
+      },
+      "backupPath": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/content.sqlite.pre-published-pdf-repair-20261010-072934-848325.bak"
+    },
+    {
+      "repairId": "05b37cb19aaa0d1bd1b29257e6a2e497d17b328bad09b2aa2c189e6483a9bb64",
+      "appliedAt": "2026-10-10T10:29:34.888182+00:00",
+      "record": {
+        "sourceDocumentId": 44,
+        "occurrenceId": 301,
+        "questionId": 301,
+        "sourcePdfSha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+        "field": "option:D",
+        "expectedCurrentValue": "[Alternativa contém elemento visual; consulte o caderno oficial na página indicada.]",
+        "expectedCurrentSha256": "86ef27a2c3823d5fd2ad7b75e07a8b09d0cbbe94439518f5f82ac0f8afda75ef",
+        "newValue": "Gráfico D — eixo horizontal: tempo t, de 0 a 120 s; eixo vertical: posição s(t), de 0 a 800 m. De 0 a 30 s, a posição cresce linearmente até cerca de 300 m. Entre 30 e 50 s, sobe um pouco e depois diminui até voltar a zero. Fica em zero de 50 a 80 s. Após 80 s, volta a crescer com inclinação cada vez maior, chegando a cerca de 400 m em 120 s.",
+        "reason": "Descrição acessível da alternativa gráfica D, confrontada com o PDF oficial QX 2026, p. física 6 (impressa 4), com o recorte Docling figure-023 e a imagem de questão 301. O gráfico mostra as quatro etapas I–IV. O gabarito definitivo A permanece inalterado.",
+        "evidence": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#physical-page=6; .local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-simulator-images/2026/F1_26_FIS_Q13.jpg; .local/content/staging/unicamp-2027-v1/docling-exam-review-2025-2027/2026/QX/figures/figure-023.png",
+        "reviewer": "Codex visual review",
+        "approved": true
+      },
+      "backupPath": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/content.sqlite.pre-published-pdf-repair-20261010-072934-848325.bak"
+    }
+  ]
+}

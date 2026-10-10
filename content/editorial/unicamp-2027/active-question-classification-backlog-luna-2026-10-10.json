@@ -1,0 +1,670 @@
+{
+  "report_id": "active-question-classification-backlog-luna-2026-10-10",
+  "title": "Auditoria focada de associações questão–tópico — Unicamp 2027, 1ª fase",
+  "created_at": "2026-10-10",
+  "scope": {
+    "target": "Programa da primeira fase do Vestibular Unicamp 2027",
+    "source_occurrences_only": [
+      {"edition": 2025, "booklet": "QZ"},
+      {"edition": 2026, "booklet": "QX"},
+      {"edition": "Simulado oficial preparatório 2027", "booklet": "Q/T"}
+    ],
+    "excluded": "Estados históricos de revisão fora das ocorrências e do programa-alvo especificados.",
+    "database_modified": false,
+    "existing_files_modified": false,
+    "classification_notice": "Toda associação proposta neste relatório é editorial. Nenhuma deve ser apresentada como tag ou classificação oficial da Comvest. Relações secundárias são contextuais/editoriais e não substituem o tópico principal."
+  },
+  "method": {
+    "evidence_crossed": [
+      "Vínculos e estados editoriais já aplicados no SQLite, lido em modo somente leitura.",
+      "Programa oficial da edição 2027, incluindo tópicos e fase-alvo.",
+      "Enunciados e alternativas extraídos diretamente dos cadernos PDF QZ, QX e Q/T.",
+      "Página impressa e página física do PDF para localização da evidência."
+    ],
+    "page_convention": "Em todos os PDFs deste recorte, página física do PDF = página impressa + 2. A evidência resumida abaixo é paráfrase do enunciado, não citação oficial de classificação.",
+    "confidence_scale": "Confiança na decisão editorial proposta, não probabilidade de ser uma classificação oficial."
+  },
+  "findings": [
+    {
+      "item_id": "qz-2025-q62-electrochemistry-missing-link",
+      "question_id": 62,
+      "occurrence_id": 62,
+      "source_document_id": 36,
+      "booklet": "2025 QZ",
+      "question_number": 62,
+      "pdf_page": 20,
+      "printed_page": 18,
+      "current_link": null,
+      "target_canonical_topic": {"id": 2519, "name": "Eletroquímica"},
+      "evidence": "A questão sobre renovação do ar em submarinos pede a técnica para gerar oxigênio e apresenta eletrólise de água purificada como alternativa; o contexto também envolve absorção de CO₂. O programa oficial de 2027 inclui eletrólise entre os conteúdos de eletroquímica (programa, p. 14).",
+      "decision": "Adicionar vínculo primário editorial com Eletroquímica. É uma lacuna de associação, não ausência de questão de prática no conjunto restrito.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qz-2025-q63-reject-organic-chemistry",
+      "question_id": 63,
+      "occurrence_id": 63,
+      "source_document_id": 36,
+      "booklet": "2025 QZ",
+      "question_number": 63,
+      "pdf_page": 21,
+      "printed_page": 19,
+      "current_link": {"canonical_topic_id": 2520, "name": "Química orgânica", "relation": "related", "status": "draft", "confidence": 0.76},
+      "target_canonical_topic": {"id": 2488, "name": "Reações químicas"},
+      "evidence": "O enunciado usa um fármaco como contexto, mas a operação cobrada é proporção molar/composição do sal; não exige identificar função, estrutura ou transformação orgânica. Já existe vínculo primário publicado com Reações químicas, sustentado pelo cálculo estequiométrico.",
+      "decision": "Rejeitar o vínculo pendente com Química orgânica; manter o vínculo primário existente com Reações químicas. Não contar esta questão como prática de orgânica.",
+      "confidence": 0.98
+    },
+    {
+      "item_id": "qx-2026-q1-5-q7-english-reading-primary",
+      "question_ids": [289, 290, 291, 292, 293, 295],
+      "occurrence_ids": [289, 290, 291, 292, 293, 295],
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_numbers": [1, 2, 3, 4, 5, 7],
+      "pdf_pages": [3, 4],
+      "printed_pages": [1, 2],
+      "current_link": {"canonical_topic_id": 2496, "name": "Leitura e construção de sentidos", "relation": "primary", "status": "review"},
+      "target_canonical_topic": {"id": 2496, "name": "Leitura e construção de sentidos"},
+      "evidence": "Os itens apresentam textos em inglês e solicitam compreensão, inferência, identificação de sentido ou informação; a habilidade de leitura em língua estrangeira está explicitada no programa de 2027 (programa, p. 11).",
+      "decision": "Aprovar como vínculo primário editorial para os seis itens; manter a classificação como editorial, não como tag oficial.",
+      "confidence": 0.97
+    },
+    {
+      "item_id": "qx-2026-q6-english-reading-secondary",
+      "question_id": 294,
+      "occurrence_id": 294,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 6,
+      "pdf_page": 4,
+      "printed_page": 2,
+      "current_link": {"canonical_topic_id": 2496, "name": "Leitura e construção de sentidos", "relation": "related", "status": "review"},
+      "target_canonical_topic": {"id": 2496, "name": "Leitura e construção de sentidos"},
+      "evidence": "O item pede a síntese/ideia principal de um artigo em inglês; a tarefa é compreensão global do texto, e não conteúdo disciplinar de outra área.",
+      "decision": "Aprovar como vínculo primário editorial, não secundário; o rótulo relacional atual subestima a habilidade diretamente avaliada.",
+      "confidence": 0.95
+    },
+    {
+      "item_id": "qx-2026-q15-globalization-context-secondary",
+      "question_id": 303,
+      "occurrence_id": 303,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 15,
+      "pdf_page": 6,
+      "printed_page": 4,
+      "current_link": {"canonical_topic_id": 2495, "name": "Território e geopolítica", "relation": "related", "status": "review", "confidence": 0.88},
+      "target_canonical_topic": {"id": 2509, "name": "Globalização, economia e trabalho"},
+      "evidence": "O texto trata da circulação internacional de alimentos ultraprocessados, cadeias de produção/consumo especializadas e homogeneização de hábitos. A questão se aproxima diretamente de globalização e fluxos econômicos; não há comando específico sobre geopolítica territorial.",
+      "decision": "Manter apenas como relação secundária editorial se for útil ao mapa de contexto; considerar acrescentar Globalização, economia e trabalho como vínculo secundário editorial mais preciso. Não promover Território e geopolítica a principal.",
+      "confidence": 0.91
+    },
+    {
+      "item_id": "qx-2026-q30-reject-brazil-retarget-modern-history",
+      "question_id": 318,
+      "occurrence_id": 318,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 30,
+      "pdf_page": 12,
+      "printed_page": 10,
+      "current_link": {"canonical_topic_id": 2492, "name": "História do Brasil", "relation": "primary", "status": "review", "confidence": 0.9},
+      "target_canonical_topic": {"id": 2511, "name": "História do período moderno"},
+      "evidence": "O item trata de Mariano Moreno, tradutor de Rousseau em Buenos Aires em 1810, e de intervenção política na tradução. A localização e o agente histórico são argentinos; não há objeto de História do Brasil. Há vínculo secundário publicado com Ética, justiça e política, sustentado pelo contrato social e obediência política.",
+      "decision": "Rejeitar História do Brasil como principal; classificar História do período moderno como principal editorial. Preservar Ética, justiça e política como secundária editorial.",
+      "confidence": 0.94
+    },
+    {
+      "item_id": "qx-2026-q31-approve-brazil-history",
+      "question_id": 319,
+      "occurrence_id": 319,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 31,
+      "pdf_page": 13,
+      "printed_page": 11,
+      "current_links": [
+        {"canonical_topic_id": 2492, "name": "História do Brasil", "relation": "primary", "status": "review", "confidence": 0.97},
+        {"canonical_topic_id": 2493, "name": "Mundo contemporâneo", "relation": "related", "status": "review", "confidence": 0.85}
+      ],
+      "evidence": "A questão discute o Estado Novo de 1937, Getúlio Vargas e censura, cotejando relatos de correspondentes do New York Times. O núcleo histórico é o regime brasileiro; comparação da imprensa internacional pode permanecer contextual.",
+      "decision": "Aprovar História do Brasil como principal editorial. Preservar Mundo contemporâneo somente como relação secundária editorial, se mantida a justificativa comparativa; nunca como tag oficial.",
+      "confidence": 0.98
+    },
+    {
+      "item_id": "qx-2026-q32-world-contemporary-and-globalization",
+      "question_id": 320,
+      "occurrence_id": 320,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 32,
+      "pdf_page": 13,
+      "printed_page": 11,
+      "current_links": [
+        {"canonical_topic_id": 2493, "name": "Mundo contemporâneo", "relation": "primary", "status": "review", "confidence": 0.96},
+        {"canonical_topic_id": 2495, "name": "Território e geopolítica", "relation": "related", "status": "review", "confidence": 0.85}
+      ],
+      "target_canonical_topic": {"id": 2509, "name": "Globalização, economia e trabalho"},
+      "evidence": "O enunciado relaciona a entrada da China na OMC, comércio internacional e disputas comerciais. Isso sustenta Mundo contemporâneo como núcleo; os fluxos econômicos dão base para uma relação secundária editorial com globalização/economia.",
+      "decision": "Aprovar Mundo contemporâneo como principal editorial. Manter Território e geopolítica apenas como secundária contextual ou substituir/adicionar Globalização, economia e trabalho como secundária mais específica, com nota editorial.",
+      "confidence": 0.96
+    },
+    {
+      "item_id": "qx-2026-q33-approve-brazil-history",
+      "question_id": 321,
+      "occurrence_id": 321,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 33,
+      "pdf_page": 13,
+      "printed_page": 11,
+      "current_link": {"canonical_topic_id": 2492, "name": "História do Brasil", "relation": "primary", "status": "review", "confidence": 0.98},
+      "evidence": "O item usa o desfile internacional de Zuzu Angel em 1971 e a referência ao desaparecimento político de seu filho durante a ditadura brasileira; a interpretação depende do contexto da repressão no Brasil.",
+      "decision": "Aprovar História do Brasil como vínculo primário editorial.",
+      "confidence": 0.98
+    },
+    {
+      "item_id": "qx-2026-q34-reject-brazil-history",
+      "question_id": 322,
+      "occurrence_id": 322,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 34,
+      "pdf_page": 14,
+      "printed_page": 12,
+      "current_link": {"canonical_topic_id": 2492, "name": "História do Brasil", "relation": "primary", "status": "review", "confidence": 0.9},
+      "evidence": "O enunciado compara jus soli e jus sanguinis, sua expansão desde o século XIX e um mapa de países/antigas colônias das Américas. O objeto é comparativo e transnacional; a mera inclusão do Brasil entre os países não estabelece conteúdo brasileiro específico.",
+      "decision": "Rejeitar História do Brasil como principal. Não forçar substituição por outro tópico histórico sem associação mais precisa no cadastro; registrar como questão de cidadania/nacionalidade comparada, se houver tópico canônico adequado.",
+      "confidence": 0.9
+    },
+    {
+      "item_id": "qx-2026-q35-retarget-biodiversity-health",
+      "question_id": 323,
+      "occurrence_id": 323,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 35,
+      "pdf_page": 15,
+      "printed_page": 13,
+      "current_link": {"canonical_topic_id": 2490, "name": "Ecologia", "relation": "primary", "status": "review", "confidence": 0.91},
+      "target_canonical_topic": {"id": 2513, "name": "Biodiversidade e saúde humana"},
+      "evidence": "O experimento compara microbiotas intestinais de doadores de diferentes regiões em camundongos e mede a sensibilidade a infecção entérica. O foco demonstrável é a relação microbiota–hospedeiro–infecção, não uma relação ecológica entre populações/espécies.",
+      "decision": "Não aprovar Ecologia como principal. Retargetar para Biodiversidade e saúde humana como principal editorial, justificando a relação microbiota–saúde; não tratar a origem geográfica dos doadores como tópico geográfico. Revisão humana recomendada por o modelo experimental ser animal.",
+      "confidence": 0.88
+    },
+    {
+      "item_id": "qx-2026-q36-plant-physiology-canonical-gap",
+      "question_id": 324,
+      "occurrence_id": 324,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 36,
+      "pdf_page": 15,
+      "printed_page": 13,
+      "current_link": {"canonical_topic_id": 2473, "name": "Biologia", "relation": "primary", "status": "review", "confidence": 0.9},
+      "evidence": "O experimento de anelamento vegetal exige distinguir xilema, floema e câmbio e interpretar o transporte de seiva. O vínculo amplo com Biologia é verdadeiro, mas não identifica o conceito específico; não foi encontrado tópico canônico preciso para anatomia/fisiologia vegetal no mapa atual.",
+      "decision": "Não aprovar Biologia como classificação específica de treino se o fluxo exige tópico canônico. Manter o vínculo amplo provisório ou abrir lacuna taxonômica para fisiologia/anatomia vegetal; não atribuir artificialmente a ciclo celular, ecologia ou evolução.",
+      "confidence": 0.96
+    },
+    {
+      "item_id": "qx-2026-q37-approve-genetics",
+      "question_id": 325,
+      "occurrence_id": 325,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 37,
+      "pdf_page": 15,
+      "printed_page": 13,
+      "current_link": {"canonical_topic_id": 2491, "name": "Genética e evolução", "relation": "related", "status": "review", "confidence": 0.92},
+      "evidence": "O heredograma e os dados do enunciado pedem inferir alelo recessivo deletério, heterozigose, efeito de cruzamentos consanguíneos e probabilidade genética.",
+      "decision": "Aprovar como vínculo primário editorial de hereditariedade/genética; a classificação atual como related não reflete a habilidade central.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q38-retarget-cellular-bases",
+      "question_id": 326,
+      "occurrence_id": 326,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 38,
+      "pdf_page": 15,
+      "printed_page": 13,
+      "current_link": {"canonical_topic_id": 2491, "name": "Genética e evolução", "relation": "primary", "status": "review", "confidence": 0.94},
+      "target_canonical_topic": {"id": 2512, "name": "Bases moleculares e celulares da vida"},
+      "evidence": "Embora a introdução mencione ancestralidade comum, a pergunta solicita ordenar eventos do ciclo de vida haplonte de fungo: mitose, meiose, plasmogamia e cariogamia. O programa de 2027 inclui ciclo celular e mitose/meiose em bases celulares (programa, p. 11).",
+      "decision": "Retargetar o vínculo primário para Bases moleculares e celulares da vida. Se útil, preservar Genética e evolução apenas como relação secundária editorial contextual.",
+      "confidence": 0.95
+    },
+    {
+      "item_id": "qx-2026-q39-promote-ecology",
+      "question_id": 327,
+      "occurrence_id": 327,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 39,
+      "pdf_page": 16,
+      "printed_page": 14,
+      "current_link": {"canonical_topic_id": 2490, "name": "Ecologia", "relation": "related", "status": "review", "confidence": 0.92},
+      "evidence": "O enunciado descreve espécie exótica invasora e seus efeitos sobre presas e equilíbrio das interações predador–presa; uma relação já publicada com Biodiversidade e saúde humana está documentada como contextual/secundária.",
+      "decision": "Promover Ecologia a vínculo primário editorial. Manter Biodiversidade e saúde humana somente como secundária se a nota contextual continuar pertinente.",
+      "confidence": 0.98
+    },
+    {
+      "item_id": "qx-2026-q41-evolution-secondary-to-primary",
+      "question_id": 329,
+      "occurrence_id": 329,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 41,
+      "pdf_page": 16,
+      "printed_page": 14,
+      "current_link": {"canonical_topic_id": 2491, "name": "Genética e evolução", "relation": "related", "status": "review", "confidence": 0.92},
+      "evidence": "O item compara crânios de hominínios e solicita interpretar mudanças evolutivas associadas a bipedalismo e características do gênero Homo; a evidência é diretamente evolutiva.",
+      "decision": "Aprovar como vínculo primário editorial, em vez de related.",
+      "confidence": 0.96
+    },
+    {
+      "item_id": "qx-2026-q42-retarget-data-graphs",
+      "question_id": 330,
+      "occurrence_id": 330,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 42,
+      "pdf_page": 17,
+      "printed_page": 15,
+      "current_link": {"canonical_topic_id": 2468, "name": "Matemática", "relation": "primary", "status": "review", "confidence": 0.9},
+      "target_canonical_topic": {"id": 2521, "name": "Interpretação e elaboração de tabelas e gráficos"},
+      "evidence": "Um gráfico apresenta números de cardeais por região; as alternativas exigem ler valores e calcular percentuais. O programa 2027 possui tópico específico de interpretação de dados em tabelas/gráficos.",
+      "decision": "Substituir a classificação primária genérica Matemática pelo tópico canônico específico de tabelas e gráficos.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q43-approve-functions",
+      "question_id": 331,
+      "occurrence_id": 331,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 43,
+      "pdf_page": 17,
+      "printed_page": 15,
+      "current_link": {"canonical_topic_id": 2479, "name": "Funções e gráficos", "relation": "primary", "status": "review", "confidence": 0.97},
+      "evidence": "Compara aumentos salariais fixos e percentuais compostos ao longo de anos; a resposta depende de modelar a evolução das quantias.",
+      "decision": "Aprovar Funções e gráficos como vínculo primário editorial.",
+      "confidence": 0.97
+    },
+    {
+      "item_id": "qx-2026-q45-retarget-polynomials",
+      "question_id": 333,
+      "occurrence_id": 333,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 45,
+      "pdf_page": 17,
+      "printed_page": 15,
+      "current_link": {"canonical_topic_id": 2479, "name": "Funções e gráficos", "relation": "primary", "status": "review", "confidence": 0.98},
+      "target_canonical_topic": {"id": 2502, "name": "Polinômios, equações e inequações"},
+      "evidence": "Dados os graus de p+q e p·q, o item pede inferir o grau de p−q; a operação central é álgebra de polinômios, não leitura/modelagem de função.",
+      "decision": "Retargetar para Polinômios, equações e inequações como primário editorial. Não manter Funções e gráficos como principal; secundária somente se houver justificativa didática explícita.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q46-promote-analytic-geometry",
+      "question_id": 334,
+      "occurrence_id": 334,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 46,
+      "pdf_page": 18,
+      "printed_page": 16,
+      "current_links": [
+        {"canonical_topic_id": 2481, "name": "Geometria", "relation": "primary", "status": "review", "confidence": 0.95},
+        {"canonical_topic_id": 2507, "name": "Geometria analítica", "relation": "related", "status": "published", "confidence": 0.96}
+      ],
+      "evidence": "O item fornece equação de reta e envolve ângulo com eixo e distância à origem; a associação já publicada com Geometria analítica coincide diretamente com os procedimentos pedidos.",
+      "decision": "Promover Geometria analítica a primário editorial. O vínculo amplo Geometria pode ser mantido apenas como agrupamento secundário, se necessário.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q48-approve-functions",
+      "question_id": 336,
+      "occurrence_id": 336,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 48,
+      "pdf_page": 18,
+      "printed_page": 16,
+      "current_link": {"canonical_topic_id": 2479, "name": "Funções e gráficos", "relation": "primary", "status": "review", "confidence": 0.98},
+      "evidence": "A trajetória de uma bola é modelada por uma parábola e pede-se sua equação; a tarefa é explicitamente uma função quadrática.",
+      "decision": "Aprovar Funções e gráficos como vínculo primário editorial.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q50-promote-plane-geometry",
+      "question_id": 338,
+      "occurrence_id": 338,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 50,
+      "pdf_page": 19,
+      "printed_page": 17,
+      "current_links": [
+        {"canonical_topic_id": 2481, "name": "Geometria", "relation": "primary", "status": "review", "confidence": 0.96},
+        {"canonical_topic_id": 2506, "name": "Trigonometria", "relation": "related", "status": "published", "confidence": 0.88}
+      ],
+      "evidence": "A questão calcula área de triângulo inscrito em quadrado, usando a relação trigonométrica fornecida cos(θ)=2/3. A figura e a área são o núcleo; trigonometria é ferramenta auxiliar.",
+      "decision": "Classificar Geometria plana como primário editorial; preservar Trigonometria como secundária editorial, pois é explicitamente utilizada.",
+      "confidence": 0.97
+    },
+    {
+      "item_id": "qx-2026-q51-close-broad-math-duplicate",
+      "question_id": 339,
+      "occurrence_id": 339,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 51,
+      "pdf_page": 19,
+      "printed_page": 17,
+      "current_links": [
+        {"canonical_topic_id": 2468, "name": "Matemática", "relation": "related", "status": "review", "confidence": 0.98},
+        {"canonical_topic_id": 2501, "name": "Conjuntos numéricos e operações", "relation": "primary", "status": "published", "confidence": 0.98}
+      ],
+      "evidence": "O item define conjunto de naturais por desigualdades com valor absoluto e pede contar os primos que pertencem a ele; já há associação publicada específica com conjuntos numéricos.",
+      "decision": "Encerrar/remover o vínculo genérico pendente Matemática como redundante; manter Conjuntos numéricos e operações como primário editorial.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q52-retarget-linear-systems",
+      "question_id": 340,
+      "occurrence_id": 340,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 52,
+      "pdf_page": 19,
+      "printed_page": 17,
+      "current_link": {"canonical_topic_id": 2468, "name": "Matemática", "relation": "primary", "status": "review", "confidence": 0.98},
+      "target_canonical_topic": {"id": 2503, "name": "Sistemas lineares e matrizes"},
+      "evidence": "A situação de soldados e estrategistas impõe igualdade entre totais e exige duas condições lineares simultâneas para determinar as quantidades.",
+      "decision": "Retargetar de Matemática genérica para Sistemas lineares e matrizes como classificação primária editorial.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q53-retarget-plane-geometry",
+      "question_id": 341,
+      "occurrence_id": 341,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 53,
+      "pdf_page": 19,
+      "printed_page": 17,
+      "current_link": {"canonical_topic_id": 2481, "name": "Geometria", "relation": "primary", "status": "review", "confidence": 0.97},
+      "target_canonical_topic": {"id": 2504, "name": "Geometria plana"},
+      "evidence": "A figura é um quadrado com pontos sobre os lados e uma região sombreada; a tarefa central é determinar área por relações geométricas planas.",
+      "decision": "Especificar Geometria plana como primário editorial, em vez de manter somente a categoria ampla Geometria.",
+      "confidence": 0.98
+    },
+    {
+      "item_id": "qx-2026-q55-q56-sociolinguistics-secondary",
+      "question_ids": [343, 344],
+      "occurrence_ids": [343, 344],
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_numbers": [55, 56],
+      "pdf_pages": [20],
+      "printed_pages": [18],
+      "current_link": {"canonical_topic_id": 2498, "name": "Cultura e sociedade", "relation": "related", "status": "review", "confidence": 0.9},
+      "evidence": "Os itens sobre “nóix” e pretuguês relacionam língua, identidade, ancestralidade, resistência e pertencimento social. A função/variação linguística continua sendo o núcleo, com cultura e sociedade como dimensão contextual pertinente.",
+      "decision": "Aprovar Cultura e sociedade somente como relação secundária editorial para os dois itens; preservar a classificação linguística primária já publicada.",
+      "confidence": 0.93
+    },
+    {
+      "item_id": "qx-2026-q62-culture-secondary",
+      "question_id": 350,
+      "occurrence_id": 350,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 62,
+      "pdf_page": 23,
+      "printed_page": 21,
+      "current_link": {"canonical_topic_id": 2498, "name": "Cultura e sociedade", "relation": "related", "status": "review", "confidence": 0.9},
+      "evidence": "As alternativas interpretativas do trecho literário explicitam choque cultural, diáspora africana, relações coloniais e opressão de gênero. A análise narrativa/literária é primária, mas a dimensão sociocultural é diretamente mobilizada.",
+      "decision": "Aprovar Cultura e sociedade como relação secundária editorial; manter Elementos da narrativa como primário publicado.",
+      "confidence": 0.92
+    },
+    {
+      "item_id": "qx-2026-q65-approve-poetry",
+      "question_id": 353,
+      "occurrence_id": 353,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 65,
+      "pdf_page": 24,
+      "printed_page": 22,
+      "current_link": {"canonical_topic_id": 2485, "name": "Linguagem poética", "relation": "primary", "status": "review", "confidence": 0.96},
+      "evidence": "O trecho da canção “Alvorada”, de Cartola, é interpretado por contraste lírico entre noite, alvorada e esperança; a tarefa é leitura de linguagem poética.",
+      "decision": "Aprovar Linguagem poética como vínculo primário editorial.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q66-reject-over-specific-reactions",
+      "question_id": 354,
+      "occurrence_id": 354,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 66,
+      "pdf_page": 24,
+      "printed_page": 22,
+      "current_links": [
+        {"canonical_topic_id": 2472, "name": "Química", "relation": "primary", "status": "review", "confidence": 0.94},
+        {"canonical_topic_id": 2488, "name": "Reações químicas", "relation": "related", "status": "review", "confidence": 0.85}
+      ],
+      "evidence": "O item pede reconhecer representações macroscópica, submicroscópica e simbólica da química (modelo de Johnstone); equações/reações ilustram as representações, mas não são o objeto que a alternativa distingue.",
+      "decision": "Manter Química como principal provisório se não houver tópico canônico mais específico de representações químicas; rejeitar Reações químicas como vínculo temático, pois é apenas exemplo/contexto.",
+      "confidence": 0.91
+    },
+    {
+      "item_id": "qx-2026-q68-approve-chemical-energy",
+      "question_id": 356,
+      "occurrence_id": 356,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 68,
+      "pdf_page": 25,
+      "printed_page": 23,
+      "current_link": {"canonical_topic_id": 2488, "name": "Reações químicas", "relation": "primary", "status": "review", "confidence": 0.93},
+      "target_canonical_topic": {"id": 2489, "name": "Cinética, energia e equilíbrio químico"},
+      "evidence": "A tabela fornece energia de combustão, densidade e massa molar de querosene e hidrogênio; o item compara energia por massa e por volume. Energia liberada na combustão é conteúdo explícito de energia em reações no programa (p. 14).",
+      "decision": "Manter associação editorial com energia de reação; se o esquema permitir maior especificidade, acrescentar Cinética, energia e equilíbrio químico como primário ou principal específico, sem duplicar o item no banco de questões.",
+      "confidence": 0.96
+    },
+    {
+      "item_id": "qx-2026-q69-promote-stoichiometry",
+      "question_id": 357,
+      "occurrence_id": 357,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 69,
+      "pdf_page": 25,
+      "printed_page": 23,
+      "current_links": [
+        {"canonical_topic_id": 2472, "name": "Química", "relation": "primary", "status": "review", "confidence": 0.96},
+        {"canonical_topic_id": 2488, "name": "Reações químicas", "relation": "related", "status": "published", "confidence": 0.9}
+      ],
+      "evidence": "O problema de captura de CO₂ usa proporção molar e cálculo de porcentagem em massa; a relação publicada com Reações químicas já tem evidência direta de estequiometria.",
+      "decision": "Promover Reações químicas a principal editorial e encerrar a associação genérica pendente Química como principal redundante.",
+      "confidence": 0.99
+    },
+    {
+      "item_id": "qx-2026-q71-promote-materials-mixtures",
+      "question_id": 359,
+      "occurrence_id": 359,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 71,
+      "pdf_page": 26,
+      "printed_page": 24,
+      "current_links": [
+        {"canonical_topic_id": 2472, "name": "Química", "relation": "primary", "status": "review", "confidence": 0.96},
+        {"canonical_topic_id": 2517, "name": "Materiais e estados físicos", "relation": "related", "status": "published", "confidence": 0.92}
+      ],
+      "evidence": "A questão de mistura água–etanol usa tabela de densidade e porcentagem em massa; a associação publicada com materiais/estados físicos corresponde ao estudo de propriedades e composição de mistura.",
+      "decision": "Promover Materiais e estados físicos a principal editorial e encerrar Química genérica como vínculo primário pendente redundante.",
+      "confidence": 0.98
+    },
+    {
+      "item_id": "qx-2026-q72-approve-reactions",
+      "question_id": 360,
+      "occurrence_id": 360,
+      "source_document_id": 44,
+      "booklet": "2026 QX",
+      "question_number": 72,
+      "pdf_page": 26,
+      "printed_page": 24,
+      "current_link": {"canonical_topic_id": 2488, "name": "Reações químicas", "relation": "primary", "status": "review", "confidence": 0.95},
+      "evidence": "O processo de obtenção de lítio a partir de espodumênio compara rotas quanto a velocidade, rendimento e consumo de carbonato; a transformação química e sua estequiometria são centrais.",
+      "decision": "Aprovar Reações químicas como vínculo primário editorial.",
+      "confidence": 0.97
+    },
+    {
+      "item_id": "qt-2027-q16-reject-territory-link",
+      "question_id": 2752,
+      "occurrence_id": 2767,
+      "source_document_id": 335,
+      "booklet": "Simulado oficial 2027 Q/T",
+      "question_number": 16,
+      "pdf_page": 6,
+      "printed_page": 4,
+      "current_links": [
+        {"canonical_topic_id": 2495, "name": "Território e geopolítica", "relation": "related", "status": "draft", "confidence": 0.88},
+        {"canonical_topic_id": 2508, "name": "Componentes físico-naturais do espaço geográfico", "relation": "primary", "status": "published", "confidence": 0.94}
+      ],
+      "evidence": "A tabela de países produtores de café serve de contexto; a pergunta solicita fatores físico-naturais — faixa tropical, temperatura, chuva, altitude e solo. O vínculo primário publicado corresponde ao comando.",
+      "decision": "Rejeitar Território e geopolítica como associação temática; manter Componentes físico-naturais do espaço geográfico como primário editorial.",
+      "confidence": 0.96
+    },
+    {
+      "item_id": "qt-2027-q17-territory-editorial-secondary",
+      "question_id": 2753,
+      "occurrence_id": 2769,
+      "source_document_id": 335,
+      "booklet": "Simulado oficial 2027 Q/T",
+      "question_number": 17,
+      "pdf_page": 7,
+      "printed_page": 5,
+      "current_link": {"canonical_topic_id": 2495, "name": "Território e geopolítica", "relation": "related", "status": "draft", "confidence": 0.88},
+      "evidence": "O enunciado afirma que a água está espacialmente concentrada e que a qualidade/posição dos recursos nem sempre coincide com os usos econômicos; a questão trata de disponibilidade e uso da água.",
+      "decision": "Manter como secundária editorial se a justificativa explicitar distribuição espacial e uso; conservar Componentes físico-naturais do espaço geográfico como principal publicado. Não classificar a relação como oficial.",
+      "confidence": 0.9
+    },
+    {
+      "item_id": "qt-2027-q35-animal-physiology-topic-gap",
+      "question_id": 2771,
+      "occurrence_id": 2805,
+      "source_document_id": 335,
+      "booklet": "Simulado oficial 2027 Q/T",
+      "question_number": 35,
+      "pdf_page": 12,
+      "printed_page": 10,
+      "current_links": [
+        {"canonical_topic_id": 2513, "name": "Biodiversidade e saúde humana", "relation": "primary", "status": "review", "confidence": 0.88},
+        {"canonical_topic_id": 2473, "name": "Biologia", "relation": "related", "status": "published", "confidence": 0.78}
+      ],
+      "evidence": "O item compara excreção de ureia/ácido úrico, solubilidade e eliminação em diferentes grupos de vertebrados. O objeto direto é fisiologia animal comparada; não há foco em saúde humana, apesar do vínculo primário pendente com Biodiversidade e saúde humana.",
+      "decision": "Não aprovar Biodiversidade e saúde humana como primário sem justificativa adicional. Manter Biologia como vínculo amplo e tratar fisiologia/excreção animal como lacuna de tópico canônico, ou usar biodiversidade apenas como secundária editorial se a revisão aceitar essa amplitude.",
+      "confidence": 0.92
+    },
+    {
+      "item_id": "qt-2027-q42-approve-numerical-operations",
+      "question_id": 2778,
+      "occurrence_id": 2819,
+      "source_document_id": 335,
+      "booklet": "Simulado oficial 2027 Q/T",
+      "question_number": 42,
+      "pdf_page": 14,
+      "printed_page": 12,
+      "current_link": {"canonical_topic_id": 2501, "name": "Conjuntos numéricos e operações", "relation": "primary", "status": "review", "confidence": 0.88},
+      "evidence": "O cálculo do prazo de retorno divide o investimento pelo valor mensal economizado, que é 90% do gasto mensal dado; envolve porcentagem e operações numéricas, não um tópico financeiro mais específico comprovado pelo programa.",
+      "decision": "Aprovar Conjuntos numéricos e operações como vínculo primário editorial; manter Matemática genérica somente como agrupamento, se necessário.",
+      "confidence": 0.97
+    },
+    {
+      "item_id": "qt-2027-q68-reject-reactions-link",
+      "question_id": 2804,
+      "occurrence_id": 2871,
+      "source_document_id": 335,
+      "booklet": "Simulado oficial 2027 Q/T",
+      "question_number": 68,
+      "pdf_page": 20,
+      "printed_page": 18,
+      "current_links": [
+        {"canonical_topic_id": 2488, "name": "Reações químicas", "relation": "related", "status": "draft", "confidence": 0.88},
+        {"canonical_topic_id": 2521, "name": "Interpretação e elaboração de tabelas e gráficos", "relation": "primary", "status": "published", "confidence": 0.94}
+      ],
+      "evidence": "O item compara curvas/gráficos de remoção e penetração de composto VX. A decisão exige interpretar dados do gráfico; o contexto químico não pede mecanismo ou cálculo de reação.",
+      "decision": "Rejeitar Reações químicas como relação temática; preservar tabelas e gráficos como primário editorial.",
+      "confidence": 0.98
+    },
+    {
+      "item_id": "qt-2027-q71-reject-atomic-structure-link",
+      "question_id": 2807,
+      "occurrence_id": 2877,
+      "source_document_id": 335,
+      "booklet": "Simulado oficial 2027 Q/T",
+      "question_number": 71,
+      "pdf_page": 21,
+      "printed_page": 19,
+      "current_links": [
+        {"canonical_topic_id": 2518, "name": "Estrutura atômica e ligações", "relation": "related", "status": "review", "confidence": 0.72},
+        {"canonical_topic_id": 2520, "name": "Química orgânica", "relation": "primary", "status": "published", "confidence": 0.98}
+      ],
+      "evidence": "O texto menciona ligações covalentes, mas a pergunta avalia riscos à saúde relacionados a UV, radicais, acetona e metacrilato em unhas em gel. O conceito de estrutura atômica/ligações não é exigido para escolher a resposta.",
+      "decision": "Rejeitar Estrutura atômica e ligações como relação temática; manter Química orgânica como primário editorial.",
+      "confidence": 0.96
+    }
+  ],
+  "coverage_and_gaps": {
+    "confirmed_unrepresented_practice_topic": null,
+    "statement": "Dentro das ocorrências-fonte delimitadas, não foi comprovada ausência absoluta de questão para um tópico cobrado: alguns vínculos estão ausentes ou mal direcionados, mas há evidência de questão pertinente no recorte. O caso mais claro é Eletroquímica: a Q62 do QZ 2025 oferece prática direta, porém falta o vínculo canônico. Isso não equivale a validar a cobertura dos 44 tópicos; é uma conclusão restrita ao conjunto e às evidências auditadas.",
+    "specificity_gaps": [
+      {
+        "topic_area": "Anatomia/fisiologia vegetal — xilema, floema, câmbio e transporte",
+        "evidence_item_id": "qx-2026-q36-plant-physiology-canonical-gap",
+        "status": "A questão existe, mas o mapa canônico não oferece alvo específico seguro; não forçar associação ampla como se fosse classificação detalhada."
+      },
+      {
+        "topic_area": "Fisiologia/excreção animal comparada",
+        "evidence_item_id": "qt-2027-q35-animal-physiology-topic-gap",
+        "status": "A questão existe; a associação pendente com saúde humana não corresponde precisamente ao que se pergunta, e falta tópico canônico específico."
+      }
+    ],
+    "secondary_relations_policy": "Manter apenas quando o conteúdo do enunciado ou das alternativas sustentar a conexão. Registrar como editorial/contextual, com justificativa e confiança; não atribuir estatuto oficial da Comvest."
+  },
+  "source_documents": [
+    {
+      "source_document_id": 36,
+      "title": "Vestibular Unicamp 2025 — caderno QZ",
+      "local_pdf": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/QZ.pdf"
+    },
+    {
+      "source_document_id": 44,
+      "title": "Vestibular Unicamp 2026 — caderno QX",
+      "local_pdf": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf"
+    },
+    {
+      "source_document_id": 335,
+      "title": "Simulado oficial preparatório do Vestibular Unicamp 2027 — caderno Q/T",
+      "local_pdf": ".local/content/staging/unicamp-2027-v1/official-pdfs/2027-simulation/simulado_Q_T.pdf"
+    },
+    {
+      "source_document_id": 148,
+      "title": "Programa oficial do Vestibular Unicamp 2027",
+      "local_pdf": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+      "relevant_pages": [6, 11, 14]
+    }
+  ],
+  "review_notes": [
+    "O relatório recomenda adjudicações editoriais; não aplica nem publica alterações no banco.",
+    "A ordem dos cadernos e a identidade canônica das questões não são alteradas por estas recomendações.",
+    "Os itens com baixa especificidade taxonômica devem permanecer amplos/provisórios até que haja decisão editorial sobre o vocabulário canônico, sem inventar associação para completar cobertura."
+  ]
+}

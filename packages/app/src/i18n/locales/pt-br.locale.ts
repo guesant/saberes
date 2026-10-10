@@ -1,4 +1,35 @@
 const ptBR = {
+  editorial: {
+    status: {
+      draft: "Rascunho",
+      review: "Em revisão",
+      published: "Revisado",
+      missing: "Sem vínculo confirmado",
+    },
+    availability: {
+      learning: "Aprendizagem",
+      practice: "Prática",
+      consultation_only: "Consulta · fora dos treinos",
+      reference: "Referência",
+    },
+    reuse: {
+      unknown: "Direitos não verificados · somente link",
+      link_only: "Uso por link",
+      open_license: "Licença aberta",
+      public_domain: "Domínio público",
+      permission_confirmed: "Permissão confirmada",
+    },
+    relevance: {
+      unknown: "Relevância em revisão",
+      relevant: "Relevante para o tópico",
+      not_relevant: "Não relevante",
+    },
+    accessibility: {
+      unknown: "Acessibilidade não verificada",
+      checked: "Acessibilidade verificada",
+      needs_improvement: "Acessibilidade precisa de melhorias",
+    },
+  },
   discovery: {
     chooseActivity: "Escolha como estudar",
     studyDescription: "Aprenda por assunto, com teoria e aulas em sequência.",
@@ -73,6 +104,7 @@ const ptBR = {
     retry: "Tentar novamente",
     notFound: "Conteúdo não encontrado.",
     unknownError: "erro inesperado",
+    notAvailable: "não informada",
     open: "Abrir",
     study: "Estudar",
     practice: "Praticar",
@@ -383,6 +415,23 @@ const ptBR = {
   },
   topics: {
     eyebrow: "Programas de conteúdo",
+    preparationScope: "Preparação · Unicamp 2027 · 1ª fase",
+    programStatus: "Programa: {{status}}",
+    classificationStatus: "Vínculo canônico: {{status}}",
+    practiceCoverage:
+      "{{approved}} questões liberadas ({{candidates}} candidatas) · {{learning}} materiais de aprendizagem · {{practice}} recursos de prática liberados.",
+    programEvidence: "Fonte do programa: {{title}}{{page}}",
+    noProgramEvidence: "fonte ainda não conferida",
+    openEvidence: "consultar fonte",
+    editorialClassification: "Classificação editorial",
+    classificationType: {
+      primary: "relação principal",
+      secondary: "relação secundária",
+      related: "relação contextual",
+    },
+    classificationConfidence: "confiança {{confidence}}%",
+    coveragePending_one: "{{count}} requisito de cobertura ainda pendente.",
+    coveragePending_other: "{{count}} requisitos de cobertura ainda pendentes.",
     sectionNavigation: "Navegação pelas seções do tópico",
     title: "Tópicos de estudo",
     description: "O catálogo global de tópicos pode aparecer em diferentes programas e edições.",
@@ -412,7 +461,7 @@ const ptBR = {
     eyebrow: "Catálogo de aprendizagem",
     title: "O que você quer estudar hoje?",
     description:
-      "Escolha uma trilha, consulte o mapa de tópicos ou comece um plano. Todo o conteúdo já está disponível offline.",
+      "Escolha uma trilha ou consulte o acervo completo, incluindo materiais em revisão. Aulas e questões ficam no dispositivo; imagens e PDFs precisam ser abertos para entrar no cache. Links externos exigem internet.",
     searchPlaceholder: "Encontrar curso, mapa, plano ou conteúdo",
     searchLabel: "Buscar conteúdo",
     courses: "Cursos",
@@ -512,6 +561,7 @@ const ptBR = {
     registeredForReview: "Resposta registrada para revisão",
     answerKey: "Resposta incorreta · gabarito {{answer}}",
     explanation: "Explicação",
+    solutionEditorialNotice: "O estado editorial descreve a revisão no Saberes; não indica autoria oficial da Comvest.",
     noExplanation: "Ainda não há explicação cadastrada para esta questão.",
     discursiveNotice:
       "Esta questão possui resposta discursiva e será registrada para revisão manual.",
@@ -600,6 +650,16 @@ const ptBR = {
       "No simulado, você revisa as respostas antes de finalizar. Duração: {{minutes}} min.",
     simulationUnavailable:
       "O simulado ainda não está disponível para esta lista. Você pode praticar as questões normalmente.",
+    consultationOnlyNotice:
+      "Caderno disponível integralmente para consulta local. Revisão ou validação pendente; itens fora de treinos e métricas.",
+    cancelledSimulationNotice:
+      "Simulado completo liberado. A questão anulada não pede resposta e recebe a pontuação oficial; ela não gera tentativa nem métrica de acerto.",
+    cancelledPracticeNotice:
+      "Prática individual liberada para as questões respondíveis; a anulada fica fora da sessão e das métricas.",
+    simulationWithCancelledItemAvailable:
+      "Simulado completo liberado, {{minutes}} min. A prática individual não inclui a questão anulada; a pontuação oficial é aplicada no simulado.",
+    practiceWithCancelledItemAvailable:
+      "Prática individual liberada para as questões respondíveis; a questão anulada fica fora da sessão.",
     progressError: "O progresso desta avaliação não está disponível agora: {{message}}",
     emptyDescription:
       "Resolva em sequência ou escolha uma questão. Cada tentativa fica salva localmente e alimenta seu desempenho, revisão e recomendações.",
@@ -643,6 +703,8 @@ const ptBR = {
     savingAnswer: "Salvando resposta neste dispositivo…",
     savedAnswer: "Resposta salva neste dispositivo.",
     emptyAnswer: "Ainda sem resposta.",
+    cancelledQuestion: "Questão anulada. Nenhuma resposta é necessária; a pontuação segue a regra oficial da avaliação.",
+    cancelledQuestionResult: "Questão anulada · pontuação atribuída conforme a regra da avaliação.",
   },
   performance: {
     eyebrow: "Acompanhamento",

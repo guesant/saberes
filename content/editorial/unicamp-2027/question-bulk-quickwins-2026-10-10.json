@@ -1,0 +1,192 @@
+{
+  "format": "unicamp-question-bulk-quickwins/v1",
+  "created_at": "2026-10-10",
+  "scope": {
+    "target": "preparação da primeira fase da Unicamp 2027",
+    "sources": [
+      "Vestibular 2025 — cadernos QZ, RW, SX e TY",
+      "Vestibular 2026 — cadernos QX, RY, SZ e TW",
+      "Simulado oficial preparatório 2027 — cadernos QT e RS"
+    ],
+    "database": ".local/content/content.sqlite",
+    "observed_release": {
+      "version": "unicamp-2027-bulk-editorial-v36",
+      "schema_version": 20,
+      "database_sha256": "01014a8ca906a3fab91a7ef645b1427f304637193472e009a997f97f4b8dba11"
+    },
+    "database_modified": false,
+    "release_modified": false,
+    "visual_review_performed": false
+  },
+  "principle": {
+    "rule": "Um caderno representativo por aplicação basta para treino. Cadernos com as mesmas questões em outra ordem são ocorrências/ordenações históricas, não novas questões para repetir no treino.",
+    "implementation_observed": "canonical_question_relations registra equivalências entre IDs de questões; a leitura de questões por tópico usa fechamento transitivo dessas relações e ROW_NUMBER para escolher uma ocorrência representativa. O seletor de blueprint também deduplica candidatos que recebam o mesmo canonicalQuestionId. A exploração dos cadernos deve continuar preservando cada ocorrência e sua ordem.",
+    "safe_representatives": {
+      "2025": "QZ — único caderno atualmente publicado para treino; RW, SX e TY seguem rascunho.",
+      "2026": "QX — usar como representante do treino; RY, SZ e TW permanecem como cadernos/ocorrências históricos.",
+      "simulado_2027": "QT — usar como representante; QT e RS compartilham os mesmos IDs de questão e diferem na ocorrência/ordem."
+    }
+  },
+  "observed_state": {
+    "by_edition": [
+      {
+        "edition": "2025",
+        "assessment_sets": [
+          { "booklet": "QZ", "published": true, "expected_items": 72, "ordered_items": 72 },
+          { "booklet": "RW", "published": false, "expected_items": 72, "ordered_items": 72 },
+          { "booklet": "SX", "published": false, "expected_items": 72, "ordered_items": 72 },
+          { "booklet": "TY", "published": false, "expected_items": 72, "ordered_items": 72 }
+        ],
+        "unique_question_ids": 288,
+        "published_question_and_occurrence_rows": 72,
+        "answer_keys": "Cada caderno tem 71 gabaritos definitive e uma questão cancelada, conforme a regra registrada.",
+        "editorial_solutions": "As 72 questões têm resolução publicada; disponibilidade de resolução não aprova automaticamente a transcrição ou o caderno alternativo."
+      },
+      {
+        "edition": "2026",
+        "assessment_sets": [
+          { "booklet": "QX", "published": true, "expected_items": 72, "ordered_items": 72 },
+          { "booklet": "RY", "published": true, "expected_items": 72, "ordered_items": 72 },
+          { "booklet": "SZ", "published": true, "expected_items": 72, "ordered_items": 72 },
+          { "booklet": "TW", "published": true, "expected_items": 72, "ordered_items": 72 }
+        ],
+        "unique_question_ids": 288,
+        "published_question_and_occurrence_rows": 288,
+        "equivalence_audit": {
+          "families_linked_across_booklets": 72,
+          "alias_rows_passing_automatic_exact_clone_gates": 150,
+          "alias_rows_not_eligible_without_review": 66,
+          "meaning": "A ferramenta conservadora encontra 50 famílias sem divergência textual/de alternativas e sem os bloqueios de notação matemática, assets/estímulos ou questão multipartes. As outras 22 famílias ficam fora dessa proposta automática; isso não invalida seus vínculos de equivalência já registrados, mas impede arquivamento automático de cópias."
+        },
+        "answer_keys": "72 respostas definitive em cada caderno.",
+        "editorial_solutions": "72 questões com resolução publicada por conjunto de IDs; conferir proveniência editorial antes de chamar o texto de comentário oficial."
+      },
+      {
+        "edition": "simulado oficial preparatório 2027",
+        "assessment_sets": [
+          { "booklet": "QT", "published": true, "expected_items": 72, "ordered_items": 72 },
+          { "booklet": "RS", "published": true, "expected_items": 72, "ordered_items": 72 }
+        ],
+        "unique_question_ids_across_both_booklets": 72,
+        "published_occurrence_rows": 144,
+        "answer_keys": "72 respostas definitive por caderno; são ocorrências das mesmas 72 questões, não 144 questões distintas.",
+        "editorial_solutions": "72 questões com resolução publicada; não duplicar resoluções ao percorrer QT e RS."
+      }
+    ],
+    "current_guided_course": {
+      "slug": "unicamp-2027-primeira-fase",
+      "practice_items": 44,
+      "interpretation": "Há atualmente um item de prática selecionado por tópico no roteiro; a base aprovada permite uma fila de prática maior sem importar questões novas."
+    },
+    "approved_representative_practice_pool": {
+      "selection_rule": "Questão publicada + ocorrência publicada em QZ/QX/QT + associação questão–tópico canônico publicada + tópico canônico e associação do currículo 2027 publicados + chave definitive na ocorrência representante.",
+      "representative_question_ids": 147,
+      "topic_question_associations": 250,
+      "topic_coverage": "Os 44 tópicos oficiais têm ao menos uma associação qualificada dentro apenas dos três cadernos representantes; alguns tópicos têm somente uma questão e merecem expansão futura, mas não há lacuna binária de cobertura neste recorte.",
+      "by_representative": {
+        "2025-QZ": { "qualified_question_ids": 13 },
+        "2026-QX": { "qualified_question_ids": 62 },
+        "2027-simulado-QT": { "qualified_question_ids": 72 }
+      }
+    }
+  },
+  "automation_opportunity": {
+    "candidate": "Ampliar em lote a prática do roteiro a partir das associações já publicadas, em vez de acrescentar manualmente uma questão por tópico. Criar uma linha por associação qualificada tópico–questão, escolhendo apenas a ocorrência representante QZ/QX/QT. Usar a identidade canônica/equivalência na seleção de sessões para que uma questão relacionada a vários tópicos não apareça repetida na mesma sessão. Não arquivar IDs nem remover ocorrências de cadernos.",
+    "expected_candidate_pool": {
+      "unique_questions": 147,
+      "topic_question_associations": 250,
+      "existing_course_practice_items": 44
+    },
+    "reason_it_is_safe_without_reviewing_each_question": [
+      "A seleção reaproveita somente dados que já estão published e chaves definitive; não cria nem promove classificação editorial.",
+      "O escopo seleciona um único caderno por aplicação, evitando multiplicar questões por ordem de caderno.",
+      "QZ/2025 exclui automaticamente a questão cancelada da prática avaliativa.",
+      "As ocorrências, posições e os demais cadernos continuam intactos para consulta histórica.",
+      "O relatório de cobertura confirma presença qualificada nos 44 tópicos nesse recorte; portanto a automação amplia a variedade e a prática por tópico, sem declarar cobertura pedagógica exaustiva."
+    ],
+    "guardrails": [
+      "Não incluir RW/SX/TY como questões adicionais de treino; estão em rascunho e são variantes de ordem do caderno QZ.",
+      "Não incluir RY/SZ/TW no pool além de QX; preservar esses cadernos para exploração histórica.",
+      "Usar QT como ocorrência representante do simulado e manter RS apenas como outra ordenação para navegação histórica.",
+      "Não usar relações equivalentes cujos membros estejam fora do filtro de publicação/chave definitiva.",
+      "Não alterar statuses, gabaritos, enunciados, associações, identidades ou release nesta ação.",
+      "Manter fonte, edição, fase, caderno e número original visíveis em cada item de prática."
+    ],
+    "implementation_status": "Candidata descrita; nenhum import ou escrita foi executado nesta tarefa.",
+    "idempotency_key_recommendation": "course_slug + curriculum_topic_id + canonical_question_identity + representative_occurrence_id",
+    "acceptance_checks_for_future_batch": [
+      "Reexecutar a seleção em modo dry-run e comparar hashes/IDs antes da escrita.",
+      "Confirmar que nenhum conjunto de treino contém a mesma identidade canônica mais de uma vez.",
+      "Confirmar que ocorrências e ordem de QZ/RW/SX/TY, QX/RY/SZ/TW e QT/RS permanecem consultáveis.",
+      "Confirmar que questões canceladas ou sem chave definitive não entram em avaliação pontuada.",
+      "Confirmar integridade referencial e que uma segunda execução não duplica itens do roteiro."
+    ]
+  },
+  "existing_tools_and_reproducible_commands": {
+    "canonical_equivalence_audit": {
+      "path": "tools/editorial/canonical/canonical_questions.py",
+      "behavior": "Abre SQLite em modo read-only; detecta grupos declarados equivalentes e aplica gates de texto, alternativas, notação, assets/estímulos e questões multipartes. A saída SQL opcional arquiva aliases; não deve ser executada como parte da expansão do roteiro sem revisar seus efeitos sobre a exploração histórica.",
+      "command": "python3 tools/editorial/canonical/canonical_questions.py --database .local/content/content.sqlite | jq '{scope,counts}'"
+    },
+    "pdf_batch_qa": {
+      "path": "tools/editorial/pdf/pdf_qa_import.py",
+      "behavior": "Valida em lote manifest, PDF, Markdown Docling, numeração, opções, chaves e sobreposição textual; apenas triagem estrutural/automática. Similaridade não aprova transcrição. O modo padrão é somente leitura; aplicação requer JSONL explicitamente revisado.",
+      "fresh_read_only_command": "python3 tools/editorial/pdf/pdf_qa_import.py --database .local/content/content.sqlite --booklets 2025:QZ,2026:QX,2027:QT --dry-run --output /tmp/unicamp-2027-question-bulk-qa.jsonl",
+      "current_run_note": "Não executado nesta tarefa; relatórios anteriores consultados incluem hashes de bancos anteriores e não foram tratados como retrato da versão v36."
+    },
+    "coverage_report": {
+      "path": "tools/editorial/review-closure/question_coverage.py",
+      "behavior": "Gera arquivo de cobertura no diretório da ferramenta; não executar para uma auditoria read-only restrita a stdout sem redirecionar/substituir o destino. A cobertura usada aqui foi calculada com consultas SQLite em modo read-only.",
+      "safe_command_note": "Para evitar alterar o relatório padrão, redirecione OUTPUT para um caminho temporário em uma cópia do script ou execute a consulta SQL read-only equivalente; não usar o comando padrão durante uma coleta que proíba outros arquivos escritos."
+    },
+    "solution_and_stimulus_importers": [
+      {
+        "path": "tools/editorial/import_question_solutions.py",
+        "behavior": "Dry-run por padrão; importação transacional com backup apenas com --apply. Correções editoriais podem permanecer em review."
+      },
+      {
+        "path": "tools/editorial/import_shared_stimulus.py",
+        "behavior": "Dry-run por padrão; aplica estímulo compartilhado de forma transacional somente com --apply."
+      },
+      {
+        "path": "tools/editorial/apply_review_decisions.py",
+        "behavior": "Pré-visualiza decisões em manifests; escrita somente com --apply."
+      }
+    ],
+    "read_only_sql_summary": "python3 - <<'PY'\nimport sqlite3\ndb=sqlite3.connect('file:.local/content/content.sqlite?mode=ro', uri=True)\nprint('integrity:', db.execute('PRAGMA integrity_check').fetchone()[0])\nprint('foreign_key_violations:', db.execute('PRAGMA foreign_key_check').fetchall())\nPY"
+  },
+  "judgment_required": [
+    {
+      "issue": "22 famílias de equivalência de 2026 têm pelo menos um bloqueio automático (notação matemática, asset/estímulo ou questão multipartes).",
+      "why_not_automate": "O validador evita arquivar ou tratar como clone exato sem resolver diferenças que podem afetar texto, alternativas ou figura.",
+      "safe_handling": "Preservar as relações/ocorrências e o estado atual; não inspecionar uma a uma como pré-requisito para o quick win do pool representativo QX."
+    },
+    {
+      "issue": "Os cadernos RW/SX/TY de 2025 estão como rascunho.",
+      "why_not_automate": "A aprovação exige fidelidade de extração/assets além de gabarito e equivalência.",
+      "safe_handling": "Não promover em lote; usar QZ publicado para treino e manter variantes em consulta/revisão conforme o estado atual."
+    },
+    {
+      "issue": "A classificação publicada é editorial e pode ser secundária; não é taxonomia oficial da Comvest.",
+      "why_not_automate": "O sistema não tem evidência para ampliar vínculos pendentes a partir de semelhança lexical ou somente da equivalência entre cadernos.",
+      "safe_handling": "O batch proposto consome apenas vínculos já publicados; manter pendentes associações sem evidência."
+    },
+    {
+      "issue": "Resoluções publicadas nem sempre são comentário oficial literal.",
+      "why_not_automate": "Autoria/versão/proveniência não estão preenchidas uniformemente, e algumas soluções foram sintetizadas editorialmente.",
+      "safe_handling": "Disponibilizar apenas com a fonte/status existentes e não atribuir autoria oficial automaticamente."
+    }
+  ],
+  "commands_executed_read_only": [
+    "python3 tools/editorial/canonical/canonical_questions.py --database .local/content/content.sqlite (somente leitura; resumo de equivalências extraído da saída)",
+    "consultas sqlite3 Python com URI file:.local/content/content.sqlite?mode=ro para estados de cadernos, questões/ocorrências, chaves, soluções, relações canônicas, associações aprovadas e cobertura por tópico",
+    "leitura de tools/editorial/canonical/README.md, tools/editorial/pdf/README.md e dos relatórios editoriais de equivalência, cobertura de questões e QA recentes"
+  ],
+  "validation": {
+    "assessment_counts_and_ordered_positions": "Cada set observado tem 72 posições distintas na sequência, conforme esperado.",
+    "keys": "Chaves definitive verificadas por ocorrência; cancelamentos de 2025 permanecem cancelados.",
+    "sqlite_integrity_check": "ok",
+    "sqlite_foreign_key_check": [],
+    "scope_compliance": "Nenhuma página de PDF foi renderizada ou conferida visualmente; nenhum arquivo diferente deste relatório foi intencionalmente editado; SQLite e release não foram alterados."
+  }
+}

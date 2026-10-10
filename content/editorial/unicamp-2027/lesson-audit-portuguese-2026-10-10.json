@@ -1,0 +1,303 @@
+{
+  "schema": "lesson-audit-batch/v1",
+  "created_at": "2026-10-10",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "primeira fase",
+    "curriculum_topic_ids": [2468, 2469, 2470, 2471, 2472, 2473, 2474],
+    "materials_reviewed": [
+      "content/editorial/unicamp-2027/lessons.json",
+      "content/editorial/unicamp-2027/lesson-revisions.json",
+      "SQLite curriculum_topics and curriculum_topic_stages",
+      "SQLite lessons and lesson_sources"
+    ]
+  },
+  "source_checked": {
+    "title": "Programa das Provas — Vestibular 2027",
+    "institution": "Comvest / Unicamp",
+    "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+    "verification": "URL conferida por requisição HTTP GET em 2026-10-10: resposta 200, application/pdf; arquivo local correspondente teve as páginas 1–5 lidas por PDFKit.",
+    "official_program_page": 3,
+    "official_literature_pages": [4, 5]
+  },
+  "decisions": [
+    {
+      "curriculum_topic_id": 2468,
+      "official_label": "O texto e seu funcionamento",
+      "current_version": "1.0.1",
+      "current_status": "published",
+      "decision": "approve_as_is",
+      "proposed_status": "published",
+      "rationale": "A teoria trata gênero, produção/circulação, interlocutores, coesão e articulação verbal-não verbal; o exemplo resolvido aplica esses elementos a um cartaz e a autochecagem confere a pista textual. Os erros comuns previnem leitura descontextualizada e inferência de intenção sem evidência. Isso cobre os três componentes do rótulo oficial sem apresentar a lição como transcrição ou orientação oficial. A aprovação é editorial para este escopo, não certificação de cobertura de todo o programa de Português.",
+      "evidence": [
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 3, índice de conteúdos programáticos gerais, item 1",
+          "supports": "Caracterização, produção e circulação de gêneros; recursos coesivos; interação entre texto verbal e não verbal.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "lessons.json",
+          "document": "lição curriculum_topic_id 2468, versão 1.0.1, teoria/exemplo/síntese",
+          "supports": "Correspondência do conteúdo, exemplo aplicado e autochecagem."
+        }
+      ],
+      "review_notes": [
+        "A lição oferece um exemplo didático próprio e não afirma que o cartaz seja material da Comvest.",
+        "A fonte oficial fornece o escopo programático, não valida cada formulação didática da lição."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2469,
+      "official_label": "Processos de significação",
+      "current_version": "1.0.2",
+      "current_status": "review",
+      "decision": "revise",
+      "proposed_version": "1.0.3",
+      "proposed_status": "review",
+      "rationale": "A revisão 1.0.2 corrige adequadamente o excesso de certeza sobre o alvo da ironia no exemplo da ciclovia. Ainda assim, a teoria não distingue intertextualidade de interdiscursividade nem ensina a rastrear a relação entre discursos; o único exemplo também não demonstra relação lógico-discursiva ou retomada de outro texto. Como o rótulo inclui esses processos e efeitos expressivos, a lição não deve ser publicada ainda. O texto proposto acrescenta distinções e um exemplo resolvido verificável sem atribuir contexto não fornecido.",
+      "evidence": [
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 3, índice de conteúdos programáticos gerais, item 2",
+          "supports": "Relações lógico-discursivas, intertextualidade e interdiscursividade, efeitos de sentido expressivos.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "lesson-revisions.json",
+          "document": "revisão 1.0.2 de 2469",
+          "supports": "O follow-up restringe a inferência sobre a ciclovia, mas não amplia a cobertura de interdiscursividade."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Como as relações entre discursos produzem sentido",
+          "content_format": "markdown",
+          "content": "Interpretar é construir uma leitura sustentada por marcas do texto e pela situação em que ele circula. Separe três níveis: **informação explícita** (o que está escrito ou mostrado), **inferência** (o que as pistas autorizam concluir) e **hipótese** (uma leitura possível que ainda precisa de confirmação).\n\nRelações lógico-discursivas organizam ideias: causa, consequência, oposição, concessão, condição, explicação ou conclusão. Conectivos ajudam, mas não funcionam como etiquetas automáticas; confira a relação entre as orações. Intertextualidade ocorre quando um texto retoma, transforma ou evoca outro texto ou obra reconhecível. Interdiscursividade é o diálogo entre modos de dizer e campos discursivos — por exemplo, um anúncio que incorpora a linguagem de uma notícia ou de uma campanha pública — mesmo sem citar uma obra específica. Ironia, metáfora, ambiguidade e outros recursos expressivos podem deslocar o sentido literal; o efeito deve ser explicado a partir de pistas, não apenas nomeado.\n\n**Erros comuns**\n\nNão trate uma inferência plausível como fato explícito. Não conclua que há ironia só porque a frase parece engraçada. Não chame toda semelhança de intertextualidade: procure uma retomada reconhecível. Interdiscursividade não exige citação literal. Um conectivo oferece uma pista, mas a relação depende do enunciado completo. Quando mais de uma leitura é possível, indique qual evidência favorece cada uma e evite afirmar um alvo ou intenção que o contexto não fornece."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: concessão e diálogo entre discursos",
+          "content_format": "markdown",
+          "content": "Leia o aviso fictício: “Embora a campanha tenha recebido muitos cliques, a coleta de alimentos ainda precisa de doações.”\n\n1. **Explícito:** a campanha recebeu muitos cliques; a coleta ainda precisa de doações.\n2. **Relação lógico-discursiva:** “embora” introduz concessão. O número de cliques poderia criar expectativa de mobilização suficiente, mas a segunda oração informa que ainda faltam doações.\n3. **Efeito:** o contraste chama atenção para a diferença entre engajamento digital e contribuição material.\n4. **Limite da leitura:** o aviso não informa por que as doações faltam; atribuir culpa aos leitores seria especulação.\n\nSe o aviso imitasse o formato e o vocabulário de uma manchete jornalística, isso poderia criar interdiscursividade; para afirmar uma retomada intertextual, seria preciso reconhecer um texto ou enunciado específico evocado."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Para justificar uma interpretação, localize a pista, nomeie a relação entre as partes e explique o efeito produzido. Diferencie intertextualidade (retomada de texto/obra) de interdiscursividade (diálogo entre discursos) e mantenha explícitos os limites do que o contexto permite concluir.\n\n**Autochecagem:** em “Embora tenha recebido muitos cliques, a campanha ainda precisa de doações”, o que “embora” sinaliza? **Resposta:** concessão; a primeira informação cria uma expectativa que a necessidade de doações contrasta. A frase, sozinha, não revela a causa da falta de doações."
+        }
+      ],
+      "publication_gate": "Manter em revisão até conferência editorial da nova versão e de sua integração ao percurso de lição."
+    },
+    {
+      "curriculum_topic_id": 2470,
+      "official_label": "Funcionamento social da língua",
+      "current_version": "1.0.1",
+      "current_status": "published",
+      "decision": "approve_as_is",
+      "proposed_status": "published",
+      "rationale": "A lição aborda variação por contexto, grupo, região, época e modalidade; diferencia descrição linguística de julgamento social; explica adequação a gênero/interlocutor e apresenta preconceito linguístico. O exemplo e a autochecagem aplicam a mudança de registro sem classificar uma variedade como defeituosa. A cobertura é suficiente para o rótulo programático neste nível introdutório.",
+      "evidence": [
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 3, seção Língua Portuguesa e item 3 do índice",
+          "supports": "Língua como fenômeno sociocultural e histórico; norma urbana culta como norma de poder/prestígio; valor e funcionalidade de outras variedades; registros e estilos.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "lessons.json",
+          "document": "lição curriculum_topic_id 2470, versão 1.0.1",
+          "supports": "Explicação de variação/adequação, exemplo de mudança de registro, prevenção de estigma e autochecagem."
+        }
+      ],
+      "review_notes": [
+        "A aprovação não transforma a explicação editorial em formulação oficial da Comvest.",
+        "A lição trata adequação como dependente da situação; não diz que a norma formal seja universalmente superior."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2471,
+      "official_label": "Sintaxe da língua portuguesa",
+      "current_version": "1.0.2",
+      "current_status": "review",
+      "decision": "revise",
+      "proposed_version": "1.0.3",
+      "proposed_status": "review",
+      "rationale": "A revisão atual explica coordenação/subordinação e oferece um exemplo de causa e concessão, mas não demonstra o efeito de sentido da ordem dos constituintes, embora esse seja um componente explícito do tópico. A afirmação de que deslocamentos podem exigir pontuação é razoável, mas não vem acompanhada de comparação que permita ao estudante verificar foco e organização informacional. A versão proposta acrescenta análise contrastiva e mantém a distinção entre forma sintática e efeito contextual.",
+      "evidence": [
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 3, item 4 do índice de conteúdos programáticos gerais",
+          "supports": "Elementos sintáticos na construção de textos; efeitos de sentido pela ordem dos constituintes; coordenação e subordinação.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "lesson-revisions.json",
+          "document": "revisão 1.0.2 de 2471",
+          "supports": "O exemplo aborda conectivos subordinativos, mas não trabalha contraste de ordem dos constituintes."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Sintaxe: relações, ordem e construção do sentido",
+          "content_format": "markdown",
+          "content": "A sintaxe organiza palavras e orações em relações. Para analisar uma frase, localize os núcleos (por exemplo, verbo e nomes), identifique quem se relaciona com cada núcleo e observe como as orações se articulam. Sujeito, predicação, complementação e modificadores ajudam a descrever essa organização; a análise serve também para explicar o sentido no texto.\n\nA ordem mais frequente em português não é a única possível. Antepor um adjunto, repetir um termo ou colocar uma informação no fim pode mudar o foco, criar contraste ou organizar o que o leitor recebe primeiro. A pontuação pode marcar certos deslocamentos, mas não se deve inserir vírgula automaticamente entre sujeito e verbo. Orações coordenadas se articulam sem dependência sintática de uma oração em relação à outra; subordinadas exercem função ou acrescentam circunstância em relação a outra oração. Conjunções são pistas: interprete a relação no contexto, em vez de apenas decorar uma lista.\n\n**Erros comuns**\n\nNão determine o sujeito apenas pela posição anterior ao verbo: ele pode estar depois do verbo ou ser recuperado pelo contexto. Não separe sujeito e predicado com vírgula. Uma oração iniciada por “que” pode ter funções diferentes. Não confunda coordenação sintática com ausência de relação de sentido: orações coordenadas podem expressar contraste ou conclusão. Ao falar de mudança de foco, compare a frase com o contexto; a ordem, sozinha, não prova a intenção do autor."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: ordem e relação entre orações",
+          "content_format": "markdown",
+          "content": "Compare: **“A comissão publicou o resultado ontem”** e **“Ontem, a comissão publicou o resultado.”**\n\nNas duas frases, a comissão é quem publica; “o resultado” completa o sentido de “publicou”; “ontem” situa a publicação no tempo. Na segunda versão, o adjunto temporal aparece primeiro e recebe destaque inicial. A vírgula marca o deslocamento, mas não separa sujeito e verbo. O contexto decide por que o tempo foi colocado em evidência — por exemplo, para contrastar datas — e não autoriza concluir isso sem outras pistas.\n\nAgora observe: **“A comissão publicou o resultado porque a apuração terminou.”** “Porque a apuração terminou” é uma oração subordinada que apresenta a causa/justificativa da publicação. Em **“A apuração terminou, mas a comissão ainda não publicou o resultado”**, as orações são coordenadas por “mas”, que constrói contraste. Em cada caso, o conectivo e a relação entre as proposições sustentam a interpretação."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Localize núcleos e dependências; depois compare a ordem dos constituintes e interprete os conectivos no contexto. Descreva separadamente a estrutura sintática e o efeito que a organização pode produzir.\n\n**Autochecagem:** em “Ontem, a comissão publicou o resultado”, quem publicou? **Resposta:** a comissão; “ontem” é um adjunto temporal deslocado para o início e destacado, e a vírgula não separa sujeito e verbo."
+        }
+      ],
+      "publication_gate": "Manter em revisão até conferência da formulação sintática e de sua integração ao percurso de lição."
+    },
+    {
+      "curriculum_topic_id": 2472,
+      "official_label": "Morfologia da língua portuguesa",
+      "current_version": "1.0.1",
+      "current_status": "published",
+      "decision": "revise",
+      "proposed_version": "1.0.2",
+      "proposed_status": "review",
+      "rationale": "A lição explica estrutura, formação, flexão e classes, mas o exemplo resolvido fica quase inteiramente no prefixo re- e não demonstra como classes morfológicas produzem efeitos semânticos/expressivos, parte explícita do rótulo oficial. A afirmação de que re- pode indicar repetição ou retomada está devidamente contextualizada, mas a cobertura prática é estreita para a publicação. A proposta integra formação e classe com exemplos contrastivos, sem elevar uma interpretação contextual a regra universal.",
+      "evidence": [
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 4, item 5 do índice de conteúdos programáticos gerais",
+          "supports": "Estrutura do vocábulo, processos de formação de palavras e efeitos semânticos/expressivos das classes morfológicas.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "lessons.json",
+          "document": "lição curriculum_topic_id 2472, versão 1.0.1",
+          "supports": "O exemplo resolve a formação de “releitura/reler”, mas não exemplifica efeito de classe morfológica."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Morfologia: estrutura, formação e escolhas de palavras",
+          "content_format": "markdown",
+          "content": "A morfologia observa a estrutura e a formação das palavras, suas flexões e suas classes. Em uma palavra derivada, reconheça a base e os afixos, mas confirme a análise pelo uso e pelo significado no contexto. Derivação acrescenta elementos a uma base; composição combina bases. Flexões de número, pessoa, tempo, modo e gênero expressam relações gramaticais sem necessariamente criar um novo lexema.\n\nAs classes morfológicas descrevem comportamentos e possibilidades de uso. Um adjetivo pode caracterizar um nome (“ideia nova”) ou aparecer substantivado (“o novo”); um substantivo pode nomear uma ação ou qualidade; um verbo pode narrar, ordenar, convidar ou formular hipótese conforme a forma e a situação. A escolha de classe e de forma participa do efeito do enunciado, mas não possui um efeito fixo fora do contexto.\n\n**Erros comuns**\n\nNão classifique uma palavra apenas pela terminação: a função no enunciado importa. Não confunda flexão com derivação. Diminutivo pode indicar tamanho, afeto, ironia ou outra nuance, conforme a situação. Prefixos têm sentidos que dependem da palavra e do uso; não deduza o significado completo somando mecanicamente partes. Ao justificar um efeito expressivo, cite a forma observável e o contexto que sustenta sua leitura."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: formação e efeito de classe",
+          "content_format": "markdown",
+          "content": "Considere **“A equipe propôs uma releitura do cartaz; o novo destaca a acessibilidade.”**\n\n1. Em **releitura**, reconhecemos a base **leitura** e o prefixo **re-**. A palavra nomeia uma nova leitura/retomada; o contexto do cartaz confirma a ideia de examinar novamente, não uma regra de que re- sempre tenha um único valor.\n2. Em **“o novo”**, o adjetivo **novo** aparece com artigo e ocupa a posição de um nome: está substantivado e retoma o cartaz/releitura em discussão.\n3. O contraste entre “uma releitura” e “o novo” evita repetir o nome e põe em foco a versão atual. O efeito vem da escolha e da função das formas nesse enunciado.\n\nA classificação não se resolve pela aparência isolada: é a construção completa que mostra como cada palavra funciona."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Analise a palavra em três passos: identifique a forma, descreva a relação morfológica e explique o efeito que ela produz naquele enunciado. Distinga derivação de flexão e use a função contextual para reconhecer a classe.\n\n**Autochecagem:** em “o novo destaca a acessibilidade”, “novo” continua apenas qualificando um substantivo expresso? **Resposta:** não; com o artigo “o”, o adjetivo está substantivado e funciona como núcleo de uma expressão nominal. O referente exato depende do contexto anterior."
+        }
+      ],
+      "publication_gate": "Manter em revisão até conferência do exemplo e da integração ao percurso; não promover automaticamente o estado publicado atual."
+    },
+    {
+      "curriculum_topic_id": 2473,
+      "official_label": "Elementos de fonologia da língua portuguesa",
+      "current_version": "1.0.1",
+      "current_status": "published",
+      "decision": "approve_as_is",
+      "proposed_status": "published",
+      "rationale": "A lição distingue fonologia/fonética, fonema/letra, dígrafo, tonicidade e acento; trata da relação não biunívoca entre fala e escrita e apresenta oposição fonêmica em “casa/caça” e dígrafo em “chave”. Também explica que efeitos sonoros são interpretações contextuais e inclui erros comuns sobre variedades e contagem de letras. A autochecagem retoma um contraste fonológico concreto. Isso atende ao escopo conciso do rótulo oficial.",
+      "evidence": [
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 4, item 6 do índice de conteúdos programáticos gerais",
+          "supports": "Efeitos de sentido de recursos fonético-fonológicos e relação entre oralidade e escrita.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "lessons.json",
+          "document": "lição curriculum_topic_id 2473, versão 1.0.1",
+          "supports": "Contraste fonêmico, dígrafo, efeito sonoro contextualizado e autochecagem."
+        }
+      ],
+      "review_notes": [
+        "A formulação sobre /z/ e /s/ está explicitamente limitada à pronúncia de referência apresentada; realizações regionais não devem ser julgadas como erro.",
+        "A lição não promete que um efeito sonoro isolado tenha interpretação única."
+      ]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "official_label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa",
+      "current_version": "1.0.3",
+      "current_status": "review",
+      "decision": "revise",
+      "proposed_version": "1.0.4",
+      "proposed_status": "review",
+      "rationale": "O texto-base oferece noções válidas de prosa, poesia e teatro, e o follow-up 1.0.3 melhora a referência à lista anual. Porém, continua sem nomear ou aplicar a lista oficial de obras de 2027, sem exemplo de análise de texto literário e sem uma demonstração suficiente de como forma, contexto histórico e dimensões social/moral/política se articulam. O exemplo original é abstrato e inventado; não ensina a analisar as obras efetivamente exigidas. A proposta inclui a lista conforme a fonte oficial e um procedimento de leitura com exemplo explicitamente hipotético, sem atribuir trecho ou interpretação a obra real. Mantém-se em revisão porque uma lição completa para este tópico ainda exige leitura e análise das obras, não apenas conhecer títulos e método.",
+      "evidence": [
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 4, seção Literaturas de Língua Portuguesa",
+          "supports": "Leitura e interpretação crítica; tradições em língua portuguesa; prosa, poesia e teatro; conceitos de composição e relação crítica com dimensões da vida social, moral e política.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "Programa das Provas — Vestibular 2027",
+          "document": "PDF oficial, p. 5, Relação de Livros",
+          "supports": "Títulos, autores e extensão de leitura (obra completa ou seleção) especificados para a edição 2027.",
+          "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+        },
+        {
+          "source": "lesson-revisions.json",
+          "document": "revisões 1.0.2 e follow-up 1.0.3 de 2474",
+          "supports": "A versão efetiva inclui ajustes de exemplo e um parágrafo sobre leitura integral, mas segue sem exemplo literário resolvido nem identificação da lista."
+        }
+      ],
+      "proposed_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Ler literatura: composição, experiência e contexto",
+          "content_format": "markdown",
+          "content": "Leitura literária não é apenas resumir o enredo ou procurar uma mensagem escondida: é explicar como escolhas de composição e linguagem produzem uma experiência e como essa experiência se relaciona com seu contexto. A interpretação deve partir de evidências da obra. Narrador não é automaticamente autor; voz lírica não é automaticamente a pessoa biográfica do poeta.\n\nNa prosa, observe narrador, personagem, tempo, espaço, enredo, foco e escolhas de linguagem. Na poesia, examine voz, imagens, versos, estrofes, ritmo, sonoridade e figuras; relacione a forma ao efeito, sem reduzir o poema a paráfrase. No teatro, considere diálogo, rubrica, ato/cena, ação e arquitetura do conflito. Em todos os gêneros, pergunte que perspectivas aparecem, quais tensões são construídas e como a obra permite relacioná-las a dimensões sociais, morais e políticas — sem substituir a análise por uma opinião atual ou por biografia isolada.\n\nPara o Vestibular Unicamp 2027, o Programa das Provas apresenta esta relação de leitura: **Prosas seguidas de odes mínimas**, José Paulo Paes (obra completa); **Canções escolhidas**, Paulo César Pinheiro (as canções enumeradas no programa); **Os funerais da Mamãe Grande**, Gabriel García Márquez (obra completa); seis contos de **Morangos mofados**, Caio Fernando Abreu — “Diálogo”, “Além do Ponto”, “Terça-Feira Gorda”, “Pêra, uva ou maçã?”, “O dia em que Júpiter encontrou Saturno” e “Aqueles dois”; **Olhos d’água**, Conceição Evaristo (obra completa); **No seu pescoço**, Chimamanda Ngozi Adichie (obra completa); **Vida e morte de M. J. Gonzaga de Sá**, Lima Barreto (obra completa); **Memórias Póstumas de Brás Cubas**, Machado de Assis (obra completa); e **A vida não é útil**, Ailton Krenak (obra completa). A lista e a indicação de extensão são as publicadas no documento oficial; confirme o documento vigente antes de planejar a leitura.\n\n**Erros comuns**\n\nNão atribua ao autor toda fala de narrador ou personagem. Não use uma escola literária como molde que determina cada passagem. Não trate resumo, adaptação ou comentário como substituto da leitura dos textos exigidos. Não conclua que uma obra “defende” uma posição só porque uma personagem a enuncia. Ao propor uma leitura crítica, mostre primeiro a evidência textual e depois explique o efeito e a relação contextual."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: da forma à interpretação",
+          "content_format": "markdown",
+          "content": "**Exemplo didático inventado, não retirado da lista oficial:** imagine um conto em que o narrador relata uma festa como grandiosa, mas menciona repetidamente cadeiras vazias e pratos intocados.\n\n1. **Evidência:** há contraste entre a avaliação “grandiosa” do narrador e os detalhes de ausência.\n2. **Forma e voz:** a descrição é filtrada pelo narrador; não se deve confundir sua avaliação com uma declaração direta do autor.\n3. **Efeito possível:** a discrepância pode produzir ironia ou expor a distância entre aparência e experiência. Para decidir, seria preciso observar o restante do conto, o tom e as consequências narrativas.\n4. **Leitura crítica:** se a obra relaciona a festa a prestígio ou exclusão, os detalhes podem sustentar uma análise social. O exemplo isolado não permite afirmar qual grupo é criticado nem qual é a posição do autor.\n\nEsse mesmo procedimento se adapta a poema ou peça: primeiro descreva recurso formal, depois explique o efeito no conjunto e só então formule uma interpretação contextual. Para as obras da lista, faça a análise com passagens efetivamente lidas, registrando capítulo, conto, poema ou cena e sem substituir a evidência por este exemplo hipotético."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Em cada leitura, registre: (1) quem fala e de que posição; (2) quais escolhas de gênero, estrutura e linguagem são observáveis; (3) que efeito elas produzem no conjunto; (4) que interpretação social, moral ou política a evidência sustenta; e (5) o que ainda não é possível afirmar. Compare recorrências e tensões ao longo da obra integral ou dos textos indicados.\n\n**Autochecagem:** uma personagem afirma algo; isso prova que essa é a opinião do autor? **Resposta:** não. É preciso distinguir personagem, narrador/voz e organização da obra, sustentando qualquer conclusão com evidências."
+        }
+      ],
+      "publication_gate": "Manter em revisão. A lista foi transcrita da fonte oficial; a utilidade didática e a leitura analítica das obras ainda precisam de revisão editorial específica. Não afirmar cobertura integral das obras com base apenas nesta lição introdutória."
+    }
+  ],
+  "batch_notes": [
+    "Este artefato contém propostas editoriais, não alterações no SQLite nem nos arquivos lessons.json/lesson-revisions.json.",
+    "As lições aprovadas como estão são aprovadas apenas para o escopo dos respectivos rótulos; isso não equivale a auditoria de todas as associações de questões ou recursos externos.",
+    "As propostas revisadas permanecem em review até revisão humana e aplicação pelo fluxo editorial. Nenhuma proposta deve ser publicada automaticamente.",
+    "O Programa das Provas sustenta o programa e a relação de leitura; os exemplos propostos são autoria editorial própria, salvo quando declarados explicitamente hipotéticos."
+  ]
+}

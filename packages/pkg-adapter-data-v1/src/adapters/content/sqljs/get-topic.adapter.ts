@@ -6,7 +6,8 @@ export class SqlJsGetTopicAdapter implements GetTopicPort {
 
   public execute(
     input: Parameters<GetTopicPort["execute"]>[0],
+    scope?: Parameters<GetTopicPort["execute"]>[1],
   ): ReturnType<GetTopicPort["execute"]> {
-    return this.store.getTopic(input);
+    return this.store.getTopic(input, scope);
   }
 }

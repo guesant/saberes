@@ -1,0 +1,100 @@
+{
+  "schema": "saberes.editorial.lesson-independent-review/v1",
+  "review_date": "2026-10-10",
+  "review_scope": "Revisão independente das três seções propostas em v2 para os tópicos 2500, 2501, 2504, 2507 e 2510; comparação com o programa oficial, parecer independente anterior e estado atual do SQLite.",
+  "inputs": {
+    "proposal": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json",
+    "prior_review": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-independent-review-2026-10-10.json",
+    "official_program": {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "provider": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_copy": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+      "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+      "pages_visually_checked": [11, 12, 13, 14]
+    },
+    "database": ".local/content/content.sqlite",
+    "database_access": "SQLite aberto em modo read-only; nenhum dado alterado."
+  },
+  "overall": {
+    "decision": "hold_with_one_publish_candidate",
+    "publish_candidates": [2500],
+    "hold_topics": [2501, 2504, 2507, 2510],
+    "important_state_note": "No SQLite, as lições examinadas continuam review, embora is_published=1. Esse campo não equivale a aprovação editorial; não se recomenda tratar nenhuma delas como aprovada até a decisão e a atualização formal do estado.",
+    "publication_rule": "O programa oficial delimita os conteúdos, mas não valida as explicações científicas. A recomendação publish abaixo se refere à qualidade e suficiência editorial destas três seções, não a um endosso da Comvest nem a uma revisão integral de todo o acervo do tópico."
+  },
+  "topic_reviews": [
+    {
+      "curriculum_topic_id": 2500,
+      "label": "Biodiversidade e saúde humana",
+      "decision": "publish",
+      "versions": {"sqlite_current": "1.3.1", "proposal_base": "1.3.1", "proposed": "1.3.2"},
+      "sqlite_current": {"lesson_section_ids": [97, 98, 99], "review_status": "review", "is_published": true},
+      "official_evidence": [{"document_id": 148, "page": 11, "location": "Biologia: ambiente e vida / biodiversidade", "supports": "Ecossistemas, classificação biológica e biologia de vírus, bactérias, protistas, fungos, plantas, algas e animais."}, {"document_id": 148, "page": 12, "location": "Saúde humana", "supports": "Sistemas humanos, reprodução, contracepção, hormônios, ISTs e doenças causadas por microrganismos e vetores."}],
+      "prior_review_resolution": "O hold anterior pedia exemplo epidemiológico com agente, via e medidas pertinentes, além de autochecagem aplicada. A v2 inclui cenário respiratório, diferencia vírus de bactéria, relaciona ventilação à via, esclarece a inadequação de antibiótico para vírus e de preservativo para transmissão respiratória, e limita a afirmação sobre vacinação.",
+      "critical_checks": [{"check": "Mecanismo das intervenções no exemplo", "result": "consistent", "detail": "A via respiratória descrita é compatível com ventilação; antibióticos não tratam vírus. Preservativo não é medida para essa via. A ressalva sobre vacinação evita promessa de proteção absoluta."}, {"check": "Reprodução/contracepção e agentes/vetores", "result": "consistent_with_caveat", "detail": "As afirmações são apresentadas em termos gerais e com orientação para procurar serviço de saúde; não substituem aconselhamento individual."}],
+      "caveats": ["A lição é uma síntese introdutória; não pretende substituir o estudo completo de fisiologia humana ou microbiologia.", "Manter status editorial review até aprovação formal no fluxo do banco; esta recomendação não atualiza o SQLite."],
+      "rationale": "A lacuna central do parecer anterior foi corrigida nas três seções; não encontrei erro conceitual crítico que impeça publicação editorial."
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "label": "Fundamentos da Física e Mecânica",
+      "decision": "hold",
+      "versions": {"sqlite_current": "1.3.1", "proposal_base": "1.3.1", "proposed": "1.3.2"},
+      "sqlite_current": {"lesson_section_ids": [100, 101, 102], "review_status": "review", "is_published": true},
+      "official_evidence": [{"document_id": 148, "page": 12, "location": "Mecânica", "supports": "Cinemática 1D/2D, leis de Newton, atrito, peso e gravidade, torque/equilíbrio, gravitação universal, sistema solar e leis de Kepler, quantidade de movimento, trabalho/energia, potência e hidrostática."}],
+      "prior_review_resolution": "A v2 resolve os bloqueios destacados no parecer: inclui a lei da gravitação universal e exemplo numérico, e calcula impulso de colisão por Δp e força média.",
+      "critical_checks": [{"check": "Colisão", "result": "correct", "detail": "Δp=0,20(−5−10)=−3,0 kg·m/s; J=−3,0 N·s; F média=−30 N para Δt=0,10 s."}, {"check": "Gravitação terrestre", "result": "correct_to_rounding", "detail": "Com as constantes declaradas, GMm/r²≈687 N; a aproximação é compatível com mg para g≈9,8 m/s²."}, {"check": "Autochecagem de impulso", "result": "correct", "detail": "Para v_f=+5 m/s, Δp=−1,0 kg·m/s e F média=−10 N."}],
+      "remaining_blocker": "As três seções são apresentadas como substituição integral do tópico, mas deixam de fora itens expressos na p. 12: leis de Kepler, força de atrito, torque/equilíbrio estático e dinâmico, potência e tratamento explícito de trabalho/energia e hidrostática. A teoria apenas cita parte deles sem explicar ou praticar.",
+      "caveats": ["A gravitação numérica usa valores arredondados coerentes e explicita raio/distância ao centro.", "Se a intenção for publicar isto como etapa parcial da trilha, limitar explicitamente o escopo e conectar às etapas restantes pode remover o bloqueio; no pacote atual não há essa delimitação."],
+      "rationale": "Fatos e contas novos estão corretos, mas a cobertura continua insuficiente para a substituição integral de Fundamentos da Física e Mecânica."
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "label": "Óptica e ondas",
+      "decision": "hold",
+      "versions": {"sqlite_current": "1.2.1", "proposal_base": "1.2.1", "proposed": "1.2.2"},
+      "sqlite_current": {"lesson_section_ids": [109, 110, 111], "review_status": "review", "is_published": true},
+      "official_evidence": [{"document_id": 148, "page": 13, "location": "Óptica e ondas", "supports": "Ondas planas e esféricas; ondas em cordas e sonoras; polarização, interferência e difração; espelhos planos/esféricos; refração, dispersão, prismas, lentes e instrumentos ópticos; espectro eletromagnético e óptica da visão."}],
+      "prior_review_resolution": "A v2 acrescenta exemplo explícito de λ=v/f, interferência e lente convergente com sinais declarados, atendendo as lacunas de cálculo apontadas anteriormente.",
+      "critical_checks": [{"check": "Comprimento de onda", "result": "correct", "detail": "340 m/s ÷ 500 Hz = 0,68 m; unidades consistentes."}, {"check": "Interferência", "result": "correct_under_stated_conditions", "detail": "Fontes coerentes em fase: 2λ dá máximo; 1,5λ dá mínimo ideal para amplitudes iguais."}, {"check": "Lente", "result": "correct_under_declared_convention", "detail": "Com p=30 cm e f=10 cm, p′=15 cm e m=−0,5. A indicação de p′<0 para imagem virtual é coerente com a convenção declarada para o eixo e o objeto real."}],
+      "remaining_blocker": "A substituição integral não aborda diversos componentes explicitamente listados no programa: ondas esféricas, polarização, ondas mecânicas em cordas/som, espelhos planos e esféricos, prismas, instrumentos ópticos, espectro eletromagnético e óptica da visão. A seção também não delimita que cobre apenas uma etapa do tópico.",
+      "caveats": ["Não encontrei erro nas contas centrais.", "A convenção descrita resolve o caso do exemplo; objetos virtuais e lentes divergentes não são definidos, portanto não generalizar a convenção apresentada para esses casos sem explicação adicional."],
+      "rationale": "As correções pontuais estão corretas, mas o conteúdo não sustenta publicação como cobertura integral do tópico oficial."
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "label": "Estrutura atômica, classificação periódica e ligação química",
+      "decision": "hold",
+      "versions": {"sqlite_current": "1.1.1", "proposal_base": "1.1.1", "proposed": "1.1.2"},
+      "sqlite_current": {"lesson_section_ids": [118, 119, 120], "review_status": "review", "is_published": true},
+      "official_evidence": [{"document_id": 148, "page": 13, "location": "Estrutura atômica e classificação periódica", "supports": "Subpartículas, níveis/distribuição eletrônica, número de massa/atômico, isótopos, ionização, afinidade, eletronegatividade, correlações periódicas e radioatividade/decaimento."}, {"document_id": 148, "page": 14, "location": "Ligação química", "supports": "Modelos iônico, covalente e metálico; propriedades e polaridade de substâncias/moléculas simples; interações de Van der Waals e ligação de hidrogênio."}],
+      "prior_review_resolution": "A v2 corrige o arredondamento de afinidades, acrescenta interações intermoleculares e polaridade, e inclui equação beta menos balanceada com antineutrino. Esses bloqueios do parecer anterior foram atendidos.",
+      "critical_checks": [{"check": "Conversão de afinidade", "result": "correct", "detail": "Com 1 eV por partícula≈96,485 kJ/mol, 3,6131 eV≈348,6 kJ/mol e 3,401191 eV≈328,2 kJ/mol a uma casa decimal. A proposta distingue magnitude liberada de ΔH negativo."}, {"check": "Decaimento beta menos", "result": "correct", "detail": "¹⁴₆C→¹⁴₇N+⁰₋₁e+ν̅ₑ conserva número de massa e carga."}, {"check": "Configuração eletrônica", "result": "correct", "detail": "Na neutro, Z=11: 1s² 2s² 2p⁶ 3s¹."}],
+      "remaining_blocker": "Embora enumere os modelos de ligação, o texto não os explica nem os compara com exemplos; a única aplicação estrutural de Lewis é H–Cl. Também não demonstra como polaridade/ligação se relaciona às propriedades de uma substância simples, conteúdo explicitamente requerido na p. 14. Assim, o alcance permanece declarativo para uma parte central do tópico.",
+      "caveats": ["As correções factuais e aritméticas solicitadas estão corretas.", "Os exemplos faltantes podem ser resolvidos com exemplos breves de NaCl, CO₂/H₂O e uma substância metálica; não é necessário expandir a lição de forma extensa."],
+      "rationale": "A v2 resolve os erros anteriores, mas ainda não oferece demonstração suficiente dos modelos de ligação e das propriedades previstas pelo programa."
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "label": "Eletroquímica e compostos orgânicos",
+      "decision": "hold",
+      "versions": {"sqlite_current": "1.3.1", "proposal_base": "1.3.1", "proposed": "1.3.2"},
+      "sqlite_current": {"lesson_section_ids": [127, 128, 129], "review_status": "review", "is_published": true},
+      "official_evidence": [{"document_id": 148, "page": 14, "location": "Eletroquímica", "supports": "Oxidação/redução, equacionamento, NOX, agentes, potenciais padrão, pilhas, leis de Faraday e eletrólise."}, {"document_id": 148, "page": 14, "location": "Química de compostos orgânicos", "supports": "Fórmulas moleculares/estruturais/Lewis, cadeias, ligações/isomeria, funções, nomenclatura, obtenção/propriedades, biomoléculas/enzimas e polímeros."}],
+      "prior_review_resolution": "A v2 acrescenta chave de funções, Lewis de H₂O, eteno→etanol, polietileno por adição, propriedade do etanol e cálculo de eletrólise de cobre, resolvendo grande parte das lacunas indicadas no parecer anterior.",
+      "critical_checks": [{"check": "Célula Zn/Cu", "result": "not_represented_in_v2; prior value not revalidated", "detail": "A proposta v2 consultada substitui o exemplo anterior; não se deve atribuir a ela o cálculo de potencial da versão anterior."}, {"check": "Eletrólise de cobre", "result": "correct_to_rounding", "detail": "Q=2,0×600=1200 C; n(Cu)=Q/(2F)≈0,00622 mol; m≈0,395 g para 100% de rendimento."}, {"check": "Hidratação/polimerização do eteno", "result": "balanced", "detail": "A hidratação adiciona H₂O ao eteno sob catálise; a unidade repetitiva do polietileno é –CH₂–CH₂– e conserva os átomos do monômero."}],
+      "remaining_blocker": "A proposta não aborda isomeria, listada expressamente no programa, nem inclui um exemplo ou autochecagem que aplique as noções de carboidratos, lipídios, proteínas e enzimas; esses itens ficam apenas mencionados/definidos. A nomenclatura de polietileno e o exemplo redox são corretos, mas não compensam essas lacunas da substituição integral.",
+      "caveats": ["O pacote v2 não traz célula Zn/Cu nem potencial padrão numérico; não considerar os cálculos da versão anterior como verificados para este pacote.", "Uma aplicação breve de isomeria e uma pergunta comparando biomoléculas/enzimas resolveriam a lacuna sem reescrever toda a teoria."],
+      "rationale": "A v2 é substancialmente melhor e suas contas verificadas estão corretas, mas ainda omite objetivos explícitos de compostos orgânicos no programa."
+    }
+  ],
+  "integrity": {
+    "proposal_section_counts": {"2500": 3, "2501": 3, "2504": 3, "2507": 3, "2510": 3},
+    "all_sqlite_records_remain_review": true,
+    "database_modified": false,
+    "base_files_modified": false,
+    "only_output_created": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json"
+  }
+}

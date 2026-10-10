@@ -1,0 +1,2256 @@
+{
+  "format": "unicamp-2027-external-resource-backlog/v1",
+  "generated_at": "2026-10-10",
+  "scope": "Recursos externos associados aos tópicos do programa da primeira fase Unicamp 2027 ainda com acessibilidade unknown/needs_improvement, mais recursos e lacunas pedagógicas conhecidos que impedem uso aprovado.",
+  "database_sha256": "64c6ea491f538a7f9b0b5076acea56a0940fbadf977748cd263d4d0c55dd3a67",
+  "method": [
+    "SQLite consultado em modo somente leitura; arquivo, snapshot e conteúdo não foram alterados.",
+    "Evidência das auditorias existentes (10/10/2026) foi reutilizada. Navegação adicional foi dispensada quando já havia observação visual direta e recente.",
+    "Separação de estados: published/relevant significa link suplementar disponível; accessibility unknown não significa irrelevância nem reprovação do recurso; nenhum status foi promovido."
+  ],
+  "findings": [
+    {
+      "resource": {
+        "id": 174,
+        "title": "Exercícios de interpretação de texto",
+        "url": "https://www.todamateria.com.br/exercicios-de-interpretacao-de-texto/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2468,
+        "label": "O texto e seu funcionamento"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "needs_improvement"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Para a página Toda Matéria de interpretação: recomendação limitada a Q1–9 e Q12, com textos e gabaritos verbais. Q10 (tirinha) e Q11 (cartaz) dependem de imagens, por iss"
+      },
+      "decision": "Manter como link suplementar com a restrição descrita na nota; não declarar o recurso inteiro acessível nem alterar o status.",
+      "blocker": "A auditoria indica uma barreira específica ou conteúdo visual sem alternativa textual suficiente; exige alternativa textual ou troca do recurso.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 603,
+        "title": "Coesão e coerência — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2468,
+        "label": "O texto e seu funcionamento"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Explica coesão referencial e sequencial, coerência contextual, pronomes, elipse e conjunções, com exemplo e exercício. Sup"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 604,
+        "title": "Semântica — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2469,
+        "label": "Processos de significação"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Apresenta sentido e contexto, conotação/denotação, ambiguidade e polissemia com exemplos. Introdução parcial; exercícios d"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 605,
+        "title": "Variação linguística — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2470,
+        "label": "Funcionamento social da língua"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Introduz variações geográficas, históricas, sociais e situacionais, além de preconceito linguístico. Complemento introdutó"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 639,
+        "title": "Texto e contexto — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-redacao/exercicios-sobre-texto-contexto.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2468,
+        "label": "O texto e seu funcionamento"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 1, poema ‘Verbo ser’; gabarito A. Limites: Interpretação e inferência textual; não representa todo o programa de língu"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 640,
+        "title": "Semântica e relações de sentido — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-semantica.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2469,
+        "label": "Processos de significação"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 2, uso de ‘no entanto’; gabarito C. Limites: Prática de sentido contextual e conectivos; a lista mistura tópicos e ape"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 641,
+        "title": "Variação linguística — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-variacoes-linguisticas.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2470,
+        "label": "Funcionamento social da língua"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (A), 3 (D), 7 (B), 11 (C) e 12 (A); excluir a questão 8, que depende de cartaz/imagem. Limites: Usar somente os ite"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 166,
+        "title": "Funções | Álgebra (todo o conteúdo)",
+        "url": "https://pt.khanacademy.org/math/algebra-home/alg-functions",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2476,
+        "label": "Funções"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Vínculo ao item do programa 2027 ‘Funções’. A unidade Khan Academy fornece teoria e prática complementar de avaliação, gráficos, domínio, variação e composição; não repre"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 179,
+        "title": "Exercícios sobre gêneros literários (gabarito comentado)",
+        "url": "https://www.todamateria.com.br/exercicios-sobre-generos-literarios/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2474,
+        "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Toda Matéria, exercícios textuais sobre gêneros lírico, narrativo e dramático, com respostas comentadas; suplemento introdutório ao programa de leitura literária. Página "
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 225,
+        "title": "Gráfico de equações do segundo grau na forma canônica (prática)",
+        "url": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/e/graphing_parabolas_1",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2476,
+        "label": "Funções"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação curricular anual mantida como prática complementar; a alternativa aborda gráficos de quadráticas na forma canônica/vértice, não a totalidade do conteúdo anual."
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 520,
+        "title": "Fonemas — prática com gabarito comentado",
+        "url": "https://www.todamateria.com.br/exercicios-sobre-fonemas/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2473,
+        "label": "Elementos de fonologia da língua portuguesa"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questões 1–5 e 7. Excluir a questão 6, pois as alternativas A e C satisfazem o enunciado. Limites: Prática de fonema/letra e r"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 549,
+        "title": "Fórmula quadrática (Bhaskara): explicação",
+        "url": "https://pt.khanacademy.org/math/pt-9-ano/algebra-expressoes-algebricas-9ano/a-formula-de-bhaskara/a/quadratic-formula-explained-article",
+        "provider": "Khan Academy",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2477,
+        "label": "Polinômios, equações e inequações"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Khan Academy: artigo em português sobre fórmula quadrática/Bhaskara, exemplo resolvido e prática relacionada. Relação suplementar a Polinômios, equações e inequações; foc"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 606,
+        "title": "Linguagem literária — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2474,
+        "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Explica subjetividade, conotação e plurissignificação com exemplos de poema e romance. Introdução; não substitui leitura d"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 607,
+        "title": "Conjuntos numéricos — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2475,
+        "label": "Conjuntos numéricos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Apresenta naturais, inteiros, racionais, irracionais e reais e suas relações. A página também aborda números complexos; pa"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 169,
+        "title": "Probabilidade | Estatística e probabilidade",
+        "url": "https://pt.khanacademy.org/math/probability/probability-and-combinatorics-topic",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2478,
+        "label": "Princípios de contagem e probabilidade"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Vínculo ao item do programa 2027 ‘Princípios de contagem e probabilidade’. Recomendam-se especificamente unidades de probabilidade e contagem/combinatória; não inferir co"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 523,
+        "title": "Funções trigonométricas — unidade e prática",
+        "url": "https://pt.khanacademy.org/math/trigonometry/unit-circle-trig-func",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2482,
+        "label": "Trigonometria"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Khan Academy, curso/unidade de funções trigonométricas: a página direta lista conteúdo Aprender e Praticar (círculo trigonométrico, radianos, identidades, gráficos/modelo"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 546,
+        "title": "How To Learn Trigonometry Intuitively",
+        "url": "https://betterexplained.com/articles/intuitive-trigonometry/",
+        "provider": "BetterExplained — Kalid Azad",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2482,
+        "label": "Trigonometria"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "needs_improvement"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Individually reviewed 2026-10-08 as an optional English-language intuition supplement for trigonometry. The article explains six trig functions through dome/wall/ceiling "
+      },
+      "decision": "Manter como link suplementar com a restrição descrita na nota; não declarar o recurso inteiro acessível nem alterar o status.",
+      "blocker": "A auditoria indica uma barreira específica ou conteúdo visual sem alternativa textual suficiente; exige alternativa textual ou troca do recurso.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 547,
+        "title": "Teorema de Pitágoras — explicação e prática",
+        "url": "https://pt.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-pyth-theorem/hs-geo-pyth-theorem",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2480,
+        "label": "Geometria plana"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Khan Academy: unidade do teorema de Pitágoras em geometria plana, com explicação e problemas de triângulos retângulos. Suplemento diretamente pertinente ao item de Geomet"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 608,
+        "title": "Área e perímetro — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2480,
+        "label": "Geometria plana"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Unidade com exercícios/testes de áreas e perímetros de polígonos, círculos e figuras compostas. Prática suplementar; cobre"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 609,
+        "title": "Triângulos retângulos e trigonometria — Khan Academy",
+        "url": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2482,
+        "label": "Trigonometria"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Exercícios e testes sobre seno, cosseno, tangente, lados e ângulos em triângulos retângulos. Não cobre sozinho ciclo trigo"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 544,
+        "title": "Crescimento e decaimento exponencial",
+        "url": "https://pt.khanacademy.org/math/algebra-home/alg-exp-and-log/exponential-decay",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2484,
+        "label": "Logaritmos e exponenciais"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Khan Academy: unidade de crescimento/decaimento exponencial, gráficos e prática. Relevância direta ao item curricular de Logaritmos e exponenciais como suplemento. Esta u"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 610,
+        "title": "Fórmula da distância — Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+        "provider": "Khan Academy",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2483,
+        "label": "Geometria analítica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Deriva e aplica a distância entre pontos no plano cartesiano, com exemplo resolvido. Cobre uma habilidade de geometria ana"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 611,
+        "title": "Distância entre ponto e reta — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2483,
+        "label": "Geometria analítica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Exercício direto de distância entre ponto e reta, com resposta verificável. Atividade curta de uma habilidade; não represe"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 613,
+        "title": "Geografia física — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2487,
+        "label": "Componentes físico-naturais do espaço geográfico"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Visão geral de litosfera, atmosfera, hidrosfera e biosfera, com exemplos de relevo, solo, água, clima e biodiversidade. Pa"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 614,
+        "title": "Hidrografia, clima e relevo — prática, questões 1–3",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2487,
+        "label": "Componentes físico-naturais do espaço geográfico"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "needs_improvement"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Prática suplementar: questões textuais 1–3, com respostas e justificativas conferidas. Usar somente questões 1–3; excluir "
+      },
+      "decision": "Manter como link suplementar com a restrição descrita na nota; não declarar o recurso inteiro acessível nem alterar o status.",
+      "blocker": "A auditoria indica uma barreira específica ou conteúdo visual sem alternativa textual suficiente; exige alternativa textual ou troca do recurso.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 642,
+        "title": "Função logarítmica — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-logaritmica.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2484,
+        "label": "Logaritmos e exponenciais"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (D) e 4 (E); respostas conferidas na própria página. Limites: Prática de propriedades e cálculo de logaritmos; usar"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 643,
+        "title": "Função exponencial — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-exponencial.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2484,
+        "label": "Logaritmos e exponenciais"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (D) e 2 (A); respostas conferidas na própria página. Limites: Prática de crescimento/decrescimento e potências; usa"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 615,
+        "title": "Grécia Antiga — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/grecia-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2490,
+        "label": "Antiguidade clássica e período medieval"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Introduz periodização, organização política/social e cultura da Grécia Antiga. Cobre a Grécia, não Roma nem sociedades med"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 616,
+        "title": "Roma Antiga — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/roma-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2490,
+        "label": "Antiguidade clássica e período medieval"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Apresenta organização política, social e cultural de Roma Antiga. Cobre Roma, não Grécia nem sociedades medievais; supleme"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 617,
+        "title": "Idade Média — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/idade-media.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2490,
+        "label": "Antiguidade clássica e período medieval"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Introduz periodização, organização política/social e acontecimentos da Idade Média. Recorte majoritariamente europeu; deve"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 629,
+        "title": "Grécia Antiga — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-a-grecia-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2490,
+        "label": "Antiguidade clássica e período medieval"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1–Q2: gabaritos B e A; Guerra do Peloponeso e ostracismo ateniense. Limites: Recorte da Grécia clássica; não cobre Roma nem o per"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 630,
+        "title": "Roma Antiga — prática selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-roma-antiga/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2490,
+        "label": "Antiguidade clássica e período medieval"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1–Q2: sequência Monarquia → República → Império; Q2 resposta D, com explicação sobre plebeus. Limites: Recorte de Roma antiga; nã"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 631,
+        "title": "Educação na Idade Média — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-educacao-na-idade-media.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2490,
+        "label": "Antiguidade clássica e período medieval"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1–Q2: gabaritos D e B, sobre urbanização/comércio/universidades e cultura medieval. Limites: Recorte da história da educação e cu"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 632,
+        "title": "Formação dos Estados Nacionais Modernos — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-formacao-dos-estados-nacionais-modernos.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2491,
+        "label": "Período moderno"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1–Q2: gabaritos D e A, com justificativas sobre absolutismo e mercantilismo. Limites: Prática parcial de formação política/econôm"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 633,
+        "title": "Renascimento Científico — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-renascimento-cientifico.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2491,
+        "label": "Período moderno"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1 e Q4: gabaritos A e E, com justificativas conferidas. Limites: Excluir Q2: a formulação mistura referências ao século XVIII e a"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 644,
+        "title": "Território brasileiro — prática selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-sobre-o-territorio-brasileiro-com-respostas-explicadas/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2489,
+        "label": "Brasil: dinâmica territorial"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 3 (B), fronteiras terrestres do Brasil; enunciado e explicação textuais. Limites: Prática de localização e fronteiras;"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 645,
+        "title": "Formação territorial do Brasil — prática selecionada",
+        "url": "https://www.historiadobrasil.net/exercicios/formacao_territorial_brasil.htm",
+        "provider": "História do Brasil",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2489,
+        "label": "Brasil: dinâmica territorial"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2468-2489.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (D), 2 (B), 3 (C) e 5 (D); gabaritos conferidos. Limites: Complemento interdisciplinar sobre formação histórica; nã"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 229,
+        "title": "B2 Reading — reading skills and practice",
+        "url": "https://learnenglish.britishcouncil.org/free-resources/reading/b2",
+        "provider": "British Council LearnEnglish",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2495,
+        "label": "Leitura crítica em língua inglesa"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação curricular anual mantida para apoio geral à leitura em inglês nível B2; recurso não é específico do ENEM e não cobre por si só o currículo anual."
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 240,
+        "title": "Patrimônio imaterial — IPHAN",
+        "url": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-imaterial",
+        "provider": "IPHAN",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2493,
+        "label": "Conceitos fundamentais e dimensões sociais"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação curricular anual mantida como leitura introdutória sobre patrimônio imaterial e diversidade cultural; recurso não é exercício nem cobertura completa do currículo."
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 612,
+        "title": "How to be a critical reader — OpenLearn",
+        "url": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab",
+        "provider": "OpenLearn / The Open University",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2495,
+        "label": "Leitura crítica em língua inglesa"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Curso gratuito sobre propósito, opinião, estrutura argumentativa, fatos/opiniões, ressalvas e evidências em textos em ingl"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 634,
+        "title": "Patrimônio, cultura e diversidade — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2493,
+        "label": "Conceitos fundamentais e dimensões sociais"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1 D, Q3 B, Q4 E, Q9 C e Q15 B; itens textuais sobre imaginário social, ruralidades, indústria cultural, etnocentrismo e diversida"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 635,
+        "title": "Trabalho, sociedade e tecnologia — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-trabalho-sociedade-e-tecnologia.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2493,
+        "label": "Conceitos fundamentais e dimensões sociais"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q3 C, Q4 D, Q5 D, Q9 D, Q11 A e Q12 C; os itens 11–12 abordam dimensões simbólicas e consumo. Limites: Prática complementar parcia"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 646,
+        "title": "Primeira lei de Mendel — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-primeira-lei-mendel.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2497,
+        "label": "Hereditariedade"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 6 (C, aa), cruzamento com proporção 3:1; enunciado textual e resposta explicada. Limites: Prática de herança mendelian"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 527,
+        "title": "Sistema Solar — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-sistema-solar.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2502,
+        "label": "Astronomia"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 1 (E), identificação dos oito planetas; resposta explicitada na página. Limites: Usar somente a questão 1. A lista tem"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 618,
+        "title": "Vida e evolução: seres vivos na natureza — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2500,
+        "label": "Biodiversidade e saúde humana"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Unidade introdutória sobre biodiversidade, desequilíbrios ambientais e saúde ambiental/humana. Material de nível introdutó"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 619,
+        "title": "Física do Ensino Médio — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/fisica-ensino-medio",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2501,
+        "label": "Fundamentos da Física e Mecânica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Trilha em português de Física do Ensino Médio, útil como ponto de entrada para mecânica e fundamentos. A trilha é ampla; s"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 620,
+        "title": "Primeira lei de Newton — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/science/fisica-ensino-medio/x6443ccf4d35f6b36%3Aforcas-e-leis-de-newton/x6443ccf4d35f6b36%3A1-lei-de-newton/e/newtons-first-law-exercises-ap1",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2501,
+        "label": "Fundamentos da Física e Mecânica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Prática pontual de força resultante e primeira lei de Newton; o item do carro parado tem resposta coerente. Cobre uma habi"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 621,
+        "title": "Astronomia — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/geografia/astronomia.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2502,
+        "label": "Astronomia"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Introduz a astronomia, sua história e modelos do Sistema Solar. Texto introdutório e descritivo; não cobre astronomia físi"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 622,
+        "title": "Sistema Solar — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/geografia/sistema-solar.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2502,
+        "label": "Astronomia"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Apresenta planetas e outros corpos do Sistema Solar. Complemento descritivo; não cobre órbitas, evolução estelar e todo o "
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 623,
+        "title": "Lixo espacial — prática, questões 1–2",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lixo-espacial.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2502,
+        "label": "Astronomia"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "needs_improvement"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Prática parcial: questões textuais 1–2 sobre geocentrismo e leis de Kepler; respostas D e B conferidas. Usar somente quest"
+      },
+      "decision": "Manter como link suplementar com a restrição descrita na nota; não declarar o recurso inteiro acessível nem alterar o status.",
+      "blocker": "A auditoria indica uma barreira específica ou conteúdo visual sem alternativa textual suficiente; exige alternativa textual ou troca do recurso.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 636,
+        "title": "Biodiversidade — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2500,
+        "label": "Biodiversidade e saúde humana"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q2 D, Q3 A, Q4 C e Q5 D; itens textuais sobre poluição, biodiversidade e impactos nos ecossistemas. Limites: Itens com imagens for"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 637,
+        "title": "Poluição e saúde ambiental — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2500,
+        "label": "Biodiversidade e saúde humana"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q9 D: tecnologias limpas, controle de emissões e educação ambiental. Limites: Uma questão de saúde ambiental; não cobre sozinha re"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 647,
+        "title": "Evolução e ancestralidade comum — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-teoria-evolucao.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2498,
+        "label": "Origem e evolução da vida"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 3 (B), parentesco entre humanos e baleias explicado por ancestral comum. Limites: Prática de ancestralidade comum; não"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 648,
+        "title": "Heliocentrismo — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-heliocentrismo.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2502,
+        "label": "Astronomia"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 1 (B), modelos heliocêntrico e geocêntrico; item textual e resposta explicada. Limites: Complemento sobre modelos astr"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 512,
+        "title": "Exercícios sobre os estados físicos da matéria",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-os-estados-fisicos-materia.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2506,
+        "label": "Materiais, gases, líquidos e sólidos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1 B, Q2 E e Q6–Q11: E, A, C, B, C e D. Excluir Q4 (justificativa contraditória), Q5 (não verificável) e Q12 (justificativa imprec"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 624,
+        "title": "Calorimetria — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/fisica/calorimetria-i.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2503,
+        "label": "Calorimetria e termodinâmica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Explica calor sensível/latente, trocas de calor e curvas de aquecimento. Complementar; não cobre sozinha toda a termodinâm"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 625,
+        "title": "Termodinâmica — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/fisica/termodinamica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2503,
+        "label": "Calorimetria e termodinâmica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Leitura complementar de termodinâmica para equilibrar a introdução de calorimetria. Selecionar conteúdos compatíveis com o"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 626,
+        "title": "Calorimetria — prática, questões 1–2 e 4–12",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calorimetria.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2503,
+        "label": "Calorimetria e termodinâmica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "needs_improvement"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Prática parcial: cálculos e unidades das questões textuais 1–2 e 4–12 foram conferidos. Excluir questão 3, dependente de f"
+      },
+      "decision": "Manter como link suplementar com a restrição descrita na nota; não declarar o recurso inteiro acessível nem alterar o status.",
+      "blocker": "A auditoria indica uma barreira específica ou conteúdo visual sem alternativa textual suficiente; exige alternativa textual ou troca do recurso.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 627,
+        "title": "Estados da matéria — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2506,
+        "label": "Materiais, gases, líquidos e sólidos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Unidade sobre estados, mudanças de fase, gases e modelos particulados. Recurso introdutório e parcial; a prática listada n"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 649,
+        "title": "Calor latente — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calor-latente.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2503,
+        "label": "Calorimetria e termodinâmica"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 1 (B, 70 cal/g), resolvida por P·Δt=m·L; enunciado e solução textuais. Limites: Prática de calor latente; não represen"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 650,
+        "title": "Circuitos e lei de Ohm — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-circuitos-eletricos.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2505,
+        "label": "Eletricidade e magnetismo"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 1 (B, 120 mA), aplicação da lei de Ohm; item textual. Limites: Usar somente a questão 1; cobre eletricidade básica, nã"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 652,
+        "title": "Substâncias e misturas — prática selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-sobre-substancias-e-misturas/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2506,
+        "label": "Materiais, gases, líquidos e sólidos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questões 1–2, características de substância e propriedades físicas constantes; gabarito comentado. Limites: Prática introdutór"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 653,
+        "title": "Estados físicos da matéria — prática selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-sobre-estados-fisicos-da-materia-com-gabarito-explicado/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2506,
+        "label": "Materiais, gases, líquidos e sólidos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 3 (C), solidificação como processo exotérmico; explicação textual. Limites: Prática de mudanças de estado e troca de c"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 654,
+        "title": "Transformações dos gases — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-transformacoes-dos-gases.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2506,
+        "label": "Materiais, gases, líquidos e sólidos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 1 (D, 28 L), aplicação da equação geral dos gases com temperatura em kelvin; resolução textual. Limites: Prática de tr"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 655,
+        "title": "Concentração de soluções — prática selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-sobre-molaridade-molalidade-concentracao-e-diluicao-de-solucoes-com-respostas-comentadas/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2506,
+        "label": "Materiais, gases, líquidos e sólidos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questões 3 (D, 0,2 mol/L) e 4 (A, 80 g/L), com resolução algébrica textual. Limites: Prática de molaridade e concentração em m"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 656,
+        "title": "Distribuição eletrônica — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-distribuicao-eletronica.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2507,
+        "label": "Estrutura atômica, classificação periódica e ligação química"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 9, configuração terminada em 3d²; resolução totaliza 22 elétrons. Limites: Prática de configuração eletrônica; não cob"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 657,
+        "title": "Organização da tabela periódica — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-organizacao-tabela-periodica.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2507,
+        "label": "Estrutura atômica, classificação periódica e ligação química"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 4 (C), halogênio do quarto período, deduzido da configuração eletrônica. Limites: Prática de grupo e período; não cobr"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 658,
+        "title": "Emissões alfa, beta e gama — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-as-emissoes-alfa-beta-gama.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2507,
+        "label": "Estrutura atômica, classificação periódica e ligação química"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 2: Rn-222 → Pb-206 requer 4 emissões alfa e 4 beta; resolução textual por conservação de A e Z. Limites: Prática de eq"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 516,
+        "title": "Pilhas e células eletroquímicas — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-ou-celulas-eletroquimicas.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2510,
+        "label": "Eletroquímica e compostos orgânicos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 8 (B, eletrodo de cobre), identificação do cátodo a partir da reação global. Limites: Usar somente a questão 8. As dem"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 531,
+        "title": "Análise de gráficos — vídeo Khan Academy",
+        "url": "https://pt.khanacademy.org/math/pt-9-ano/probabilidade-e-estistica-9ano/graficos-e-tabelas-9ano/v/analise-de-graficos",
+        "provider": "Khan Academy",
+        "kind": "video",
+        "availability_mode": "learning"
+      },
+      "topic": {
+        "curriculum_topic_id": 2511,
+        "label": "Interpretação e elaboração de tabelas e gráficos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Vídeo em português sobre escalas, legendas e leitura de gráficos; transcrição disponível. Introdução; não cobre elaboração"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 628,
+        "title": "Pilhas e baterias — prática, questão 1",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2510,
+        "label": "Eletroquímica e compostos orgânicos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Relação editorial suplementar; escopo limitado: Prática parcial de eletroquímica: questão 1, sobre oxidação da prata e cálculo de potencial, conferida. Usar apenas a ques"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 638,
+        "title": "Leitura de gráficos — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/amp/exercicios-matematica/exercicios-sobre-os-graficos.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2511,
+        "label": "Interpretação e elaboração de tabelas e gráficos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "needs_improvement"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Itens aprovados para link externo: Usar Q1 D, Q2 B e Q3 A; excluir Q4 porque o comentário apresenta totais incompatíveis. Limites: Q1–Q3 dependem de gráficos/imagens sem "
+      },
+      "decision": "Manter como link suplementar com a restrição descrita na nota; não declarar o recurso inteiro acessível nem alterar o status.",
+      "blocker": "A auditoria indica uma barreira específica ou conteúdo visual sem alternativa textual suficiente; exige alternativa textual ou troca do recurso.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 651,
+        "title": "Tabela de frequências relativas — prática selecionada",
+        "url": "https://pt.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/stats-two-way-tables/e/reading-two-way-relative-frequency-tables",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2511,
+        "label": "Interpretação e elaboração de tabelas e gráficos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Um item sobre tabela de professores: resposta B, 11/15, calculada a partir dos dados e alternativas exibidos. Limites: Prática"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 659,
+        "title": "Funções nitrogenadas — prática textual selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-sobre-funcoes-nitrogenadas-questoes-resolvidas/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2510,
+        "label": "Eletroquímica e compostos orgânicos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 5 (B, amida): a fórmula textual CH₃—CONH₂ identifica o grupo carboxamida. Limites: Prática de identificação de amida; "
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    },
+    {
+      "resource": {
+        "id": 660,
+        "title": "Polímeros — prática textual selecionada",
+        "url": "https://exercicios.mundoeducacao.uol.com.br/exercicios-quimica/exercicios-sobre-polimeros.htm",
+        "provider": "Mundo Educação",
+        "kind": "exercise",
+        "availability_mode": "practice"
+      },
+      "topic": {
+        "curriculum_topic_id": 2510,
+        "label": "Eletroquímica e compostos orgânicos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published",
+        "relevance": "relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "audit_date": "2026-10-10",
+        "audit_record": "content/editorial/unicamp-2027/resource-audit-2026-10-10-2490-2511.json",
+        "database_review_note": "Consultado em 2026-10-10. Itens conferidos: Questão 2 (B), identifica propeno como monômero do polipropileno; comentário textual. Limites: Prática de relação monômero–pol"
+      },
+      "decision": "Manter link/relação publicados; tratar acessibilidade como não avaliada. Não exibir selo de acessibilidade até teste funcional nos itens indicados.",
+      "blocker": "A revisão existente não inclui validação com teclado/leitor de tela. Pertinência e disponibilidade do link já estão aprovadas; só a acessibilidade permanece sem evidência.",
+      "rights": "O link não autoriza cópia/adaptação; manter somente URL e metadados enquanto licença específica não for confirmada."
+    }
+  ],
+  "special_decisions": [
+    {
+      "resource": {
+        "id": 485,
+        "title": "Ângulos e polígonos — geometria",
+        "url": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+        "provider": "Khan Academy"
+      },
+      "topic": {
+        "canonical_topic_id": 2504,
+        "label": "Geometria plana",
+        "curriculum_topic_id": 2480,
+        "mapping": "Resource 485 aponta para tópico legado 2547, que mapeia ao canônico 2504; o tópico de programa 2480 tem relação primary com esse canônico."
+      },
+      "current_state": {
+        "resource": "review",
+        "topic_relation": "review",
+        "relevance": "unknown",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "records": [
+          "content/editorial/unicamp-2027/resource-browser-followup-2468-2489-2026-10-10.json",
+          "tools/editorial/review-closure/khan-geometry-resource-485-review.json"
+        ],
+        "observed_on": "2026-10-10",
+        "detail": "Inspeção visual do URL exato mostrou ‘Página não encontrada’/‘A página que você está tentando carregar não existe’; auditoria anterior já decidiu needs_replacement."
+      },
+      "decision": "Não recomendar nem contar como aprendizagem. Manter em review e substituir apenas após validar URL ativa e aderência a geometria plana. Não repetir a checagem do endereço quebrado: a evidência visual é do dia.",
+      "blocker": "Destino inexistente; não existe substituta individualmente verificada no registro."
+    },
+    {
+      "resource": {
+        "id": 636,
+        "title": "Biodiversidade — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm"
+      },
+      "topic": {
+        "curriculum_topic_id": 2500,
+        "label": "Biodiversidade e saúde humana"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published/relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "record": "tools/editorial/review-closure/resource-audit-biodiversity-electrochemistry-2026-10-10.json",
+        "verified": "Questões 2–5 e gabaritos D/A/C/D; biodiversidade, espécies invasoras, corredores ecológicos e desertificação.",
+        "audit_limit": "Parecer declara escopo ecológico, não prática direta de biodiversidade–saúde humana; teste assistivo formal não realizado."
+      },
+      "decision": "Manter como prática suplementar de biodiversidade/ecologia; não contar como exercício que fecha o tópico composto.",
+      "blocker": "Nenhum item selecionado aborda diretamente os dois componentes do tópico em conjunto; acessibilidade não testada."
+    },
+    {
+      "resource": {
+        "id": 637,
+        "title": "Poluição e saúde ambiental — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm"
+      },
+      "topic": {
+        "curriculum_topic_id": 2500,
+        "label": "Biodiversidade e saúde humana"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published/relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "record": "tools/editorial/review-closure/resource-audit-biodiversity-electrochemistry-2026-10-10.json",
+        "verified": "Questão 9 e gabarito D; contexto de poluição/conservação e ambiente de saúde.",
+        "audit_limit": "O parecer classifica como um item de contexto, insuficiente para prática do tópico composto; teste assistivo não realizado."
+      },
+      "decision": "Manter como complemento de saúde ambiental, sem declarar que resolve a lacuna de prática.",
+      "blocker": "Só há item contextual; falta prática que associe biodiversidade e saúde humana diretamente."
+    },
+    {
+      "resource": {
+        "id": 638,
+        "title": "Leitura de gráficos — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/amp/exercicios-matematica/exercicios-sobre-os-graficos.htm"
+      },
+      "topic": {
+        "curriculum_topic_id": 2511,
+        "label": "Interpretação e elaboração de tabelas e gráficos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published/relevant",
+        "accessibility": "needs_improvement"
+      },
+      "evidence": {
+        "record": "tools/editorial/review-closure/applied-verified-practice-batch-2026-10-10.json",
+        "verified": "Q1–Q3 e respostas D/B/A conferidas; Q4 excluída por incompatibilidade aritmética entre totais e justificativa.",
+        "limitation": "Q1–Q3 dependem de gráfico/imagem sem descrição textual suficiente."
+      },
+      "decision": "Não apresentar como exercício acessível. Pode permanecer como link visual suplementar, com aviso; não promover status.",
+      "blocker": "Dados essenciais nos gráficos sem equivalente textual completo."
+    },
+    {
+      "resource": {
+        "id": 651,
+        "title": "Tabela de frequências relativas — prática selecionada",
+        "url": "https://pt.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/stats-two-way-tables/e/reading-two-way-relative-frequency-tables"
+      },
+      "topic": {
+        "curriculum_topic_id": 2511,
+        "label": "Interpretação e elaboração de tabelas e gráficos"
+      },
+      "current_state": {
+        "resource": "published",
+        "topic_relation": "published/relevant",
+        "accessibility": "unknown"
+      },
+      "evidence": {
+        "record": "content/editorial/unicamp-2027/audited-practice-links-2026-10-10.json",
+        "verified": "Um item de tabela textual; resposta B (11/15) reconstituída dos dados/alternativas.",
+        "limitation": "Solução comentada não visível; curso pode exceder o nível."
+      },
+      "decision": "Manter como candidato de prática tabular, mas não chamar de acessível validado nem usar para cobrir exercícios de gráficos.",
+      "blocker": "Teste de teclado/leitor de tela não realizado e o formato é tabela, não gráfico."
+    }
+  ],
+  "remaining_gaps": [
+    {
+      "topic": {
+        "curriculum_topic_id": 2500,
+        "label": "Biodiversidade e saúde humana"
+      },
+      "decision": "Não marcar prática coberta integralmente por 636/637; manter os dois links como complementos com escopo explícito.",
+      "next_evidence_needed": "Questão acessível e diretamente sobre a relação biodiversidade–saúde humana, com enunciado/alternativas e resposta conferidos."
+    },
+    {
+      "topic": {
+        "curriculum_topic_id": 2511,
+        "label": "Interpretação e elaboração de tabelas e gráficos"
+      },
+      "decision": "638 é visual sem alternativa textual suficiente; 651 é prática tabular textual e não fecha prática de gráficos. Nenhum dos dois deve receber selo de acessibilidade.",
+      "next_evidence_needed": "Exercício de gráfico com descrição equivalente dos dados essenciais ou alternativa tabular/textual, além de teste de navegação por teclado/leitor de tela."
+    }
+  ],
+  "resolution": "O relatório não promove recursos: os links já publicados permanecem publicados, mas limites de acessibilidade e cobertura continuam visíveis. Resource 485 continua bloqueado. As lacunas de prática direta biodiversidade–saúde humana e de gráficos acessíveis continuam abertas."
+}

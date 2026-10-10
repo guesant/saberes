@@ -1,0 +1,1234 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T10:19:32.461763+00:00",
+  "database_before_sha256": "bd80adc7385275221e210d531dcfc69154b3d9f3f7c9414526b7ee363fef20d7",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 640
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 640,
+        "title": "Grécia Antiga — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-a-grecia-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-a-grecia-antiga.htm",
+          "detail": "Questões 1 e 2, gabaritos B e A; explicações conferidas para Guerra do Peloponeso e ostracismo ateniense."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 629
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 629,
+        "title": "Grécia Antiga — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-a-grecia-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q1–Q2: gabaritos B e A; Guerra do Peloponeso e ostracismo ateniense.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 640,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1–Q2: gabaritos B e A; Guerra do Peloponeso e ostracismo ateniense. Recorte da Grécia clássica; não cobre Roma nem o período medieval. Acesso gratuito observado em 10/10/2026; Itens textuais nesta seleção; teclado/leitor de tela não auditados. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2490; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-a-grecia-antiga.htm",
+          "detail": "Questões 1 e 2, gabaritos B e A; explicações conferidas para Guerra do Peloponeso e ostracismo ateniense."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 8: Grécia e Roma e sociedades medievais; crises do feudalismo."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 629,
+        "topic_id": null,
+        "curriculum_topic_id": 2490
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 629,
+        "topic_id": null,
+        "curriculum_topic_id": 2490,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q1–Q2: gabaritos B e A; Guerra do Peloponeso e ostracismo ateniense. Limites: Recorte da Grécia clássica; não cobre Roma nem o período medieval. Acessibilidade: Itens textuais nesta seleção; teclado/leitor de tela não auditados."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-a-grecia-antiga.htm",
+          "detail": "Questões 1 e 2, gabaritos B e A; explicações conferidas para Guerra do Peloponeso e ostracismo ateniense."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 8."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 629,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 629,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 641
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 641,
+        "title": "Roma Antiga — prática selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-roma-antiga/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Toda Matéria",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://www.todamateria.com.br/exercicios-roma-antiga/",
+          "detail": "Q1 apresenta sequência histórica correta no texto de resposta; Q2 resposta D e explicação coerente sobre a condição social dos plebeus."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 630
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 630,
+        "title": "Roma Antiga — prática selecionada",
+        "url": "https://www.todamateria.com.br/exercicios-roma-antiga/",
+        "provider": "Toda Matéria",
+        "kind": "exercise",
+        "description": "Usar Q1–Q2: sequência Monarquia → República → Império; Q2 resposta D, com explicação sobre plebeus.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 641,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1–Q2: sequência Monarquia → República → Império; Q2 resposta D, com explicação sobre plebeus. Recorte de Roma antiga; não cobre Grécia nem sociedades medievais. A sequência de Q1 é conferida pelo texto explicativo, sem letra de alternativa explicitada na inspeção. Acesso gratuito observado em 10/10/2026; Itens textuais nesta seleção; teclado/leitor de tela não auditados. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2490; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://www.todamateria.com.br/exercicios-roma-antiga/",
+          "detail": "Q1 apresenta sequência histórica correta no texto de resposta; Q2 resposta D e explicação coerente sobre a condição social dos plebeus."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 8: Grécia e Roma e sociedades medievais; crises do feudalismo."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 630,
+        "topic_id": null,
+        "curriculum_topic_id": 2490
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 630,
+        "topic_id": null,
+        "curriculum_topic_id": 2490,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q1–Q2: sequência Monarquia → República → Império; Q2 resposta D, com explicação sobre plebeus. Limites: Recorte de Roma antiga; não cobre Grécia nem sociedades medievais. A sequência de Q1 é conferida pelo texto explicativo, sem letra de alternativa explicitada na inspeção. Acessibilidade: Itens textuais nesta seleção; teclado/leitor de tela não auditados."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://www.todamateria.com.br/exercicios-roma-antiga/",
+          "detail": "Q1 apresenta sequência histórica correta no texto de resposta; Q2 resposta D e explicação coerente sobre a condição social dos plebeus."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 8."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 630,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 630,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 642
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 642,
+        "title": "Educação na Idade Média — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-educacao-na-idade-media.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-educacao-na-idade-media.htm",
+          "detail": "Q1 D relaciona crescimento urbano/comercial e universidades; Q2 B trata de universidades e arquitetura gótica."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 631
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 631,
+        "title": "Educação na Idade Média — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-educacao-na-idade-media.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q1–Q2: gabaritos D e B, sobre urbanização/comércio/universidades e cultura medieval.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 642,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1–Q2: gabaritos D e B, sobre urbanização/comércio/universidades e cultura medieval. Recorte da história da educação e cultura medieval; não cobre toda a sociedade medieval. Acesso gratuito observado em 10/10/2026; Itens textuais nesta seleção; teclado/leitor de tela não auditados. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2490; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-educacao-na-idade-media.htm",
+          "detail": "Q1 D relaciona crescimento urbano/comercial e universidades; Q2 B trata de universidades e arquitetura gótica."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 8: Grécia e Roma e sociedades medievais; crises do feudalismo."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 631,
+        "topic_id": null,
+        "curriculum_topic_id": 2490
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 631,
+        "topic_id": null,
+        "curriculum_topic_id": 2490,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q1–Q2: gabaritos D e B, sobre urbanização/comércio/universidades e cultura medieval. Limites: Recorte da história da educação e cultura medieval; não cobre toda a sociedade medieval. Acessibilidade: Itens textuais nesta seleção; teclado/leitor de tela não auditados."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-educacao-na-idade-media.htm",
+          "detail": "Q1 D relaciona crescimento urbano/comercial e universidades; Q2 B trata de universidades e arquitetura gótica."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 8."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 631,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 631,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 643
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 643,
+        "title": "Formação dos Estados Nacionais Modernos — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-formacao-dos-estados-nacionais-modernos.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-formacao-dos-estados-nacionais-modernos.htm",
+          "detail": "Q1 D e Q2 A; justificativas sobre absolutismo e mercantilismo conferidas."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 632
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 632,
+        "title": "Formação dos Estados Nacionais Modernos — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-formacao-dos-estados-nacionais-modernos.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q1–Q2: gabaritos D e A, com justificativas sobre absolutismo e mercantilismo.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 643,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1–Q2: gabaritos D e A, com justificativas sobre absolutismo e mercantilismo. Prática parcial de formação política/econômica moderna; não cobre Renascimento, Reforma e expansão marítima em conjunto. Acesso gratuito observado em 10/10/2026; Itens textuais nesta seleção; teclado/leitor de tela não auditados. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2491; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-formacao-dos-estados-nacionais-modernos.htm",
+          "detail": "Q1 D e Q2 A; justificativas sobre absolutismo e mercantilismo conferidas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2491/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 8: Renascimento, Reformas, Estado Moderno, expansão marítima e colonização das Américas; indígenas, africanos e resistências."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 632,
+        "topic_id": null,
+        "curriculum_topic_id": 2491
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 632,
+        "topic_id": null,
+        "curriculum_topic_id": 2491,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q1–Q2: gabaritos D e A, com justificativas sobre absolutismo e mercantilismo. Limites: Prática parcial de formação política/econômica moderna; não cobre Renascimento, Reforma e expansão marítima em conjunto. Acessibilidade: Itens textuais nesta seleção; teclado/leitor de tela não auditados."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-formacao-dos-estados-nacionais-modernos.htm",
+          "detail": "Q1 D e Q2 A; justificativas sobre absolutismo e mercantilismo conferidas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2491/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 8."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 632,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 632,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2491/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 644
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 644,
+        "title": "Renascimento Científico — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-renascimento-cientifico.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-renascimento-cientifico.htm",
+          "detail": "Q1 A aborda Revolução Científica; Q4 E discute ciência moderna. Q2 foi excluída por problema de formulação."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 633
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 633,
+        "title": "Renascimento Científico — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-renascimento-cientifico.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q1 e Q4: gabaritos A e E, com justificativas conferidas.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 644,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1 e Q4: gabaritos A e E, com justificativas conferidas. Excluir Q2: a formulação mistura referências ao século XVIII e ao Renascimento. Prática selecionada não cobre todos os aspectos da Idade Moderna. Acesso gratuito observado em 10/10/2026; Itens selecionados sem dependência de figura observada; teclado/leitor de tela não auditados. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2491; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-renascimento-cientifico.htm",
+          "detail": "Q1 A aborda Revolução Científica; Q4 E discute ciência moderna. Q2 foi excluída por problema de formulação."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2491/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 8: Renascimento, Reformas, Estado Moderno, expansão marítima e colonização das Américas; indígenas, africanos e resistências."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 633,
+        "topic_id": null,
+        "curriculum_topic_id": 2491
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 633,
+        "topic_id": null,
+        "curriculum_topic_id": 2491,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q1 e Q4: gabaritos A e E, com justificativas conferidas. Limites: Excluir Q2: a formulação mistura referências ao século XVIII e ao Renascimento. Prática selecionada não cobre todos os aspectos da Idade Moderna. Acessibilidade: Itens selecionados sem dependência de figura observada; teclado/leitor de tela não auditados."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-renascimento-cientifico.htm",
+          "detail": "Q1 A aborda Revolução Científica; Q4 E discute ciência moderna. Q2 foi excluída por problema de formulação."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2491/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 8."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 633,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 633,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2491/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 634
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 634,
+        "title": "Patrimônio, cultura e diversidade — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q1 D, Q3 B, Q4 E, Q9 C e Q15 B; itens textuais sobre imaginário social, ruralidades, indústria cultural, etnocentrismo e diversidade.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 611,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1 D, Q3 B, Q4 E, Q9 C e Q15 B; itens textuais sobre imaginário social, ruralidades, indústria cultural, etnocentrismo e diversidade. Itens selecionados apenas; outros itens visuais/jurídicos da lista não são recomendados neste registro. Acesso gratuito observado em 10/10/2026; Questões listadas são textuais; acessibilidade assistiva não auditada. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2493; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm",
+          "detail": "Enunciados e gabaritos publicados foram conferidos individualmente para Q1, Q3, Q4, Q9 e Q15."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2493/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 9: Indivíduo, grupos, socialização, cultura e poder, trabalho, natureza/cultura, desigualdade, direitos, conflitos e violência."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 634,
+        "topic_id": null,
+        "curriculum_topic_id": 2493
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 634,
+        "topic_id": null,
+        "curriculum_topic_id": 2493,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q1 D, Q3 B, Q4 E, Q9 C e Q15 B; itens textuais sobre imaginário social, ruralidades, indústria cultural, etnocentrismo e diversidade. Limites: Itens selecionados apenas; outros itens visuais/jurídicos da lista não são recomendados neste registro. Acessibilidade: Questões listadas são textuais; acessibilidade assistiva não auditada."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-patrimonio-e-diversidade-no-brasil.htm",
+          "detail": "Enunciados e gabaritos publicados foram conferidos individualmente para Q1, Q3, Q4, Q9 e Q15."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2493/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 9."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 634,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 634,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2493/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 645
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 645,
+        "title": "Trabalho, sociedade e tecnologia — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-trabalho-sociedade-e-tecnologia.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-trabalho-sociedade-e-tecnologia.htm",
+          "detail": "Enunciados e gabaritos Q3, Q4, Q5, Q9, Q11 e Q12 conferidos; questões problemáticas foram excluídas."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 635
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 635,
+        "title": "Trabalho, sociedade e tecnologia — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-trabalho-sociedade-e-tecnologia.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q3 C, Q4 D, Q5 D, Q9 D, Q11 A e Q12 C; os itens 11–12 abordam dimensões simbólicas e consumo.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 645,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q3 C, Q4 D, Q5 D, Q9 D, Q11 A e Q12 C; os itens 11–12 abordam dimensões simbólicas e consumo. Prática complementar parcial; excluir questões ilustradas e a questão de tecnologia cuja explicação não corresponde à alternativa. Acesso gratuito observado em 10/10/2026; Itens selecionados textuais conforme auditoria; leitor de tela/teclado não testados. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2493; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-trabalho-sociedade-e-tecnologia.htm",
+          "detail": "Enunciados e gabaritos Q3, Q4, Q5, Q9, Q11 e Q12 conferidos; questões problemáticas foram excluídas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2493/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 9: Indivíduo, grupos, socialização, cultura e poder, trabalho, natureza/cultura, desigualdade, direitos, conflitos e violência."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 635,
+        "topic_id": null,
+        "curriculum_topic_id": 2493
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 635,
+        "topic_id": null,
+        "curriculum_topic_id": 2493,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q3 C, Q4 D, Q5 D, Q9 D, Q11 A e Q12 C; os itens 11–12 abordam dimensões simbólicas e consumo. Limites: Prática complementar parcial; excluir questões ilustradas e a questão de tecnologia cuja explicação não corresponde à alternativa. Acessibilidade: Itens selecionados textuais conforme auditoria; leitor de tela/teclado não testados."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/enem-lista-de-exercicios-sobre-trabalho-sociedade-e-tecnologia.htm",
+          "detail": "Enunciados e gabaritos Q3, Q4, Q5, Q9, Q11 e Q12 conferidos; questões problemáticas foram excluídas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2493/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 9."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 635,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 635,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2493/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 646
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 646,
+        "title": "Biodiversidade — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm",
+          "detail": "Gabaritos e justificativas Q2–Q5 conferidos individualmente; itens visuais não foram incluídos."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 636
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 636,
+        "title": "Biodiversidade — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q2 D, Q3 A, Q4 C e Q5 D; itens textuais sobre poluição, biodiversidade e impactos nos ecossistemas.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 646,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q2 D, Q3 A, Q4 C e Q5 D; itens textuais sobre poluição, biodiversidade e impactos nos ecossistemas. Itens com imagens foram excluídos. Complementa biodiversidade, mas não substitui prática específica sobre relações entre biodiversidade e saúde humana. Acesso gratuito observado em 10/10/2026; Seleção textual; acessibilidade assistiva não auditada. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2500; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm",
+          "detail": "Gabaritos e justificativas Q2–Q5 conferidos individualmente; itens visuais não foram incluídos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 12: Classificação e grupos de seres vivos; sistemas humanos, reprodução, saúde pública e doenças infecciosas."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 636,
+        "topic_id": null,
+        "curriculum_topic_id": 2500
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 636,
+        "topic_id": null,
+        "curriculum_topic_id": 2500,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q2 D, Q3 A, Q4 C e Q5 D; itens textuais sobre poluição, biodiversidade e impactos nos ecossistemas. Limites: Itens com imagens foram excluídos. Complementa biodiversidade, mas não substitui prática específica sobre relações entre biodiversidade e saúde humana. Acessibilidade: Seleção textual; acessibilidade assistiva não auditada."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm",
+          "detail": "Gabaritos e justificativas Q2–Q5 conferidos individualmente; itens visuais não foram incluídos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 12."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 636,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 636,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 647
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 647,
+        "title": "Poluição e saúde ambiental — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm",
+          "detail": "Q9 D e justificativa publicada conferidas."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 637
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 637,
+        "title": "Poluição e saúde ambiental — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q9 D: tecnologias limpas, controle de emissões e educação ambiental.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 647,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q9 D: tecnologias limpas, controle de emissões e educação ambiental. Uma questão de saúde ambiental; não cobre sozinha relações específicas entre biodiversidade e saúde humana. Acesso gratuito observado em 10/10/2026; Item selecionado textual; acessibilidade assistiva não auditada. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2500; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm",
+          "detail": "Q9 D e justificativa publicada conferidas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 12: Classificação e grupos de seres vivos; sistemas humanos, reprodução, saúde pública e doenças infecciosas."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 637,
+        "topic_id": null,
+        "curriculum_topic_id": 2500
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 637,
+        "topic_id": null,
+        "curriculum_topic_id": 2500,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q9 D: tecnologias limpas, controle de emissões e educação ambiental. Limites: Uma questão de saúde ambiental; não cobre sozinha relações específicas entre biodiversidade e saúde humana. Acessibilidade: Item selecionado textual; acessibilidade assistiva não auditada."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm",
+          "detail": "Q9 D e justificativa publicada conferidas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 12."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 637,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 637,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 512
+      },
+      "expected": {
+        "title": "Exercícios sobre os estados físicos da matéria",
+        "kind": "exercise",
+        "source_document_id": 602,
+        "editorial_status": "published",
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "description": "Usar Q1 B, Q2 E e Q6–Q11: E, A, C, B, C e D. Excluir Q4 (justificativa contraditória), Q5 (não verificável) e Q12 (justificativa imprecisa).",
+        "source_document_id": 602,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1 B, Q2 E e Q6–Q11: E, A, C, B, C e D. Excluir Q4 (justificativa contraditória), Q5 (não verificável) e Q12 (justificativa imprecisa). Somente os itens listados foram revisados; complemento de estados físicos, não cobertura integral de gases, líquidos e sólidos. Acesso gratuito observado em 10/10/2026; Itens textuais selecionados; acessibilidade assistiva não auditada. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2506; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-os-estados-fisicos-materia.htm",
+          "detail": "Gabaritos e justificativas de Q1, Q2 e Q6–Q11 conferidos; Q4, Q5 e Q12 excluídas por problemas documentados."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2506/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 14: Propriedades, estados, gases, soluções, concentração e coloides."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 512,
+        "topic_id": null,
+        "curriculum_topic_id": 2506
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 512,
+        "topic_id": null,
+        "curriculum_topic_id": 2506,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Itens aprovados para link externo: Usar Q1 B, Q2 E e Q6–Q11: E, A, C, B, C e D. Excluir Q4 (justificativa contraditória), Q5 (não verificável) e Q12 (justificativa imprecisa). Limites: Somente os itens listados foram revisados; complemento de estados físicos, não cobertura integral de gases, líquidos e sólidos. Acessibilidade: Itens textuais selecionados; acessibilidade assistiva não auditada."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-os-estados-fisicos-materia.htm",
+          "detail": "Gabaritos e justificativas de Q1, Q2 e Q6–Q11 conferidos; Q4, Q5 e Q12 excluídas por problemas documentados."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2506/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 14."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 648
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 648,
+        "title": "Leitura de gráficos — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/amp/exercicios-matematica/exercicios-sobre-os-graficos.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito para estudo observado em 10/10/2026; licença de cópia/adaptação não confirmada. Link e metadados apenas; não reproduzir questões, imagens ou respostas."
+      },
+      "reason": "Registrar origem e condição link-only; não inferir permissão de reutilização.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/amp/exercicios-matematica/exercicios-sobre-os-graficos.htm",
+          "detail": "Q1–Q3 e respectivos gabaritos conferidos; Q4 excluída por inconsistência aritmética entre enunciado e justificativa."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 638
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 638,
+        "title": "Leitura de gráficos — prática selecionada",
+        "url": "https://exercicios.brasilescola.uol.com.br/amp/exercicios-matematica/exercicios-sobre-os-graficos.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Usar Q1 D, Q2 B e Q3 A; excluir Q4 porque o comentário apresenta totais incompatíveis.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 648,
+        "editorial_status": "published",
+        "editorial_note": "Usar Q1 D, Q2 B e Q3 A; excluir Q4 porque o comentário apresenta totais incompatíveis. Q1–Q3 dependem de gráficos/imagens sem descrição textual suficiente; exercício visualmente utilizável, mas não acessível a todos. Acessibilidade alternativa permanece pendente. Acesso gratuito observado em 10/10/2026; needs_improvement: informação essencial está em gráficos sem descrição textual completa. Direitos de cópia/adaptação não confirmados: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Disponibilizar somente itens identificados e conferidos como prática suplementar para o tópico anual 2511; a seleção não atesta o restante da lista.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/amp/exercicios-matematica/exercicios-sobre-os-graficos.htm",
+          "detail": "Q1–Q3 e respectivos gabaritos conferidos; Q4 excluída por inconsistência aritmética entre enunciado e justificativa."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2511/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase; documento 148, página 5: Exige-se do candidato que saiba resolver problemas matemáticos relacionados ao cotidiano, bem como interpretar e elaborar tabelas e gráficos."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 638,
+        "topic_id": null,
+        "curriculum_topic_id": 2511
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 638,
+        "topic_id": null,
+        "curriculum_topic_id": 2511,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Itens aprovados para link externo: Usar Q1 D, Q2 B e Q3 A; excluir Q4 porque o comentário apresenta totais incompatíveis. Limites: Q1–Q3 dependem de gráficos/imagens sem descrição textual suficiente; exercício visualmente utilizável, mas não acessível a todos. Acessibilidade alternativa permanece pendente. Acessibilidade: needs_improvement: informação essencial está em gráficos sem descrição textual completa."
+      },
+      "reason": "Vínculo editorial por conteúdo e itens explicitamente conferidos; não é tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/amp/exercicios-matematica/exercicios-sobre-os-graficos.htm",
+          "detail": "Q1–Q3 e respectivos gabaritos conferidos; Q4 excluída por inconsistência aritmética entre enunciado e justificativa."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2511/11",
+          "detail": "Programa oficial da fase-alvo; fonte 148, página 5."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "resource_targets",
+      "key": {
+        "resource_id": 638,
+        "stage_id": 11
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 638,
+        "stage_id": 11
+      },
+      "reason": "Limitar a disponibilidade do recurso à fase-alvo desta trilha.",
+      "evidence": [
+        {
+          "locator": "sqlite://curriculum_topic_stages/2511/11",
+          "detail": "Tópico pertence ao programa oficial da primeira fase Unicamp 2027."
+        }
+      ],
+      "action": "insert"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T101932472324Z.sqlite",
+  "database_after_sha256": "d302420b0961201fab2d852b3a7e66e10aec7df2b30cc50a0f636df801cf38c4"
+}

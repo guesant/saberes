@@ -1,0 +1,79 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T19:54:12.266822+00:00",
+  "database_before_sha256": "7e44370993bb25084d46f369e5599ca7321d26cb373b24a2b5e5e0106e92c460",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 550
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://betterexplained.com/",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Referência de descoberta conferida em 09/10/2026: página do BetterExplained com índice de artigos matemáticos e links de acesso. Não é aula revisada nem cobertura de tópico. Artigos específicos, incluindo os com ressalvas documentadas, exigem decisão própria. Somente link e metadados; nenhuma licença de reprodução foi presumida."
+      },
+      "reason": "A ficha é um hub de referência, não recurso de aprendizagem aprovado integralmente. Identidade, URL e função de descoberta foram verificadas no conteúdo da página.",
+      "evidence": [
+        {
+          "locator": "https://betterexplained.com/",
+          "detail": "Página principal lida em 09/10/2026: índice de álgebra, geometria e trigonometria com links nomeados; ficha continua com availability_mode reference."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 554
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://ncase.me/",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Referência de descoberta conferida em 09/10/2026: página da autoria Nicky Case com lista de projetos, leituras e vídeos. Não é trilha da Unicamp nem aprovação pedagógica de todos os projetos. Links para obras devem ser avaliados separadamente, incluindo componentes de terceiros e direitos próprios. Nenhum conteúdo foi copiado."
+      },
+      "reason": "Identidade e função de catálogo de projetos educativos verificadas na página da autoria. A aprovação fica restrita à ficha de referência.",
+      "evidence": [
+        {
+          "locator": "https://ncase.me/",
+          "detail": "Página principal lida em 09/10/2026: projetos interativos e lista de conteúdos de leitura/vídeo com links nomeados; associação automática a tópicos não foi criada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 559
+      },
+      "expected": {
+        "editorial_status": "review",
+        "url": "https://ourworldindata.org/",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Referência de descoberta conferida em 09/10/2026: página do Our World in Data com artigos, gráficos e tópicos. A ficha não substitui a seleção e revisão de um artigo específico para o programa. Direitos de dados e componentes de terceiros exigem verificação individual; somente links/metadados foram usados."
+      },
+      "reason": "O hub é utilizável para descobrir artigos e dados; conteúdo da página confirma a identidade e o tipo cadastrado, sem endosso integral ou aprovação automática de recursos.",
+      "evidence": [
+        {
+          "locator": "https://ourworldindata.org/",
+          "detail": "Página principal acessada e lida em 09/10/2026: navegação por assuntos, artigos e gráficos; mantido availability_mode reference."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T195412276629Z.sqlite",
+  "database_after_sha256": "e28af81ea6cb5cb3eaed91fd03e897784dd3b4898111ef2535674b7e47659f25"
+}

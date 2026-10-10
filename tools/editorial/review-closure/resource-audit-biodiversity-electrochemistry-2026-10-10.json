@@ -1,0 +1,43 @@
+{
+  "format": "topic-resource-audit/v1",
+  "reviewed_at": "2026-10-10",
+  "scope": [
+    {"curriculum_topic_id": 2500, "label": "Biodiversidade e saúde humana"},
+    {"curriculum_topic_id": 2510, "label": "Eletroquímica e compostos orgânicos"}
+  ],
+  "audit": [
+    {
+      "resource_id": 618,
+      "url": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+      "decision": "learning_intro_relevant_with_scope_limit",
+      "verified": ["public/free access observed", "unit includes biomes, biodiversity, human/environmental health", "text and selected lesson transcripts inspected"],
+      "not_verified": ["full unit accessibility with screen reader", "all lesson transcripts", "answer key for the unit test"],
+      "limits": "Introductory only; not a complete treatment of the full vestibular scope. Link and metadata only; no reproduction rights inferred."
+    },
+    {
+      "resource_id": 636,
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biodiversidade.htm",
+      "decision": "practice_relevant_for_biodiversity_ecology",
+      "verified": ["public/free access observed", "items 2-5 text and keyed answers checked: 2-D, 3-A, 4-C, 5-D", "selected items concern biodiversity, invasive species, ecological corridors and desertification"],
+      "not_verified": ["formal assistive-technology testing", "complete coverage of biodiversity-health relations"],
+      "limits": "Selected text-only items; ecological scope, not direct health practice. Link and metadata only."
+    },
+    {
+      "resource_id": 637,
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-poluicao.htm",
+      "decision": "supplementary_health_environment_context_only",
+      "verified": ["public/free access observed", "selected item 9 text and answer D checked"],
+      "not_verified": ["formal assistive-technology testing"],
+      "limits": "One item on pollution, conservation and health environment; not sufficient as direct practice for the combined topic. Link and metadata only."
+    },
+    {
+      "resource_id": 628,
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+      "decision": "practice_relevant_for_electrochemistry_question_1_only",
+      "verified": ["public/free access observed", "question 1 data and answer B checked", "AgCl/Ag +0.20 V and Cu2+/Cu +0.34 V; Ag is oxidized, electrons flow Ag to Cu, Ecell=+0.14 V"],
+      "not_verified": ["remaining questions in the list", "full page accessibility with assistive technology"],
+      "limits": "Direct practice for redox/potential in one item only; does not cover organic chemistry. Link and metadata only."
+    }
+  ],
+  "editorial_conclusion": "The existing links have verified limited use; none alone covers the full scope of either combined topic. Accessibility remains unknown where no assistive-technology test was performed."
+}

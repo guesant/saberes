@@ -15,6 +15,7 @@ export function TopicReadyView(props: TopicReadyViewProps) {
         <TopicHeader
           activeSection={activeSection}
           navigateToSection={navigateToSection}
+          curriculum={props.data.curriculum}
           topic={props.data.topic}
         />
         <TopicSectionPanels

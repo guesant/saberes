@@ -1,0 +1,66 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T10:52:46.045093+00:00",
+  "database_before_sha256": "70bd17fb81478de6d1fe67580c04264d1fb4ba6dec0ad6494d8289bd04a609ae",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 70,
+        "canonical_topic_id": 2513
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 70,
+        "canonical_topic_id": 2513,
+        "relation_type": "secondary",
+        "confidence": 0.88,
+        "source_document_id": 36,
+        "source_page": 22,
+        "source_excerpt": "A questão exige relacionar adaptação e seleção natural a processos que produzem diversidade biológica.",
+        "review_status": "published"
+      },
+      "reason": "Além da classificação já publicada em Genética e evolução, o conhecimento necessário inclui mecanismos que originam e mantêm diversidade biológica; a associação secundária a Biodiversidade é pertinente ao conteúdo efetivamente testado, não apenas ao contexto.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2025/F1/f12025Q_Z.pdf#page=22",
+          "detail": "Caderno Q/Z 2025, página 22, questão 70: o comando e as alternativas exigem interpretar adaptação/seleção e especiação, conceitos de geração da diversidade. Gabarito definitivo Q/Z, página 37, resposta B: https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf#page=37."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 327,
+        "canonical_topic_id": 2513
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 327,
+        "canonical_topic_id": 2513,
+        "relation_type": "secondary",
+        "confidence": 0.9,
+        "source_document_id": 44,
+        "source_page": 16,
+        "source_excerpt": "A questão analisa invasão biológica e redução de populações nativas por predador introduzido.",
+        "review_status": "published"
+      },
+      "reason": "A dinâmica entre espécie introduzida, presas e populações nativas exige compreender perda de biodiversidade; a relação secundária complementa Ecologia e não deve substituir a classificação ecológica.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=16",
+          "detail": "Caderno Q/X 2026, questão 39: invasão por predador exótico, dinâmica presa-predador e redução/extinção de espécies nativas. O vínculo a Biodiversidade é conceitual e específico; não se baseia só em menção incidental."
+        }
+      ],
+      "action": "insert"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T105246055325Z.sqlite",
+  "database_after_sha256": "22565bd28f4de37efa0f176df840541bd02b04ff6fdd1fe4d6331777ab1b9a08"
+}

@@ -2,8 +2,12 @@ import { UIContentGroup } from "@guesant/saberes-ui";
 import { ActionFeedback } from "../../components/action-feedback.component";
 import { QuestionContextDisclosure } from "./question-context-disclosure.component";
 import { QuestionHeader } from "./question-header.component";
+import { QuestionAssets } from "./question-assets.component";
 import { QuestionReadyAnswerForm } from "./question-ready-answer-form.component";
 import { QuestionReadyResult } from "./question-ready-result.component";
+import { QuestionStimuli } from "./question-stimuli.component";
+import { QuestionConsultationNotice } from "./question-consultation-notice.component";
+import { QuestionConsultationDetails } from "./question-consultation-details.component";
 import type { QuestionReadyContentBodyProps } from "./question-ready-content-body-props.interface";
 
 export function QuestionReadyContentBody(props: QuestionReadyContentBodyProps) {
@@ -12,6 +16,11 @@ export function QuestionReadyContentBody(props: QuestionReadyContentBodyProps) {
   return (
     <UIContentGroup variant="section">
       <QuestionHeader data={content.data} />
+      <QuestionConsultationNotice eligible={content.data.question.training_eligible} />
+
+      <QuestionStimuli contexts={content.data.contexts || []} />
+      <QuestionAssets pdfPages={content.data.pdfPages || []} />
+      <QuestionConsultationDetails data={content.data} />
 
       <QuestionContextDisclosure
         bookmarkError={content.bookmarkError}
@@ -29,7 +38,7 @@ export function QuestionReadyContentBody(props: QuestionReadyContentBodyProps) {
         onAnswerChange={content.onAnswerChange}
         onConfidenceChange={content.onConfidenceChange}
         onSubmit={content.onSubmit}
-        readOnly={content.result !== null}
+        readOnly={content.result !== null || content.data.question.training_eligible === false}
         submitting={content.submissionState === "saving"}
       />
 

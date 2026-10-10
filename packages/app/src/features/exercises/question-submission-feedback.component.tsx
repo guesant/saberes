@@ -1,11 +1,12 @@
 import { UIButton, UIContentGroup, UIInlineActions } from "@guesant/saberes-ui";
 import { useTranslation } from "react-i18next";
+import { getQuestionResultAnswerKey } from "./get-question-result-answer-key.function";
 import { QuestionAnswerKey } from "./question-answer-key.component";
-import { QuestionBackToPracticeAction } from "./question-back-to-practice-action.component";
 import { QuestionDiagnosisPanel } from "./question-diagnosis-panel.component";
 import { QuestionExplanation } from "./question-explanation.component";
 import { QuestionResult } from "./question-result.component";
-import { QuestionSessionContinueAction } from "./question-session-continue-action.component";
+import { QuestionSolutions } from "./question-solutions.component";
+import { QuestionSubmissionContinue } from "./question-submission-continue.component";
 import type { QuestionSubmissionResult } from "./question-submission-result.interface";
 import type { DiagnosisCode, QuestionReadModel } from "@guesant/saberes-application";
 
@@ -24,7 +25,7 @@ export function QuestionSubmissionFeedback(props: QuestionSubmissionFeedbackProp
 
   const { t } = useTranslation();
 
-  const answer = result.correct === false ? String(data.question.correct_answer || "") : "";
+  const answer = getQuestionResultAnswerKey(data, result.correct);
 
   const explanation = String(data.question.explanation || "");
 
@@ -33,17 +34,10 @@ export function QuestionSubmissionFeedback(props: QuestionSubmissionFeedbackProp
       <QuestionResult result={result.correct} />
       <QuestionAnswerKey answer={answer} />
       <QuestionExplanation explanation={explanation} />
+      <QuestionSolutions solutions={data.solutions} />
       <QuestionDiagnosisPanel onDiagnose={onDiagnose} result={result.correct} />
       <UIInlineActions stacked>
-        {props.onContinue ? (
-          <QuestionSessionContinueAction
-            label={t("exercise.continueSession")}
-            onContinue={props.onContinue}
-            result={result}
-          />
-        ) : (
-          <QuestionBackToPracticeAction />
-        )}
+        <QuestionSubmissionContinue onContinue={props.onContinue} result={result} />
         <UIButton variant="outlined" onClick={onRetry}>
           {t("exercise.retry")}
         </UIButton>

@@ -27,6 +27,7 @@ export async function startAssessmentSimulationSession(input: StartAssessmentSim
     activityType: "assessment",
     contentKey: input.assessmentKey,
     mode: "simulation",
+    cancelledQuestionPolicy: input.assessment.cancelledQuestionPolicy,
     revision: 0,
     simulationAnswers: [],
     flaggedQuestionKeys: [],

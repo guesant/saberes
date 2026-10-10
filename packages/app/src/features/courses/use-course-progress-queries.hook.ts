@@ -1,4 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
+import { useCourseAssessmentItems } from "./use-course-assessment-items.hook";
+import { useCourseProgressRecords } from "./use-course-progress-records.hook";
 import type { ApplicationServices, Attempt, StudyRecord } from "@guesant/saberes-application";
 
 export type CourseProgressQueries = {
@@ -6,34 +7,26 @@ export type CourseProgressQueries = {
   error: Error | null;
   enrollments: StudyRecord[] | undefined;
   lessonProgress: StudyRecord[] | undefined;
+  assessmentItemsById: Record<string, Array<Record<string, unknown>> | undefined>;
 };
 
-export function useCourseProgressQueries(services: ApplicationServices): CourseProgressQueries {
-  const enrollmentsQuery = useQuery({
-    queryKey: ["progress", "enrollments"],
-    queryFn: () => {
-      return services.progress.listEnrollments.execute();
-    },
-  });
+export function useCourseProgressQueries(
+  services: ApplicationServices,
+  items: Array<Record<string, unknown>>,
+): CourseProgressQueries {
+  const records = useCourseProgressRecords(services);
 
-  const lessonProgressQuery = useQuery({
-    queryKey: ["progress", "lessons"],
-    queryFn: () => {
-      return services.progress.listLessonProgress.execute();
-    },
-  });
+  const assessment = useCourseAssessmentItems(services, items);
 
-  const attemptsQuery = useQuery({
-    queryKey: ["progress", "attempts"],
-    queryFn: () => {
-      return services.progress.listAttempts.execute();
-    },
-  });
+  const error = records.enrollmentsQuery.error ||
+    records.lessonProgressQuery.error ||
+    records.attemptsQuery.error || assessment.error || null;
 
   return {
-    attempts: attemptsQuery.data,
-    error: enrollmentsQuery.error || lessonProgressQuery.error || attemptsQuery.error || null,
-    enrollments: enrollmentsQuery.data,
-    lessonProgress: lessonProgressQuery.data,
+    assessmentItemsById: assessment.assessmentItemsById,
+    attempts: records.attemptsQuery.data,
+    error,
+    enrollments: records.enrollmentsQuery.data,
+    lessonProgress: records.lessonProgressQuery.data,
   };
 }

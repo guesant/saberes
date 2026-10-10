@@ -5,6 +5,7 @@ import { LessonReadyHeader } from "./lesson-ready-header.component";
 import { LessonReadySecondaryContent } from "./lesson-ready-secondary-content.component";
 import { LessonSections } from "./lesson-sections.component";
 import { useLessonResume } from "./use-lesson-resume.hook";
+import { StudyPathNavigation } from "../study-path/study-path-navigation.component";
 import type { ActionState } from "../../types/action-state.type";
 import type { LessonReadModel } from "@guesant/saberes-application";
 
@@ -29,7 +30,10 @@ export type LessonReadyViewProps = {
 export function LessonReadyView(props: LessonReadyViewProps) {
   const { data, completed, bookmarked, onComplete, onBookmark, onQuestion } = props;
 
-  useLessonResume({ sections: data.sections, sectionIndex: props.sectionIndex });
+  useLessonResume({
+    sections: data.sections,
+    sectionIndex: props.sectionIndex,
+  });
 
   return (
     <>
@@ -59,6 +63,7 @@ export function LessonReadyView(props: LessonReadyViewProps) {
       <LessonSections sections={data.sections} onQuestion={onQuestion} />
 
       <LessonReadyFooter practiceHref={getLessonPracticeHref(data.topics)} />
+      <StudyPathNavigation />
     </>
   );
 }

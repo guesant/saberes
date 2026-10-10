@@ -1,0 +1,4648 @@
+{
+  "format": "topic-resource-audit/v1",
+  "reviewed_at": "2026-10-10",
+  "scope": [
+    {
+      "curriculum_topic_id": 2468,
+      "label": "O texto e seu funcionamento"
+    },
+    {
+      "curriculum_topic_id": 2469,
+      "label": "Processos de significação"
+    },
+    {
+      "curriculum_topic_id": 2470,
+      "label": "Funcionamento social da língua"
+    },
+    {
+      "curriculum_topic_id": 2471,
+      "label": "Sintaxe da língua portuguesa"
+    },
+    {
+      "curriculum_topic_id": 2472,
+      "label": "Morfologia da língua portuguesa"
+    },
+    {
+      "curriculum_topic_id": 2473,
+      "label": "Elementos de fonologia da língua portuguesa"
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "label": "Conjuntos numéricos"
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "label": "Funções"
+    },
+    {
+      "curriculum_topic_id": 2477,
+      "label": "Polinômios, equações e inequações"
+    },
+    {
+      "curriculum_topic_id": 2478,
+      "label": "Princípios de contagem e probabilidade"
+    },
+    {
+      "curriculum_topic_id": 2479,
+      "label": "Sistemas lineares e matrizes"
+    },
+    {
+      "curriculum_topic_id": 2480,
+      "label": "Geometria plana"
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "label": "Geometria espacial"
+    },
+    {
+      "curriculum_topic_id": 2482,
+      "label": "Trigonometria"
+    },
+    {
+      "curriculum_topic_id": 2483,
+      "label": "Geometria analítica"
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "label": "Logaritmos e exponenciais"
+    },
+    {
+      "curriculum_topic_id": 2485,
+      "label": "Conceitos fundamentais da Geografia"
+    },
+    {
+      "curriculum_topic_id": 2486,
+      "label": "Linguagem cartográfica e geotecnologias"
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "label": "Componentes físico-naturais do espaço geográfico"
+    },
+    {
+      "curriculum_topic_id": 2488,
+      "label": "Globalização, economia e trabalho"
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "label": "Brasil: dinâmica territorial"
+    }
+  ],
+  "source_manifest": {
+    "path": "tools/editorial/review-closure/target-resource-coverage.json",
+    "format": "target-resource-coverage/v1",
+    "database_sha256": "65b036e26a377891bb4613d73b0c79d80d77ed75a8897d5b65154933e0513e00"
+  },
+  "method": "One record per unique direct URL; anonymous GET followed redirects; status/final URL, page title and static accessibility markup checked. No content copied. SQLite read-only.",
+  "audit": [
+    {
+      "url": "https://www.todamateria.com.br/exercicios-de-interpretacao-de-texto/",
+      "resource_ids": [
+        174
+      ],
+      "title": "Exercícios de interpretação de texto",
+      "topics": [
+        {
+          "id": 2468,
+          "label": "O texto e seu funcionamento"
+        },
+        {
+          "id": 2469,
+          "label": "Processos de significação"
+        },
+        {
+          "id": 2470,
+          "label": "Funcionamento social da língua"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.todamateria.com.br/exercicios-de-interpretacao-de-texto/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios de interpretação de texto (com gabarito) - Toda Matéria",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios de interpretação de texto (com gabarito) - Toda Matéria",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Para a página Toda Matéria de interpretação: recomendação limitada a Q1–9 e Q12, com textos e gabaritos verbais. Q10 (tirinha) e Q11 (cartaz) dep"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-br",
+        "headings": 0,
+        "image_alt": [
+          0,
+          0
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Lingu%C3%ADstica_textual",
+      "resource_ids": [
+        175
+      ],
+      "title": "Linguística textual",
+      "topics": [
+        {
+          "id": 2468,
+          "label": "O texto e seu funcionamento"
+        },
+        {
+          "id": 2469,
+          "label": "Processos de significação"
+        },
+        {
+          "id": 2470,
+          "label": "Funcionamento social da língua"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Lingu%C3%ADstica_textual",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Linguística textual – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Linguística textual"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Linguística textual – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Linguística textual"
+        ],
+        "prior_editorial_note_excerpt": "Relação com O texto e seu funcionamento confirmada pelo objeto declarado no artigo de linguística textual. Apenas referência introdutória; não eq"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 8,
+        "image_alt": [
+          3,
+          7
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Aestrategias-de-leitura/e/lp-o-que-sao-generos-textuais",
+      "resource_ids": [
+        257
+      ],
+      "title": "O que são gêneros textuais? — prática",
+      "topics": [
+        {
+          "id": 2468,
+          "label": "O texto e seu funcionamento"
+        },
+        {
+          "id": 2469,
+          "label": "Processos de significação"
+        },
+        {
+          "id": 2470,
+          "label": "Funcionamento social da língua"
+        }
+      ],
+      "roles": [
+        "consultation_only"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Aestrategias-de-leitura/e/lp-o-que-sao-generos-textuais",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 257; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+      "resource_ids": [
+        603
+      ],
+      "title": "Coesão e coerência — Brasil Escola",
+      "topics": [
+        {
+          "id": 2468,
+          "label": "O texto e seu funcionamento"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Coesão e coerência: resumo, diferenças, tipos - Brasil Escola",
+        "h1": [
+          "Coesão e coerência"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Coesão e coerência: resumo, diferenças, tipos - Brasil Escola",
+        "h1": [
+          "Coesão e coerência"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Explica coesão referencial e sequencial, coerência contextual, pronomes, elipse e conjunções, com"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 41,
+        "image_alt": [
+          28,
+          29
+        ],
+        "iframe_titles": [
+          2,
+          2
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-redacao/exercicios-sobre-texto-contexto.htm",
+      "resource_ids": [
+        639
+      ],
+      "title": "Texto e contexto — prática selecionada",
+      "topics": [
+        {
+          "id": 2468,
+          "label": "O texto e seu funcionamento"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-redacao/exercicios-sobre-texto-contexto.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre texto e contexto - Brasil Escola",
+        "h1": [
+          "Exercícios sobre texto e contexto"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre texto e contexto - Brasil Escola",
+        "h1": [
+          "Exercícios sobre texto e contexto"
+        ],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questão 1, poema ‘Verbo ser’; gabarito A. Limites: Interpretação e inferência textual; não representa"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          16,
+          17
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+      "resource_ids": [
+        604
+      ],
+      "title": "Semântica — Brasil Escola",
+      "topics": [
+        {
+          "id": 2469,
+          "label": "Processos de significação"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Semântica: o que é, para que serve, exercícios - Brasil Escola",
+        "h1": [
+          "Semântica"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Semântica: o que é, para que serve, exercícios - Brasil Escola",
+        "h1": [
+          "Semântica"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Apresenta sentido e contexto, conotação/denotação, ambiguidade e polissemia com exemplos. Introdu"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-br",
+        "headings": 35,
+        "image_alt": [
+          1,
+          1
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "footer",
+          "header",
+          "main"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-semantica.htm",
+      "resource_ids": [
+        640
+      ],
+      "title": "Semântica e relações de sentido — prática selecionada",
+      "topics": [
+        {
+          "id": 2469,
+          "label": "Processos de significação"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-semantica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre semântica. Lista de exercícios sobre semântica.",
+        "h1": [
+          "Exercícios sobre semântica"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre semântica. Lista de exercícios sobre semântica.",
+        "h1": [
+          "Exercícios sobre semântica"
+        ],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questão 2, uso de ‘no entanto’; gabarito C. Limites: Prática de sentido contextual e conectivos; a li"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+      "resource_ids": [
+        605
+      ],
+      "title": "Variação linguística — Brasil Escola",
+      "topics": [
+        {
+          "id": 2470,
+          "label": "Funcionamento social da língua"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "O que é variação linguística? - Brasil Escola",
+        "h1": [
+          "O que é variação linguística?"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "O que é variação linguística? - Brasil Escola",
+        "h1": [
+          "O que é variação linguística?"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Introduz variações geográficas, históricas, sociais e situacionais, além de preconceito linguísti"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 41,
+        "image_alt": [
+          27,
+          28
+        ],
+        "iframe_titles": [
+          1,
+          1
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-variacoes-linguisticas.htm",
+      "resource_ids": [
+        641
+      ],
+      "title": "Variação linguística — prática selecionada",
+      "topics": [
+        {
+          "id": 2470,
+          "label": "Funcionamento social da língua"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-variacoes-linguisticas.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre variação linguística - Brasil Escola",
+        "h1": [
+          "Exercícios sobre variação linguística"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre variação linguística - Brasil Escola",
+        "h1": [
+          "Exercícios sobre variação linguística"
+        ],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (A), 3 (D), 7 (B), 11 (C) e 12 (A); excluir a questão 8, que depende de cartaz/imagem. Lim"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          17,
+          18
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Sintaxe",
+      "resource_ids": [
+        177
+      ],
+      "title": "Sintaxe",
+      "topics": [
+        {
+          "id": 2471,
+          "label": "Sintaxe da língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Sintaxe",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Sintaxe – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Sintaxe"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Sintaxe – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Sintaxe"
+        ],
+        "prior_editorial_note_excerpt": "Artigo de consulta com tema explicitamente sintaxe. Referência geral; não cobre necessariamente o tópico integral. Acessibilidade assistiva não a"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 5,
+        "image_alt": [
+          4,
+          11
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-sintaxe.htm",
+      "resource_ids": [
+        222
+      ],
+      "title": "Exercícios sobre sintaxe",
+      "topics": [
+        {
+          "id": 2471,
+          "label": "Sintaxe da língua portuguesa"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-sintaxe.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre sintaxe - Brasil Escola",
+        "h1": [
+          "Exercícios sobre sintaxe"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre sintaxe - Brasil Escola",
+        "h1": [
+          "Exercícios sobre sintaxe"
+        ],
+        "prior_editorial_note_excerpt": "Vínculo editorial complementar com Sintaxe da língua portuguesa no currículo da edição Unicamp 2027 (curriculum_id=10), primeira fase, associado "
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa%3Alp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa%3Alp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos",
+      "resource_ids": [
+        258
+      ],
+      "title": "O que são orações e períodos?",
+      "topics": [
+        {
+          "id": 2471,
+          "label": "Sintaxe da língua portuguesa"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/humanities/portugues-8-ano/x5b3c6c1b6bb8a9aa%3Alp-8ano-artes-e-literatura/x5b3c6c1b6bb8a9aa%3Alp-8ano-literatura-funcionamento-da-lingua/v/lp-8ano-video-oracoes-e-periodos",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Correspondência introdutória aprovada: o vídeo e a transcrição distinguem frase, oração e período e dão exemplos, alinhados ao tópico Sintaxe. Tr"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/v/lp-6ano-video-formacao-de-palavras-derivacao-e-composicao",
+      "resource_ids": [
+        475
+      ],
+      "title": "Formação de palavras: derivação e composição",
+      "topics": [
+        {
+          "id": 2472,
+          "label": "Morfologia da língua portuguesa"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/v/lp-6ano-video-formacao-de-palavras-derivacao-e-composicao",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Relação suplementar: vídeo em português sobre derivação e composição, subtema de morfologia/formação de palavras. Não cobre toda a morfologia. Ac"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-estrutura-formacao-palavras.htm",
+      "resource_ids": [
+        519
+      ],
+      "title": "Exercícios sobre estrutura e formação das palavras",
+      "topics": [
+        {
+          "id": 2472,
+          "label": "Morfologia da língua portuguesa"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-estrutura-formacao-palavras.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre estrutura e formação das palavras - Brasil Escola",
+        "h1": [
+          "Exercícios sobre estrutura e formação das palavras"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre estrutura e formação das palavras - Brasil Escola",
+        "h1": [
+          "Exercícios sobre estrutura e formação das palavras"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial para morfologia/formação de palavras, aprovada como prática suplementar após abrir 12 questões e respostas em 2026-10-09. Acess"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-cotidiana/x00fd8bb90bd44377%3Alp-4ano-ortografia/v/lp-4ano-video-ortografia-uma-letra-um-som",
+      "resource_ids": [
+        477
+      ],
+      "title": "Uma letra, um som — ortografia",
+      "topics": [
+        {
+          "id": 2473,
+          "label": "Elementos de fonologia da língua portuguesa"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/humanities/lp-4-ano/x00fd8bb90bd44377%3Alp-4ano-vida-cotidiana/x00fd8bb90bd44377%3Alp-4ano-ortografia/v/lp-4ano-video-ortografia-uma-letra-um-som",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Relação parcial: correspondência letra-som e ortografia como recorte introdutório de oralidade/escrita; não cobre fonologia integralmente. Acessi"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.todamateria.com.br/exercicios-sobre-fonemas/",
+      "resource_ids": [
+        520
+      ],
+      "title": "Fonemas — prática com gabarito comentado",
+      "topics": [
+        {
+          "id": 2473,
+          "label": "Elementos de fonologia da língua portuguesa"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.todamateria.com.br/exercicios-sobre-fonemas/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre fonemas (com gabarito comentado) - Toda Matéria",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre fonemas (com gabarito comentado) - Toda Matéria",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questões 1–5 e 7. Excluir a questão 6, pois as alternativas A e C satisfazem o enunciado. Limites: Pr"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-br",
+        "headings": 0,
+        "image_alt": [
+          0,
+          0
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.todamateria.com.br/exercicios-sobre-generos-literarios/",
+      "resource_ids": [
+        179
+      ],
+      "title": "Exercícios sobre gêneros literários (gabarito comentado)",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.todamateria.com.br/exercicios-sobre-generos-literarios/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre gêneros literários (com gabarito comentado) - Toda Matéria",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre gêneros literários (com gabarito comentado) - Toda Matéria",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Toda Matéria, exercícios textuais sobre gêneros lírico, narrativo e dramático, com respostas comentadas; suplemento introdutório ao programa de l"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-br",
+        "headings": 0,
+        "image_alt": [
+          0,
+          0
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Narrativa",
+      "resource_ids": [
+        180
+      ],
+      "title": "Narrativa",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Narrativa",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Narrativa – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Narrativa"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Narrativa – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Narrativa"
+        ],
+        "prior_editorial_note_excerpt": "Artigo de consulta discute narrativa, sequência de eventos, enredo e narradores. Relação tópica direta, mas referência externa não equivale a cob"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 25,
+        "image_alt": [
+          1,
+          4
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-literatura/exercicios-sobre-poesia-poema-prosa.htm",
+      "resource_ids": [
+        182
+      ],
+      "title": "Exercícios sobre poesia, poema e prosa",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-literatura/exercicios-sobre-poesia-poema-prosa.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre poesia, poema e prosa - Brasil Escola",
+        "h1": [
+          "Exercícios sobre poesia, poema e prosa"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre poesia, poema e prosa - Brasil Escola",
+        "h1": [
+          "Exercícios sobre poesia, poema e prosa"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial complementar com o tópico de leitura literária do currículo Unicamp 2027 (curriculum_id=10, primeira fase). O currículo tem rel"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Poesia",
+      "resource_ids": [
+        183
+      ],
+      "title": "Poesia",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Poesia",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Poesia – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Poesia"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Poesia – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Poesia"
+        ],
+        "prior_editorial_note_excerpt": "Artigo enciclopédico em português sobre poesia; referência conceitual geral, sem afirmar análise das obras exigidas ou cobertura integral. Acessi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 10,
+        "image_alt": [
+          3,
+          8
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Alp-6ano-textos-narrativos/v/lp-6ano-video-como-escrever-uma-narrativa",
+      "resource_ids": [
+        254
+      ],
+      "title": "Como escrever uma narrativa",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/humanities/portugues-6-ano/xa61ad4b52402c30a%3Alp-6ano-artes-e-literatura/xa61ad4b52402c30a%3Alp-6ano-textos-narrativos/v/lp-6ano-video-como-escrever-uma-narrativa",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Vídeo introdutório identificado como escrita narrativa. Relação temática de consulta, não validação integral do conteúdo ou cobertura. Acessibili"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/redacao/elementos-da-narrativa.htm",
+      "resource_ids": [
+        255
+      ],
+      "title": "Elementos da narrativa",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "consultation_only"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/redacao/elementos-da-narrativa.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Elementos da narrativa: quais são? - Brasil Escola",
+        "h1": [
+          "Elementos da narrativa"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Elementos da narrativa: quais são? - Brasil Escola",
+        "h1": [
+          "Elementos da narrativa"
+        ],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 255; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 34,
+        "image_alt": [
+          33,
+          34
+        ],
+        "iframe_titles": [
+          2,
+          2
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/humanities/pma-pr-leitura-escrita-interpretacao-n2/xc04a86cd2e5054a3%3Aunidade-4-2024/xc04a86cd2e5054a3%3Aaula-16-efeitos-de-sentidos-provocados-pelos-usos-de-recursos-linguisticos-e-multissemioticos/v/lp-7ano-video-os-elementos-de-um-poema",
+      "resource_ids": [
+        256
+      ],
+      "title": "Os elementos de um poema",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/humanities/pma-pr-leitura-escrita-interpretacao-n2/xc04a86cd2e5054a3%3Aunidade-4-2024/xc04a86cd2e5054a3%3Aaula-16-efeitos-de-sentidos-provocados-pelos-usos-de-recursos-linguisticos-e-multissemioticos/v/lp-7ano-video-os-elementos-de-um-poema",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Vídeo introdutório e exercício relacionado identificados como elementos de poema. Relação temática direta, mas suplemento inicial, não cobertura "
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-YXW3ZgDi-w",
+      "resource_ids": [
+        283
+      ],
+      "title": "As canções de Paulo César Pinheiro e os retratos do Brasil",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/watch?v=-YXW3ZgDi-w",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "",
+        "h1": [],
+        "prior_editorial_note_excerpt": "O título/descrição associa Canções escolhidas a canções e retratos do Brasil, relação de gênero com poesia/canção. Isso não valida o conteúdo da "
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 0,
+        "image_alt": [
+          0,
+          0
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLWYzeDRJEODO2m6mJCkb8VdZMIxxb2kDs",
+      "resource_ids": [
+        541
+      ],
+      "title": "CRIA 2025 — aulas sobre obras obrigatórias",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/playlist?list=PLWYzeDRJEODO2m6mJCkb8VdZMIxxb2kDs",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Playlist inclui aulas identificadas por metadados/título sobre duas obras narrativas da lista 2027. Relação apenas como descoberta de comentários"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 0,
+        "image_alt": [
+          0,
+          0
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLWYzeDRJEODOwuFRloWqOrgY-sE9iEjr7",
+      "resource_ids": [
+        542
+      ],
+      "title": "CRIA 2026 — aulas sobre obras obrigatórias",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/playlist?list=PLWYzeDRJEODOwuFRloWqOrgY-sE9iEjr7",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Aula identificada por título sobre Memórias Póstumas de Brás Cubas, obra narrativa da lista 2027. Relação para descoberta de comentário sobre uma"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 0,
+        "image_alt": [
+          0,
+          0
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+      "resource_ids": [
+        606
+      ],
+      "title": "Linguagem literária — Brasil Escola",
+      "topics": [
+        {
+          "id": 2474,
+          "label": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Linguagem literária: características, exemplos - Brasil Escola",
+        "h1": [
+          "Linguagem literária"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Linguagem literária: características, exemplos - Brasil Escola",
+        "h1": [
+          "Linguagem literária"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Explica subjetividade, conotação e plurissignificação com exemplos de poema e romance. Introdução"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-br",
+        "headings": 38,
+        "image_alt": [
+          1,
+          1
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "footer",
+          "header",
+          "main"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Conjunto_(matem%C3%A1tica)",
+      "resource_ids": [
+        479
+      ],
+      "title": "Conjunto (matemática)",
+      "topics": [
+        {
+          "id": 2475,
+          "label": "Conjuntos numéricos"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Conjunto_(matem%C3%A1tica)",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Conjunto – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Conjunto"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Conjunto – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Conjunto"
+        ],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 479; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 11,
+        "image_alt": [
+          102,
+          107
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-os-conjuntos.htm",
+      "resource_ids": [
+        521
+      ],
+      "title": "Exercícios sobre conjuntos",
+      "topics": [
+        {
+          "id": 2475,
+          "label": "Conjuntos numéricos"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-os-conjuntos.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre os conjuntos - Brasil Escola",
+        "h1": [
+          "Exercícios sobre os conjuntos"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre os conjuntos - Brasil Escola",
+        "h1": [
+          "Exercícios sobre os conjuntos"
+        ],
+        "prior_editorial_note_excerpt": "Browser-reviewed 2026-10-09 as supplementary practice for the Unicamp 2027 first-phase curriculum item Conjuntos numéricos. All four text-only qu"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+      "resource_ids": [
+        607
+      ],
+      "title": "Conjuntos numéricos — Brasil Escola",
+      "topics": [
+        {
+          "id": 2475,
+          "label": "Conjuntos numéricos"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Conjuntos numéricos: quais são e características - Brasil Escola",
+        "h1": [
+          "Conjuntos numéricos"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Conjuntos numéricos: quais são e características - Brasil Escola",
+        "h1": [
+          "Conjuntos numéricos"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Apresenta naturais, inteiros, racionais, irracionais e reais e suas relações. A página também abo"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 34,
+        "image_alt": [
+          29,
+          47
+        ],
+        "iframe_titles": [
+          1,
+          1
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/algebra-home/alg-functions",
+      "resource_ids": [
+        166
+      ],
+      "title": "Funções | Álgebra (todo o conteúdo)",
+      "topics": [
+        {
+          "id": 2476,
+          "label": "Funções"
+        },
+        {
+          "id": 2477,
+          "label": "Polinômios, equações e inequações"
+        },
+        {
+          "id": 2484,
+          "label": "Logaritmos e exponenciais"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/algebra-home/alg-functions",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Vínculo ao item do programa 2027 ‘Funções’. A unidade Khan Academy fornece teoria e prática complementar de avaliação, gráficos, domínio, variaçã"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)",
+      "resource_ids": [
+        167
+      ],
+      "title": "Função (matemática)",
+      "topics": [
+        {
+          "id": 2476,
+          "label": "Funções"
+        },
+        {
+          "id": 2477,
+          "label": "Polinômios, equações e inequações"
+        },
+        {
+          "id": 2484,
+          "label": "Logaritmos e exponenciais"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Função (matemática) – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Função (matemática)"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Função (matemática) – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Função (matemática)"
+        ],
+        "prior_editorial_note_excerpt": "Artigo de consulta sobre função matemática, tema do tópico Funções e gráficos; relação ampla, não cobertura integral. Acessibilidade assistiva nã"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 6,
+        "image_alt": [
+          50,
+          59
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/e/graphing_parabolas_1",
+      "resource_ids": [
+        225
+      ],
+      "title": "Gráfico de equações do segundo grau na forma canônica (prática)",
+      "topics": [
+        {
+          "id": 2476,
+          "label": "Funções"
+        },
+        {
+          "id": 2477,
+          "label": "Polinômios, equações e inequações"
+        },
+        {
+          "id": 2484,
+          "label": "Logaritmos e exponenciais"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/e/graphing_parabolas_1",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Relação curricular anual mantida como prática complementar; a alternativa aborda gráficos de quadráticas na forma canônica/vértice, não a totalid"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/algebra-home/algebra-basics/quadratics-polynomials-topic",
+      "resource_ids": [
+        481
+      ],
+      "title": "Expressões quadráticas e polinômios",
+      "topics": [
+        {
+          "id": 2477,
+          "label": "Polinômios, equações e inequações"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/algebra-home/algebra-basics/quadratics-polynomials-topic",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Unidade suplementar de operações/fatoração de polinômios; não cobre sozinha equações e inequações. Link-only; acessibilidade assistiva/WCAG não a"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86%3Aquadratics-multiplying-factoring/x2f8bb11595b61c86%3Amultiply-monomial-polynomial/e/polynomials-intro",
+      "resource_ids": [
+        482
+      ],
+      "title": "Introdução aos polinômios — prática",
+      "topics": [
+        {
+          "id": 2477,
+          "label": "Polinômios, equações e inequações"
+        }
+      ],
+      "roles": [
+        "consultation_only"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/algebra/x2f8bb11595b61c86%3Aquadratics-multiplying-factoring/x2f8bb11595b61c86%3Amultiply-monomial-polynomial/e/polynomials-intro",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 482; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/pt-9-ano/algebra-expressoes-algebricas-9ano/a-formula-de-bhaskara/a/quadratic-formula-explained-article",
+      "resource_ids": [
+        549
+      ],
+      "title": "Fórmula quadrática (Bhaskara): explicação",
+      "topics": [
+        {
+          "id": 2477,
+          "label": "Polinômios, equações e inequações"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/pt-9-ano/algebra-expressoes-algebricas-9ano/a-formula-de-bhaskara/a/quadratic-formula-explained-article",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Khan Academy: artigo em português sobre fórmula quadrática/Bhaskara, exemplo resolvido e prática relacionada. Relação suplementar a Polinômios, e"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/probability/probability-and-combinatorics-topic",
+      "resource_ids": [
+        169
+      ],
+      "title": "Probabilidade | Estatística e probabilidade",
+      "topics": [
+        {
+          "id": 2478,
+          "label": "Princípios de contagem e probabilidade"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/probability/probability-and-combinatorics-topic",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Vínculo ao item do programa 2027 ‘Princípios de contagem e probabilidade’. Recomendam-se especificamente unidades de probabilidade e contagem/com"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Probabilidade",
+      "resource_ids": [
+        170
+      ],
+      "title": "Probabilidade",
+      "topics": [
+        {
+          "id": 2478,
+          "label": "Princípios de contagem e probabilidade"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Probabilidade",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Probabilidade – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Probabilidade"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Probabilidade – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Probabilidade"
+        ],
+        "prior_editorial_note_excerpt": "Artigo de consulta geral sobre probabilidade, relacionado ao tópico Contagem e probabilidade; não implica cobertura de contagem ou do currículo c"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 14,
+        "image_alt": [
+          18,
+          30
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-propriedades-probabilidade.htm",
+      "resource_ids": [
+        226
+      ],
+      "title": "Exercícios sobre Propriedades da Probabilidade",
+      "topics": [
+        {
+          "id": 2478,
+          "label": "Princípios de contagem e probabilidade"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-propriedades-probabilidade.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre Propriedades da Probabilidade - Brasil Escola",
+        "h1": [
+          "Exercícios sobre Propriedades da Probabilidade"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre Propriedades da Probabilidade - Brasil Escola",
+        "h1": [
+          "Exercícios sobre Propriedades da Probabilidade"
+        ],
+        "prior_editorial_note_excerpt": "Browser-reviewed 2026-10-09 as supplementary practice for the Unicamp 2027 first-phase curriculum item Princípios de contagem e probabilidade. Al"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          22
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.obmep.org.br/docs/apostila2.pdf",
+      "resource_ids": [
+        538
+      ],
+      "title": "Métodos de Contagem e Probabilidade — apostila do PIC",
+      "topics": [
+        {
+          "id": 2478,
+          "label": "Princípios de contagem e probabilidade"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.obmep.org.br/docs/apostila2.pdf",
+        "content_type": "application/pdf",
+        "page_title": null,
+        "h1": null,
+        "error": null,
+        "pdf_signature": "%PDF-"
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": null,
+        "h1": null,
+        "prior_editorial_note_excerpt": "Apostila de contagem/probabilidade com capítulos, exercícios e soluções; suplemento direto, sem pretender cobrir todo o currículo. Link_only, sem"
+      },
+      "basic_accessibility": {
+        "status": "not_assessed",
+        "evidence": "PDF tags and reading order not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://betterexplained.com/articles/easy-permutations-and-combinations/",
+      "resource_ids": [
+        548
+      ],
+      "title": "Easy Permutations and Combinations",
+      "topics": [
+        {
+          "id": 2478,
+          "label": "Princípios de contagem e probabilidade"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://betterexplained.com/articles/easy-permutations-and-combinations/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Easy Permutations and Combinations – BetterExplainedMenu",
+        "h1": [
+          "Easy Permutations and Combinations"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Easy Permutations and Combinations – BetterExplainedMenu",
+        "h1": [
+          "Easy Permutations and Combinations"
+        ],
+        "prior_editorial_note_excerpt": "Individually approved 2026-10-08 as an English-language supplementary theory article for the counting portion of the curriculum topic. It clearly"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "en-US",
+        "headings": 9,
+        "image_alt": [
+          13,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          2
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/algebra-home/alg-matrices",
+      "resource_ids": [
+        483
+      ],
+      "title": "Matrizes — Álgebra",
+      "topics": [
+        {
+          "id": 2479,
+          "label": "Sistemas lineares e matrizes"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/algebra-home/alg-matrices",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Unidade complementar diretamente sobre matrizes e usos em sistemas lineares; cobertura parcial do tópico. Link-only; acessibilidade assistiva/WCA"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/em-mat-algebra/x34e9dd8107ca5eda%3Asistemas-de-equacoes-lineares/x34e9dd8107ca5eda%3Amatrizes/e/matrizes-associadas-a-um-sistema-linear",
+      "resource_ids": [
+        484
+      ],
+      "title": "Matrizes associadas a sistema linear — prática",
+      "topics": [
+        {
+          "id": 2479,
+          "label": "Sistemas lineares e matrizes"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/em-mat-algebra/x34e9dd8107ca5eda%3Asistemas-de-equacoes-lineares/x34e9dd8107ca5eda%3Amatrizes/e/matrizes-associadas-a-um-sistema-linear",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Prática do recorte matrizes associadas a sistemas lineares; não cobre todas as operações matriciais. Acessibilidade assistiva/WCAG não auditada; "
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+      "resource_ids": [
+        485
+      ],
+      "title": "Ângulos e polígonos — geometria",
+      "topics": [
+        {
+          "id": 2480,
+          "label": "Geometria plana"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/pt-7-ano/geometria-angulos-e-poligonos-7ano",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Unidade parcial de ângulos e polígonos, subtemas de geometria plana. Atividades podem depender de diagramas; acessibilidade não auditada. Link-on"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-areas-de-figuras-planas.htm",
+      "resource_ids": [
+        522
+      ],
+      "title": "Exercícios sobre áreas de figuras planas",
+      "topics": [
+        {
+          "id": 2480,
+          "label": "Geometria plana"
+        }
+      ],
+      "roles": [
+        "consultation_only"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-areas-de-figuras-planas.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre áreas de figuras planas - Brasil Escola",
+        "h1": [
+          "Exercícios sobre áreas de figuras planas"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre áreas de figuras planas - Brasil Escola",
+        "h1": [
+          "Exercícios sobre áreas de figuras planas"
+        ],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 522; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          16,
+          17
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.obmep.org.br/docs/apostila3.pdf",
+      "resource_ids": [
+        539
+      ],
+      "title": "Teorema de Pitágoras e Áreas — apostila do PIC",
+      "topics": [
+        {
+          "id": 2480,
+          "label": "Geometria plana"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.obmep.org.br/docs/apostila3.pdf",
+        "content_type": "application/pdf",
+        "page_title": null,
+        "h1": null,
+        "error": null,
+        "pdf_signature": "%PDF-"
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": null,
+        "h1": null,
+        "prior_editorial_note_excerpt": "Correspondência direta parcial a geometria plana: Teorema de Pitágoras, áreas e problemas. Não constitui cobertura integral do tópico. Link_only,"
+      },
+      "basic_accessibility": {
+        "status": "not_assessed",
+        "evidence": "PDF tags and reading order not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-pyth-theorem/hs-geo-pyth-theorem",
+      "resource_ids": [
+        547
+      ],
+      "title": "Teorema de Pitágoras — explicação e prática",
+      "topics": [
+        {
+          "id": 2480,
+          "label": "Geometria plana"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-pyth-theorem/hs-geo-pyth-theorem",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Khan Academy: unidade do teorema de Pitágoras em geometria plana, com explicação e problemas de triângulos retângulos. Suplemento diretamente per"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+      "resource_ids": [
+        608
+      ],
+      "title": "Área e perímetro — prática Khan Academy",
+      "topics": [
+        {
+          "id": 2480,
+          "label": "Geometria plana"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Unidade com exercícios/testes de áreas e perímetros de polígonos, círculos e figuras compostas. P"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/basic-geo/basic-geo-volume-sa",
+      "resource_ids": [
+        487
+      ],
+      "title": "Geometria básica e medidas — volume",
+      "topics": [
+        {
+          "id": 2481,
+          "label": "Geometria espacial"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/basic-geo/basic-geo-volume-sa",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Unidade suplementar de volume/área de superfície de sólidos; não cobre todo o tópico de geometria espacial. Link-only; acessibilidade assistiva/W"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/geometry/hs-geo-solids/hs-geo-solids-intro/e/apply-volume-of-solids",
+      "resource_ids": [
+        488
+      ],
+      "title": "Aplique o volume de sólidos — prática",
+      "topics": [
+        {
+          "id": 2481,
+          "label": "Geometria espacial"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/geometry/hs-geo-solids/hs-geo-solids-intro/e/apply-volume-of-solids",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Browser-reviewed 2026-10-09 as supplementary practice for the Unicamp 2027 first-phase curriculum item Geometria espacial. All four generated exe"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/trigonometry",
+      "resource_ids": [
+        489
+      ],
+      "title": "Trigonometria — unidade de Matemática",
+      "topics": [
+        {
+          "id": 2482,
+          "label": "Trigonometria"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/trigonometry",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Biblioteca de trigonometria com subtemas relevantes e conteúdo adicional; usar seletivamente, sem inferir que todas as unidades sejam requeridas."
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/trigonometry/unit-circle-trig-func",
+      "resource_ids": [
+        523
+      ],
+      "title": "Funções trigonométricas — unidade e prática",
+      "topics": [
+        {
+          "id": 2482,
+          "label": "Trigonometria"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/trigonometry/unit-circle-trig-func",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Khan Academy, curso/unidade de funções trigonométricas: a página direta lista conteúdo Aprender e Praticar (círculo trigonométrico, radianos, ide"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://betterexplained.com/articles/intuitive-trigonometry/",
+      "resource_ids": [
+        546
+      ],
+      "title": "How To Learn Trigonometry Intuitively",
+      "topics": [
+        {
+          "id": 2482,
+          "label": "Trigonometria"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://betterexplained.com/articles/intuitive-trigonometry/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "How To Learn Trigonometry Intuitively – BetterExplainedMenu",
+        "h1": [
+          "How To Learn Trigonometry Intuitively"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "How To Learn Trigonometry Intuitively – BetterExplainedMenu",
+        "h1": [
+          "How To Learn Trigonometry Intuitively"
+        ],
+        "prior_editorial_note_excerpt": "Individually reviewed 2026-10-08 as an optional English-language intuition supplement for trigonometry. The article explains six trig functions t"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "en-US",
+        "headings": 17,
+        "image_alt": [
+          24,
+          26
+        ],
+        "iframe_titles": [
+          0,
+          5
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+      "resource_ids": [
+        609
+      ],
+      "title": "Triângulos retângulos e trigonometria — Khan Academy",
+      "topics": [
+        {
+          "id": 2482,
+          "label": "Trigonometria"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Exercícios e testes sobre seno, cosseno, tangente, lados e ângulos em triângulos retângulos. Não "
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Geometria_anal%C3%ADtica",
+      "resource_ids": [
+        491
+      ],
+      "title": "Geometria analítica",
+      "topics": [
+        {
+          "id": 2483,
+          "label": "Geometria analítica"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Geometria_anal%C3%ADtica",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Geometria analítica – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Geometria analítica"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Geometria analítica – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Geometria analítica"
+        ],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 491; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 25,
+        "image_alt": [
+          42,
+          51
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-geometria-analitica.htm",
+      "resource_ids": [
+        524
+      ],
+      "title": "Exercícios sobre Geometria Analítica",
+      "topics": [
+        {
+          "id": 2483,
+          "label": "Geometria analítica"
+        }
+      ],
+      "roles": [
+        "consultation_only"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-geometria-analitica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre Geometria Analítica - Brasil Escola",
+        "h1": [
+          "Exercícios sobre Geometria Analítica"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre Geometria Analítica - Brasil Escola",
+        "h1": [
+          "Exercícios sobre Geometria Analítica"
+        ],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 524; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          21
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+      "resource_ids": [
+        610
+      ],
+      "title": "Fórmula da distância — Khan Academy",
+      "topics": [
+        {
+          "id": 2483,
+          "label": "Geometria analítica"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Deriva e aplica a distância entre pontos no plano cartesiano, com exemplo resolvido. Cobre uma ha"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+      "resource_ids": [
+        611
+      ],
+      "title": "Distância entre ponto e reta — prática Khan Academy",
+      "topics": [
+        {
+          "id": 2483,
+          "label": "Geometria analítica"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Exercício direto de distância entre ponto e reta, com resposta verificável. Atividade curta de um"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.khanacademy.org/math/algebra-home/alg-exp-and-log/exponential-decay",
+      "resource_ids": [
+        544
+      ],
+      "title": "Crescimento e decaimento exponencial",
+      "topics": [
+        {
+          "id": 2484,
+          "label": "Logaritmos e exponenciais"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.khanacademy.org/math/algebra-home/alg-exp-and-log/exponential-decay",
+        "content_type": "text/html; charset=utf-8",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "inconclusive_challenge_or_request",
+        "reason": "Anti-bot/JavaScript challenge returned instead of resource; access/content inconclusive."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Client Challenge",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Khan Academy: unidade de crescimento/decaimento exponencial, gráficos e prática. Relevância direta ao item curricular de Logaritmos e exponenciai"
+      },
+      "basic_accessibility": {
+        "status": "inconclusive",
+        "evidence": "Challenge HTML is not the rendered resource."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/",
+      "resource_ids": [
+        545
+      ],
+      "title": "Demystifying the Natural Logarithm (ln)",
+      "topics": [
+        {
+          "id": 2484,
+          "label": "Logaritmos e exponenciais"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://betterexplained.com/articles/demystifying-the-natural-logarithm-ln/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Demystifying the Natural Logarithm (ln) – BetterExplainedMenu",
+        "h1": [
+          "Demystifying the Natural Logarithm (ln)"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Demystifying the Natural Logarithm (ln) – BetterExplainedMenu",
+        "h1": [
+          "Demystifying the Natural Logarithm (ln)"
+        ],
+        "prior_editorial_note_excerpt": "Editorially approved 2026-10-08 as a free, English-language complementary lesson for logarithms/exponentials. The article builds intuition for ln"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "en-US",
+        "headings": 11,
+        "image_alt": [
+          7,
+          7
+        ],
+        "iframe_titles": [
+          0,
+          1
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-logaritmica.htm",
+      "resource_ids": [
+        642
+      ],
+      "title": "Função logarítmica — prática selecionada",
+      "topics": [
+        {
+          "id": 2484,
+          "label": "Logaritmos e exponenciais"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-logaritmica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre função logarítmica - Brasil Escola",
+        "h1": [
+          "Exercícios sobre função logarítmica"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre função logarítmica - Brasil Escola",
+        "h1": [
+          "Exercícios sobre função logarítmica"
+        ],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (D) e 4 (E); respostas conferidas na própria página. Limites: Prática de propriedades e cá"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          16,
+          17
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-exponencial.htm",
+      "resource_ids": [
+        643
+      ],
+      "title": "Função exponencial — prática selecionada",
+      "topics": [
+        {
+          "id": 2484,
+          "label": "Logaritmos e exponenciais"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-funcao-exponencial.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre função exponencial - Brasil Escola",
+        "h1": [
+          "Exercícios sobre função exponencial"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre função exponencial - Brasil Escola",
+        "h1": [
+          "Exercícios sobre função exponencial"
+        ],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (D) e 2 (A); respostas conferidas na própria página. Limites: Prática de crescimento/decre"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          20,
+          21
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/geografia/espaco-geografico.htm",
+      "resource_ids": [
+        601
+      ],
+      "title": "Espaço geográfico",
+      "topics": [
+        {
+          "id": 2485,
+          "label": "Conceitos fundamentais da Geografia"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/geografia/espaco-geografico.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Espaço geográfico: o que é, exemplos, exercícios - Brasil Escola",
+        "h1": [
+          "Espaço geográfico"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Espaço geográfico: o que é, exemplos, exercícios - Brasil Escola",
+        "h1": [
+          "Espaço geográfico"
+        ],
+        "prior_editorial_note_excerpt": "Aprovado em 09/10/2026 como leitura gratuita complementar para Conceitos fundamentais da Geografia. A revisão básica encontrou títulos, texto, li"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 36,
+        "image_alt": [
+          33,
+          36
+        ],
+        "iframe_titles": [
+          1,
+          1
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-espaco-geografico.htm",
+      "resource_ids": [
+        602
+      ],
+      "title": "Exercícios sobre espaço geográfico",
+      "topics": [
+        {
+          "id": 2485,
+          "label": "Conceitos fundamentais da Geografia"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-espaco-geografico.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre espaço geográfico - Brasil Escola",
+        "h1": [
+          "Exercícios sobre espaço geográfico"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre espaço geográfico - Brasil Escola",
+        "h1": [
+          "Exercícios sobre espaço geográfico"
+        ],
+        "prior_editorial_note_excerpt": "Aprovado em 09/10/2026 como prática gratuita complementar para Conceitos fundamentais da Geografia. As 12 respostas e explicações foram abertas e"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://planetageo.com.br/exercicios-de-cartografia/",
+      "resource_ids": [
+        205
+      ],
+      "title": "Exercícios de cartografia: escala e projeções",
+      "topics": [
+        {
+          "id": 2486,
+          "label": "Linguagem cartográfica e geotecnologias"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://planetageo.com.br/exercicios-de-cartografia/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios de cartografia - PlanetageoExercícios de Cartografia com Gabarito: Escala, Fusos Horários e Projeções | PlanetaGeo",
+        "h1": [
+          "Exercícios de Cartografia"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios de cartografia - PlanetageoExercícios de Cartografia com Gabarito: Escala, Fusos Horários e Projeções | PlanetaGeo",
+        "h1": [
+          "Exercícios de Cartografia"
+        ],
+        "prior_editorial_note_excerpt": "PlanetaGeo: aprovar vínculo somente para Q1 (escala), Q4 (projeções) e Q8 (escala/proporção), conforme escopo na ficha do recurso. A página inclu"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 3,
+        "image_alt": [
+          1,
+          2
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Cartografia",
+      "resource_ids": [
+        206
+      ],
+      "title": "Cartografia",
+      "topics": [
+        {
+          "id": 2486,
+          "label": "Linguagem cartográfica e geotecnologias"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Cartografia",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Cartografia – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Cartografia"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Cartografia – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Cartografia"
+        ],
+        "prior_editorial_note_excerpt": "Aprovado como referência enciclopédica para conceitos cartográficos, não como material instrucional validado ou cobertura integral de geotecnolog"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 14,
+        "image_alt": [
+          3,
+          12
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/geografia/cartografia.htm",
+      "resource_ids": [
+        259
+      ],
+      "title": "Cartografia: o que é, para que serve, tipos, mapas",
+      "topics": [
+        {
+          "id": 2486,
+          "label": "Linguagem cartográfica e geotecnologias"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/geografia/cartografia.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Cartografia: o que é, para que serve, tipos, mapas - Brasil Escola",
+        "h1": [
+          "Cartografia"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Cartografia: o que é, para que serve, tipos, mapas - Brasil Escola",
+        "h1": [
+          "Cartografia"
+        ],
+        "prior_editorial_note_excerpt": "Aprovado como leitura complementar introdutória de cartografia, não como capítulo completo de geotecnologias. A página discute escala, coordenada"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 33,
+        "image_alt": [
+          42,
+          43
+        ],
+        "iframe_titles": [
+          1,
+          1
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Geografia_f%C3%ADsica",
+      "resource_ids": [
+        493
+      ],
+      "title": "Geografia física",
+      "topics": [
+        {
+          "id": 2487,
+          "label": "Componentes físico-naturais do espaço geográfico"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Geografia_f%C3%ADsica",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Geografia física – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Geografia física"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Geografia física – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Geografia física"
+        ],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 493; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 5,
+        "image_alt": [
+          4,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-geografia-fisica.htm",
+      "resource_ids": [
+        525
+      ],
+      "title": "Exercícios sobre geografia física",
+      "topics": [
+        {
+          "id": 2487,
+          "label": "Componentes físico-naturais do espaço geográfico"
+        }
+      ],
+      "roles": [
+        "consultation_only"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-geografia-fisica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre geografia física - Brasil Escola",
+        "h1": [
+          "Exercícios sobre geografia física"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre geografia física - Brasil Escola",
+        "h1": [
+          "Exercícios sobre geografia física"
+        ],
+        "prior_editorial_note_excerpt": "A relação com o tópico é preservada como correspondência temática da ficha 525; a disponibilidade e as limitações de uso estão explícitas no regi"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          17,
+          20
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+      "resource_ids": [
+        613
+      ],
+      "title": "Geografia física — Brasil Escola",
+      "topics": [
+        {
+          "id": 2487,
+          "label": "Componentes físico-naturais do espaço geográfico"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Geografia Física: no Brasil, como cai no Enem e exercícios",
+        "h1": [
+          "Geografia Física"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Geografia Física: no Brasil, como cai no Enem e exercícios",
+        "h1": [
+          "Geografia Física"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Visão geral de litosfera, atmosfera, hidrosfera e biosfera, com exemplos de relevo, solo, água, c"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-br",
+        "headings": 204,
+        "image_alt": [
+          1,
+          1
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+      "resource_ids": [
+        614
+      ],
+      "title": "Hidrografia, clima e relevo — prática, questões 1–3",
+      "topics": [
+        {
+          "id": 2487,
+          "label": "Componentes físico-naturais do espaço geográfico"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre Hidrografia, Clima e Relevo - Brasil Escola",
+        "h1": [
+          "Exercícios sobre Hidrografia, Clima e Relevo"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre Hidrografia, Clima e Relevo - Brasil Escola",
+        "h1": [
+          "Exercícios sobre Hidrografia, Clima e Relevo"
+        ],
+        "prior_editorial_note_excerpt": "Relação editorial suplementar; escopo limitado: Prática suplementar: questões textuais 1–3, com respostas e justificativas conferidas. Usar somen"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          15,
+          16
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-geopolitica.htm",
+      "resource_ids": [
+        208
+      ],
+      "title": "Exercícios sobre geopolítica",
+      "topics": [
+        {
+          "id": 2488,
+          "label": "Globalização, economia e trabalho"
+        },
+        {
+          "id": 2489,
+          "label": "Brasil: dinâmica territorial"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-geopolitica.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre geopolítica - Brasil Escola",
+        "h1": [
+          "Exercícios sobre geopolítica"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre geopolítica - Brasil Escola",
+        "h1": [
+          "Exercícios sobre geopolítica"
+        ],
+        "prior_editorial_note_excerpt": "Secondary editorial association: questions on Heartland, Cold War, the War on Terror, China, India/Pakistan, Arab Spring, post-Cold-War order, NA"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://pt.wikipedia.org/wiki/Geopol%C3%ADtica",
+      "resource_ids": [
+        209
+      ],
+      "title": "Geopolítica",
+      "topics": [
+        {
+          "id": 2488,
+          "label": "Globalização, economia e trabalho"
+        },
+        {
+          "id": 2489,
+          "label": "Brasil: dinâmica territorial"
+        }
+      ],
+      "roles": [
+        "reference"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://pt.wikipedia.org/wiki/Geopol%C3%ADtica",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Geopolítica – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Geopolítica"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Geopolítica – Wikipédia, a enciclopédia livre",
+        "h1": [
+          "Geopolítica"
+        ],
+        "prior_editorial_note_excerpt": "Aprovado como referência enciclopédica introdutória para consulta de relações entre poder e espaço, não como síntese neutra/definitiva nem cobert"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt",
+        "headings": 13,
+        "image_alt": [
+          2,
+          11
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Markup references CC by-sa/4.0; scope/third parties not checked."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/geografia/definicao-territorio.htm",
+      "resource_ids": [
+        266
+      ],
+      "title": "Definição de território",
+      "topics": [
+        {
+          "id": 2488,
+          "label": "Globalização, economia e trabalho"
+        },
+        {
+          "id": 2489,
+          "label": "Brasil: dinâmica territorial"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/geografia/definicao-territorio.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Definição de Território - Brasil Escola",
+        "h1": [
+          "Definição de Território"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Definição de Território - Brasil Escola",
+        "h1": [
+          "Definição de Território"
+        ],
+        "prior_editorial_note_excerpt": "Aprovado como leitura complementar focal sobre conceito geográfico de território e relações de poder; não é cobertura de geopolítica, fronteiras "
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 18,
+        "image_alt": [
+          29,
+          30
+        ],
+        "iframe_titles": [
+          1,
+          1
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://brasilescola.uol.com.br/geografia/mundializacao.htm",
+      "resource_ids": [
+        495
+      ],
+      "title": "Mundialização e globalização",
+      "topics": [
+        {
+          "id": 2488,
+          "label": "Globalização, economia e trabalho"
+        }
+      ],
+      "roles": [
+        "learning"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://brasilescola.uol.com.br/geografia/mundializacao.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Mundialização: o que é, exemplos, tipos, prós e contras",
+        "h1": [
+          "Mundialização"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Mundialização: o que é, exemplos, tipos, prós e contras",
+        "h1": [
+          "Mundialização"
+        ],
+        "prior_editorial_note_excerpt": "Texto complementar aborda mundialização/globalização, fluxos, redes, integração cultural/econômica e divisão internacional do trabalho. A termino"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 34,
+        "image_alt": [
+          32,
+          33
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-globalizacao.htm",
+      "resource_ids": [
+        496
+      ],
+      "title": "Exercícios sobre globalização",
+      "topics": [
+        {
+          "id": 2488,
+          "label": "Globalização, economia e trabalho"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-globalizacao.htm",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre globalização - Brasil Escola",
+        "h1": [
+          "Exercícios sobre globalização"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre globalização - Brasil Escola",
+        "h1": [
+          "Exercícios sobre globalização"
+        ],
+        "prior_editorial_note_excerpt": "Vínculo editorial complementar com Globalização, economia e trabalho, tópico do programa da primeira fase de 2027, associado a tópicos canônicos "
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 17,
+        "image_alt": [
+          14,
+          15
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.todamateria.com.br/exercicios-sobre-o-territorio-brasileiro-com-respostas-explicadas/",
+      "resource_ids": [
+        644
+      ],
+      "title": "Território brasileiro — prática selecionada",
+      "topics": [
+        {
+          "id": 2489,
+          "label": "Brasil: dinâmica territorial"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.todamateria.com.br/exercicios-sobre-o-territorio-brasileiro-com-respostas-explicadas/",
+        "content_type": "text/html; charset=UTF-8",
+        "page_title": "Exercícios sobre o território brasileiro (com respostas explicadas) - Toda Matéria",
+        "h1": [],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre o território brasileiro (com respostas explicadas) - Toda Matéria",
+        "h1": [],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questão 3 (B), fronteiras terrestres do Brasil; enunciado e explicação textuais. Limites: Prática de "
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-br",
+        "headings": 0,
+        "image_alt": [
+          0,
+          0
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "unknown",
+        "evidence": "Reuse terms not confirmed; URL and metadata only."
+      },
+      "status_changed": false
+    },
+    {
+      "url": "https://www.historiadobrasil.net/exercicios/formacao_territorial_brasil.htm",
+      "resource_ids": [
+        645
+      ],
+      "title": "Formação territorial do Brasil — prática selecionada",
+      "topics": [
+        {
+          "id": 2489,
+          "label": "Brasil: dinâmica territorial"
+        }
+      ],
+      "roles": [
+        "practice"
+      ],
+      "checked_at": "2026-10-10",
+      "http": {
+        "status": 200,
+        "final_url": "https://www.historiadobrasil.net/exercicios/formacao_territorial_brasil.htm",
+        "content_type": "text/html",
+        "page_title": "Exercícios sobre a Formação Territorial do Brasil - com gabarito",
+        "h1": [
+          "Exercícios sobre a Formação Territorial do Brasil - com gabarito"
+        ],
+        "error": null,
+        "pdf_signature": null
+      },
+      "access_without_payment": {
+        "result": "anonymous_response_no_paywall_signal",
+        "reason": "Anonymous GET returned content without detected payment/login gate; embedded items not guaranteed."
+      },
+      "topic_and_pedagogical_evidence": {
+        "status": "review_only",
+        "page_title": "Exercícios sobre a Formação Territorial do Brasil - com gabarito",
+        "h1": [
+          "Exercícios sobre a Formação Territorial do Brasil - com gabarito"
+        ],
+        "prior_editorial_note_excerpt": "Consultado em 2026-10-10. Itens conferidos: Questões 1 (D), 2 (B), 3 (C) e 5 (D); gabaritos conferidos. Limites: Complemento interdisciplinar sob"
+      },
+      "basic_accessibility": {
+        "status": "markup_only",
+        "lang": "pt-BR",
+        "headings": 2,
+        "image_alt": [
+          1,
+          1
+        ],
+        "iframe_titles": [
+          0,
+          0
+        ],
+        "landmarks": [
+          "aside",
+          "footer",
+          "header",
+          "main",
+          "nav"
+        ],
+        "limits": "Keyboard, screen reader and WCAG not tested."
+      },
+      "rights": {
+        "status": "link_only",
+        "evidence": "Copyright/terms notice observed; no clear open license identified."
+      },
+      "status_changed": false
+    }
+  ],
+  "editorial_conclusion": "Evidence audit only; no editorial/database status changed. Anti-bot/JS challenges are inconclusive; reuse stays link_only or unknown."
+}

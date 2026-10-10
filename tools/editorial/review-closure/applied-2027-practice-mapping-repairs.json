@@ -1,0 +1,316 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T10:37:24.032451+00:00",
+  "database_before_sha256": "b9aecad5bedaa7341c96a34df3ed3fd538ffdecfad44db331bf048dc22c74a7e",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2778,
+        "canonical_topic_id": 2501
+      },
+      "expected": {
+        "relation_type": "primary",
+        "review_status": "published"
+      },
+      "changes": {
+        "review_status": "review"
+      },
+      "reason": "A questão QT 42 calcula o retorno financeiro de um sistema fotovoltaico por porcentagens e divisão; ela não exige conjuntos numéricos como conteúdo central. Retirar a classificação publicada que a fazia aparecer como prática de conjuntos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=14",
+          "detail": "Simulado oficial preparatório para 2027, caderno Q/T, questão 42. O enunciado calcula economia mensal e prazo de retorno do investimento, sem operar com conjuntos."
+        },
+        {
+          "locator": "sqlite://question_canonical_topics/2778/2501",
+          "detail": "Relação editorial publicada que será devolvida à revisão; a associação não é uma classificação oficial da Comvest."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 339,
+        "canonical_topic_id": 2468
+      },
+      "expected": {
+        "relation_type": "primary",
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "related"
+      },
+      "reason": "A associação genérica a Matemática não deve ocupar a classificação principal da questão QX 51; ela fica registrada como relacionada enquanto a classificação específica em conjuntos é publicada.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=19",
+          "detail": "Prova oficial da primeira fase de 2026, caderno Q/X, questão 51, cujo enunciado define um conjunto de números naturais por desigualdades."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 339,
+        "canonical_topic_id": 2501
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 339,
+        "canonical_topic_id": 2501,
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 19,
+        "source_excerpt": "O enunciado define A = {x ∈ ℕ: |x − 5| ≥ 2 e |x − 11| ≤ 9} e pede quantos números primos pertencem a A.",
+        "review_status": "published"
+      },
+      "reason": "A questão QX 51 de 2026 exige interpretar e operar com um conjunto de números naturais definido por desigualdades e módulo; é uma prática direta de conjuntos numéricos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=19",
+          "detail": "Prova oficial da primeira fase de 2026, caderno Q/X, questão 51. O conjunto A é definido explicitamente por condições em ℕ e a questão pede a contagem de primos que o satisfazem."
+        },
+        {
+          "locator": "sqlite://question_occurrences/339",
+          "detail": "Ocorrência QX 2026 Q51 vinculada à questão canônica 339, com a ordem e o caderno de origem preservados."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 342,
+        "canonical_topic_id": 2500
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "A questão QX 54 compara pronúncias de ‘advogado’ e ‘adevogado’, discute a consoante muda e a avaliação social de variedades de fala. Fonologia é uma relação editorial secundária pertinente, além do foco textual principal.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=20",
+          "detail": "Prova oficial da primeira fase de 2026, caderno Q/X, questão 54; o enunciado cita a pronúncia, a consoante muda e as críticas sociais à forma de falar."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2469,
+        "canonical_topic_id": 2482
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "O tópico oficial de processos de significação inclui relações lógico-discursivas, intertextualidade e efeitos expressivos de sentido; isso é uma associação secundária adequada ao tópico canônico de funcionamento textual.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=3",
+          "detail": "Programa oficial de 2027, página 3: relações lógico-discursivas, intertextualidade e efeitos expressivos de sentido."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2470,
+        "canonical_topic_id": 2482
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "O tópico oficial de funcionamento social da língua inclui variação, norma, formalidade e estilos, conteúdos pertinentes à interpretação do funcionamento dos textos e dos usos linguísticos.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=3",
+          "detail": "Programa oficial de 2027, página 3: variação linguística, norma culta e outras variedades, formalidade, informalidade e estilos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2474,
+        "canonical_topic_id": 2485
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "A leitura crítica de literatura inclui análise de poesia e linguagem poética; o vínculo é secundário e não substitui o tópico literário principal.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=4",
+          "detail": "Programa oficial de 2027, página 4: leitura de obras literárias em prosa, poesia e teatro."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 338,
+        "canonical_topic_id": 2506
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "A questão QX 50 fornece cos(θ) para calcular a área de um triângulo; trigonometria é ferramenta explícita da resolução, como relação secundária à geometria.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=19",
+          "detail": "Prova oficial da primeira fase de 2026, caderno Q/X, questão 50. O enunciado fornece cos(θ)=2/3 para determinar a área do triângulo PMQ."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 334,
+        "canonical_topic_id": 2507
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "A questão QX 46 usa ângulo de uma reta com o eixo y, equação da reta e distância à origem para determinar coeficientes; geometria analítica é uma relação secundária pertinente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=18",
+          "detail": "Prova oficial da primeira fase de 2026, caderno Q/X, questão 46. O enunciado relaciona equação da reta, inclinação e distância de ponto à origem."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 304,
+        "canonical_topic_id": 2522
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "A questão QX 16 requer leitura de mapa e interpretação geográfica da regionalização Norte/Sul Global; a relação secundária cobre conceitos e representações geográficas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=7",
+          "detail": "Prova oficial da primeira fase de 2026, caderno Q/X, questão 16 e mapa dos países do Norte e Sul Global."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 1,
+        "canonical_topic_id": 2522
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "primary"
+      },
+      "reason": "A questão QZ 1 trata diretamente de escala cartográfica e generalização da informação em mapas; é uma questão de conceitos fundamentais da Geografia.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2025/F1/f12025Q_Z.pdf#page=3",
+          "detail": "Prova oficial da primeira fase de 2025, caderno Q/Z, questão 1: escala cartográfica e generalização da informação em mapas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2807,
+        "canonical_topic_id": 2518
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 2807,
+        "canonical_topic_id": 2518,
+        "relation_type": "secondary",
+        "confidence": 0.72,
+        "source_document_id": 335,
+        "source_page": 21,
+        "source_excerpt": "A questão descreve ligações covalentes entre moléculas de metacrilato e a estrutura reticulada do polímero; o foco principal é polimerização orgânica.",
+        "review_status": "published"
+      },
+      "reason": "A questão Q/T 71 trata principalmente de polímeros orgânicos, mas explicita a formação de ligações covalentes e sua função estrutural. A associação a ligações químicas é secundária, editorial e não equivale a uma tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=21",
+          "detail": "Simulado oficial preparatório para 2027, caderno Q/T, questão 71: ligações covalentes entre moléculas de metacrilato e estrutura reticulada do polímero."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "curriculum_topic_canonical_topics",
+      "key": {
+        "curriculum_topic_id": 2510,
+        "canonical_topic_id": 2520
+      },
+      "expected": {
+        "relation_type": "related",
+        "review_status": "published"
+      },
+      "changes": {
+        "relation_type": "secondary"
+      },
+      "reason": "O tópico oficial combina eletroquímica e compostos orgânicos; química orgânica é um eixo explícito do programa e deve ser uma associação secundária treinável, não apenas relacionada incidentalmente.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=14",
+          "detail": "Programa oficial de 2027, página 14, lista conteúdos de eletroquímica e compostos orgânicos no programa de Química."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T103724042577Z.sqlite",
+  "database_after_sha256": "5e17c082937ece97b4c111fd4e3553be700bc4b14d122ccf4796cc0c14c0acc7"
+}

@@ -1,3 +1,4 @@
+import { readContentAssessment } from "./read-content-assessment.function";
 import type { ContentDatabase } from "./database/content-database.type";
 import type { ContentSnapshotValidationInput } from "@guesant/saberes-application";
 
@@ -12,10 +13,33 @@ export function collectContentSnapshotValidationInput(
     return Number(database.query(sql)[0]?.count || 0);
   };
 
+  const tableNames = tables.map((row) => {return String(row.name || "");});
+
+  const curriculumCoverage = tableNames.includes("curriculum_topic_stages")
+    ? database.query(`SELECT st.id, e.slug edition_slug, st.slug stage_slug,
+        (SELECT COUNT(DISTINCT cts.curriculum_topic_id) FROM curriculum_topic_stages cts WHERE cts.stage_id = st.id) topic_count,
+        (SELECT COUNT(DISTINCT cts.curriculum_topic_id) FROM curriculum_topic_stages cts WHERE cts.stage_id = st.id AND cts.review_status = 'published' AND cts.source_document_id IS NOT NULL) sourced_topic_count,
+        (SELECT COUNT(DISTINCT q.id) FROM questions q JOIN canonical_question_topics cqt ON cqt.question_id = q.id JOIN curriculum_topics ct ON ct.topic_id = cqt.topic_id JOIN curriculum_topic_stages cts ON cts.curriculum_topic_id = ct.id AND cts.stage_id = st.id WHERE q.status = 'published' AND cts.review_status = 'published') question_count,
+        (SELECT COUNT(DISTINCT q.id) FROM questions q JOIN question_skills qsk ON qsk.question_id = q.id JOIN skills sk ON sk.id = qsk.skill_id AND sk.is_published = 1 JOIN canonical_question_topics cqt ON cqt.question_id = q.id JOIN curriculum_topics ct ON ct.topic_id = cqt.topic_id JOIN curriculum_topic_stages cts ON cts.curriculum_topic_id = ct.id AND cts.stage_id = st.id WHERE q.status = 'published' AND cts.review_status = 'published') skill_tagged_question_count,
+        (SELECT COUNT(DISTINCT rt.resource_id) FROM resource_targets rt JOIN resources r ON r.id = rt.resource_id WHERE rt.stage_id = st.id AND r.is_published = 1) resource_count,
+        (SELECT COUNT(*) FROM assessment_sets a WHERE a.stage_id = st.id AND a.kind = 'exam' AND a.is_published = 1) published_exam_count
+      FROM stages st JOIN editions e ON e.id = st.edition_id ORDER BY e.year DESC, st.name`)
+      .map((row) => {
+        const exams = database.query("SELECT id FROM assessment_sets WHERE stage_id = ? AND kind = 'exam' AND is_published = 1", [row.id]);
+
+        const readyExamCount = exams.filter((exam) => {return readContentAssessment(database, `assessment:${exam.id}`)?.assessment.canSimulate;}).length;
+
+        return {
+          editionSlug: String(row.edition_slug), stageSlug: String(row.stage_slug),
+          topicCount: Number(row.topic_count || 0), sourcedTopicCount: Number(row.sourced_topic_count || 0),
+          questionCount: Number(row.question_count || 0), skillTaggedQuestionCount: Number(row.skill_tagged_question_count || 0),
+          resourceCount: Number(row.resource_count || 0), publishedExamCount: Number(row.published_exam_count || 0), readyExamCount,
+        };
+      })
+    : undefined;
+
   return {
-    tables: tables.map((row) => {
-      return String(row.name || "");
-    }),
+    tables: tableNames,
     questionCount: readCount("SELECT COUNT(*) count FROM questions WHERE status = 'published'"),
     publishedProcessCount: readCount(
       "SELECT COUNT(*) count FROM admission_processes WHERE is_published = 1",
@@ -56,5 +80,6 @@ export function collectContentSnapshotValidationInput(
     invalidLessonSectionCount: readCount(
       "SELECT COUNT(*) count FROM lesson_sections WHERE content IS NULL OR TRIM(content) = '' OR content_format NOT IN ('markdown') OR (read_time_minutes IS NOT NULL AND read_time_minutes < 1)",
     ),
+    ...(curriculumCoverage ? { curriculumCoverage } : {}),
   };
 }

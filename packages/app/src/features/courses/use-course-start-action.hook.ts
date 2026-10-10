@@ -3,9 +3,7 @@ import type { CourseStartActionState } from "./course-start-action-state.interfa
 import type { UseCourseStartActionInput } from "./use-course-start-action-input.interface";
 import type { ActionState } from "../../types/action-state.type";
 
-export function useCourseStartAction(
-  input: UseCourseStartActionInput,
-): CourseStartActionState {
+export function useCourseStartAction(input: UseCourseStartActionInput): CourseStartActionState {
   const [state, setState] = useState<ActionState>("idle");
 
   const [error, setError] = useState<Error | null>(null);

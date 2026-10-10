@@ -1,0 +1,300 @@
+{
+  "format": "pdf-qa-structural-alert-audit/v1",
+  "audit_date": "2026-10-10",
+  "qa_report": {
+    "path": ".local/content/staging/pdf-qa-current-20261010.jsonl",
+    "sha256": "65450104ad28ba983d72a3081c48ea380655eef45ccf576d63df95cb6e1f630c",
+    "generated_at": "2026-10-10T11:40:15.477715+00:00"
+  },
+  "database_baseline": {
+    "database_path": ".local/content/content.sqlite",
+    "sha256_recorded_by_qa_report": "0c0959e1f80e69c351168f9a67b919b50ae9dce0c825b589ce5943447a3480f8",
+    "sha256_read_during_audit": "b54bdb4546d89d7f4450374dbbaa094c4040bb068b912889411ac48f4eee2cad",
+    "matches": false,
+    "implication": "The PDF-to-record comparisons below describe the current read-only SQLite state. Because its hash differs from the database hash embedded in the QA JSONL, this audit cannot establish whether a particular option/asset discrepancy existed at QA generation time. Treat historical DB attribution as inconclusive and regenerate the QA report against the current database before closing its findings."
+  },
+  "method": {
+    "pdf_review": "Rendered and visually compared every question page flagged by reviewFlags or issues, including pages adjacent to the alert page where an item continues across a page break. Compared printed option labels and figures against the question/occurrence records and associated assets.",
+    "database_access": "SQLite queried read-only; no writes, migrations, imports, asset changes, or caderno changes were made.",
+    "order_check": "For every flagged occurrence, booklet number, original number, and source_page in question_occurrences match the QA record. Stored occurrence options are A, B, C, D in positions 1–4. No option-order mismatch was found among the flagged items.",
+    "status_vocabulary": {
+      "ocr_false_positive": "The reported extraction/segmentation warning does not indicate a missing or misordered database choice; the source PDF and stored records agree.",
+      "visual_choices_verified": "The choices are graphical in the source and were visually checked; the database has a corresponding figure and/or textual descriptions.",
+      "database_asset_scope_issue": "The question is linked to a whole-page image containing neighboring questions rather than a question-specific figure. This is a database asset-association/scope risk even though the source page is intact."
+    }
+  },
+  "sources": [
+    {
+      "key": "QZ-2025",
+      "edition": 2025,
+      "booklet": "QZ",
+      "source_document_id": 36,
+      "document": "Vestibular Unicamp 2025 — prova da 1ª fase, modelos Q e Z",
+      "source_url": "https://www.comvest.unicamp.br/vest2025/F1/f12025Q_Z.pdf",
+      "local_pdf": ".local/downloads/comvest-2025-2027/2025/exams/first-phase-QZ.pdf",
+      "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710"
+    },
+    {
+      "key": "QX-2026",
+      "edition": 2026,
+      "booklet": "QX",
+      "source_document_id": 44,
+      "document": "Vestibular Unicamp 2026 — prova da 1ª fase, modelos Q e X",
+      "source_url": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+      "local_pdf": ".local/downloads/comvest-2025-2027/2026/exams/first-phase-QX.pdf",
+      "sha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253"
+    },
+    {
+      "key": "QT-2027-preparatory-simulation",
+      "edition": 2027,
+      "booklet": "QT",
+      "document": "Simulado Unicamp 2026 — caderno Q/T, preparação para o Vestibular 2027",
+      "source_document_id": 335,
+      "source_url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf",
+      "local_pdf": ".local/downloads/comvest-2025-2027/2027/simulations/prep-simulation-2027-booklet-QT.pdf",
+      "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+    }
+  ],
+  "summary": {
+    "overall": "The flagged PDF pages preserve the original question sequence and A–D choice order. In the current read-only database, the option-code and label-spill alerts reviewed are OCR/layout false positives, and image-only alerts have corresponding visual/text representation. Historical attribution is inconclusive because the QA JSONL records a different database hash from the one read during this audit. A genuine current-state asset-scope problem remains for the QT questions listed below: question_assets points to complete page images containing neighboring questions.",
+    "confirmed_question_or_option_order_errors": [],
+    "confirmed_missing_database_options": [],
+    "confirmed_database_asset_scope_issues": [
+      {"booklet": "QT", "question": 7, "asset": "official-pdfs/2027-simulation/page-images/qt-page-04.png"},
+      {"booklet": "QT", "question": 35, "asset": "official-pdfs/2027-simulation/page-images/qt-page-12.png"},
+      {"booklet": "QT", "question": 42, "asset": "official-pdfs/2027-simulation/page-images/qt-page-14.png"},
+      {"booklet": "QT", "question": 51, "asset": "official-pdfs/2027-simulation/page-images/qt-page-15.png"},
+      {"booklet": "QT", "question": 58, "asset": "official-pdfs/2027-simulation/page-images/qt-page-17.png"},
+      {"booklet": "QT", "question": 59, "asset": "official-pdfs/2027-simulation/page-images/qt-page-17.png"},
+      {"booklet": "QT", "question": 61, "asset": "official-pdfs/2027-simulation/page-images/qt-page-18.png"},
+      {"booklet": "QT", "question": 67, "asset": "official-pdfs/2027-simulation/page-images/qt-page-19.png"},
+      {"booklet": "QT", "question": 72, "asset": "official-pdfs/2027-simulation/page-images/qt-page-21.png"}
+    ],
+    "scope_note": "‘Sem alternativa ausente’ significa que cada questão sinalizada tem quatro opções A–D armazenadas e ordenadas; para itens gráficos, a opção pode estar representada por imagem ou descrição, não por uma fórmula textual extraída do PDF."
+  },
+  "items": [
+    {
+      "source_key": "QZ-2025", "question": 3, "pdf_page": [3],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "A página mostra o gráfico de barras dos produtores de cacau seguido pelas quatro alternativas textuais A–D. O gráfico está vinculado ao Q3 por asset específico; a ordem do banco coincide com a página. O alerta de pontuação matemática não corresponde a uma quebra ou troca de opção.",
+      "status": ["ocr_false_positive", "figure_link_verified"],
+      "proposed_correction": "Fechar o alerta como falso positivo do extrator; manter o gráfico específico associado ao Q3. Nenhuma correção de questão ou opção indicada."
+    },
+    {
+      "source_key": "QZ-2025", "question": 17, "pdf_page": [8],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+      "observation": "O PDF apresenta quatro alternativas A–D para a leitura do gráfico ‘Amplified Stereotypes’. A extração fragmenta a alternativa A no limite de coluna/fluxo e absorve o rótulo d) no texto de C; o banco contém A ‘Motorista de taxi e comissário(a) de bordo’, B, C e D completos, na ordem da prova. O gráfico está associado ao Q17.",
+      "status": ["ocr_false_positive", "figure_link_verified"],
+      "proposed_correction": "Fechar os alertas de códigos como segmentação OCR/layout; preservar as quatro opções e o gráfico já armazenados."
+    },
+    {
+      "source_key": "QZ-2025", "question": 36, "pdf_page": [14],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "O PDF mostra as opções A–D completas para a comparação entre o mural de Simone Siss e o texto da canção. A extração textual anexou ao fim de D o cabeçalho/texto comum das questões 37–38; o D armazenado termina no ponto correto. O mural é estímulo compartilhado pertinente às questões 35–36, não uma figura deslocada.",
+      "status": ["ocr_false_positive", "shared_stimulus_link_verified"],
+      "proposed_correction": "Tratar o texto posterior como spill de OCR e encerrar a extração em D; nenhuma mudança no registro do banco indicada."
+    },
+    {
+      "source_key": "QZ-2025", "question": 49, "pdf_page": [17],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "Enunciado de reajustes percentuais com quatro respostas monetárias A–D claramente impressas. Valores, rótulos e ordem no banco coincidem com o PDF; não há figura necessária nesta questão.",
+      "status": ["ocr_false_positive"],
+      "proposed_correction": "Fechar a sinalização heurística de pontuação; manter enunciado e opções atuais."
+    },
+    {
+      "source_key": "QZ-2025", "question": 50, "pdf_page": [18],
+      "alerts": {"reviewFlags": [], "issues": ["image_only_alternatives_require_visual_review"]},
+      "observation": "As alternativas não são imagens: o PDF imprime quatro expressões radicais A–D. As quatro expressões estão como texto em question_options e question_occurrence_options na mesma ordem. A extração Docling deixou extractedOptions vazio por falha ao ler matemática tipográfica.",
+      "status": ["ocr_false_positive", "database_options_verified"],
+      "proposed_correction": "Fechar o alerta como falso positivo de OCR matemático; manter as quatro expressões textuais armazenadas."
+    },
+    {
+      "source_key": "QZ-2025", "question": 58, "pdf_page": [19],
+      "alerts": {"reviewFlags": [], "issues": ["image_only_alternatives_require_visual_review"]},
+      "observation": "O PDF realmente apresenta quatro alternativas gráficas A–D (curvas Q(t)). O banco mantém quatro posições A–D com rótulos ‘Gráfico da alternativa …’ e um asset específico qz-q58-pollution-graph-options.png, cujo texto alternativo descreve separadamente as quatro curvas; a sequência visual e as letras estão presentes.",
+      "status": ["visual_choices_verified", "asset_and_alt_text_present", "option_level_accessibility_should_be_preserved"],
+      "proposed_correction": "Não classificar como alternativa ausente. Manter o asset e garantir que a interface exponha a descrição detalhada para cada escolha, não apenas o placeholder ‘Gráfico da alternativa X’."
+    },
+    {
+      "source_key": "QZ-2025", "question": 67, "pdf_page": [22],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "As quatro combinações de lacunas A–D estão impressas e armazenadas na mesma ordem. A extração acrescenta um marcador de imagem após D, que não integra a alternativa no PDF; a figura de questão vizinha está fora do item 67.",
+      "status": ["ocr_false_positive", "page_boundary_spill"],
+      "proposed_correction": "Remover apenas o spill da saída de QA, sem alterar a opção D ou importar a figura da questão vizinha para Q67."
+    },
+    {
+      "source_key": "QZ-2025", "question": 72, "pdf_page": [23],
+      "alerts": {"reviewFlags": [], "issues": ["duplicate_or_spill_option_label_groups", "options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+      "observation": "O PDF mostra a figura das combinações de gametas e, abaixo, quatro alternativas textuais A–D. O extrator começou no fragmento final de A e agrupou B–D; no banco há quatro textos completos em ordem A–D. A figura qz-q72-recombinant-gametes.png corresponde ao diagrama do enunciado, não às alternativas.",
+      "status": ["ocr_false_positive", "figure_link_verified"],
+      "proposed_correction": "Fechar o alerta de rótulos como spill OCR; manter opções e diagrama atuais."
+    },
+    {
+      "source_key": "QX-2026", "question": 13, "pdf_page": [6],
+      "alerts": {"reviewFlags": [], "issues": ["image_only_alternatives_require_visual_review"]},
+      "observation": "As alternativas A–D são quatro gráficos s(t) visíveis no PDF. O banco contém quatro descrições textuais ordenadas e a imagem oficial F1_26_FIS_Q13.jpg, que traz enunciado e alternativas originais. As descrições A–D correspondem às formas e aos trechos temporais dos gráficos.",
+      "status": ["visual_choices_verified", "text_descriptions_and_source_image_present"],
+      "proposed_correction": "Fechar como alternativa gráfica representada; manter imagem e descrições sincronizadas por letra."
+    },
+    {
+      "source_key": "QX-2026", "question": 18, "pdf_page": [8],
+      "alerts": {"reviewFlags": [], "issues": ["image_only_alternatives_require_visual_review"]},
+      "observation": "O mapa da bacia do Indo é estímulo do enunciado; as quatro alternativas A–D são frases textuais visíveis no PDF e estão integralmente armazenadas na ordem correta. O asset específico qx-q18-indus-basin-map-450dpi.png corresponde ao mapa, não a opções pictóricas.",
+      "status": ["ocr_false_positive", "map_stimulus_verified", "database_options_verified"],
+      "proposed_correction": "Fechar alerta como erro de classificação do conteúdo extraído; não tratar as alternativas textuais como imagens."
+    },
+    {
+      "source_key": "QX-2026", "question": 19, "pdf_page": [8],
+      "alerts": {"reviewFlags": [], "issues": ["spill_option_labels_before_or_outside_table:ABC"]},
+      "observation": "As alternativas estão diagramadas como quatro linhas A–D de uma tabela com colunas ‘Disputas’ e ‘Alianças’. Os rótulos pertencem às linhas, não estão fora da tabela. O banco armazena as quatro combinações completas na ordem original; o mapa do Irã está ligado como estímulo.",
+      "status": ["ocr_false_positive", "table_option_order_verified", "map_stimulus_verified"],
+      "proposed_correction": "Fechar o alerta de rótulos fora da tabela como falso positivo de leitura tabular."
+    },
+    {
+      "source_key": "QX-2026", "question": 27, "pdf_page": [11],
+      "alerts": {"reviewFlags": [], "issues": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+      "observation": "A questão de Cícero tem alternativas textuais A–D no PDF. A extração não separou D do final do bloco anterior; question_options e question_occurrence_options têm os quatro textos completos na ordem visual.",
+      "status": ["ocr_false_positive", "database_options_verified"],
+      "proposed_correction": "Fechar divergência como segmentação OCR; nenhuma alteração do registro de questão indicada."
+    },
+    {
+      "source_key": "QX-2026", "question": 33, "pdf_page": [13, 14],
+      "alerts": {"reviewFlags": [], "issues": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+      "observation": "O item atravessa a quebra de página: as imagens de Zuzu Angel e o início do enunciado aparecem na página PDF 13; a continuação, as figuras do quepe/canhão e as quatro alternativas A–D aparecem na página PDF 14. O banco tem A–D em ordem e três assets específicos correspondentes ao vestido, quepe e canhão. A extração interrompida após B é spill/page-break, não perda no banco.",
+      "status": ["ocr_false_positive", "page_break_segmentation", "three_figure_links_verified"],
+      "proposed_correction": "Reconhecer o intervalo de páginas 13–14 no QA e fechar discrepância de opções; manter os três assets e a sequência A–D."
+    },
+    {
+      "source_key": "QX-2026", "question": 44, "pdf_page": [17],
+      "alerts": {"reviewFlags": [], "issues": ["image_only_alternatives_require_visual_review"]},
+      "observation": "O gráfico de f(g(x)) é parte do enunciado; as alternativas são valores textuais −2, −3, −4 e −5, claramente impressos e armazenados como A–D. O asset qx-q44-composite-function-graph-450dpi.png corresponde ao gráfico, não a escolhas gráficas.",
+      "status": ["ocr_false_positive", "graph_stimulus_verified", "database_options_verified"],
+      "proposed_correction": "Fechar alerta como confusão entre gráfico de estímulo e alternativas; manter estrutura atual."
+    },
+    {
+      "source_key": "QX-2026", "question": 50, "pdf_page": [19],
+      "alerts": {"reviewFlags": [], "issues": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+      "observation": "As quatro alternativas são expressões matemáticas diagramadas sob o desenho do quadrado/triângulo. O PDF mostra A–D; o banco contém as quatro expressões na mesma ordem e o asset específico qx-q50-square-isosceles-triangle-450dpi.png como figura do enunciado. O extrator identificou apenas A e B por dificuldade com fórmulas.",
+      "status": ["ocr_false_positive", "math_options_and_figure_verified"],
+      "proposed_correction": "Fechar mismatch de códigos como falha OCR de notação matemática; preservar opções e figura existentes."
+    },
+    {
+      "source_key": "QX-2026", "question": 56, "pdf_page": [20],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "A notação da progressão e da soma aparece com subscritos no PDF; o enunciado e as quatro respostas numéricas A–D estão armazenados, ordenados e sem uma figura ausente.",
+      "status": ["ocr_false_positive", "database_options_verified"],
+      "proposed_correction": "Fechar como alerta heurístico de pontuação/notação; nenhuma correção de dados indicada."
+    },
+    {
+      "source_key": "QX-2026", "question": 58, "pdf_page": [21],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "As quatro alternativas A–D do item aparecem como texto no PDF e no banco. O meme Nazaré Confusa é figura do estímulo e está associado por asset específico qx-q58-nazare-confusa-meme-300dpi.jpg; não substitui nem embaralha as opções.",
+      "status": ["ocr_false_positive", "figure_link_verified", "database_options_verified"],
+      "proposed_correction": "Fechar alerta de notação; manter o meme vinculado ao enunciado e as quatro opções textuais."
+    },
+    {
+      "source_key": "QX-2026", "question": 59, "pdf_page": [22],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "As quatro alternativas do item textual estão visíveis e armazenadas como A–D na mesma ordem. A imagem do meme Ghibli/Nazaré está em asset próprio para Q59 e não se confunde com as opções.",
+      "status": ["ocr_false_positive", "figure_link_verified", "database_options_verified"],
+      "proposed_correction": "Fechar alerta heurístico; nenhuma alteração de opção ou imagem indicada."
+    },
+    {
+      "source_key": "QX-2026", "question": 65, "pdf_page": [24],
+      "alerts": {"reviewFlags": [], "issues": ["options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+      "observation": "O poema ‘Alvorada’ é seguido no PDF pelas quatro alternativas A–D, todas textuais. O banco contém A–D completos na ordem correta; a extração listou só A–C, compatível com truncamento/segmentação e não com falta no registro.",
+      "status": ["ocr_false_positive", "database_options_verified"],
+      "proposed_correction": "Fechar alerta após preservar a divisão do PDF; não acrescentar alternativa duplicada."
+    },
+    {
+      "source_key": "QX-2026", "question": 68, "pdf_page": [25],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "A tabela de combustíveis integra o estímulo do enunciado e está no asset específico qx-q68-fuel-properties-table-450dpi.png. As respostas A–D são textos de preenchimento e aparecem na mesma ordem no PDF e no banco.",
+      "status": ["ocr_false_positive", "table_stimulus_verified", "database_options_verified"],
+      "proposed_correction": "Fechar sinalização heurística; manter a tabela como estímulo e opções textuais atuais."
+    },
+    {
+      "source_key": "QX-2026", "question": 71, "pdf_page": [26],
+      "alerts": {"reviewFlags": [], "issues": ["duplicate_or_spill_option_label_groups"]},
+      "observation": "A questão usa uma tabela com campos a–d e, separadamente, quatro respostas A–D. O PDF mostra as opções em sequência; o banco tem quatro códigos únicos A–D na ordem correta. A detecção de grupos duplicados resulta da proximidade entre rótulos de lacuna e rótulos de alternativa.",
+      "status": ["ocr_false_positive", "table_and_option_labels_distinguished"],
+      "proposed_correction": "Fechar alerta distinguindo as letras de lacuna a–d das alternativas A–D; sem alteração do banco."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 3, "pdf_page": [3],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "O PDF apresenta o post ilustrado como Texto A, o Texto B e opções textuais A–D. O asset específico qt-q03-social-media.png corresponde ao post; opções e ordem do banco coincidem com a página.",
+      "status": ["ocr_false_positive", "figure_link_verified", "database_options_verified"],
+      "proposed_correction": "Fechar o alerta heurístico; preservar a imagem específica de Texto A e as opções atuais."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 7, "pdf_page": [4],
+      "alerts": {"reviewFlags": [], "issues": ["duplicate_or_spill_option_label_groups", "options_not_exactly_A_to_D", "extracted_option_codes_do_not_match_database"]},
+      "observation": "A página 4 mostra as quatro opções A–D da questão 7; o banco armazena as quatro na mesma ordem. O alerta é de segmentação OCR. Separadamente, o question_asset associado é qt-page-04.png, a página inteira com questões 6–8, não um recorte específico de Q7.",
+      "status": ["ocr_false_positive", "database_asset_scope_issue"],
+      "proposed_correction": "Fechar o alerta de alternativas como OCR; para uso por questão, não expor a imagem de página inteira como se fosse exclusiva de Q7. Reassociar a evidência à página-fonte ou criar recorte específico somente em trabalho posterior autorizado."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 35, "pdf_page": [12],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "As alternativas A–D sobre excretas são texto claro e estão completas/ordenadas no banco. O asset ligado, qt-page-12.png, é a página inteira com Q34–Q37, não figura exclusiva de Q35; pode mostrar conteúdo de questões vizinhas no contexto da questão.",
+      "status": ["ocr_false_positive", "database_asset_scope_issue"],
+      "proposed_correction": "Fechar o alerta OCR; retirar a página inteira da associação de figura de Q35 ou mantê-la apenas como evidência documental, sem exibição como asset exclusivo."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 42, "pdf_page": [14],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "As opções de prazo A–D correspondem ao PDF e ao banco. O asset qt-page-14.png é a página completa Q42–Q48 e sua descrição identifica a figura de triângulo da Q45, alheia à Q42: associação em escopo errado confirmada.",
+      "status": ["ocr_false_positive", "confirmed_wrong_question_asset_scope"],
+      "proposed_correction": "Manter as alternativas de Q42; remover a associação da página 14 como imagem específica de Q42 ou restringi-la a evidência da fonte."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 51, "pdf_page": [15],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "Os valores A–D para o custo do lanche estão visíveis e coincidem com as quatro opções do banco. qt-page-15.png representa a página inteira Q49–Q54, portanto não é um asset isolado de Q51 e inclui itens vizinhos/figuras de outros itens.",
+      "status": ["ocr_false_positive", "database_asset_scope_issue"],
+      "proposed_correction": "Fechar o alerta OCR; limitar a associação visual de Q51 a conteúdo próprio ou conservar a página apenas como evidência de origem."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 58, "pdf_page": [17],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "O PDF contém texto-base e quatro opções A–D, todas espelhadas em ordem no banco. O asset qt-page-17.png é página completa Q57–Q59 e contém também a tirinha da Q59; a figura não é exclusiva da Q58.",
+      "status": ["ocr_false_positive", "confirmed_neighbor_question_asset_inclusion"],
+      "proposed_correction": "Fechar alerta OCR; remover a página inteira do papel de figura específica da Q58, mantendo-a como referência do documento se necessário."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 59, "pdf_page": [17],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "O PDF apresenta a tirinha de racismo ambiental seguida pelas opções textuais A–D; os textos e a ordem do banco coincidem. O asset associado, porém, é a página inteira Q57–Q59, não só a tirinha/Q59.",
+      "status": ["ocr_false_positive", "database_asset_scope_issue"],
+      "proposed_correction": "Fechar alerta OCR; preferir o recorte/asset da tirinha como mídia de Q59 e reservar a página completa para referência documental."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 61, "pdf_page": [18],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "O trecho de Olhos d’água e as quatro respostas A–D estão íntegros e na ordem do PDF. qt-page-18.png reúne Q60–Q63 em uma única imagem, não uma figura específica da Q61; sua exibição pode trazer enunciados vizinhos.",
+      "status": ["ocr_false_positive", "database_asset_scope_issue"],
+      "proposed_correction": "Fechar alerta OCR; desassociar a página total como figura exclusiva de Q61 ou restringi-la a evidência documental."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 67, "pdf_page": [19],
+      "alerts": {"reviewFlags": ["math_or_markdown_punctuation_requires_visual_review"], "issues": []},
+      "observation": "As opções A–D sobre bolsas térmicas estão completas no PDF e no banco; fórmulas químicas/entalpias explicam o alerta de pontuação. O asset qt-page-19.png é página inteira Q64–Q67, não uma figura recortada da questão 67.",
+      "status": ["ocr_false_positive", "database_asset_scope_issue"],
+      "proposed_correction": "Fechar alerta OCR; não usar a página inteira como figura exclusiva de Q67."
+    },
+    {
+      "source_key": "QT-2027-preparatory-simulation", "question": 72, "pdf_page": [21],
+      "alerts": {"reviewFlags": [], "issues": ["image_only_alternatives_require_visual_review"]},
+      "observation": "O PDF mostra quatro gráficos A–D; as descrições textuais das quatro opções no banco preservam a ordem e os aspectos distintivos (patamares diferentes, patamar comum, patamares distintos e cruzamento). A imagem qt-page-21.png contém a página inteira impressa 19, com Q71 e Q72, em vez de um recorte exclusivo dos quatro gráficos. O alerta não indica opção ausente, mas a associação é ampla demais para uma visualização por questão.",
+      "status": ["visual_choices_verified", "text_descriptions_present", "database_asset_scope_issue"],
+      "proposed_correction": "Manter descrições A–D e sua ordem; limitar o asset visual aos gráficos da Q72 ou conservar a página completa apenas como fonte documental."
+    }
+  ],
+  "non_mutation": {
+    "sqlite_modified": false,
+    "booklets_modified": false,
+    "assets_modified": false,
+    "only_deliverable": "content/editorial/unicamp-2027/pdf-qa-issues-audit-2026-10-10.json"
+  }
+}

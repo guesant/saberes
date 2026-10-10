@@ -19,6 +19,8 @@ export function createStartCourseAction(
 
     await startCourse({ services: input.services, course: input.course });
 
-    await input.queryClient.invalidateQueries({ queryKey: ["progress", "enrollments"] });
+    await input.queryClient.invalidateQueries({
+      queryKey: ["progress", "enrollments"],
+    });
   };
 }

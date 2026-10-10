@@ -1,7 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { useAppServices } from "../../composition/use-app-services.hook";
 import { getQueryViewState } from "../../view-models/get-query-view-state.function";
+import type { TrainingScope } from "@guesant/saberes-domain";
 import type { TopicReadModel } from "@guesant/saberes-application";
+
+const unicamp2027FirstPhaseScope: TrainingScope = {
+  targetEditionSlug: "unicamp-2027",
+  targetStageSlug: "primeira-fase",
+};
 
 export type TopicViewModelState = "loading" | "error" | "ready";
 
@@ -19,7 +25,7 @@ export function useTopicViewModel(slug: string): TopicViewModel {
     queryKey: ["topic", slug],
     enabled: Boolean(slug),
     queryFn: () => {
-      return services.topics.get.execute(slug);
+      return services.topics.get.execute(slug, unicamp2027FirstPhaseScope);
     },
   });
 

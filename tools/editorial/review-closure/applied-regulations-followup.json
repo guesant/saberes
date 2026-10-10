@@ -1,0 +1,532 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:04:40.463423+00:00",
+  "database_before_sha256": "fec941ea8c78f80e4bf48db59c6925af7ed79f6835d7bbc237021c389686a245",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 15
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "Podem se inscrever candidatos que concluíram o ensino médio ou equivalente, que estejam cursando e o concluam até o fim de 2026, ou que já tenham diploma de curso superior."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A elegibilidade geral está expressa no art. 4º; os parágrafos distinguem quem deve concorrer como treineiro, sem retirar a possibilidade de inscrição. O enunciado resume corretamente a edição 2027.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Resolução GR-022/2026 consolidada, art. 4º, I–III e §§1º–2º: certificado de Ensino Médio/equivalente, cursando Ensino Médio e diploma superior; quem não concluirá em 2026 inscreve-se como treineiro; quem conclui em 2026 não pode ser treineiro."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, seção de inscrição e treineiros, consultada em conjunto com art. 4º; confirma que a distinção é de modalidade de participação, não de elegibilidade geral."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 16
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A inscrição é individual, vinculada ao CPF ou CRNM do candidato; podem ser indicados até dois cursos da mesma área de conhecimento. O candidato deve declarar o documento de identificação com foto que apresentará nas provas."
+      },
+      "changes": {
+        "editorial_status": "published",
+        "statement": "A inscrição é individual e exige o CPF do próprio candidato; para brasileiros e estrangeiros portadores de CRNM, deve ser informado o CPF, não a CRNM como alternativa. Além do CPF, informa-se um documento de identificação com foto aceito — a CRNM é uma das opções. Podem ser indicados até dois cursos da mesma área, e o candidato deve declarar qual documento com foto apresentará nas provas."
+      },
+      "reason": "Corrige erro factual claro do enunciado atual: ele apresenta CPF e CRNM como alternativas para inscrição. A norma separa a exigência de CPF próprio do campo de documento fotográfico, no qual CRNM é uma opção. A redação corrigida preserva as regras sobre opções de curso.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Resolução GR-022/2026 consolidada, art. 13, §6º: brasileiros e estrangeiros portadores de CRNM informam o CPF próprio, não sendo aceito CPF de responsável; em seguida, determina informar além do CPF um documento com foto e lista a CRNM entre as opções. Art. 17, §§1º–2º: segunda opção em curso da mesma área, quando elegível."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 19, conferida visualmente: seção ‘Documento de identidade’ diz que se informa CPF e também documento com foto; inclui CRNM na lista de documentos fotográficos. A página, portanto, confirma que CRNM não substitui o CPF."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 17
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A taxa de inscrição foi de R$ 230, com pagamento até 08/09/2026 às 17h após prorrogação oficial. O Manual informa que não havia pagamento por PIX nem restituição da taxa; a confirmação da inscrição dependia da compensação, cuja consulta cabia ao candidato."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Os valores e condições foram conferidos no Manual; o comunicado posterior comprova o prazo prorrogado. A formulação está no passado e identificada com a edição 2027, evitando apresentá-la como instrução vigente para outro processo seletivo.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 18, conferida visualmente: taxa de R$ 230, instrução de boleto, pagamento sem PIX, ausência de restituição e consulta da situação após compensação."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/unicamp-prorroga-inscricoes-para-o-vestibular-2027-ate-o-dia-8-de-setembro/",
+          "detail": "Comunicado oficial de 31/08/2026: inscrição e pagamento prorrogados até 08/09/2026 às 17h; fixa o prazo posterior ao inicialmente impresso no Manual."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 18
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A isenção deferida não substituía a inscrição: o candidato precisava concluir o cadastro usando o código individual. O Manual também prevê redução de 50% para quem atendesse aos requisitos legais e apresentasse documentação dentro do período de solicitação divulgado."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A regra distingue corretamente isenção integral de inscrição e redução parcial. Publicação como informação histórica da edição 2027, sem sugerir que os prazos de solicitação ainda estejam abertos.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Resolução GR-022/2026 consolidada, art. 13, §3º, e art. 15, §2º e Anexo VII: isentos permanecem obrigados a se inscrever; redução parcial de 50%, período e requisitos próprios."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 19, conferida visualmente: a isenção gera código individual, mas não inscrição automática; redução de 50% tem janela, dois requisitos cumulativos e envio de documentação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 19
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "Treineiro é quem não concluirá o ensino médio até o fim de 2026 e pode optar por apenas um dos três cursos de treineiro. Não concorre às vagas regulares nem participa de Habilidades Específicas. Para a segunda fase, o limite é de até cinco vezes as vagas simuladas do curso, desde que alcance pelo menos 18 pontos na primeira fase; essas colocações não dão direito à matrícula."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "As condições e limites foram cotejados na norma e no Manual; o texto deixa claro que as posições simuladas não representam vagas de graduação.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 4º, §§1º–2º; art. 13, §§12º e 14º; art. 16, §4º; art. 21, §§3º–4º: definição temporal, escolha de um entre três cursos, não participação em Habilidades Específicas, limite de 5x, mínimo de 18 pontos e ausência de direito à matrícula."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 20: seção de treineiros resume as três modalidades, restrições e caráter simulado das colocações."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 20
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A solicitação de atendimento especializado exige declaração no formulário e documentação médica conforme o Manual; para o processo 2027, o laudo deveria ter data de 2025 ou 2026 e justificar os recursos requeridos. O indeferimento podia ser contestado no prazo de 48 horas, sem apresentação de novos documentos nessa etapa."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A data do laudo e o prazo de recurso foram conferidos em fonte normativa e no Manual. A redação está no passado e mantém a concessão sujeita a análise, sem prometer recursos automaticamente.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 14 e Anexo VI: solicitação e documentação; Anexo VI estabelece emissão do laudo em 2025 ou 2026, justificativa dos recursos, procedimento de análise e recurso em até 48 horas sem novos documentos."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, pp. 20–21: requisitos documentais, análise individual, recursos previstos e prazo de 48 horas para recurso sem anexar novos documentos."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 21
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O candidato deve apresentar documento original de identificação dentre os tipos aceitos no Manual e o documento declarado na inscrição; a identificação civil pode incluir coleta de dados biométricos e fotografia. A Comvest pode realizar detecção individual de metais ou equipamentos eletrônicos; fraude, uso de meios ilícitos ou perturbação da aplicação pode levar à eliminação."
+      },
+      "changes": {
+        "editorial_status": "published",
+        "statement": "O candidato deve apresentar nas provas o documento original com foto aceito e indicado na inscrição. A identificação civil com conferência do documento e coleta de assinatura, impressões digitais e/ou identificação facial está prevista durante a 2ª fase. A Comvest também pode realizar detecção individual de metais ou equipamentos eletrônicos; fraude, uso de meios ilícitos ou perturbação da aplicação pode levar à eliminação."
+      },
+      "reason": "A correção evita generalizar a coleta biométrica: a regra normativa situa esse procedimento especificamente na segunda fase. A exigência do documento nas provas, a detecção e a possibilidade de eliminação continuam resumidas separadamente.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 13, §§6º–8º: documento com foto indicado deve ser apresentado nas fases; identificação civil por assinatura, digitais e/ou face está especificada para a 2ª fase. Art. 13, §10, trata da recusa ao procedimento."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 19, conferida visualmente: exigência de documento nas duas fases e biometria explicitamente durante a 2ª fase; p. 24: detecção individual e consequências de fraude/meios ilícitos/perturbação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 22
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O candidato podia indicar cidade para as fases, observadas as opções disponíveis; a preferência por região da cidade de São Paulo não garantia alocação nessa região. Em situações excepcionais de desastre, falha de sistema, segurança ou emergência, a Comvest pode adotar medidas de contingência previstas na Resolução."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "O resumo distingue preferência de alocação efetiva e atribui as medidas de contingência à Resolução, sem sugerir garantia de local. A confirmação pública da edição operacional está no Manual e na página Comvest.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 13, §§15º–19º: indicação de cidade/região, capacidade operacional e possibilidade de alocação em outra região; art. 54: contingências e medidas possíveis em casos excepcionais."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção Escolha da cidade: cidade da 1ª fase vale para a 2ª, ressalvadas exceções enumeradas; página orienta consultar o local individual divulgado pela Comvest."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 25: regras de escolha de cidade e exceções entre fases, preferência por região de São Paulo e situações excepcionais de mudança de local."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 23
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O PAAIS é facultativo e deve ser indicado na inscrição. Para quem cursou integral e exclusivamente o Ensino Médio em escola pública brasileira, são acrescidos 40 pontos à NF1; para quem cursou integral e exclusivamente o Ensino Fundamental II em escola pública brasileira, 20 pontos; os benefícios podem ser cumulativos (60 pontos). Se convocado à segunda fase, a mesma bonificação aplicada na primeira fase é acrescida à nota padronizada de Redação e às notas padronizadas que compõem a NF2. A elegibilidade depende das condições de escolarização e exclusões dos arts. 9º–12."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Valores, aplicação nas notas e caráter facultativo foram conferidos. O texto remete expressamente aos critérios e exclusões normativos, evitando ampliar a elegibilidade por uma paráfrase curta.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Arts. 9º–12 e 34: bonificações de 40 e 20 pontos, cumulatividade, repetição na redação/notas padronizadas da 2ª fase, opção na inscrição, critérios de escolarização, exclusões e comprovação."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, pp. 16–17: explicação operacional do PAAIS, pontuação, indicação na inscrição e aplicação nas notas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 24
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "A convocação para a segunda fase considera o curso de primeira opção e a NF1: exige pelo menos 550 pontos e segue limite máximo de 6 vezes as vagas do curso quando a relação candidato/vaga é menor que 100; 8 vezes para relação de 100 a menos de 200; e 10 vezes para relação igual ou superior a 200. O mínimo é quatro vezes o número de vagas, desde que os candidatos cumpram a regra de eliminação; empates na última posição convocam todos os empatados. Para treineiros aplicam-se limites próprios."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "Critérios, limites inclusivos nas faixas, mínimo de convocação, empate e exceção de treineiros foram cotejados com a redação normativa; nenhum número por curso foi inferido.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Arts. 20–22, especialmente art. 21, caput e §§1º–5º: NF1 e corte de 550, limites de 6x/8x/10x, mínimo de 4x, treineiros, regra de eliminação e convocação dos empatados."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 22, conferida visualmente: quadro de convocação para a 2ª fase, corte, faixas, mínimo por curso e regra de empate."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 25
+      },
+      "expected": {
+        "editorial_status": "review",
+        "statement": "O Manual e o Anexo III definem por curso até duas provas prioritárias, a respectiva Nota Mínima de Opção (NMO) e pesos das provas. A NMO integra os critérios de classificação e convocação por opção; a ordem das provas prioritárias também é usada em desempates. Os valores variam entre cursos e devem ser consultados na tabela oficial, não generalizados por área."
+      },
+      "changes": {
+        "editorial_status": "published"
+      },
+      "reason": "A proposta publica apenas a regra geral e encaminha os valores variáveis à tabela oficial. A alteração de nomenclatura GR-026/2026 foi conferida e preservada como fonte normativa correlata, sem transcrição de dados curso a curso.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Arts. 25–26 e 33 e Anexo III: pesos, NMO, provas prioritárias e ordem relevante para classificação/desempate; os critérios dependem do curso."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Pesos-e-notas-minimas-por-curso-Vestibular-Unicamp-2027.pdf",
+          "detail": "Tabela oficial de 4 páginas: quadro individual por curso contém provas prioritárias, NMO e pesos. A decisão aprova somente a descrição geral, não uma transcrição integral da tabela."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32405/0",
+          "detail": "Resolução GR-026/2026, publicada em 03/08/2026: corrige a denominação ‘Música Erudita: Bateria’ para ‘Música Erudita: Percussão’ nos Anexos I–IV; não altera os critérios gerais descritos nesta regra."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 241
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 144,
+        "url": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "description": "Página oficial do Vestibular Unicamp 2027, com acesso ao Manual do Ingresso e ao Programa das Provas da edição. Referência de navegação para documentos e orientações oficiais; não substitui os documentos vinculados."
+      },
+      "reason": "A página oficial identifica a edição e fornece os links para os documentos vigentes da Comvest. Aprovação limitada à ficha de referência e identidade do material; sem autorização de reprodução presumida.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Página oficial da edição 2027 consultada em 09/10/2026: identifica o processo e oferece links para Manual do Ingresso e Programa das Provas, além de informações operacionais da edição."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 242
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 145,
+        "url": "https://www.pg.unicamp.br/norma/32393/0"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Referência histórica à redação original da Resolução GR-022/2026, de 14/07/2026. Foi alterada pela GR-026/2026; para regra consolidada, consultar também a ficha da redação consolidada. Esta aprovação cobre identidade e função histórica da referência, não reprodução do texto nem licença de uso."
+      },
+      "reason": "A fonte oficial identifica a redação original e remete à alteração. Mantê-la como histórico, junto da referência consolidada, evita apresentá-la isoladamente como texto atual.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/0",
+          "detail": "Página oficial da norma: Resolução GR-022/2026 original, datada de 14/07/2026, com indicação de alteração posterior."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32405/0",
+          "detail": "Resolução GR-026/2026, de 30/07/2026 e publicada em 03/08/2026, identifica a alteração da GR-022/2026."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 243
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 146,
+        "url": "https://www.pg.unicamp.br/norma/32393/1"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Referência oficial à redação consolidada da Resolução GR-022/2026 para o Vestibular Unicamp 2027, considerada a alteração GR-026/2026. Aprovação restrita a identidade, versão e uso como fonte normativa de consulta; não concede licença de reprodução."
+      },
+      "reason": "A página oficial da Procuradoria identifica a norma consolidada e sua edição. É referência adequada para regras do processo seletivo, sem transformar a ficha em aprovação de uso de trechos ou anexos.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Página oficial identifica Resolução GR-022/2026 e apresenta redação consolidada, incluindo referências à alteração GR-026/2026."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32405/0",
+          "detail": "Norma alteradora oficial confirma a correção pontual incorporada à versão consolidada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 245
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 148,
+        "url": "/data/official-pdfs/2027-simulation/programa-provas-2027.pdf"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Arquivo local de referência do Programa das Provas do Vestibular Unicamp 2027, documento oficial de 14 páginas. O Anexo II da Resolução indica o mesmo programa como base das provas de 1ª e 2ª fases; esta ficha não afirma que o PDF seja um programa exclusivo da 1ª fase. Identidade e correspondência do arquivo conferidas por comparação SHA-256 com o PDF publicado pela Comvest. Uso como referência não autoriza reprodução do conteúdo."
+      },
+      "reason": "A edição, a natureza e o escopo do documento foram confirmados contra a página da Comvest, o Anexo II e a cópia oficial publicada. A proposta não aprova transcrição nem licença.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+          "detail": "PDF oficial do Programa das Provas 2027, 14 páginas; documento consultado visualmente. O título e a estrutura correspondem ao arquivo local."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 18 e Anexo II: programa do anexo serve de base às provas das duas fases."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/programa-provas-2027.pdf",
+          "detail": "SHA-256 do PDF local comparado ao PDF obtido da URL oficial: d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254; cópias idênticas.",
+          "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 273
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 341,
+        "url": "/data/official-pdfs/2027-simulation/manual-ingresso-2027.pdf"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Arquivo local de referência do Manual do Ingresso do Vestibular Unicamp 2027, documento oficial de 69 páginas. A versão foi comparada por SHA-256 com o PDF oficial disponibilizado pela Comvest e corresponde ao arquivo publicado em outubro de 2026. Para fatos posteriores, considerar comunicados oficiais supervenientes, como a prorrogação de inscrições e a liberação antecipada dos locais. Aprovação somente de identidade/versão como referência; não implica licença de reprodução."
+      },
+      "reason": "O PDF local foi comparado byte a byte com a cópia oficial e consultado visualmente em páginas relevantes. A nota explicita que comunicados posteriores prevalecem sobre datas operacionais impressas que tenham sido superadas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual oficial do Ingresso 2027, 69 páginas; páginas relevantes consultadas visualmente, incluindo pp. 18–28."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/manual-ingresso-2027.pdf",
+          "detail": "SHA-256 do PDF local comparado ao PDF obtido da URL oficial: 1b93570a10ea1be1410c9139877c152dca7c3c66ffd7862e296326c70dd9199b; cópias idênticas.",
+          "sha256": "1b93570a10ea1be1410c9139877c152dca7c3c66ffd7862e296326c70dd9199b"
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/unicamp-prorroga-inscricoes-para-o-vestibular-2027-ate-o-dia-8-de-setembro/",
+          "detail": "Comunicado oficial posterior ao Manual prorroga inscrição e pagamento para 08/09/2026 às 17h; usar como atualização histórica da edição."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 275
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 343,
+        "url": "https://www.comvest.unicamp.br/lista-de-obras/"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Página oficial da lista de obras obrigatórias do Vestibular Unicamp 2027, conferida como referência de identidade/edição. A ficha aponta para a lista; não republica as obras nem aprova cópia de textos integrais."
+      },
+      "reason": "A página da Comvest explicita a edição e sua lista oficial, sendo adequada como referência de consulta. Aprovação não inclui reprodução de obras literárias.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/lista-de-obras/",
+          "detail": "Página oficial consultada em 09/10/2026: seção Vestibular Unicamp 2027 lista nove obras obrigatórias."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 286
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 345,
+        "url": "https://www.comvest.unicamp.br/unicamp-prorroga-inscricoes-para-o-vestibular-2027-ate-o-dia-8-de-setembro/"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Comunicado histórico oficial da Comvest, publicado em 31/08/2026, que prorrogou inscrição e pagamento do Vestibular 2027 até 08/09/2026 às 17h. Deve ser lido junto do calendário da edição; não representa prazo aberto atualmente. Referência factual, sem licença de reprodução."
+      },
+      "reason": "O comunicado é fonte primária para a atualização de prazo posterior à publicação da norma e do Manual; a nota evita que o prazo expirado seja interpretado como atual.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/unicamp-prorroga-inscricoes-para-o-vestibular-2027-ate-o-dia-8-de-setembro/",
+          "detail": "Aviso oficial datado de 31/08/2026: prorrogação de inscrição e pagamento até 08/09/2026 às 17h e taxa de R$ 230."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 287
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 147,
+        "url": "https://www.pg.unicamp.br/norma/32405/0"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Referência oficial à Resolução GR-026/2026, de 30/07/2026, publicada em 03/08/2026. A alteração corrigiu a denominação ‘Música Erudita: Bateria’ para ‘Música Erudita: Percussão’ nos Anexos I–IV da GR-022/2026. Ficha aprovada como referência histórica da alteração, sem licença de reprodução presumida."
+      },
+      "reason": "A URL direta e o texto da norma alteradora foram conferidos na fonte oficial; a ficha distingue a alteração pontual da resolução consolidada.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32405/0",
+          "detail": "Texto oficial da Resolução GR-026/2026, com data, publicação e substituição da denominação nos Anexos I–IV."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Resolução GR-022/2026 consolidada indica a alteração GR-026/2026."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 288
+      },
+      "expected": {
+        "editorial_status": "review",
+        "source_document_id": 441,
+        "url": "https://www.comvest.unicamp.br/vestibular-unicamp-2027-liberada-a-consulta-aos-locais-de-prova-da-primeira-fase/"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Comunicado oficial de 02/10/2026 sobre a liberação antecipada da consulta aos locais da 1ª fase do Vestibular 2027. Fonte operacional histórica; os dados de local são individuais e devem ser consultados na área oficial do candidato. Referência somente, sem licença de reprodução."
+      },
+      "reason": "A data e a natureza do comunicado foram confirmadas no texto oficial; a referência também documenta que a divulgação efetiva ocorreu antes da previsão impressa no calendário do Manual.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibular-unicamp-2027-liberada-a-consulta-aos-locais-de-prova-da-primeira-fase/",
+          "detail": "Comunicado oficial publicado em 02/10/2026: informa que a consulta individual aos locais da 1ª fase já estava liberada e relembra data/horário da prova."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T200440478577Z.sqlite",
+  "database_after_sha256": "21297e009b36f364405a30e74715ea81dcc57eac7a3399e2aec195be887eae69"
+}

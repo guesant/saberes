@@ -1,0 +1,276 @@
+{
+  "format": "lesson-independent-second-review/v1",
+  "audit_date": "2026-10-10",
+  "scope": {
+    "curriculum_topic_id_range": [2475, 2495],
+    "stage": "Vestibular Unicamp 2027 — 1ª fase",
+    "reviewed_artifact": "content/editorial/unicamp-2027/lesson-audit-humanities-2026-10-10.json",
+    "method": "Leitura integral das seções teoria, exemplo e síntese propostas para cada tópico; confronto com o programa oficial (páginas 6–10 para este intervalo) e verificação independente de contas, condições matemáticas e afirmações históricas/conceituais. A decisão considera a lição como introdução curta, não como curso exaustivo. O tópico 2495 não tem replacement no arquivo auditado; foi revisado na lição-base indicada como referência.",
+    "interpretation": "publish_candidate significa que o texto é correto e útil como introdução, sujeito às correções simples explicitamente listadas quando houver; não significa que a auditoria alterou ou publicou o conteúdo. Lacunas de escopo não bloqueiam por si só quando podem ser aprofundadas pelo programa e pelas questões, mas são registradas para não serem ocultadas.",
+    "official_program_source": {
+      "title": "Programa das Provas — Vestibular 2027",
+      "institution": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_copy_reviewed": "dist/data/official-pdfs/2027-simulation/programa-provas-2027.pdf",
+      "relevant_pages": "Matemática: pp. 5–7; Geografia: pp. 7–8; História: p. 9; Sociologia, Filosofia e Língua Inglesa: p. 10."
+    },
+    "additional_fact_checks": [
+      {
+        "claim": "Definição de violência atribuída à OMS no tópico 2493.",
+        "source": "https://www.emro.who.int/violence-injuries-disabilities/violence/",
+        "note": "Conferida contra a definição da OMS reproduzida em material institucional: força física ou poder, ameaçado ou efetivo, intencional, com resultado ou alta probabilidade de lesão, morte, dano psicológico, desenvolvimento prejudicado ou privação."
+      },
+      {
+        "claim": "Diretas Já, rejeição da emenda em 1984 e sucessão indireta em 1985 no tópico 2492.",
+        "source": "https://www2.camara.leg.br/atividade-legislativa/plenario/discursos/escrevendohistoria/diretas-ja",
+        "note": "A Câmara confirma a campanha, a rejeição da emenda em 25 de abril de 1984 e a eleição indireta no Colégio Eleitoral em 1985."
+      }
+    ]
+  },
+  "items": [
+    {
+      "curriculum_topic_id": 2475,
+      "official_label": "Conjuntos numéricos",
+      "decision": "revise/hold",
+      "recommended_status": "review",
+      "problems": [
+        {
+          "quoted_text": "Os naturais (ℕ) contam, os inteiros (ℤ) incluem negativos, os racionais (ℚ) são quocientes de inteiros com denominador não nulo, e os reais (ℝ) também incluem irracionais como √2.",
+          "problem": "A definição é correta como panorama, mas não informa a convenção sobre 0 em ℕ; materiais didáticos adotam convenções diferentes. Além disso, a proposta não introduz as operações com naturais/inteiros nem união e interseção de conjuntos, que constam expressamente do programa. Isso deixa a primeira parte do próprio rótulo sem uma entrada operacional.",
+          "exact_correction": "Adote aqui ℕ={0,1,2,…} (ou declare explicitamente a convenção escolhida). Acrescente: “Para conjuntos A e B, A∪B reúne os elementos que pertencem a pelo menos um deles; A∩B reúne os que pertencem a ambos. Em ℕ e ℤ, confira sinais e ordem das operações antes de calcular.”"
+        },
+        {
+          "quoted_text": "Em uma PA, a_n=a_1+(n−1)d; em uma PG, a_n=a_1q^(n−1).",
+          "problem": "O programa também inclui MDC e MMC; a proposta apresenta fatoração e quantidade de divisores, mas não ensina nem exemplifica esses dois usos centrais da fatoração.",
+          "exact_correction": "Acrescente uma frase operacional: “Para inteiros positivos, o MDC usa os menores expoentes comuns na fatoração prima; o MMC usa os maiores expoentes de todos os primos presentes.”"
+        }
+      ],
+      "verified_checks": ["36=2²·3² tem (2+1)(2+1)=9 divisores positivos.", "Na PA 4,7,10,…, a₁₀=31; na PG 3,6,12,…, a₆=96.", "R$1.000 a 10% a.a. por dois anos resulta em R$1.200 simples e R$1.210 composto.", "200×0,85×1,15=195,50."],
+      "scope_notes": ["A regra de decimal finito para fração irredutível está correta.", "Módulo aparece definido, mas não há exemplo de módulo ou desigualdade; a inclusão de conjuntos, operações e MDC/MMC deve vir antes de considerar a introdução suficiente."]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "official_label": "Funções",
+      "decision": "revise/hold",
+      "recommended_status": "review",
+      "problems": [
+        {
+          "quoted_text": "Para h(x)=√(x−1)/(x−2), é necessário x≥1 e x≠2, logo o domínio é [1,2)∪(2,∞).",
+          "problem": "A notação linear permite leitura ambígua sobre o alcance da raiz. O domínio calculado está correto para a raiz apenas no numerador, mas a expressão precisa ser tipograficamente inequívoca para que o exemplo ensine domínio corretamente.",
+          "exact_correction": "Escrever h(x)=\\frac{\\sqrt{x-1}}{x-2} (ou “h(x)=(√(x−1))/(x−2)”)."
+        }
+      ],
+      "verified_checks": ["O domínio [1,2)∪(2,∞) está correto para a expressão pretendida.", "C(5)=16 e C=20 implica d=7.", "Para f(x)=x², 2f(x)=2x² e f(2x)=4x²; a compressão horizontal por fator 1/2 está correta.", "(f∘g)(2)=f(5)=24 para as funções da autochecagem."],
+      "scope_notes": ["A teoria oferece bons fundamentos de domínio, composição e transformações, mas não introduz exemplos para funções trigonométricas, inversas, quadráticas/afins ou y=k/x, todos no programa. São lacunas de aprofundamento — não erros — desde que o curso e as questões conduzam explicitamente a esses casos."]
+    },
+    {
+      "curriculum_topic_id": 2477,
+      "official_label": "Polinômios, equações e inequações",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["A descrição do Teorema Fundamental da Álgebra e dos pares conjugados para coeficientes reais está correta.", "O discriminante classifica corretamente as raízes de uma quadrática real com a≠0.", "(x−2)(x+3)=x²+x−6 tem raízes 2 e −3.", "x²−5x+6<0 tem solução 2<x<3; x²+1=0 tem raízes ±i em ℂ."],
+      "scope_notes": ["Relações de Girard e Briot–Ruffini, expressamente no programa, não são explicadas nem demonstradas aqui. A microaula é uma entrada válida para raízes, multiplicidade e análise de sinal; o percurso deve apresentar esses dois métodos em etapas ou questões subsequentes."]
+    },
+    {
+      "curriculum_topic_id": 2478,
+      "official_label": "Princípios de contagem e probabilidade",
+      "decision": "revise/hold",
+      "recommended_status": "review",
+      "problems": [
+        {
+          "quoted_text": "Permutação ordena todos os n elementos: n!. Arranjo escolhe k dentre n e considera ordem: n!/(n−k)!. Combinação não considera ordem: n!/[k!(n−k)!].",
+          "problem": "As fórmulas e distinções estão corretas para elementos distintos, mas a proposta não cobre dois conteúdos explicitamente exigidos: princípio da casa dos pombos e binômio de Newton. Também não fornece a regra de probabilidade da união/interseção, apesar de mencionar a fórmula de inclusão-exclusão para conjuntos. Esses itens são parte do programa, não apenas variantes de um mesmo exemplo.",
+          "exact_correction": "Acrescente: “Se N+1 objetos são distribuídos em N caixas, alguma caixa contém pelo menos dois (princípio da casa dos pombos). Para eventos, P(A∪B)=P(A)+P(B)−P(A∩B). O binômio de Newton expande (a+b)^n com coeficientes C(n,k); por exemplo, (a+b)^2=a²+2ab+b².”"
+        }
+      ],
+      "verified_checks": ["5·4=20 cargos ordenados; C(5,2)=10 pares sem ordem.", "12+9−4=17 elementos na união.", "P(6|resultado par)=1/3 em dado justo."],
+      "scope_notes": ["A teoria de contagem e probabilidade condicional é correta, mas, sem os acréscimos, a microaula deixa de introduzir itens nomeados no programa."]
+    },
+    {
+      "curriculum_topic_id": 2479,
+      "official_label": "Sistemas lineares e matrizes",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["det([[2,1],[1,2]])=3 e a inversa indicada é (1/3)[[2,−1],[−1,2]].", "A operação descrita (duplicar a segunda equação e subtrair a primeira) produz 3j=15; s=7, j=5 satisfazem ambas."],
+      "scope_notes": ["A introdução explica eliminação, matriz aumentada, produto, determinante e inversa com um exemplo resolvido correto. Transposição, multiplicação por escalar e representação/solução de inequações lineares não aparecem; o percurso deve ensiná-las em passos posteriores, pois constam do programa."]
+    },
+    {
+      "curriculum_topic_id": 2480,
+      "official_label": "Geometria plana",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["Os critérios LLL, LAL e ALA são critérios válidos de congruência de triângulos.", "Em semelhança, comprimentos e perímetros escalam por k e áreas por k².", "Com segmentos correspondentes 2/3=4/x, x=6.", "Para projeções 4 e 9, h²=mn=36 e h=6; a ampliação do quadrado calcula corretamente perímetro e área."],
+      "scope_notes": ["Quadriláteros notáveis, polígonos regulares e inscrição/circunscrição não são abordados. Não há erro no texto; a microaula funciona como introdução geométrica, desde que o restante do percurso cubra explicitamente esses conteúdos."]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "official_label": "Geometria espacial",
+      "decision": "revise/hold",
+      "recommended_status": "review",
+      "problems": [
+        {
+          "quoted_text": "Em geometria espacial, retas podem ser paralelas, concorrentes ou reversas (não coplanares); reta e plano podem ser contidos, secantes ou paralelos.",
+          "problem": "A frase apresenta categorias como lista completa, mas omite retas coincidentes; além disso, reta perpendicular a plano é caso particular de interseção/secância e deve ser distinguida, pois perpendicularidade é parte do escopo oficial. A distinção importa para classificar posições relativas.",
+          "exact_correction": "Substituir por: “Duas retas podem ser coincidentes, paralelas distintas, concorrentes ou reversas (não coplanares). Uma reta e um plano podem ser paralelos, ter a reta contida no plano ou cruzar-se em um ponto; no último caso, são perpendiculares quando a reta forma 90° com as direções do plano.”"
+        }
+      ],
+      "verified_checks": ["A área lateral e total da pirâmide do exemplo são 60 e 96; a altura 4 é compatível com lado 6 e apótema lateral 5.", "O volume 48 da pirâmide e 30π do cone está correto.", "As fórmulas gerais de volume indicadas são válidas com altura perpendicular."],
+      "scope_notes": ["Troncos e áreas de cilindros, cones e esferas não são ensinados; o texto serve como introdução a sólidos, mas requer passos subsequentes do programa."]
+    },
+    {
+      "curriculum_topic_id": 2482,
+      "official_label": "Trigonometria",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["Razões trigonométricas, identidade fundamental, lei dos senos/cossenos e período 2π/|B| estão corretos.", "sen x=1/2 em [0,2π) tem soluções π/6 e 5π/6.", "cos x≥0 tem solução [0,π/2]∪[3π/2,2π) no intervalo semiaberto indicado.", "Pela lei dos cossenos, o lado calculado satisfaz c²=39."],
+      "scope_notes": ["Transformações trigonométricas além de amplitude/período e identidades além da fundamental não são desenvolvidas. São aprofundamentos do programa, não defeitos factuais desta introdução."]
+    },
+    {
+      "curriculum_topic_id": 2483,
+      "official_label": "Geometria analítica",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["Fórmulas de distância entre pontos e de ponto a reta estão corretas.", "A interseção de x=3 com x²+y²=25 é (3,±4); x=5 é tangente e x=6 não intersecta.", "(0,0), (1,1), (2,2) são colineares."],
+      "scope_notes": ["A equação geral da reta e os casos de posição relativa entre duas retas e entre dois círculos são apenas citados/pressupostos, não ensinados em exemplo. A introdução ainda oferece uma aplicação válida de distância e interseção; incluir esses casos no percurso subsequente."]
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "official_label": "Logaritmos e exponenciais",
+      "decision": "revise/hold",
+      "recommended_status": "review",
+      "problems": [
+        {
+          "quoted_text": "log(ab)=log a+log b e log(a/b)=log a−log b; não há regra que transforme log(a+b) em soma.",
+          "problem": "As propriedades estão corretas somente para argumentos positivos e para a mesma base de logaritmo. Sem essas condições, a afirmação é incompleta justamente em uma lição que corretamente enfatiza domínio.",
+          "exact_correction": "Substituir por: “Para a,b>0 e logaritmos na mesma base válida, log(ab)=log(a)+log(b) e log(a/b)=log(a)−log(b). Não há regra que transforme log(a+b) em soma.”"
+        }
+      ],
+      "verified_checks": ["A equação log₂(x−1)+log₂(x+1)=3 tem domínio x>1 e única solução admissível x=3.", "Como (1/2)^x é decrescente, (1/2)^x>4 equivale a x<−2.", "N(t)>10.000 equivale a t>log₂20≈4,32."],
+      "scope_notes": ["A relação entre exponenciais e logaritmos está bem introduzida; regras de potência e leitura mais ampla dos gráficos precisam ser desenvolvidas no percurso."]
+    },
+    {
+      "curriculum_topic_id": 2485,
+      "official_label": "Conceitos fundamentais da Geografia",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["As distinções entre espaço, paisagem, lugar, território, região, redes e escala são coerentes com o uso geográfico introdutório.", "O exemplo da bacia demonstra que o mesmo recorte pode ser analisado por conceitos diferentes sem torná-los equivalentes.", "A ressalva de que região exige critério e território demanda atenção a poder/controle é adequada."],
+      "scope_notes": ["Soberania e formação socioespacial são citadas na teoria, mas não demonstradas no exemplo. A microaula é útil como vocabulário analítico inicial; as questões devem aprofundar escalas, redes e processos concretos."]
+    },
+    {
+      "curriculum_topic_id": 2486,
+      "official_label": "Linguagem cartográfica e geotecnologias",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["4 cm em escala 1:250.000 equivalem a 10 km.", "23°S, 46°W está ao sul do Equador e a oeste de Greenwich.", "A diferença de 60° corresponde aproximadamente a quatro horas solares; o ponto a leste tem hora solar adiantada.", "A ressalva sobre fusos civis e horário legal evita confundir convenção com longitude."],
+      "scope_notes": ["Meios de orientação, escala geográfica dos fenômenos e tipos de projeção além de Mercator não são desenvolvidos. Não há erro bloqueador; são passos de aprofundamento do programa."]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "official_label": "Componentes físico-naturais do espaço geográfico",
+      "decision": "revise/hold",
+      "recommended_status": "review",
+      "problems": [
+        {
+          "quoted_text": "O sistema terrestre resulta de interações entre litosfera (rochas, relevo e solos), hidrosfera (água líquida), atmosfera, criosfera (gelo) e biosfera.",
+          "problem": "Atribuir solos à litosfera sem qualificação mistura esferas/conceitos: solo é normalmente tratado como pedosfera, uma interface formada por material mineral, matéria orgânica, água, ar e organismos. Em um tópico cujo foco é a interação entre componentes terrestres, essa classificação pode consolidar um modelo incorreto.",
+          "exact_correction": "Substituir o trecho por: “litosfera (rochas e relevo), pedosfera (solos), hidrosfera (água), atmosfera, criosfera (água congelada) e biosfera”; se preferir manter quatro esferas, escrever “solos na interface entre litosfera, atmosfera, hidrosfera e biosfera”."
+        }
+      ],
+      "verified_checks": ["A sequência chuva–infiltração/escoamento–afluentes–rio–exutório está correta como modelo introdutório de bacia.", "As relações propostas entre desmatamento/impermeabilização, interceptação e escoamento são qualificadas como dependentes de condições, sem determinismo simplista."],
+      "scope_notes": ["A lista oficial inclui tectônica, solos, climas, águas, biomas, conservação, riscos, mudanças climáticas e gestão; a proposta oferece apenas uma visão sistêmica e um exemplo de bacia. Isso pode ser a abertura da trilha, mas não deve ser apresentado como explicação completa do tópico; a trilha precisa mostrar claramente os próximos passos."]
+    },
+    {
+      "curriculum_topic_id": 2488,
+      "official_label": "Globalização, economia e trabalho",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["A descrição de circuito produtivo, divisão territorial do trabalho e fluxos transnacionais é conceitualmente adequada.", "A distinção entre produção/disponibilidade de alimentos e acesso/segurança alimentar é correta.", "O exemplo da camiseta é apresentado como cenário hipotético e não como dado empírico."],
+      "scope_notes": ["O exemplo é esquemático e não quantifica salários, emprego ou fluxos; isso é apropriado para introdução, desde que a prática subsequente trabalhe evidências e desigualdades por gênero/raça como o programa pede."]
+    },
+    {
+      "curriculum_topic_id": 2489,
+      "official_label": "Brasil: dinâmica territorial",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["A composição federativa indicada está correta.", "A distinção entre região metropolitana e ente federativo está correta.", "O exemplo separa correlação/indicadores de explicação causal e evita generalização sem evidência."],
+      "scope_notes": ["Industrialização, estrutura agrária, migração e urbanização aparecem somente como categorias amplas ou não aparecem. A aula é válida como lente inicial de escala, redes e desigualdade territorial; o percurso precisa cobrir os processos específicos do programa."]
+    },
+    {
+      "curriculum_topic_id": 2490,
+      "official_label": "Antiguidade clássica e período medieval",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["A limitação da cidadania ateniense é descrita sem apresentá-la como universal.", "A distinção entre escravidão antiga e escravidão racial atlântica moderna é historicamente prudente.", "A crise do feudalismo é tratada como processo desigual, multicausal e não instantâneo."],
+      "scope_notes": ["O exemplo é comparativo e deliberadamente não representa toda a Antiguidade nem todo o medievo; não encontrei simplificação que impeça seu uso como introdução."]
+    },
+    {
+      "curriculum_topic_id": 2491,
+      "official_label": "Período moderno",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["A centralização estatal é diferenciada de poder absoluto ilimitado.", "Renascimento e religião não são apresentados como oposição simples; colonização, coerção e resistência são explicitadas.", "A coexistência de discursos de direitos com escravidão e exclusão política é contextualizada corretamente."],
+      "scope_notes": ["O exemplo é uma lente comparativa, não uma narrativa de todos os processos modernos; está suficientemente qualificado para introdução."]
+    },
+    {
+      "curriculum_topic_id": 2492,
+      "official_label": "Período contemporâneo e história do tempo presente",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["Diretas Já é corretamente situada em 1983–84; a emenda não foi aprovada em 1984 e a sucessão presidencial de 1985 foi indireta, conforme fonte institucional da Câmara.", "O exemplo distingue reivindicação, resultado institucional e efeito político, sem dizer que a campanha realizou imediatamente seu objetivo."],
+      "scope_notes": ["O texto panorâmico não explica em detalhe diversos processos listados no programa (imperialismo, revoluções, guerras, descolonização, ditadura e Brasil pós-1985). A introdução metodológica é útil, mas não substitui etapas específicas do roteiro."]
+    },
+    {
+      "curriculum_topic_id": 2493,
+      "official_label": "Conceitos fundamentais e dimensões sociais",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["A definição de violência atribuída à OMS preserva intenção, força/poder ameaçado ou efetivo, alvos e consequências relevantes.", "A distinção entre definição de saúde pública e lentes sociológicas evita tratá-las como categorias intercambiáveis.", "O exemplo recomenda distinguir episódio, padrão documentado e hipótese causal; não generaliza automaticamente."],
+      "scope_notes": ["O exemplo de tecnologia e trabalho é hipotético; cultura, políticas públicas, mídia e representação de grupos ficam para aprofundamento posterior, sem erro factual na introdução."],
+      "non_blocking_exact_edit": {
+        "quoted_text": "com probabilidade de causar lesão, morte, dano psicológico, prejuízo ao desenvolvimento ou privação",
+        "suggested_replacement": "que resulte em ou tenha alta probabilidade de resultar em lesão, morte, dano psicológico, prejuízo ao desenvolvimento ou privação",
+        "reason": "A formulação da OMS distingue resultado efetivo de alta probabilidade de resultado; a edição preserva esse limiar sem transformar a paráfrase em citação literal."
+      }
+    },
+    {
+      "curriculum_topic_id": 2494,
+      "official_label": "Ética e política",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "problems": [],
+      "verified_checks": ["Virtudes, deveres e consequencialismo são caracterizados como ênfases, não como definições exaustivas.", "A lição distingue procedimento majoritário de justificativa ética e política suficiente.", "O exemplo solicita identificar direito, afetados, razões, consequências e possibilidade de contestação, sem afirmar que toda restrição é ilegítima."],
+      "scope_notes": ["Para evitar que uma concepção específica de democracia pareça definição única, recomenda-se a pequena qualificação textual abaixo; a simplificação não invalida a lição como introdução."],
+      "non_blocking_exact_edit": {
+        "quoted_text": "Democracia requer participação, pluralismo, competição política, garantias e prestação de contas.",
+        "suggested_replacement": "Em concepções democráticas contemporâneas, participação, pluralismo, competição política, garantias e prestação de contas são dimensões centrais, embora sua definição e realização sejam objeto de debate."
+      }
+    },
+    {
+      "curriculum_topic_id": 2495,
+      "official_label": "Leitura crítica em língua inglesa",
+      "decision": "publish_candidate",
+      "recommended_status": "published",
+      "reviewed_text": "Lição-base 1.0.1 em lessons.json; não há replacement para este ID no arquivo auditado.",
+      "problems": [],
+      "verified_checks": ["A orientação para inferir sentido por contexto, gênero, conectores e referentes é coerente com leitura como prática social.", "O exemplo usa however corretamente como contraste; its retoma the device; a ressalva da bateria é a informação crítica solicitada.", "Eventually é corretamente alertado como falso cognato de “eventualmente” no sentido de talvez."],
+      "scope_notes": ["A lição não cobre toda leitura multimodal nem todo o conteúdo de inglês, mas é uma introdução útil e alinha-se às habilidades oficiais; não foi identificada lacuna que impeça publicação introdutória."]
+    }
+  ],
+  "overall_result": {
+    "summary": "A maior parte das propostas é factualmente correta e pode funcionar como microaula introdutória; a revisão anterior foi excessivamente restritiva ao tratar falta de cobertura exaustiva como bloqueio automático. Há, contudo, pontos concretos a corrigir antes de publicar: ambiguidade de notação/domínio em funções, condições de uma identidade logarítmica, classificação de posições espaciais e enquadramento da pedosfera. Conjuntos numéricos e contagem/probabilidade também precisam incluir ou encaminhar claramente subitens oficiais ausentes, pois seus replacements são apresentados como introduções do tópico inteiro.",
+    "publication_condition": "Aplicar os exact_correction/non_blocking_exact_edit antes da sincronização editorial; manter as scope_notes visíveis no roteiro para que conteúdo ausente não pareça coberto. Esta auditoria não altera estados no banco nem publica qualquer lição."
+  }
+}

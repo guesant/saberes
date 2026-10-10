@@ -1,0 +1,274 @@
+{
+  "schema": "saberes.editorial.lesson-reconciled-candidates/v1",
+  "created_at": "2026-10-10",
+  "purpose": "Propostas editoriais completas reconciliadas por comparação do conteúdo integral das seções no SQLite, pacote versionado e pareceres locais. Artefato de revisão; não é importação nem aprovação formal.",
+  "source_policy": "O Programa das Provas da Comvest é usado para delimitar o programa e conferir tópicos. As explicações abaixo são editoriais próprias e não são conteúdo oficial da Comvest.",
+  "read_only_reconciliation": {
+    "sqlite": ".local/content/content.sqlite, consultado em modo read-only; registros comparados por lesson_id/section_id para os quatro tópicos deste arquivo.",
+    "lesson_package": "content/editorial/unicamp-2027/lessons.json",
+    "revisions": "content/editorial/unicamp-2027/lesson-revisions.json",
+    "humanities_proposal": "content/editorial/unicamp-2027/lesson-final-hold-corrections-humanities-portuguese-2026-10-10.json",
+    "sciences_proposal": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-2026-10-10.json",
+    "science_review": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json",
+    "program": {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "institution": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf"
+    },
+    "sequence_source": "learning_course_id=1 (roteiro Unicamp 2027 — primeira fase), módulos e itens consultados no SQLite atual.",
+    "mutations_performed": false
+  },
+  "reconciliation_rules": [
+    "O SQLite foi tratado como texto atualmente consumido pela aplicação, não como prova de aprovação editorial.",
+    "Quando SQLite e pacote tinham conteúdo diferente, a proposta nova combina os trechos úteis e registra a divergência; não declara nenhum deles aprovado por existir no banco.",
+    "Status observado permanece review nos registros comparados; para 2500, o SQLite apresenta status published enquanto o pacote e a auditoria ainda pedem review. Essa divergência é registrada e não foi alterada.",
+    "As quatro aulas são etapas introdutórias. Os passos atuais de exemplo/prática/revisão existem, mas não equivalem a módulos especializados para todos os subtópicos listados no programa. O texto não reivindica cobertura integral."
+  ],
+  "candidates": [
+    {
+      "curriculum_topic_id": 2475,
+      "topic": "Conjuntos numéricos",
+      "proposal_version": "1.2.3-reconciliation-candidate",
+      "current_sqlite": {
+        "lesson_ids": [22, 23, 24],
+        "editorial_version": "1.2.2",
+        "review_status": "review",
+        "text_comparison": "O SQLite contém uma versão mais abrangente, com progressões e juros; o pacote 1.2.2 oferece tratamento mais explícito de subconjunto e exemplos de inclusão/operações. A proposta abaixo conserva a extensão válida do SQLite e incorpora a precisão do pacote, sem declarar que uma versão foi aprovada."
+      },
+      "program_evidence": "Doc. 148, pp. 5–6: conjuntos/subconjuntos, operações numéricas, módulo, desigualdades, representação decimal, fatoração, divisores, MDC/MMC, sequências/progressões, porcentagem e juros.",
+      "sequence": {
+        "course_id": 1,
+        "module_id": 8,
+        "steps": [
+          {"item_id": 29, "position": 0, "title": "Entender o conceito", "lesson_id": 22},
+          {"item_id": 30, "position": 1, "title": "Acompanhar um exemplo", "lesson_id": 23},
+          {"item_id": 32, "position": 2, "title": "Praticar uma questão de vestibular", "lesson_id": null},
+          {"item_id": 31, "position": 3, "title": "Revisar erros e consolidar", "lesson_id": 24}
+        ],
+        "boundary": "A sequência existe e está ligada. Estes passos cobrem conceito, exemplo, questão e revisão; não foi encontrado neste módulo um item separado dedicado a cada subtema de sequências, porcentagem ou juros. O roteiro deve manter esses tópicos explicitamente como conteúdo desta introdução ou encaminhá-los a materiais específicos já disponíveis, sem sugerir que só os quatro títulos genéricos os ensinam."
+      },
+      "final_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Conjuntos, números e operações — etapa introdutória",
+          "content_format": "markdown",
+          "content": "Nesta etapa adotamos **ℕ={0,1,2,…}**; declarar a convenção evita divergência entre livros. Temos ℕ⊆ℤ⊆ℚ⊆ℝ: inteiros incluem negativos; racionais podem ser escritos como quociente de inteiros com denominador não nulo; reais incluem também irracionais como √2. A representação decimal de um racional, em forma irredutível, é finita se o denominador tem apenas fatores primos 2 e/ou 5; caso contrário, é periódica.\n\nUm conjunto pode ser descrito por seus elementos ou por uma propriedade. **A⊆B** significa que todo elemento de A também pertence a B; nesta etapa, **A⊂B** indica inclusão própria, isto é, A⊆B e A≠B. **A∪B** reúne os elementos que pertencem a pelo menos um conjunto; **A∩B**, os que pertencem a ambos; A\\B contém os elementos de A que não estão em B. Não confunda elemento (∈) com subconjunto (⊆).\n\nEm ℕ e ℤ, soma e produto são fechados; subtração pode sair de ℕ e divisão pode sair de ℤ. Divisão por zero não é definida. Respeite parênteses e precedência; (−3)+8=5 e (−3)·8=−24. O módulo |x| é a distância de x a zero, portanto não é negativo. Desigualdades podem ser representadas por intervalos; ao multiplicar ou dividir uma desigualdade por número negativo, inverte-se o sinal.\n\nFatorar em primos permite estudar divisibilidade. Para inteiros positivos, o **MDC** usa os menores expoentes comuns e o **MMC** os maiores expoentes de todos os primos presentes. Se n=∏pᵢᵃⁱ, o número de divisores positivos é ∏(aᵢ+1), pois cada divisor escolhe o expoente de cada primo entre 0 e aᵢ.\n\nUma sequência é uma lista definida por uma regra. Na progressão aritmética (PA), a diferença d entre termos consecutivos é constante e aₙ=a₁+(n−1)d; na progressão geométrica (PG), a razão q é constante e aₙ=a₁qⁿ⁻¹. Porcentagem é uma razão por cem. Para capital C, taxa i por período e t períodos, juros simples dão M=C(1+it), enquanto juros compostos dão M=C(1+i)ᵗ, sob taxa constante e sem aportes. A unidade de i e t deve ser compatível. Esta aula é introdutória: a sequência abaixo conduz a exemplo, questão e revisão, mas problemas variados e aprofundamento de porcentagem/juros ainda exigem prática própria.\n\n**Erros comuns**\n\nNão suponha outra convenção para ℕ sem declará-la; não confunda A∈B com A⊆B; não cancele parcelas em uma soma de frações; não use os mesmos expoentes para MDC e MMC; não some percentuais sucessivos sobre uma base que mudou; e confira se a taxa e o período dos juros usam a mesma unidade."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: conjuntos, fatoração e progressões",
+          "content_format": "markdown",
+          "content": "Considere U={0,1,2,3,4}, A={0,2,4} e B={2,3}. Como 0∈A e 0∉B, A⊄B; já {2}⊆A e {2}⊆B. A∪B={0,2,3,4} e A∩B={2}.\n\nPara 12=2²·3 e 18=2·3², o MDC é 2¹·3¹=6 (menores expoentes comuns) e o MMC é 2²·3²=36 (maiores expoentes). Como 36=2²·3², tem (2+1)(2+1)=9 divisores positivos.\n\nNa PA 4,7,10,…, d=3; a₁₀=4+9·3=31. Na PG 3,6,12,…, q=2; a₆=3·2⁵=96. Para R$ 1.000 a 10% por período durante dois períodos, juros simples resultam em M=1000(1+0,10·2)=R$ 1.200; compostos, M=1000(1,10)²=R$ 1.210. Um desconto de 15% seguido de aumento de 15% sobre o novo preço, a partir de R$ 200, dá 200·0,85·1,15=R$ 195,50, pois a segunda porcentagem incide sobre outra base."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Declare a convenção dos naturais; diferencie elemento, inclusão e inclusão própria; calcule união/interseção pelo pertencimento; use fatoração para divisores, MDC e MMC; reconheça diferença de PA e razão de PG; represente desigualdades por intervalos e alinhe taxa e período dos juros.\n\n**Autochecagem:** com a convenção adotada, 0∈ℕ. Para A={1,2} e B={1,2,3}, A⊆B e A⊂B. MDC(20,30)=10 e MMC(20,30)=60. 0,125=1/8 tem decimal finito; 1/3 é periódico. A PA 4,7,10,… tem a₁₀=31; R$ 1.000 a 10% por dois períodos compostos totalizam R$ 1.210.\n\n**Roteiro existente:** siga os itens do módulo 8 nesta ordem: conceito (29), exemplo (30), prática (32), consolidação (31). Para considerar o tópico de programa integralmente coberto, a prática precisa também alcançar desigualdades, sequências/progressões e matemática financeira; a existência dos quatro passos, por si só, não comprova essa cobertura."
+        }
+      ],
+      "verification_checklist": [
+        {"check": "Convenções ℕ, ⊆ e ⊂ declaradas e usadas consistentemente", "result": "conferido"},
+        {"check": "Exemplo de união/interseção e inclusão", "result": "conferido"},
+        {"check": "MDC/MMC de 12 e 18; contagem de divisores de 36", "result": "conferido: 6, 36 e 9"},
+        {"check": "Termos da PA e PG", "result": "conferido: 31 e 96"},
+        {"check": "Juros simples/compostos e percentuais sucessivos", "result": "conferido: R$ 1.200, R$ 1.210 e R$ 195,50"},
+        {"check": "Cobertura integral dos subitens do programa pelo módulo", "result": "não comprovada; conteúdo marcado como introdutório"}
+      ],
+      "editorial_decision": "candidata a publicação somente após revisão integral desta composição e reconciliação formal do texto no fluxo editorial",
+      "status_change": false
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "topic": "Funções",
+      "proposal_version": "1.3.3-reconciliation-candidate",
+      "current_sqlite": {
+        "lesson_ids": [25, 26, 27],
+        "editorial_version": "1.3.2",
+        "review_status": "review",
+        "text_comparison": "O SQLite contém fundamentos de domínio, taxa de variação, função afim, radical/racional, composição e transformação. O pacote propõe ampliar famílias e exemplos. A proposta abaixo mantém os fundamentos do SQLite e adiciona exemplos do pacote, com escopo explicitamente introdutório."
+      },
+      "program_evidence": "Doc. 148, pp. 5–7: famílias afim/quadrática, inversa e direta, módulo, trigonométricas e inversas, operações/composição, transformações, raízes e funções racionais, domínio, equações e inequações.",
+      "sequence": {
+        "course_id": 1,
+        "module_id": 9,
+        "steps": [
+          {"item_id": 33, "position": 0, "title": "Entender o conceito", "lesson_id": 25},
+          {"item_id": 34, "position": 1, "title": "Acompanhar um exemplo", "lesson_id": 26},
+          {"item_id": 36, "position": 2, "title": "Praticar uma questão de vestibular", "lesson_id": null},
+          {"item_id": 35, "position": 3, "title": "Revisar erros e consolidar", "lesson_id": 27}
+        ],
+        "boundary": "Etapas existentes e ligadas. O módulo não tem, nos registros consultados, etapas especializadas separadas para trigonometria, inversas ou famílias racionais; manter essas lacunas nomeadas e não alegar domínio integral do programa."
+      },
+      "final_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Funções: domínio, famílias e representações — introdução",
+          "content_format": "markdown",
+          "content": "Uma função associa a cada entrada do domínio exatamente uma saída. Em f:D→C, D é o domínio, C o contradomínio e a imagem reúne os valores de C efetivamente obtidos. Uma reta vertical que cruza um gráfico em mais de um ponto mostra que ele não define y como função de x. Leia eixos, escala, unidade e intervalo. Zeros satisfazem f(x)=0; o intercepto vertical (0,f(0)) só existe se 0 pertencer ao domínio. A taxa média de variação entre a e b, com a≠b, é [f(b)−f(a)]/(b−a).\n\nFamílias frequentes: **afim** f(x)=ax+b, com variação constante; **quadrática** ax²+bx+c (a≠0), cujo gráfico é parábola; **proporcionalidade inversa** y=k/x, com x≠0; e **módulo** |x|, distância a zero. Seno e cosseno são periódicos; seus gráficos precisam ser lidos com ângulo, escala e unidade declarados. Funções raiz e racionais exigem domínio: para √g(x), g(x)≥0 em ℝ quando o índice é par; para p(x)/q(x), q(x)≠0. Simplificar uma expressão não recoloca no domínio original pontos excluídos.\n\nEm composição (f∘g)(x)=f(g(x)), aplica-se g primeiro e sua saída deve pertencer ao domínio de f. Soma e produto de funções são definidos ponto a ponto nos domínios comuns. Transformações também exigem cuidado: cf(x) altera as ordenadas; f(cx), c≠0, altera a escala horizontal. Uma inversa desfaz a correspondência apenas quando a função é bijetiva nos domínios/codomínios escolhidos; os gráficos de f e f⁻¹ refletem na reta y=x. Equações f(x)=g(x) procuram interseções ou soluções algébricas; inequações exigem comparar valores nos intervalos válidos.\n\nEsta é uma etapa introdutória, não uma cobertura completa das famílias do programa. As etapas sequenciais registradas abaixo conduzem a exemplo, prática e revisão; dentro delas ou em novos itens ligados devem ser desenvolvidos gráficos afins/quadráticos, y=k/x, módulo, trigonometria, inversas, funções racionais e equações/inequações.\n\n**Erros comuns**\n\nNão confunda domínio, contradomínio e imagem; f(g(x)) com f(x)g(x); f(2x) com 2f(x); zeros com interceptos; nem função bijetiva com qualquer função. Declare restrições antes de simplificar e confira domínio intermediário na composição."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplos resolvidos: modelo, domínio e composição",
+          "content_format": "markdown",
+          "content": "Uma corrida cobra R$ 6 fixos mais R$ 2 por quilômetro: C(d)=6+2d, d≥0. Para 5 km, C(5)=R$ 16; se o custo é R$ 20, 6+2d=20 e d=7 km.\n\nPara h(x)=√(x−1)/(x−2), com a raiz apenas no numerador, exigimos x−1≥0 e x−2≠0. Assim, Dom(h)=[1,2)∪(2,∞); x=1 é permitido e x=2 é excluído.\n\nPara q(x)=x²−4, as raízes são ±2 e o vértice é (0,−4). Para m(x)=|x−2|, m(x)=2−x se x<2 e m(x)=x−2 se x≥2. Se f(x)=x², então 2f(x)=2x², enquanto f(2x)=4x²; são transformações diferentes.\n\nSe f(x)=x²−1 e g(x)=2x+1, então (f∘g)(2)=f(g(2))=f(5)=25−1=24. Primeiro se calcula g; a ordem importa. Esses exemplos não substituem a resolução de equações trigonométricas, estudo de inversas e análise de gráficos racionais."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese, autochecagem e próximas etapas",
+          "content_format": "markdown",
+          "content": "Antes de calcular, identifique a família e o domínio. Interprete parâmetros, pontos, escala e unidade; em composição, substitua com parênteses e confira o domínio intermediário; em inversas, declare os conjuntos escolhidos.\n\n**Autochecagem:** para f(x)=x², f(−3)=9, 2f(−3)=18 e f(−6)=36. Para r(x)=1/(x−4), exclua x=4. Para f(x)=x²−1 e g(x)=2x+1, (f∘g)(2)=24. Para inverter x² em ℝ, restrinja primeiro o domínio, por exemplo a x≥0.\n\n**Roteiro existente:** módulo 9: conceito (33), exemplo (34), prática (36), revisão (35). Próximas etapas devem trabalhar graficamente as funções afim e quadrática; y=k/x e |x|; seno/cosseno, período, identidades, equações e inequações; operações/composição; inversas; raízes e funções racionais. O módulo atual tem passos genéricos ligados, não um item específico para cada uma dessas famílias; não registrar essas etapas como já concluídas."
+        }
+      ],
+      "verification_checklist": [
+        {"check": "Domínio da função radical/racional, incluindo parênteses da raiz", "result": "conferido: [1,2)∪(2,∞)"},
+        {"check": "Modelo linear e inversão do custo", "result": "conferido: R$ 16 para 5 km; 7 km para R$ 20"},
+        {"check": "Raízes/vértice de x²−4 e definição por partes do módulo", "result": "conferido"},
+        {"check": "Diferença entre 2f(x) e f(2x)", "result": "conferido: 2x² e 4x² para f=x²"},
+        {"check": "Composição (f∘g)(2)", "result": "conferido: 24"},
+        {"check": "Cobertura integral do programa por etapas especializadas", "result": "não comprovada; conteúdo marcado como introdutório"}
+      ],
+      "editorial_decision": "candidata a publicação somente como introdução, após revisão integral e reconciliação formal",
+      "status_change": false
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "topic": "Geometria espacial",
+      "proposal_version": "1.2.3-reconciliation-candidate",
+      "current_sqlite": {
+        "lesson_ids": [40, 41, 42],
+        "editorial_version": "1.2.2",
+        "review_status": "review",
+        "text_comparison": "A proposta 1.2.2 e o SQLite compartilham a ampliação de fórmulas, mas o SQLite contém uma definição mais precisa de reta perpendicular a plano e exemplos diferentes. A versão reconciliada conserva a definição geométrica do SQLite e incorpora as fórmulas/exemplos verificados do pacote."
+      },
+      "program_evidence": "Doc. 148, p. 6: posições relativas de retas e planos; poliedros, prismas, pirâmides, troncos; cilindros, cones e esferas; áreas e volumes.",
+      "sequence": {
+        "course_id": 1,
+        "module_id": 14,
+        "steps": [
+          {"item_id": 53, "position": 0, "title": "Entender o conceito", "lesson_id": 40},
+          {"item_id": 54, "position": 1, "title": "Acompanhar um exemplo", "lesson_id": 41},
+          {"item_id": 56, "position": 2, "title": "Praticar uma questão de vestibular", "lesson_id": null},
+          {"item_id": 55, "position": 3, "title": "Revisar erros e consolidar", "lesson_id": 42}
+        ],
+        "boundary": "A sequência existe e está ligada. A própria revisão final encaminha planificações, problemas contextualizados e sólidos adicionais para prática; não há neste módulo evidência de etapas separadas para todos esses itens."
+      },
+      "final_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Geometria espacial: relações e medidas — introdução",
+          "content_format": "markdown",
+          "content": "Duas retas no espaço podem ser **coincidentes**, **paralelas distintas**, **concorrentes** (coplanares e com um ponto comum) ou **reversas** (não coplanares). Uma reta e um plano podem ser paralelos, ter a reta contida no plano ou cruzar-se em um único ponto. No caso de interseção, a reta é perpendicular ao plano quando é perpendicular a duas retas concorrentes do plano que passam pelo ponto de interseção; equivalentemente, sua direção é normal ao plano. Uma secante não é necessariamente perpendicular.\n\nEm sólidos, área usa unidade quadrada e volume unidade cúbica; volume usa a altura perpendicular à base. Prismas e cilindros: V=A_base·h. Pirâmides e cones: V=A_base·h/3. Para cilindro de raio r e altura h, A_lateral=2πrh e A_total=2πr(h+r). Para cone reto, g=√(r²+h²), A_lateral=πrg, A_total=πr(g+r) e V=πr²h/3. Para esfera, A=4πr² e V=4πr³/3.\n\nUm tronco de cone reto de altura h e raios R e r tem V=πh(R²+Rr+r²)/3; g=√(h²+(R−r)²) e A_lateral=π(R+r)g. Para tronco de pirâmide, pode-se subtrair da pirâmide maior a pirâmide menor semelhante ou aplicar fórmula apropriada quando as bases são paralelas e semelhantes. Em poliedros, planificações ajudam a identificar faces; área externa não inclui superfícies internas de contato.\n\nEsta é uma introdução a relações e medidas, não catálogo exaustivo de poliedros. O módulo segue com exemplo, prática e revisão; planificações, troncos de pirâmide, esfera e problemas contextualizados devem ser efetivamente exercitados nas etapas ligadas antes de declarar cobertura integral.\n\n**Erros comuns**\n\nNão omita retas coincidentes; não confunda contida com paralela distinta; não conclua perpendicularidade a partir de projeção; não use geratriz como altura do volume; confira superfícies externas, hipótese de bases paralelas nos troncos e unidades."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplos resolvidos: cilindro, cone, tronco e posições",
+          "content_format": "markdown",
+          "content": "Em um cubo, duas arestas que compartilham vértice são concorrentes; arestas distintas da mesma direção são paralelas; uma aresta é coincidente consigo mesma; duas arestas sem interseção e não coplanares são reversas. Uma reta perpendicular ao plano de uma face encontra-o em um ponto e é perpendicular a duas direções concorrentes dessa face pelo ponto.\n\n**Cilindro:** r=3 cm, h=10 cm. V=π·3²·10=90π cm³; A_lateral=2π·3·10=60π cm²; A_total=60π+2π·3²=78π cm².\n\n**Cone reto:** r=3 cm, h=4 cm, então g=√(3²+4²)=5 cm. V=π·9·4/3=12π cm³; A_lateral=π·3·5=15π cm²; A_total=15π+9π=24π cm².\n\n**Tronco de cone:** R=3 cm, r=1 cm, h=4 cm. g=√(4²+(3−1)²)=2√5 cm. V=π·4(9+3+1)/3=52π/3 cm³; A_lateral=π(3+1)·2√5=8π√5 cm². O volume fica abaixo de 36π cm³, volume do cilindro que teria raio 3 cm e altura 4 cm, como esperado."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Classifique a relação antes de aplicar fórmulas: coincidente, paralela distinta, concorrente ou reversa para duas retas; contida, paralela ou secante para reta/plano. Secância não implica perpendicularidade: confira duas direções concorrentes no plano. Identifique base, altura perpendicular, superfícies externas e unidades. Em troncos, registre ambos os raios e a distância perpendicular entre bases.\n\n**Autochecagem:** cone reto com r=5 cm e h=12 cm tem g=13 cm, A_lateral=65π cm², A_total=90π cm² e V=100π cm³. Uma reta contida no plano não é paralela distinta nem secante em um único ponto. Duas retas reversas não são coplanares.\n\n**Roteiro existente:** módulo 14: conceito (53), exemplo (54), prática (56), revisão (55). Para completar o estudo, a prática deve incluir prismas/pirâmides, planificações, troncos de pirâmide, cilindros, cones, esferas e problemas de inferência de dimensões; a estrutura sequencial genérica está confirmada, mas uma etapa específica para cada subtema não foi localizada."
+        }
+      ],
+      "verification_checklist": [
+        {"check": "Classificação das posições relativas e definição reta-plano perpendicular", "result": "conferido; usa duas retas concorrentes do plano no ponto de interseção"},
+        {"check": "Fórmulas de cilindro, cone, esfera e tronco de cone", "result": "conferido"},
+        {"check": "Cilindro r=3,h=10; cone r=3,h=4", "result": "conferido: 90π cm³/60π cm²/78π cm²; 12π cm³/15π cm²/24π cm²"},
+        {"check": "Tronco R=3,r=1,h=4", "result": "conferido: g=2√5 cm, V=52π/3 cm³, A_lateral=8π√5 cm²"},
+        {"check": "Cone de autochecagem r=5,h=12", "result": "conferido: g=13 cm, áreas 65π e 90π cm², volume 100π cm³"},
+        {"check": "Cobertura completa de todos os sólidos e planificações", "result": "não comprovada; aula introdutória com próximos passos declarados"}
+      ],
+      "editorial_decision": "candidata a publicação introdutória após revisão e reconciliação formal",
+      "status_change": false
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "topic": "Biodiversidade e saúde humana",
+      "proposal_version": "1.3.3-reconciliation-candidate",
+      "current_sqlite": {
+        "lesson_ids": [97, 98, 99],
+        "editorial_version": "1.3.2",
+        "review_status": "published",
+        "package_editorial_version": "1.3.2",
+        "package_review_status": "review",
+        "text_comparison": "As três seções do pacote Ciências v2 1.3.2 coincidem com o texto integral das três seções consultadas no SQLite. Há conflito de estado editorial: SQLite marca published, enquanto pacote/procedimento de revisão mantém review. Esta proposta não resolve nem altera o conflito; requer decisão formal de reconciliação de metadados.",
+        "text_match": true
+      },
+      "program_evidence": "Doc. 148, pp. 11–12: biodiversidade e grupos biológicos, corpo humano, reprodução, saúde e doenças por microrganismos/vetores.",
+      "sequence": {
+        "course_id": 1,
+        "module_id": 33,
+        "steps": [
+          {"item_id": 129, "position": 0, "title": "Entender o conceito", "lesson_id": 97},
+          {"item_id": 130, "position": 1, "title": "Acompanhar um exemplo", "lesson_id": 98},
+          {"item_id": 132, "position": 2, "title": "Praticar uma questão de vestibular", "lesson_id": null},
+          {"item_id": 131, "position": 3, "title": "Revisar erros e consolidar", "lesson_id": 99}
+        ],
+        "boundary": "A sequência está ligada. O conteúdo é síntese introdutória; o programa contém mais grupos biológicos, sistemas humanos, reprodução e doenças do que cabem na demonstração epidemiológica. A questão e demais materiais do módulo precisam cobrir as lacunas sem se atribuir validação oficial à aula."
+      },
+      "final_sections": [
+        {
+          "type": "theory",
+          "pedagogical_role": "formalization",
+          "title": "Biodiversidade, reprodução e saúde coletiva — introdução",
+          "content_format": "markdown",
+          "content": "Biodiversidade abrange variação genética, espécies e ecossistemas. Bactérias são procariontes; vírus não têm organização celular e dependem de células para replicação; protozoários são eucariontes unicelulares; fungos obtêm nutrientes por absorção; plantas e várias linhagens de algas fazem fotossíntese; animais obtêm alimento por ingestão. Esses traços ajudam a comparar grupos, mas não substituem evidências evolutivas de parentesco.\n\nNa reprodução humana, FSH e LH participam da regulação ovariana; estrogênio e progesterona variam ao longo do ciclo. A fecundação pode ocorrer quando um espermatozoide encontra o ovócito. Métodos contraceptivos atuam por mecanismos diferentes: preservativos formam barreira; métodos hormonais podem inibir ovulação e/ou alterar muco cervical; o cobre no DIU prejudica mobilidade e função dos espermatozoides no ambiente uterino. Preservativos reduzem o risco de gravidez e de muitas ISTs, mas não o eliminam. Métodos hormonais e DIU não protegem contra ISTs. Escolhas e cuidados individuais devem seguir orientação de serviço de saúde.\n\nPara interpretar uma doença, separe **agente**, **hospedeiro**, **via de transmissão** e **intervenção**. Uma bactéria ou vírus pode ser o agente; um vetor pode transportá-lo; gotículas/aerossóis, contato, água ou alimento podem ser vias distintas. A medida preventiva precisa corresponder ao mecanismo. Antibióticos agem contra bactérias suscetíveis, não contra vírus. Ventilação reduz o acúmulo de partículas respiratórias no ar interior. Vacinas pertinentes podem reduzir infecção ou doença grave, conforme o agente, a vacina e o contexto; não são garantia absoluta.\n\nEsta síntese inicia o módulo. O programa inclui mais conteúdos de biodiversidade, fisiologia e saúde do que o exemplo respiratório; use as etapas sequenciais e questões para estudar esses subtemas. O texto é editorial, não orientação médica individual nem material oficial da Comvest.\n\n**Erros comuns**\n\nNão confunda vetor com agente; não use antibiótico para tratar vírus; não generalize uma medida preventiva para todas as vias; e não confunda contracepção com prevenção de ISTs. Preservativos reduzem riscos, sem proteção absoluta."
+        },
+        {
+          "type": "example",
+          "pedagogical_role": "example",
+          "title": "Exemplo resolvido: agente, via e medida preventiva",
+          "content_format": "markdown",
+          "content": "**Situação.** Em uma sala fechada, várias pessoas desenvolvem em poucos dias uma doença causada por um vírus respiratório. A questão informa que o agente se transmite principalmente por partículas respiratórias suspensas no ar. Uma pessoa sugere antibiótico, outra propõe melhorar a ventilação e uma terceira pergunta se preservativo interromperia essa transmissão.\n\n**Resolução.** (1) O agente é o vírus; a via relevante é a inalação de partículas respiratórias. (2) Antibiótico não age contra o vírus, embora possa ser indicado por profissional em situações bacterianas específicas. (3) Aumentar a renovação de ar reduz a concentração de partículas em ambientes internos e é pertinente à via descrita. Vacinação contra esse agente, se disponível e indicada, pode reduzir a probabilidade de doença grave; o efeito depende do imunizante e do contexto e não é proteção absoluta. (4) Preservativo não interrompe a via respiratória descrita; é relevante para prevenção de gravidez e de muitas ISTs em contextos de contato sexual.\n\nA conclusão usa as informações fornecidas sobre agente e via. Não se pode inferir diagnóstico ou tratamento individual a partir do cenário; isso exige orientação profissional."
+        },
+        {
+          "type": "summary",
+          "pedagogical_role": "review",
+          "title": "Síntese e autochecagem",
+          "content_format": "markdown",
+          "content": "Em questões de saúde, escreva **agente → via → hospedeiro → medida compatível** e explique o mecanismo. Diferencie contracepção e prevenção de ISTs; compare organismos por organização celular e modo de vida; relacione hormônios e reprodução sem transformar padrões gerais em diagnóstico individual.\n\n**Autochecagem:** uma doença viral transmitida por partículas no ar seria prevenida por antibiótico ou por ventilação? **Ventilação é pertinente à via descrita; antibióticos não agem contra vírus.** Preservativo é a intervenção específica para essa via? **Não.** Uma vacina pertinente garante proteção total? **Não; seu efeito depende do agente e do imunizante, e não se deve prometer proteção absoluta sem evidência.**\n\n**Roteiro existente:** módulo 33: conceito (129), exemplo (130), prática (132), revisão (131). As questões devem ampliar a prática para os demais subtemas oficiais; a existência desses passos genéricos não prova, sozinha, cobertura integral."
+        }
+      ],
+      "verification_checklist": [
+        {"check": "Distinção vírus/bactéria e descrição de grupos biológicos", "result": "conferido contra a proposta e o escopo introdutório; evitar leitura como chave taxonômica exaustiva"},
+        {"check": "Relação agente, via, prevenção; antibiótico não atua contra vírus", "result": "conferido; cenário especifica via respiratória"},
+        {"check": "Ventilação e vacina formuladas sem promessa absoluta", "result": "conferido; eficácia depende da via/agente/imunizante/contexto"},
+        {"check": "Contracepção, DIU de cobre e prevenção de IST", "result": "verificado no parecer científico independente; manter linguagem geral e encaminhamento a serviço de saúde"},
+        {"check": "Há cálculo quantitativo nesta aula", "result": "não aplicável; não há números nem cálculos a validar"},
+        {"check": "Texto do pacote v1.3.2 coincide com texto integral do SQLite", "result": "sim; metadados de status divergem e permanecem sem resolução"},
+        {"check": "Cobertura integral do programa de Biologia", "result": "não comprovada; aula marcada como introdutória"}
+      ],
+      "editorial_decision": "conteúdo candidato após revisão formal; reconciliação do status conflitante obrigatória antes de qualquer declaração de aprovação",
+      "status_change": false
+    }
+  ],
+  "human_review_checklist": [
+    "Comparar cada seção final deste arquivo, caractere por caractere, com o conteúdo que se pretende adotar; esta proposta não foi importada.",
+    "Confirmar que os títulos e IDs dos itens sequenciais ainda existem no momento da integração; os IDs citados foram observados no SQLite consultado em modo read-only.",
+    "Revisar linguagem, acessibilidade, notação matemática renderizada e funcionamento dos links do roteiro.",
+    "Não marcar tópico como integralmente coberto apenas porque sua aula introdutória e os quatro passos genéricos estão ligados.",
+    "Para 2500, resolver explicitamente o conflito de review_status observado (published no SQLite, review no pacote/revisão) em decisão editorial própria; este arquivo não muda o status.",
+    "Manter as aulas em revisão até decisão e integração versionada autorizadas."
+  ],
+  "integrity": {
+    "new_file_only": true,
+    "sqlite_modified": false,
+    "release_modified": false,
+    "build_modified": false,
+    "base_lessons_and_audits_modified": false,
+    "editorial_status_changed": false
+  }
+}

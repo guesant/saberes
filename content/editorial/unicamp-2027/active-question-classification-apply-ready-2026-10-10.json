@@ -1,0 +1,595 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "manifest_id": "active-question-classification-apply-ready-2026-10-10",
+  "confidence_threshold": 0.95,
+  "scope": "Somente associações questão–tópico das ocorrências 2025 QZ, 2026 QX e simulado oficial 2027 Q/T. Relações editoriais, não tags oficiais.",
+  "policy": "Inclui apenas decisões adjudicáveis de alta confiança que o aplicador consegue representar sem excluir linhas; exclusões que exigem DELETE ficam fora.",
+  "decisions": [
+    {
+      "report_item_id": "qz-2025-q62-electrochemistry-missing-link",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 62,
+        "canonical_topic_id": 2519
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 62,
+        "canonical_topic_id": 2519,
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "source_document_id": 36,
+        "source_page": 20,
+        "source_excerpt": "Q62 apresenta eletrólise de água purificada como técnica de geração de oxigênio em submarino.",
+        "review_status": "published"
+      },
+      "reason": "A questão avalia eletrólise, explicitamente incluída em Eletroquímica no programa 2027 p. 14. Associação editorial primária; não é tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2025/QZ.pdf#page=20",
+          "detail": "Q62, página impressa 18 / PDF p. 20: a alternativa pertinente propõe eletrólise da água purificada; o programa 2027 p. 14 lista eletrólise em Eletroquímica."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q1-5-q7-english-reading-primary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 289,
+        "canonical_topic_id": 2496
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 3,
+        "source_excerpt": "Q1 solicita compreensão/inferência a partir de texto em inglês.",
+        "review_status": "published"
+      },
+      "reason": "O comando avalia diretamente leitura/compreensão em inglês, alinhada ao programa 2027 p. 11. Associação editorial, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=3",
+          "detail": "Q1 solicita compreensão/inferência a partir de texto em inglês."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q1-5-q7-english-reading-primary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 290,
+        "canonical_topic_id": 2496
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 3,
+        "source_excerpt": "Q2 exige interpretação do texto em inglês.",
+        "review_status": "published"
+      },
+      "reason": "O comando avalia diretamente leitura/compreensão em inglês, alinhada ao programa 2027 p. 11. Associação editorial, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=3",
+          "detail": "Q2 exige interpretação do texto em inglês."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q1-5-q7-english-reading-primary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 291,
+        "canonical_topic_id": 2496
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.9,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 3,
+        "source_excerpt": "Q3 exige interpretação contextual do texto em inglês.",
+        "review_status": "published"
+      },
+      "reason": "O comando avalia diretamente leitura/compreensão em inglês, alinhada ao programa 2027 p. 11. Associação editorial, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=3",
+          "detail": "Q3 exige interpretação contextual do texto em inglês."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q1-5-q7-english-reading-primary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 292,
+        "canonical_topic_id": 2496
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 4,
+        "source_excerpt": "Q4 exige leitura e inferência do texto em inglês.",
+        "review_status": "published"
+      },
+      "reason": "O comando avalia diretamente leitura/compreensão em inglês, alinhada ao programa 2027 p. 11. Associação editorial, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=4",
+          "detail": "Q4 exige leitura e inferência do texto em inglês."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q1-5-q7-english-reading-primary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 293,
+        "canonical_topic_id": 2496
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.92,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 4,
+        "source_excerpt": "Q5 exige compreensão da informação textual em inglês.",
+        "review_status": "published"
+      },
+      "reason": "O comando avalia diretamente leitura/compreensão em inglês, alinhada ao programa 2027 p. 11. Associação editorial, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=4",
+          "detail": "Q5 exige compreensão da informação textual em inglês."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q6-english-reading-secondary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 294,
+        "canonical_topic_id": 2496
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.92,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 4,
+        "source_excerpt": "Q6 pede síntese/ideia principal de artigo em inglês; a leitura global é a habilidade central.",
+        "review_status": "published"
+      },
+      "reason": "O comando avalia diretamente leitura/compreensão em inglês, alinhada ao programa 2027 p. 11. Associação editorial, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=4",
+          "detail": "Q6 pede síntese/ideia principal de artigo em inglês; a leitura global é a habilidade central."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q1-5-q7-english-reading-primary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 295,
+        "canonical_topic_id": 2496
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 4,
+        "source_excerpt": "Q7 exige leitura e interpretação de texto em inglês.",
+        "review_status": "published"
+      },
+      "reason": "O comando avalia diretamente leitura/compreensão em inglês, alinhada ao programa 2027 p. 11. Associação editorial, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=4",
+          "detail": "Q7 exige leitura e interpretação de texto em inglês."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q31-approve-brazil-history",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 319,
+        "canonical_topic_id": 2492
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 13,
+        "source_excerpt": "Q31 aborda Estado Novo de 1937, Vargas e censura no Brasil.",
+        "review_status": "published"
+      },
+      "reason": "História do Brasil é o núcleo histórico explícito; relação editorial, não tag oficial.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=13",
+          "detail": "Q31 aborda Estado Novo de 1937, Vargas e censura no Brasil."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q32-world-contemporary-and-globalization",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 320,
+        "canonical_topic_id": 2493
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": 44,
+        "source_page": 13,
+        "source_excerpt": "Q32 relaciona entrada da China na OMC e disputas de comércio internacional.",
+        "review_status": "published"
+      },
+      "reason": "O enunciado trata de evento e relações do mundo contemporâneo; associação editorial.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=13",
+          "detail": "Q32 relaciona entrada da China na OMC e disputas de comércio internacional."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q33-approve-brazil-history",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 321,
+        "canonical_topic_id": 2492
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 13,
+        "source_excerpt": "Q33 situa o desfile de Zuzu Angel na ditadura e no desaparecimento político no Brasil.",
+        "review_status": "published"
+      },
+      "reason": "O contexto histórico brasileiro é explícito e central; associação editorial.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=13",
+          "detail": "Q33 situa o desfile de Zuzu Angel na ditadura e no desaparecimento político no Brasil."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q37-approve-genetics",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 325,
+        "canonical_topic_id": 2491
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.92,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 15,
+        "source_excerpt": "Q37 exige inferir herança recessiva, heterozigose e efeitos de consanguinidade por heredograma.",
+        "review_status": "published"
+      },
+      "reason": "A habilidade central é genética/hereditariedade; promover a editorial primária.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=15",
+          "detail": "Q37 exige inferir herança recessiva, heterozigose e efeitos de consanguinidade por heredograma."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q39-promote-ecology",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 327,
+        "canonical_topic_id": 2490
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.92,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 16,
+        "source_excerpt": "Q39 pede analisar dinâmica predador–presa e efeitos de espécie exótica invasora.",
+        "review_status": "published"
+      },
+      "reason": "Dinâmica de populações/interações ecológicas é o núcleo; promover a editorial primária.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=16",
+          "detail": "Q39 pede analisar dinâmica predador–presa e efeitos de espécie exótica invasora."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q41-evolution-secondary-to-primary",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 329,
+        "canonical_topic_id": 2491
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.92,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": 44,
+        "source_page": 16,
+        "source_excerpt": "Q41 compara crânios de hominínios e mudanças evolutivas associadas ao bipedalismo.",
+        "review_status": "published"
+      },
+      "reason": "A interpretação evolutiva é diretamente solicitada; promover a editorial primária.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=16",
+          "detail": "Q41 compara crânios de hominínios e mudanças evolutivas associadas ao bipedalismo."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q43-approve-functions",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 331,
+        "canonical_topic_id": 2479
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 17,
+        "source_excerpt": "Q43 compara aumento salarial fixo e percentual composto ao longo do tempo.",
+        "review_status": "published"
+      },
+      "reason": "A evolução dos valores é modelada diretamente; associação editorial primária.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=17",
+          "detail": "Q43 compara aumento salarial fixo e percentual composto ao longo do tempo."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q48-approve-functions",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 336,
+        "canonical_topic_id": 2479
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "source_document_id": 44,
+        "source_page": 18,
+        "source_excerpt": "Q48 descreve trajetória parabólica e pede sua equação.",
+        "review_status": "published"
+      },
+      "reason": "Função quadrática é o objeto direto; associação editorial primária.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=18",
+          "detail": "Q48 descreve trajetória parabólica e pede sua equação."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q65-approve-poetry",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 353,
+        "canonical_topic_id": 2485
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "source_document_id": 44,
+        "source_page": 24,
+        "source_excerpt": "Q65 interpreta trecho lírico de Cartola e suas imagens poéticas.",
+        "review_status": "published"
+      },
+      "reason": "O comando é interpretação de linguagem poética; associação editorial primária.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=24",
+          "detail": "Q65 interpreta trecho lírico de Cartola e suas imagens poéticas."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qx-2026-q72-approve-reactions",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 360,
+        "canonical_topic_id": 2488
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.95,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 26,
+        "source_excerpt": "Q72 compara rotas de transformação de espodumênio por velocidade, rendimento e consumo de reagente.",
+        "review_status": "published"
+      },
+      "reason": "Transformações químicas são centrais; associação editorial primária.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2026/QX.pdf#page=26",
+          "detail": "Q72 compara rotas de transformação de espodumênio por velocidade, rendimento e consumo de reagente."
+        }
+      ]
+    },
+    {
+      "report_item_id": "qt-2027-q42-approve-numerical-operations",
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 2778,
+        "canonical_topic_id": 2501
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.88,
+        "source_document_id": 335,
+        "source_page": 14,
+        "source_excerpt": "Vale a pena colocar energia solar na sua casa? Entenda e tire suas dúvidas. A função da energia solar fotovoltaica é usar a luz do sol como fonte de eletricidade. A fácil manutenção, o tempo de vida útil dos equipamentos e a vantagem ecológica fazem o sistema compensar financeiramente em muitos casos, embora o valor inicial de investimento seja alto. (Adaptado de Vale a pena colocar energia solar na sua casa? Entenda e tire suas dúvidas. UOL Tilt, 16/07/2024. http://www.uol.com.br/tilt/ faq/ener",
+        "review_status": "review"
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 335,
+        "source_page": 14,
+        "source_excerpt": "Q42 calcula economia percentual mensal e divide o investimento inicial por essa economia.",
+        "review_status": "published"
+      },
+      "reason": "O procedimento exige porcentagem e operações aritméticas; associação editorial primária, não tag oficial Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/official-pdfs/2027-simulation/simulado_Q_T.pdf#page=14",
+          "detail": "Q42 calcula economia percentual mensal e divide o investimento inicial por essa economia."
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,24 @@ import type { ScoreSimulationQuestionInput } from "./models/score-simulation-que
 import type { SimulationQuestionResult } from "./models/simulation-question-result.interface";
 
 export function computeSimulationQuestionScore(input: ScoreSimulationQuestionInput): SimulationQuestionResult {
+  const maxPoints = input.session.questionWeights?.find((weight) => {
+    return weight.questionKey === input.questionKey;
+  })?.maxPoints ?? 1;
+
+  if (input.data.question.answer_status === "cancelled") {
+    const awardCancellation = input.session.cancelledQuestionPolicy === "award_max_points";
+
+    return {
+      questionKey: input.questionKey,
+      answer: "",
+      expectedAnswer: "",
+      isCorrect: null,
+      answerStatus: "cancelled",
+      maxPoints,
+      earnedPoints: awardCancellation ? maxPoints : null,
+    };
+  }
+
   const answer = input.session.simulationAnswers?.find((draft) => {
     return draft.questionKey === input.questionKey;
   })?.value || "";
@@ -17,10 +35,6 @@ export function computeSimulationQuestionScore(input: ScoreSimulationQuestionInp
     expectedAnswer,
     questionType: String(input.data.question.type || "short_text"),
   });
-
-  const maxPoints = input.session.questionWeights?.find((weight) => {
-    return weight.questionKey === input.questionKey;
-  })?.maxPoints ?? 1;
 
   return {
     questionKey: input.questionKey,

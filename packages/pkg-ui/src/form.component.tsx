@@ -5,7 +5,7 @@ import type { ReactElement } from "react";
 export function UIForm(props: UIFormProps): ReactElement {
   return (
     <UIBox
-      align="start"
+      align="stretch"
       component="form"
       gap="md"
       id={props.id}

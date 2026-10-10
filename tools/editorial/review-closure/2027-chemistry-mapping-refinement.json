@@ -1,0 +1,25 @@
+{
+  "summary": "Refina duas classificações de Química após revisão independente do foco real dos itens; mantém explícita a lacuna de prática específica em eletroquímica.",
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 2807, "canonical_topic_id": 2518},
+      "expected": {"relation_type": "secondary", "review_status": "published"},
+      "changes": {"review_status": "review"},
+      "reason": "A questão Q/T 71 pergunta sobre possíveis danos à saúde no uso de unhas de gel. As ligações covalentes entre cadeias aparecem como contexto explicativo, não como conhecimento exigido para responder; não deve contar como prática de ligações químicas.",
+      "evidence": [
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=21", "detail": "Simulado oficial preparatório para 2027, caderno Q/T, questão 71. O comando final pergunta sobre possíveis danos diretos à saúde; ligações covalentes descrevem a formação do polímero no contexto."}
+      ]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {"question_id": 2803, "canonical_topic_id": 2518},
+      "expected": {"relation_type": "related", "review_status": "published"},
+      "changes": {"relation_type": "secondary"},
+      "reason": "A questão Q/T 67 usa explicitamente a entalpia reticular para descrever a energia necessária para separar íons e a compara com a hidratação. A resolução é principalmente termoquímica, então o vínculo com ligações iônicas é secundário, mas substancialmente pertinente.",
+      "evidence": [
+        {"locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/simulado_Q_T.pdf#page=19", "detail": "Simulado oficial preparatório para 2027, caderno Q/T, questão 67. O enunciado define entalpia reticular como energia absorvida para romper as ligações entre íons e relaciona o processo à hidratação."}
+      ]
+    }
+  ]
+}

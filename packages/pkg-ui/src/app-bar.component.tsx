@@ -12,7 +12,7 @@ export function UIAppBar(props: UIAppBarProps): ReactElement {
       inset="none"
       layout="flow"
       position="sticky"
-      sx={{ gridColumn: "2", justifySelf: "center", maxWidth: "500px", width: "100%" }}
+      sx={{ gridColumn: "1", justifySelf: "center", maxWidth: "500px", width: "100%" }}
     />
   );
 }

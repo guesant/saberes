@@ -8,6 +8,15 @@ import { defineConfig } from "vitest/config";
 
 const base = process.env.VITE_BASE_PATH || "/";
 
+const escapedBase = base.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
+
+const officialStudyAssetUrlPattern = new RegExp(
+  `${escapedBase}data/[^?#]+\\.(?:pdf|png|jpe?g)(?:\\?[^#]*)?$`,
+  "iu",
+);
+
+const officialStudyAssetsCacheName = "saberes-official-study-assets";
+
 const appRequire = createRequire(path.resolve(process.cwd(), "packages/app/package.json"));
 
 const testingLibraryReactPath = appRequire.resolve("@testing-library/react");
@@ -17,6 +26,49 @@ export const asset = (name: string) => {
 };
 
 const localContentPath = path.resolve(process.cwd(), ".local/content/content.sqlite");
+
+const localContentAssetsPath = path.resolve(
+  process.cwd(),
+  ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data",
+);
+
+const localContentAssetsManifestPath = path.resolve(
+  process.cwd(),
+  ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/asset-manifest.jsonl",
+);
+
+interface LocalContentAssetManifestRecord {
+  path: string;
+}
+
+const localContentAssetTargets = fs.existsSync(localContentAssetsManifestPath)
+  ? [
+    ...new Set(
+      fs
+        .readFileSync(localContentAssetsManifestPath, "utf8")
+        .trim()
+        .split("\n")
+        .map((line) => {
+          const record = JSON.parse(line) as LocalContentAssetManifestRecord;
+
+          return path.posix.dirname(record.path);
+        }),
+    ),
+  ].map((directory) => {return {
+    src: `${localContentAssetsPath}/${directory}/*`,
+    dest: `data/${directory}`,
+  };})
+  : [];
+
+const localContentAssetPaths = new Set(
+  fs.existsSync(localContentAssetsManifestPath)
+    ? fs
+      .readFileSync(localContentAssetsManifestPath, "utf8")
+      .split("\n")
+      .filter(Boolean)
+      .map((line) => {return (JSON.parse(line) as LocalContentAssetManifestRecord).path;})
+    : [],
+);
 
 const schemaDocsPath = path.resolve(process.cwd(), ".cache/schema-docs/site");
 
@@ -35,6 +87,9 @@ const staticCopyTargets = [
     src: sqlWasmPath,
     dest: ".",
   },
+  ...(fs.existsSync(localContentAssetsManifestPath)
+    ? [{ src: localContentAssetsManifestPath, dest: "data" }]
+    : []),
   ...(fs.existsSync(schemaDocsPath)
     ? [
       {
@@ -60,6 +115,10 @@ type ViteMiddlewareHandler = (
   next: ViteMiddlewareNext,
 ) => void;
 
+interface LocalContentRequest {
+  url?: string;
+}
+
 type ViteMiddlewareUse = (route: string, handler: ViteMiddlewareHandler) => void;
 
 interface ViteMiddlewares {
@@ -70,9 +129,30 @@ interface ViteServer {
   middlewares: ViteMiddlewares;
 }
 
+interface MediaTypeByExtension {
+  [extension: string]: string;
+}
+
 const localContentPlugin = {
   name: "local-content-database",
   configureServer(server: ViteServer) {
+    server.middlewares.use("/data/asset-manifest.jsonl", (_request, response, next) => {
+      if (!fs.existsSync(localContentAssetsManifestPath)) {
+        response.statusCode = 404;
+
+        response.end("Manifesto de conteúdo local não encontrado.");
+
+        return;
+      }
+
+      response.setHeader("Content-Type", "application/x-ndjson; charset=utf-8");
+
+      fs.createReadStream(localContentAssetsManifestPath)
+        .on("error", next)
+        // awkward-type-ignore: the local Vite response adapter exposes a compatible writable stream at runtime
+        .pipe(response as never);
+    });
+
     server.middlewares.use("/data/content.sqlite", (_request, response, next) => {
       if (!fs.existsSync(localContentPath)) {
         response.statusCode = 404;
@@ -89,6 +169,72 @@ const localContentPlugin = {
         // awkward-type-ignore: the local Vite response adapter exposes a compatible writable stream at runtime
         .pipe(response as never);
     });
+
+    server.middlewares.use("/data", (request, response, next) => {
+      const requestUrl = (request as LocalContentRequest).url;
+
+      if (!requestUrl) {
+        response.statusCode = 404;
+
+        response.end("Asset local não encontrado.");
+
+        return;
+      }
+
+      let relativePath: string;
+
+      try {
+        relativePath = decodeURIComponent(new URL(requestUrl, "http://localhost").pathname)
+          .replace(/^\/+/, "");
+      } catch {
+        response.statusCode = 400;
+
+        response.end("Caminho de asset inválido.");
+
+        return;
+      }
+
+      const assetPath = path.resolve(localContentAssetsPath, relativePath);
+
+      const assetRelativePath = path.relative(localContentAssetsPath, assetPath);
+
+      if (
+        !relativePath ||
+        assetRelativePath.startsWith("..") ||
+        path.isAbsolute(assetRelativePath) ||
+        !localContentAssetPaths.has(relativePath) ||
+        !fs.existsSync(assetPath) ||
+        !fs
+          .statSync(assetPath)
+          .isFile()
+      ) {
+        response.statusCode = 404;
+
+        response.end("Asset local não encontrado.");
+
+        return;
+      }
+
+      const extension = path.extname(assetPath)
+        .toLowerCase();
+
+      const mediaTypes: MediaTypeByExtension = {
+        ".jpeg": "image/jpeg",
+        ".jpg": "image/jpeg",
+        ".pdf": "application/pdf",
+        ".png": "image/png",
+        ".webp": "image/webp",
+      };
+
+      response.setHeader("Content-Type", mediaTypes[extension] ?? "application/octet-stream");
+
+      response.setHeader("Cache-Control", "no-cache");
+
+      fs.createReadStream(assetPath)
+        .on("error", next)
+        // awkward-type-ignore: the local Vite response adapter exposes a compatible writable stream at runtime
+        .pipe(response as never);
+    });
   },
 };
 
@@ -100,6 +246,13 @@ export default defineConfig({
     viteStaticCopy({
       targets: staticCopyTargets,
     }),
+    ...(localContentAssetTargets.length > 0
+      ? [
+        viteStaticCopy({
+          targets: localContentAssetTargets,
+        }),
+      ]
+      : []),
     VitePWA({
       registerType: "prompt",
       includeAssets: ["icons/*.svg"],
@@ -162,10 +315,11 @@ export default defineConfig({
         cacheId: "saberes",
         cleanupOutdatedCaches: true,
         clientsClaim: true,
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        maximumFileSizeToCacheInBytes: 20 * 1024 * 1024,
+        globIgnores: ["-/backstage/database/schema/**"],
         navigateFallback: asset("index.html"),
         navigateFallbackDenylist: [/\/-\/backstage\/database\/schema(?:\/|$)/u],
-        globPatterns: ["**/*.{js,css,html,svg,wasm,json,sqlite}"],
+        globPatterns: ["**/*.{js,mjs,css,html,svg,wasm,json,jsonl,sqlite}"],
         skipWaiting: false,
         runtimeCaching: [
           {
@@ -176,6 +330,18 @@ export default defineConfig({
             options: {
               cacheName: "saberes-external-content",
               expiration: { maxEntries: 3 },
+            },
+          },
+          {
+            urlPattern: officialStudyAssetUrlPattern,
+            handler: "CacheFirst",
+            options: {
+              cacheName: officialStudyAssetsCacheName,
+              expiration: {
+                maxEntries: 256,
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+                purgeOnQuotaError: true,
+              },
             },
           },
         ],

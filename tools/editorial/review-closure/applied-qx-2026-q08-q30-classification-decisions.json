@@ -1,0 +1,1018 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T00:56:17.576584+00:00",
+  "database_before_sha256": "3ea574130a638f0e8f3a23216796aeb85dddfc71e9701b2e7cd3031cb5bbfdad",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 296,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.9,
+        "source_document_id": 44,
+        "source_page": 5,
+        "source_excerpt": "O enunciado descreve transferência de calor por condução, convecção e radiação.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=5",
+          "detail": "Caderno oficial Q/X 2026, questão 8, página 5. O enunciado descreve transferência de calor por condução, convecção e radiação."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q08",
+          "detail": "Ocorrência vu-2026-qx-f1-q08 da questão canônica 296, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2471",
+          "detail": "Tópico canônico 2471; vínculo classificado como secondary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 296,
+        "canonical_topic_id": 2515
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 296,
+        "canonical_topic_id": 2515,
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "source_document_id": 44,
+        "source_page": 5,
+        "source_excerpt": "As afirmativas avaliam diretamente os mecanismos de transferência de calor.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=5",
+          "detail": "Caderno oficial Q/X 2026, questão 8, página 5. As afirmativas avaliam diretamente os mecanismos de transferência de calor."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q08",
+          "detail": "Ocorrência vu-2026-qx-f1-q08 da questão canônica 296, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2515",
+          "detail": "Tópico canônico 2515; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 297,
+        "canonical_topic_id": 2487
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 5,
+        "source_excerpt": "A questão calcula carga elétrica a partir de corrente constante e intervalo de tempo.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=5",
+          "detail": "Caderno oficial Q/X 2026, questão 9, página 5. A questão calcula carga elétrica a partir de corrente constante e intervalo de tempo."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q09",
+          "detail": "Ocorrência vu-2026-qx-f1-q09 da questão canônica 297, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2487",
+          "detail": "Tópico canônico 2487; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 298,
+        "canonical_topic_id": 2487
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": 44,
+        "source_page": 5,
+        "source_excerpt": "O modelo de bateria usa diferença de potencial, resistência e corrente elétrica.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=5",
+          "detail": "Caderno oficial Q/X 2026, questão 10, página 5. O modelo de bateria usa diferença de potencial, resistência e corrente elétrica."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q10",
+          "detail": "Ocorrência vu-2026-qx-f1-q10 da questão canônica 298, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2487",
+          "detail": "Tópico canônico 2487; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 299,
+        "canonical_topic_id": 2486
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 5,
+        "source_excerpt": "A questão iguala energia armazenada na bateria à variação da energia potencial gravitacional.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=5",
+          "detail": "Caderno oficial Q/X 2026, questão 11, página 5. A questão iguala energia armazenada na bateria à variação da energia potencial gravitacional."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q11",
+          "detail": "Ocorrência vu-2026-qx-f1-q11 da questão canônica 299, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2486",
+          "detail": "Tópico canônico 2486; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 300,
+        "canonical_topic_id": 2471
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.9,
+        "source_document_id": 44,
+        "source_page": 5,
+        "source_excerpt": "O enunciado situa a aplicação em Física e descreve uma lente delgada.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=5",
+          "detail": "Caderno oficial Q/X 2026, questão 12, página 5. O enunciado situa a aplicação em Física e descreve uma lente delgada."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q12",
+          "detail": "Ocorrência vu-2026-qx-f1-q12 da questão canônica 300, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2471",
+          "detail": "Tópico canônico 2471; vínculo classificado como secondary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 300,
+        "canonical_topic_id": 2516
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 300,
+        "canonical_topic_id": 2516,
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "source_document_id": 44,
+        "source_page": 5,
+        "source_excerpt": "A questão exige identificar lente convergente/divergente e relacionar objeto à distância focal.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=5",
+          "detail": "Caderno oficial Q/X 2026, questão 12, página 5. A questão exige identificar lente convergente/divergente e relacionar objeto à distância focal."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q12",
+          "detail": "Ocorrência vu-2026-qx-f1-q12 da questão canônica 300, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2516",
+          "detail": "Tópico canônico 2516; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "insert"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 301,
+        "canonical_topic_id": 2486
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.96,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": 44,
+        "source_page": 6,
+        "source_excerpt": "A questão interpreta posição em função do tempo em trechos de movimento e aceleração definidos.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=6",
+          "detail": "Caderno oficial Q/X 2026, questão 13, página 6. A questão interpreta posição em função do tempo em trechos de movimento e aceleração definidos."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q13",
+          "detail": "Ocorrência vu-2026-qx-f1-q13 da questão canônica 301, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2486",
+          "detail": "Tópico canônico 2486; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 302,
+        "canonical_topic_id": 2486
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 6,
+        "source_excerpt": "A questão calcula a força resultante a partir da massa e da desaceleração constante.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=6",
+          "detail": "Caderno oficial Q/X 2026, questão 14, página 6. A questão calcula a força resultante a partir da massa e da desaceleração constante."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q14",
+          "detail": "Ocorrência vu-2026-qx-f1-q14 da questão canônica 302, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2486",
+          "detail": "Tópico canônico 2486; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 304,
+        "canonical_topic_id": 2494
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.9,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.9,
+        "source_document_id": 44,
+        "source_page": 7,
+        "source_excerpt": "O mapa e as coordenadas são usados para interpretar uma regionalização político-geográfica.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=7",
+          "detail": "Caderno oficial Q/X 2026, questão 16, página 7. O mapa e as coordenadas são usados para interpretar uma regionalização político-geográfica."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q16",
+          "detail": "Ocorrência vu-2026-qx-f1-q16 da questão canônica 304, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2494",
+          "detail": "Tópico canônico 2494; vínculo classificado como secondary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 304,
+        "canonical_topic_id": 2495
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.9,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.9,
+        "source_document_id": 44,
+        "source_page": 7,
+        "source_excerpt": "A questão define a divisão Norte Global/Sul Global como regionalização político-geográfica.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=7",
+          "detail": "Caderno oficial Q/X 2026, questão 16, página 7. A questão define a divisão Norte Global/Sul Global como regionalização político-geográfica."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q16",
+          "detail": "Ocorrência vu-2026-qx-f1-q16 da questão canônica 304, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2495",
+          "detail": "Tópico canônico 2495; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 305,
+        "canonical_topic_id": 2490
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.9,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.86,
+        "source_document_id": 44,
+        "source_page": 7,
+        "source_excerpt": "O enunciado relaciona clima e zonobiomas à distribuição de formações naturais.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=7",
+          "detail": "Caderno oficial Q/X 2026, questão 17, página 7. O enunciado relaciona clima e zonobiomas à distribuição de formações naturais."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q17",
+          "detail": "Ocorrência vu-2026-qx-f1-q17 da questão canônica 305, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2490",
+          "detail": "Tópico canônico 2490; vínculo classificado como secondary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 306,
+        "canonical_topic_id": 2495
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.95,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.87,
+        "source_document_id": 44,
+        "source_page": 8,
+        "source_excerpt": "A disputa hídrica na bacia do Indo é contextualizada por relações territoriais entre Índia e Paquistão.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=8",
+          "detail": "Caderno oficial Q/X 2026, questão 18, página 8. A disputa hídrica na bacia do Indo é contextualizada por relações territoriais entre Índia e Paquistão."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q18",
+          "detail": "Ocorrência vu-2026-qx-f1-q18 da questão canônica 306, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2495",
+          "detail": "Tópico canônico 2495; vínculo classificado como secondary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 307,
+        "canonical_topic_id": 2495
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.95,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.95,
+        "source_document_id": 44,
+        "source_page": 8,
+        "source_excerpt": "O texto e o mapa tratam de alianças, disputas e influência geopolítica do Irã.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=8",
+          "detail": "Caderno oficial Q/X 2026, questão 19, página 8. O texto e o mapa tratam de alianças, disputas e influência geopolítica do Irã."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q19",
+          "detail": "Ocorrência vu-2026-qx-f1-q19 da questão canônica 307, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2495",
+          "detail": "Tópico canônico 2495; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 308,
+        "canonical_topic_id": 2495
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.96,
+        "source_document_id": 44,
+        "source_page": 9,
+        "source_excerpt": "O mapa e o texto abordam a incorporação de áreas baianas a circuitos espaciais produtivos.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=9",
+          "detail": "Caderno oficial Q/X 2026, questão 20, página 9. O mapa e o texto abordam a incorporação de áreas baianas a circuitos espaciais produtivos."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q20",
+          "detail": "Ocorrência vu-2026-qx-f1-q20 da questão canônica 308, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2495",
+          "detail": "Tópico canônico 2495; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 309,
+        "canonical_topic_id": 2495
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 9,
+        "source_excerpt": "A questão interpreta centros de gestão e comando na rede urbana brasileira.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=9",
+          "detail": "Caderno oficial Q/X 2026, questão 21, página 9. A questão interpreta centros de gestão e comando na rede urbana brasileira."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q21",
+          "detail": "Ocorrência vu-2026-qx-f1-q21 da questão canônica 309, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2495",
+          "detail": "Tópico canônico 2495; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 310,
+        "canonical_topic_id": 2498
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.92,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.92,
+        "source_document_id": 44,
+        "source_page": 10,
+        "source_excerpt": "Os textos relacionam consumo, distinção social e práticas culturais alimentares.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=10",
+          "detail": "Caderno oficial Q/X 2026, questão 22, página 10. Os textos relacionam consumo, distinção social e práticas culturais alimentares."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q22",
+          "detail": "Ocorrência vu-2026-qx-f1-q22 da questão canônica 310, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2498",
+          "detail": "Tópico canônico 2498; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 311,
+        "canonical_topic_id": 2498
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "source_document_id": 44,
+        "source_page": 10,
+        "source_excerpt": "Os textos discutem concepções de povos indígenas sobre sociedade, Terra e produção.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=10",
+          "detail": "Caderno oficial Q/X 2026, questão 23, página 10. Os textos discutem concepções de povos indígenas sobre sociedade, Terra e produção."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q23",
+          "detail": "Ocorrência vu-2026-qx-f1-q23 da questão canônica 311, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2498",
+          "detail": "Tópico canônico 2498; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 312,
+        "canonical_topic_id": 2498
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "source_document_id": 44,
+        "source_page": 10,
+        "source_excerpt": "A questão relaciona a experiência da adolescência a práticas e construções sociais.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=10",
+          "detail": "Caderno oficial Q/X 2026, questão 24, página 10. A questão relaciona a experiência da adolescência a práticas e construções sociais."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q24",
+          "detail": "Ocorrência vu-2026-qx-f1-q24 da questão canônica 312, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2498",
+          "detail": "Tópico canônico 2498; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 313,
+        "canonical_topic_id": 2497
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.94,
+        "source_document_id": 44,
+        "source_page": 11,
+        "source_excerpt": "O texto discute gênero, reconhecimento e consequências políticas da classificação social.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=11",
+          "detail": "Caderno oficial Q/X 2026, questão 25, página 11. O texto discute gênero, reconhecimento e consequências políticas da classificação social."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q25",
+          "detail": "Ocorrência vu-2026-qx-f1-q25 da questão canônica 313, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2497",
+          "detail": "Tópico canônico 2497; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 313,
+        "canonical_topic_id": 2498
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.9,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.9,
+        "source_document_id": 44,
+        "source_page": 11,
+        "source_excerpt": "A construção social do gênero é também um tema de cultura e sociedade.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=11",
+          "detail": "Caderno oficial Q/X 2026, questão 25, página 11. A construção social do gênero é também um tema de cultura e sociedade."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q25",
+          "detail": "Ocorrência vu-2026-qx-f1-q25 da questão canônica 313, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2498",
+          "detail": "Tópico canônico 2498; vínculo classificado como secondary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 314,
+        "canonical_topic_id": 2497
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 11,
+        "source_excerpt": "Os textos de Rosa Luxemburgo discutem democracia, socialismo e participação política.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=11",
+          "detail": "Caderno oficial Q/X 2026, questão 26, página 11. Os textos de Rosa Luxemburgo discutem democracia, socialismo e participação política."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q26",
+          "detail": "Ocorrência vu-2026-qx-f1-q26 da questão canônica 314, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2497",
+          "detail": "Tópico canônico 2497; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 315,
+        "canonical_topic_id": 2497
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": 44,
+        "source_page": 11,
+        "source_excerpt": "Os textos de Cícero tratam explicitamente dos fundamentos da justiça.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=11",
+          "detail": "Caderno oficial Q/X 2026, questão 27, página 11. Os textos de Cícero tratam explicitamente dos fundamentos da justiça."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q27",
+          "detail": "Ocorrência vu-2026-qx-f1-q27 da questão canônica 315, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2497",
+          "detail": "Tópico canônico 2497; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 316,
+        "canonical_topic_id": 2492
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 12,
+        "source_excerpt": "O texto situa o tráfico de pessoas escravizadas em Buenos Aires e relaciona redes coloniais à região do Rio da Prata.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=12",
+          "detail": "Caderno oficial Q/X 2026, questão 28, página 12. O texto situa o tráfico de pessoas escravizadas em Buenos Aires e relaciona redes coloniais à região do Rio da Prata."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q28",
+          "detail": "Ocorrência vu-2026-qx-f1-q28 da questão canônica 316, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2492",
+          "detail": "Tópico canônico 2492; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 317,
+        "canonical_topic_id": 2474
+      },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.97,
+        "source_document_id": 44,
+        "source_page": 12,
+        "source_excerpt": "A questão contextualiza práticas esportivas e masculinidade na Grécia do Período Clássico.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=12",
+          "detail": "Caderno oficial Q/X 2026, questão 29, página 12. A questão contextualiza práticas esportivas e masculinidade na Grécia do Período Clássico."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q29",
+          "detail": "Ocorrência vu-2026-qx-f1-q29 da questão canônica 317, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2474",
+          "detail": "Tópico canônico 2474; vínculo classificado como primary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 318,
+        "canonical_topic_id": 2497
+      },
+      "expected": {
+        "relation_type": "related",
+        "confidence": 0.92,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.92,
+        "source_document_id": 44,
+        "source_page": 12,
+        "source_excerpt": "O excerto de Rousseau aborda contrato social, obediência e fundamentos da organização política.",
+        "review_status": "published"
+      },
+      "reason": "Classificação editorial revisada com base no enunciado da prova oficial. A associação não é uma tag atribuída pela Comvest; tópicos específicos e relações secundárias são mantidos como tais.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=12",
+          "detail": "Caderno oficial Q/X 2026, questão 30, página 12. O excerto de Rousseau aborda contrato social, obediência e fundamentos da organização política."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-f1-q30",
+          "detail": "Ocorrência vu-2026-qx-f1-q30 da questão canônica 318, com página de origem conferida."
+        },
+        {
+          "locator": "sqlite://canonical_topics/2497",
+          "detail": "Tópico canônico 2497; vínculo classificado como secondary e publicado somente com a evidência indicada."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T005617588497Z.sqlite",
+  "database_after_sha256": "fe6afb25f9162609012213f7f5078c0f0330792c0e4c9caf6bdb600b850f8f40"
+}

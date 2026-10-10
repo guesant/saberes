@@ -1,0 +1,40 @@
+{
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 62,
+        "canonical_topic_id": 2519
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "question_id": 62,
+        "canonical_topic_id": 2519,
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "source_document_id": 36,
+        "source_page": 20,
+        "source_excerpt": "A questão pede como gerar oxigênio em submarino e inclui eletrólise da água purificada entre as alternativas.",
+        "review_status": "published"
+      },
+      "reason": "A habilidade química central avaliada é a eletrólise da água para produzir oxigênio; a absorção de CO₂ é contexto adicional. A associação é uma classificação editorial sustentada pelo enunciado e pelo programa, não uma tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/docling-exam-review-2025-2027/2025/QZ/extracted.md#QUESTAO-62",
+          "detail": "O texto da questão 62 apresenta a eletrólise da água purificada como uma das opções para gerar O₂ a bordo de um submarino."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/offline-assets-2026-2027/data/official-pdfs/2027-simulation/programa-provas-2027.pdf#page=14",
+          "detail": "Programa oficial de Química, página impressa 14, inclui oxidação/redução, pilhas e eletrólise no tópico Eletroquímica."
+        },
+        {
+          "locator": "sqlite://question_occurrences/2025-QZ-62",
+          "detail": "Ocorrência da questão 62 no caderno oficial QZ 2025; o PDF de origem é o documento 36, página física 20."
+        }
+      ],
+      "action": "insert"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
-import { UICard, UICardContent, UIContentGroup, UIList, UITypography } from "@guesant/saberes-ui";
+import { UICard, UICardContent, UIContentGroup, UIList } from "@guesant/saberes-ui";
 import { CourseItemRow } from "./course-item-row.component";
+import { CourseRoadmapModuleHeader } from "./course-roadmap-module-header.component";
 
 export type CourseModuleCardProps = {
   module: Record<string, unknown>;
@@ -17,15 +18,7 @@ export function CourseModuleCard(props: CourseModuleCardProps) {
     <UICard>
       <UICardContent>
         <UIContentGroup variant="content">
-          <UIContentGroup variant="content">
-            <UITypography variant="h6">
-              {String(module.position)}.{String(module.title)}
-            </UITypography>
-
-            <UITypography variant="body2" color="text.secondary">
-              {String(module.description || "")}
-            </UITypography>
-          </UIContentGroup>
+          <CourseRoadmapModuleHeader module={module} />
 
           <UIList>
             {moduleItems.map((item) => {

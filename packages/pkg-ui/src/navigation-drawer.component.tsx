@@ -15,21 +15,24 @@ export function UINavigationDrawer(props: UINavigationDrawerProps): ReactElement
       anchor="left"
       component={UIDrawer}
       data-testid="navigation-drawer"
+      container={() => document.querySelector('[data-testid="page-surface"]')}
       inset="none"
       layout="flow"
       onClose={props.onClose}
       open={props.open}
       sx={{
+        inset: 0,
+        position: "absolute",
         "& .MuiBackdrop-root": {
           height: "100%",
-          left: "max(0px, calc((100vw - 500px) / 2))",
-          right: "auto",
-          width: "min(500px, 100vw)",
+          position: "absolute",
+          width: "100%",
         },
         "& .MuiDrawer-paper": {
           boxSizing: "border-box",
-          left: "max(0px, calc((100vw - 500px) / 2))",
-          maxWidth: "min(320px, calc(100vw - 48px))",
+          left: 0,
+          maxWidth: "min(320px, 100%)",
+          position: "absolute",
           width: 280,
         },
       }}

@@ -1,0 +1,105 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 335, "canonical_topic_id": 2494 },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.91,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "secondary",
+        "confidence": 0.88,
+        "review_status": "published",
+        "source_document_id": 44,
+        "source_page": 18,
+        "source_excerpt": "O problema calcula área real a partir de mapa em escala 1:5.000.000, área medida no papel e massa superficial do papel."
+      },
+      "reason": "A habilidade central é cálculo de área, portanto Cartografia e geotecnologias não deve ser a classificação primária. A escala cartográfica é, porém, indispensável para converter a medida do mapa em área real, justificando relação secundária editorial com o tópico da primeira fase de 2027.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=18",
+          "detail": "Caderno oficial Q/X 2026, questão 47. A resolução usa a escala numérica do mapa para converter a área medida da região representada em área real; a relação cartográfica é secundária ao cálculo matemático."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=7",
+          "detail": "Programa oficial de Geografia, página impressa 7: inclui interpretação de cartogramas e mapas e conteúdos de escala e linguagem cartográfica."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-q47",
+          "detail": "Ocorrência da questão 47 no caderno oficial Q/X 2026, fonte documental 44 e página de origem 18."
+        }
+      ]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 337, "canonical_topic_id": 2480 },
+      "expected": {
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "review_status": "review",
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null
+      },
+      "changes": {
+        "relation_type": "primary",
+        "confidence": 0.99,
+        "review_status": "published",
+        "source_document_id": 44,
+        "source_page": 19,
+        "source_excerpt": "A questão pede probabilidade de exatamente duas crianças manterem o próprio brinquedo numa permutação aleatória de cinco itens."
+      },
+      "reason": "O conteúdo avaliado diretamente é contagem de permutações e probabilidade de um evento com pontos fixos. A classificação é editorial, não uma tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=19",
+          "detail": "Caderno oficial Q/X 2026, questão 49. A situação sorteia uma permutação dos cinco brinquedos e pede a probabilidade do evento com exatamente dois acertos próprios."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=6",
+          "detail": "Programa oficial de Matemática, página impressa 6: inclui permutações, espaço amostral e probabilidade."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-q49",
+          "detail": "Ocorrência da questão 49 no caderno oficial Q/X 2026, fonte documental 44 e página de origem 19."
+        }
+      ]
+    },
+    {
+      "table": "question_canonical_topics",
+      "key": { "question_id": 359, "canonical_topic_id": 2517 },
+      "expected": { "exists": false },
+      "changes": {
+        "question_id": 359,
+        "canonical_topic_id": 2517,
+        "relation_type": "secondary",
+        "confidence": 0.92,
+        "review_status": "published",
+        "source_document_id": 44,
+        "source_page": 26,
+        "source_excerpt": "Tabela de densidade e teor alcoólico em massa para uma mistura ideal de água e etanol; cálculo de propriedades da mistura."
+      },
+      "reason": "A questão 71 não aborda diretamente mudanças de estado, mas exige propriedades de substâncias e composição de uma mistura água-etanol, incluindo densidade e concentração em massa. A relação com Materiais e estados físicos é pertinente como associação secundária ao tópico oficial que inclui propriedades, soluções e concentração; não é uma tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf#page=26",
+          "detail": "Caderno oficial Q/X 2026, questão 71. O enunciado trata água e etanol como mistura ideal e usa densidade do líquido e teor alcoólico em massa para completar a tabela."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf#page=14",
+          "detail": "Programa oficial de Química, página impressa 14: inclui propriedades dos materiais, soluções e concentração."
+        },
+        {
+          "locator": "sqlite://question_occurrences/vu-2026-qx-q71",
+          "detail": "Ocorrência da questão 71 no caderno oficial Q/X 2026, fonte documental 44 e página de origem 26."
+        }
+      ]
+    }
+  ]
+}

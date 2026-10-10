@@ -1,0 +1,67 @@
+{
+  "format": "lesson-audit-second-review/v1",
+  "audit_date": "2026-10-10",
+  "scope": "Revisão independente das substituições v2 de Ciências para a primeira fase da Unicamp 2027.",
+  "decisions": [
+    {
+      "curriculum_topic_id": 2500,
+      "reviewed_version": "1.3.2",
+      "decision": "publish",
+      "proposed_status": "published",
+      "reason": "O parecer independente confirma que a lacuna epidemiológica e as três seções foram corrigidas sem erro conceitual bloqueante.",
+      "source_document_ids": [148],
+      "evidence": [
+        { "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json", "supports": "Decisão publish, versão proposta 1.3.2, fatos e cálculos verificados." },
+        { "source_document_id": 148, "page": 12, "location": "Saúde humana", "supports": "Doenças por microrganismos/vetores, saneamento e serviços de saúde." }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "reviewed_version": "1.3.2",
+      "decision": "hold",
+      "proposed_status": "review",
+      "reason": "Cálculos corrigidos, mas falta delimitar esta etapa como parcial e conectá-la às etapas restantes do programa de Física.",
+      "source_document_ids": [148],
+      "evidence": [
+        { "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json", "supports": "Parecer hold: escopo parcial precisa ser explícito; contas verificadas não bastam para cobertura integral." },
+        { "source_document_id": 148, "page": 12, "location": "Mecânica", "supports": "Programa oficial da primeira fase." }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "reviewed_version": "1.2.2",
+      "decision": "hold",
+      "proposed_status": "review",
+      "reason": "Contas centrais corretas, mas faltam limites de escopo e definições para generalizar a convenção de lentes e ondas.",
+      "source_document_ids": [148],
+      "evidence": [
+        { "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json", "supports": "Parecer hold e ressalva sobre objetos virtuais/lentes divergentes e cobertura do programa." },
+        { "source_document_id": 148, "page": 13, "location": "Óptica e ondas", "supports": "Programa oficial da primeira fase." }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "reviewed_version": "1.1.2",
+      "decision": "hold",
+      "proposed_status": "review",
+      "reason": "Os cálculos e configuração eletrônica conferem, mas seguem faltando exemplos demonstrativos de ligações e propriedades do programa.",
+      "source_document_ids": [148],
+      "evidence": [
+        { "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json", "supports": "Parecer hold: incluir exemplos breves para NaCl, CO2/H2O e substância metálica." },
+        { "source_document_id": 148, "page": 14, "location": "Ligação química", "supports": "Programa oficial da primeira fase." }
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "reviewed_version": "1.3.2",
+      "decision": "hold",
+      "proposed_status": "review",
+      "reason": "A proposta melhorou, mas ainda precisa de exemplo de célula Zn/Cu e aplicações curtas de isomeria e biomoléculas/enzimas.",
+      "source_document_ids": [148],
+      "evidence": [
+        { "file": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-v2-independent-review-2026-10-10.json", "supports": "Parecer hold: a v2 não demonstra potencial de célula nem cobre objetivos explícitos de compostos orgânicos." },
+        { "source_document_id": 148, "page": 14, "location": "Química: eletroquímica e compostos orgânicos", "supports": "Programa oficial da primeira fase." }
+      ]
+    }
+  ]
+}

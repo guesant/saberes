@@ -1,0 +1,195 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T15:35:00.377132+00:00",
+  "database_before_sha256": "c7196bf58e0f80696d49d92e1cd6ca254d6adeaca457a35f1e225d94befbb25a",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 1
+      },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Datas do exame regular; não confundir com simulado presencial preparatório ocorrido em 14/06/2026.  Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Regra da edição 2027. Rechecagem em 10/10/2026: a Resolução GR-022/2026 confirma as datas das fases e a página oficial atual da Comvest confirma a 1ª fase em 18/10/2026. Não confundir com o simulado presencial preparatório de 14/06/2026."
+      },
+      "reason": "Remover a frase histórica de status review incompatível com editorial_status=published e atualizar a checagem; a regra e o status não mudam.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 16, §1º, confirma as datas das duas fases."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Página oficial atual consultada em 10/10/2026 confirma a primeira fase em 18/10/2026."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 2
+      },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Rechecado em 10/10/2026: a Resolução GR-022/2026, art. 19, e a página oficial atual da Comvest confirmam prova única, 72 questões e um ponto por questão; a orientação operacional informa quatro alternativas."
+      },
+      "reason": "Remover texto histórico review que contradiz o estado publicado no banco; não alterar conteúdo nem aprovação.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 19, caput e §2º, define prova única, 72 questões e um ponto por questão."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção Prova confirma formato atual e quatro alternativas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 3
+      },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Rechecado em 10/10/2026: distribuição confirmada na seção Prova da página oficial atual da Comvest e no Manual do Ingresso 2027, p. 22. Os quantitativos permanecem sem alteração."
+      },
+      "reason": "Remover texto histórico review que contradiz o estado publicado no banco; não alterar a regra.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção Prova lista os quantitativos por área/disciplina."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, p. 22, quadro de distribuição."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 5
+      },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Rechecado em 10/10/2026: horário de início e chegada são confirmados pela página atual da Comvest; duração e permanência mínima pelo art. 19, §1º, da Resolução e pelo Manual. Chegada às 8h é orientação; prova começa às 9h."
+      },
+      "reason": "Eliminar inconsistência de status na nota sem alterar a orientação regulatória.",
+      "evidence": [
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 19, §1º, fixa permanência mínima de duas horas e máxima de cinco."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Página atual confirma início às 9h e recomendação de chegada às 8h."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 7
+      },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Rechecado em 10/10/2026: identidade original indicada na inscrição e local designado conforme Manual do Ingresso 2027 e Resolução GR-022/2026. Não ampliar a lista de documentos aceitos."
+      },
+      "reason": "Remover estado review obsoleto da nota; preservar regra e status publicado.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf",
+          "detail": "Manual do Ingresso 2027, orientações de identificação e local da prova."
+        },
+        {
+          "locator": "https://www.pg.unicamp.br/norma/32393/1",
+          "detail": "Art. 13, §§6º e 15º–19º, sobre identificação e alocação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 9
+      },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Rechecado em 10/10/2026: itens proibidos e proibição de óculos inteligentes/componentes eletrônicos confirmados na seção O que levar da página oficial atual da Comvest. Resumo da edição, sem ampliar a lista normativa."
+      },
+      "reason": "Remover estado review obsoleto da nota; preservar proibições cadastradas.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Seção O que levar lista eletrônicos, relógios e outros itens vedados, incluindo óculos inteligentes durante a prova."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "edition_regulatory_rules",
+      "key": {
+        "id": 11
+      },
+      "expected": {
+        "editorial_status": "published",
+        "reviewed_at": "2026-10-09",
+        "notes": "Rechecado em 09/10/2026 na página oficial da Comvest e no comunicado de 02/10/2026; nenhuma publicação operacional posterior foi encontrada na página consultada. Status editorial mantido em review; esta verificação de fonte não equivale a aprovação editorial."
+      },
+      "changes": {
+        "reviewed_at": "2026-10-10",
+        "notes": "Rechecado em 10/10/2026: a página oficial atual da Comvest anuncia que a consulta aos locais já está liberada, e o comunicado de 02/10/2026 confirma a divulgação. A lista de calendário na mesma página ainda mostra 05/10 como data programada; preservar a distinção entre previsão e liberação efetiva."
+      },
+      "reason": "Eliminar estado review obsoleto e registrar a divergência da página: previsão de calendário versus aviso posterior de liberação efetiva. Não alterar o enunciado da regra.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+          "detail": "Página atual contém aviso de locais liberados e mantém a data programada de 05/10 na lista de calendário."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/vestibular-unicamp-2027-liberada-a-consulta-aos-locais-de-prova-da-primeira-fase/",
+          "detail": "Comunicado oficial de 02/10/2026 confirma a liberação da consulta aos locais."
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": ".local/content/backups/before-editorial-review-20261010T153500388238Z.sqlite",
+  "database_after_sha256": "4b5ac28371edef20a0c9881e8628f511a62aa35d072aa78b585b461b1aa3973d"
+}

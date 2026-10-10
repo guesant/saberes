@@ -1,0 +1,181 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-09T20:17:08.225730+00:00",
+  "database_before_sha256": "2df17afe15dc335ce05d81dffb2cb6741e10e2d27aa0b038baf6f970b8285733",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 578,
+        "topic_id": 2479,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review describes chapters on equations, exponents/polynomials, quadratic equations, functions, rational functions and graphing; section examples and exercises are included. Limitations: College developmental-algebra scope; English; exercises answers/solution navigation has reviewer-noted limitations; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Revisado em 2026-10-09: vínculo pertinente como apoio parcial a funções e gráficos. O capítulo 11 trata diretamente de noções de função, domínio e imagem; os capítulos 3, 9 e 13 incluem gráficos de retas/quadráticas e leitura de características de parábolas. Não representa cobertura integral do tópico nem associação a item curricular específico (curriculum_topic_id permanece NULL). Material em inglês, de álgebra universitária introdutória; limitações de localização de respostas foram registradas na ficha do recurso. Acessibilidade não auditada; uso somente por link."
+      },
+      "reason": "Os capítulos diretos listados pelo editor correspondem a funções e representação/interpretação de gráficos. A decisão aprova somente a relação com o tópico legado; não afirma cobertura integral do programa nem altera classificação curricular.",
+      "evidence": [
+        {
+          "locator": "https://spot.pcc.edu/math/orcca/ed2/html/chapter-functions.html",
+          "detail": "Página direta do capítulo 11: índice identifica Function Basics, Domain and Range, exploração de funções com tecnologia e notação de função."
+        },
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/open-resources-for-community-college-algebra",
+          "detail": "Ficha específica OTL, seção Organization/Structure/Flow: capítulos 3 Graphing Lines, 9 Topics in Graphing (equações quadráticas e características de parábolas), 11 Functions e 13 Graphs and Equations; capítulos 5/10 também discriminam conteúdo algébrico. A ficha indica leitura Online/PDF, inglês e CC BY."
+        },
+        {
+          "locator": ".local/content/content.sqlite#resource_topics/578/2479",
+          "detail": "Consulta SQLite somente leitura confirmou chave (resource_id=578, topic_id=2479, curriculum_topic_id=NULL), relevance_status=relevant e review_status=review; nome do tópico: Funções e gráficos.",
+          "sha256": "2df17afe15dc335ce05d81dffb2cb6741e10e2d27aa0b038baf6f970b8285733"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 578,
+        "topic_id": 2545,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review describes chapters on equations, exponents/polynomials, quadratic equations, functions, rational functions and graphing; section examples and exercises are included. Limitations: College developmental-algebra scope; English; exercises answers/solution navigation has reviewer-noted limitations; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Revisado em 2026-10-09: vínculo direto como apoio parcial a polinômios e equações. O capítulo 5 aborda expoentes e operações com polinômios; o capítulo 7 resolve equações quadráticas; o capítulo 10 trata fatoração, incluindo polinômios; capítulos 1/2 e 12 cobrem equações e expressões racionais. O recurso não cobre integralmente o tópico nem cria associação a item curricular específico (curriculum_topic_id permanece NULL). Material em inglês, de álgebra universitária introdutória; limitações de localização de respostas constam na ficha do recurso. Acessibilidade não auditada; uso somente por link."
+      },
+      "reason": "O índice editorial nomeia diretamente capítulos de expoentes/polinômios, resolução de equações quadráticas e fatoração. Correspondência comprovada para a parcela polinômios/equações do tópico legado; não se infere cobertura de todas as inequações.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/open-resources-for-community-college-algebra",
+          "detail": "Ficha específica OTL, seção Organization/Structure/Flow: capítulo 5 Exponents and Polynomials (operações polinomiais), capítulo 7 Solving Quadratic Equations e capítulo 10 Factoring; a página distingue ainda equações/inequações lineares e funções racionais. Ficha indica leitura Online/PDF, inglês e CC BY."
+        },
+        {
+          "locator": ".local/content/content.sqlite#resource_topics/578/2545",
+          "detail": "Consulta SQLite somente leitura confirmou chave (resource_id=578, topic_id=2545, curriculum_topic_id=NULL), relevance_status=relevant e review_status=review; nome do tópico: Polinômios, equações e inequações.",
+          "sha256": "2df17afe15dc335ce05d81dffb2cb6741e10e2d27aa0b038baf6f970b8285733"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 578,
+        "topic_id": 2565,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review describes chapters on equations, exponents/polynomials, quadratic equations, functions, rational functions and graphing; section examples and exercises are included. Limitations: College developmental-algebra scope; English; exercises answers/solution navigation has reviewer-noted limitations; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Revisado em 2026-10-09: vínculo pertinente apenas à parcela de gráficos do tópico. Os capítulos 3 (Graphing Lines), 9 (Topics in Graphing, incluindo gráficos de equações quadráticas e características de parábolas) e 13 (Graphs and Equations) oferecem elaboração/leitura de representações gráficas. Não foi verificada cobertura específica de interpretação/elaboração de tabelas; portanto, este recurso é apenas suplemento para gráficos, não cobertura integral do tópico composto. curriculum_topic_id permanece NULL. Inglês; acessibilidade não auditada; uso somente por link."
+      },
+      "reason": "Há capítulos diretos e nomeados de construção/interpretação de gráficos, suficientes para relevância suplementar na parcela gráfica. A nota limita explicitamente o alcance: não foi encontrada evidência de conteúdo de tabelas neste recurso.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/open-resources-for-community-college-algebra",
+          "detail": "Ficha específica OTL, seção Organization/Structure/Flow, nomeia os capítulos 3 Graphing Lines, 9 Topics in Graphing (gráficos quadráticos e características de parábolas) e 13 Graphs and Equations; não enumera capítulo de interpretação/elaboração de tabelas."
+        },
+        {
+          "locator": ".local/content/content.sqlite#resource_topics/578/2565",
+          "detail": "Consulta SQLite somente leitura confirmou chave (resource_id=578, topic_id=2565, curriculum_topic_id=NULL), relevance_status=relevant e review_status=review; nome do tópico: Interpretação e elaboração de tabelas e gráficos.",
+          "sha256": "2df17afe15dc335ce05d81dffb2cb6741e10e2d27aa0b038baf6f970b8285733"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 579,
+        "topic_id": 2480,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review identifies logic/problem solving, financial mathematics, statistics, probability and voting/apportionment; text includes examples, practice and online answer support. Limitations: For non-math majors; reviewer notes limited depth in probability/statistics and dated tax/government examples; English; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Revisado em 2026-10-09: vínculo pertinente somente à parcela de probabilidade. O capítulo 4 aborda tabelas de contingência, probabilidade empírica/condicional, espaço amostral e probabilidades de eventos compostos; exercícios estão listados ao final das seções. A edição não demonstra cobertura específica de análise combinatória/contagem, portanto não é trilha integral do tópico. curriculum_topic_id permanece NULL. Material em inglês para matemática de artes liberais; a ficha registra limite de profundidade em probabilidade/estatística. Acessibilidade não auditada; uso somente por link."
+      },
+      "reason": "O texto direto tem capítulo e seções de probabilidade teórica/empírica com exercícios, aderentes à parcela de probabilidade do tópico legado. Não se atribui cobertura de contagem, que não foi comprovada nesta auditoria.",
+      "evidence": [
+        {
+          "locator": "https://spot.pcc.edu/math/mathinsociety/probability.html",
+          "detail": "Página direta do capítulo 4 Probability; o índice lista seções de tabelas de contingência, probabilidade empírica/condicional, espaço amostral, eventos, eventos compostos, independência e exercícios."
+        },
+        {
+          "locator": "https://spot.pcc.edu/math/mathinsociety/frontmatter-7.html",
+          "detail": "Índice direto da edição: capítulo 4 Probability; seções 4.1.1–4.1.9 cobrem tabelas de contingência e probabilidades empírica/condicional; 4.2 inclui espaço amostral, eventos e probabilidades compostas; 4.1.10 e 4.2.15 são exercícios."
+        },
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/math-in-society-mathematics-for-liberal-arts-majors",
+          "detail": "Ficha específica OTL identifica título/autoria, leitura Online/PDF, idioma inglês e licença CC BY-SA; avaliações e metadados descrevem estatística/probabilidade como conteúdo para não especialistas e registram limitações de profundidade."
+        },
+        {
+          "locator": ".local/content/content.sqlite#resource_topics/579/2480",
+          "detail": "Consulta SQLite somente leitura confirmou chave (resource_id=579, topic_id=2480, curriculum_topic_id=NULL), relevance_status=relevant e review_status=review; nome do tópico: Contagem e probabilidade.",
+          "sha256": "2df17afe15dc335ce05d81dffb2cb6741e10e2d27aa0b038baf6f970b8285733"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 579,
+        "topic_id": 2565,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review identifies logic/problem solving, financial mathematics, statistics, probability and voting/apportionment; text includes examples, practice and online answer support. Limitations: For non-math majors; reviewer notes limited depth in probability/statistics and dated tax/government examples; English; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Revisado em 2026-10-09: vínculo direto e restrito à leitura/interpretação de tabelas de contingência. A seção 4.1 apresenta tabelas, múltiplas categorias e cálculo de probabilidades empíricas/condicionais a partir delas. Não foi verificada cobertura ampla de elaboração de gráficos; não tratar como cobertura integral do tópico composto. curriculum_topic_id permanece NULL. Inglês; profundidade estatística limitada conforme avaliações da ficha; acessibilidade não auditada; uso somente por link."
+      },
+      "reason": "As seções diretas 4.1.1, 4.1.6 e 4.1.8 são explicitamente sobre leitura de tabelas de contingência e extração de probabilidades. Isso sustenta uma relação suplementar com a parcela de tabelas, sem inferir competência ampla em gráficos ou estatística.",
+      "evidence": [
+        {
+          "locator": "https://spot.pcc.edu/math/mathinsociety/probability.html",
+          "detail": "Página do capítulo 4 lista 4.1.1 Contingency Tables, 4.1.6 Contingency Tables with More Than Two Categories e 4.1.8 Finding Empirical Probabilities with a Contingency Table."
+        },
+        {
+          "locator": "https://spot.pcc.edu/math/mathinsociety/frontmatter-7.html",
+          "detail": "Índice direto confirma as seções 4.1.1, 4.1.6 e 4.1.8 sob 4 Probability; o título da seção 4.1.8 declara cálculo de probabilidades empíricas por tabela de contingência."
+        },
+        {
+          "locator": ".local/content/content.sqlite#resource_topics/579/2565",
+          "detail": "Consulta SQLite somente leitura confirmou chave (resource_id=579, topic_id=2565, curriculum_topic_id=NULL), relevance_status=relevant e review_status=review; nome do tópico: Interpretação e elaboração de tabelas e gráficos.",
+          "sha256": "2df17afe15dc335ce05d81dffb2cb6741e10e2d27aa0b038baf6f970b8285733"
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261009T201708286114Z.sqlite",
+  "database_after_sha256": "871e75443b004a41f91a24d60d2eaef94acd4d9a0384802e2137bf931383deb0"
+}

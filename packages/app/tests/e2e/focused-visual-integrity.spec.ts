@@ -6,7 +6,7 @@ import { validateRouteSettled } from "./validate-route-settled.function";
 const auditedRoutes = [
   "/preferencias",
   "/questoes/1",
-  "/licoes/matematica.funcoes-graficos.aula-1",
+  "/licoes/unicamp-2027-2476-conceito",
   "/desempenho/detalhes",
   "/mapa/mapa-unicamp-2027",
   "/topicos/fisica.mecanica",
@@ -18,7 +18,9 @@ const colorSchemes = ["light", "dark"] as const;
 
 const visualCases = screenWidths.flatMap((width) => {
   return colorSchemes.flatMap((colorScheme) => {
-    return auditedRoutes.map((route) => { return { colorScheme, route, width }; });
+    return auditedRoutes.map((route) => {
+      return { colorScheme, route, width };
+    });
   });
 });
 
@@ -32,29 +34,31 @@ visualCases.forEach(({ colorScheme, route, width }) => {
 
     await validateRouteSettled(page);
 
-    if (route === "/licoes/matematica.funcoes-graficos.aula-1") {
-      await expect(page.locator(".katex"))
-        .toHaveCount(1);
+    if (route === "/licoes/unicamp-2027-2476-conceito") {
+      await expect(
+        page.getByText("Conceito e pontos de atenção", { exact: true }),
+      ).toBeVisible();
 
-      await expect(page.locator(".katex-html"))
-        .toBeVisible();
+      await expect(page.getByText("f:D→C", { exact: false })).toBeVisible();
 
-      await expect(page.getByText("Resumo rápido"))
-        .toBeVisible();
+      await expect(
+        page.getByText("Erros comuns", { exact: true }),
+      ).toBeVisible();
     }
 
     await validateRenderedLayout(page);
 
     await validateDocumentOverflow(page);
 
-    const routeName = route.replaceAll("/", "-")
-      .replace(/^-/, "");
+    const routeName = route.replaceAll("/", "-").replace(/^-/, "");
 
-    await expect(page)
-      .toHaveScreenshot(`${routeName}-${width}-${colorScheme}.png`, {
+    await expect(page).toHaveScreenshot(
+      `${routeName}-${width}-${colorScheme}.png`,
+      {
         animations: "disabled",
         caret: "hide",
         fullPage: true,
-      });
+      },
+    );
   });
 });

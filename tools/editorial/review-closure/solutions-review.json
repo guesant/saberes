@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "solution_reviews": [
+    {
+      "table": "questions",
+      "key": {
+        "id": 332
+      },
+      "expected": {
+        "explanation": null,
+        "editorial_version": "1.0.0"
+      },
+      "changes": {},
+      "disposition": "approved_sidecar_only_official_commentary_preserved",
+      "reason": "A resolução candidata foi conferida linha a linha: o gráfico fornece f(g(1))=5; g(1)=2; f(2)=8+8+2a−1=15+2a=5, então a=−5, alternativa D. O comentário oficial já contém resolução completa; aprovar a redação original apenas neste sidecar e não gravar/substituir questions.explanation.",
+      "candidate_solution": {
+        "title": "Composição de funções a partir do gráfico",
+        "content_format": "markdown",
+        "content": "O ponto destacado no gráfico fornece f(g(1))=5. Primeiro avaliamos a função interna: g(1)=3−1=2. Portanto, f(2)=5. Substituindo x=2 na expressão de f, obtemos 2³+2·2²+2a−1=5, isto é, 8+8−1+2a=5. Assim, 15+2a=5, 2a=−10 e a=−5. Isso corresponde à alternativa D no gabarito registrado.\n\nA ordem importa: na composição, calcula-se g(1) antes de usar esse resultado como entrada de f. Não precisamos reconstruir todo o gráfico; basta ler o par ordenado indicado e traduzir suas coordenadas para a função composta."
+      },
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "PDF da prova, página 17 do arquivo (fólio impresso 15), questão 44: a figura marca o ponto do gráfico f(g(x)) em x=1, y=5; o enunciado define g(x)=3−x e f(x)=x³+2x²+ax−1. Figura renderizada e conferida."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Prova comentada oficial, PDF p. 47 (fólio impresso 46), questão 44: confirma alternativa D e apresenta f(g(1))=5, f(2)=15+2a, logo a=−5."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf",
+          "detail": "Gabarito oficial, página única, questão 44 do caderno Q/X = D."
+        }
+      ]
+    },
+    {
+      "table": "questions",
+      "key": {
+        "id": 338
+      },
+      "expected": {
+        "explanation": null,
+        "editorial_version": "1.0.1"
+      },
+      "changes": {},
+      "disposition": "approved_sidecar_only_official_commentary_preserved",
+      "reason": "A candidata foi verificada algebricamente: simetria dá lados iguais; com l=PQ e lado s, s²=x²+l²/4 e l²=2s²(1−2/3), logo l²=4x²/5 e área lx/2=√5·x²/5, alternativa A. O comentário oficial já oferece uma solução completa. Aprovar esta redação original apenas no sidecar; não gravar/substituir questions.explanation.",
+      "candidate_solution": {
+        "title": "Área de um triângulo isósceles com ângulo conhecido",
+        "content_format": "markdown",
+        "content": "Defina l=PQ. Como M é o ponto médio de AB e PD=QC, P e Q ficam simétricos em relação à perpendicular que passa pelo centro do quadrado; logo MP=MQ. A altura do triângulo PMQ até a base PQ é a distância entre AB e CD, igual ao lado x do quadrado. Cada metade da base mede l/2, então, pelo teorema de Pitágoras, s²=MP²=x²+(l/2)².\n\nAplicando a lei dos cossenos ao ângulo θ no vértice M: l²=s²+s²−2s²cosθ=2s²(1−2/3)=2s²/3. Substituindo s²=x²+l²/4, resulta l²=(2/3)(x²+l²/4), portanto 5l²/6=2x²/3 e l²=4x²/5. Como x é comprimento positivo, l=2x/√5. A área pedida é (base·altura)/2=(2x/√5·x)/2=x²/√5=√5x²/5, alternativa A.\n\nA altura é x, não o lado inclinado MP. A simetria justifica MP=MQ; sem ela, a relação usada para o triângulo isósceles não estaria estabelecida."
+      },
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "PDF da prova, página 19 do arquivo (fólio impresso 17), questão 50: figura confirma M no ponto médio de AB, P,Q em CD, PD=QC, ângulo θ em M, cosθ=2/3 e alternativa A = √5·x²/5. Figura renderizada e conferida."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Prova comentada oficial, PDF p. 51 (fólio impresso 50), questão 50: demonstra simetria/isósceles, altura x, aplica Pitágoras e lei dos cossenos; confirma alternativa A. Comentário completo preservado, sem substituição."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf",
+          "detail": "Gabarito oficial, página única, questão 50 do caderno Q/X = A."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "table": "question_canonical_topics",
+      "key": {
+        "question_id": 332,
+        "canonical_topic_id": 2479
+      },
+      "expected": {
+        "question_id": 332,
+        "canonical_topic_id": 2479,
+        "relation_type": "primary",
+        "confidence": 0.98,
+        "source_document_id": null,
+        "source_page": null,
+        "source_excerpt": null,
+        "review_status": "review"
+      },
+    "changes": {
+      "source_document_id": 44,
+      "source_page": 17,
+      "source_excerpt": "Questão 44 do caderno Q/X: o enunciado define f(g(x)) e o gráfico marca (1,5), sustentando o vínculo primário com Funções e gráficos.",
+      "review_status": "published"
+    },
+      "reason": "A questão 332 exige composição de funções e leitura de gráfico; o vínculo primário com o tópico publicado Funções e gráficos (canonical_topic_id 2479) é sustentado diretamente pelo enunciado e pela figura. Aprovar somente o vínculo que está em review; não alterar outras relações.",
+      "evidence": [
+        {
+          "locator": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+          "detail": "Questão 44, PDF p. 17 (fólio 15): enunciado apresenta f(g(x)) e gráfico com ponto (1,5), evidência direta de composição de funções e interpretação gráfica."
+        },
+        {
+          "locator": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F1_2026_Prova-Q.pdf",
+          "detail": "Prova comentada oficial, PDF p. 47 (fólio 46): objetivo explicitamente trata de composição de funções e análise gráfica; solução oficial confirma D."
+        }
+      ]
+    }
+  ],
+  "summary": "Revisão independente das soluções originais das questões 332 e 338. Ambas foram aprovadas para permanência no sidecar; comentário oficial completo existe para as duas, portanto questions.explanation e editorial_version permanecem sem alteração. A única decisão de banco proposta é publicar o vínculo primário de funções da q332 atualmente em review; vínculos já publicados, inclusive trigonometria da q338, permanecem intactos. Conferência do enunciado, figuras renderizadas, solução oficial e gabarito; nenhuma escrita SQLite."
+}

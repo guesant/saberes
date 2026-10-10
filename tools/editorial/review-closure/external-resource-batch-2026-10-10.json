@@ -1,0 +1,2543 @@
+{
+  "format": "editorial-review-decisions/v1",
+  "summary": "Links externos gratuitos revisados como suplementos; todos mantêm direitos link-only e limitações no próprio registro.",
+  "decisions": [
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 613
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 613,
+        "title": "Coesão e coerência — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página apresenta explicações e exemplos de coesão e coerência pertinentes ao funcionamento textual."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 603
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 603,
+        "title": "Coesão e coerência — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Explica coesão referencial e sequencial, coerência contextual, pronomes, elipse e conjunções, com exemplo e exercício.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 613,
+        "editorial_status": "published",
+        "editorial_note": "Explica coesão referencial e sequencial, coerência contextual, pronomes, elipse e conjunções, com exemplo e exercício. Suplemento: não cobre todos os gêneros, propósitos comunicativos ou usos multimodais. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e títulos visíveis; vídeo incorporado; teclado/leitor de tela não auditados. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2468; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+          "detail": "Consulta direta em 10/10/2026: A página apresenta explicações e exemplos de coesão e coerência pertinentes ao funcionamento textual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2468/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 3: Caracterização, produção e circulação de diferentes gêneros discursivos; recursos coesivos; interação entre texto verbal e não verbal."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 603,
+        "topic_id": null,
+        "curriculum_topic_id": 2468
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 603,
+        "topic_id": null,
+        "curriculum_topic_id": 2468,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Explica coesão referencial e sequencial, coerência contextual, pronomes, elipse e conjunções, com exemplo e exercício. Suplemento: não cobre todos os gêneros, propósitos comunicativos ou usos multimodais. Acessibilidade: Texto e títulos visíveis; vídeo incorporado; teclado/leitor de tela não auditados."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/redacao/coesao-e-coerencia.htm",
+          "detail": "Conteúdo observado: A página apresenta explicações e exemplos de coesão e coerência pertinentes ao funcionamento textual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2468/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 3."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 614
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 614,
+        "title": "Semântica — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+          "detail": "Página direta consultada em 10/10/2026. O artigo explica relações de sentido, contexto, ambiguidade e polissemia."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 604
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 604,
+        "title": "Semântica — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Apresenta sentido e contexto, conotação/denotação, ambiguidade e polissemia com exemplos.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 614,
+        "editorial_status": "published",
+        "editorial_note": "Apresenta sentido e contexto, conotação/denotação, ambiguidade e polissemia com exemplos. Introdução parcial; exercícios da página que dependem de tirinhas/imagens não são recomendados por este registro. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e seções visíveis; imagens e tecnologia assistiva não auditadas. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2469; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+          "detail": "Consulta direta em 10/10/2026: O artigo explica relações de sentido, contexto, ambiguidade e polissemia."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2469/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 3: Relações lógico-discursivas, intertextualidade e efeitos expressivos de sentido."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 604,
+        "topic_id": null,
+        "curriculum_topic_id": 2469
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 604,
+        "topic_id": null,
+        "curriculum_topic_id": 2469,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Apresenta sentido e contexto, conotação/denotação, ambiguidade e polissemia com exemplos. Introdução parcial; exercícios da página que dependem de tirinhas/imagens não são recomendados por este registro. Acessibilidade: Texto e seções visíveis; imagens e tecnologia assistiva não auditadas."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/portugues/semantica.htm",
+          "detail": "Conteúdo observado: O artigo explica relações de sentido, contexto, ambiguidade e polissemia."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2469/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 3."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 615
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 615,
+        "title": "Variação linguística — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página discute variação por região, idade, contexto social e situação comunicativa."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 605
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 605,
+        "title": "Variação linguística — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Introduz variações geográficas, históricas, sociais e situacionais, além de preconceito linguístico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 615,
+        "editorial_status": "published",
+        "editorial_note": "Introduz variações geográficas, históricas, sociais e situacionais, além de preconceito linguístico. Complemento introdutório; não cobre toda a sociolinguística nem todas as situações de uso. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto estruturado e opção de áudio observados; funcionamento assistivo não testado. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2470; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+          "detail": "Consulta direta em 10/10/2026: A página discute variação por região, idade, contexto social e situação comunicativa."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2470/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 3: Variação linguística, norma culta e outras variedades, formalidade, informalidade e estilos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 605,
+        "topic_id": null,
+        "curriculum_topic_id": 2470
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 605,
+        "topic_id": null,
+        "curriculum_topic_id": 2470,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Introduz variações geográficas, históricas, sociais e situacionais, além de preconceito linguístico. Complemento introdutório; não cobre toda a sociolinguística nem todas as situações de uso. Acessibilidade: Texto estruturado e opção de áudio observados; funcionamento assistivo não testado."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/index.php/o-que-e/portugues/o-que-e-variacao-linguistica.htm",
+          "detail": "Conteúdo observado: A página discute variação por região, idade, contexto social e situação comunicativa."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2470/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 3."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 616
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 616,
+        "title": "Linguagem literária — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página apresenta características da linguagem literária e exemplos textuais."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 606
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 606,
+        "title": "Linguagem literária — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Explica subjetividade, conotação e plurissignificação com exemplos de poema e romance.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 616,
+        "editorial_status": "published",
+        "editorial_note": "Explica subjetividade, conotação e plurissignificação com exemplos de poema e romance. Introdução; não substitui leitura das obras exigidas nem cobre todos os períodos e gêneros. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e exemplos visíveis; descrições de imagens variam; leitor de tela não auditado. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2474; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+          "detail": "Consulta direta em 10/10/2026: A página apresenta características da linguagem literária e exemplos textuais."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2474/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 4: Programa de leitura literária por gêneros; prosa, poesia, teatro e obras anuais listadas no documento."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 606,
+        "topic_id": null,
+        "curriculum_topic_id": 2474
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 606,
+        "topic_id": null,
+        "curriculum_topic_id": 2474,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Explica subjetividade, conotação e plurissignificação com exemplos de poema e romance. Introdução; não substitui leitura das obras exigidas nem cobre todos os períodos e gêneros. Acessibilidade: Texto e exemplos visíveis; descrições de imagens variam; leitor de tela não auditado."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/literatura/linguagem-literaria.htm",
+          "detail": "Conteúdo observado: A página apresenta características da linguagem literária e exemplos textuais."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2474/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 4."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 617
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 617,
+        "title": "Conjuntos numéricos — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+          "detail": "Página direta consultada em 10/10/2026. O artigo percorre os conjuntos numéricos e suas relações."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 607
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 607,
+        "title": "Conjuntos numéricos — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Apresenta naturais, inteiros, racionais, irracionais e reais e suas relações.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 617,
+        "editorial_status": "published",
+        "editorial_note": "Apresenta naturais, inteiros, racionais, irracionais e reais e suas relações. A página também aborda números complexos; para esta trilha, priorizar o escopo oficial de naturais, inteiros e reais. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto, fórmulas e diagramas visíveis; leitura assistiva das expressões não auditada. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2475; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+          "detail": "Consulta direta em 10/10/2026: O artigo percorre os conjuntos numéricos e suas relações."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2475/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 5: Conjuntos e operações; naturais, inteiros e reais; fatoração, divisores, sequências, progressões, porcentagem e juros."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 607,
+        "topic_id": null,
+        "curriculum_topic_id": 2475
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 607,
+        "topic_id": null,
+        "curriculum_topic_id": 2475,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Apresenta naturais, inteiros, racionais, irracionais e reais e suas relações. A página também aborda números complexos; para esta trilha, priorizar o escopo oficial de naturais, inteiros e reais. Acessibilidade: Texto, fórmulas e diagramas visíveis; leitura assistiva das expressões não auditada."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/matematica/conjuntos-numericos.htm",
+          "detail": "Conteúdo observado: O artigo percorre os conjuntos numéricos e suas relações."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2475/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 5."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 618
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 618,
+        "title": "Área e perímetro — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+          "detail": "Página direta consultada em 10/10/2026. A unidade lista exercícios de áreas e perímetros de figuras planas e testes por seção."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 608
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 608,
+        "title": "Área e perímetro — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "description": "Unidade com exercícios/testes de áreas e perímetros de polígonos, círculos e figuras compostas.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 618,
+        "editorial_status": "published",
+        "editorial_note": "Unidade com exercícios/testes de áreas e perímetros de polígonos, círculos e figuras compostas. Prática suplementar; cobre subtemas e não toda geometria plana. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Página de atividades observada; teclado e leitor de tela dos exercícios não auditados. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2480; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+          "detail": "Consulta direta em 10/10/2026: A unidade lista exercícios de áreas e perímetros de figuras planas e testes por seção."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2480/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 5: Congruência, semelhança, Tales, Pitágoras, polígonos, circunferências, áreas e perímetros."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 608,
+        "topic_id": null,
+        "curriculum_topic_id": 2480
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 608,
+        "topic_id": null,
+        "curriculum_topic_id": 2480,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Unidade com exercícios/testes de áreas e perímetros de polígonos, círculos e figuras compostas. Prática suplementar; cobre subtemas e não toda geometria plana. Acessibilidade: Página de atividades observada; teclado e leitor de tela dos exercícios não auditados."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry/basic-geometry/perimeter_area_tutorial",
+          "detail": "Conteúdo observado: A unidade lista exercícios de áreas e perímetros de figuras planas e testes por seção."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2480/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 5."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 619
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 619,
+        "title": "Triângulos retângulos e trigonometria — Khan Academy",
+        "url": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+          "detail": "Página direta consultada em 10/10/2026. A unidade lista exercícios e testes de razões trigonométricas e resolução de triângulos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 609
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 609,
+        "title": "Triângulos retângulos e trigonometria — Khan Academy",
+        "url": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "description": "Exercícios e testes sobre seno, cosseno, tangente, lados e ângulos em triângulos retângulos.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 619,
+        "editorial_status": "published",
+        "editorial_note": "Exercícios e testes sobre seno, cosseno, tangente, lados e ângulos em triângulos retângulos. Não cobre sozinho ciclo trigonométrico, gráficos e todo o programa. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Atividades interativas identificadas; teclado/leitor de tela não testados. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2482; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+          "detail": "Consulta direta em 10/10/2026: A unidade lista exercícios e testes de razões trigonométricas e resolução de triângulos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2482/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 5: Ângulos, identidades, equações, transformações, inequações, leis dos senos e cossenos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 609,
+        "topic_id": null,
+        "curriculum_topic_id": 2482
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 609,
+        "topic_id": null,
+        "curriculum_topic_id": 2482,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Exercícios e testes sobre seno, cosseno, tangente, lados e ângulos em triângulos retângulos. Não cobre sozinho ciclo trigonométrico, gráficos e todo o programa. Acessibilidade: Atividades interativas identificadas; teclado/leitor de tela não testados."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/trigonometry/trigonometry-right-triangles",
+          "detail": "Conteúdo observado: A unidade lista exercícios e testes de razões trigonométricas e resolução de triângulos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2482/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 5."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 620
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 620,
+        "title": "Fórmula da distância — Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+        "provider": "Khan Academy",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+          "detail": "Página direta consultada em 10/10/2026. A página deriva e exemplifica a fórmula da distância entre dois pontos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 610
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 610,
+        "title": "Fórmula da distância — Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+        "provider": "Khan Academy",
+        "kind": "article",
+        "description": "Deriva e aplica a distância entre pontos no plano cartesiano, com exemplo resolvido.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 620,
+        "editorial_status": "published",
+        "editorial_note": "Deriva e aplica a distância entre pontos no plano cartesiano, com exemplo resolvido. Cobre uma habilidade de geometria analítica, não retas, circunferências e o tópico completo. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e fórmula visíveis; expressões e ilustrações não testadas com leitor de tela. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2483; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+          "detail": "Consulta direta em 10/10/2026: A página deriva e exemplifica a fórmula da distância entre dois pontos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2483/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 5: Coordenadas, distâncias, retas, círculos e alinhamento de pontos no plano."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 610,
+        "topic_id": null,
+        "curriculum_topic_id": 2483
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 610,
+        "topic_id": null,
+        "curriculum_topic_id": 2483,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Deriva e aplica a distância entre pontos no plano cartesiano, com exemplo resolvido. Cobre uma habilidade de geometria analítica, não retas, circunferências e o tópico completo. Acessibilidade: Texto e fórmula visíveis; expressões e ilustrações não testadas com leitor de tela."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-and-midpoints/a/distance-formula",
+          "detail": "Conteúdo observado: A página deriva e exemplifica a fórmula da distância entre dois pontos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2483/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 5."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 621
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 621,
+        "title": "Distância entre ponto e reta — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+          "detail": "Página direta consultada em 10/10/2026. A página apresenta exercício específico e resposta sobre distância entre ponto e reta."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 611
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 611,
+        "title": "Distância entre ponto e reta — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "description": "Exercício direto de distância entre ponto e reta, com resposta verificável.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 621,
+        "editorial_status": "published",
+        "editorial_note": "Exercício direto de distância entre ponto e reta, com resposta verificável. Atividade curta de uma habilidade; não representa banco amplo de geometria analítica. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Interação e tecnologia assistiva não foram testadas. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2483; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+          "detail": "Consulta direta em 10/10/2026: A página apresenta exercício específico e resposta sobre distância entre ponto e reta."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2483/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 5: Coordenadas, distâncias, retas, círculos e alinhamento de pontos no plano."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 611,
+        "topic_id": null,
+        "curriculum_topic_id": 2483
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 611,
+        "topic_id": null,
+        "curriculum_topic_id": 2483,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Exercício direto de distância entre ponto e reta, com resposta verificável. Atividade curta de uma habilidade; não representa banco amplo de geometria analítica. Acessibilidade: Interação e tecnologia assistiva não foram testadas."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/geometry-home/analytic-geometry-topic/distance-between-a-point-and-a-line/e/distance_between_point_and_line",
+          "detail": "Conteúdo observado: A página apresenta exercício específico e resposta sobre distância entre ponto e reta."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2483/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 5."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 622
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 622,
+        "title": "How to be a critical reader — OpenLearn",
+        "url": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab",
+        "provider": "OpenLearn / The Open University",
+        "kind": "course",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "OpenLearn / The Open University",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab",
+          "detail": "Página direta consultada em 10/10/2026. O conteúdo aborda estratégias de leitura crítica em língua inglesa e análise de argumentos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 612
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 612,
+        "title": "How to be a critical reader — OpenLearn",
+        "url": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab",
+        "provider": "OpenLearn / The Open University",
+        "kind": "course",
+        "description": "Curso gratuito sobre propósito, opinião, estrutura argumentativa, fatos/opiniões, ressalvas e evidências em textos em inglês.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 622,
+        "editorial_status": "published",
+        "editorial_note": "Curso gratuito sobre propósito, opinião, estrutura argumentativa, fatos/opiniões, ressalvas e evidências em textos em inglês. Pode ser mais avançado que a prova; atividades e quizzes completos podem exigir cadastro. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Títulos, navegação e links de seção observados; hub de acessibilidade não equivale a auditoria formal. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2495; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab",
+          "detail": "Consulta direta em 10/10/2026: O conteúdo aborda estratégias de leitura crítica em língua inglesa e análise de argumentos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2495/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 10: Leitura, interpretação e síntese; argumentos; interesses, poder e perspectivas de mundo em discursos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 612,
+        "topic_id": null,
+        "curriculum_topic_id": 2495
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 612,
+        "topic_id": null,
+        "curriculum_topic_id": 2495,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Curso gratuito sobre propósito, opinião, estrutura argumentativa, fatos/opiniões, ressalvas e evidências em textos em inglês. Pode ser mais avançado que a prova; atividades e quizzes completos podem exigir cadastro. Acessibilidade: Títulos, navegação e links de seção observados; hub de acessibilidade não equivale a auditoria formal."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://www.open.edu/openlearn/languages/english-language/how-be-critical-reader/content-section-0?active-tab=content-tab",
+          "detail": "Conteúdo observado: O conteúdo aborda estratégias de leitura crítica em língua inglesa e análise de argumentos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2495/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 10."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 623
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 623,
+        "title": "Geografia física — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+          "detail": "Página direta consultada em 10/10/2026. O artigo descreve os componentes da geografia física e exemplos correspondentes."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 613
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 613,
+        "title": "Geografia física — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Visão geral de litosfera, atmosfera, hidrosfera e biosfera, com exemplos de relevo, solo, água, clima e biodiversidade.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 623,
+        "editorial_status": "published",
+        "editorial_note": "Visão geral de litosfera, atmosfera, hidrosfera e biosfera, com exemplos de relevo, solo, água, clima e biodiversidade. Panorâmico; não substitui aprofundamento das relações sociedade-natureza e dos componentes físico-naturais. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e títulos visíveis; descrições de imagens e leitor de tela não auditados. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2487; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+          "detail": "Consulta direta em 10/10/2026: O artigo descreve os componentes da geografia física e exemplos correspondentes."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2487/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 6: Interações entre litosfera, hidrosfera, atmosfera e criosfera e dinâmicas terrestres."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 613,
+        "topic_id": null,
+        "curriculum_topic_id": 2487
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 613,
+        "topic_id": null,
+        "curriculum_topic_id": 2487,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Visão geral de litosfera, atmosfera, hidrosfera e biosfera, com exemplos de relevo, solo, água, clima e biodiversidade. Panorâmico; não substitui aprofundamento das relações sociedade-natureza e dos componentes físico-naturais. Acessibilidade: Texto e títulos visíveis; descrições de imagens e leitor de tela não auditados."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/amp/geografia/geografia-fisica.htm",
+          "detail": "Conteúdo observado: O artigo descreve os componentes da geografia física e exemplos correspondentes."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2487/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 6."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 624
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 624,
+        "title": "Hidrografia, clima e relevo — prática, questões 1–3",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+          "detail": "Página direta consultada em 10/10/2026. Respostas e justificativas das questões textuais 1–3 conferidas; a questão 4 depende de figura e deve ser omitida."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 614
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 614,
+        "title": "Hidrografia, clima e relevo — prática, questões 1–3",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Prática suplementar: questões textuais 1–3, com respostas e justificativas conferidas.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 624,
+        "editorial_status": "published",
+        "editorial_note": "Prática suplementar: questões textuais 1–3, com respostas e justificativas conferidas. Usar somente questões 1–3; excluir a questão 4, que depende de figura não auditada. Cobertura parcial do tópico. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. A questão visual excluída não tem alternativa textual confirmada; acessibilidade integral não auditada. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2487; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+          "detail": "Consulta direta em 10/10/2026: Respostas e justificativas das questões textuais 1–3 conferidas; a questão 4 depende de figura e deve ser omitida."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2487/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 6: Interações entre litosfera, hidrosfera, atmosfera e criosfera e dinâmicas terrestres."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 614,
+        "topic_id": null,
+        "curriculum_topic_id": 2487
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 614,
+        "topic_id": null,
+        "curriculum_topic_id": 2487,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Relação editorial suplementar; escopo limitado: Prática suplementar: questões textuais 1–3, com respostas e justificativas conferidas. Usar somente questões 1–3; excluir a questão 4, que depende de figura não auditada. Cobertura parcial do tópico. Acessibilidade: A questão visual excluída não tem alternativa textual confirmada; acessibilidade integral não auditada."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-hidrografia-clima-relevo.htm",
+          "detail": "Conteúdo observado: Respostas e justificativas das questões textuais 1–3 conferidas; a questão 4 depende de figura e deve ser omitida."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2487/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 6."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 625
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 625,
+        "title": "Grécia Antiga — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/grecia-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/grecia-antiga.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página trata diretamente de Grécia Antiga, conteúdo incluído no tópico anual."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 615
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 615,
+        "title": "Grécia Antiga — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/grecia-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Introduz periodização, organização política/social e cultura da Grécia Antiga.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 625,
+        "editorial_status": "published",
+        "editorial_note": "Introduz periodização, organização política/social e cultura da Grécia Antiga. Cobre a Grécia, não Roma nem sociedades medievais; usar como parte de uma sequência de fontes. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e seções visíveis; imagens não auditadas com tecnologia assistiva. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2490; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/grecia-antiga.htm",
+          "detail": "Consulta direta em 10/10/2026: A página trata diretamente de Grécia Antiga, conteúdo incluído no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 8: Grécia e Roma e sociedades medievais; crises do feudalismo."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 615,
+        "topic_id": null,
+        "curriculum_topic_id": 2490
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 615,
+        "topic_id": null,
+        "curriculum_topic_id": 2490,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Introduz periodização, organização política/social e cultura da Grécia Antiga. Cobre a Grécia, não Roma nem sociedades medievais; usar como parte de uma sequência de fontes. Acessibilidade: Texto e seções visíveis; imagens não auditadas com tecnologia assistiva."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/grecia-antiga.htm",
+          "detail": "Conteúdo observado: A página trata diretamente de Grécia Antiga, conteúdo incluído no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 8."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 626
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 626,
+        "title": "Roma Antiga — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/roma-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/roma-antiga.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página trata diretamente de Roma Antiga, conteúdo incluído no tópico anual."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 616
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 616,
+        "title": "Roma Antiga — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/roma-antiga.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Apresenta organização política, social e cultural de Roma Antiga.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 626,
+        "editorial_status": "published",
+        "editorial_note": "Apresenta organização política, social e cultural de Roma Antiga. Cobre Roma, não Grécia nem sociedades medievais; suplemento parcial. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e seções visíveis; imagens não auditadas com tecnologia assistiva. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2490; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/roma-antiga.htm",
+          "detail": "Consulta direta em 10/10/2026: A página trata diretamente de Roma Antiga, conteúdo incluído no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 8: Grécia e Roma e sociedades medievais; crises do feudalismo."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 616,
+        "topic_id": null,
+        "curriculum_topic_id": 2490
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 616,
+        "topic_id": null,
+        "curriculum_topic_id": 2490,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Apresenta organização política, social e cultural de Roma Antiga. Cobre Roma, não Grécia nem sociedades medievais; suplemento parcial. Acessibilidade: Texto e seções visíveis; imagens não auditadas com tecnologia assistiva."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/roma-antiga.htm",
+          "detail": "Conteúdo observado: A página trata diretamente de Roma Antiga, conteúdo incluído no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 8."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 627
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 627,
+        "title": "Idade Média — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/idade-media.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/idade-media.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página trata diretamente da Idade Média, conteúdo incluído no tópico anual."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 617
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 617,
+        "title": "Idade Média — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/historiag/idade-media.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Introduz periodização, organização política/social e acontecimentos da Idade Média.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 627,
+        "editorial_status": "published",
+        "editorial_note": "Introduz periodização, organização política/social e acontecimentos da Idade Média. Recorte majoritariamente europeu; deve ser combinado com outras perspectivas e fontes. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto, imagens e player de vídeo presentes; legendas e uso assistivo não auditados. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2490; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/idade-media.htm",
+          "detail": "Consulta direta em 10/10/2026: A página trata diretamente da Idade Média, conteúdo incluído no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 8: Grécia e Roma e sociedades medievais; crises do feudalismo."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 617,
+        "topic_id": null,
+        "curriculum_topic_id": 2490
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 617,
+        "topic_id": null,
+        "curriculum_topic_id": 2490,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Introduz periodização, organização política/social e acontecimentos da Idade Média. Recorte majoritariamente europeu; deve ser combinado com outras perspectivas e fontes. Acessibilidade: Texto, imagens e player de vídeo presentes; legendas e uso assistivo não auditados."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/historiag/idade-media.htm",
+          "detail": "Conteúdo observado: A página trata diretamente da Idade Média, conteúdo incluído no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2490/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 8."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 628
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 628,
+        "title": "Vida e evolução: seres vivos na natureza — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+          "detail": "Página direta consultada em 10/10/2026. A unidade lista conteúdos de biodiversidade e menciona saúde ambiental e humana."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 618
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 618,
+        "title": "Vida e evolução: seres vivos na natureza — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "description": "Unidade introdutória sobre biodiversidade, desequilíbrios ambientais e saúde ambiental/humana.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 628,
+        "editorial_status": "published",
+        "editorial_note": "Unidade introdutória sobre biodiversidade, desequilíbrios ambientais e saúde ambiental/humana. Material de nível introdutório; não aprofunda saúde humana, conservação e todas as relações ecológicas no nível vestibular. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e lista de lições observados; transcrições disponíveis em itens consultados, unidade inteira não auditada. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2500; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+          "detail": "Consulta direta em 10/10/2026: A unidade lista conteúdos de biodiversidade e menciona saúde ambiental e humana."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Classificação e grupos de seres vivos; sistemas humanos, reprodução, saúde pública e doenças infecciosas."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 618,
+        "topic_id": null,
+        "curriculum_topic_id": 2500
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 618,
+        "topic_id": null,
+        "curriculum_topic_id": 2500,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Unidade introdutória sobre biodiversidade, desequilíbrios ambientais e saúde ambiental/humana. Material de nível introdutório; não aprofunda saúde humana, conservação e todas as relações ecológicas no nível vestibular. Acessibilidade: Texto e lista de lições observados; transcrições disponíveis em itens consultados, unidade inteira não auditada."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/7-ano/seres-vivos-na-natureza",
+          "detail": "Conteúdo observado: A unidade lista conteúdos de biodiversidade e menciona saúde ambiental e humana."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2500/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 629
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 629,
+        "title": "Física do Ensino Médio — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/fisica-ensino-medio",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio",
+          "detail": "Página direta consultada em 10/10/2026. A página identifica uma trilha de Física do Ensino Médio em português."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 619
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 619,
+        "title": "Física do Ensino Médio — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/fisica-ensino-medio",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "description": "Trilha em português de Física do Ensino Médio, útil como ponto de entrada para mecânica e fundamentos.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 629,
+        "editorial_status": "published",
+        "editorial_note": "Trilha em português de Física do Ensino Médio, útil como ponto de entrada para mecânica e fundamentos. A trilha é ampla; selecionar as unidades de grandezas, cinemática, dinâmica e energia pertinentes ao programa. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Estrutura e unidades observadas; vídeos, fórmulas e interação assistiva não auditados em toda a trilha. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2501; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio",
+          "detail": "Consulta direta em 10/10/2026: A página identifica uma trilha de Física do Ensino Médio em português."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2501/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Grandezas, medidas, relações escalares/vetoriais, gráficos e estimativa; cinemática, dinâmica, energia, gravitação e hidrostática."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 619,
+        "topic_id": null,
+        "curriculum_topic_id": 2501
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 619,
+        "topic_id": null,
+        "curriculum_topic_id": 2501,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Trilha em português de Física do Ensino Médio, útil como ponto de entrada para mecânica e fundamentos. A trilha é ampla; selecionar as unidades de grandezas, cinemática, dinâmica e energia pertinentes ao programa. Acessibilidade: Estrutura e unidades observadas; vídeos, fórmulas e interação assistiva não auditados em toda a trilha."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio",
+          "detail": "Conteúdo observado: A página identifica uma trilha de Física do Ensino Médio em português."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2501/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 630
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 630,
+        "title": "Primeira lei de Newton — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/science/fisica-ensino-medio/x6443ccf4d35f6b36%3Aforcas-e-leis-de-newton/x6443ccf4d35f6b36%3A1-lei-de-newton/e/newtons-first-law-exercises-ap1",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio/x6443ccf4d35f6b36%3Aforcas-e-leis-de-newton/x6443ccf4d35f6b36%3A1-lei-de-newton/e/newtons-first-law-exercises-ap1",
+          "detail": "Página direta consultada em 10/10/2026. No item do carro parado, a alternativa coerente é força resultante nula; forças individuais podem existir e se equilibrar."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 620
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 620,
+        "title": "Primeira lei de Newton — prática Khan Academy",
+        "url": "https://pt.khanacademy.org/science/fisica-ensino-medio/x6443ccf4d35f6b36%3Aforcas-e-leis-de-newton/x6443ccf4d35f6b36%3A1-lei-de-newton/e/newtons-first-law-exercises-ap1",
+        "provider": "Khan Academy",
+        "kind": "exercise",
+        "description": "Prática pontual de força resultante e primeira lei de Newton; o item do carro parado tem resposta coerente.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 630,
+        "editorial_status": "published",
+        "editorial_note": "Prática pontual de força resultante e primeira lei de Newton; o item do carro parado tem resposta coerente. Cobre uma habilidade, não toda a mecânica. No item auditado, força resultante zero não significa ausência de forças. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Página depende de JavaScript; acessibilidade/interação completa não auditadas. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2501; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio/x6443ccf4d35f6b36%3Aforcas-e-leis-de-newton/x6443ccf4d35f6b36%3A1-lei-de-newton/e/newtons-first-law-exercises-ap1",
+          "detail": "Consulta direta em 10/10/2026: No item do carro parado, a alternativa coerente é força resultante nula; forças individuais podem existir e se equilibrar."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2501/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Grandezas, medidas, relações escalares/vetoriais, gráficos e estimativa; cinemática, dinâmica, energia, gravitação e hidrostática."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 620,
+        "topic_id": null,
+        "curriculum_topic_id": 2501
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 620,
+        "topic_id": null,
+        "curriculum_topic_id": 2501,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Prática pontual de força resultante e primeira lei de Newton; o item do carro parado tem resposta coerente. Cobre uma habilidade, não toda a mecânica. No item auditado, força resultante zero não significa ausência de forças. Acessibilidade: Página depende de JavaScript; acessibilidade/interação completa não auditadas."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/fisica-ensino-medio/x6443ccf4d35f6b36%3Aforcas-e-leis-de-newton/x6443ccf4d35f6b36%3A1-lei-de-newton/e/newtons-first-law-exercises-ap1",
+          "detail": "Conteúdo observado: No item do carro parado, a alternativa coerente é força resultante nula; forças individuais podem existir e se equilibrar."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2501/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 631
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 631,
+        "title": "Astronomia — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/geografia/astronomia.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/astronomia.htm",
+          "detail": "Página direta consultada em 10/10/2026. O artigo apresenta astronomia e modelos do Sistema Solar."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 621
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 621,
+        "title": "Astronomia — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/geografia/astronomia.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Introduz a astronomia, sua história e modelos do Sistema Solar.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 631,
+        "editorial_status": "published",
+        "editorial_note": "Introduz a astronomia, sua história e modelos do Sistema Solar. Texto introdutório e descritivo; não cobre astronomia física nem cálculos do programa. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Texto e títulos visíveis; imagens/diagramas e descrições alternativas não auditadas. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2502; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/astronomia.htm",
+          "detail": "Consulta direta em 10/10/2026: O artigo apresenta astronomia e modelos do Sistema Solar."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2502/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Terra, Sol, Lua, órbitas planetárias, sistema solar e evolução estelar."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 621,
+        "topic_id": null,
+        "curriculum_topic_id": 2502
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 621,
+        "topic_id": null,
+        "curriculum_topic_id": 2502,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Introduz a astronomia, sua história e modelos do Sistema Solar. Texto introdutório e descritivo; não cobre astronomia física nem cálculos do programa. Acessibilidade: Texto e títulos visíveis; imagens/diagramas e descrições alternativas não auditadas."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/astronomia.htm",
+          "detail": "Conteúdo observado: O artigo apresenta astronomia e modelos do Sistema Solar."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2502/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 632
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 632,
+        "title": "Sistema Solar — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/geografia/sistema-solar.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/sistema-solar.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página descreve planetas e corpos celestes do Sistema Solar."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 622
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 622,
+        "title": "Sistema Solar — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/geografia/sistema-solar.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Apresenta planetas e outros corpos do Sistema Solar.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 632,
+        "editorial_status": "published",
+        "editorial_note": "Apresenta planetas e outros corpos do Sistema Solar. Complemento descritivo; não cobre órbitas, evolução estelar e todo o programa. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Imagens e diagramas presentes; descrições alternativas não auditadas. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2502; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/sistema-solar.htm",
+          "detail": "Consulta direta em 10/10/2026: A página descreve planetas e corpos celestes do Sistema Solar."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2502/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Terra, Sol, Lua, órbitas planetárias, sistema solar e evolução estelar."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 622,
+        "topic_id": null,
+        "curriculum_topic_id": 2502
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 622,
+        "topic_id": null,
+        "curriculum_topic_id": 2502,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Apresenta planetas e outros corpos do Sistema Solar. Complemento descritivo; não cobre órbitas, evolução estelar e todo o programa. Acessibilidade: Imagens e diagramas presentes; descrições alternativas não auditadas."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/geografia/sistema-solar.htm",
+          "detail": "Conteúdo observado: A página descreve planetas e corpos celestes do Sistema Solar."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2502/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 633
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 633,
+        "title": "Lixo espacial — prática, questões 1–2",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lixo-espacial.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lixo-espacial.htm",
+          "detail": "Página direta consultada em 10/10/2026. Respostas das questões textuais 1 e 2 foram verificadas como D e B, respectivamente."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 623
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 623,
+        "title": "Lixo espacial — prática, questões 1–2",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lixo-espacial.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Prática parcial: questões textuais 1–2 sobre geocentrismo e leis de Kepler; respostas D e B conferidas.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 633,
+        "editorial_status": "published",
+        "editorial_note": "Prática parcial: questões textuais 1–2 sobre geocentrismo e leis de Kepler; respostas D e B conferidas. Usar somente questões 1–2; itens posteriores usam figuras e não foram incluídos. Recorte histórico/mecânico, não astronomia completa. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Questões posteriores dependem de figuras; acessibilidade integral não auditada. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2502; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lixo-espacial.htm",
+          "detail": "Consulta direta em 10/10/2026: Respostas das questões textuais 1 e 2 foram verificadas como D e B, respectivamente."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2502/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Terra, Sol, Lua, órbitas planetárias, sistema solar e evolução estelar."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 623,
+        "topic_id": null,
+        "curriculum_topic_id": 2502
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 623,
+        "topic_id": null,
+        "curriculum_topic_id": 2502,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Relação editorial suplementar; escopo limitado: Prática parcial: questões textuais 1–2 sobre geocentrismo e leis de Kepler; respostas D e B conferidas. Usar somente questões 1–2; itens posteriores usam figuras e não foram incluídos. Recorte histórico/mecânico, não astronomia completa. Acessibilidade: Questões posteriores dependem de figuras; acessibilidade integral não auditada."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lixo-espacial.htm",
+          "detail": "Conteúdo observado: Respostas das questões textuais 1 e 2 foram verificadas como D e B, respectivamente."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2502/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 634
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 634,
+        "title": "Calorimetria — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/fisica/calorimetria-i.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/calorimetria-i.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página apresenta trocas de calor, calor sensível/latente e curvas de aquecimento."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 624
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 624,
+        "title": "Calorimetria — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/fisica/calorimetria-i.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Explica calor sensível/latente, trocas de calor e curvas de aquecimento.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 634,
+        "editorial_status": "published",
+        "editorial_note": "Explica calor sensível/latente, trocas de calor e curvas de aquecimento. Complementar; não cobre sozinha toda a termodinâmica e os gases. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. A página contém fórmulas e gráficos; transcrição semântica e leitura assistiva não auditadas. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2503; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/calorimetria-i.htm",
+          "detail": "Consulta direta em 10/10/2026: A página apresenta trocas de calor, calor sensível/latente e curvas de aquecimento."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2503/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Temperatura, equilíbrio térmico, leis da termodinâmica, trocas de calor, gases e transições de fase."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 624,
+        "topic_id": null,
+        "curriculum_topic_id": 2503
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 624,
+        "topic_id": null,
+        "curriculum_topic_id": 2503,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Explica calor sensível/latente, trocas de calor e curvas de aquecimento. Complementar; não cobre sozinha toda a termodinâmica e os gases. Acessibilidade: A página contém fórmulas e gráficos; transcrição semântica e leitura assistiva não auditadas."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/calorimetria-i.htm",
+          "detail": "Conteúdo observado: A página apresenta trocas de calor, calor sensível/latente e curvas de aquecimento."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2503/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 635
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 635,
+        "title": "Termodinâmica — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/fisica/termodinamica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/termodinamica.htm",
+          "detail": "Página direta consultada em 10/10/2026. A página trata dos conceitos de termodinâmica previstos no tópico anual."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 625
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 625,
+        "title": "Termodinâmica — Brasil Escola",
+        "url": "https://brasilescola.uol.com.br/fisica/termodinamica.htm",
+        "provider": "Brasil Escola",
+        "kind": "article",
+        "description": "Leitura complementar de termodinâmica para equilibrar a introdução de calorimetria.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 635,
+        "editorial_status": "published",
+        "editorial_note": "Leitura complementar de termodinâmica para equilibrar a introdução de calorimetria. Selecionar conteúdos compatíveis com o Ensino Médio e o programa oficial. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Fórmulas e imagens podem exigir alternativa textual; tecnologia assistiva não auditada. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2503; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/termodinamica.htm",
+          "detail": "Consulta direta em 10/10/2026: A página trata dos conceitos de termodinâmica previstos no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2503/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Temperatura, equilíbrio térmico, leis da termodinâmica, trocas de calor, gases e transições de fase."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 625,
+        "topic_id": null,
+        "curriculum_topic_id": 2503
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 625,
+        "topic_id": null,
+        "curriculum_topic_id": 2503,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Leitura complementar de termodinâmica para equilibrar a introdução de calorimetria. Selecionar conteúdos compatíveis com o Ensino Médio e o programa oficial. Acessibilidade: Fórmulas e imagens podem exigir alternativa textual; tecnologia assistiva não auditada."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/fisica/termodinamica.htm",
+          "detail": "Conteúdo observado: A página trata dos conceitos de termodinâmica previstos no tópico anual."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2503/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 636
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 636,
+        "title": "Calorimetria — prática, questões 1–2 e 4–12",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calorimetria.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calorimetria.htm",
+          "detail": "Página direta consultada em 10/10/2026. Aritmética e unidades das questões 1–2 e 4–12 conferidas; a questão 3 depende de figura e deve ser omitida."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 626
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 626,
+        "title": "Calorimetria — prática, questões 1–2 e 4–12",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calorimetria.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Prática parcial: cálculos e unidades das questões textuais 1–2 e 4–12 foram conferidos.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 636,
+        "editorial_status": "published",
+        "editorial_note": "Prática parcial: cálculos e unidades das questões textuais 1–2 e 4–12 foram conferidos. Excluir questão 3, dependente de figura. Complementa calorimetria, não todo o tópico de termodinâmica. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Questão 3 visual excluída; acessibilidade integral da página não auditada. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2503; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calorimetria.htm",
+          "detail": "Consulta direta em 10/10/2026: Aritmética e unidades das questões 1–2 e 4–12 conferidas; a questão 3 depende de figura e deve ser omitida."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2503/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 12: Temperatura, equilíbrio térmico, leis da termodinâmica, trocas de calor, gases e transições de fase."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 626,
+        "topic_id": null,
+        "curriculum_topic_id": 2503
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 626,
+        "topic_id": null,
+        "curriculum_topic_id": 2503,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "needs_improvement",
+        "review_note": "Relação editorial suplementar; escopo limitado: Prática parcial: cálculos e unidades das questões textuais 1–2 e 4–12 foram conferidos. Excluir questão 3, dependente de figura. Complementa calorimetria, não todo o tópico de termodinâmica. Acessibilidade: Questão 3 visual excluída; acessibilidade integral da página não auditada."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-calorimetria.htm",
+          "detail": "Conteúdo observado: Aritmética e unidades das questões 1–2 e 4–12 conferidas; a questão 3 depende de figura e deve ser omitida."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2503/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 12."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 637
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 637,
+        "title": "Estados da matéria — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+          "detail": "Página direta consultada em 10/10/2026. A unidade lista estados da matéria, transições de fase, gases e modelos de partículas."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 627
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 627,
+        "title": "Estados da matéria — Khan Academy",
+        "url": "https://pt.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+        "provider": "Khan Academy",
+        "kind": "course",
+        "description": "Unidade sobre estados, mudanças de fase, gases e modelos particulados.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 637,
+        "editorial_status": "published",
+        "editorial_note": "Unidade sobre estados, mudanças de fase, gases e modelos particulados. Recurso introdutório e parcial; a prática listada na unidade não foi validada questão a questão. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. A unidade contém recursos interativos; teclado e leitor de tela não auditados. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2506; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+          "detail": "Consulta direta em 10/10/2026: A unidade lista estados da matéria, transições de fase, gases e modelos de partículas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2506/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 14: Propriedades, estados, gases, soluções, concentração e coloides."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 627,
+        "topic_id": null,
+        "curriculum_topic_id": 2506
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 627,
+        "topic_id": null,
+        "curriculum_topic_id": 2506,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Unidade sobre estados, mudanças de fase, gases e modelos particulados. Recurso introdutório e parcial; a prática listada na unidade não foi validada questão a questão. Acessibilidade: A unidade contém recursos interativos; teclado e leitor de tela não auditados."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/states-of-matter-and-intermolecular-forces/states-of-matter",
+          "detail": "Conteúdo observado: A unidade lista estados da matéria, transições de fase, gases e modelos de partículas."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2506/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 14."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 638
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 638,
+        "title": "Pilhas e baterias — prática, questão 1",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Brasil Escola",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+          "detail": "Página direta consultada em 10/10/2026. Na questão 1, a prata se oxida e o cálculo de potencial informado é coerente; não se endossa a lista completa."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 628
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 628,
+        "title": "Pilhas e baterias — prática, questão 1",
+        "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+        "provider": "Brasil Escola",
+        "kind": "exercise",
+        "description": "Prática parcial de eletroquímica: questão 1, sobre oxidação da prata e cálculo de potencial, conferida.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 638,
+        "editorial_status": "published",
+        "editorial_note": "Prática parcial de eletroquímica: questão 1, sobre oxidação da prata e cálculo de potencial, conferida. Usar apenas a questão 1; as demais não foram revisadas. Não cobre compostos orgânicos. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Outros itens podem depender de tabelas/figuras; acessibilidade integral não auditada. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "practice"
+      },
+      "reason": "Suplemento direto e gratuito para o tópico oficial 2510; escopo parcial e limitações explícitos no cartão.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+          "detail": "Consulta direta em 10/10/2026: Na questão 1, a prata se oxida e o cálculo de potencial informado é coerente; não se endossa a lista completa."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2510/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 14: Oxidação/redução, pilhas, eletrólise e conteúdos programáticos de compostos orgânicos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 628,
+        "topic_id": null,
+        "curriculum_topic_id": 2510
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 628,
+        "topic_id": null,
+        "curriculum_topic_id": 2510,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Prática parcial de eletroquímica: questão 1, sobre oxidação da prata e cálculo de potencial, conferida. Usar apenas a questão 1; as demais não foram revisadas. Não cobre compostos orgânicos. Acessibilidade: Outros itens podem depender de tabelas/figuras; acessibilidade integral não auditada."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-pilhas-baterias.htm",
+          "detail": "Conteúdo observado: Na questão 1, a prata se oxida e o cálculo de potencial informado é coerente; não se endossa a lista completa."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2510/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 14."
+        }
+      ]
+    },
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 639
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 639,
+        "title": "Análise de gráficos — vídeo Khan Academy",
+        "url": "https://pt.khanacademy.org/math/pt-9-ano/probabilidade-e-estistica-9ano/graficos-e-tabelas-9ano/v/analise-de-graficos",
+        "provider": "Khan Academy",
+        "kind": "video",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "license_name": null,
+        "license_url": null,
+        "attribution": "Khan Academy",
+        "rights_note": "Acesso gratuito observado nesta verificação; licença de reprodução/adaptação não confirmada. Manter somente link e metadados; não copiar conteúdo."
+      },
+      "reason": "Registrar a origem externa e a condição de reutilização como link-only, sem presumir licença.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/pt-9-ano/probabilidade-e-estistica-9ano/graficos-e-tabelas-9ano/v/analise-de-graficos",
+          "detail": "Página direta consultada em 10/10/2026. O vídeo e sua transcrição discutem escala, legenda e leitura de gráficos."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 531
+      },
+      "expected": {
+        "title": "Análise de gráficos",
+        "kind": "article",
+        "source_document_id": null,
+        "editorial_status": "published",
+        "availability_mode": "consultation_only"
+      },
+      "changes": {
+        "title": "Análise de gráficos — vídeo Khan Academy",
+        "kind": "video",
+        "description": "Vídeo em português sobre escalas, legendas e leitura de gráficos; transcrição disponível.",
+        "source_document_id": 639,
+        "editorial_status": "published",
+        "editorial_note": "Vídeo em português sobre escalas, legendas e leitura de gráficos; transcrição disponível. Introdução; não cobre elaboração de todos os tipos de tabela/gráfico e contextos interdisciplinares. Acesso público gratuito observado em 10/10/2026; conteúdo externo pode mudar. Transcrição observada; controles, teclado e leitor de tela não auditados formalmente. Licença de cópia/adaptação não confirmada: somente link e metadados.",
+        "availability_mode": "learning"
+      },
+      "reason": "Revalidar a ficha existente: a consulta atual confirmou vídeo e transcrição, superando a antiga observação de página não inspecionável; preservar identidade e vincular fonte e tópico anual.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/pt-9-ano/probabilidade-e-estistica-9ano/graficos-e-tabelas-9ano/v/analise-de-graficos",
+          "detail": "Nova consulta direta em 10/10/2026: O vídeo e sua transcrição discutem escala, legenda e leitura de gráficos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2511/11",
+          "detail": "Programa oficial Unicamp 2027, primeira fase, documento 148, página 5: Exige-se do candidato que saiba resolver problemas matemáticos relacionados ao cotidiano, bem como interpretar e elaborar tabelas e gráficos."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 531,
+        "topic_id": null,
+        "curriculum_topic_id": 2511
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "resource_id": 531,
+        "topic_id": null,
+        "curriculum_topic_id": 2511,
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Relação editorial suplementar; escopo limitado: Vídeo em português sobre escalas, legendas e leitura de gráficos; transcrição disponível. Introdução; não cobre elaboração de todos os tipos de tabela/gráfico e contextos interdisciplinares. Acessibilidade: Transcrição observada; controles, teclado e leitor de tela não auditados formalmente."
+      },
+      "reason": "A página direta foi associada ao tópico anual por correspondência de conteúdo; não representa cobertura exaustiva nem tag oficial da Comvest.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/math/pt-9-ano/probabilidade-e-estistica-9ano/graficos-e-tabelas-9ano/v/analise-de-graficos",
+          "detail": "Conteúdo observado: O vídeo e sua transcrição discutem escala, legenda e leitura de gráficos."
+        },
+        {
+          "locator": "sqlite://curriculum_topic_stages/2511/11",
+          "detail": "Programa oficial da primeira fase de 2027, fonte 148, página 5."
+        }
+      ]
+    }
+  ]
+}

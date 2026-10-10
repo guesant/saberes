@@ -190,6 +190,8 @@ export * from "./overflow-boundary-props.type";
 export * from "./paper.component";
 
 export * from "./page-content.component";
+export * from "./pdf-page-dialog.component";
+export * from "./pdf-page-dialog-props.interface";
 export * from "./page-content-main.component";
 export * from "./preference-row.component";
 export * from "./responsive-group-gap.interface";
@@ -203,6 +205,10 @@ export * from "./quiz-icon.component";
 export * from "./refresh-icon.component";
 
 export * from "./selectable-surface.component";
+export * from "./pdf-icon.component";
+export * from "./select-field.component";
+export * from "./ui-select-field-option.interface";
+export * from "./ui-select-field-props.interface";
 export * from "./switch.component";
 
 export * from "./search-icon.component";

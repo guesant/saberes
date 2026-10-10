@@ -1,0 +1,37 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T10:31:47.310153+00:00",
+  "database_before_sha256": "9d913f3d6e67b7e78740c85b29e5926a0e32515bcb3d78ff29c4974d70dff040",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "source_documents",
+      "key": {
+        "id": 649
+      },
+      "expected": {
+        "exists": false
+      },
+      "changes": {
+        "id": 649,
+        "title": "DOE Explains: Deuterium-Tritium Fusion Fuel",
+        "url": "https://www.energy.gov/science/doe-explainsdeuterium-tritium-fusion-fuel",
+        "provider": "U.S. Department of Energy, Office of Science",
+        "kind": "scientific_reference",
+        "is_official": 0,
+        "reuse_status": "link_only",
+        "rights_note": "Referência factual externa; manter apenas citação e link, sem copiar conteúdo."
+      },
+      "reason": "Registrar fonte primária institucional para corrigir a afirmação excessivamente geral sobre composição de núcleos e documentar a exceção do hidrogênio-1.",
+      "evidence": [
+        {
+          "locator": "https://www.energy.gov/science/doe-explainsdeuterium-tritium-fusion-fuel",
+          "detail": "DOE Office of Science afirma que todos os isótopos de hidrogênio têm um próton, que deutério tem um nêutron, trítio tem dois e protium não tem nêutrons. Consultado em 2026-10-10."
+        }
+      ],
+      "action": "insert"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T103147320050Z.sqlite",
+  "database_after_sha256": "b9aecad5bedaa7341c96a34df3ed3fd538ffdecfad44db331bf048dc22c74a7e"
+}

@@ -8,6 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { NavigationDrawer } from "./navigation-drawer.component";
 import { NavigationHeader } from "./navigation-header.component";
+import { OfflineStudyAssetsDownloadNotice } from "./offline-study-assets-download-notice.component";
 import { ShellBreadcrumbs } from "./shell-breadcrumbs.component";
 import { ShellCommandPalette } from "./shell-command-palette.component";
 import { useCommandPalette } from "./use-command-palette.hook";
@@ -40,6 +41,8 @@ export function Shell(props: ShellProps) {
         onOpenCommandPalette={commandPalette.openPalette}
         onOpenNavigation={navigationDrawer.open}
       />
+
+      <OfflineStudyAssetsDownloadNotice />
 
       <ShellCommandPalette
         items={commandPaletteItems}

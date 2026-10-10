@@ -1,0 +1,192 @@
+{
+  "schema": "lesson-audit-second-review/v1",
+  "reviewer": "Revisão final independente — Codex agent thread 01a12593-726a-7cf3-b7b9-08284bf7f6bf",
+  "reviewed_at": "2026-10-10",
+  "scope": {
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "primeira fase",
+    "reviewed_artifacts": [
+      "content/editorial/unicamp-2027/lesson-audit-portuguese-corrections-2026-10-10.json",
+      "content/editorial/unicamp-2027/lesson-audit-humanities-corrections-2026-10-10.json",
+      "content/editorial/unicamp-2027/lesson-audit-sciences-corrections-2026-10-10.json"
+    ],
+    "official_program_source_document_id": 148,
+    "independent_review": true,
+    "database_modified_by_reviewer": false
+  },
+  "decisions": [
+    {
+      "curriculum_topic_id": 2469,
+      "reviewed_version": "1.0.4",
+      "decision": "publish",
+      "rationale": "As correções demonstram intertextualidade, interdiscursividade e relações de causa e concessão com exemplos concretos adequados ao programa.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 3, "supports": "Relações lógico-discursivas, intertextualidade, interdiscursividade e efeitos expressivos."}]
+    },
+    {
+      "curriculum_topic_id": 2470,
+      "reviewed_version": "1.0.2",
+      "decision": "publish",
+      "rationale": "Distingue norma urbana culta e norma-padrão idealizada e explica prestígio, poder e contexto; o exemplo de mudança de registro é coerente.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 3, "supports": "Norma urbana culta, variedades, registros e condições socioculturais, históricas e geopolíticas."}]
+    },
+    {
+      "curriculum_topic_id": 2472,
+      "reviewed_version": "1.0.3",
+      "decision": "hold",
+      "rationale": "A autochecagem ainda usa “o novo” com referente ambíguo, embora o exemplo substituto já não contenha esse antecedente.",
+      "problems": ["Tornar coerentes a explicação, o exemplo e a autochecagem, removendo ou definindo explicitamente o referente de “o novo”."],
+      "evidence": [{"source_document_id": 148, "page": 4, "supports": "Classes de palavras e processos de formação; a decisão mantém a lição em revisão por coerência interna."}]
+    },
+    {
+      "curriculum_topic_id": 2473,
+      "reviewed_version": "1.0.2",
+      "decision": "publish",
+      "rationale": "O exemplo identifica a aliteração pela repetição de /s/ e limita corretamente a interpretação ao contexto; contraste fonêmico e dígrafo também estão explicados.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 4, "supports": "Fonologia, contraste de sons e recursos sonoros."}]
+    },
+    {
+      "curriculum_topic_id": 2474,
+      "reviewed_version": "1.0.5",
+      "decision": "hold",
+      "rationale": "A proposta mantém a trilha de leitura das obras obrigatórias para etapa futura, contém pontuação inválida (“edição.;”) e diverge da grafia oficial de um título.",
+      "problems": ["Corrigir a pontuação e o título conforme a relação oficial; incluir ao menos uma leitura guiada de obra/texto obrigatório, ou delimitar a aula sem sugerir que já prepara para a análise dessas obras."],
+      "evidence": [{"source_document_id": 148, "page": 4, "supports": "Leitura analítica e interpretação crítica de literaturas em língua portuguesa e lista de leituras obrigatórias, com continuação na página 5."}, {"source_document_id": 148, "page": 5, "supports": "Grafia e seleção oficial das leituras obrigatórias."}]
+    },
+    {
+      "curriculum_topic_id": 2475,
+      "reviewed_version": "1.2.2",
+      "decision": "hold",
+      "rationale": "As correções de notação e operações estão corretas, mas a lição ainda não explica subconjunto, conteúdo explícito do programa.",
+      "problems": ["Acrescentar definição e exemplo operacional de subconjunto, distinguindo pertinência e inclusão."],
+      "evidence": [{"source_document_id": 148, "page": 5, "supports": "Conjuntos numéricos e operações."}, {"source_document_id": 148, "page": 6, "supports": "Continuação dos conteúdos de Matemática do programa."}]
+    },
+    {
+      "curriculum_topic_id": 2476,
+      "reviewed_version": "1.3.2",
+      "decision": "hold",
+      "rationale": "Domínio, composição e transformações foram corrigidos, mas o roteiro não cobre partes importantes do programa: funções quadráticas e trigonométricas, inversas e equações/inequações.",
+      "problems": ["Ampliar a teoria, exemplos resolvidos e autochecagem para incluir os tipos de função e operações nomeados no programa; não alegar cobertura integral enquanto ausentes."],
+      "evidence": [{"source_document_id": 148, "page": 6, "supports": "Programa de funções e tópicos relacionados."}, {"source_document_id": 148, "page": 7, "supports": "Continuação de Matemática, incluindo funções e relações."}]
+    },
+    {
+      "curriculum_topic_id": 2478,
+      "reviewed_version": "1.1.2",
+      "decision": "publish",
+      "rationale": "Princípio das gavetas, binômio e união de eventos foram incluídos; exemplos e cálculos conferem.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 6, "supports": "Princípios de contagem e probabilidade."}]
+    },
+    {
+      "curriculum_topic_id": 2481,
+      "reviewed_version": "1.2.2",
+      "decision": "hold",
+      "rationale": "As correções geométricas foram incorporadas, mas troncos de sólidos e áreas de cilindros e cones continuam ausentes.",
+      "problems": ["Incluir as formas e medidas listadas no programa, com ao menos um exemplo resolvido para tronco e para áreas de cilindro/cone."],
+      "evidence": [{"source_document_id": 148, "page": 6, "supports": "Geometria espacial e medidas de sólidos."}]
+    },
+    {
+      "curriculum_topic_id": 2484,
+      "reviewed_version": "1.1.2",
+      "decision": "publish",
+      "rationale": "Condições de validade, domínios, monotonicidade e exemplos de equações/inequações estão corretos.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 7, "supports": "Logaritmos, exponenciais e relações funcionais."}]
+    },
+    {
+      "curriculum_topic_id": 2487,
+      "reviewed_version": "1.2.2",
+      "decision": "hold",
+      "rationale": "A correção sobre pedosfera está correta, mas faltam conteúdos do programa como clima, hidrologia, relevo brasileiro, criosfera e conservação.",
+      "problems": ["Ampliar a trilha com esses componentes físico-naturais e exemplos contextualizados ao território brasileiro, ou explicitar quais partes continuam pendentes."],
+      "evidence": [{"source_document_id": 148, "page": 7, "supports": "Componentes físico-naturais do espaço geográfico."}, {"source_document_id": 148, "page": 8, "supports": "Continuação do programa de Geografia."}]
+    },
+    {
+      "curriculum_topic_id": 2496,
+      "reviewed_version": "1.3.1",
+      "decision": "publish",
+      "rationale": "A proposta inclui estruturas e funções das organelas, diferenças entre células vegetais/animais e origem endossimbiótica; está consistente com o escopo avaliado.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 11, "supports": "Bases celulares e moleculares da vida."}]
+    },
+    {
+      "curriculum_topic_id": 2499,
+      "reviewed_version": "1.2.1",
+      "decision": "publish",
+      "rationale": "O exemplo traz dados e interpreta padrão compatível com eutrofização, sem afirmar que associação observacional prova causalidade.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 11, "supports": "Relações entre ambiente, matéria e vida."}]
+    },
+    {
+      "curriculum_topic_id": 2500,
+      "reviewed_version": "1.3.1",
+      "decision": "hold",
+      "rationale": "A lista de métodos contraceptivos permanece descritiva; mecanismos hormonais não são suficientemente explicados e o preservativo é o único método detalhado.",
+      "problems": ["Explicar de forma correta e comparativa os mecanismos dos métodos hormonais cobrados, com exemplo e ressalva sobre eficácia/uso, ou marcar explicitamente esses mecanismos como etapa ainda não coberta."],
+      "evidence": [{"source_document_id": 148, "page": 12, "supports": "Biodiversidade e saúde humana, incluindo reprodução e prevenção."}]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "reviewed_version": "1.3.1",
+      "decision": "hold",
+      "rationale": "Impulso e quantidade de movimento estão corretos, mas cinemática vetorial em duas dimensões não tem aplicação resolvida.",
+      "problems": ["Adicionar exemplo numérico de movimento em duas dimensões com decomposição vetorial, unidades e interpretação do resultado."],
+      "evidence": [{"source_document_id": 148, "page": 12, "supports": "Fundamentos da Física e Mecânica."}]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "reviewed_version": "1.2.1",
+      "decision": "hold",
+      "rationale": "Cálculos de ondas e lentes estão corretos, mas interferência não tem aplicação numérica nem exemplo resolvido.",
+      "problems": ["Incluir uma aplicação numérica de interferência coerente com as grandezas e hipóteses do exemplo."],
+      "evidence": [{"source_document_id": 148, "page": 13, "supports": "Óptica e ondas, incluindo fenômenos ondulatórios."}]
+    },
+    {
+      "curriculum_topic_id": 2505,
+      "reviewed_version": "1.3.1",
+      "decision": "publish",
+      "rationale": "As relações de potência elétrica e associação em série de capacitores foram acrescentadas; os exemplos numéricos conferem.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 13, "supports": "Eletricidade e magnetismo."}]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "reviewed_version": "1.3.1",
+      "decision": "hold",
+      "rationale": "A correção de concentração está correta e lei de Avogadro foi incluída, mas energia cinética média das partículas continua sem explicação/aplicação.",
+      "problems": ["Acrescentar a relação entre temperatura e energia cinética média das partículas e resolver um exemplo, explicitando as condições do modelo."],
+      "evidence": [{"source_document_id": 148, "page": 13, "supports": "Materiais, estados físicos e soluções."}]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "reviewed_version": "1.1.1",
+      "decision": "hold",
+      "rationale": "Meia-vida e configuração eletrônica têm exemplo, mas afinidade eletrônica permanece apenas definida, sem procedimento ou aplicação.",
+      "problems": ["Explicar a afinidade eletrônica com seus limites/tendências periódicas e incluir aplicação comparativa sem generalizações incorretas."],
+      "evidence": [{"source_document_id": 148, "page": 13, "supports": "Estrutura atômica e classificação periódica."}]
+    },
+    {
+      "curriculum_topic_id": 2509,
+      "reviewed_version": "1.3.1",
+      "decision": "publish",
+      "rationale": "Os cálculos de Kb, hidrólise do acetato, pH aproximado, Kc e lei de Hess estão consistentes com as aproximações declaradas.",
+      "problems": [],
+      "evidence": [{"source_document_id": 148, "page": 14, "supports": "Cinética, energia e equilíbrio químico."}]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "reviewed_version": "1.3.1",
+      "decision": "hold",
+      "rationale": "Os cálculos eletroquímicos conferem, mas nomenclatura e obtenção de compostos orgânicos simples não têm exemplos suficientes.",
+      "problems": ["Adicionar exemplos resolvidos de nomenclatura e de obtenção de compostos orgânicos simples, alinhados ao programa e sem reproduzir conteúdo protegido."],
+      "evidence": [{"source_document_id": 148, "page": 14, "supports": "Eletroquímica e compostos orgânicos."}]
+    }
+  ],
+  "review_limitations": [
+    "A decisão aprova somente a versão revisada das lições introdutórias; não significa cobertura exaustiva de cada subitem do programa.",
+    "As decisões publish são limitadas aos tópicos indicados; os holds permanecem em revisão até novas correções e revisão independente.",
+    "Este registro não substitui revisão de acessibilidade, fontes didáticas adicionais ou conferência de toda questão associada."
+  ]
+}

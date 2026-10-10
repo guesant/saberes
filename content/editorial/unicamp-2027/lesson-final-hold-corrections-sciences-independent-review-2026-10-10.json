@@ -1,0 +1,245 @@
+{
+  "format": "lesson-final-corrections-independent-review/v1",
+  "review_date": "2026-10-10",
+  "scope": {
+    "package": "content/editorial/unicamp-2027/lesson-final-hold-corrections-sciences-2026-10-10.json",
+    "edition": "Vestibular Unicamp 2027",
+    "stage": "primeira fase",
+    "review_method": "Leitura das três seções de cada proposta; conferência visual das páginas oficiais 11–14; checagem independente de contas e conceitos; consulta somente leitura das lições-base e respectivas versões no SQLite.",
+    "database_access": "SQLite opened with sqlite3 -readonly; no writes performed."
+  },
+  "overall_decision": "hold_with_one_publish_candidate",
+  "package_metadata_findings": [
+    {
+      "severity": "blocking_for_integration",
+      "finding": "O pacote não registra editorial_version/base_version/proposed_version por lição. As versões-base foram obtidas no SQLite, mas a versão substituta não pode ser rastreada nem integrada com segurança a partir deste JSON.",
+      "sqlite_read_only_results": [
+        {"curriculum_topic_id": 2500, "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [97, 98, 99]},
+        {"curriculum_topic_id": 2501, "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [100, 101, 102]},
+        {"curriculum_topic_id": 2504, "base_version": "1.2.1", "review_status": "review", "lesson_section_ids": [109, 110, 111]},
+        {"curriculum_topic_id": 2506, "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [115, 116, 117]},
+        {"curriculum_topic_id": 2507, "base_version": "1.1.1", "review_status": "review", "lesson_section_ids": [118, 119, 120]},
+        {"curriculum_topic_id": 2510, "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [127, 128, 129]}
+      ],
+      "evidence": "Consulta de lessons, lesson_topics e lesson_sections no arquivo .local/content/content.sqlite, sempre em modo readonly."
+    }
+  ],
+  "sources_consulted": [
+    {
+      "source_document_id": 148,
+      "title": "Programa das Provas — Vestibular 2027",
+      "institution": "Comvest / Unicamp",
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "local_copy": ".local/downloads/comvest-2025-2027/2027/regulations/program-2027-current-july.pdf",
+      "sha256": "d4aa0e4239717e27505d2a625cb28f0b4ebd8d1d976086c2b626e494c1e71254",
+      "pages_visually_checked": [11, 12, 13, 14]
+    },
+    {
+      "title": "NIST Chemistry WebBook — Chlorine atom, electron affinity",
+      "institution": "National Institute of Standards and Technology",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C22537151&Mask=223&Units=SI",
+      "use": "Conferir valores experimentais de afinidade eletrônica de Cl, incluindo 3.6131 eV."
+    },
+    {
+      "title": "NIST Chemistry WebBook — Fluorine atom, electron affinity",
+      "institution": "National Institute of Standards and Technology",
+      "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C14762948&Mask=238&Units=SI",
+      "use": "Conferir valor experimental de afinidade eletrônica de F, 3.401191 eV."
+    },
+    {
+      "title": "Variation in Electron Affinities",
+      "institution": "University of Calgary Chemistry Textbook",
+      "url": "https://chem-textbook.ucalgary.ca/version2/chapter-6-main/periodic-properties/variation-in-electron-affinities/",
+      "use": "Conferência qualitativa da tendência e da exceção F/Cl."
+    },
+    {
+      "file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json",
+      "use": "Exact corrections e problemas que motivaram as substituições."
+    }
+  ],
+  "topic_decisions": [
+    {
+      "curriculum_topic_id": 2500,
+      "official_label": "Biodiversidade e saúde humana",
+      "decision": "hold",
+      "base_version": "1.3.1",
+      "proposed_version_in_package": null,
+      "problems": [
+        {
+          "severity": "blocking",
+          "location": "Exemplo resolvido: escolher a prevenção pelo mecanismo",
+          "problem": "A exact_correction da segunda revisão pediu substituir o exemplo por uma situação de infecção respiratória, identificar agente/via e comparar intervenções pertinentes (ventilação, vacinação e antibiótico, além de esclarecer que preservativo não atua nessa via). A proposta atual usa apenas uma situação de contracepção. Embora a teoria mencione vírus, a seção de exemplo não demonstra a aplicação epidemiológica que motivou a revisão; portanto, a correção foi atendida apenas parcialmente.",
+          "evidence": {"source_document_id": 148, "pages": [11, 12], "location": "Biodiversidade; Saúde humana: reprodução, contracepção, ISTs e doenças causadas por microrganismos/vetores."}
+        },
+        {
+          "severity": "editorial",
+          "location": "Autochecagem",
+          "problem": "As respostas são majoritariamente reconhecimento de definições; falta uma pequena situação inédita para o estudante aplicar agente, via e medida preventiva, justamente a habilidade que a segunda revisão identificou como ausente."
+        }
+      ],
+      "verified_content": [
+        "A distinção entre agente infeccioso e vetor está conceitualmente correta.",
+        "A descrição de preservativos como redutores, mas não eliminadores absolutos, de risco de gravidez/IST é cautelosa.",
+        "FSH/LH, estrogênio/progesterona e mecanismos de métodos contraceptivos foram acrescentados à teoria."
+      ],
+      "evidence": [
+        {"source_document_id": 148, "pages": [11, 12], "supports": "Conteúdo oficial de biodiversidade, sistemas humanos, reprodução, métodos contraceptivos, hormônios, ISTs e doenças por microrganismos/vetores."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction do exemplo respiratório e comparação entre via, agente e prevenção."},
+        {"sqlite": ".local/content/content.sqlite", "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [97, 98, 99]}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2501,
+      "official_label": "Fundamentos da Física e Mecânica",
+      "decision": "hold",
+      "base_version": "1.3.1",
+      "proposed_version_in_package": null,
+      "problems": [
+        {
+          "severity": "blocking",
+          "location": "Exemplo resolvido: lançamento horizontal e impulso; teoria",
+          "problem": "O exemplo alternativo é matematicamente coerente e demonstra movimento em duas dimensões e impulso gravitacional, mas não incorpora o exemplo de colisão com Δp=m(v_f−v_i) e força média que a exact_correction prescreveu. Além disso, a teoria só menciona g e U_g≈mgh; não ensina a lei da gravitação universal, apesar de o programa e a descrição curricular do banco incluírem gravitação. Não há delimitação editorial dizendo que este é apenas um passo da trilha.",
+          "evidence": {"source_document_id": 148, "page": 12, "location": "Mecânica: movimento em 1 e 2 dimensões, leis de Newton, quantidade de movimento e conservação, gravitação universal e leis de Kepler, trabalho/energia, potência e hidrostática."}
+        },
+        {
+          "severity": "non_blocking_calculation_check",
+          "location": "Exemplo resolvido: lançamento horizontal e impulso",
+          "problem": "Cálculos conferidos: t=2 s, alcance=12 m, v_y=−20 m/s, Δp_y=−10 kg·m/s e força média vertical=−5 N, igual ao peso no modelo declarado. Os sinais estão consistentes com +y para cima."
+        }
+      ],
+      "verified_content": [
+        "As equações cinemáticas por eixo e a distinção entre impulso e variação de quantidade de movimento estão corretas.",
+        "O exemplo resolve lançamento horizontal sem resistência do ar com hipóteses e referencial explícitos."
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 12, "supports": "Escopo oficial de Mecânica, incluindo gravitação e hidrostática."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction de impulso/Δp e cinemática vetorial em duas dimensões."},
+        {"sqlite": ".local/content/content.sqlite", "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [100, 101, 102], "curriculum_description": "Grandezas, medidas, relações escalares/vetoriais, gráficos e estimativa; cinemática, dinâmica, energia, gravitação e hidrostática."}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2504,
+      "official_label": "Óptica e ondas",
+      "decision": "hold",
+      "base_version": "1.2.1",
+      "proposed_version_in_package": null,
+      "problems": [
+        {
+          "severity": "blocking",
+          "location": "Exemplo resolvido: interferência e lente convergente",
+          "problem": "A seção acrescenta aplicação numérica de interferência e lente, atendendo parte substancial da revisão, mas não resolve v=λf com frequência e velocidade dadas, como exigido pela exact_correction. A teoria define v=λf, porém a autochecagem não testa esse cálculo. O pacote também não registra as convenções de sinais de lente de forma tão explícita quanto a correção exigiu; declara sinais para objeto/imagem real e lente convergente, mas não explicita a convenção para objeto/imagem virtuais.",
+          "evidence": {"source_document_id": 148, "page": 13, "location": "Óptica e ondas: comprimento, frequência e velocidade de propagação; interferência/difração; refração, lentes e instrumentos."}
+        },
+        {
+          "severity": "non_blocking_calculation_check",
+          "location": "Exemplo resolvido: interferência e lente convergente",
+          "problem": "Com Δr=2λ, fontes em fase produzem interferência construtiva; Δr=1,5λ produz mínimo destrutivo ideal para amplitudes iguais. Para f=10 cm e p=30 cm, p′=15 cm e m=−0,5. As contas e conclusões estão corretas."
+        }
+      ],
+      "verified_content": [
+        "A distinção de frequência constante na refração, difração e condições de interferência está correta no nível apresentado.",
+        "Equação da lente e aumento usam convenção compatível com o objeto real e lente convergente do exemplo."
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 13, "supports": "Conteúdo programático oficial de Óptica e ondas."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction de cálculo de comprimento de onda a partir de v/f e exemplo de lente com sinais declarados."},
+        {"sqlite": ".local/content/content.sqlite", "base_version": "1.2.1", "review_status": "review", "lesson_section_ids": [109, 110, 111]}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2506,
+      "official_label": "Materiais, gases, líquidos e sólidos",
+      "decision": "publish",
+      "base_version": "1.3.1",
+      "proposed_version_in_package": null,
+      "problems": [],
+      "verified_content": [
+        "As relações de Boyle, Gay-Lussac, Charles e Avogadro especificam corretamente a variável constante; temperatura é indicada em kelvin e a lei de Avogadro é demonstrada numericamente.",
+        "A energia translacional média ⟨K⟩=3kBT/2 é aplicada corretamente ao gás ideal clássico; dobrar T absoluta dobra a energia média por partícula.",
+        "A lei de Dalton aparece com fração molar, p_i=x_i P_total. A fórmula está conceitualmente correta, embora não tenha exemplo numérico próprio.",
+        "NaCl: 5,85 g / 58,5 g mol⁻¹ = 0,100 mol; em 0,50 L, c=0,200 mol L⁻¹. Os valores conferem."
+      ],
+      "coverage_note": "A proposta resolve as lacunas centrais apontadas na segunda revisão e mantém presentes gases reais/liquefação, difusão, pressão de vapor, eletrólitos, expressões de concentração e coloides. Para estudo mais profundo, vale acrescentar prática específica de Dalton e propriedades coligativas, mas não encontrei erro ou omissão bloqueante nesta substituição de três seções.",
+      "evidence": [
+        {"source_document_id": 148, "page": 13, "location": "Química — Materiais e Gases", "supports": "Estados físicos, gases ideais, Avogadro, energia cinética média, Dalton, difusão, gases reais/liquefação, soluções, concentrações e coloides."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction das leis dos gases e exemplo de Avogadro, além das verificações independentes de concentração e pressão parcial."},
+        {"sqlite": ".local/content/content.sqlite", "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [115, 116, 117]}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2507,
+      "official_label": "Estrutura atômica, classificação periódica e ligação química",
+      "decision": "hold",
+      "base_version": "1.1.1",
+      "proposed_version_in_package": null,
+      "problems": [
+        {
+          "severity": "blocking_calculation",
+          "location": "Exemplo resolvido: comparar F/Cl e calcular meia-vida",
+          "problem": "Há arredondamento incorreto/inconsistente na conversão da afinidade do cloro: 3,613×96,485=348,6003 kJ/mol, que arredonda para 348,6, não 348,7. Usando os valores NIST com três casas decimais, 3,401 eV para F dá 328,145 kJ/mol (328,1 com arredondamento a uma casa), enquanto o valor mais preciso 3,401191 eV dá 328,164 kJ/mol (328,2 a uma casa). A proposta mistura precisão truncada e arredondamento; precisa uniformizar a fonte/precisão e a regra de arredondamento.",
+          "evidence": {"calculation": "1 eV por partícula = aproximadamente 96,485 kJ/mol; 3,613×96,485=348,6003; 3,401×96,485=328,1455.", "sources": ["https://webbook.nist.gov/cgi/cbook.cgi?ID=C22537151&Mask=223&Units=SI", "https://webbook.nist.gov/cgi/cbook.cgi?ID=C14762948&Mask=238&Units=SI"]}
+        },
+        {
+          "severity": "curriculum_scope",
+          "location": "Teoria e exemplo",
+          "problem": "O rótulo oficial e a lição-base incluem ligação química. A proposta menciona ligações iônicas, covalentes e metálicas apenas em uma frase; não traz polaridade nem interações intermoleculares de van der Waals e ligação de hidrogênio, que aparecem expressamente no programa de Química da p. 14. A revisão independente anterior pedia a equação nuclear completa com antineutrino quando a notação exigir; a proposta explica tendências de decaimento, mas não dá exemplo de equação beta completa.",
+          "evidence": {"source_document_id": 148, "pages": [13, 14], "location": "Estrutura atômica e classificação periódica; Ligação química: modelos iônico/covalente/metálico, polaridade e interações intermoleculares; radioatividade e equações/ cinética de decaimento."}
+        }
+      ],
+      "verified_content": [
+        "Configuração do Na (Z=11) e cálculo de duas meias-vidas (80 mg para 20 mg) estão corretos.",
+        "A comparação qualitativa de que Cl tem maior afinidade eletrônica que F está respaldada pelos dados experimentais NIST; a explicação sobre repulsão no orbital 2p compacto é adequada como modelo introdutório.",
+        "A distinção entre afinidade eletrônica e eletronegatividade e a declaração da convenção de sinal são boas salvaguardas editoriais."
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 13, "supports": "Estrutura atômica, níveis e distribuição eletrônica, energia de ionização, afinidade, eletronegatividade, radioatividade e cinética de decaimento."},
+        {"source_document_id": 148, "page": 14, "supports": "Modelos de ligação, polaridade e interações de Van der Waals/ligação de hidrogênio."},
+        {"title": "NIST Chemistry WebBook — Cl", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C22537151&Mask=223&Units=SI", "location": "Electron affinity determinations", "supports": "Valor experimental em torno de 3,6131 eV."},
+        {"title": "NIST Chemistry WebBook — F", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C14762948&Mask=238&Units=SI", "location": "Electron affinity determinations", "supports": "Valor experimental 3,401191 eV."},
+        {"sqlite": ".local/content/content.sqlite", "base_version": "1.1.1", "review_status": "review", "lesson_section_ids": [118, 119, 120]}
+      ]
+    },
+    {
+      "curriculum_topic_id": 2510,
+      "official_label": "Eletroquímica e compostos orgânicos",
+      "decision": "hold",
+      "base_version": "1.3.1",
+      "proposed_version_in_package": null,
+      "problems": [
+        {
+          "severity": "blocking",
+          "location": "Teoria e exemplo resolvido: obtenção/nomeação e pilha Zn/Cu",
+          "problem": "A proposta melhora nomenclatura e obtenção ao hidratar eteno para etanol, mas não atende a exact_correction anterior: não há a chave estrutural dos grupos funcionais listados nem uma representação de Lewis com pares eletrônicos; o exemplo do polímero por adição e a conexão explicada entre monômero/unidade repetitiva também não aparecem. Carboidratos, lipídios, proteínas e enzimas são apenas mencionados sem aplicação. Além disso, o programa exige propriedades de compostos simples e representativos; a lição nomeia substâncias, mas não relaciona estrutura a propriedade química/física.",
+          "evidence": {"source_document_id": 148, "page": 14, "location": "Química de compostos orgânicos", "supports": "Fórmulas moleculares, estruturais e de Lewis; funções orgânicas; nomenclatura, obtenção e propriedades; biomoléculas e enzimas; polímeros."}
+        },
+        {
+          "severity": "non_blocking_calculation_check",
+          "location": "Exemplo resolvido: obtenção/nomeação e pilha Zn/Cu",
+          "problem": "E°cel=+1,10 V está correto; Q=2,0×600=1200 C; a deposição calculada é aproximadamente 0,395 g Cu para rendimento de 100%. A reação de hidratação do eteno está balanceada e identifica corretamente etanol/álcool, desde que as condições catalíticas indicadas sejam entendidas como necessárias."
+        }
+      ],
+      "verified_content": [
+        "As definições redox e a fórmula de Faraday estão corretas no exemplo.",
+        "A identificação de CH₃COOCH₂CH₃ como éster, distinta de ácido carboxílico, está correta.",
+        "O exemplo de eteno hidrata para etanol e a nomenclatura do produto estão corretos em nível introdutório."
+      ],
+      "evidence": [
+        {"source_document_id": 148, "page": 14, "supports": "Escopo completo de eletroquímica e compostos orgânicos, incluindo representações, propriedades, obtenção, biomoléculas e polímeros."},
+        {"file": "content/editorial/unicamp-2027/lesson-audit-sciences-second-review-2026-10-10.json", "supports": "Exact correction da chave de grupos funcionais, polimerização do eteno, polímeros/biomoléculas e representação de Lewis."},
+        {"sqlite": ".local/content/content.sqlite", "base_version": "1.3.1", "review_status": "review", "lesson_section_ids": [127, 128, 129]}
+      ]
+    }
+  ],
+  "validation_notes": {
+    "section_structure": "As seis lições têm três seções (theory, example, summary).",
+    "database": "A versão-base e o status editorial foram lidos em modo somente leitura; nenhuma alteração foi feita no SQLite.",
+    "calculations_rechecked": [
+      "Lançamento horizontal 2501: coerente sob g=10 m/s² e ausência de resistência do ar.",
+      "Interferência/lente 2504: resultados 2λ construtivo, 1,5λ destrutivo ideal, p'=15 cm e m=-0,5.",
+      "Gás/solução 2506: V=15 L e c=0,200 mol/L.",
+      "Afinidades 2507: a conversão para Cl deve resultar em cerca de 348,6 kJ/mol com 3,613 eV, não 348,7.",
+      "Pilha/eletrólise 2510: E°=1,10 V e massa de Cu≈0,395 g."
+    ],
+    "no_automatic_approval": true
+  }
+}

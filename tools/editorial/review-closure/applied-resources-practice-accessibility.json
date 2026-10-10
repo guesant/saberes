@@ -1,0 +1,1316 @@
+{
+  "format": "editorial-review-application/v1",
+  "created_at": "2026-10-10T00:25:43.877394+00:00",
+  "database_before_sha256": "eb2ddb3af288fadd1e54f3756b6ccbe128e6437d19771d0f012163dc55afdf61",
+  "applied": true,
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 503
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Suplemento de referência, somente por link. O artigo cobre noções de biodiversidade e inclui seção de saúde humana/ecossistemas; é enciclopédico, não fonte primária nem orientação clínica, e não cobre sozinho biodiversidade e saúde. Licença dos elementos não foi validada para reutilização: link_only, sem cópia. Acessibilidade assistiva não auditada."
+      },
+      "reason": "A página direta contém conteúdo introdutório pertinente a biodiversidade e seção específica relacionando biodiversidade e saúde. Publicação apenas como referência terciária, sem representar cobertura integral do tópico composto.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Biodiversidade",
+          "detail": "Artigo direto consultado; seção Biodiversidade e saúde humana e explicações sobre diversidade biológica/ecossistemas. Uso como referência secundária, não como fonte clínica ou cobertura total."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 503,
+        "topic_id": 2556,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Relação pertinente apenas como introdução à biodiversidade e aos serviços ecossistêmicos; a seção de saúde humana é contextual, não orientação clínica nem cobertura integral de saúde humana. Referência terciária, link_only; acessibilidade assistiva não verificada."
+      },
+      "reason": "O tópico canônico é composto. O artigo oferece correspondência parcial explícita à biodiversidade, com seção contextual de saúde humana; a nota restringe o alcance.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Biodiversidade",
+          "detail": "Seção de biodiversidade e saúde humana examinada no artigo direto; correspondência parcial ao tópico 2556."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 504
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Link de descoberta, não lista de exercícios validada: a URL abre busca dinâmica da Khan Academy para biodiversidade/saúde humana. Não endossa nem audita cada resultado; use como navegação complementar. Link_only; acessibilidade assistiva dos resultados não verificada."
+      },
+      "reason": "A própria URL é uma busca temática na plataforma. A utilidade aprovada é exclusivamente descoberta de materiais, não a qualidade de resultados individuais nem cobertura do tópico.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=biodiversidade+sa%C3%BAde+humana+biologia+exerc%C3%ADcios",
+          "detail": "Busca direta contém os termos biodiversidade, saúde humana e biologia; resultados variam e não foram aprovados individualmente."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 504,
+        "topic_id": 2556,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Relevante somente como consulta de descoberta para os termos biodiversidade/saúde humana; não valida os resultados individualmente nem constitui prática aprovada. Busca dinâmica, link_only; acessibilidade não avaliada."
+      },
+      "reason": "A relação classifica o assunto pretendido pela busca, não materiais específicos que a plataforma possa retornar.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=biodiversidade+sa%C3%BAde+humana+biologia+exerc%C3%ADcios",
+          "detail": "Termos temáticos visíveis na URL da busca direta; sem aprovação de qualquer resultado retornado."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 505
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Referência enciclopédica introdutória de astronomia, somente por link. Selecionar seções pertinentes; não é curso, prática validada nem cobertura completa do tópico. Licença não conferida para reutilização (link_only); acessibilidade assistiva não auditada."
+      },
+      "reason": "O artigo direto apresenta conceitos e panorama de astronomia úteis para consulta suplementar; a classificação de referência evita sugerir sequência didática ou validação de exercícios.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Astronomia",
+          "detail": "Artigo direto de astronomia com seções conceituais e panorama de objetos/fenômenos astronômicos; referência geral, não material completo de vestibular."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 505,
+        "topic_id": 2557,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Correspondência como referência geral para astronomia; selecionar conceitos pertinentes ao estudo. Não é cobertura curricular completa, aula estruturada ou lista de treino. Link_only; acessibilidade assistiva não auditada."
+      },
+      "reason": "O tema da página coincide diretamente com astronomia; a nota limita o uso a consulta geral e não infere escopo do currículo anual.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikipedia.org/wiki/Astronomia",
+          "detail": "Artigo diretamente intitulado Astronomia, com conteúdo introdutório e conceitos relacionados ao tópico 2557."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 506
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Link de descoberta, não curso ou lista de exercícios validada: busca dinâmica da Khan Academy para astronomia, gravitação e exercícios. Resultados individuais não foram auditados nem aprovados. Link_only; acessibilidade dos resultados não avaliada."
+      },
+      "reason": "A URL e o título deixam claro que o registro oferece navegação de busca, não um recurso didático individual. A aprovação fica restrita à descoberta temática.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=astronomia+gravita%C3%A7%C3%A3o+exerc%C3%ADcios+f%C3%ADsica",
+          "detail": "URL de busca direta direcionada a astronomia, gravitação e exercícios; conteúdos retornados podem variar."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 506,
+        "topic_id": 2557,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Correspondência apenas para a intenção da busca por astronomia/gravitação; nenhum resultado individual foi validado. Link de descoberta, não cobertura ou treino aprovado; acessibilidade não avaliada."
+      },
+      "reason": "A relação documenta o tema pretendido pela busca sem atribuir qualidade ou aderência a resultados dinâmicos.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=astronomia+gravita%C3%A7%C3%A3o+exerc%C3%ADcios+f%C3%ADsica",
+          "detail": "Termos de astronomia e gravitação identificáveis na busca direta; a lista retornada não foi adjudicada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 508
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Link de descoberta, não conjunto validado de aulas/exercícios: busca dinâmica da Khan Academy por termodinâmica, calorimetria e exercícios. Resultados variáveis não foram auditados. Link_only; acessibilidade dos resultados não avaliada."
+      },
+      "reason": "A URL é uma busca temática e o próprio cadastro descreve uma etapa de descoberta. Aprova-se apenas essa utilidade de navegação; não os resultados individuais.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=termodin%C3%A2mica+calorimetria+f%C3%ADsica+exerc%C3%ADcios",
+          "detail": "Busca direta direcionada a termodinâmica/calorimetria e exercícios; resultados dinâmicos não foram aprovados individualmente."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 508,
+        "topic_id": 2558,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Correspondência somente à intenção de busca por termodinâmica/calorimetria. Não valida nem recomenda resultados individuais; descoberta temática, não ensino ou prática aprovada. Acessibilidade não avaliada."
+      },
+      "reason": "O vínculo é semanticamente pertinente ao assunto pesquisado, mas não promove materiais que a busca possa retornar.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/search?page_search_query=termodin%C3%A2mica+calorimetria+f%C3%ADsica+exerc%C3%ADcios",
+          "detail": "Consulta de busca contém os termos de termodinâmica e calorimetria; resultados permanecem fora desta adjudicação."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 509
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Inspeção Chromium em 2026-10-08: HTTP 200 e conteúdo da página real renderizado; sem Client Challenge. Título cadastrado: Óptica geométrica — Biblioteca de Física. Permanecem pendentes a adequação pedagógica ao tópico, acessibilidade e direitos/licença; não aprovado automaticamente.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Unidade direta da Khan Academy sobre óptica geométrica: reflexão/refração, lei de Snell, dispersão, espelhos, lentes e formação de imagens, com prática. Suplemento parcial de Óptica e ondas; não cobre ondas por completo. Gratuito para acesso individual; licença de reutilização não verificada (link_only, sem cópia). Acessibilidade assistiva não auditada."
+      },
+      "reason": "A unidade direta organiza conteúdos e prática especificamente de óptica geométrica, correspondência útil e delimitada para o tópico amplo de óptica e ondas.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/physics/geometric-optics",
+          "detail": "Unidade de óptica geométrica; lista tópicos de reflexão, refração, espelhos/lentes e prática."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/learning-resource-free-access-evidence.jsonl",
+          "detail": "Registro de auditoria de acesso da fonte, ID 509; evidência de acesso livre individual, sem inferir licença de reutilização.",
+          "sha256": "5b0319fb49f6b68cb8d5110e08e8e0c0be5ba31243c56b4cf6ccdd3267685abd"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 509,
+        "topic_id": 2559,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Relação parcial: unidade comprovada em óptica geométrica (reflexão, refração, espelhos e lentes); não cobre o conjunto de ondas. Prática existente, mas escopo limitado. Link_only; acessibilidade assistiva não testada."
+      },
+      "reason": "Conteúdo direto de óptica constitui suplemento pertinente à parte correspondente do tópico 2559; nota impede inferência de cobertura de ondas.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/physics/geometric-optics",
+          "detail": "Índice direto da unidade identifica conteúdos específicos de óptica geométrica e prática."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 510
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Lista textual gratuita de quatro exercícios sobre fenômenos ópticos, com respostas. Suplemento estreito (refração, dispersão, ondas eletromagnéticas/visão); não cobre todas as ondas nem substitui curso. Acessibilidade assistiva não auditada. Direitos de reprodução não liberados: link_only, sem cópia."
+      },
+      "reason": "As quatro questões e respostas expostas na página direta foram conferidas; tratam de fenômenos ópticos e formam uma prática curta pertinente, sem alegação de cobertura integral.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-fenomenos-opticos.htm",
+          "detail": "Página direta examinada: quatro exercícios e respectivas respostas sobre refração/índice, dispersão, ondas eletromagnéticas e óptica/visão; licença de cópia não concedida."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 510,
+        "topic_id": 2559,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Prática direta e parcial em fenômenos ópticos (refração, dispersão, ondas eletromagnéticas e visão); não cobre todas as ondas. Respostas conferidas na página. Link_only; acessibilidade assistiva não auditada."
+      },
+      "reason": "Questões diretas demonstram correspondência temática, e a nota restringe a relação aos conteúdos efetivamente presentes.",
+      "evidence": [
+        {
+          "locator": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-fenomenos-opticos.htm",
+          "detail": "Quatro enunciados e respostas conferidos; relevância direta apenas para fenômenos ópticos e recortes indicados."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 513
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Inspeção Chromium em 2026-10-08: HTTP 200 e conteúdo da página real renderizado; sem Client Challenge. Título cadastrado: Estrutura atômica e propriedades — Biblioteca de Química. Permanecem pendentes a adequação pedagógica ao tópico, acessibilidade e direitos/licença; não aprovado automaticamente.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Biblioteca gratuita com unidades diretas de estrutura atômica, tabela periódica/propriedades e ligações, além de explicação e prática. Suplemento parcial ao tópico composto; selecionar unidades pertinentes, pois a biblioteca contém outros conteúdos. Licença de reutilização não verificada (link_only, sem cópia); acessibilidade assistiva não auditada."
+      },
+      "reason": "As unidades oficiais ligadas à página direta cobrem os três conceitos nomeados no tópico; a nota delimita o uso às seções pertinentes, sem afirmar que todo o curso é aderente.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/atomic-structure-and-properties",
+          "detail": "Página direta da unidade de estrutura atômica e propriedades; biblioteca inclui lições/prática do recorte."
+        },
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/periodic-table",
+          "detail": "Unidade da tabela periódica indicada como conteúdo relacionado da biblioteca Khan Academy."
+        },
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/chemical-bonds",
+          "detail": "Unidade de ligações químicas, complementar ao tópico amplo."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 513,
+        "topic_id": 2561,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Relação parcial pertinente: biblioteca tem unidades de estrutura atômica, propriedades periódicas e ligações; recomendar apenas esses recortes, não a biblioteca inteira como curso alinhado. Link_only; acessibilidade assistiva não testada."
+      },
+      "reason": "Conteúdos diretamente relacionados cobrem os elementos semânticos do tópico 2561; o recorte está explicitamente limitado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/atomic-structure-and-properties",
+          "detail": "Unidade direta e navegação para conteúdos de estrutura atômica/propriedades e ligações químicas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 515
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Inspeção Chromium em 2026-10-08: HTTP 200 e conteúdo da página real renderizado; sem Client Challenge. Título cadastrado: Eletroquímica e reações redox. Permanecem pendentes a adequação pedagógica ao tópico, acessibilidade e direitos/licença; não aprovado automaticamente.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Unidade gratuita de oxirredução/eletroquímica com lições sobre reações redox, células galvânicas, potenciais e prática. Suplemento pertinente; não afirmar cobertura completa de eletrólise sem a seção correspondente. Licença de reutilização não verificada (link_only, sem cópia); acessibilidade assistiva não auditada."
+      },
+      "reason": "A página/unidade direta tem lições de redox, células galvânicas e potenciais e seção explícita de prática, correspondentes ao tópico Eletroquímica.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/oxidation-reduction",
+          "detail": "Unidade direta de oxirredução/eletroquímica inclui conteúdo de células galvânicas, potenciais e prática."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/learning-resource-free-access-evidence.jsonl",
+          "detail": "Auditoria de acesso livre individual do recurso 515; não é licença para copiar/republicar conteúdo.",
+          "sha256": "5b0319fb49f6b68cb8d5110e08e8e0c0be5ba31243c56b4cf6ccdd3267685abd"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 515,
+        "topic_id": 2562,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Unidade de eletroquímica/redox com células galvânicas, potenciais e prática; suplemento pertinente, sem declarar cobertura integral de eletrólise. Link_only; acessibilidade assistiva não testada."
+      },
+      "reason": "A unidade direta aborda eletroquímica, o tópico associado, e a nota delimita o escopo efetivamente identificado.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/chemistry/oxidation-reduction",
+          "detail": "Conteúdo e prática diretos em reações redox/eletroquímica; correspondência parcial ao tópico 2562."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 517
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Inspeção Chromium em 2026-10-08: HTTP 200 e conteúdo da página real renderizado; sem Client Challenge. Título cadastrado: Química orgânica. Permanecem pendentes a adequação pedagógica ao tópico, acessibilidade e direitos/licença; não aprovado automaticamente.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Biblioteca gratuita de química orgânica com unidades diretamente pertinentes a estrutura/ligações, grupos funcionais, funções e reações; algumas unidades avançadas excedem o vestibular. Usar como suplemento seletivo, não como trilha integral Comvest. Licença de reutilização não verificada (link_only, sem cópia); acessibilidade assistiva não auditada."
+      },
+      "reason": "A biblioteca apresenta material didático direto sobre estrutura orgânica e grupos funcionais, com extensão além do escopo. A classificação learning é mantida como curso misto e a nota recomenda somente partes pertinentes.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/organic-chemistry/",
+          "detail": "Biblioteca direta de química orgânica, com unidades de grupos funcionais, estrutura e reações, além de extensões avançadas."
+        },
+        {
+          "locator": "https://pt.khanacademy.org/science/organic-chemistry/organic-chemistry-intro",
+          "detail": "Unidade introdutória/funcional da biblioteca demonstra conteúdo de aprendizagem direto para o tópico."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 517,
+        "topic_id": 2563,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Biblioteca de química orgânica pertinente para unidades introdutórias de estrutura, grupos funcionais e reações. Outras unidades são avançadas e não devem ser tratadas como exigência/curso integral do vestibular. Link_only; acessibilidade assistiva não testada."
+      },
+      "reason": "A relevância ao tópico é direta, mas parcial; a anotação impede usar a amplitude do catálogo como escopo obrigatório.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/science/organic-chemistry/",
+          "detail": "Índice da biblioteca mostra unidades de estrutura, grupos funcionais e reações, junto de assuntos avançados."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 532
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "practice"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Referência gratuita sobre elementos e tipos de gráficos e relação entre dados/tabelas e representações. Há um exercício resolvido cuja figura foi identificada, mas não validada neste parecer; não recomendar esse item como treino conferido. Link_only por direitos reservados; acessibilidade assistiva não auditada."
+      },
+      "reason": "O conteúdo explicativo direto sobre elementos e tipos de gráficos é útil como referência suplementar. A classificação muda de prática para referência porque uma questão resolvida depende de figura não auditada.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/matematica/graficos.htm",
+          "detail": "Artigo direto explica componentes e tipos de gráficos; inclui exercício resolvido dependente de figura, explicitamente excluído da validação como treino."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 532,
+        "topic_id": 2565,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Referência parcial para leitura/elementos/tipos de gráficos e relação com tabelas. O exercício gráfico incluído não foi validado e não deve ser tratado como treino aprovado. Link_only; acessibilidade assistiva não auditada."
+      },
+      "reason": "O conteúdo explicativo corresponde ao tópico 2565; o vínculo não aprova exercício cuja figura e solução não foram verificadas.",
+      "evidence": [
+        {
+          "locator": "https://brasilescola.uol.com.br/matematica/graficos.htm",
+          "detail": "Seções explicativas cobrem elementos e tipos de gráficos; questão resolvida identificada como exceção não validada."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 533
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Resumo acadêmico/anais de evento sobre Morangos Mofados, com recorte no conto Terça-Feira Gorda, que está entre os textos selecionados para 2027. Aprofundamento interpretativo, não resumo integral/guia de todos os contos; ler os textos da lista. Licença declarada CC BY-NC 4.0 na página, mas este catálogo mantém link_only e não copia o artigo. Acessibilidade do PDF não auditada."
+      },
+      "reason": "A página acadêmica identifica o conto analisado e oferece resumo de pesquisa pertinente a um texto selecionado em 2027. O recorte é estreito e declarado como aprofundamento, não substituto de leitura.",
+      "evidence": [
+        {
+          "locator": "https://portaleventos.uffs.edu.br/index.php/SEPE-UFFS/article/view/25108",
+          "detail": "Página dos anais UFFS: resumo acadêmico sobre Morangos Mofados/Terça-Feira Gorda, evento e licença declarada."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linha 4 lista Morangos mofados (contos escolhidos) e inclui Terça-Feira Gorda entre os seis textos de 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 534
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Guia secundário gratuito de Olhos d’água: discute contos, forma/narradores, linguagem e temas. Material de revisão complementar, não substitui a leitura integral da obra exigida em 2027. Direitos de reprodução não liberados: link_only, sem cópia; acessibilidade assistiva/WCAG não auditada."
+      },
+      "reason": "A página examina a obra e aspectos literários diretamente relevantes; a obra completa consta na lista atual. Referência suplementar de revisão, não equivalente ao texto literário.",
+      "evidence": [
+        {
+          "locator": "https://guiadoestudante.abril.com.br/estudo/olhos-dagua-resumo-e-analise-da-obra-de-conceicao-evaristo/",
+          "detail": "Artigo da Guia do Estudante identifica os contos e discute forma, narradores, linguagem e temas da obra."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linha 5 confirma Olhos d’água como obra completa da lista Unicamp 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 535
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Análise secundária de Vida e morte de M.J. Gonzaga de Sá; útil como comentário literário, mas o título/enquadramento da página remete à lista Unicamp 2025, não à edição atual. A obra também consta na lista 2027 (confira a lista vigente); não usar esta página como fonte de atualidade ou substituto da leitura integral. Link_only; acessibilidade assistiva não auditada."
+      },
+      "reason": "O conteúdo de análise trata da mesma obra exigida em 2027, embora a chamada da fonte seja datada de 2025. Publicação só como referência literária com ressalva explícita de atualidade.",
+      "evidence": [
+        {
+          "locator": "https://guiadoestudante.abril.com.br/estudo/leitura-obrigatoria-da-unicamp-este-livro-denunciou-o-racismo-em-1919/",
+          "detail": "Página discute Vida e morte de M.J. Gonzaga de Sá, personagens e contexto; chamada/enquadramento editorial menciona Unicamp 2025."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linha 7 confirma a mesma obra como leitura integral da edição 2027; não valida o enquadramento temporal da página.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 536
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Guia secundário gratuito sobre A vida não é útil: identifica os cinco ensaios e comenta temas, com entrevista complementar. Revisão para a obra integral da lista 2027; não substitui a leitura nem representa crítica acadêmica exaustiva. Direitos de reprodução não liberados: link_only, sem cópia; acessibilidade assistiva não auditada."
+      },
+      "reason": "A página apresenta recorte organizado por ensaios e temas, útil para revisão de uma obra que consta na lista atual; sua função de guia secundário está explicitada.",
+      "evidence": [
+        {
+          "locator": "https://guiadoestudante.abril.com.br/estudo/a-vida-nao-e-util-resumo-e-analise-da-obra-de-ailton-krenak/",
+          "detail": "Artigo identifica e percorre os cinco ensaios e discute temas da obra."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linha 9 confirma A vida não é útil como obra completa da lista 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 537
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": null,
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Resenha independente de Prosas seguidas de odes mínimas, útil como leitura crítica suplementar sobre estrutura, concisão e ironia. A página menciona lista 2026, mas a obra completa permanece na lista 2027; não usar a chamada antiga como fonte de edição vigente nem substituir a obra. Fonte de autor/editor independente; link_only, sem cópia; acessibilidade não auditada."
+      },
+      "reason": "A resenha direta comenta a mesma obra exigida integralmente em 2027. Publicação como perspectiva crítica suplementar, com ressalva sobre o enquadramento temporal e a natureza não institucional da fonte.",
+      "evidence": [
+        {
+          "locator": "https://escolaliteraria.com/2025/10/02/prosas-seguidas-de-odes/",
+          "detail": "Resenha da obra discute as partes Prosas e Odes mínimas, concisão/ironia e menciona a lista 2026."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linha 1 confirma Prosas seguidas de odes mínimas como obra completa da lista 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 538
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Apostila didática oficial PIC/OBMEP sobre métodos de contagem e probabilidade, com capítulos de princípios de contagem, probabilidade, probabilidade condicional, exercícios e soluções. Suplemento de matemática para recorte do tópico, não programa completo. Link_only: não foi verificada licença de reutilização; não copiar. Leitura assistiva/tagueamento do PDF não auditados."
+      },
+      "reason": "O PDF direto e seu sumário identificam conteúdo didático estruturado e exercícios/soluções de contagem e probabilidade, correspondência verificável ao tópico 2480.",
+      "evidence": [
+        {
+          "locator": "https://www.obmep.org.br/docs/apostila2.pdf",
+          "detail": "PDF direto, 97 páginas; título e sumário incluem métodos de contagem, probabilidade, exercícios adicionais e soluções."
+        },
+        {
+          "locator": "https://www.obmep.org.br/apostilas.htm",
+          "detail": "Catálogo oficial OBMEP/PIC apresenta a coleção de apostilas a que pertence o PDF."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 538,
+        "topic_id": 2480,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Apostila de contagem/probabilidade com capítulos, exercícios e soluções; suplemento direto, sem pretender cobrir todo o currículo. Link_only, sem cópia; acessibilidade/tagueamento assistivo do PDF não auditados."
+      },
+      "reason": "Os tópicos do sumário correspondem nominalmente e didaticamente ao tópico canônico 2480.",
+      "evidence": [
+        {
+          "locator": "https://www.obmep.org.br/docs/apostila2.pdf",
+          "detail": "Sumário do PDF direto nomeia métodos de contagem, probabilidade e seções de exercícios/soluções."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 539
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Apostila didática PIC/OBMEP sobre Teorema de Pitágoras e áreas, com demonstrações, propriedades e problemas. Suplemento direto de geometria plana; não representa todo o tópico. Link_only: página/PDF informa direitos reservados, sem licença de reutilização verificada; não copiar. Leitura assistiva/tagueamento do PDF não auditados."
+      },
+      "reason": "O PDF direto apresenta capítulos de Pitágoras e áreas, provas/propriedades e exercícios que constituem material de aprendizagem verificável para geometria plana.",
+      "evidence": [
+        {
+          "locator": "https://www.obmep.org.br/docs/apostila3.pdf",
+          "detail": "PDF direto: título, sumário e capítulos iniciais tratam do Teorema de Pitágoras e de áreas; inclui demonstrações/problemas."
+        },
+        {
+          "locator": "https://www.obmep.org.br/apostilas.htm",
+          "detail": "Catálogo oficial OBMEP/PIC identifica a coleção e a procedência do material."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 539,
+        "topic_id": 2547,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Correspondência direta parcial a geometria plana: Teorema de Pitágoras, áreas e problemas. Não constitui cobertura integral do tópico. Link_only, direitos reservados; acessibilidade/tagueamento assistivo do PDF não auditados."
+      },
+      "reason": "Os capítulos comprovados de Pitágoras e áreas são conteúdos de geometria plana e oferecem prática suplementar.",
+      "evidence": [
+        {
+          "locator": "https://www.obmep.org.br/docs/apostila3.pdf",
+          "detail": "Sumário e capítulos de Pitágoras e áreas do PDF direto, com propriedades e problemas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 540
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "editorial_note": "Apostila PIC/OBMEP de geometria da esfera e aplicações ao globo: superfícies, coordenadas, movimentos e zonas. Referência/enriquecimento matemático, não substitui geometria plana/espacial do programa nem cobre todo o tópico. Link_only: licença de reutilização não verificada; não copiar. Acessibilidade assistiva do PDF não auditada."
+      },
+      "reason": "O sumário do PDF mostra desenvolvimento didático de geometria esférica e coordenadas; é um complemento/enriquecimento coerente com geometria, não promessa de alinhamento total.",
+      "evidence": [
+        {
+          "locator": "https://www.obmep.org.br/docs/apostila6.pdf",
+          "detail": "PDF direto, sumário com geometria da esfera/globo, superfícies, coordenadas, movimentos e zonas."
+        },
+        {
+          "locator": "https://www.obmep.org.br/apostilas.htm",
+          "detail": "Catálogo oficial OBMEP/PIC identifica a série de apostilas."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 540,
+        "topic_id": 2481,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Complemento/enriquecimento em geometria esférica e globo terrestre. Não cobre sozinho a geometria prevista no currículo nem substitui geometria plana/espacial. Link_only; acessibilidade assistiva do PDF não auditada."
+      },
+      "reason": "A geometria da esfera é um recorte matemático pertinente ao tópico amplo geometria, com delimitação contra inferência de cobertura integral.",
+      "evidence": [
+        {
+          "locator": "https://www.obmep.org.br/docs/apostila6.pdf",
+          "detail": "Sumário do PDF direto identifica geometria esférica e aplicações geométricas ao globo terrestre."
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 541
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Playlist oficial TV Unicamp/CRIA, composta por temas variados; metadados/títulos identificam aulas específicas sobre No seu pescoço e Os funerais da Mamãe Grande, obras da lista 2027. Publicação como descoberta/referência para essas obras, não aula geral de narrativa nem playlist integralmente alinhada. Transcrições, legendas e conteúdo completo das aulas não auditados; link_only."
+      },
+      "reason": "A procedência oficial do canal/playlist e os títulos de duas aulas sobre obras efetivamente selecionadas permitem recomendação limitada para descoberta. Não se infere qualidade/conteúdo além do título e metadados.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/playlist?list=PLWYzeDRJEODO2m6mJCkb8VdZMIxxb2kDs",
+          "detail": "Playlist direta do canal oficial TV Unicamp/CRIA; títulos incluem aulas sobre No seu pescoço e Os funerais da Mamãe Grande, além de outros assuntos."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-2027.jsonl",
+          "detail": "Registro local das aulas CRIA associado às obras da lista 2027.",
+          "sha256": "7d7b075207d9adcb83354bb4a2d4300156b76bf0faac2c1ae4dbc1b08a3f5a82"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linhas 3 e 6 confirmam Os funerais da Mamãe Grande e No seu pescoço como obras integrais da lista 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 541,
+        "topic_id": 2484,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Playlist inclui aulas identificadas por metadados/título sobre duas obras narrativas da lista 2027. Relação apenas como descoberta de comentários sobre obras; não é aula geral de elementos da narrativa. Conteúdo integral, legendas e acessibilidade não auditados; link_only."
+      },
+      "reason": "Os dois títulos de aula se referem a obras narrativas exigidas em 2027; a relação é limitada às obras, não ao ensino completo do tópico.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/playlist?list=PLWYzeDRJEODO2m6mJCkb8VdZMIxxb2kDs",
+          "detail": "Títulos/metadados da playlist identificam sessões sobre contos/obras narrativas; não foi inferido conteúdo da transcrição."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Obras correspondentes listadas em 2027 como narrativa/contos.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 542
+      },
+      "expected": {
+        "editorial_status": "review",
+        "editorial_note": "Em revisão: resposta HTTP e prévia conferidas; adequação pedagógica e acessibilidade ainda precisam de validação editorial.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "editorial_note": "Playlist oficial TV Unicamp/CRIA com temas mistos; metadados/títulos identificam aulas sobre Memórias Póstumas de Brás Cubas e Canções Escolhidas, ambas na lista 2027. Referência/descoberta para essas obras, não curso geral de narrativa ou poesia nem trilha integralmente alinhada. Transcrições, legendas e conteúdo completo não auditados; link_only."
+      },
+      "reason": "Canal oficial e metadados diretos permitem identificar duas aulas associadas a obras da lista. A recomendação é limitada à descoberta; não se atribui alinhamento aos demais vídeos nem ao conteúdo integral não visto.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/playlist?list=PLWYzeDRJEODOwuFRloWqOrgY-sE9iEjr7",
+          "detail": "Playlist direta TV Unicamp/CRIA 2026; títulos identificam aula sobre Memórias Póstumas de Brás Cubas e aula sobre canções de Paulo César Pinheiro."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cria-lessons-oembed-verification-2026-10-07.jsonl",
+          "detail": "Verificação local de metadados/OEmbed confirma títulos e identidade do canal dos vídeos específicos.",
+          "sha256": "86497334c98517f994f9197921707f4052e882aa539c07d7b0515e28e1199b10"
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linhas 2 e 8 confirmam Canções escolhidas (poesia/canção) e Memórias Póstumas de Brás Cubas (romance) na lista 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 542,
+        "topic_id": 2484,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Aula identificada por título sobre Memórias Póstumas de Brás Cubas, obra narrativa da lista 2027. Relação para descoberta de comentário sobre uma obra, não ensino geral/completo de narrativa. Vídeo integral/legendas/acessibilidade não auditados; link_only."
+      },
+      "reason": "O título direto da aula e a lista oficial de leituras identificam a obra como romance; relação de escopo limitado ao material daquela obra.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/playlist?list=PLWYzeDRJEODOwuFRloWqOrgY-sE9iEjr7",
+          "detail": "Metadado de aula sobre Memórias Póstumas de Brás Cubas."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linha 8 classifica Memórias Póstumas de Brás Cubas como romance da lista 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 542,
+        "topic_id": 2485,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "review_status": "review",
+        "relevance_status": "unknown",
+        "accessibility_status": "unknown",
+        "review_note": null
+      },
+      "changes": {
+        "review_status": "published",
+        "relevance_status": "relevant",
+        "review_note": "Aula identificada por título sobre Canções Escolhidas, seleção de poesia/canção da lista 2027. Relação de descoberta para essa obra, não curso de poesia nem cobertura geral do tópico. Vídeo integral/legendas/acessibilidade não auditados; link_only."
+      },
+      "reason": "Metadados de aula identificam as canções de Paulo César Pinheiro; a lista 2027 classifica a obra como poesia/canção.",
+      "evidence": [
+        {
+          "locator": "https://www.youtube.com/playlist?list=PLWYzeDRJEODOwuFRloWqOrgY-sE9iEjr7",
+          "detail": "Metadado/título da aula sobre canções de Paulo César Pinheiro."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/required-reading-works-2027.jsonl",
+          "detail": "Linha 2 registra Canções Escolhidas como poesia/canção e lista textos selecionados para 2027.",
+          "sha256": "450159e06b69801ccd92d1bc3d3caaa0c92180fa6b5fab62d92d3a2811dfcd8b"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 243
+      },
+      "expected": {
+        "alt_text": "Página completa 5 do PDF do caderno Q/T; contém questões 9–14. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."
+      },
+      "changes": {
+        "alt_text": "Página completa 5 do caderno Q/T, com questões 9–14. Entre os elementos visuais, há um gráfico de volume da água em função da temperatura: a curva da água líquida tem formato de U, com marca em 4 °C, e o trecho do gelo aparece à esquerda. Na questão 14, um esquema mostra material entre dois condutores, um resistor R e uma fonte de tensão V. A página inteira é usada como imagem de apoio; a descrição não indica resultados nem alternativas."
+      },
+      "reason": "O alt atual identifica apenas a página inteira e não descreve os dois elementos visuais necessários nas questões 13 e 14, que usam esta imagem como estímulo. Descrição baseada na página oficial renderizada; não inclui respostas.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF oficial do simulado Q/T; conferidas visualmente as questões 9–14 na página impressa 3 (página 5 do arquivo), incluindo gráfico volume-temperatura e circuito com material, resistor e fonte.",
+          "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-05.png",
+          "detail": "Render da página 5 conferido visualmente; mostra a curva de volume da água e o esquema elétrico citados na nova descrição.",
+          "sha256": "3ea82579a0230c8d973a61de176d894c02dd381165b49a4bffac331f4f006bc9"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 244
+      },
+      "expected": {
+        "alt_text": "Página completa 6 do PDF do caderno Q/T; contém questões 15–16. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."
+      },
+      "changes": {
+        "alt_text": "Página completa 6 do caderno Q/T, com questões 15–16. A questão 15 traz um mapa da América do Sul dividido em macrocompartimentos numerados de 1 a 4, acompanhado de legenda de morfoestruturas e compartimentos geológico-geomorfológicos. A questão 16 apresenta uma tabela com países produtores de café e colunas de produção e exportação. É a página inteira do caderno, não um recorte isolado."
+      },
+      "reason": "O alt existente sinaliza que é página inteira, mas não identifica o mapa que serve de estímulo à questão 15; descrevo os recursos visuais conferidos sem interpretar as alternativas.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF oficial Q/T; página impressa 4 (página 6 do arquivo) conferida visualmente. Mapa sul-americano numerado com legenda e tabela de produção/exportação de café.",
+          "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-06.png",
+          "detail": "Render da página 6 confirma os números 1–4 no mapa, a legenda de morfoestruturas/compartimentos e a tabela de café.",
+          "sha256": "d4cb241567018c311fdc2c754fc0056fbeb37fed0571861522b605a6e4d5deb1"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 245
+      },
+      "expected": {
+        "alt_text": "Página completa 7 do PDF do caderno Q/T; contém questões 17–20. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."
+      },
+      "changes": {
+        "alt_text": "Página completa 7 do caderno Q/T, com questões 17–20. A questão 18 usa dois mapas esquemáticos: A localiza Belo Horizonte e São Paulo e marca entre elas um segmento de 2,5 cm e a distância de 500 km; B localiza Presidente Prudente e Campinas, marca um segmento de 3,22 cm e inclui escala gráfica de 0 a 140 km. Os mapas não mostram uma resposta calculada."
+      },
+      "reason": "A imagem é um fallback de página inteira associado também ao estímulo de escala cartográfica; o alt genérico não descreve os dois mapas necessários à leitura da questão 18.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF oficial Q/T; página impressa 5 (página 7 do arquivo) conferida visualmente. Os mapas A e B mostram pares de cidades, segmentos cotados e, no mapa B, escala gráfica.",
+          "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-07.png",
+          "detail": "Render da página 7 confirma as legendas 2,5 cm/500 km e 3,22 cm/escala gráfica 0–140 km.",
+          "sha256": "015810f4895e9fd66f229a851af4a4548a8ea41cba770f5ab179bedc9ebbb701"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 251
+      },
+      "expected": {
+        "alt_text": "Página completa 13 do PDF do caderno Q/T; contém questões 38–41. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."
+      },
+      "changes": {
+        "alt_text": "Página completa 13 do caderno Q/T, com questões 38–41. Na questão 40 há um meme: a legenda diz “Segundo a teoria de Lamarck, assim ficará o aluno que cola nas provas...”, sobre uma fotografia em preto e branco de uma pessoa com o pescoço alongado. A página inteira é apresentada; a descrição não associa a imagem a uma alternativa."
+      },
+      "reason": "A imagem é o único estímulo visual associado à questão 40; o alt atual informa somente que se trata da página completa. A descrição reproduz a legenda visível e descreve a fotografia, sem indicar resposta.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF oficial Q/T; página impressa 11 (página 13 do arquivo) conferida visualmente, incluindo o meme da questão 40 e sua legenda.",
+          "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-13.png",
+          "detail": "Render da página 13 confirma o texto do meme e a fotografia em preto e branco.",
+          "sha256": "86e9f00458ed42671bedf038b581afd114aa02fdcf18fbdfa04e53bd222c41aa"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 252
+      },
+      "expected": {
+        "alt_text": "Página completa 14 do PDF do caderno Q/T; contém questões 42–48. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."
+      },
+      "changes": {
+        "alt_text": "Página completa 14 do caderno Q/T, com questões 42–48. Na questão 45, a figura mostra um triângulo retângulo ABC de hipotenusa unitária e um quadrado inscrito; o lado vertical do quadrado está marcado x. O vértice reto está em A, e a base BC forma a hipotenusa. A imagem é a página do caderno, não um recorte isolado; não indica a expressão de x."
+      },
+      "reason": "O alt atual não descreve a figura geométrica da questão 45, associada a esta página. A descrição registra apenas as relações e marcações visíveis, sem resolver a questão.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF oficial Q/T; página impressa 12 (página 14 do arquivo) conferida visualmente. A questão 45 mostra triângulo retângulo, quadrado inscrito, marca x e medida unitária da hipotenusa.",
+          "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-14.png",
+          "detail": "Render da página 14 confirma a geometria e a posição de x na figura da questão 45.",
+          "sha256": "3b738bd5b849e1571be4be6a3eb7ec5fc7cd28c40fc49aa39aba88b9b13584fb"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 255
+      },
+      "expected": {
+        "alt_text": "Página completa 17 do PDF do caderno Q/T; contém questões 57–59. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."
+      },
+      "changes": {
+        "alt_text": "Página completa 17 do caderno Q/T, com questões 57–59. Na questão 59, a primeira imagem é uma sequência de três quadros em preto e branco: aparecem uma pessoa sobre um ônibus, uma mulher junto a uma área inundada e duas pessoas de costas diante de uma comunidade em encosta. As legendas em sequência dizem “O racismo ambiental…”, “…é mais uma forma…” e “…de genocídio.” A página também contém os textos que acompanham a imagem; a descrição não aponta uma alternativa."
+      },
+      "reason": "A página contém um estímulo visual necessário à interpretação da questão 59, mas o alt atual é apenas identificador de página. Descrição confirmada no original e sem resolver a questão.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF oficial Q/T; página impressa 15 (página 17 do arquivo) conferida visualmente. A questão 59 apresenta tira de três quadros com as legendas transcritas na nova descrição.",
+          "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-17.png",
+          "detail": "Render da página 17 confirma a ordem dos quadros, cenas e legendas.",
+          "sha256": "54c00a227467de7863e3c89f24304adc3ccc5f11b7959b8c637fcf60d4a80269"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 258
+      },
+      "expected": {
+        "alt_text": "Página completa 20 do PDF do caderno Q/T; contém questões 68–70. A imagem mostra o contexto e a diagramação originais da página, não um recorte de uma única questão. Descrições acessíveis específicas, quando disponíveis, estão ligadas como estímulos à questão correspondente."
+      },
+      "changes": {
+        "alt_text": "Página completa 20 do caderno Q/T, com questões 68–70. Na questão 68 aparecem dois gráficos, A e B, com legendas para água com sabão, nenhuma ação e solução RSDL. O gráfico A relaciona taxa de penetração na pele e tempo; o B relaciona quantidade de agente removido e número de extrações com fita. As curvas e marcadores distinguem as três condições. A descrição identifica eixos e séries, sem comparar resultados ou indicar alternativa."
+      },
+      "reason": "O alt genérico não descreve os dois gráficos usados como estímulo na questão 68. A nova descrição nomeia variáveis e séries visíveis sem interpretar qual condição é melhor.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/simulado_Q_T.pdf",
+          "detail": "PDF oficial Q/T; página impressa 18 (página 20 do arquivo) conferida visualmente. A questão 68 tem dois gráficos A/B com as séries Água com sabão, Nenhuma ação e RSDL.",
+          "sha256": "43ca108ba55b79f4be0b98703b159315f40759cbd96e4d8efdc5a3eccd79412d"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2027-simulation/page-images/qt-page-20.png",
+          "detail": "Render da página 20 confirma os eixos: penetração versus tempo e quantidade de agente versus número de extrações.",
+          "sha256": "db6c53eb4f9a4860da22d79f0286632b7e50a8a42a61ef0ff7337465fa56075c"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 511
+      },
+      "expected": {
+        "alt_text": "Figura da questão sobre os três domínios de Johnstone. No triângulo, (1) macroscópico, (2) submicroscópico e (3) simbólico. A grade A–H mostra: A, balões enchendo; B, fórmulas estruturais de reagentes e produtos; C, perfil energético acompanhado de modelos de partículas; D, incêndio; E, chama dentro de um triângulo com equação de combustão do metano; F, rede de partículas; G, modelos de partículas antes e depois da reação; H, equação de combustão do etanol. A alternativa correta associa (1) a D, (2) a G e (3) a H; C combina representações submicroscópica e simbólica."
+      },
+      "changes": {
+        "alt_text": "Figura sobre os domínios de representação em Química. Um triângulo traz os rótulos macroscópico, submicroscópico e simbólico, com os números (1), (2) e (3) junto às posições. Abaixo, uma grade A–H mostra: A, balões em diferentes estados de enchimento; B, fórmulas estruturais em uma reação; C, perfil de energia e modelos de partículas; D, uma combustão; E, chama e equação de combustão do metano; F, rede de partículas; G, modelos moleculares de reagentes e produtos; H, equação de combustão do etanol. A descrição identifica os elementos visuais sem relacioná-los aos números do triângulo."
+      },
+      "reason": "O alt atual revela explicitamente a associação correta solicitada na questão. Mantive a descrição da figura, removendo a correspondência-resposta entre os domínios numerados e os painéis A–H.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2026/QX.pdf",
+          "detail": "Caderno oficial Q/X; questão 66, página impressa 24, conferida no original. O triângulo traz nomes e números dos domínios e a grade contém oito painéis A–H.",
+          "sha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2026/question-assets/qx-q66-johnstone-domains-450dpi.png",
+          "detail": "Recorte de figura própria da questão 66 inspecionado visualmente; confirma cada elemento listado na descrição revisada.",
+          "sha256": "4ffd1ff6841b7e906171793829e799d94b60aa79965e8fbfcd64e53b393f186c"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 512
+      },
+      "expected": {
+        "alt_text": "Infográfico sobre acidificação dos oceanos e recifes de coral. À esquerda, fontes urbanas e industriais emitem CO₂, que chega ao mar. No oceano aparecem as etapas CO₂ + H₂O → HCO₃⁻ + H⁺, H⁺ + A → HCO₃⁻ e B → Ca²⁺ + C, identificada como formação do coral. Abaixo, um gráfico com escalas de 0 a 800 nos eixos X e Y mostra uma curva decrescente; os eixos são identificados apenas por X e Y na figura. O infográfico inclui recifes e peixes. A alternativa correta identifica A como CO₃²⁻, B como CaCO₃ e C como CO₃²⁻, e associa X a [CO₂]atm e Y a [CO₃²⁻]."
+      },
+      "changes": {
+        "alt_text": "Infográfico sobre CO₂ atmosférico, água do mar e recifes. À esquerda, cidade, veículo e instalações industriais aparecem junto a uma seta de CO₂ em direção ao oceano. No mar, a sequência CO₂ + H₂O → HCO₃⁻ + H⁺ é seguida por H⁺ + A → HCO₃⁻ e por B → Ca²⁺ + C, com indicação “coral”. Abaixo da área terrestre há um gráfico de curva decrescente, com eixos X e Y numerados de 0 a 800. Recifes e peixes aparecem ao redor das reações. Os símbolos A, B, C, X e Y permanecem como lacunas da figura; nenhuma identificação ou alternativa é fornecida."
+      },
+      "reason": "O alt existente informa explicitamente os valores das lacunas A, B, C e dos eixos, revelando a resposta. A substituição descreve o fluxo visual e preserva as lacunas sem as resolver.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2026/QX.pdf",
+          "detail": "Caderno oficial Q/X; questão 67, página impressa 25, conferida no original. A figura tem fontes terrestres, setas de CO₂, reações com lacunas A/B/C e gráfico com eixos X/Y.",
+          "sha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2026/question-assets/qx-q67-coral-carbonate-equilibrium-450dpi.png",
+          "detail": "Recorte próprio da questão 67 inspecionado visualmente; confirma a sequência de setas, símbolos em branco, escalas e curva descritos.",
+          "sha256": "3fdd13c48f59c58b1978c375e5920d8ffd141a42126cd26b1a7ed595730e2b54"
+        }
+      ],
+      "action": "update"
+    },
+    {
+      "table": "content_assets",
+      "key": {
+        "id": 515
+      },
+      "expected": {
+        "alt_text": "Fluxograma do processo Solvay. NaCl saturado e CO₂ alimentam a etapa que forma NaHCO₃ e NH₄Cl. O calcário CaCO₃ produz CO₂ e CaO; o CO₂ retorna parcialmente ao processo. NaHCO₃ segue para Na₂CO₃, com liberação de H₂O; NH₄Cl reage com CaO e forma CaCl₂ e H₂O, regenerando NH₃, que retorna ao processo. O esquema mostra que a amônia é reciclada, enquanto salmoura e calcário precisam ser repostos. Referência impressa: Araújo et al., Química Nova, v. 21, n. 1, p. 114, 1998."
+      },
+      "changes": {
+        "alt_text": "Fluxograma do processo Solvay. CaCO₃(s) segue para CaO(s) e CO₂(g); o CO₂ entra no circuito central e também aparece em uma seta de retorno. NaCl saturado e CO₂ alimentam uma etapa que se divide em NaHCO₃(s) e NH₄Cl(aq). NaHCO₃ segue para Na₂CO₃(s) e H₂O(vap). NH₄Cl(aq) e CaO(s) seguem para CaCl₂(s) e H₂O(vap), com uma linha de retorno até NH₃(g), que entra novamente no circuito. O diagrama mostra espécies e fluxos, sem indicar quais insumos devem ser repostos."
+      },
+      "reason": "O alt atual conclui quais materiais precisam ser repostos, antecipando a resposta da questão. A revisão descreve caixas, setas e retornos do fluxograma sem extrair a conclusão pedida.",
+      "evidence": [
+        {
+          "locator": "dist/data/official-pdfs/2026/QX.pdf",
+          "detail": "Caderno oficial Q/X; questão 70, página impressa 26, conferida no original. O fluxograma contém caixas de espécies químicas e setas de entrada, produto e retorno.",
+          "sha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253"
+        },
+        {
+          "locator": "dist/data/official-pdfs/2026/question-assets/qx-q70-solvay-process-flowchart-450dpi.png",
+          "detail": "Recorte próprio da questão 70 inspecionado visualmente; confirma as espécies químicas, a sequência de caixas e as linhas de retorno descritas.",
+          "sha256": "cd8a06234ddb828ac5f82fa285926e4e5eb9d468eab7805057c34ec01af6efa1"
+        }
+      ],
+      "action": "update"
+    }
+  ],
+  "backup": "/Users/gabrielrodantunes/Documents/Workspaces/Projetos/comvest/.local/content/backups/before-editorial-review-20261010T002543906911Z.sqlite",
+  "database_after_sha256": "5a8237983619c889fd73f8f5613c9225846410149e3fe13a38fd7bc9b5cb204a"
+}

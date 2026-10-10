@@ -1,0 +1,2289 @@
+{
+  "decisions": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 546
+      },
+      "expected": {
+        "title": "How To Learn Trigonometry Intuitively",
+        "url": "https://betterexplained.com/articles/intuitive-trigonometry/",
+        "provider": "BetterExplained — Kalid Azad",
+        "kind": "article",
+        "description": "Apresenta explicação intuitiva de trigonometria; candidato para Trigonometria.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 524,
+        "editorial_status": "review",
+        "editorial_note": "Individually reviewed 2026-10-08 as an optional English-language intuition supplement for trigonometry. The article explains six trig functions through dome/wall/ceiling analogies, ratios, selected identities, inverse functions and worked examples, but is not a complete course or practice bank: quadrants, periodicity, graphs, radians and full function domains are not systematically covered. 'Percentages' is an analogy for ratios, not a bounded percentage claim; tangent/secant can exceed 1 and sine/cosine can be negative. Some diagrams have short labels and video/calculator embeds were not verified for keyboard, captions or screen-reader use. Basic page inspection only, no WCAG audit. Rights remain link_only under the provider's unversioned CC BY-NC-SA statement; no content copied.",
+        "availability_mode": "learning"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Artigo em inglês de trigonometria intuitiva com analogias geométricas e exemplos; suplemento parcial, não curso ou banco de exercícios.",
+        "editorial_note": "Aprovado como suplemento opcional de intuição para Trigonometria: razões, triângulos semelhantes, seis funções, identidades selecionadas, inversas e exemplos. A analogia geométrica é limitada: quadrantes, periodicidade, gráficos e radianos não são cobertos sistematicamente. Inglês; algumas figuras têm descrição curta e acessibilidade dos embeds não foi verificada. Sem auditoria WCAG. Reuso link_only; não copiar, traduzir ou adaptar."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 546. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://betterexplained.com/articles/intuitive-trigonometry/",
+          "detail": "Página primária do item 546; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/resource-editorial-review-betterexplained-trigonometry-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=546; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 551
+      },
+      "expected": {
+        "title": "BetterExplained — método ADEPT",
+        "url": "https://betterexplained.com/articles/adept-method/",
+        "provider": "BetterExplained",
+        "kind": "article",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 529,
+        "editorial_status": "review",
+        "editorial_note": "Item-level editorial audit 2026-10-08: Article accessible online without payment; recommends Khan Academy for practice and gives imaginary-number examples. Language: English Accessibility: Not independently audited; includes diagrams and mathematical notation. Decision: Keep as pedagogical inspiration/catalog reference, not a topic resource or a practice exercise; no content copied. Editorial approval and topic fit remain pending.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Artigo geral sobre método de aprendizagem ADEPT; referência pedagógica, não aula alinhada a tópico Unicamp.",
+        "editorial_note": "Aprovado somente como referência pedagógica geral: o artigo explica ADEPT (analogia, diagrama, exemplo, linguagem simples, formalização) com exemplos de números imaginários; não é aula nem exercício de tópico do Vestibular. Inglês; acessibilidade não auditada. Link-only; sem associação tópica."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 551. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://betterexplained.com/articles/adept-method/",
+          "detail": "Página primária do item 551; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=551; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 552
+      },
+      "expected": {
+        "title": "Seeing Theory",
+        "url": "https://seeing-theory.brown.edu/",
+        "provider": "Brown University",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 530,
+        "editorial_status": "review",
+        "editorial_note": "Item-level editorial audit 2026-10-08: Site accessible without payment and explicitly archived for reference. Language: English Accessibility: Interactive visualizations; accessibility and keyboard/screen-reader support not independently audited. Decision: Create review-only candidate links for probability/counting and data/table/chart interpretation; advanced college/AP framing and English limit suitability. Archived maintenance since 2019. No content copied. Editorial approval and topic fit remain pending.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Plataforma visual em inglês de probabilidade e estatística, arquivada; hub/suplemento parcial, não curso completo.",
+        "editorial_note": "Aprovado como referência visual complementar para probabilidade/estatística. A auditoria observou probabilidade simples/composta, contagem, distribuições, inferência e regressão; site arquivado, em inglês, nível avançado. Não é curso completo; interações visuais e acessibilidade não foram auditadas. Somente link."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 552. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://seeing-theory.brown.edu/",
+          "detail": "Página primária do item 552; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=552; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 555
+      },
+      "expected": {
+        "title": "The Evolution of Trust",
+        "url": "https://ncase.me/trust/",
+        "provider": "Nicky Case",
+        "kind": "interactive",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 533,
+        "editorial_status": "review",
+        "editorial_note": "Item-level editorial audit 2026-10-08: Interactive is accessible without payment. Language: English; README lists a Brazilian Portuguese translation hosted separately. Accessibility: Not independently audited; game interaction and visual/audio assets require review. Decision: Rights are mixed at asset level. Keep as a consultation candidate only; no topic mapping without curricular review and no assets copied. Editorial approval and topic fit remain pending.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Narrativa interativa sobre cooperação, confiança e jogos repetidos; enriquecimento interdisciplinar, não item de prova.",
+        "editorial_note": "Aprovado como referência interativa opcional sobre cooperação, confiança e jogos repetidos, não como banco de questões ou conteúdo diretamente alinhado à primeira fase. Inglês; há tradução PT externa, sem revisão. README aponta licença mista para assets de terceiros; link-only."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 555. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://ncase.me/trust/",
+          "detail": "Página primária do item 555; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=555; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 556
+      },
+      "expected": {
+        "title": "Parable of the Polygons",
+        "url": "https://ncase.me/polygons/",
+        "provider": "Nicky Case",
+        "kind": "interactive",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 534,
+        "editorial_status": "review",
+        "editorial_note": "Item-level editorial audit 2026-10-08: Interactive page accessible without payment. Language: English. Accessibility: Not independently audited; interaction is visual and may require input alternatives. Decision: Keep as openly reusable editorial candidate but do not force a topic relation; needs pedagogical and accessibility review before recommendation. Editorial approval and topic fit remain pending.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Modelo interativo sobre segregação residencial e efeitos agregados; enriquecimento social, não lição curricular.",
+        "editorial_note": "Aprovado como modelo interativo de enriquecimento sobre segregação residencial, não como explicação completa ou tópico curricular. Interação visual e acessibilidade não auditadas; README atribui CC0 ao projeto, mas componentes terceiros exigem verificação. Não copiar."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 556. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://ncase.me/polygons/",
+          "detail": "Página primária do item 556; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=556; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 557
+      },
+      "expected": {
+        "title": "Mathigon",
+        "url": "https://mathigon.org/",
+        "provider": "Mathigon",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 535,
+        "editorial_status": "review",
+        "editorial_note": "Item-level editorial audit 2026-10-08: Official homepage describes free tools, courses, manipulatives and teacher resources; some services/features may have separate terms. Language: English and other localized versions. Accessibility: Mathigon publishes an accessibility conformance statement; it self-reports support in many WCAG criteria and partial support in others. Not independently audited. Decision: Catalog only. Create topic links to specific course pages after checking level, language and fit; no content copied. Editorial approval and topic fit remain pending.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal Mathigon de descoberta de cursos, ferramentas e manipuláveis; não é aula específica.",
+        "editorial_note": "Aprovado somente como hub de descoberta de ferramentas/cursos. Portal lista círculos/pi, sequências, grafos e fractais, mas nenhuma aula específica é validada nesta ficha. Idioma, nível, licença e acessibilidade dependem do item; não mapear ao currículo com base na homepage."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 557. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://mathigon.org/",
+          "detail": "Página primária do item 557; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=557; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 558
+      },
+      "expected": {
+        "title": "Mathigon em português",
+        "url": "https://pt.mathigon.org/",
+        "provider": "Mathigon",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 536,
+        "editorial_status": "review",
+        "editorial_note": "Item-level editorial audit 2026-10-08: Portuguese-locale homepage accessible; official site describes free tools/courses and free teacher resources. Language: Portuguese navigation and translated labels; several course descriptions/content remain in English. Accessibility: Official statement reports support for non-text content, relationships, meaningful sequence, keyboard basics and other criteria; partial support in contrast/color, sensory characteristics and some interaction criteria. Not independently audited. Decision: Catalog only; inspect direct lesson language and topic alignment before linking. Keep accessibility limitations visible; no content copied. Editorial approval and topic fit remain pending.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal Mathigon em português; rótulos localizados não garantem tradução do conteúdo de cada curso.",
+        "editorial_note": "Aprovado somente como hub de descoberta. Navegação/alguns rótulos estão em português, mas parte do curso continua em inglês; verificar idioma real por item. Acessibilidade autodeclarada com critérios parciais, sem auditoria independente. Não mapear ao currículo pelo portal raiz."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 558. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://pt.mathigon.org/",
+          "detail": "Página primária do item 558; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=558; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 560
+      },
+      "expected": {
+        "title": "PhET Interactive Simulations — português",
+        "url": "https://phet.colorado.edu/pt_BR/",
+        "provider": "University of Colorado Boulder / PhET",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 538,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Simulations can be accessed free for learning; licensing page says student/educator use is free for noncommercial purposes. Language: Portuguese locale; individual simulations may have varying translations. Accessibility: Not independently audited; simulation-specific accessibility must be checked. Decision: Keep as noncommercial link-out catalog only; inspect individual simulation and exact topic before mapping or reuse. No simulation copied. Specific books, simulations and lessons require item-level review; editorial status remains review.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo PhET em português de simulações de ciências/matemática; item e termos variam por simulador.",
+        "editorial_note": "Aprovado como catálogo de descoberta, não simulador/aula específica. Português e matemática aparecem no portal, mas tradução, acessibilidade e condições variam por simulação. A licença oficial limita simulações HTML regulares a uso educacional não comercial; link-out, sem copiar."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 560. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://phet.colorado.edu/pt_BR/",
+          "detail": "Página primária do item 560; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=560; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 561
+      },
+      "expected": {
+        "title": "Open Textbook Library",
+        "url": "https://open.umn.edu/opentextbooks",
+        "provider": "University of Minnesota",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 539,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Directory accessible; books in the library are free to adopt/download in stated formats. Language: Catalog primarily English; books vary. Accessibility: Cannot infer from directory; official FAQ says accessibility varies by author/publisher and should be checked per book. Decision: Keep as discovery catalog only, not a curriculum resource; individual titles require direct links and item-level review. Specific books, simulations and lessons require item-level review; editorial status remains review.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo referatório Open Textbook Library; livros, licenças, formatos e acessibilidade variam por título.",
+        "editorial_note": "Aprovado como referatório de descoberta, não currículo nem livro único. FAQ confirma autores/editora e qualidade/acessibilidade/licenças variam por título; livros específicos deste lote são analisados separadamente. Link-only."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 561. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks",
+          "detail": "Página primária do item 561; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=561; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 563
+      },
+      "expected": {
+        "title": "LibreTexts",
+        "url": "https://libretexts.org/",
+        "provider": "LibreTexts",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 541,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Homepage accessible; presents a collection of textbook libraries and educational resources. Language: Primarily English; individual libraries/resources vary. Accessibility: Not independently audited; varies by library, book and chapter. Decision: Keep as discovery catalog only; use item/chapter URLs and inspect rights and fit individually before linking to a topic. Specific books, simulations and lessons require item-level review; editorial status remains review.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal multidisciplinar LibreTexts; conteúdo e camadas de licença variam por biblioteca/obra.",
+        "editorial_note": "Aprovado como portal de descoberta de bibliotecas e livros. A orientação oficial confirma camadas de licença múltiplas; conferir título/capítulo, pertinência e acessibilidade antes de mapear. Link-only."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 563. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://libretexts.org/",
+          "detail": "Página primária do item 563; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=563; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 564
+      },
+      "expected": {
+        "title": "Open Book Publishers",
+        "url": "https://www.openbookpublishers.com/",
+        "provider": "Open Book Publishers",
+        "kind": "publisher",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 542,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Publisher catalog page accessible; book pages provide the relevant access/download information. Language: Catalog and books vary; homepage is English. Accessibility: Not independently audited; must inspect each digital title and its formats. Decision: Retain as publisher/discovery reference only. Select and audit individual books before creating topic links. Specific books, simulations and lessons require item-level review; editorial status remains review.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo de editora acadêmica multidisciplinar; acesso e licença devem ser checados por título.",
+        "editorial_note": "Aprovado como catálogo de descoberta editorial, não conteúdo gratuito ou aula. Preço, formato, idioma, licença e acessibilidade são específicos por livro; não inferir acesso livre."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 564. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://www.openbookpublishers.com/",
+          "detail": "Página primária do item 564; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=564; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 565
+      },
+      "expected": {
+        "title": "Directory of Open Access Books",
+        "url": "https://www.doabooks.org/",
+        "provider": "DOAB",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 543,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: DOAB says records point to freely readable open-access books and the directory hosts metadata rather than full text. Language: Multilingual titles; catalog interface has multiple language options. Accessibility: Not independently audited; inspect the publisher-hosted title and its format/accessibility statement. Decision: Keep as discovery portal only; select direct book records and inspect curricular level, language and license individually. Specific books, simulations and lessons require item-level review; editorial status remains review.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Diretório DOAB que indexa livros e remete às editoras; não é curso ou conteúdo didático próprio.",
+        "editorial_note": "Aprovado como diretório de descoberta; indexa livros e remete à fonte editorial. Licença, edição, idioma e acessibilidade são por título; diretório não é conteúdo didático próprio."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 565. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://www.doabooks.org/",
+          "detail": "Página primária do item 565; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=565; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 568
+      },
+      "expected": {
+        "title": "Wikilivros em português",
+        "url": "https://pt.wikibooks.org/",
+        "provider": "Wikimedia Foundation / comunidade Wikilivros",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 546,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Portuguese-language project pages accessible without payment; content completeness varies by book. Language: Portuguese; individual books may vary. Accessibility: Not independently audited across the platform or individual book pages. Decision: Keep as discovery catalog; only create topic links to individual books/chapters after content, quality, completeness and license checks. Specific books, simulations and lessons require item-level review; editorial status remains review.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo colaborativo de livros em português; completude e qualidade variam por obra/capítulo.",
+        "editorial_note": "Aprovado como catálogo de descoberta em português. A licença do texto do projeto não garante cada livro, mídia importada ou completude; revisar por capítulo e não inferir cobertura curricular. Acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 568. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikibooks.org/",
+          "detail": "Página primária do item 568; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=568; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 569
+      },
+      "expected": {
+        "title": "Wikiversidade em português",
+        "url": "https://pt.wikiversity.org/",
+        "provider": "Wikimedia Foundation / comunidade Wikiversidade",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 547,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Portuguese wiki accessible without payment; page offers study groups, courses and research spaces. Language: Portuguese, with other language editions. Accessibility: Not independently audited across individual pages or interactive content. Decision: Catalog only; no topic mapping until a specific, quality-reviewed course or lesson is selected. No topic relation or editorial approval was inferred from a general portal page.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal comunitário Wikiversidade para descoberta de grupos, cursos e espaços de estudo/pesquisa.",
+        "editorial_note": "Aprovado como portal de descoberta comunitária em português, não curso validado. Qualidade/acessibilidade dependem de cada página; sem tópico associado à homepage."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 569. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikiversity.org/",
+          "detail": "Página primária do item 569; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=569; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 570
+      },
+      "expected": {
+        "title": "Wikisource em português",
+        "url": "https://pt.wikisource.org/",
+        "provider": "Wikimedia Foundation / comunidade Wikisource",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 548,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Portuguese digital text library accessible without payment. Language: Portuguese texts; individual works may be in other languages. Accessibility: Not independently audited; scanned facsimiles and individual transcriptions may vary. Decision: Discovery library, not one topic lesson. Select a specific work and verify edition, rights, transcription and fit before associating. No topic relation or editorial approval was inferred from a general portal page.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Biblioteca digital Wikisource; edição, transcrição, direitos e pertinência dependem de cada obra.",
+        "editorial_note": "Aprovado como biblioteca de consulta/descoberta, não aula de vestibular. Conferir edição, transcrição, direitos e acessibilidade de cada obra; fac-símiles e textos variam."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 570. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://pt.wikisource.org/",
+          "detail": "Página primária do item 570; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=570; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 571
+      },
+      "expected": {
+        "title": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/",
+        "provider": "Wikimedia Foundation / comunidade Wikimedia Commons",
+        "kind": "media_library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 549,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Public media repository accessible without payment. Language: Multilingual interface; media content varies. Accessibility: No cross-library accessibility assurance; individual files may lack captions, transcript or useful descriptions. Decision: Keep as media discovery catalog only; do not associate root or copy files without checking each file page, rights and accessibility. No topic relation or editorial approval was inferred from a general portal page.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Repositório Wikimedia Commons para descoberta de mídia; cada arquivo exige auditoria própria.",
+        "editorial_note": "Aprovado como catálogo de descoberta de mídia, não recurso de aprendizagem ou licença global. Direitos, autoria, legendas, descrições e acessibilidade são por arquivo; não associar a tópico nem copiar mídia sem auditoria."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 571. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://commons.wikimedia.org/",
+          "detail": "Página primária do item 571; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=571; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 572
+      },
+      "expected": {
+        "title": "Livro Aberto de Matemática",
+        "url": "https://livroaberto.uniriotec.br/",
+        "provider": "UNIRIO",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 550,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Project describes open basic-education mathematics textbook collections; project site is a discovery page, not an individual chapter. Language: Portuguese project; individual volumes/materials need checking. Accessibility: Not independently audited for individual volumes, accessible PDF/HTML or diagrams. Decision: Promising Portuguese educational project, but link to specific chapters/books and confirm license version, exact content and accessibility before topic association. No topic relation or editorial approval was inferred from a general portal page.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Projeto UNIRIO Livro Aberto de Matemática para educação básica; página de projeto, não capítulo.",
+        "editorial_note": "Aprovado como página de descoberta de livros de matemática básica em português; projeto UNIRIO baseado em pesquisa em educação matemática. Não valida volume, capítulo, licença ou acessibilidade nem conta como cobertura de tópico."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 572. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://livroaberto.uniriotec.br/",
+          "detail": "Página primária do item 572; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=572; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 573
+      },
+      "expected": {
+        "title": "Livro Aberto de Matemática — UNIRIO",
+        "url": "https://matematica.uniriotec.br/livro-aberto-de-matematica/",
+        "provider": "UNIRIO",
+        "kind": "project_page",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 551,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Official project summary is accessible without payment; individual open textbook links should be checked separately. Language: Portuguese page; book language/content must be verified per title. Accessibility: Not independently audited at title or file level. Decision: Project-page only. Do not count as a specific study resource until a direct volume/chapter URL is selected and reviewed. No topic relation or editorial approval was inferred from a general portal page.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Página institucional do projeto Livro Aberto da Escola de Matemática da UNIRIO; não é volume específico.",
+        "editorial_note": "Aprovado como página institucional de descoberta do projeto Livro Aberto. Não valida livro/capítulo, licença, versão ou acessibilidade; não é aula individual."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 573. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://matematica.uniriotec.br/livro-aberto-de-matematica/",
+          "detail": "Página primária do item 573; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=573; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 574
+      },
+      "expected": {
+        "title": "Editora IMPA",
+        "url": "https://impa.br/editora/",
+        "provider": "IMPA",
+        "kind": "publisher",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 0,
+        "is_published": 1,
+        "source_document_id": 552,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Publisher catalog is accessible; it includes books for sale and no particular free full text was verified at this root URL. Language: Portuguese and other languages may occur by title. Accessibility: Not audited; inspect the individual title and format. Decision: Keep as publisher discovery reference; no free-resource or topic claim without a specific title and access/rights audit. No topic relation or editorial approval was inferred from a general portal page.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo editorial do IMPA; não comprova gratuidade de obra específica.",
+        "editorial_note": "Aprovado como referência de descoberta editorial, não como recurso gratuito. Catálogo inclui títulos à venda; confirmar acesso, edição e direitos em cada obra. Manter is_free inalterado."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 574. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://impa.br/editora/",
+          "detail": "Página primária do item 574; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=574; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 575
+      },
+      "expected": {
+        "title": "Open Logic Project",
+        "url": "https://openlogicproject.org/",
+        "provider": "Open Logic Project",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 553,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Open textbook project and PDFs/source files are offered online without payment. Language: The project announces Portuguese material; the coverage/language of each PDF should be inspected. Accessibility: Not independently audited for screen-reader/keyboard/math notation; PDF may not be the most accessible format. Decision: Free/open but advanced logic-course depth; not mapped to first-phase topics because no specific syllabus match was established. Use only as optional enrichment after editorial review. No topic relation or editorial approval was inferred from a general portal page.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Projeto de livro aberto sobre lógica/métodos formais; referência de descoberta avançada, não syllabus da primeira fase.",
+        "editorial_note": "Aprovado somente como portal de descoberta/enriquecimento avançado em lógica formal. O projeto disponibiliza lógica proposicional/1ª ordem, conjuntos, funções e relações, mas nível e alinhamento à primeira fase não foram estabelecidos; não é recomendação central nem tópico coberto."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 575. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://openlogicproject.org/",
+          "detail": "Página primária do item 575; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=575; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 580
+      },
+      "expected": {
+        "title": "Applied Combinatorics",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/339",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 558,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Undergraduate course goes beyond first-phase depth; some figures were reported as pending in a reviewer note; English; accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Livro universitário de combinatória discreta; suplemento avançado em inglês, acima da profundidade típica da primeira fase.",
+        "editorial_note": "Aprovado como suplemento opcional avançado de contagem/combinatória. O item OTL lista conjuntos, contagem, inclusão-exclusão, permutações e coeficientes binomiais; curso universitário, inglês, algumas figuras foram reportadas pendentes e acessibilidade não auditada. Não é material central ou cobertura integral. Licença CC BY-SA indicada na ficha; este app mantém somente link."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 580. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/339",
+          "detail": "Página primária do item 580; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=580; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 582
+      },
+      "expected": {
+        "title": "General Biology I: Survey of Cellular Biology",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/general-biology-i-survey-of-cellular-biology",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 560,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Non-science-major college survey; OTL reviewer notes missing chemistry/organic compounds and a blurry image in the PDF; use web edition for interactive practice; accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Biologia celular introdutória com prática web; suplemento em inglês e com limitações no PDF.",
+        "editorial_note": "Aprovado como suplemento parcial de bases celulares: células, membranas, enzimas, metabolismo/homeostase; edição web tem prática interativa. Curso introdutório universitário em inglês; OTL relata lacunas químicas e imagem borrada no PDF, preferir web. Acessibilidade não auditada; não cobre todo o tópico."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 582. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/general-biology-i-survey-of-cellular-biology",
+          "detail": "Página primária do item 582; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=582; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 583
+      },
+      "expected": {
+        "title": "General Biology II: Survey of Molecular Life and Genetics",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/general-biology-ii-survey-of-molecular-life-and-genetics",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 561,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Introductory college course in English; topic coverage is not mapped to Brazilian high-school sequencing; accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Biologia molecular/genética introdutória; suplemento em inglês, sem sequência cotejada ao currículo brasileiro.",
+        "editorial_note": "Aprovado como suplemento parcial de genética/evolução e bases celulares: herança, genética/regulação gênica e temas moleculares/celulares aparecem no sumário. Inglês, nível universitário introdutório, sem mapeamento à sequência brasileira; acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 583. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/general-biology-ii-survey-of-molecular-life-and-genetics",
+          "detail": "Página primária do item 583; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=583; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 584
+      },
+      "expected": {
+        "title": "Principles of Biology",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/principles-of-biology-biology-211-212-and-213",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 562,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Broad college-level survey; supplemental rather than Unicamp-aligned curriculum; English; review notes some editorial errors and graphics/accessibility should be checked directly. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Sequência ampla de três cursos de biologia (célula, genética, ecologia, biodiversidade); complemento em inglês.",
+        "editorial_note": "Aprovado como leitura ampla suplementar, não cobertura alinhada/completa. Três cursos incluem células, genética/evolução, ecologia, conservação, biodiversidade, dados e experimentos. Inglês; auditoria registra erros editoriais e pede cautela com figuras; acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 584. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/principles-of-biology-biology-211-212-and-213",
+          "detail": "Página primária do item 584; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=584; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 585
+      },
+      "expected": {
+        "title": "Introduction to Environmental Sciences and Sustainability",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-environmental-sciences-and-sustainability",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 563,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Introductory college environmental science; OTL review notes some figures missing/small and environmental indicators need updating; examples require Brazilian-context supplementation; accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Ciências ambientais e sustentabilidade: ecossistemas, população, conservação e impactos; complemento em inglês.",
+        "editorial_note": "Aprovado como suplemento de ecologia e ambiente: ecossistemas, populações, conservação, água, agricultura, clima, energia e resíduos. Inglês; figuras ausentes/pequenas e indicadores possivelmente antigos exigem contexto brasileiro; acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 585. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-environmental-sciences-and-sustainability",
+          "detail": "Página primária do item 585; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=585; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 586
+      },
+      "expected": {
+        "title": "Fundamentals of Human Geography",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/fundamentals-of-human-geography",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 564,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Introductory undergraduate human geography in English; accessibility review notes PDF lacks alt text and interactive materials; examples/data need Brazilian-context review and updates. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Geografia humana em versão web interativa; complemento em inglês com exemplos a contextualizar no Brasil.",
+        "editorial_note": "Aprovado como suplemento parcial de geografia humana: população, migração, geografia política, desenvolvimento, agricultura, indústria e ambiente. Usar a versão web (conteúdo além do PDF); exemplos em inglês precisam de contexto brasileiro e PDF tem alt text ausente. Acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 586. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/fundamentals-of-human-geography",
+          "detail": "Página primária do item 586; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=586; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 587
+      },
+      "expected": {
+        "title": "Introduction to Human Geography, 2nd Edition",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/870",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 565,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Introductory college/AP-level human geography; North-American examples and some dated maps; English; full accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Geografia humana com exemplos/exercícios; material em inglês com exemplos norte-americanos e mapas possivelmente datados.",
+        "editorial_note": "Aprovado como suplemento parcial de geografia humana e exercícios: população, migração, geografia política/cultural, desenvolvimento, indústria e ambiente. Inglês, college/AP, exemplos norte-americanos e mapas possivelmente datados; acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 587. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/870",
+          "detail": "Página primária do item 587; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=587; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 588
+      },
+      "expected": {
+        "title": "World History Since 1500",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/1456",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 566,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Global-history survey in English; not a substitute for Brazilian history or Unicamp-specific sources; concise coverage; accessibility not independently audited. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "História mundial de 1500 ao presente; complemento global em inglês, não substitui história do Brasil.",
+        "editorial_note": "Aprovado como leitura de história global moderna/contemporânea, não como substituto de história brasileira ou fontes do Vestibular. 15 capítulos de 1500 ao presente; conteúdo conciso, inglês e acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 588. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/1456",
+          "detail": "Página primária do item 588; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=588; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 589
+      },
+      "expected": {
+        "title": "Sociology in Everyday Life: An Equity Lens",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/1924",
+        "provider": "University of Minnesota / Open Textbook Library",
+        "kind": "book",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 567,
+        "editorial_status": "review",
+        "editorial_note": "OTL item record checked 2026-10-08: free online/PDF formats; English; Explicitly framed around contemporary sociology in the United States and an intersectional feminist lens; English; individual third-party materials may have exceptions; accessibility not independently tested. License details are recorded on the linked source document. Pedagogical fit remains under editorial review; no external content copied.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "learning",
+        "description": "Sociologia com lente de equidade/interseccional; material em inglês e contextualizado nos EUA.",
+        "editorial_note": "Aprovado como leitura suplementar de sociologia: cultura, socialização, grupos, estratificação e marcadores sociais. A lente é interseccional e o contexto é dos EUA; exigir contextualização brasileira. Inglês; acessibilidade de itens/terceiros não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 589. Aprovação delimitada a suplemento parcial, não curso completo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/1924",
+          "detail": "Página primária do item 589; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=589; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 591
+      },
+      "expected": {
+        "title": "Manuels Sésamath",
+        "url": "https://manuel.sesamath.net/",
+        "provider": "Sésamath",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 569,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Portal is accessible and offers free digital reading/downloads for listed titles; individual editions and formats differ. Language: French. Content: The catalog includes mathematics manuals/workbooks for French collège and lycée, with edition years and grade levels identified. Some lycée books were produced by Magnard, so authorship and rights cannot be generalized from Sésamath's project role. Accessibility: The portal mentions specific files/resources for dyslexic learners for some titles; no general accessibility audit of HTML, PDFs, exercises or diagrams was performed. Decision: Useful discovery source for French mathematics, but not yet matched to Unicamp topics or level. Keep unmapped until a specific chapter/exercise is reviewed. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo Sésamath de manuais/cadernos de matemática em francês para collège/lycée; descoberta, não alinhamento curricular automático.",
+        "editorial_note": "Aprovado como catálogo francês de manuais/cadernos digitais com níveis e edições identificáveis; não alinhamento automático ao programa brasileiro. Alguns títulos têm outros autores/editoras; verificar autoria/licença/formato por obra. Recursos para dislexia existem em certos títulos; não houve auditoria geral de acessibilidade."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 591. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://manuel.sesamath.net/",
+          "detail": "Página primária do item 591; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=591; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 592
+      },
+      "expected": {
+        "title": "Bibliothèque Sésamath",
+        "url": "https://bibliotheque.sesamath.net/",
+        "provider": "Sésamath",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 570,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Library index is accessible without payment; it indexes resources and links to contributed materials. Language: French, as indicated by portal content. Content: The library says it catalogs Sésamath resources and supports Moodle GIFT export; it is an index, not a single educational work. Accessibility: Not audited across listed resources or exported materials. Decision: Keep as reference/discovery catalog, not as topic coverage. Select a precise item and audit its pedagogy, level, accessibility and rights. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Biblioteca Sésamath que indexa recursos e materiais contribuídos; não é obra única.",
+        "editorial_note": "Aprovado como índice francês de descoberta que cataloga recursos Sésamath e exportação GIFT. Não é obra única; licença, nível, qualidade e acessibilidade dependem de cada item. Sem tópico associado ao índice."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 592. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://bibliotheque.sesamath.net/",
+          "detail": "Página primária do item 592; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=592; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 593
+      },
+      "expected": {
+        "title": "Mathenpoche",
+        "url": "https://mathenpoche.sesamath.net/",
+        "provider": "Sésamath",
+        "kind": "practice_platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 571,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Public homepage and indexed content are accessible without payment; the homepage fetch timed out in the text browser, so interactive flows were not tested. Language: French. Content: Official homepage describes courses, exercises, animated help, multiple-choice quizzes, practice assignments, mental arithmetic and logic games; content is aligned to French school programs, with a stated update in September 2019 and archived legacy material. Accessibility: Interactive exercises and older/archived content were not tested with keyboard or assistive technology; some legacy content may depend on obsolete technology. Decision: Potential practice/learning source, but French curriculum, recency and exact topic fit need item-level review. Do not associate this homepage to a canonical topic. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal Mathenpoche de cursos, exercícios, ajuda e quizzes em francês; parte do material é legado.",
+        "editorial_note": "Aprovado como portal de descoberta/prática em francês: cursos, exercícios, ajuda animada, quizzes e jogos. Alinhado a programas franceses, atualização declarada em 2019 e material legado; fluxos interativos/acessibilidade não testados. Não recomendar exercício específico sem inspeção."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 593. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://mathenpoche.sesamath.net/",
+          "detail": "Página primária do item 593; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=593; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 594
+      },
+      "expected": {
+        "title": "OpenStax",
+        "url": "https://openstax.org/",
+        "provider": "OpenStax / Rice University",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 572,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: OpenStax offers free online reading and downloads for its textbook catalog; the root page is a discovery portal, not a specific book. Language: Primarily English; varies by title. Content: Catalog of textbooks across subjects; no individual title or chapter selected for the Unicamp program. Accessibility: OpenStax states its online view supports accessibility features; downloadable formats and individual books can differ. No item-level testing performed. Decision: Keep the portal as a discovery reference. Choose exact books/chapters and check topic level, accessibility, current license and third-party components before association or reuse. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo OpenStax de livros em várias áreas; licença, idioma e acessibilidade variam por título.",
+        "editorial_note": "Aprovado como catálogo de livros, não curso ou cobertura temática. OpenStax oferece leitura/download; idioma/edição variam. Licença geral CC BY-NC-SA 4.0 sujeita a exceções e terceiros; acessibilidade deve ser verificada por formato/item."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 594. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://openstax.org/",
+          "detail": "Página primária do item 594; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=594; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 595
+      },
+      "expected": {
+        "title": "Siyavula — livros de leitura",
+        "url": "https://www.siyavula.com/read",
+        "provider": "Siyavula",
+        "kind": "library",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 573,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Online textbooks and downloads are offered without payment for many listed titles; availability and formats vary by title. Language: English and Afrikaans, with South African CAPS curriculum. Content: Catalog includes mathematics, physical sciences, natural sciences and life sciences by grade. Curriculum jurisdiction differs from Unicamp and no specific book/chapter was mapped. Accessibility: No cross-catalog accessibility audit; online and downloaded formats may differ. Decision: Catalog is free to consult, but do not claim blanket open licensing or Unicamp alignment. Select a specific book and format for pedagogical and rights review. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo Siyavula de livros digitais por série no currículo sul-africano CAPS; não equivale ao da Unicamp.",
+        "editorial_note": "Aprovado como catálogo de descoberta em inglês/africâner, não alinhamento à Unicamp. Títulos seguem CAPS sul-africano; licenças variam por edição/arquivo (CC BY-ND, CC BY ou copyright fechado). Verificar item; acessibilidade não auditada."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 595. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://www.siyavula.com/read",
+          "detail": "Página primária do item 595; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=595; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 596
+      },
+      "expected": {
+        "title": "Khan Academy",
+        "url": "https://www.khanacademy.org/",
+        "provider": "Khan Academy",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 574,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Khan Academy states most services are free of charge and permits linking to its materials; this is a broad portal, not a specific lesson. Language: Primarily English; specific course/language coverage varies. Content: General education platform with courses and exercises; no topic-specific lesson was reviewed at this root URL. Accessibility: Khan Academy publishes an accessibility statement, but no audit of a particular course, video, transcript or exercise was performed. Decision: Keep as a link-only platform reference; identify exact Portuguese/English lessons and exercise pages before topic mapping. No content copied. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal Khan Academy para descoberta de cursos e exercícios; esta ficha de raiz não atesta aula específica.",
+        "editorial_note": "Aprovado como portal de descoberta/link, não aula ou tópico específico. Auditoria consultou termos oficiais de linking/gratuidade geral; língua e acessibilidade variam por aula/vídeo/exercício. Nenhum conteúdo copiado."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 596. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://www.khanacademy.org/",
+          "detail": "Página primária do item 596; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=596; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 597
+      },
+      "expected": {
+        "title": "Khan Academy em português",
+        "url": "https://pt.khanacademy.org/",
+        "provider": "Khan Academy",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 575,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: Portuguese portal is accessible for free learning/linking under Khan Academy's guidance; the root is a broad discovery portal. Language: Portuguese interface/content where translated; exact lesson availability varies. Content: General portal only; no specific Portuguese lesson, translation version or exercise was tested for this record. Accessibility: No item-level keyboard, screen-reader, captions or transcript check performed. Decision: Do not count the homepage as topic coverage. Select exact Portuguese pages, verify the actual language/content, accessibility and terms, then map only if relevant. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal Khan Academy em português; tradução e conteúdo devem ser verificados em cada aula/exercício.",
+        "editorial_note": "Aprovado como portal de descoberta em português, não garantia de tradução integral ou cobertura. Selecionar página e conferir idioma efetivo, exercício, legenda/transcrição, acessibilidade e termos; nenhum conteúdo copiado."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 597. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://pt.khanacademy.org/",
+          "detail": "Página primária do item 597; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=597; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 598
+      },
+      "expected": {
+        "title": "MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/",
+        "provider": "Massachusetts Institute of Technology",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 576,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: MIT OCW publishes course materials freely online; this root is a catalog of more than 2,500 courses, not a specific course item. Language: Primarily English; varies by course. Content: Course catalog spans university-level subjects; no specific course was selected or matched to the first-phase program. Accessibility: No resource-level accessibility review; check captions, transcripts, math notation and document structure on exact course assets. Decision: Discovery portal only. The university-level depth and exact syllabus fit require item-level review; no topic relation inferred. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Catálogo MIT OpenCourseWare de materiais universitários; descoberta avançada, sem curso específico alinhado.",
+        "editorial_note": "Aprovado como catálogo de descoberta de cursos universitários, não recurso alinhado à primeira fase. Mais de 2.500 cursos, maioria em inglês; CC BY-NC-SA 4.0 sujeito a itens/terceiros; conferir curso, acessibilidade e notação antes de recomendação."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 598. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://ocw.mit.edu/",
+          "detail": "Página primária do item 598; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=598; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 599
+      },
+      "expected": {
+        "title": "NASA Science",
+        "url": "https://science.nasa.gov/",
+        "provider": "NASA",
+        "kind": "platform",
+        "description": "Referência educacional citada para avaliação editorial; não classificada por tópico.",
+        "is_free": 1,
+        "is_published": 1,
+        "source_document_id": 577,
+        "editorial_status": "review",
+        "editorial_note": "Portal audit 2026-10-08: NASA Science portal is accessible without payment and provides articles, media and science information; homepage is not a single educational item. Language: Primarily English; varies by page and media. Content: Broad science portal including space and Earth science content; no specific first-phase topic page was selected or mapped. Accessibility: NASA Science states an agency accessibility commitment, but this portal and its individual media/pages were not tested against assistive technology. Decision: Keep as discovery link only. Select a precise lesson/media item, inspect third-party credits, accessibility and curriculum fit before mapping or copying. No topic mapping or editorial approval inferred.",
+        "availability_mode": "reference"
+      },
+      "changes": {
+        "editorial_status": "published",
+        "availability_mode": "reference",
+        "description": "Portal NASA Science de artigos e mídia sobre ciência, espaço e Terra; não é aula específica.",
+        "editorial_note": "Aprovado como portal institucional de descoberta científica, não aula/tópico. Artigos e mídia sobre ciência, espaço e Terra; inglês predominante. Direitos/acessibilidade por item, material de terceiros sob termos próprios e logos protegidos."
+      },
+      "reason": "Revisão além de disponibilidade: a auditoria direta documenta identidade/proveniência e conteúdo/função do item 599. Aprovação delimitada a referência/descoberta, não aula ou cobertura por capítulo; nenhuma licença de reprodução é presumida.",
+      "evidence": [
+        {
+          "locator": "https://science.nasa.gov/",
+          "detail": "Página primária do item 599; conteúdo/função e limites foram cotejados com a auditoria indicada, não apenas com resposta HTTP."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/cited-portals-audit-2026-10-08.jsonl",
+          "detail": "Registro auditado para resource_id=599; descreve proveniência, conteúdo observado, adequação pedagógica e ressalvas de idioma/acessibilidade/licença."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 552,
+        "topic_id": 2480,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 552,
+        "topic_id": 2480,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Review-only topic candidate from the 2026-10-08 item audit: The site identifies itself as a visual introduction to probability and statistics and lists basic/compound probability, counting, distributions, frequentist/Bayesian inference, and regression. Limitations: Create review-only candidate links for probability/counting and data/table/chart interpretation; advanced college/AP framing and English limit suitability. Archived maintenance since 2019. No content copied."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Relação parcial com Contagem e probabilidade (topics.id=2480): a visualização aborda contagem e probabilidade simples/composta, não todo o tópico. Inglês, avançado e arquivado; acessibilidade interativa não auditada; link-only."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico matematica.contagem-probabilidade (Contagem e probabilidade); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://seeing-theory.brown.edu/",
+          "detail": "Fonte direta do recurso 552; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Contagem e probabilidade."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 552; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2480",
+          "detail": "Consulta readonly: topics.id=2480, slug=matematica.contagem-probabilidade, nome=Contagem e probabilidade; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 552,
+        "topic_id": 2565,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 552,
+        "topic_id": 2565,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Review-only topic candidate from the 2026-10-08 item audit: The site identifies itself as a visual introduction to probability and statistics and lists basic/compound probability, counting, distributions, frequentist/Bayesian inference, and regression. Limitations: Create review-only candidate links for probability/counting and data/table/chart interpretation; advanced college/AP framing and English limit suitability. Archived maintenance since 2019. No content copied."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Apenas leitura de representações gráficas dentro de Interpretação e elaboração de tabelas e gráficos (topics.id=2565): distribuições/inferência são pertinentes, mas não comprovam elaboração de tabelas ou gráficos no escopo todo. Acessibilidade interativa não auditada; link-only."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico matematica.interpretacao-tabelas-graficos (Interpretação e elaboração de tabelas e gráficos); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://seeing-theory.brown.edu/",
+          "detail": "Fonte direta do recurso 552; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Interpretação e elaboração de tabelas e gráficos."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 552; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2565",
+          "detail": "Consulta readonly: topics.id=2565, slug=matematica.interpretacao-tabelas-graficos, nome=Interpretação e elaboração de tabelas e gráficos; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 580,
+        "topic_id": 2480,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 580,
+        "topic_id": 2480,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review lists sets, counting, inclusion-exclusion, permutations, binomial coefficients, recurrence relations, graphs and probability; book targets an introductory undergraduate discrete-mathematics course. Limitations: Undergraduate course goes beyond first-phase depth; some figures were reported as pending in a reviewer note; English; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Suplemento avançado de contagem/combinatória para Contagem e probabilidade (topics.id=2480): inclui contagem, inclusão-exclusão, permutações e binomiais; não se infere cobertura de probabilidade. Inglês, nível universitário, figuras reportadas pendentes; acessibilidade desconhecida; link-only."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico matematica.contagem-probabilidade (Contagem e probabilidade); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/339",
+          "detail": "Fonte direta do recurso 580; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Contagem e probabilidade."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 580; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2480",
+          "detail": "Consulta readonly: topics.id=2480, slug=matematica.contagem-probabilidade, nome=Contagem e probabilidade; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 582,
+        "topic_id": 2555,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 582,
+        "topic_id": 2555,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL overview and contents cover cells, membranes, enzymes, metabolism and homeostasis; reviewer confirms interactive practice questions in the online version. Limitations: Non-science-major college survey; OTL reviewer notes missing chemistry/organic compounds and a blurry image in the PDF; use web edition for interactive practice; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Bases moleculares e celulares da vida (topics.id=2555), limitado a células, membranas, enzimas, metabolismo/homeostase. Preferir web por lacunas/imagem borrada no PDF; inglês, acessibilidade não auditada; link-only."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.bases-celulares (Bases moleculares e celulares da vida); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/general-biology-i-survey-of-cellular-biology",
+          "detail": "Fonte direta do recurso 582; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Bases moleculares e celulares da vida."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 582; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2555",
+          "detail": "Consulta readonly: topics.id=2555, slug=biologia.bases-celulares, nome=Bases moleculares e celulares da vida; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 583,
+        "topic_id": 2491,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 583,
+        "topic_id": 2491,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL overview states an introductory non-major course on molecular life and genetics, with inheritance, genetics and gene regulation; table of contents includes cell/molecule themes. Limitations: Introductory college course in English; topic coverage is not mapped to Brazilian high-school sequencing; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Genética e evolução (topics.id=2491), limitado a herança, genética e regulação gênica. Livro introdutório universitário em inglês; sequência brasileira e acessibilidade não auditadas; link-only."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.genetica (Genética e evolução); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/general-biology-ii-survey-of-molecular-life-and-genetics",
+          "detail": "Fonte direta do recurso 583; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Genética e evolução."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 583; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2491",
+          "detail": "Consulta readonly: topics.id=2491, slug=biologia.genetica, nome=Genética e evolução; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 583,
+        "topic_id": 2555,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 583,
+        "topic_id": 2555,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL overview states an introductory non-major course on molecular life and genetics, with inheritance, genetics and gene regulation; table of contents includes cell/molecule themes. Limitations: Introductory college course in English; topic coverage is not mapped to Brazilian high-school sequencing; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Bases moleculares e celulares da vida (topics.id=2555), somente temas celulares/moleculares do sumário. O foco explícito é genética/herança; suplemento em inglês, não cobertura completa; link-only."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.bases-celulares (Bases moleculares e celulares da vida); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/general-biology-ii-survey-of-molecular-life-and-genetics",
+          "detail": "Fonte direta do recurso 583; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Bases moleculares e celulares da vida."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 583; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2555",
+          "detail": "Consulta readonly: topics.id=2555, slug=biologia.bases-celulares, nome=Bases moleculares e celulares da vida; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 584,
+        "topic_id": 2490,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 584,
+        "topic_id": 2490,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review describes a three-course introductory sequence including scientific inquiry, cell biology, genetics, evolution, ecology, conservation, data interpretation and experiments. Limitations: Broad college-level survey; supplemental rather than Unicamp-aligned curriculum; English; review notes some editorial errors and graphics/accessibility should be checked directly. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Ecologia (topics.id=2490), parcialmente coberta pela sequência ampla de biologia. Inglês, erros editoriais/figuras reportados e acessibilidade não auditada; não curso completo."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.ecologia (Ecologia); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/principles-of-biology-biology-211-212-and-213",
+          "detail": "Fonte direta do recurso 584; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Ecologia."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 584; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2490",
+          "detail": "Consulta readonly: topics.id=2490, slug=biologia.ecologia, nome=Ecologia; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 584,
+        "topic_id": 2491,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 584,
+        "topic_id": 2491,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review describes a three-course introductory sequence including scientific inquiry, cell biology, genetics, evolution, ecology, conservation, data interpretation and experiments. Limitations: Broad college-level survey; supplemental rather than Unicamp-aligned curriculum; English; review notes some editorial errors and graphics/accessibility should be checked directly. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Genética e evolução (topics.id=2491), parcialmente coberta pela sequência de três cursos. Inglês; conferir figuras/erros editoriais; acessibilidade não auditada."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.genetica (Genética e evolução); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/principles-of-biology-biology-211-212-and-213",
+          "detail": "Fonte direta do recurso 584; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Genética e evolução."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 584; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2491",
+          "detail": "Consulta readonly: topics.id=2491, slug=biologia.genetica, nome=Genética e evolução; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 584,
+        "topic_id": 2555,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 584,
+        "topic_id": 2555,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review describes a three-course introductory sequence including scientific inquiry, cell biology, genetics, evolution, ecology, conservation, data interpretation and experiments. Limitations: Broad college-level survey; supplemental rather than Unicamp-aligned curriculum; English; review notes some editorial errors and graphics/accessibility should be checked directly. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Bases moleculares e celulares da vida (topics.id=2555), pelas unidades celulares/moleculares da sequência. Conteúdo universitário amplo em inglês; figuras/acessibilidade não auditadas."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.bases-celulares (Bases moleculares e celulares da vida); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/principles-of-biology-biology-211-212-and-213",
+          "detail": "Fonte direta do recurso 584; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Bases moleculares e celulares da vida."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 584; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2555",
+          "detail": "Consulta readonly: topics.id=2555, slug=biologia.bases-celulares, nome=Bases moleculares e celulares da vida; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 584,
+        "topic_id": 2556,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 584,
+        "topic_id": 2556,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: OTL review describes a three-course introductory sequence including scientific inquiry, cell biology, genetics, evolution, ecology, conservation, data interpretation and experiments. Limitations: Broad college-level survey; supplemental rather than Unicamp-aligned curriculum; English; review notes some editorial errors and graphics/accessibility should be checked directly. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Biodiversidade e saúde humana (topics.id=2556), somente conservação/biodiversidade está comprovada; saúde humana não verificada. Relação parcial, inglês, acessibilidade não auditada."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.biodiversidade-saude (Biodiversidade e saúde humana); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/principles-of-biology-biology-211-212-and-213",
+          "detail": "Fonte direta do recurso 584; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Biodiversidade e saúde humana."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 584; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2556",
+          "detail": "Consulta readonly: topics.id=2556, slug=biologia.biodiversidade-saude, nome=Biodiversidade e saúde humana; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 585,
+        "topic_id": 2490,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 585,
+        "topic_id": 2490,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents include ecosystems, population ecology, conservation/biodiversity, hazards/health, water, agriculture, climate, energy, waste and environmental policy. Limitations: Introductory college environmental science; OTL review notes some figures missing/small and environmental indicators need updating; examples require Brazilian-context supplementation; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Ecologia (topics.id=2490): ecossistemas, populações e conservação; texto ambiental introdutório em inglês, figuras/indicadores exigem cautela e contexto brasileiro."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.ecologia (Ecologia); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-environmental-sciences-and-sustainability",
+          "detail": "Fonte direta do recurso 585; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Ecologia."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 585; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2490",
+          "detail": "Consulta readonly: topics.id=2490, slug=biologia.ecologia, nome=Ecologia; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 585,
+        "topic_id": 2556,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 585,
+        "topic_id": 2556,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents include ecosystems, population ecology, conservation/biodiversity, hazards/health, water, agriculture, climate, energy, waste and environmental policy. Limitations: Introductory college environmental science; OTL review notes some figures missing/small and environmental indicators need updating; examples require Brazilian-context supplementation; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Biodiversidade e saúde humana (topics.id=2556), apenas suporte a biodiversidade/ambiente; saúde humana não comprovada. Inglês, exemplos/contexto e acessibilidade a revisar."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico biologia.biodiversidade-saude (Biodiversidade e saúde humana); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-environmental-sciences-and-sustainability",
+          "detail": "Fonte direta do recurso 585; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Biodiversidade e saúde humana."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 585; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2556",
+          "detail": "Consulta readonly: topics.id=2556, slug=biologia.biodiversidade-saude, nome=Biodiversidade e saúde humana; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 586,
+        "topic_id": 2495,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 586,
+        "topic_id": 2495,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents include population/health, migration, political geography, development/wealth, agriculture/food, industry, human settlements, environment/resources; page states interactive web book has content absent from PDF. Limitations: Introductory undergraduate human geography in English; accessibility review notes PDF lacks alt text and interactive materials; examples/data need Brazilian-context review and updates. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Território e geopolítica (topics.id=2495), via população, migração e geografia política. Inglês, exemplos precisam de contexto brasileiro; versão web preferível, PDF sem alt text."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico geografia.territorio (Território e geopolítica); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/fundamentals-of-human-geography",
+          "detail": "Fonte direta do recurso 586; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Território e geopolítica."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 586; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2495",
+          "detail": "Consulta readonly: topics.id=2495, slug=geografia.territorio, nome=Território e geopolítica; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 586,
+        "topic_id": 2552,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 586,
+        "topic_id": 2552,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents include population/health, migration, political geography, development/wealth, agriculture/food, industry, human settlements, environment/resources; page states interactive web book has content absent from PDF. Limitations: Introductory undergraduate human geography in English; accessibility review notes PDF lacks alt text and interactive materials; examples/data need Brazilian-context review and updates. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Globalização, economia e trabalho (topics.id=2552), parcialmente via desenvolvimento, riqueza, agricultura/indústria; não demonstra cobertura integral de globalização/trabalho. Inglês, contextualizar Brasil."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico geografia.globalizacao-trabalho (Globalização, economia e trabalho); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/fundamentals-of-human-geography",
+          "detail": "Fonte direta do recurso 586; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Globalização, economia e trabalho."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 586; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2552",
+          "detail": "Consulta readonly: topics.id=2552, slug=geografia.globalizacao-trabalho, nome=Globalização, economia e trabalho; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 586,
+        "topic_id": 2572,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 586,
+        "topic_id": 2572,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents include population/health, migration, political geography, development/wealth, agriculture/food, industry, human settlements, environment/resources; page states interactive web book has content absent from PDF. Limitations: Introductory undergraduate human geography in English; accessibility review notes PDF lacks alt text and interactive materials; examples/data need Brazilian-context review and updates. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Conceitos fundamentais da Geografia (topics.id=2572), limitada a população/migração, geografia política, desenvolvimento, assentamentos e ambiente. Web tem conteúdo além do PDF, que não tem alt text; inglês."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico geografia.conceitos-fundamentais (Conceitos fundamentais da Geografia); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/fundamentals-of-human-geography",
+          "detail": "Fonte direta do recurso 586; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Conceitos fundamentais da Geografia."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 586; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2572",
+          "detail": "Consulta readonly: topics.id=2572, slug=geografia.conceitos-fundamentais, nome=Conceitos fundamentais da Geografia; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 587,
+        "topic_id": 2495,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 587,
+        "topic_id": 2495,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents cover population/health, migration, cultural geography, political geography, development/wealth, agriculture, industry, settlements, environment/resources; reviewer notes sample questions and exercises are available. Limitations: Introductory college/AP-level human geography; North-American examples and some dated maps; English; full accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Território e geopolítica (topics.id=2495), apoio parcial por população, migração e geografia política. Exemplos norte-americanos/mapas potencialmente datados; inglês."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico geografia.territorio (Território e geopolítica); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/870",
+          "detail": "Fonte direta do recurso 587; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Território e geopolítica."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 587; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2495",
+          "detail": "Consulta readonly: topics.id=2495, slug=geografia.territorio, nome=Território e geopolítica; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 587,
+        "topic_id": 2552,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 587,
+        "topic_id": 2552,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents cover population/health, migration, cultural geography, political geography, development/wealth, agriculture, industry, settlements, environment/resources; reviewer notes sample questions and exercises are available. Limitations: Introductory college/AP-level human geography; North-American examples and some dated maps; English; full accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Globalização, economia e trabalho (topics.id=2552), apoio parcial via desenvolvimento, agricultura e indústria; não inferir cobertura completa. Inglês e contexto norte-americano."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico geografia.globalizacao-trabalho (Globalização, economia e trabalho); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/870",
+          "detail": "Fonte direta do recurso 587; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Globalização, economia e trabalho."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 587; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2552",
+          "detail": "Consulta readonly: topics.id=2552, slug=geografia.globalizacao-trabalho, nome=Globalização, economia e trabalho; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 587,
+        "topic_id": 2572,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 587,
+        "topic_id": 2572,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents cover population/health, migration, cultural geography, political geography, development/wealth, agriculture, industry, settlements, environment/resources; reviewer notes sample questions and exercises are available. Limitations: Introductory college/AP-level human geography; North-American examples and some dated maps; English; full accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Conceitos fundamentais da Geografia (topics.id=2572), apenas conceitos/temas listados de geografia humana; college/AP, inglês, exemplos/mapas centrados nos EUA."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico geografia.conceitos-fundamentais (Conceitos fundamentais da Geografia); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/870",
+          "detail": "Fonte direta do recurso 587; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Conceitos fundamentais da Geografia."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 587; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2572",
+          "detail": "Consulta readonly: topics.id=2572, slug=geografia.conceitos-fundamentais, nome=Conceitos fundamentais da Geografia; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 588,
+        "topic_id": 2493,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 588,
+        "topic_id": 2493,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Fifteen chapters cover 1500 to the present, including early modern empires/revolutions, industrialization, imperialism, world wars, fascism, Cold War and decolonization. Limitations: Global-history survey in English; not a substitute for Brazilian history or Unicamp-specific sources; concise coverage; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Mundo contemporâneo (topics.id=2493), por imperialismo, guerras, fascismo, Guerra Fria e descolonização. História global concisa em inglês, não substitui história do Brasil."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico historia.mundo-contemporaneo (Mundo contemporâneo); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/1456",
+          "detail": "Fonte direta do recurso 588; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Mundo contemporâneo."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 588; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2493",
+          "detail": "Consulta readonly: topics.id=2493, slug=historia.mundo-contemporaneo, nome=Mundo contemporâneo; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 588,
+        "topic_id": 2554,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 588,
+        "topic_id": 2554,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Fifteen chapters cover 1500 to the present, including early modern empires/revolutions, industrialization, imperialism, world wars, fascism, Cold War and decolonization. Limitations: Global-history survey in English; not a substitute for Brazilian history or Unicamp-specific sources; concise coverage; accessibility not independently audited. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "História do período moderno (topics.id=2554), apoio parcial desde 1500 sobre impérios/revoluções/industrialização; livro vai até o presente, sem aprofundar todo período."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico historia.periodo-moderno (História do período moderno); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/1456",
+          "detail": "Fonte direta do recurso 588; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para História do período moderno."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 588; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2554",
+          "detail": "Consulta readonly: topics.id=2554, slug=historia.periodo-moderno, nome=História do período moderno; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 589,
+        "topic_id": 2498,
+        "curriculum_topic_id": null
+      },
+      "expected": {
+        "resource_id": 589,
+        "topic_id": 2498,
+        "curriculum_topic_id": null,
+        "review_status": "review",
+        "relevance_status": "relevant",
+        "accessibility_status": "unknown",
+        "review_note": "Topic candidate from item-specific OTL review 2026-10-08: Contents include sociology, social theory/research, socialization, groups, culture, deviance, stratification/class, gender, sexuality, race/ethnicity; publisher page includes image descriptions and transcripts sections. Limitations: Explicitly framed around contemporary sociology in the United States and an intersectional feminist lens; English; individual third-party materials may have exceptions; accessibility not independently tested. Link only; relation remains editorial review, not approved curriculum mapping."
+      },
+      "changes": {
+        "review_status": "published",
+        "review_note": "Cultura e sociedade (topics.id=2498), via teoria/pesquisa, socialização, grupos, cultura e estratificação. Lente/contexto dos EUA exige contextualização brasileira; inglês, acessibilidade de itens não auditada."
+      },
+      "reason": "Correspondência suplementar conferida pelo conteúdo direto do recurso com o tópico canônico sociologia.cultura-sociedade (Cultura e sociedade); topic_id é da tabela topics e curriculum_topic_id continua NULL. Escopo parcial fica explícito.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/1924",
+          "detail": "Fonte direta do recurso 589; seções/conteúdos descritos na auditoria sustentam apenas o recorte registrado para Cultura e sociedade."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria de conteúdo/proveniência do item 589; limites de idioma, nível, cobertura e acessibilidade usados nesta relação."
+        },
+        {
+          "locator": "sqlite://topics/2498",
+          "detail": "Consulta readonly: topics.id=2498, slug=sociologia.cultura-sociedade, nome=Cultura e sociedade; o vínculo avaliado usa resource_topics.topic_id, sem confundir o namespace curriculum_topic_id."
+        }
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "table": "resources",
+      "key": {
+        "id": 553
+      },
+      "reason": "Repositório de código, não curso/material learner-facing; manter como item de proveniência técnica, fora da biblioteca de preparação.",
+      "evidence": [
+        {
+          "locator": "https://github.com/seeingtheory/Seeing-Theory",
+          "detail": "URL alvo do resource 553; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-platform-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do resource_id=553 registra a limitação específica que impede aprovação: Repositório de código, não curso/material learner-facing; manter como item de proveniência técnica, fora da biblioteca de preparação."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 562
+      },
+      "reason": "A auditoria não conseguiu inspecionar diretamente a homepage; conteúdo e acesso ao portal não ficaram confirmados. A página de ajuda sobre direitos não substitui revisão da página-alvo.",
+      "evidence": [
+        {
+          "locator": "https://www.oercommons.org/",
+          "detail": "URL alvo do resource 562; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do resource_id=562 registra a limitação específica que impede aprovação: A auditoria não conseguiu inspecionar diretamente a homepage; conteúdo e acesso ao portal não ficaram confirmados. A página de ajuda sobre direitos não substitui revisão da página-alvo."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 566
+      },
+      "reason": "A auditoria registrou falha de acesso e nenhum livro/título foi inspecionado. Proveniência pedagógica direta insuficiente para publicar o catálogo.",
+      "evidence": [
+        {
+          "locator": "https://books.scielo.org/",
+          "detail": "URL alvo do resource 566; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do resource_id=566 registra a limitação específica que impede aprovação: A auditoria registrou falha de acesso e nenhum livro/título foi inspecionado. Proveniência pedagógica direta insuficiente para publicar o catálogo."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 567
+      },
+      "reason": "A página de busca não foi inspecionada e nenhum resultado/livro teve conteúdo, proveniência ou navegação confirmados.",
+      "evidence": [
+        {
+          "locator": "https://search-books.scielo.org/",
+          "detail": "URL alvo do resource 567; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/educational-libraries-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do resource_id=567 registra a limitação específica que impede aprovação: A página de busca não foi inspecionada e nenhum resultado/livro teve conteúdo, proveniência ou navegação confirmados."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 576
+      },
+      "reason": "Página técnica de instruções de download de PDFs/código de lógica avançada, sem material específico conferido ou nível apropriado verificado; o portal de projeto 575 basta para descoberta.",
+      "evidence": [
+        {
+          "locator": "https://openlogicproject.org/download/",
+          "detail": "URL alvo do resource 576; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do resource_id=576 registra a limitação específica que impede aprovação: Página técnica de instruções de download de PDFs/código de lógica avançada, sem material específico conferido ou nível apropriado verificado; o portal de projeto 575 basta para descoberta."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 577
+      },
+      "reason": "Índice de builds/compilações de textos de lógica avançada; nenhum PDF/build específico foi revisado como suplemento, e idioma/edição/acessibilidade variam.",
+      "evidence": [
+        {
+          "locator": "https://builds.openlogicproject.org/",
+          "detail": "URL alvo do resource 577; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/wikimedia-and-logic-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do resource_id=577 registra a limitação específica que impede aprovação: Índice de builds/compilações de textos de lógica avançada; nenhum PDF/build específico foi revisado como suplemento, e idioma/edição/acessibilidade variam."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 581
+      },
+      "reason": "Livro universitário de física baseado em cálculo, antigo, com poucos exemplos e sem exercícios independentes; inadequado como preparação da primeira fase.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/402",
+          "detail": "URL alvo do resource 581; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do resource_id=581 registra a limitação específica que impede aprovação: Livro universitário de física baseado em cálculo, antigo, com poucos exemplos e sem exercícios independentes; inadequado como preparação da primeira fase."
+        }
+      ]
+    },
+    {
+      "table": "resources",
+      "key": {
+        "id": 590
+      },
+      "reason": "Portal geral Sésamath não foi aberto na auditoria; somente o catálogo de manuais 591 foi inspecionado. Não publicar a página-alvo sem validar conteúdo/proveniência direto.",
+      "evidence": [
+        {
+          "locator": "https://www.sesamath.net/",
+          "detail": "URL alvo do resource 590; não há confirmação direta suficiente de conteúdo/proveniência para aprovação como recomendação."
+        },
+        {
+          "detail": "Auditoria do resource_id=590 registra a limitação específica que impede aprovação: Portal geral Sésamath não foi aberto na auditoria; somente o catálogo de manuais 591 foi inspecionado. Não publicar a página-alvo sem validar conteúdo/proveniência direto."
+        }
+      ]
+    },
+    {
+      "table": "resource_topics",
+      "key": {
+        "resource_id": 581,
+        "topic_id": 2471,
+        "curriculum_topic_id": null
+      },
+      "reason": "Manter sem aprovação: conteúdo de física universitária baseado em cálculo, com poucos exemplos e sem prática independente, não é adequado à preparação da primeira fase; a relevância existente é not_relevant.",
+      "evidence": [
+        {
+          "locator": "https://open.umn.edu/opentextbooks/textbooks/402",
+          "detail": "Ficha direta do livro; o registro identifica curso de física baseado em cálculo."
+        },
+        {
+          "locator": ".local/content/staging/unicamp-2027-v1/open-textbook-library-audit-2026-10-08.jsonl",
+          "detail": "Auditoria do item registra pré-requisito de cálculo, poucos exemplos, ausência de exercícios independentes e inadequação à primeira fase."
+        },
+        {
+          "locator": "sqlite://topics/2471",
+          "detail": "Consulta readonly confirma topic_id 2471 (fisica), não curriculum_topic_id."
+        }
+      ]
+    }
+  ],
+  "summary": "Revisão dos 46 recursos em review do intervalo 545–602: 38 recursos propostos para publicação com ênfase em hubs como referência/descoberta e livros/aulas somente como suplementos parciais; 21 relações resource_topics propostas após conferir topic_id→topics.id; 8 recursos e uma relação bloqueados com motivos específicos. Nenhum recurso já published foi tocado, nenhum conteúdo foi copiado e nenhuma licença de reprodução foi presumida. Idioma, profundidade, escopo parcial e acessibilidade não auditada/necessidade de conferir imagens permanecem nas notas. curriculum_topic_id não é confundido com topic_id."
+}

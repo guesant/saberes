@@ -1,3 +1,5 @@
+import type { CurriculumCoverageReport } from "./curriculum-coverage-report.interface";
+
 export interface ContentSnapshotValidationInput {
   tables: string[];
   questionCount: number;
@@ -14,4 +16,5 @@ export interface ContentSnapshotValidationInput {
   invalidLessonMetadataCount: number;
   orphanLessonSourceCount: number;
   invalidLessonSectionCount: number;
+  curriculumCoverage?: CurriculumCoverageReport[];
 }
